@@ -1,0 +1,171 @@
+---
+date: 2026-07-06
+agent: R6-devil-advocate
+skill_version: analyze_devil_advocate_v1@1.0
+generated_at: 2026-07-06T02:58:30+08:00
+confidence: 0.7
+degraded: false
+data_sources:
+  - name: R1..R5+R7
+    status: ok
+input_freshness: ok
+input_freshness_note: ""
+---
+# 2026-07-06 · 反证 / Devil's Advocate
+> **数据源新鲜度**: ok  
+> **降级状态**: no  
+> **置信度**: 0.7  
+
+## 一句话结论
+
+TBD · 请从 JSON artifact 提取核心判断
+
+## 详细分析
+
+**核心结构化输出**:
+
+```json
+{
+  "counter_arguments": [
+    {
+      "reject_id": "R6_M1_01",
+      "mode_id": 1,
+      "mode_name": "数据源冲突",
+      "target": "R2 主线「人形机器人」龙一 002050.SZ 三花智控",
+      "hypothesis_challenged": "R2 判定人形机器人为核心主线(score 84)+ 三花为执行池首选",
+      "evidence_against": [
+        {
+          "source": "R3",
+          "detail": "hotlist_signals.distribution_alert=[] 未触发, 但 R3 明确提示『人形机器人已在热榜第 1 位数日, 注意周一是否兑现』, R3 自身对该主线的 early_or_late 标注为 middle 非 early"
+        },
+        {
+          "source": "R3",
+          "detail": "sentiment_score=58 偏中性, resonance_level 仅 L1+L2(L3 WeFlow 死), 共振级别未达 L1+L2+L3 满强度"
+        },
+        {
+          "source": "R1",
+          "detail": "R1 明确『塔尖仅 4 板 1 只、双龙缺失、扩散未成主线』, 与 R2『核心主线 score 84』存在结构性冲突"
+        }
+      ],
+      "severity": "soft_suggest",
+      "suggestion": "R2 主线成立但热度已 middle-late; D1 建议以低吸而非追高进入, 盘中若三花无法封板即视为退潮信号"
+    },
+    {
+      "reject_id": "R6_M1_02",
+      "mode_id": 1,
+      "mode_name": "数据源冲突",
+      "target": "R2 主线「商业航天」龙一 001208.SZ 华菱线缆",
+      "hypothesis_challenged": "R2 判定商业航天为主线二(score 72)+ 华菱为执行池首选",
+      "evidence_against": [
+        {
+          "source": "R7",
+          "detail": "商业航天板块主力资金 rank23(+41.87亿), 卫星互联网 rank30(+33.30亿), 均不进 top10, 资金强度明显弱于人形机器人主线(rank1/rank3/rank4 全部 top10)"
+        },
+        {
+          "source": "R2",
+          "detail": "R2 自身 risks 已列『商业航天主力资金 rank6(实为 rank23), 资金强度弱, 仓位分配应偏轻』"
+        },
+        {
+          "source": "R5",
+          "detail": "华菱线缆 composite_score=62 显著低于三花 74, 五维中 chip_structure/valuation/technical/institutional 全 partial, 高度依赖研报驱动而非数据交叉"
+        }
+      ],
+      "severity": "soft_suggest",
+      "suggestion": "商业航天主线可保留但仓位建议压至 15-20%(而非 R5 建议的 17-20% 上限), 首飞窗口 7/10-13 前一日(7/9)如板块未见连板承接则减仓"
+    },
+    {
+      "reject_id": "R6_M2_01",
+      "mode_id": 2,
+      "mode_name": "一致性检查",
+      "target": "R1「震荡分化型」+ 仓位上限 0.5 vs R2 落地 2 条高弹性科技/军工主线",
+      "hypothesis_challenged": "R2 在震荡分化型市场中落地 2 条主线是否与 R1 防御预警一致",
+      "evidence_against": [
+        {
+          "source": "R1",
+          "detail": "R1 明确『T-1 崩溃后企稳但连板塔尖仅 4 板 1 只、双龙结构缺失, 禁止追高连板 3 板以上高标』"
+        },
+        {
+          "source": "R1",
+          "detail": "R1 风险列出『若 T 日炸板率突破 40% 且 3 板高标批量倒下, 风格立即下修为 防御观望型, 仓位压至 30% 以下』"
+        },
+        {
+          "source": "R3",
+          "detail": "sentiment_score=58, 属中性偏乐观但非强势; L3 WeFlow 死, 共振强度存在验证空白"
+        }
+      ],
+      "severity": "strong_suggest",
+      "suggestion": "D1 必须显式声明仓位上限严守 0.5(不上修), 且执行池 execution_pool_size ≤3 只; 若 09:25 集合竞价炸板率苗头 >30% 或龙一低开-2% 以下, P1 阶段必须触发降级"
+    },
+    {
+      "reject_id": "R6_M3_01",
+      "mode_id": 3,
+      "mode_name": "估值×主线临界",
+      "target": "002050.SZ 三花智控(人形机器人龙一)",
+      "hypothesis_challenged": "R5 valuation_safety score=9(6 维中最低)、明确『历史 PE 分位 90%+ 高位区间、缺乏低吸安全边际』",
+      "evidence_against": [
+        {
+          "source": "R5",
+          "detail": "profile.valuation_safety.summary『白电压缩机主业稳定 + 机器人执行器长周期赛道估值溢价; 历史 PE 分位高位(定性 90%+); 主线龙头惯性 + 中长周期催化 → 估值可容忍但缺乏低吸安全边际』"
+        },
+        {
+          "source": "R5",
+          "detail": "flags 含 crowding_risk_watch"
+        },
+        {
+          "source": "R7",
+          "detail": "机器人概念 T-1 净流入 +143.74亿(rank1)、人形机器人 +113.78亿(rank3)、机器人执行器 +64.73亿, 龙头板块资金已高度拥挤"
+        }
+      ],
+      "severity": "strong_suggest",
+      "suggestion": "三花估值已在 90%+ 分位, D1 单票仓位建议不超过 execution_pool 总仓位的 40%(严于 amygdala 硬约束 15%), 且盘中若龙一冲高回落 >-3% 建议部分止盈"
+    },
+    {
+      "reject_id": "R6_M3_02",
+      "mode_id": 3,
+      "mode_name": "估值×主线临界",
+      "target": "001208.SZ 华菱线缆(商业航天龙一)",
+      "hypothesis_challenged": "R5 定性『首飞前催化预期驱动, 兑现后需业绩验证, 当前估值处于叙事溢价区间』",
+      "evidence_against": [
+        {
+          "source": "R5",
+          "detail": "valuation_safety.score=10, 首飞事件驱动型溢价"
+        },
+        {
+          "source": "R4",
+          "detail": "E20260706_007 strength=medium(非 high), 硬催化对应的是 7/10-13 首飞窗口, 存在『见光死』风险"
+        },
+        {
+          "source": "R5",
+          "detail": "R5 r6_review_focus 已预标『华菱线缆 消息兑现即出货风险(7/10-13 首飞窗口后 T+1 需高频监控)』"
+        
+```
+
+## 关键证据
+
+_(见上方核心结构化输出 · 主要证据字段随 skill 不同)_
+
+## 数据源审计
+
+| 源 | 状态 | 抓取时间 | 记录数 | 备注 |
+|---|---|---|---|---|
+| R1..R5+R7 | ok | - | - | - |
+
+## 不确定性 / 反证
+
+_(artifact 未显式记录反证段 · 建议后续 skill 补足)_
+
+## 与其他 R/D/E 的关系
+
+- **依赖**: R1, R2, R3, R4, R5, R7
+- **被消费**: D1
+
+## Sub-Agent 元数据
+
+- skill: `analyze_devil_advocate_v1`
+- artifact: `data/research/20260706/R6_devil_advocate.json`
+- 生成时间: 2026-07-06T02:58:30+08:00
+- 主 orchestrator: `research_orchestrator_v1` (proc_46cb002764ca · 25 min)
+
+---
+
+_本文件由 `scripts/render_kg_md_backfill.py` 从 artifact 回渲染 · schema: `render_kg_md_v1`_

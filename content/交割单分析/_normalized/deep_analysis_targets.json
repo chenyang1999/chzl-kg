@@ -1,0 +1,597 @@
+{
+  "账户1": {
+    "top_loss": [
+      {
+        "code": 600693,
+        "name": "东百集团",
+        "open_date": "2026-01-13",
+        "close_date": "2026-01-14",
+        "hold_days": 1.0,
+        "qty": 5000,
+        "buy_price": 20.6,
+        "sell_price": 17.56,
+        "pnl_gross": -15200.0,
+        "cost": 113.39,
+        "pnl_net": -15313.39,
+        "pnl_pct": -14.76,
+        "note": NaN
+      },
+      {
+        "code": 600759,
+        "name": "洲际油气",
+        "open_date": "2026-03-06",
+        "close_date": "2026-03-13",
+        "hold_days": 7.0,
+        "qty": 11500,
+        "buy_price": 8.1,
+        "sell_price": 7.0,
+        "pnl_gross": -12650.0,
+        "cost": 103.49,
+        "pnl_net": -12753.49,
+        "pnl_pct": -13.58,
+        "note": NaN
+      },
+      {
+        "code": 600528,
+        "name": "中铁工业",
+        "open_date": "2026-03-31",
+        "close_date": "2026-04-01",
+        "hold_days": 1.0,
+        "qty": 20300,
+        "buy_price": 9.17,
+        "sell_price": 8.701,
+        "pnl_gross": -9520.7,
+        "cost": 220.44,
+        "pnl_net": -9741.14,
+        "pnl_pct": -5.11,
+        "note": NaN
+      },
+      {
+        "code": 603667,
+        "name": "五洲新春",
+        "open_date": "2026-01-22",
+        "close_date": "2026-01-28",
+        "hold_days": 6.0,
+        "qty": 800,
+        "buy_price": 89.61,
+        "sell_price": 78.0,
+        "pnl_gross": -9288.0,
+        "cost": 80.04,
+        "pnl_net": -9368.04,
+        "pnl_pct": -12.96,
+        "note": NaN
+      },
+      {
+        "code": 2036,
+        "name": "联创电子",
+        "open_date": "2026-05-25",
+        "close_date": "2026-05-28",
+        "hold_days": 3.0,
+        "qty": 8500,
+        "buy_price": 10.68,
+        "sell_price": 9.62,
+        "pnl_gross": -9010.0,
+        "cost": 103.71,
+        "pnl_net": -9113.71,
+        "pnl_pct": -9.93,
+        "note": NaN
+      }
+    ],
+    "top_win": [
+      {
+        "code": 603688,
+        "name": "石英股份",
+        "open_date": "2026-04-22",
+        "close_date": "2026-05-07",
+        "hold_days": 15.0,
+        "qty": 1600,
+        "buy_price": 53.4,
+        "sell_price": 63.32,
+        "pnl_gross": 15872.0,
+        "cost": 118.64,
+        "pnl_net": 15753.36,
+        "pnl_pct": 18.58,
+        "note": NaN
+      },
+      {
+        "code": 603538,
+        "name": "美诺华",
+        "open_date": "2026-03-23",
+        "close_date": "2026-03-31",
+        "hold_days": 8.0,
+        "qty": 900,
+        "buy_price": 28.36,
+        "sell_price": 43.97,
+        "pnl_gross": 14049.0,
+        "cost": 43.5,
+        "pnl_net": 14005.5,
+        "pnl_pct": 55.04,
+        "note": NaN
+      },
+      {
+        "code": 601138,
+        "name": "工业富联",
+        "open_date": "2026-01-15",
+        "close_date": "2026-01-16",
+        "hold_days": 1.0,
+        "qty": 3300,
+        "buy_price": 60.963,
+        "sell_price": 62.94,
+        "pnl_gross": 6524.1,
+        "cost": 252.72,
+        "pnl_net": 6271.38,
+        "pnl_pct": 3.24,
+        "note": NaN
+      }
+    ],
+    "top_freq": [
+      {
+        "code": 603688,
+        "name": "石英股份",
+        "n_trades": 20,
+        "n_buys": 12,
+        "n_sells": 8
+      },
+      {
+        "code": 603259,
+        "name": "药明康德",
+        "n_trades": 19,
+        "n_buys": 13,
+        "n_sells": 6
+      }
+    ],
+    "codes_to_analyze": [
+      2036,
+      600528,
+      600693,
+      600759,
+      601138,
+      603259,
+      603538,
+      603667,
+      603688
+    ]
+  },
+  "账户2": {
+    "top_loss": [
+      {
+        "code": 759,
+        "name": "中百集团",
+        "open_date": "2025-12-24",
+        "close_date": "2025-12-30",
+        "hold_days": 6,
+        "qty": 22200,
+        "buy_price": 9.07,
+        "sell_price": 7.67,
+        "pnl_gross": -31080.0,
+        "cost": 129.68,
+        "pnl_net": -31209.68,
+        "pnl_pct": -15.44
+      },
+      {
+        "code": 600759,
+        "name": "洲际油气",
+        "open_date": "2026-03-05",
+        "close_date": "2026-03-13",
+        "hold_days": 8,
+        "qty": 14100,
+        "buy_price": 8.72,
+        "sell_price": 7.0,
+        "pnl_gross": -24252.0,
+        "cost": 78.17,
+        "pnl_net": -24330.17,
+        "pnl_pct": -19.72
+      },
+      {
+        "code": 547,
+        "name": "航天发展",
+        "open_date": "2026-01-13",
+        "close_date": "2026-01-14",
+        "hold_days": 1,
+        "qty": 4100,
+        "buy_price": 36.378,
+        "sell_price": 32.88,
+        "pnl_gross": -14341.8,
+        "cost": 101.46,
+        "pnl_net": -14443.26,
+        "pnl_pct": -9.62
+      },
+      {
+        "code": 2873,
+        "name": "新天药业",
+        "open_date": "2026-04-08",
+        "close_date": "2026-04-10",
+        "hold_days": 2,
+        "qty": 4300,
+        "buy_price": 13.09,
+        "sell_price": 10.22,
+        "pnl_gross": -12341.0,
+        "cost": 33.99,
+        "pnl_net": -12374.99,
+        "pnl_pct": -21.93
+      },
+      {
+        "code": 2190,
+        "name": "成飞集成",
+        "open_date": "2026-05-13",
+        "close_date": "2026-05-19",
+        "hold_days": 6,
+        "qty": 3000,
+        "buy_price": 34.77,
+        "sell_price": 31.48,
+        "pnl_gross": -9870.0,
+        "cost": 71.06,
+        "pnl_net": -9941.06,
+        "pnl_pct": -9.46
+      }
+    ],
+    "top_win": [
+      {
+        "code": 600552,
+        "name": "凯盛科技",
+        "open_date": "2026-04-16",
+        "close_date": "2026-04-20",
+        "hold_days": 4,
+        "qty": 7100,
+        "buy_price": 13.71,
+        "sell_price": 15.31,
+        "pnl_gross": 11360.0,
+        "cost": 81.18,
+        "pnl_net": 11278.82,
+        "pnl_pct": 11.67
+      },
+      {
+        "code": 2202,
+        "name": "金风科技",
+        "open_date": "2026-01-09",
+        "close_date": "2026-01-12",
+        "hold_days": 3,
+        "qty": 2200,
+        "buy_price": 31.84,
+        "sell_price": 34.82,
+        "pnl_gross": 6556.0,
+        "cost": 55.91,
+        "pnl_net": 6500.09,
+        "pnl_pct": 9.36
+      },
+      {
+        "code": 600938,
+        "name": "中国海油",
+        "open_date": "2026-03-02",
+        "close_date": "2026-03-03",
+        "hold_days": 1,
+        "qty": 1300,
+        "buy_price": 38.89,
+        "sell_price": 43.389,
+        "pnl_gross": 5848.7,
+        "cost": 42.12,
+        "pnl_net": 5806.58,
+        "pnl_pct": 11.57
+      }
+    ],
+    "top_freq": [
+      {
+        "code": 2025,
+        "name": "航天电器",
+        "n_trades": 18,
+        "n_buys": 10,
+        "n_sells": 8
+      },
+      {
+        "code": 601138,
+        "name": "工业富联",
+        "n_trades": 13,
+        "n_buys": 7,
+        "n_sells": 6
+      }
+    ],
+    "codes_to_analyze": [
+      547,
+      759,
+      2025,
+      2190,
+      2202,
+      2873,
+      600552,
+      600759,
+      600938,
+      601138
+    ]
+  },
+  "账户3": {
+    "top_loss": [
+      {
+        "code": 600522,
+        "name": "中天科技",
+        "open_date": "2026-07-01",
+        "close_date": "2026-07-08",
+        "hold_days": 7.0,
+        "qty": 1000,
+        "buy_price": 54.93,
+        "sell_price": 46.15,
+        "pnl_gross": -8780.0,
+        "cost": 39.66,
+        "pnl_net": -8819.66,
+        "pnl_pct": -15.98,
+        "note": NaN
+      },
+      {
+        "code": 688122,
+        "name": "西部超导",
+        "open_date": "2026-07-01",
+        "close_date": "2026-07-06",
+        "hold_days": 5.0,
+        "qty": 732,
+        "buy_price": 60.35,
+        "sell_price": 56.523,
+        "pnl_gross": -2801.36,
+        "cost": 34.72,
+        "pnl_net": -2836.08,
+        "pnl_pct": -6.34,
+        "note": NaN
+      },
+      {
+        "code": 1283,
+        "name": "豪鹏科技",
+        "open_date": "2026-07-06",
+        "close_date": "2026-07-07",
+        "hold_days": 1.0,
+        "qty": 1400,
+        "buy_price": 50.53,
+        "sell_price": 49.5,
+        "pnl_gross": -1442.0,
+        "cost": 57.6,
+        "pnl_net": -1499.6,
+        "pnl_pct": -2.04,
+        "note": NaN
+      },
+      {
+        "code": 300689,
+        "name": "澄天伟业",
+        "open_date": "2026-07-02",
+        "close_date": "2026-07-06",
+        "hold_days": 4.0,
+        "qty": 300,
+        "buy_price": 69.57,
+        "sell_price": 66.31,
+        "pnl_gross": -978.0,
+        "cost": 18.6,
+        "pnl_net": -996.6,
+        "pnl_pct": -4.69,
+        "note": NaN
+      },
+      {
+        "code": 2205,
+        "name": "国统股份",
+        "open_date": "2026-07-06",
+        "close_date": "2026-07-07",
+        "hold_days": 1.0,
+        "qty": 900,
+        "buy_price": 10.93,
+        "sell_price": 10.47,
+        "pnl_gross": -414.0,
+        "cost": 14.9,
+        "pnl_net": -428.9,
+        "pnl_pct": -4.21,
+        "note": NaN
+      }
+    ],
+    "top_win": [
+      {
+        "code": 528,
+        "name": "柳 工",
+        "open_date": "2026-07-06",
+        "close_date": "2026-07-07",
+        "hold_days": 1.0,
+        "qty": 4500,
+        "buy_price": 8.28,
+        "sell_price": 8.46,
+        "pnl_gross": 810.0,
+        "cost": 31.4,
+        "pnl_net": 778.6,
+        "pnl_pct": 2.17,
+        "note": NaN
+      },
+      {
+        "code": 300723,
+        "name": "一品红",
+        "open_date": "2026-07-02",
+        "close_date": "2026-07-06",
+        "hold_days": 4.0,
+        "qty": 1100,
+        "buy_price": 40.09,
+        "sell_price": 40.8,
+        "pnl_gross": 781.0,
+        "cost": 37.03,
+        "pnl_net": 743.97,
+        "pnl_pct": 1.77,
+        "note": NaN
+      },
+      {
+        "code": 300689,
+        "name": "澄天伟业",
+        "open_date": "2026-07-02",
+        "close_date": "2026-07-06",
+        "hold_days": 4.0,
+        "qty": 100,
+        "buy_price": 68.37,
+        "sell_price": 66.22,
+        "pnl_gross": -215.0,
+        "cost": 9.47,
+        "pnl_net": -224.47,
+        "pnl_pct": -3.14,
+        "note": NaN
+      }
+    ],
+    "top_freq": [
+      {
+        "code": 300723,
+        "name": "一品红",
+        "n_trades": 7,
+        "n_buys": 4,
+        "n_sells": 3
+      },
+      {
+        "code": 300689,
+        "name": "澄天伟业",
+        "n_trades": 5,
+        "n_buys": 2,
+        "n_sells": 3
+      }
+    ],
+    "codes_to_analyze": [
+      528,
+      1283,
+      2205,
+      300689,
+      300723,
+      600522,
+      688122
+    ]
+  },
+  "账户4": {
+    "top_loss": [
+      {
+        "code": 600637,
+        "name": "东方明珠",
+        "open_date": "2026-05-25",
+        "close_date": "2026-06-04",
+        "hold_days": 10,
+        "qty": 9900,
+        "buy_price": 11.39,
+        "sell_price": 9.15,
+        "pnl_gross": -22176.0,
+        "cost": 67.67,
+        "pnl_net": -22243.67,
+        "pnl_pct": -19.67
+      },
+      {
+        "code": 600338,
+        "name": "西藏珠峰",
+        "open_date": "2026-05-06",
+        "close_date": "2026-06-04",
+        "hold_days": 29,
+        "qty": 900,
+        "buy_price": 26.86,
+        "sell_price": 17.13,
+        "pnl_gross": -8757.0,
+        "cost": 14.65,
+        "pnl_net": -8771.65,
+        "pnl_pct": -36.22
+      },
+      {
+        "code": 2171,
+        "name": "楚江新材",
+        "open_date": "2026-06-22",
+        "close_date": "2026-07-01",
+        "hold_days": 9,
+        "qty": 2300,
+        "buy_price": 16.13,
+        "sell_price": 13.5,
+        "pnl_gross": -6049.0,
+        "cost": 23.42,
+        "pnl_net": -6072.42,
+        "pnl_pct": -16.31
+      },
+      {
+        "code": 2290,
+        "name": "禾盛新材",
+        "open_date": "2026-06-22",
+        "close_date": "2026-06-29",
+        "hold_days": 7,
+        "qty": 500,
+        "buy_price": 89.0,
+        "sell_price": 83.205,
+        "pnl_gross": -2897.5,
+        "cost": 29.96,
+        "pnl_net": -2927.46,
+        "pnl_pct": -6.51
+      },
+      {
+        "code": 7,
+        "name": "全新好",
+        "open_date": "2026-05-08",
+        "close_date": "2026-05-13",
+        "hold_days": 5,
+        "qty": 700,
+        "buy_price": 17.17,
+        "sell_price": 13.45,
+        "pnl_gross": -2604.0,
+        "cost": 12.21,
+        "pnl_net": -2616.21,
+        "pnl_pct": -21.67
+      }
+    ],
+    "top_win": [
+      {
+        "code": 2409,
+        "name": "雅克科技",
+        "open_date": "2026-06-22",
+        "close_date": "2026-06-26",
+        "hold_days": 4,
+        "qty": 300,
+        "buy_price": 160.717,
+        "sell_price": 190.42,
+        "pnl_gross": 8910.9,
+        "cost": 39.27,
+        "pnl_net": 8871.63,
+        "pnl_pct": 18.48
+      },
+      {
+        "code": 811,
+        "name": "冰轮环境",
+        "open_date": "2026-05-08",
+        "close_date": "2026-05-25",
+        "hold_days": 17,
+        "qty": 400,
+        "buy_price": 25.98,
+        "sell_price": 35.15,
+        "pnl_gross": 3668.0,
+        "cost": 17.03,
+        "pnl_net": 3650.97,
+        "pnl_pct": 35.3
+      },
+      {
+        "code": 603019,
+        "name": "中科曙光",
+        "open_date": "2026-06-23",
+        "close_date": "2026-06-29",
+        "hold_days": 6,
+        "qty": 300,
+        "buy_price": 88.87,
+        "sell_price": 97.48,
+        "pnl_gross": 2583.0,
+        "cost": 21.6,
+        "pnl_net": 2561.4,
+        "pnl_pct": 9.69
+      }
+    ],
+    "top_freq": [
+      {
+        "code": 2171,
+        "name": "楚江新材",
+        "n_trades": 19,
+        "n_buys": 9,
+        "n_sells": 10
+      },
+      {
+        "code": 603703,
+        "name": "盛洋科技",
+        "n_trades": 9,
+        "n_buys": 4,
+        "n_sells": 5
+      }
+    ],
+    "codes_to_analyze": [
+      7,
+      811,
+      2171,
+      2290,
+      2409,
+      600338,
+      600637,
+      603019,
+      603703
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "账户1": {
+    "encoding": "gb18030",
+    "raw_rows": 481,
+    "trade_rows": 457,
+    "date_range": [
+      "2025-08-15",
+      "2026-07-07"
+    ],
+    "unique_stocks": 132,
+    "buy_count": 242,
+    "sell_count": 215,
+    "buy_amount": 10906331.8,
+    "sell_amount": 10751833.5,
+    "total_fee": 13887.12,
+    "roundtrip_count": 275,
+    "wins": 119,
+    "losses": 156,
+    "win_rate": 43.27,
+    "total_pnl_net": -99353.89,
+    "avg_win": 1795.8,
+    "avg_loss": -2006.76,
+    "avg_hold_days": 6.8,
+    "open_positions": 2
+  },
+  "账户2": {
+    "encoding": "gb18030",
+    "raw_rows": 388,
+    "trade_rows": 375,
+    "date_range": [
+      "2025-10-31",
+      "2026-06-22"
+    ],
+    "unique_stocks": 119,
+    "buy_count": 194,
+    "sell_count": 181,
+    "buy_amount": 8750006.92,
+    "sell_amount": 8481794.0,
+    "total_fee": 6865.2,
+    "roundtrip_count": 222,
+    "wins": 84,
+    "losses": 138,
+    "win_rate": 37.84,
+    "total_pnl_net": -146607.89,
+    "avg_win": 1679.03,
+    "avg_loss": -2084.39,
+    "avg_hold_days": 4.7,
+    "open_positions": 1
+  },
+  "账户3": {
+    "encoding": "gb18030",
+    "raw_rows": 37,
+    "trade_rows": 37,
+    "date_range": [
+      "2026-07-01",
+      "2026-07-08"
+    ],
+    "unique_stocks": 12,
+    "buy_count": 20,
+    "sell_count": 17,
+    "buy_amount": 908385.2,
+    "sell_amount": 909656.47,
+    "total_fee": 783.9,
+    "roundtrip_count": 14,
+    "wins": 4,
+    "losses": 10,
+    "win_rate": 28.57,
+    "total_pnl_net": -14507.79,
+    "avg_win": 430.89,
+    "avg_loss": -1623.14,
+    "avg_hold_days": 3.3,
+    "open_positions": 9
+  },
+  "账户4": {
+    "encoding": "gb18030",
+    "raw_rows": 169,
+    "trade_rows": 164,
+    "date_range": [
+      "2026-05-06",
+      "2026-07-01"
+    ],
+    "unique_stocks": 50,
+    "buy_count": 90,
+    "sell_count": 74,
+    "buy_amount": 2022561.0,
+    "sell_amount": 1525845.0,
+    "total_fee": 1650.24,
+    "roundtrip_count": 100,
+    "wins": 50,
+    "losses": 50,
+    "win_rate": 50.0,
+    "total_pnl_net": -59140.71,
+    "avg_win": 896.76,
+    "avg_loss": -2079.58,
+    "avg_hold_days": 4.9,
+    "open_positions": 8
+  }
+}

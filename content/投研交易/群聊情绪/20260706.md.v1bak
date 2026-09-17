@@ -1,0 +1,65 @@
+---
+date: 2026-07-06
+agent: R3-sentiment-resonance
+skill_version: analyze_sentiment_resonance_v1@1.0
+generated_at: 2026-07-06T02:58:30+08:00
+confidence: 0.5
+degraded: true
+data_sources:
+  - name: wechat_cli_5groups
+    path: data/raw/20260706/wechat_cli_5groups.jsonl
+    status: ok
+  - name: wechat_official_20
+    path: data/raw/20260706/wechat_official_20.jsonl
+    status: ok
+  - name: weflow_snapshot
+    path: data/raw/20260706/weflow_snapshot.json
+    status: error
+    error: TimeoutError · MCP down
+input_freshness: partial
+input_freshness_note: "降级源: weflow_snapshot"
+---
+# 2026-07-06 · 群聊情绪共振
+> **数据源新鲜度**: partial  
+> **降级状态**: yes  
+> **置信度**: 0.5  
+
+## 一句话结论
+
+TBD · 请从 JSON artifact 提取核心判断
+
+## 详细分析
+
+_(artifact 无 high-signal 字段 · 完整 JSON 见下)_
+
+## 关键证据
+
+_(见上方核心结构化输出 · 主要证据字段随 skill 不同)_
+
+## 数据源审计
+
+| 源 | 状态 | 抓取时间 | 记录数 | 备注 |
+|---|---|---|---|---|
+| wechat_cli_5groups | ok | - | - | - |
+| wechat_official_20 | ok | - | - | - |
+| weflow_snapshot | error | - | - | TimeoutError · MCP down |
+
+## 不确定性 / 反证
+
+数据源降级:降级源: weflow_snapshot。相关结论置信度受影响。
+
+## 与其他 R/D/E 的关系
+
+- **依赖**: wechat_cli_5groups, wechat_official_20, weflow_snapshot(error)
+- **被消费**: R2, R6, D1
+
+## Sub-Agent 元数据
+
+- skill: `analyze_sentiment_resonance_v1`
+- artifact: `data/research/20260706/R3_sentiment.json`
+- 生成时间: 2026-07-06T02:58:30+08:00
+- 主 orchestrator: `research_orchestrator_v1` (proc_46cb002764ca · 25 min)
+
+---
+
+_本文件由 `scripts/render_kg_md_backfill.py` 从 artifact 回渲染 · schema: `render_kg_md_v1`_

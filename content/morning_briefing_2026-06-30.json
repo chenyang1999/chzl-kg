@@ -1,0 +1,614 @@
+{
+  "date": "2026-06-30",
+  "sise_status": {
+    "last_trade_date": "20260629",
+    "last_sync_meta": "20260629",
+    "sise_computed_at": "2026-06-29T19:42:39.062547",
+    "stock_count": 5542,
+    "bar_count": 929861,
+    "signals_last_7d": 578
+  },
+  "recent_hits": [
+    {
+      "ts_code": "000751.SZ",
+      "name": "锌业股份",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "magenta",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "magenta",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 3,
+      "curr_vol_red": 4,
+      "flipped_rows": [
+        1
+      ]
+    },
+    {
+      "ts_code": "000759.SZ",
+      "name": "中百集团",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "green",
+      "row3": "red",
+      "row4": "yellow",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "yellow",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 0,
+      "curr_vol_red": 3,
+      "flipped_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "ts_code": "000921.SZ",
+      "name": "海信家电",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "yellow",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "yellow",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 3,
+      "curr_vol_red": 4,
+      "flipped_rows": [
+        3
+      ]
+    },
+    {
+      "ts_code": "000988.SZ",
+      "name": "华工科技",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "red",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "red",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 3,
+      "curr_vol_red": 4,
+      "flipped_rows": [
+        3
+      ]
+    },
+    {
+      "ts_code": "001206.SZ",
+      "name": "依依股份",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "green",
+      "row3": "red",
+      "row4": "red",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "red",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 2,
+      "curr_vol_red": 3,
+      "flipped_rows": [
+        1
+      ]
+    },
+    {
+      "ts_code": "001259.SZ",
+      "name": "利仁科技",
+      "signal_date": "20260629",
+      "row0": "green",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "red",
+      "row4_strengthened": true,
+      "ma30_up": true,
+      "prev_row4": "yellow",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 2,
+      "curr_vol_red": 3,
+      "flipped_rows": [
+        3
+      ]
+    },
+    {
+      "ts_code": "001282.SZ",
+      "name": "三联锻造",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "green",
+      "row3": "red",
+      "row4": "magenta",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "magenta",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 0,
+      "curr_vol_red": 3,
+      "flipped_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "ts_code": "001301.SZ",
+      "name": "尚太科技",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "yellow",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "yellow",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 1,
+      "curr_vol_red": 4,
+      "flipped_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "ts_code": "002072.SZ",
+      "name": "凯瑞德",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "green",
+      "row4": "yellow",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "yellow",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 2,
+      "curr_vol_red": 3,
+      "flipped_rows": [
+        0
+      ]
+    },
+    {
+      "ts_code": "002191.SZ",
+      "name": "劲嘉股份",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "green",
+      "row3": "green",
+      "row4": "yellow",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "magenta",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 0,
+      "curr_vol_red": 2,
+      "flipped_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "ts_code": "002317.SZ",
+      "name": "众生药业",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "red",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "red",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 3,
+      "curr_vol_red": 4,
+      "flipped_rows": [
+        0
+      ]
+    },
+    {
+      "ts_code": "002422.SZ",
+      "name": "科伦药业",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "red",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "red",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 3,
+      "curr_vol_red": 4,
+      "flipped_rows": [
+        3
+      ]
+    },
+    {
+      "ts_code": "002669.SZ",
+      "name": "康达新材",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "yellow",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "yellow",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 3,
+      "curr_vol_red": 4,
+      "flipped_rows": [
+        3
+      ]
+    },
+    {
+      "ts_code": "002675.SZ",
+      "name": "东诚药业",
+      "signal_date": "20260629",
+      "row0": "green",
+      "row1": "green",
+      "row2": "green",
+      "row3": "red",
+      "row4": "magenta",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "magenta",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 0,
+      "curr_vol_red": 1,
+      "flipped_rows": [
+        3
+      ]
+    },
+    {
+      "ts_code": "002687.SZ",
+      "name": "乔治白",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "magenta",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "magenta",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 1,
+      "curr_vol_red": 4,
+      "flipped_rows": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "ts_code": "002739.SZ",
+      "name": "儒意电影",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "green",
+      "row2": "green",
+      "row3": "red",
+      "row4": "magenta",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "magenta",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 1,
+      "curr_vol_red": 2,
+      "flipped_rows": [
+        0
+      ]
+    },
+    {
+      "ts_code": "300024.SZ",
+      "name": "机器人",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "yellow",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "green",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 0,
+      "curr_vol_red": 4,
+      "flipped_rows": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ts_code": "300046.SZ",
+      "name": "台基股份",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "red",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "red",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 3,
+      "curr_vol_red": 4,
+      "flipped_rows": [
+        2
+      ]
+    },
+    {
+      "ts_code": "300149.SZ",
+      "name": "睿智医药",
+      "signal_date": "20260629",
+      "row0": "red",
+      "row1": "green",
+      "row2": "green",
+      "row3": "red",
+      "row4": "magenta",
+      "row4_strengthened": false,
+      "ma30_up": true,
+      "prev_row4": "magenta",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 1,
+      "curr_vol_red": 2,
+      "flipped_rows": [
+        0
+      ]
+    },
+    {
+      "ts_code": "300259.SZ",
+      "name": "新天科技",
+      "signal_date": "20260629",
+      "row0": "green",
+      "row1": "red",
+      "row2": "red",
+      "row3": "red",
+      "row4": "red",
+      "row4_strengthened": true,
+      "ma30_up": true,
+      "prev_row4": "yellow",
+      "signal_type": "vol_strengthen",
+      "prev_vol_red": 2,
+      "curr_vol_red": 3,
+      "flipped_rows": [
+        3
+      ]
+    }
+  ],
+  "near_triggers": [
+    {
+      "ts_code": "600498.SH",
+      "name": "烽火通信",
+      "trade_date": "20260629",
+      "current_close": 72.07,
+      "signal_now": false,
+      "trigger_price_est": 72.12,
+      "dist_to_trigger_pct": 0.07,
+      "strategy_hint": "临近触发-可埋伏低吸"
+    },
+    {
+      "ts_code": "600392.SH",
+      "name": "盛和资源",
+      "trade_date": "20260629",
+      "current_close": 28.61,
+      "signal_now": false,
+      "trigger_price_est": 28.68,
+      "dist_to_trigger_pct": 0.24,
+      "strategy_hint": "临近触发-可埋伏低吸"
+    },
+    {
+      "ts_code": "600110.SH",
+      "name": "诺德股份",
+      "trade_date": "20260629",
+      "current_close": 14.73,
+      "signal_now": false,
+      "trigger_price_est": 14.78,
+      "dist_to_trigger_pct": 0.34,
+      "strategy_hint": "临近触发-可埋伏低吸"
+    },
+    {
+      "ts_code": "001359.SZ",
+      "name": "平安电工",
+      "trade_date": "20260629",
+      "current_close": 117.5,
+      "signal_now": false,
+      "trigger_price_est": 117.94,
+      "dist_to_trigger_pct": 0.37,
+      "strategy_hint": "临近触发-可埋伏低吸"
+    },
+    {
+      "ts_code": "000782.SZ",
+      "name": "恒申新材",
+      "trade_date": "20260629",
+      "current_close": 7.88,
+      "signal_now": false,
+      "trigger_price_est": 7.85,
+      "dist_to_trigger_pct": -0.38,
+      "strategy_hint": "临近触发-可埋伏低吸"
+    },
+    {
+      "ts_code": "002989.SZ",
+      "name": "中天精装",
+      "trade_date": "20260629",
+      "current_close": 33.01,
+      "signal_now": false,
+      "trigger_price_est": 33.15,
+      "dist_to_trigger_pct": 0.42,
+      "strategy_hint": "临近触发-可埋伏低吸"
+    },
+    {
+      "ts_code": "000733.SZ",
+      "name": "振华科技",
+      "trade_date": "20260629",
+      "current_close": 55.82,
+      "signal_now": false,
+      "trigger_price_est": 56.18,
+      "dist_to_trigger_pct": 0.64,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "002587.SZ",
+      "name": "奥拓电子",
+      "trade_date": "20260629",
+      "current_close": 7.1,
+      "signal_now": false,
+      "trigger_price_est": 7.15,
+      "dist_to_trigger_pct": 0.7,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "600184.SH",
+      "name": "光电股份",
+      "trade_date": "20260629",
+      "current_close": 29.1,
+      "signal_now": false,
+      "trigger_price_est": 29.31,
+      "dist_to_trigger_pct": 0.72,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "600487.SH",
+      "name": "亨通光电",
+      "trade_date": "20260629",
+      "current_close": 108.04,
+      "signal_now": false,
+      "trigger_price_est": 108.85,
+      "dist_to_trigger_pct": 0.75,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "000970.SZ",
+      "name": "中科三环",
+      "trade_date": "20260629",
+      "current_close": 13.81,
+      "signal_now": false,
+      "trigger_price_est": 13.92,
+      "dist_to_trigger_pct": 0.8,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "002536.SZ",
+      "name": "飞龙股份",
+      "trade_date": "20260629",
+      "current_close": 44.65,
+      "signal_now": false,
+      "trigger_price_est": 45.01,
+      "dist_to_trigger_pct": 0.81,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "000703.SZ",
+      "name": "恒逸石化",
+      "trade_date": "20260629",
+      "current_close": 15.0,
+      "signal_now": false,
+      "trigger_price_est": 14.85,
+      "dist_to_trigger_pct": -1.0,
+      "strategy_hint": "临近触发-可埋伏低吸"
+    },
+    {
+      "ts_code": "600177.SH",
+      "name": "雅戈尔",
+      "trade_date": "20260629",
+      "current_close": 7.6,
+      "signal_now": false,
+      "trigger_price_est": 7.68,
+      "dist_to_trigger_pct": 1.05,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "000060.SZ",
+      "name": "中金岭南",
+      "trade_date": "20260629",
+      "current_close": 7.82,
+      "signal_now": false,
+      "trigger_price_est": 7.91,
+      "dist_to_trigger_pct": 1.15,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "002520.SZ",
+      "name": "日发精机",
+      "trade_date": "20260629",
+      "current_close": 6.72,
+      "signal_now": false,
+      "trigger_price_est": 6.81,
+      "dist_to_trigger_pct": 1.34,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "002832.SZ",
+      "name": "比音勒芬",
+      "trade_date": "20260629",
+      "current_close": 20.69,
+      "signal_now": false,
+      "trigger_price_est": 20.97,
+      "dist_to_trigger_pct": 1.35,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "002415.SZ",
+      "name": "海康威视",
+      "trade_date": "20260629",
+      "current_close": 32.99,
+      "signal_now": false,
+      "trigger_price_est": 33.46,
+      "dist_to_trigger_pct": 1.42,
+      "strategy_hint": "接近触发-关注放量突破"
+    },
+    {
+      "ts_code": "000810.SZ",
+      "name": "创维数字",
+      "trade_date": "20260629",
+      "current_close": 12.6,
+      "signal_now": false,
+      "trigger_price_est": 12.41,
+      "dist_to_trigger_pct": -1.51,
+      "strategy_hint": "临近触发-可埋伏低吸"
+    },
+    {
+      "ts_code": "002057.SZ",
+      "name": "中钢天源",
+      "trade_date": "20260629",
+      "current_close": 11.6,
+      "signal_now": false,
+      "trigger_price_est": 11.78,
+      "dist_to_trigger_pct": 1.55,
+      "strategy_hint": "接近触发-关注放量突破"
+    }
+  ],
+  "action_items": [
+    "今日有转强信号，可重点观察放量突破标的",
+    "有 174 只距触发价≤2%，可盘中埋伏低吸",
+    "回避科创板/创业板非主线标的",
+    "严格执行仓位纪律：单票≤15%，总仓≤80%"
+  ],
+  "disclaimer": "本简报为量化模型测算，不构成投资建议。四色四量信号是历史规律统计，未来未必重复。触发价为盘前静态均线估算，盘中会随价格漂移，仅供参考。投资有风险，入市需谨慎。"
+}

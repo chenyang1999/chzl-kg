@@ -1,0 +1,129 @@
+---
+date: 2026-07-06
+agent: R6-devil-advocate
+skill_version: analyze_devil_advocate_v1@1.0
+generated_at: 2026-07-06T07:55:00+08:00
+confidence: 0.70
+degraded: false
+data_sources:
+  - name: R1_style
+    path: data/research/20260706/R1_style.json
+    status: ok
+    upstream_confidence: 0.72
+  - name: R2_main_sectors
+    path: data/research/20260706/R2_main_sectors.json
+    status: ok
+    upstream_confidence: 0.70
+  - name: R3_sentiment
+    path: data/research/20260706/R3_sentiment.json
+    status: partial
+    upstream_confidence: 0.50
+    note: L3 WeFlow 死 · distribution_alert 空
+  - name: R4_news
+    path: data/research/20260706/R4_news.json
+    status: ok
+    upstream_confidence: 0.78
+  - name: R5_stock_profiles
+    path: data/research/20260706/R5_stock_profiles.json
+    status: partial
+    upstream_confidence: 0.68
+    note: chip_structure/technical/institutional 三维 partial · chenhailangju DOWN
+  - name: R7_capital_flow
+    path: data/research/20260706/R7_capital_flow.json
+    status: partial
+    upstream_confidence: 0.50
+    note: fetch_global_severity=2
+  - name: user_preferences
+    path: data/user_preferences.yaml
+    status: ok
+input_freshness: partial
+input_freshness_note: R3/R5/R7 三源 confidence 偏低,交叉验证被降级但六模式仍全跑
+---
+
+# 2026-07-06 · R6 反证 Agent
+
+> 数据源新鲜度: partial(R3/R5/R7 偏低,不影响主流程)
+> 降级状态: no(六模式全跑,模式四/五因缺库降级为 soft)
+> 置信度: 0.70
+
+## 一句话结论
+
+今日反证共产出 9 条 counter_arguments、覆盖 10 只候选,其中硬否决 0 条、强建议 4 条、软建议 5 条;模式六霸榜出货因 R3 distribution_alert 未连续两日触发 + R5 个股级主力 5 日净流出明细缺失,硬否决条件 (1)+(2) 均未同时命中,埃斯顿相关标的降级为 strong_suggest,红线 3 保护未触发。核心担忧集中在 R1 震荡分化 vs R2 双主线的一致性冲突、三花估值 90%+ 分位拥挤度、埃斯顿量化打板 3 日 2 次协同、以及华菱线缆首飞窗口后见光死风险,建议 D1 严守仓位上限 0.5 并对每只 execution_eligible 携带明确 exit_rule。
+
+## Hard Rejects · 硬否决
+
+本次通过 hard 审查 —— 无任何标的触发 hard_reject。
+
+模式六是本 skill 唯一的硬否决权来源,其硬否决条件为 (1) R3 hotlist_signals.distribution_alert 触发连续两日霸榜 + (2) R5 chip_structure 落实个股级主力 5 日净流出明细。今日两条硬约束条件因上游数据缺失均未客观命中:R3 hotlist_signals.distribution_alert 为空(人形机器人虽 rank1 但仅第 1 天,非连续两日);R5 因 chenhailangju MCP DOWN,chip_structure 维仅达 partial,个股级 5 日主力净流出金额无法落地核实。四只被评估候选(002050 三花智控、002747 埃斯顿、001208 华菱线缆、600435 北方导航)均未被硬否决,execution_eligible 候选 7 只 >> 3,红线 3 保护也无需触发。
+
+## Strong Suggest · 强建议
+
+### 1. R1 震荡分化 vs R2 双主线的一致性冲突(reject_id: R6_M2_01)
+
+针对 R1 判定的「震荡分化型 · 仓位上限 0.5」与 R2 落地 2 条高弹性科技/军工主线之间的结构性张力。R1 自身已明确「T-1 崩溃后企稳但连板塔尖仅 4 板 1 只、双龙结构缺失,禁止追高连板 3 板以上高标」,并列出「若 T 日炸板率突破 40% 且 3 板高标批量倒下,风格立即下修为防御观望型,仓位压至 30% 以下」的风险条款;R3 sentiment_score=58 属中性偏乐观但非强势,加之 L3 WeFlow 死掉,共振强度存在验证空白。这意味着即便 R2 落地了两条主线,底层风格与情绪都没有为「双主线共同发动」提供足够背书。建议 D1 显式声明仓位上限严守 0.5(不上修),execution_pool_size ≤3 只;若 09:25 集合竞价出现炸板率苗头 >30% 或龙一低开 -2% 以下,P1 阶段必须触发降级。
+
+### 2. R2 secondary_lines 全部因 R7 T-1 资金背离降级(reject_id: R6_M2_02)
+
+R4 消息面 5 条 strength=high 的催化(韬定律 V2、存储、光通信、MLCC、电子布)全部因 R7 T-1 资金背离进入 secondary_lines,这本身就是「市场资金对 R4 叙事不买账」的重要信号。R7 数据显示:先进封装 -60.10 亿 rank1 净流出、半导体概念 -358.48 亿、存储芯片 -169.67 亿、光纤概念 -127.78 亿、MLCC -41.95 亿——5 条 R4 强催化子板块 T-1 全线净流出;R2 notes 亦已明确「R4/R3 叙事密集的科技子板块全部因 R7 T-1 主力资金大幅净流出被降入 secondary_lines,需等周一集合竞价验证资金流转向」;R3 情绪浓度 58 中性 + L3 WeFlow 缺失也无法确认周末利好会在周一必然反映为资金正向流入。建议 D1 集合竞价 09:25 必须校准:若 secondary_lines(存储/光通信/先进封装)开盘竞价溢价均值 <1% 或分歧上升,说明周末叙事已被 T-1 资金充分定价,应减仓或延迟主线开仓;且 D1 严禁在集合竞价阶段主动加仓 secondary_lines 任一票。
+
+### 3. 三花智控(002050.SZ)估值 90%+ 分位 + 拥挤度警报(reject_id: R6_M3_01)
+
+R5 profile.valuation_safety 明确指出「白电压缩机主业稳定 + 机器人执行器长周期赛道估值溢价;历史 PE 分位高位(定性 90%+);主线龙头惯性 + 中长周期催化 → 估值可容忍但缺乏低吸安全边际」;flags 已挂 crowding_risk_watch;R7 T-1 数据显示机器人概念净流入 +143.74 亿(rank1)、人形机器人 +113.78 亿(rank3)、机器人执行器 +64.73 亿,龙头板块资金已高度拥挤。valuation_safety 是 R5 六维中最低分(9 分),意味着即便主线成立,估值本身也不给低吸机会,追高风险显著。建议 D1 将三花单票仓位控制在 execution_pool 总仓位的 40% 以内(严于 amygdala 硬约束 15%),且盘中若龙一冲高回落 >-3% 建议部分止盈,不做「主线信仰位死拿」处理。
+
+### 4. 埃斯顿(002747.SZ)量化打板 3 日 2 次协同(reject_id: R6_M6_01)
+
+R7 hot_money.synergy_flags 明确列出「量化打板同一游资 3 日内 2 次上榜 002747.SZ(20260703 / 20260701)」——这是典型的游资协同拥挤度信号;R5 profile.flags 同时挂了 hot_money_synergy_alert + quant_dabbing_crowding,risk_grade=C+ 在全部候选中最低。但硬否决条件核验后发现:R3 distribution_alert=[] 未触发霸榜出货(人形机器人 rank1 仅第 1 天,非连续两日),硬否决条件 (1) 未命中;R5 chip_structure 维 partial,个股级主力 5 日净流出金额未落地(chenhailangju DOWN),硬否决条件 (2) 无法客观核实。两条都未同时命中,严格按 skill 契约不能硬否决,故降级为 strong_suggest。建议 D1 将埃斯顿仓位压至 execution_pool 单票下限(≤5%)或延迟至 09:30 后视三花走势决定;若三花炸板则埃斯顿承接概率极低,立即剔除。
+
+## Soft Suggest · 软建议
+
+- 三花作为人形机器人主线龙一虽 R2 score 84 但 R3 已把它标为 middle 而非 early,R1 也指出塔尖仅 4 板 1 只、扩散未成主线,R3+R1 与 R2 存在结构性冲突,主线成立但热度已 middle-late,建议 D1 以低吸而非追高进入,盘中若三花无法封板即视为退潮信号(R6_M1_01)。
+- R2 主线二商业航天龙一华菱线缆:R7 显示商业航天板块主力资金 rank23(+41.87 亿)、卫星互联网 rank30(+33.30 亿),均不入 top10,资金强度明显弱于人形机器人主线;R2 自身 risks 已列出「资金强度弱、仓位偏轻」;R5 composite_score 62 显著低于三花 74,五维中 chip_structure/valuation/technical/institutional 全 partial,高度依赖研报驱动而非数据交叉。建议商业航天主线保留但仓位压至 15-20%,首飞窗口 7/10-13 前一日(7/9)如板块未见连板承接则减仓(R6_M1_02)。
+- 华菱线缆(001208.SZ)首飞前催化预期驱动、兑现后需业绩验证,当前估值处于叙事溢价区间;valuation_safety.score=10,首飞事件驱动型溢价;R4 E20260706_007 strength=medium(非 high),硬催化对应 7/10-13 首飞窗口,存在「见光死」风险;R5 r6_review_focus 已预标该风险。建议华菱携带明确 exit_rule:首飞成功当日 T+0 若涨幅 >7% 则减仓 50%;若首飞延期或失败则次日直接清仓(R6_M3_02)。
+- 模式四历史类比因 v1 无历史事件库,无法客观量化「T-1 崩溃后企稳 + 塔尖矮 + 双主线中一条叙事强资金弱 → 后 5 日主线胜率」,本模式降级不硬凑结论;D1 参考 E1 上线后每日复盘的类比反证(R6_M4_01)。
+- 模式五昨日预期错误连锁因 20260703 未回溯生成 R6 反证 + 20260706 observation_tracking.json 不存在(E1 复盘 Agent 未上线),无法进行昨日反证兑现追踪;本模式降级不硬凑结论,D1 参考 E1 上线后再启用(R6_M5_01)。
+
+## Patterns 状态
+
+模式一「数据源冲突」正常执行,产出 2 条 soft_suggest(三花与华菱)。
+模式二「一致性检查」正常执行,产出 2 条 strong_suggest(R1↔R2 结构冲突、R2 secondary_lines 全线资金背离)。
+模式三「估值×主线临界」正常执行,产出 1 条 strong_suggest(三花)+ 1 条 soft_suggest(华菱)。
+模式四「历史类比」降级——v1 无历史事件库,不编造,仅产出 1 条 soft_suggest 提示 D1 待 E1 上线。
+模式五「昨日预期错误连锁」降级——20260703 未回溯 R6 + observation_tracking.json 不存在,不编造,仅产出 1 条 soft_suggest 提示 D1 待 E1 上线。
+模式六「霸榜出货硬约束」(唯一硬否决权)正常执行:candidates_evaluated 覆盖 002050 三花智控、002747 埃斯顿、001208 华菱线缆、600435 北方导航共 4 只;硬否决条件 (1) R3 distribution_alert + (2) R5 5 日主力净流出明细均未同时命中,hard_reject_count=0,埃斯顿降级为 strong_suggest(downgraded_count=1);红线 3 保护未触发(execution_eligible 候选 7 只远大于 3)。
+
+## 数据源审计
+
+| 源 | 状态 | 上游 confidence | 备注 |
+|---|---|---|---|
+| R1_style.json | ok | 0.72 | 震荡分化型 · 仓位上限 0.5 · 塔尖矮 |
+| R2_main_sectors.json | ok | 0.70 | 双主线(人形机器人 84 + 商业航天 72),secondary 全资金背离 |
+| R3_sentiment.json | partial | 0.50 | L3 WeFlow 死 · distribution_alert=[] · sentiment_score=58 |
+| R4_news.json | ok | 0.78 | 5 条 high 催化全部因 R7 资金背离进 secondary |
+| R5_stock_profiles.json | partial | 0.68 | chip_structure/technical/institutional 三维 partial(chenhailangju DOWN) |
+| R7_capital_flow.json | partial | 0.50 | fetch_global_severity=2 · 机器人 rank1/3/4 拥挤 |
+| user_preferences.yaml | ok | - | leader_preference 硬约束参照 |
+| MCP 调用 | - | - | R6 严格 file-only,未调用任何 MCP;@announcement-search 未触发(无 hard_reject 需公告核验) |
+
+## 置信度理由
+
+基准 0.75(R1-R5+R7 全 usable、六模式全跑);
+-0.05 因 R3/R7 上游 confidence 仅 0.50、fetch_global_severity=2,交叉验证被降级;
+-0.05 因 R5 chip_structure/technical/institutional 三维 partial,个股级主力 5 日净流出明细缺失,模式六硬否决条件 (2) 无法客观核实;
++0.05 因 R7 synergy_flags 明确列出 002747/300718 拥挤度信号 + R5 已预标 r6_review_focus,减少手工推理量;
+最终 = 0.70。
+
+## 与其他 R/D 关系
+
+- 上游依赖:本 skill 只读 R1/R2/R3/R4/R5/R7 六份 artifact + user_preferences.yaml,file-only,未调用任何 MCP。
+- 关键上下文:R3 hotlist_signals.distribution_alert + R5 chip_structure 个股级主力 5 日净流出是模式六硬否决的两个刚性条件,今日均未满足,故 hard_reject 为空。
+- 下游消费:D1(main_decision_v1)必须在盘前预案中显式回应本文件的 4 条 strong_suggest —— 仓位上限严守 0.5、三花单票 ≤execution_pool 总仓位 40%、埃斯顿压至下限或延迟视三花而定、secondary_lines 09:25 竞价校准;5 条 soft_suggest 建议进入 D1 exit_rules 与盘中降级触发条件。E1(daily_review_v1)一旦上线,需回溯今日 4 条 strong 是否兑现,并回填 observation_tracking.json 以启用模式五。
+
+## Sub-Agent 元数据
+
+- skill: analyze_devil_advocate_v1@1.0
+- artifact: data/research/20260706/R6_devil_advocate.json
+- method: llm_v1
+- candidates_evaluated: 10
+- counter_arguments: 9(hard 0 / strong 4 / soft 5)
+- generated_at: 2026-07-06T07:55:00+08:00
+- 约束:file-only,禁 MCP,唯一 hard_reject 权归模式六

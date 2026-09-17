@@ -1,0 +1,79 @@
+---
+date: 2026-07-06
+agent: R1-style-analysis
+skill_version: analyze_style_v1@1.0
+generated_at: 2026-07-06T02:58:30+08:00
+confidence: 0.72
+degraded: false
+data_sources:
+  - name: wechat_official_20
+    path: data/raw/20260706/wechat_official_20.jsonl
+    status: ok
+  - name: wechat_cli_5groups
+    path: data/raw/20260706/wechat_cli_5groups.jsonl
+    status: ok
+  - name: tushare_MCP
+    status: ok
+input_freshness: ok
+input_freshness_note: ""
+---
+# 2026-07-06 · 风格研判
+> **数据源新鲜度**: ok  
+> **降级状态**: no  
+> **置信度**: 0.72  
+
+## 一句话结论
+
+TBD · 请从 JSON artifact 提取核心判断
+
+## 详细分析
+
+**核心结构化输出**:
+
+```json
+{
+  "risks": [
+    "若 T 日高开且 4 板高标次日晋级 5 板并出现龙二联动，风格可临时上修至 主线扩散型，仓位上限可回补至 60%",
+    "若 T 日炸板率突破 40% 且 3 板高标批量倒下，风格立即下修为 防御观望型，仓位压至 30% 以下",
+    "科技/AI 主线分歧仍在演绎，若 Meta 算力对外租赁事件继续发酵，海外半导体链联动杀跌可能触发情绪浓度跌破 40，届时进一步降档",
+    "涨停家数 108 但塔尖仅 4 板，属典型『假扩散/真断层』结构，盘中需高频复核龙头是否封死；一旦龙一炸板视为退潮起点"
+  ]
+}
+```
+
+## 关键证据
+
+- 指数(T-1=20260703): 上证 +0.37%, 深证成指 +0.64%, 创业板指 +0.07%; 相较 T-2 (创业板 -5.71% 巨阴) 已技术性企稳，但成交与领涨结构未见攻击性
+- 涨跌停(T-1): 涨停 108 家, 跌停 19 家, 炸板率 32.5% —— 涨停总量扩散度高，但炸板率处于分化档中偏高
+- 连板天梯(剔除 ST, T-1): 最高 4 板 1 只、3 板 3 只、2 板 12 只 —— 塔尖极矮，龙头/龙二双龙结构缺失，无高度带动扩散
+- 板块热度(T-1 limit_cpt_list, up_nums>=8 且非 ST): ≥3 个板块入围，扩散度足够但均缺高标承接，属『扩散未成主线』状态
+- 文本情绪(20 号公众号 + 颜晓滨群 T-1 晚): 一致定性为『科技主线再平衡』『市场分歧与担忧明显上升』『风格漂移回归』；无一致看多/看空共振表述，属分歧型情绪
+- MCP 健康: tushare / datapro OK，xtick / canghai-sise / canghai-charts / weflow / agentqmt / chenhailangju down（global_severity=2），R1 所需数据源(tushare + local jsonl) 全部可用，不进入降级模式
+
+## 数据源审计
+
+| 源 | 状态 | 抓取时间 | 记录数 | 备注 |
+|---|---|---|---|---|
+| wechat_official_20 | ok | - | - | - |
+| wechat_cli_5groups | ok | - | - | - |
+| tushare_MCP | ok | - | - | - |
+
+## 不确定性 / 反证
+
+_(artifact 未显式记录反证段 · 建议后续 skill 补足)_
+
+## 与其他 R/D/E 的关系
+
+- **依赖**: data/raw/20260706/wechat_official_20.jsonl, data/raw/20260706/wechat_cli_5groups.jsonl, tushare_MCP
+- **被消费**: R2, D1
+
+## Sub-Agent 元数据
+
+- skill: `analyze_style_v1`
+- artifact: `data/research/20260706/R1_style.json`
+- 生成时间: 2026-07-06T02:58:30+08:00
+- 主 orchestrator: `research_orchestrator_v1` (proc_46cb002764ca · 25 min)
+
+---
+
+_本文件由 `scripts/render_kg_md_backfill.py` 从 artifact 回渲染 · schema: `render_kg_md_v1`_
