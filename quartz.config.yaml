@@ -6,7 +6,7 @@ configuration:
   enablePopovers: true
   analytics: null
   locale: zh-CN
-  baseUrl: chzl-kg.pages.dev
+  baseUrl: chzl-kg.sky374263410.workers.dev
   ignorePatterns:
     - private
     - templates
