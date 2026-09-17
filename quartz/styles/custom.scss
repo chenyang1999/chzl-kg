@@ -1,11 +1,30 @@
 @use "./variables.scss" as *;
 
-// Quartz-themes stores --tertiary as hsl(calc(...)). Mermaid 11 cannot
-// parse that, so resolve to a nearby solid color as a CSS-level fallback.
+// Keep tertiary as a solid sage so mermaid/khroma never sees hsl(calc()).
 :root {
-  --tertiary: #c4b0fa !important;
+  --tertiary: #84a59d !important;
 }
 :root[saved-theme="dark"] {
-  --tertiary: #9b86e8 !important;
+  --tertiary: #8fb4aa !important;
 }
 
+pre:has(> code.mermaid),
+code.mermaid {
+  background: #f4f1ea !important;
+  border: 1px solid #e2ddd4;
+  border-radius: 12px;
+}
+
+:root[saved-theme="dark"] pre:has(> code.mermaid),
+:root[saved-theme="dark"] code.mermaid {
+  background: #1c1e20 !important;
+  border-color: #33363a;
+}
+
+code.mermaid svg {
+  background: transparent !important;
+}
+
+code.mermaid svg text {
+  font-family: var(--bodyFont), "Noto Sans SC", "Source Han Sans SC", sans-serif !important;
+}
