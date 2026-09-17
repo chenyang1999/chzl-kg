@@ -1,3 +1,11 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Quartz-themes stores --tertiary as hsl(calc(...)). Mermaid 11 cannot
+// parse that, so resolve to a nearby solid color as a CSS-level fallback.
+:root {
+  --tertiary: #c4b0fa !important;
+}
+:root[saved-theme="dark"] {
+  --tertiary: #9b86e8 !important;
+}
+
