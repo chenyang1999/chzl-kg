@@ -1,6 +1,5 @@
 @use "./variables.scss" as *;
 
-// Keep tertiary as a solid sage so mermaid/khroma never sees hsl(calc()).
 :root {
   --tertiary: #84a59d !important;
 }
@@ -10,21 +9,88 @@
 
 pre:has(> code.mermaid),
 code.mermaid {
-  background: #f4f1ea !important;
-  border: 1px solid #e2ddd4;
+  background: #f6f3ec !important;
+  border: 1px solid #d9d0c4;
   border-radius: 12px;
 }
 
 :root[saved-theme="dark"] pre:has(> code.mermaid),
 :root[saved-theme="dark"] code.mermaid {
-  background: #1c1e20 !important;
-  border-color: #33363a;
+  background: #f6f3ec !important;
+  border-color: #d9d0c4;
 }
 
 code.mermaid svg {
   background: transparent !important;
 }
 
-code.mermaid svg text {
+code.mermaid svg text,
+code.mermaid svg tspan {
+  fill: #1c1917 !important;
   font-family: var(--bodyFont), "Noto Sans SC", "Source Han Sans SC", sans-serif !important;
+  font-weight: 600 !important;
+}
+
+code.mermaid svg .mindmap-node > path,
+code.mermaid svg .mindmap-node > rect,
+code.mermaid svg .mindmap-node > ellipse,
+code.mermaid svg .mindmap-node > circle,
+code.mermaid svg .mindmap-node > polygon {
+  stroke: #1c1917 !important;
+  stroke-width: 1.4px !important;
+}
+
+code.mermaid svg .section-0 > path,
+code.mermaid svg .section-0 > rect,
+code.mermaid svg .section-0 > ellipse,
+code.mermaid svg .section-0 > circle {
+  fill: #ffffff !important;
+}
+code.mermaid svg .section-1 > path,
+code.mermaid svg .section-1 > rect,
+code.mermaid svg .section-1 > ellipse,
+code.mermaid svg .section-1 > circle {
+  fill: #c6eadc !important;
+}
+code.mermaid svg .section-2 > path,
+code.mermaid svg .section-2 > rect,
+code.mermaid svg .section-2 > ellipse,
+code.mermaid svg .section-2 > circle {
+  fill: #f8d7d2 !important;
+}
+code.mermaid svg .section-3 > path,
+code.mermaid svg .section-3 > rect,
+code.mermaid svg .section-3 > ellipse,
+code.mermaid svg .section-3 > circle {
+  fill: #d7e2f4 !important;
+}
+code.mermaid svg .section-4 > path,
+code.mermaid svg .section-4 > rect,
+code.mermaid svg .section-4 > ellipse,
+code.mermaid svg .section-4 > circle {
+  fill: #f5e4c4 !important;
+}
+code.mermaid svg .section-5 > path,
+code.mermaid svg .section-5 > rect,
+code.mermaid svg .section-5 > ellipse,
+code.mermaid svg .section-5 > circle {
+  fill: #e4dcf4 !important;
+}
+code.mermaid svg .section-6 > path,
+code.mermaid svg .section-6 > rect,
+code.mermaid svg .section-6 > ellipse,
+code.mermaid svg .section-6 > circle {
+  fill: #dce8c8 !important;
+}
+code.mermaid svg .section-7 > path,
+code.mermaid svg .section-7 > rect,
+code.mermaid svg .section-7 > ellipse,
+code.mermaid svg .section-7 > circle {
+  fill: #f0e0cc !important;
+}
+
+code.mermaid svg .edge path,
+code.mermaid svg .mindmap-edge,
+code.mermaid svg path.edge {
+  stroke: #3f3f3f !important;
 }
