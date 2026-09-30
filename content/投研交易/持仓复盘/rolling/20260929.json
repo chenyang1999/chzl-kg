@@ -1,0 +1,671 @@
+{
+  "as_of": "20260929",
+  "lookback_days": 5,
+  "window": [
+    "20260922",
+    "20260923",
+    "20260924",
+    "20260928",
+    "20260929"
+  ],
+  "generated_at": "2026-09-30T11:42:54+08:00",
+  "simulated": true,
+  "simulation_note": "按计划口径的可成交性推演，非账户真实盈亏（无真实成交记录）",
+  "tracked": 10,
+  "closed": 5,
+  "open": 5,
+  "realized_win_rate_pct": 40.0,
+  "realized_avg_pct": 0.22,
+  "blocked_count": 0,
+  "blocked_extra_loss_pp": 0,
+  "positions": [
+    {
+      "plan_date": "20260922",
+      "ts_code": "600664.SH",
+      "name": "哈药股份",
+      "theme": "医药链(创新药/流感/CRO/中药)",
+      "channel": "打板",
+      "entry_date": "20260922",
+      "entry_price": 9.08,
+      "entry_basis": "打板于涨停价 9.08（当日开板可买）",
+      "status": "closed",
+      "exit_date": "20260923",
+      "exit_price": 9.49,
+      "exit_reason": "take_profit_hit",
+      "realized_pct": 4.52,
+      "mark_pct": null,
+      "blocked_days": 0,
+      "excess_loss_pct": 0.0,
+      "sellable_now": true,
+      "best_exit_pct": 8.59,
+      "worst_exit_pct": -21.37,
+      "sellability_rows": [
+        {
+          "date": "20260923",
+          "chg_pct": -0.44,
+          "close": 9.04,
+          "high": 9.86,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -0.44,
+          "ret_on_high_pct": 8.59
+        },
+        {
+          "date": "20260924",
+          "chg_pct": -9.96,
+          "close": 8.14,
+          "high": 9.08,
+          "sellable": false,
+          "blocked_reason": "跌停封死（无人接盘）",
+          "ret_on_close_pct": -10.35,
+          "ret_on_high_pct": 0.0
+        },
+        {
+          "date": "20260928",
+          "chg_pct": -9.95,
+          "close": 7.33,
+          "high": 8.0,
+          "sellable": false,
+          "blocked_reason": "跌停封死（无人接盘）",
+          "ret_on_close_pct": -19.27,
+          "ret_on_high_pct": -11.89
+        },
+        {
+          "date": "20260929",
+          "chg_pct": -2.59,
+          "close": 7.14,
+          "high": 7.47,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -21.37,
+          "ret_on_high_pct": -17.73
+        }
+      ],
+      "intraday": {
+        "available": true,
+        "path": {
+          "available": true,
+          "order": "neither",
+          "verdict": "当日双未触及"
+        },
+        "followthrough": {
+          "available": true,
+          "date": "20260922",
+          "bars": 48,
+          "touched": false,
+          "below_trigger_bars": 0,
+          "vol_ratio_below": 0.0,
+          "reclaim_bars": null,
+          "max_depth_pct": null,
+          "verdict": "未触及",
+          "note": "5 分钟粒度（新浪）；1 分钟粒度 XTick 无历史数据"
+        },
+        "bars": 48
+      }
+    },
+    {
+      "plan_date": "20260922",
+      "ts_code": "600721.SH",
+      "name": "百花医药",
+      "theme": "医药链(创新药/流感/CRO/中药)",
+      "channel": "低吸",
+      "entry_date": "20260922",
+      "entry_price": 13.38,
+      "entry_basis": "开盘价 13.38（低吸/强势票开盘即买）",
+      "status": "closed",
+      "exit_date": "20260928",
+      "exit_price": 12.23,
+      "exit_reason": "stop_loss_break",
+      "realized_pct": -8.59,
+      "mark_pct": null,
+      "blocked_days": 0,
+      "excess_loss_pct": 0.0,
+      "sellable_now": true,
+      "best_exit_pct": 9.42,
+      "worst_exit_pct": -8.97,
+      "sellability_rows": [
+        {
+          "date": "20260923",
+          "chg_pct": -8.15,
+          "close": 13.29,
+          "high": 14.64,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -0.67,
+          "ret_on_high_pct": 9.42
+        },
+        {
+          "date": "20260924",
+          "chg_pct": -2.78,
+          "close": 12.92,
+          "high": 13.96,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -3.44,
+          "ret_on_high_pct": 4.33
+        },
+        {
+          "date": "20260928",
+          "chg_pct": -5.73,
+          "close": 12.18,
+          "high": 12.94,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -8.97,
+          "ret_on_high_pct": -3.29
+        },
+        {
+          "date": "20260929",
+          "chg_pct": 6.32,
+          "close": 12.95,
+          "high": 13.4,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -3.21,
+          "ret_on_high_pct": 0.15
+        }
+      ],
+      "intraday": {
+        "available": true,
+        "path": {
+          "available": true,
+          "order": "neither",
+          "verdict": "当日双未触及"
+        },
+        "followthrough": {
+          "available": true,
+          "date": "20260922",
+          "bars": 48,
+          "touched": false,
+          "below_trigger_bars": 0,
+          "vol_ratio_below": 0.0,
+          "reclaim_bars": null,
+          "max_depth_pct": null,
+          "verdict": "未触及",
+          "note": "5 分钟粒度（新浪）；1 分钟粒度 XTick 无历史数据"
+        },
+        "bars": 48
+      }
+    },
+    {
+      "plan_date": "20260922",
+      "ts_code": "600410.SH",
+      "name": "华胜天成",
+      "theme": "AI硬件链(昇腾/国产算力/Agentic AI/光通信)",
+      "channel": "低吸",
+      "entry_date": "20260922",
+      "entry_price": 17.02,
+      "entry_basis": "开盘价 17.02（低吸/强势票开盘即买）",
+      "status": "closed",
+      "exit_date": "20260923",
+      "exit_price": 15.99,
+      "exit_reason": "stop_loss_break",
+      "realized_pct": -6.05,
+      "mark_pct": null,
+      "blocked_days": 0,
+      "excess_loss_pct": 0.0,
+      "sellable_now": true,
+      "best_exit_pct": -4.35,
+      "worst_exit_pct": -14.57,
+      "sellability_rows": [
+        {
+          "date": "20260923",
+          "chg_pct": -3.7,
+          "close": 15.87,
+          "high": 16.28,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -6.76,
+          "ret_on_high_pct": -4.35
+        },
+        {
+          "date": "20260924",
+          "chg_pct": -2.33,
+          "close": 15.5,
+          "high": 15.95,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -8.93,
+          "ret_on_high_pct": -6.29
+        },
+        {
+          "date": "20260928",
+          "chg_pct": -6.19,
+          "close": 14.54,
+          "high": 15.4,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -14.57,
+          "ret_on_high_pct": -9.52
+        },
+        {
+          "date": "20260929",
+          "chg_pct": 0.34,
+          "close": 14.59,
+          "high": 14.93,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -14.28,
+          "ret_on_high_pct": -12.28
+        }
+      ],
+      "intraday": {
+        "available": true,
+        "path": {
+          "available": true,
+          "order": "neither",
+          "verdict": "当日双未触及"
+        },
+        "followthrough": {
+          "available": true,
+          "date": "20260922",
+          "bars": 48,
+          "touched": false,
+          "below_trigger_bars": 0,
+          "vol_ratio_below": 0.0,
+          "reclaim_bars": null,
+          "max_depth_pct": null,
+          "verdict": "未触及",
+          "note": "5 分钟粒度（新浪）；1 分钟粒度 XTick 无历史数据"
+        },
+        "bars": 48
+      }
+    },
+    {
+      "plan_date": "20260923",
+      "ts_code": "603068.SH",
+      "name": "博通集成",
+      "theme": "AI算力硬件链·CPU/推理芯片/ABF载板",
+      "channel": "打板",
+      "entry_date": "20260923",
+      "entry_price": 47.48,
+      "entry_basis": "买区 47.5–48.5 内成交（限价单口径，成交价 47.48）",
+      "status": "closed",
+      "exit_date": "20260929",
+      "exit_price": 44.8,
+      "exit_reason": "stop_loss_break",
+      "realized_pct": -5.64,
+      "mark_pct": null,
+      "blocked_days": 0,
+      "excess_loss_pct": 0.0,
+      "sellable_now": true,
+      "best_exit_pct": 5.27,
+      "worst_exit_pct": -5.22,
+      "sellability_rows": [
+        {
+          "date": "20260924",
+          "chg_pct": 5.76,
+          "close": 48.51,
+          "high": 49.98,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": 2.17,
+          "ret_on_high_pct": 5.27
+        },
+        {
+          "date": "20260928",
+          "chg_pct": -5.07,
+          "close": 46.05,
+          "high": 47.99,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -3.01,
+          "ret_on_high_pct": 1.07
+        },
+        {
+          "date": "20260929",
+          "chg_pct": -2.28,
+          "close": 45.0,
+          "high": 46.8,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -5.22,
+          "ret_on_high_pct": -1.43
+        }
+      ],
+      "intraday": {
+        "available": true,
+        "path": {
+          "available": true,
+          "order": "neither",
+          "verdict": "当日双未触及"
+        },
+        "followthrough": {
+          "available": true,
+          "date": "20260923",
+          "bars": 48,
+          "touched": false,
+          "below_trigger_bars": 0,
+          "vol_ratio_below": 0.0,
+          "reclaim_bars": null,
+          "max_depth_pct": null,
+          "verdict": "未触及",
+          "note": "5 分钟粒度（新浪）；1 分钟粒度 XTick 无历史数据"
+        },
+        "bars": 48
+      }
+    },
+    {
+      "plan_date": "20260923",
+      "ts_code": "601811.SH",
+      "name": "新华文轩",
+      "theme": "传媒数据·出版/教育强国",
+      "channel": "打板",
+      "entry_date": "20260923",
+      "entry_price": 18.5,
+      "entry_basis": "打板于涨停价 18.5（当日开板可买）",
+      "status": "open",
+      "exit_date": null,
+      "exit_price": null,
+      "exit_reason": null,
+      "realized_pct": null,
+      "mark_pct": 10.11,
+      "blocked_days": 0,
+      "excess_loss_pct": 39.03,
+      "sellable_now": true,
+      "best_exit_pct": 21.03,
+      "worst_exit_pct": 0.11,
+      "sellability_rows": [
+        {
+          "date": "20260924",
+          "chg_pct": 10.0,
+          "close": 20.35,
+          "high": 20.35,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": 10.0,
+          "ret_on_high_pct": 10.0
+        },
+        {
+          "date": "20260928",
+          "chg_pct": -8.99,
+          "close": 18.52,
+          "high": 22.39,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": 0.11,
+          "ret_on_high_pct": 21.03
+        },
+        {
+          "date": "20260929",
+          "chg_pct": 9.99,
+          "close": 20.37,
+          "high": 20.37,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": 10.11,
+          "ret_on_high_pct": 10.11
+        }
+      ],
+      "intraday": {
+        "available": true,
+        "path": {
+          "available": true,
+          "order": "neither",
+          "verdict": "当日双未触及"
+        },
+        "followthrough": {
+          "available": true,
+          "date": "20260923",
+          "bars": 48,
+          "touched": false,
+          "below_trigger_bars": 0,
+          "vol_ratio_below": 0.0,
+          "reclaim_bars": null,
+          "max_depth_pct": null,
+          "verdict": "未触及",
+          "note": "5 分钟粒度（新浪）；1 分钟粒度 XTick 无历史数据"
+        },
+        "bars": 48
+      }
+    },
+    {
+      "plan_date": "20260928",
+      "ts_code": "000592.SZ",
+      "name": "平潭发展",
+      "theme": "两岸统一/福建自贸区",
+      "channel": "打板",
+      "entry_date": "20260928",
+      "entry_price": 8.78,
+      "entry_basis": "买区 8.9–9.3 内成交（限价单口径，成交价 8.78）",
+      "status": "open",
+      "exit_date": null,
+      "exit_price": null,
+      "exit_reason": null,
+      "realized_pct": null,
+      "mark_pct": -0.46,
+      "blocked_days": 0,
+      "excess_loss_pct": 2.73,
+      "sellable_now": true,
+      "best_exit_pct": 4.67,
+      "worst_exit_pct": -0.46,
+      "sellability_rows": [
+        {
+          "date": "20260929",
+          "chg_pct": -3.85,
+          "close": 8.74,
+          "high": 9.19,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -0.46,
+          "ret_on_high_pct": 4.67
+        }
+      ],
+      "intraday": {
+        "available": true,
+        "path": {
+          "available": true,
+          "order": "neither",
+          "verdict": "当日双未触及"
+        },
+        "followthrough": {
+          "available": true,
+          "date": "20260928",
+          "bars": 48,
+          "touched": false,
+          "below_trigger_bars": 0,
+          "vol_ratio_below": 0.0,
+          "reclaim_bars": null,
+          "max_depth_pct": null,
+          "verdict": "未触及",
+          "note": "5 分钟粒度（新浪）；1 分钟粒度 XTick 无历史数据"
+        },
+        "bars": 48
+      }
+    },
+    {
+      "plan_date": "20260928",
+      "ts_code": "002050.SZ",
+      "name": "三花智控",
+      "theme": "人形机器人/执行器/碳纤维",
+      "channel": "低吸",
+      "entry_date": "20260928",
+      "entry_price": 36.08,
+      "entry_basis": "买区 35.4–36.4 内成交（限价单口径，成交价 36.08）",
+      "status": "open",
+      "exit_date": null,
+      "exit_price": null,
+      "exit_reason": null,
+      "realized_pct": null,
+      "mark_pct": -1.19,
+      "blocked_days": 0,
+      "excess_loss_pct": 5.82,
+      "sellable_now": true,
+      "best_exit_pct": -0.72,
+      "worst_exit_pct": -1.19,
+      "sellability_rows": [
+        {
+          "date": "20260929",
+          "chg_pct": 0.59,
+          "close": 35.65,
+          "high": 35.82,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": -1.19,
+          "ret_on_high_pct": -0.72
+        }
+      ],
+      "intraday": {
+        "available": true,
+        "path": {
+          "available": true,
+          "order": "neither",
+          "verdict": "当日双未触及"
+        },
+        "followthrough": {
+          "available": true,
+          "date": "20260928",
+          "bars": 48,
+          "touched": false,
+          "below_trigger_bars": 0,
+          "vol_ratio_below": 0.0,
+          "reclaim_bars": null,
+          "max_depth_pct": null,
+          "verdict": "未触及",
+          "note": "5 分钟粒度（新浪）；1 分钟粒度 XTick 无历史数据"
+        },
+        "bars": 48
+      }
+    },
+    {
+      "plan_date": "20260928",
+      "ts_code": "301699.SZ",
+      "name": "洛轴股份",
+      "theme": "人形机器人/执行器/碳纤维",
+      "channel": "打板",
+      "entry_date": "20260928",
+      "entry_price": 36.5,
+      "entry_basis": "买区 34.6–36.5 内成交（限价单口径，成交价 36.5）",
+      "status": "closed",
+      "exit_date": "20260929",
+      "exit_price": 42.65,
+      "exit_reason": "take_profit_hit",
+      "realized_pct": 16.85,
+      "mark_pct": null,
+      "blocked_days": 0,
+      "excess_loss_pct": 0.0,
+      "sellable_now": true,
+      "best_exit_pct": 16.93,
+      "worst_exit_pct": 3.32,
+      "sellability_rows": [
+        {
+          "date": "20260929",
+          "chg_pct": -7.3,
+          "close": 37.71,
+          "high": 42.68,
+          "sellable": true,
+          "blocked_reason": null,
+          "ret_on_close_pct": 3.32,
+          "ret_on_high_pct": 16.93
+        }
+      ],
+      "intraday": {
+        "available": true,
+        "path": {
+          "available": true,
+          "order": "neither",
+          "verdict": "当日双未触及"
+        },
+        "followthrough": {
+          "available": true,
+          "date": "20260928",
+          "bars": 48,
+          "touched": false,
+          "below_trigger_bars": 0,
+          "vol_ratio_below": 0.0,
+          "reclaim_bars": null,
+          "max_depth_pct": null,
+          "verdict": "未触及",
+          "note": "5 分钟粒度（新浪）；1 分钟粒度 XTick 无历史数据"
+        },
+        "bars": 48
+      }
+    },
+    {
+      "plan_date": "20260929",
+      "ts_code": "688244.SH",
+      "name": "永信至诚",
+      "theme": "AI安全/网络安全",
+      "channel": "打板",
+      "entry_date": "20260929",
+      "entry_price": 19.18,
+      "entry_basis": "买区 18.8–20.3 内成交（限价单口径，成交价 19.18）",
+      "status": "open",
+      "exit_date": null,
+      "exit_price": null,
+      "exit_reason": null,
+      "realized_pct": null,
+      "mark_pct": null,
+      "blocked_days": 0,
+      "excess_loss_pct": null,
+      "sellable_now": null,
+      "best_exit_pct": null,
+      "worst_exit_pct": null,
+      "sellability_rows": [],
+      "intraday": {
+        "available": true,
+        "path": {
+          "available": true,
+          "order": "neither",
+          "verdict": "当日双未触及"
+        },
+        "followthrough": {
+          "available": true,
+          "date": "20260929",
+          "bars": 48,
+          "touched": false,
+          "below_trigger_bars": 0,
+          "vol_ratio_below": 0.0,
+          "reclaim_bars": null,
+          "max_depth_pct": null,
+          "verdict": "未触及",
+          "note": "5 分钟粒度（新浪）；1 分钟粒度 XTick 无历史数据"
+        },
+        "bars": 48
+      }
+    },
+    {
+      "plan_date": "20260929",
+      "ts_code": "601360.SH",
+      "name": "三六零",
+      "theme": "AI安全/网络安全",
+      "channel": "打板",
+      "entry_date": "20260929",
+      "entry_price": 8.88,
+      "entry_basis": "买区 8.75–9.1 内成交（限价单口径，成交价 8.88）",
+      "status": "open",
+      "exit_date": null,
+      "exit_price": null,
+      "exit_reason": null,
+      "realized_pct": null,
+      "mark_pct": null,
+      "blocked_days": 0,
+      "excess_loss_pct": null,
+      "sellable_now": null,
+      "best_exit_pct": null,
+      "worst_exit_pct": null,
+      "sellability_rows": [],
+      "intraday": {
+        "available": true,
+        "path": {
+          "available": true,
+          "order": "neither",
+          "verdict": "当日双未触及"
+        },
+        "followthrough": {
+          "available": true,
+          "date": "20260929",
+          "bars": 48,
+          "touched": false,
+          "below_trigger_bars": 0,
+          "vol_ratio_below": 0.0,
+          "reclaim_bars": null,
+          "max_depth_pct": null,
+          "verdict": "未触及",
+          "note": "5 分钟粒度（新浪）；1 分钟粒度 XTick 无历史数据"
+        },
+        "bars": 48
+      }
+    }
+  ]
+}
