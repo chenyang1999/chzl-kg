@@ -12,10 +12,11 @@
 ## 数据口径
 
 - 数据日期：月末最后交易日收盘（tushare 实时拉取，缓存于 `data/raw/tushare/YYYYMMDD/div_*.json`）
-- 股息率：`daily_basic.dv_ratio`（TTM 权威口径）
-- 分红覆盖率：FCF（经营现金流−资本开支，FY 年报口径）≥1 倍；银行/公用事业豁免
-- 门槛：股息率≥4%、流通市值≥50 亿、PE(0,45]、PB(0,6]、连续分红≥3 年、利润分红率≤90%
+- 股息率：`daily_basic.dv_ratio`（近12个月分红/市值口径；dv_ttm 为 TTM 口径，两者均入库）
+- 分红覆盖率：FCF（经营现金流−资本开支，FY 年报口径）≥1 倍；银行/电力公用（发电/燃气/供热）豁免，水务不豁免
+- 门槛：股息率≥4%、流通市值≥50 亿、PE(0,45]、PB(0,6]、连续分红≥3 年、利润分红率<90%（严格小于）、DPS 同比未腰斩（≥上年 60%）
 - 组合权重：股息率20% / 分红增速20% / 分红连续性25% / 可持续性25% / 估值10%
+- 流水线：`scripts/research/dividend_pool_monthly.py <TRADE_DATE> <ANCHOR_5Y>`，产物落 `data/raw/tushare/<TRADE_DATE>/div_*.json`
 
 ## 陷阱甄别
 
