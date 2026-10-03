@@ -6,13 +6,14 @@ configuration:
   enablePopovers: true
   analytics: null
   locale: zh-CN
-  baseUrl: chzl-kg.sky374263410.workers.dev
+  baseUrl: chenyang1999.github.io/chzl-kg
   ignorePatterns:
     - private
     - templates
     - .obsidian
     - "*.xlsx"
     - "*.bak"
+    - "投研交易/持仓复盘"
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
