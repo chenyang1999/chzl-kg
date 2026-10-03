@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-08-17 同花顺风格指数(8839) + 股指期货 v2 分析</title><meta charset="utf-8"/><link rel="preload" href="../index-5a23ce28.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-08-17 同花顺风格指数(8839) + 股指期货 v2 分析"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-08-17 同花顺风格指数(8839) + 股指期货 v2 分析"/><meta name="twitter:description" content="同花顺风格指数 (8839) + 股指期货 v2 分析 v2 (2026-08-17) 相对 v1 扩展： 同花顺指数：16 → 41 个（加入资金面、机构持仓、业绩、资本运作、转债5 个维度） 新增 4 个股指期货主力合约（IF2609/IH2609/IC2609/IM2609）+ 4 个对应现货指数 新增维度：基差 / 升贴水 / 持仓变化——判断机构多空对冲方向 配套脚本：scripts/analyze_ths_style_indices.py 一、关键指数全景（2026-08-14 收盘） 1.1 风格/交易指标（核心） 代码名称收盘当日%5日%20日%60日%换手%功能883911创..."/><meta property="og:description" content="同花顺风格指数 (8839) + 股指期货 v2 分析 v2 (2026-08-17) 相对 v1 扩展： 同花顺指数：16 → 41 个（加入资金面、机构持仓、业绩、资本运作、转债5 个维度） 新增 4 个股指期货主力合约（IF2609/IH2609/IC2609/IM2609）+ 4 个对应现货指数 新增维度：基差 / 升贴水 / 持仓变化——判断机构多空对冲方向 配套脚本：scripts/analyze_ths_style_indices.py 一、关键指数全景（2026-08-14 收盘） 1.1 风格/交易指标（核心） 代码名称收盘当日%5日%20日%60日%换手%功能883911创..."/><meta property="og:image:alt" content="同花顺风格指数 (8839) + 股指期货 v2 分析 v2 (2026-08-17) 相对 v1 扩展： 同花顺指数：16 → 41 个（加入资金面、机构持仓、业绩、资本运作、转债5 个维度） 新增 4 个股指期货主力合约（IF2609/IH2609/IC2609/IM2609）+ 4 个对应现货指数 新增维度：基差 / 升贴水 / 持仓变化——判断机构多空对冲方向 配套脚本：scripts/analyze_ths_style_indices.py 一、关键指数全景（2026-08-14 收盘） 1.1 风格/交易指标（核心） 代码名称收盘当日%5日%20日%60日%换手%功能883911创..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-08-17-同花顺风格指数(8839)-+-股指期货-v2-分析"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-08-17-同花顺风格指数(8839)-+-股指期货-v2-分析"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="同花顺风格指数 (8839) + 股指期货 v2 分析 v2 (2026-08-17) 相对 v1 扩展： 同花顺指数：16 → 41 个（加入资金面、机构持仓、业绩、资本运作、转债5 个维度） 新增 4 个股指期货主力合约（IF2609/IH2609/IC2609/IM2609）+ 4 个对应现货指数 新增维度：基差 / 升贴水 / 持仓变化——判断机构多空对冲方向 配套脚本：scripts/analyze_ths_style_indices.py 一、关键指数全景（2026-08-14 收盘） 1.1 风格/交易指标（核心） 代码名称收盘当日%5日%20日%60日%换手%功能883911创..."/><meta name="generator" content="Quartz"/><link href="../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/2026-08-17-同花顺风格指数(8839)-+-股指期货-v2-分析" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-699" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-699" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-08-17 同花顺风格指数(8839) + 股指期货 v2 分析</a></div></nav><h1 class="article-title">2026-08-17 同花顺风格指数(8839) + 股指期货 v2 分析</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-16T16:00:00.000Z">2026年8月17日</time><span>10分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="同花顺风格指数-8839--股指期货-v2-分析">同花顺风格指数 (8839) + 股指期货 v2 分析<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#同花顺风格指数-8839--股指期货-v2-分析" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><strong>v2 (2026-08-17) 相对 v1 扩展</strong>：</p>
+<ul>
+<li>同花顺指数：<strong>16 → 41 个</strong>（加入资金面、机构持仓、业绩、资本运作、转债5 个维度）</li>
+<li><strong>新增 4 个股指期货主力合约</strong>（IF2609/IH2609/IC2609/IM2609）+ 4 个对应现货指数</li>
+<li><strong>新增维度：基差 / 升贴水 / 持仓变化</strong>——判断机构多空对冲方向</li>
+<li>配套脚本：<code>scripts/analyze_ths_style_indices.py</code></li>
+</ul>
+</blockquote>
+<hr/>
+<h2 id="一关键指数全景2026-08-14-收盘">一、关键指数全景（2026-08-14 收盘）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一关键指数全景2026-08-14-收盘" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="11-风格交易指标核心">1.1 风格/交易指标（核心）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-风格交易指标核心" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>代码</th><th>名称</th><th>收盘</th><th>当日%</th><th>5日%</th><th>20日%</th><th>60日%</th><th>换手%</th><th>功能</th></tr></thead><tbody><tr><td><strong>883911</strong></td><td><strong>创历史新高</strong></td><td>7250.51</td><td>-0.04%</td><td>+4.66%</td><td><strong>-15.53%</strong></td><td>-16.15%</td><td>8.44%</td><td>强趋势/突破信号</td></tr><tr><td><strong>883975</strong></td><td><strong>超跌股</strong></td><td>1442.45</td><td>-0.67%</td><td>+1.26%</td><td><strong>+7.21%</strong></td><td>-11.34%</td><td>3.20%</td><td>超跌反弹信号</td></tr><tr><td><strong>883900</strong></td><td><strong>昨日涨停表现</strong></td><td>2431.03</td><td>-0.09%</td><td>+7.37%</td><td><strong>+45.83%</strong></td><td>(基期)</td><td>12.67%</td><td>打板溢价</td></tr><tr><td>883958</td><td>昨日连板</td><td>4005.76</td><td>-0.43%</td><td>+18.90%</td><td><strong>+83.81%</strong></td><td>(基期)</td><td>20.47%</td><td>高位接力</td></tr><tr><td>883918</td><td>昨日炸板股</td><td>671.87</td><td>-1.99%</td><td>-2.29%</td><td>+1.48%</td><td>(基期)</td><td>9.77%</td><td>接力风险</td></tr><tr><td>883978</td><td>昨日打板表现</td><td>1548.04</td><td>-1.14%</td><td>+3.72%</td><td>+29.91%</td><td>(基期)</td><td>11.33%</td><td>打板综合</td></tr><tr><td>883979</td><td>昨日首板表现</td><td>2214.53</td><td>+0.25%</td><td>+4.91%</td><td>+39.68%</td><td>(基期)</td><td>8.98%</td><td>首次涨停溢价</td></tr><tr><td>883994</td><td>昨日打首板表现</td><td>1499.65</td><td>-0.48%</td><td>+2.83%</td><td>+27.92%</td><td>(基期)</td><td>9.05%</td><td>打板手法</td></tr></tbody></table></div>
+<h3 id="12-资金机构持仓v2-新增">1.2 资金/机构持仓（v2 新增）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12-资金机构持仓v2-新增" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>代码</th><th>名称</th><th>收盘</th><th>当日%</th><th>20日%</th><th>功能</th></tr></thead><tbody><tr><td><strong>883922</strong></td><td><strong>社保重仓</strong></td><td>1881.75</td><td>+0.06%</td><td><strong>+7.30%</strong></td><td>国家队持仓</td></tr><tr><td><strong>883924</strong></td><td><strong>QFII重仓</strong></td><td>2519.71</td><td>+0.21%</td><td><strong>+11.47%</strong></td><td>外资持仓</td></tr><tr><td>883928</td><td>券商重仓</td><td>1633.65</td><td>+0.03%</td><td>+7.39%</td><td>自营盘动向</td></tr><tr><td>883934</td><td>保险重仓</td><td>1841.66</td><td>-0.11%</td><td>+6.95%</td><td>保险资金</td></tr><tr><td>883927</td><td>高股息股</td><td>2270.23</td><td>-0.51%</td><td>+4.68%</td><td>防御性配置</td></tr><tr><td>883930</td><td>破净股</td><td>1881.16</td><td>-0.63%</td><td>+4.58%</td><td>超跌银行/地产</td></tr><tr><td>883960</td><td>低价股</td><td>2020.26</td><td>-0.89%</td><td>+7.28%</td><td>低价股 (超跌/题材)</td></tr><tr><td>883916</td><td>百元股</td><td>1828.23</td><td>+1.97%</td><td>+4.74%</td><td>高价股 (强势)</td></tr></tbody></table></div>
+<h3 id="13-关注度异动业绩资本运作v2-新增">1.3 关注度/异动/业绩/资本运作（v2 新增）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#13-关注度异动业绩资本运作v2-新增" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>代码</th><th>名称</th><th>收盘</th><th>20日%</th><th>功能</th></tr></thead><tbody><tr><td>883910</td><td>同花顺热股</td><td>30336.96</td><td>+5.41%</td><td>市场关注度</td></tr><tr><td>883957</td><td>同花顺全A</td><td>1869.98</td><td>+9.21%</td><td>大盘基准</td></tr><tr><td>883917</td><td>行业龙头</td><td>1504.34</td><td>+6.56%</td><td>抱团龙头</td></tr><tr><td>883901</td><td>昨日资金前十</td><td>474.88</td><td>-7.15%</td><td>主力资金方向</td></tr><tr><td>883902</td><td>昨日成交前十</td><td>675.52</td><td>-3.67%</td><td>成交活跃度</td></tr><tr><td>883905</td><td>昨日换手前十</td><td>371.62</td><td><strong>-22.87%</strong></td><td>高换手</td></tr><tr><td>883907</td><td>近端次新股</td><td>253.54</td><td>+2.73%</td><td>次新炒作</td></tr><tr><td>883913</td><td>龙虎榜指数</td><td>220.31</td><td>+12.96%</td><td>机构动向</td></tr><tr><td>883906</td><td>昨日高振幅</td><td>778.05</td><td>+1.56%</td><td>波动率</td></tr><tr><td>883968</td><td>近期异动</td><td>589.47</td><td>-4.61%</td><td>异动监控</td></tr><tr><td>883908</td><td>沪股通成交前十</td><td>5345.37</td><td>-0.62%</td><td>北向资金 (沪)</td></tr><tr><td>883912</td><td>深股通成交前十</td><td>5501.74</td><td>+1.63%</td><td>北向资金 (深)</td></tr><tr><td>883936</td><td>业绩扭亏</td><td>15058.18</td><td>+10.98%</td><td>困境反转</td></tr><tr><td>883935</td><td>业绩预亏</td><td>980.21</td><td>+10.94%</td><td>风险警示</td></tr><tr><td>883915</td><td>增持计划</td><td>2701.36</td><td>+9.31%</td><td>产业资本增仓</td></tr><tr><td>883921</td><td>减持计划</td><td>1316.73</td><td>+10.29%</td><td>产业资本减仓</td></tr><tr><td>883929</td><td>回购计划</td><td>6428.52</td><td>+9.68%</td><td>公司回购</td></tr><tr><td>883959</td><td>近期并购</td><td>827.12</td><td>+8.79%</td><td>并购重组</td></tr><tr><td>883920</td><td>近期解禁</td><td>246.71</td><td>+5.80%</td><td>解禁风险</td></tr><tr><td>883966</td><td>机构月调研前十</td><td>1583.25</td><td>-0.74%</td><td>调研热点</td></tr><tr><td>883967</td><td>机构周调研前十</td><td>19276.09</td><td>+8.20%</td><td>近期关注</td></tr><tr><td>883980</td><td>含可转债</td><td>2151.88</td><td>+8.66%</td><td>转债正股联动</td></tr></tbody></table></div>
+<hr/>
+<h2 id="二股指期货基差分析-2026-08-14">二、股指期货基差分析 (2026-08-14)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二股指期货基差分析-2026-08-14" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>核心概念</strong>：</p>
+<ul>
+<li><strong>基差 = 期货结算价 - 现货指数</strong></li>
+<li><strong>正基差 = 期货升水</strong> = 机构预期”未来 1-3 个月大盘要涨”</li>
+<li><strong>负基差 = 期货贴水</strong> = 机构预期”未来 1-3 个月大盘要跌”</li>
+<li><strong>OI（持仓量）减少 = 多空双方都在平仓</strong> = 行情进入末期观望</li>
+</ul>
+<h3 id="21-最新日基差--持仓变化">2.1 最新日基差 + 持仓变化<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-最新日基差--持仓变化" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>合约</th><th>期货结算价</th><th>现货指数</th><th>基差</th><th>基差率</th><th>今日 OI 变化</th><th>信号</th></tr></thead><tbody><tr><td><strong>IF2609</strong> (沪深300)</td><td>4622.80</td><td>4665.88</td><td><strong>-43.08</strong></td><td><strong>-0.92%</strong></td><td>-4391</td><td>🔴 深度贴水（空头预期）</td></tr><tr><td><strong>IH2609</strong> (上证50)</td><td>2890.40</td><td>2916.13</td><td>-25.73</td><td><strong>-0.88%</strong></td><td>-2305</td><td>🔴 深度贴水（空头预期）</td></tr><tr><td><strong>IC2609</strong> (中证500)</td><td>7873.40</td><td>7990.33</td><td><strong>-116.93</strong></td><td><strong>-1.46%</strong></td><td>-4119</td><td>🔴 深度贴水（空头预期）</td></tr><tr><td><strong>IM2609</strong> (中证1000)</td><td>7665.00</td><td>7769.82</td><td>-104.82</td><td><strong>-1.35%</strong></td><td>-7019</td><td>🔴 深度贴水（空头预期）</td></tr></tbody></table></div>
+<h3 id="22-5-日持仓变化趋势">2.2 5 日持仓变化（趋势）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22-5-日持仓变化趋势" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>合约</th><th>5 日前 OI</th><th>今日 OI</th><th>5 日变化</th><th>5 日变化率</th></tr></thead><tbody><tr><td>IF2609</td><td>151018</td><td>144619</td><td>-6399</td><td>-4.24%</td></tr><tr><td>IH2609</td><td>70624</td><td>66778</td><td>-3846</td><td><strong>-5.45%</strong></td></tr><tr><td>IC2609</td><td>168332</td><td>161708</td><td>-6624</td><td>-3.94%</td></tr><tr><td>IM2609</td><td>241397</td><td>231307</td><td>-10090</td><td>-4.18%</td></tr></tbody></table></div>
+<p><strong>关键发现</strong>：</p>
+<ul>
+<li><strong>所有 4 个品种 5 日 OI 减少 4-5%</strong> → 整体处于”温和平仓”状态</li>
+<li><strong>IH2609 减仓最猛 (-5.45%)</strong> → 上证50 蓝筹被平仓最多（机构防守）</li>
+<li><strong>IM2609 持仓最大 (23.1万手)</strong> → 中证1000 是当前对冲的”主战场”</li>
+</ul>
+<h3 id="23-信号解读">2.3 信号解读<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#23-信号解读" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>📊 综合期货信号 (8/14):
+  ✅ 4/4 期货贴水 (-0.88% ~ -1.46%) → 机构对大盘短期偏空
+  ✅ 4/4 持仓温和减少 (-4% ~ -5%) → 行情进入&quot;震荡末期&quot;，多空都在观望
+  ✅ 中证500 贴水最深 (-1.46%) → 中盘股最不被看好
+  ✅ 中证1000 持仓最大 (23.1万手) → 小盘股是当前对冲主战场
+</code></pre>
+<p><strong>机构多空态度矩阵</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>品种</th><th>贴水（空头）</th><th>减仓（观望）</th><th>综合态度</th></tr></thead><tbody><tr><td>沪深300 (IF)</td><td>🟡 中等</td><td>🟢 温和</td><td><strong>中性偏空</strong></td></tr><tr><td>上证50 (IH)</td><td>🟡 中等</td><td>🟡 较猛</td><td><strong>防御性平仓</strong></td></tr><tr><td>中证500 (IC)</td><td>🔴 最深</td><td>🟢 温和</td><td><strong>最不被看好</strong></td></tr><tr><td>中证1000 (IM)</td><td>🔴 较深</td><td>🟢 温和</td><td><strong>小盘对冲重地</strong></td></tr></tbody></table></div>
+<hr/>
+<h2 id="三if2609-vs-883957-走势对比">三、IF2609 vs 883957 走势对比<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三if2609-vs-883957-走势对比" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>对比沪深300期货 vs 同花顺全A指数</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>日期</th><th>IF2609</th><th>883957</th><th>IF 20日%</th><th>883957 20日%</th></tr></thead><tbody><tr><td>2026-07-06</td><td>4753.20</td><td>1900.91</td><td>+1.56%</td><td>-2.94%</td></tr><tr><td>2026-07-13</td><td>4634.60</td><td>1773.62</td><td>-0.80%</td><td>-6.82%</td></tr><tr><td>2026-07-20</td><td>4545.80</td><td>1670.55</td><td>-8.79%</td><td>-14.47%</td></tr><tr><td>2026-07-27</td><td>4651.80</td><td>1714.99</td><td>-3.01%</td><td>-7.48%</td></tr><tr><td>2026-08-03</td><td>4512.20</td><td>1757.24</td><td>-5.07%</td><td>-7.56%</td></tr><tr><td><strong>2026-08-10</strong></td><td><strong>4644.60</strong></td><td><strong>1873.28</strong></td><td><strong>+0.22%</strong></td><td><strong>+5.62%</strong></td></tr><tr><td>2026-08-14</td><td>4620.40</td><td>1869.98</td><td>+0.36%</td><td>+9.21%</td></tr></tbody></table></div>
+<p><strong>核心信号</strong>：</p>
+<ul>
+<li>8/10 起<strong>期货领先现货</strong>（期货+0.22% > 现货反弹启动）</li>
+<li>但 8/14 <strong>期货再次跑输现货</strong>（-0.25%差距） → <strong>机构预期大盘反弹</strong>已<strong>部分兑现</strong></li>
+</ul>
+<hr/>
+<h2 id="四综合判断弱市中的打板窗口">四、综合判断：弱市中的打板窗口<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四综合判断弱市中的打板窗口" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="41-多维度信号汇总">4.1 多维度信号汇总<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#41-多维度信号汇总" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>维度</th><th>指标</th><th>当前值</th><th>信号</th></tr></thead><tbody><tr><td><strong>风格切换</strong></td><td>883911/883975 比值</td><td><strong>5.03</strong>（60日 -34%）</td><td>🟡 创新高让位超跌，<strong>风格切换进行时</strong></td></tr><tr><td><strong>打板溢价</strong></td><td>883900/883918 差值</td><td><strong>1759</strong>（60日 +75%）</td><td>🟢 <strong>历史最强打板窗口</strong></td></tr><tr><td><strong>机构持仓</strong></td><td>883924 QFII重仓 20日</td><td><strong>+11.47%</strong></td><td>🟢 外资加仓</td></tr><tr><td><strong>机构持仓</strong></td><td>883922 社保重仓 20日</td><td>+7.30%</td><td>🟢 国家队加仓</td></tr><tr><td><strong>期货基差</strong></td><td>IF2609 vs 现货</td><td><strong>-0.92%</strong></td><td>🔴 短期偏空</td></tr><tr><td><strong>期货持仓</strong></td><td>4/4 OI 5日减少 -4%~-5%</td><td>🟡 震荡末期观望</td><td></td></tr><tr><td><strong>大盘基准</strong></td><td>883957 全A 60日</td><td>-8.13%</td><td>🟡 大盘仍弱</td></tr><tr><td><strong>强势龙头</strong></td><td>883911 RSI14</td><td><strong>38.2</strong></td><td>🔴 接近超卖（补跌中）</td></tr><tr><td><strong>超跌修复</strong></td><td>883975 RSI14</td><td>57.9</td><td>🟢 中性偏强</td></tr></tbody></table></div>
+<h3 id="42-操作框架按打板派纪律">4.2 操作框架（按打板派纪律）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#42-操作框架按打板派纪律" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>操作类型</th><th>触发条件</th><th>当前判定</th></tr></thead><tbody><tr><td>🟢 <strong>打板</strong></td><td>883900/883918 差值 > 1500</td><td>✅ 当前 1759，<strong>窗口已开</strong></td></tr><tr><td>🟢 <strong>超跌反弹</strong></td><td>883975 RSI14 &lt; 30</td><td>❌ 57.9（未深度超卖）</td></tr><tr><td>🟢 <strong>超跌反弹</strong></td><td>883911/883975 比值下降</td><td>✅ 从 7.66 → 5.03</td></tr><tr><td>🔴 <strong>抄底还在跌的票</strong></td><td>883911 RSI14 > 30 且 883975 &lt; MA20</td><td>❌ 883975 已站上 MA20</td></tr><tr><td>🔴 <strong>追高已破 MA20 强势股</strong></td><td>883911 &lt; MA20</td><td>✅ 已破（破位）</td></tr><tr><td>🟡 <strong>防御/降仓</strong></td><td>期货贴水 > -1.5%</td><td>🟡 中证500 临界 (-1.46%)</td></tr></tbody></table></div>
+<h3 id="43-给-d1-盘前预案的-actionable-信号">4.3 给 D1 盘前预案的 actionable 信号<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#43-给-d1-盘前预案的-actionable-信号" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>周一 8/17 开盘前必须看 3 件事</strong>：</p>
+<ol>
+<li>
+<p><strong>883958 (昨日连板) 是否延续 20 日 +83.81% 的强势</strong></p>
+<ul>
+<li>延续 → AI 基建主线可打板</li>
+<li>失守 → 主线兑现信号</li>
+</ul>
+</li>
+<li>
+<p><strong>IF2609 期货开盘基差</strong></p>
+<ul>
+<li>基差收窄 → 反弹继续</li>
+<li>基差扩大 → 反弹进入末期</li>
+</ul>
+</li>
+<li>
+<p><strong>883975 (超跌) 是否守住 MA20 (1391.93)</strong></p>
+<ul>
+<li>守住 → 超跌反弹持续</li>
+<li>跌破 → 反弹失败</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<h2 id="五局限性说明">五、局限性说明<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五局限性说明" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>⚠️ <strong>基差解读限制</strong>：</p>
+<ul>
+<li>股指期货基差代表<strong>机构对未来 1-3 个月</strong>的预期，不是明日涨跌</li>
+<li>短期（1 周内）行情可能与基差方向相反</li>
+</ul>
+<p>⚠️ <strong>OI 数据限制</strong>：</p>
+<ul>
+<li>Tushare 期货 OI 是<strong>全市场合计持仓</strong>（不是分类多空持仓）</li>
+<li>无法直接看到”机构净多单 vs 净空单”对比</li>
+<li>如需机构多空持仓，需用 <code>fut_holding</code> 接口（持仓排名）</li>
+</ul>
+<p>⚠️ <strong>指数基期问题</strong>：</p>
+<ul>
+<li>部分 883 指数（883900/883958/883978 等）60 日数据异常，是因为同花顺曾”重新挂牌”</li>
+<li>只看 20 日及以内的趋势更可靠</li>
+</ul>
+<hr/>
+<h2 id="六下一步行动">六、下一步行动<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#六下一步行动" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> <strong>本周末</strong>：把”4/4 期货贴水 + OI 5 日 -4%~-5%“作为大盘”震荡末期”信号写入 R1 风格研判</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> <strong>本周末</strong>：把”883922/883924 机构重仓 20 日 > 0”作为”机构共识”信号写入 R2 主线研判</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> <strong>8/17 开盘</strong>：实时观察 883958 (连板) + IF2609 基差变化</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> <strong>8/22 复盘</strong>：判断 883911/883975 比值是否跌破 4.5</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> <strong>8/26 前</strong>：把期货基差纳入”英伟达财报前”仓位决策的量化依据</li>
+</ul>
+<hr/>
+<blockquote>
+<p><strong>免责声明</strong>：本分析基于同花顺风格指数 + 股指期货历史数据，不构成任何投资建议。投资者应根据自身风险承受能力和研究判断，独立做出投资决策。市场有风险，投资需谨慎。</p>
+</blockquote></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-665" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#同花顺风格指数-8839--股指期货-v2-分析" data-for="同花顺风格指数-8839--股指期货-v2-分析">同花顺风格指数 (8839) + 股指期货 v2 分析</a></li><li class="depth-1"><a href="#一关键指数全景2026-08-14-收盘" data-for="一关键指数全景2026-08-14-收盘">一、关键指数全景（2026-08-14 收盘）</a></li><li class="depth-2"><a href="#11-风格交易指标核心" data-for="11-风格交易指标核心">1.1 风格/交易指标（核心）</a></li><li class="depth-2"><a href="#12-资金机构持仓v2-新增" data-for="12-资金机构持仓v2-新增">1.2 资金/机构持仓（v2 新增）</a></li><li class="depth-2"><a href="#13-关注度异动业绩资本运作v2-新增" data-for="13-关注度异动业绩资本运作v2-新增">1.3 关注度/异动/业绩/资本运作（v2 新增）</a></li><li class="depth-1"><a href="#二股指期货基差分析-2026-08-14" data-for="二股指期货基差分析-2026-08-14">二、股指期货基差分析 (2026-08-14)</a></li><li class="depth-2"><a href="#21-最新日基差--持仓变化" data-for="21-最新日基差--持仓变化">2.1 最新日基差 + 持仓变化</a></li><li class="depth-2"><a href="#22-5-日持仓变化趋势" data-for="22-5-日持仓变化趋势">2.2 5 日持仓变化（趋势）</a></li><li class="depth-2"><a href="#23-信号解读" data-for="23-信号解读">2.3 信号解读</a></li><li class="depth-1"><a href="#三if2609-vs-883957-走势对比" data-for="三if2609-vs-883957-走势对比">三、IF2609 vs 883957 走势对比</a></li><li class="depth-1"><a href="#四综合判断弱市中的打板窗口" data-for="四综合判断弱市中的打板窗口">四、综合判断：弱市中的打板窗口</a></li><li class="depth-2"><a href="#41-多维度信号汇总" data-for="41-多维度信号汇总">4.1 多维度信号汇总</a></li><li class="depth-2"><a href="#42-操作框架按打板派纪律" data-for="42-操作框架按打板派纪律">4.2 操作框架（按打板派纪律）</a></li><li class="depth-2"><a href="#43-给-d1-盘前预案的-actionable-信号" data-for="43-给-d1-盘前预案的-actionable-信号">4.3 给 D1 盘前预案的 actionable 信号</a></li><li class="depth-1"><a href="#五局限性说明" data-for="五局限性说明">五、局限性说明</a></li><li class="depth-1"><a href="#六下一步行动" data-for="六下一步行动">六、下一步行动</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-551b937a.js" type="module" data-persist="true"></script></html>

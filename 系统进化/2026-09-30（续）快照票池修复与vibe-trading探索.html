@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-09-30（续）快照票池修复与vibe-trading探索</title><meta charset="utf-8"/><link rel="preload" href="../index-5a23ce28.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-09-30（续）快照票池修复与vibe-trading探索"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-09-30（续）快照票池修复与vibe-trading探索"/><meta name="twitter:description" content="2026-09-30（续）· 快照票池修复 + cron 告警 + 生成器防冲突 + vibe-trading 探索 承接同日《配置瘦身与孤儿分析清理》。本篇记录用户批复 P0/P1 后的落地结果， 以及用户新提的问题：「vibe-trading 78 个工具全历史只用 4 个，你应该自己去探索 要额外用哪些工具进一步优化分析 —— 比如我要分析量价，直接调它现成的 MCP 是不是更简单？」 一、必须先纠正我自己上一条的判断 ❌ 我在《配置瘦身》文档里推荐 「票池改成从当日 R2 龙头动态读，只留 06:50 一档，删 15:50」。 用户采纳了。但动手前实测发现这个方案逻辑上不成立，我更正如..."/><meta property="og:description" content="2026-09-30（续）· 快照票池修复 + cron 告警 + 生成器防冲突 + vibe-trading 探索 承接同日《配置瘦身与孤儿分析清理》。本篇记录用户批复 P0/P1 后的落地结果， 以及用户新提的问题：「vibe-trading 78 个工具全历史只用 4 个，你应该自己去探索 要额外用哪些工具进一步优化分析 —— 比如我要分析量价，直接调它现成的 MCP 是不是更简单？」 一、必须先纠正我自己上一条的判断 ❌ 我在《配置瘦身》文档里推荐 「票池改成从当日 R2 龙头动态读，只留 06:50 一档，删 15:50」。 用户采纳了。但动手前实测发现这个方案逻辑上不成立，我更正如..."/><meta property="og:image:alt" content="2026-09-30（续）· 快照票池修复 + cron 告警 + 生成器防冲突 + vibe-trading 探索 承接同日《配置瘦身与孤儿分析清理》。本篇记录用户批复 P0/P1 后的落地结果， 以及用户新提的问题：「vibe-trading 78 个工具全历史只用 4 个，你应该自己去探索 要额外用哪些工具进一步优化分析 —— 比如我要分析量价，直接调它现成的 MCP 是不是更简单？」 一、必须先纠正我自己上一条的判断 ❌ 我在《配置瘦身》文档里推荐 「票池改成从当日 R2 龙头动态读，只留 06:50 一档，删 15:50」。 用户采纳了。但动手前实测发现这个方案逻辑上不成立，我更正如..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-09-30（续）快照票池修复与vibe-trading探索"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-09-30（续）快照票池修复与vibe-trading探索"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="2026-09-30（续）· 快照票池修复 + cron 告警 + 生成器防冲突 + vibe-trading 探索 承接同日《配置瘦身与孤儿分析清理》。本篇记录用户批复 P0/P1 后的落地结果， 以及用户新提的问题：「vibe-trading 78 个工具全历史只用 4 个，你应该自己去探索 要额外用哪些工具进一步优化分析 —— 比如我要分析量价，直接调它现成的 MCP 是不是更简单？」 一、必须先纠正我自己上一条的判断 ❌ 我在《配置瘦身》文档里推荐 「票池改成从当日 R2 龙头动态读，只留 06:50 一档，删 15:50」。 用户采纳了。但动手前实测发现这个方案逻辑上不成立，我更正如..."/><meta name="generator" content="Quartz"/><link href="../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/2026-09-30（续）快照票池修复与vibe-trading探索" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-705" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-705" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-09-30（续）快照票池修复与vibe-trading探索</a></div></nav><h1 class="article-title">2026-09-30（续）快照票池修复与vibe-trading探索</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-30T10:01:00.000Z">2026年9月30日</time><span>15分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="2026-09-30续-快照票池修复--cron-告警--生成器防冲突--vibe-trading-探索">2026-09-30（续）· 快照票池修复 + cron 告警 + 生成器防冲突 + vibe-trading 探索<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-09-30续-快照票池修复--cron-告警--生成器防冲突--vibe-trading-探索" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>承接同日《配置瘦身与孤儿分析清理》。本篇记录用户批复 P0/P1 后的落地结果，<br/>
+以及用户新提的问题：「vibe-trading 78 个工具全历史只用 4 个，你应该自己去探索<br/>
+要额外用哪些工具进一步优化分析 —— 比如我要分析量价，直接调它现成的 MCP 是不是更简单？」</p>
+</blockquote>
+<hr/>
+<h2 id="一必须先纠正我自己上一条的判断-">一、必须先纠正我自己上一条的判断 ❌<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一必须先纠正我自己上一条的判断-" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>我在《配置瘦身》文档里推荐 <strong>「票池改成从当日 R2 龙头动态读，只留 06:50 一档，删 15:50」</strong>。<br/>
+用户采纳了。但<strong>动手前实测发现这个方案逻辑上不成立</strong>，我更正如下：</p>
+<h3 id="事实0650-这个时点拿不到当日-r2">事实：06:50 这个时点<strong>拿不到当日 R2</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#事实0650-这个时点拿不到当日-r2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>近 8 个交易日 R2 落盘时间：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>日期</th><th>R2 落盘</th></tr></thead><tbody><tr><td>09-21</td><td>08:30</td></tr><tr><td>09-22</td><td>07:50</td></tr><tr><td>09-23</td><td>07:58</td></tr><tr><td>09-24</td><td>07:51</td></tr><tr><td>09-25</td><td>07:43</td></tr><tr><td>09-28</td><td>08:00</td></tr><tr><td>09-29</td><td>07:44</td></tr><tr><td>09-30</td><td>08:08</td></tr></tbody></table></div>
+<p>R2 最早 07:43 落盘。<strong>06:50 跑时，磁盘上只有前一日（T-1）的 R2</strong> —— 所以：</p>
+<ul>
+<li>「06:50 从当日 R2 读票池」→ 实际读的是 T-1 的 R2，票池错位一天</li>
+<li>且会把产物写成 <code>date=&lt;今天></code>，当日 08:15 的 R5 若读快照，拿到的是<strong>昨天的票池</strong></li>
+</ul>
+<h3 id="更深的一层0650-那档根本没在算今天">更深的一层：06:50 那档<strong>根本没在算今天</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#更深的一层0650-那档根本没在算今天" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>实测 <code>data/raw/20260930/chart_vision_snapshot.json</code>：</p>
+<pre><code>generated_at = 2026-09-30T15:52:29     ← 15:50 档的产物
+</code></pre>
+<p>06:50 档的产物被 15:50 档<strong>同路径覆写</strong>了，连证据都不剩。结合两档都读 <code>DEFAULT_UNIVERSE</code><br/>
+的事实，06:50 档实际是<strong>在 06:50 重算昨天 15:50 已经算过的同一批固定票</strong> —— 纯白烧。</p>
+<h3 id="结论唯一正确的位置是r2-之后r5-之前不是任何固定钟点">结论：唯一正确的位置是「R2 之后、R5 之前」，不是任何固定钟点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#结论唯一正确的位置是r2-之后r5-之前不是任何固定钟点" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>这跟 D1 那边已经得出的教训是同一条：<strong>不要看钟表，看上游落盘</strong>。</p>
+<hr/>
+<h2 id="二实际采用的方案">二、实际采用的方案<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二实际采用的方案" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="改动清单">改动清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#改动清单" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>#</th><th>改动</th><th>文件</th></tr></thead><tbody><tr><td>1</td><td><strong>删掉 <code>chart_vision_snapshot</code> cron</strong>（<code>fd61c030d180</code>，<code>50 6,15 * * *</code>）</td><td>cron</td></tr><tr><td>2</td><td>票池改为从 <strong>R2 龙头动态推导</strong>（新模块，唯一真源）</td><td><code>src/research/candidate_pool.py</code>（新）</td></tr><tr><td>3</td><td>预渲染移到 <strong>R2 落盘后、R5 启动前</strong>，6 路并发</td><td><code>scripts/research/run_research_shell.sh</code></td></tr><tr><td>4</td><td>R5 <strong>先读快照，未命中才调 MCP</strong>；命中记 <code>source:&quot;snapshot&quot;</code></td><td><code>skills/analyze_stock_profile_v1/SKILL.md</code></td></tr><tr><td>5</td><td>快照脚本加<strong>覆盖度跳闸</strong>（当日已覆盖 ≥50% 则 exit 0，不调 vision）+ <code>--force</code></td><td><code>scripts/fetch/run_chart_vision_snapshot.py</code></td></tr><tr><td>6</td><td>快照脚本加<strong>合并写</strong>（补渲不再整份覆盖）</td><td>同上</td></tr><tr><td>7</td><td>R5 把未命中票写<strong>补渲队列</strong></td><td><code>src/research/r5_stock_profiles.py</code></td></tr></tbody></table></div>
+<h3 id="票池口径统一防再次分叉">票池口径统一（防再次分叉）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#票池口径统一防再次分叉" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>新模块 <code>candidate_pool.py</code> <strong>复用 R5 自己的 <code>_collect_leaders()</code></strong>，不再另写一套解析：</p>
+<pre><code>derive(r2)  ← R5 与快照生成器都调这里 → 口径不可能分叉
+  ① R2.main_lines[].leaders        （R2 自己的排序）
+  ② R2.secondary_lines[].leaders_hint  （①为空即 leaders_degraded 时，正则解析自然语言兜底）
+</code></pre>
+<h3 id="实测效果">实测效果<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#实测效果" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>指标</th><th>改前</th><th>改后</th></tr></thead><tbody><tr><td>快照 vs R5 实际候选重合度</td><td><strong>1/12（8%）</strong></td><td><strong>12/12（100%）</strong></td></tr><tr><td>覆盖票数</td><td>12 票（全是错的）</td><td>16 票（13 R2 龙头 + 3 补渲）</td></tr><tr><td>每日 vision 调用</td><td>24 次（06:50+15:50 各 12）</td><td><strong>13~16 次，且全部命中真候选</strong></td></tr><tr><td>R5 需直调的票</td><td>12 次 × 42s ≈ 500s</td><td><strong>0 次</strong>（全部走快照）</td></tr></tbody></table></div>
+<p>产物样例（新华传媒 600825.SH，真候选）：</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;bias&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;偏多&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;confidence&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.8</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation"> &quot;signals&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [{</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;type&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;突破&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;period&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;日K&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;confidence&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.85</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;price_hint&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">10.35</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}]}</span></span></code></pre></figure>
+<hr/>
+<h2 id="三cron-失败告警用户点名的-p0">三、cron 失败告警（用户点名的 P0）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三cron-失败告警用户点名的-p0" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="新增-scriptshealthcheck_cron_failurespy">新增 <code>scripts/health/check_cron_failures.py</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#新增-scriptshealthcheck_cron_failurespy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>挂在已有的 <code>canghai-health · 每日产出健康检查 (20:30)</code> 里，每天随 20:30 巡检一起跑。</p>
+<p>检查三项：</p>
+<ol>
+<li><code>failure_streak >= 3</code> → 🚨 报警</li>
+<li>agent 型 cron 但 <code>provider</code> 未 pin → ⚠️ 报警（drift 前兆）</li>
+<li><code>last_status == error</code> 且 streak 较小 → 🟡 提示</li>
+</ol>
+<h3 id="一个重要的防误报设计">一个重要的防误报设计<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一个重要的防误报设计" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>首次运行就报出 <code>canghai-review · 周度进化(E2)</code> 连续失败 5 次 —— 但<strong>这是假警报</strong>：<br/>
+我上午已把它 pin 了，只是它<strong>每周五才跑</strong>（下次 10-02），<code>failure_streak</code> 还是旧值。</p>
+<p>所以加了区分：</p>
+<ul>
+<li>provider <strong>已 pin</strong> 但失败发生在 pin 之前 → <code>🕓 已修·待验证</code>（带末次/下次运行时间）</li>
+<li>provider <strong>未 pin</strong> 且失败 → <code>❌</code>（真在挂）</li>
+</ul>
+<p>不加这层，每天都会误报「还在挂」，告警就会被无视 —— 那就白做了。</p>
+<h3 id="实测输出">实测输出<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#实测输出" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>⚠️ cron 巡检异常（检查 28 个 job，阈值 failure_streak>=3）
+   连续失败 1 · 未 pin 0 · 新挂 0
+
+🚨 连续失败（静默挂了）
+  🕓 已修·待验证 [canghai-review] 周度进化(E2) (87d4d030b72b)
+     连续失败 5 次 · 末次 2026-09-25 15:30 · 下次 2026-10-02 15:30
+     RuntimeError: HTTP 404: 404 page not found
+</code></pre>
+<p>**「未 pin 0」**说明上午那批 pin 修复是完整的。</p>
+<hr/>
+<h2 id="四消除-cron-双轨">四、消除 cron 双轨<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四消除-cron-双轨" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>审计 28 个 job（default 25 + profile 3），发现<strong>一处真重复</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>job</th><th>时点</th><th>skill</th><th>状态</th></tr></thead><tbody><tr><td><code>b4085b037f87</code> (default)</td><td>11:35</td><td><code>midday_amendment_v1</code></td><td>✅ 已删</td></tr><tr><td><code>75bf632522ce</code> (canghai-plan)</td><td>11:40</td><td><code>midday_amendment_v1</code></td><td>保留</td></tr></tbody></table></div>
+<p><strong>同一个 skill 跑两遍</strong>。且 11:35 那序与自己的上游冲突：<br/>
+<code>canghai-fetch · 午盘快照</code> 也是 11:35 —— P2 可能读不到当次快照。<br/>
+今日实盘证据：快照 11:37 落盘、P2 11:47 落盘（11:40 那序是对的）。</p>
+<p><strong>处置</strong>：删 default 11:35 那份，保留 canghai-plan 11:40（时点正确 + 已 pin）。</p>
+<blockquote>
+<p>其余同时点 job 都是<strong>互补</strong>的，不能合并：</p>
+<ul>
+<li>18:00 <code>E1 每日复盘</code> + <code>持仓生命周期滚动复盘</code> → 两个不同 skill</li>
+<li>11:35 <code>午盘快照(fetch)</code> → P2 的<strong>上游数据</strong>，不是重复</li>
+</ul>
+</blockquote>
+<p>cron 总数：<strong>32 → 28</strong>（本轮净减 4，含 snapshot 1 + P2 重复 1 + 上午的 3 个死 job，新增 1）。</p>
+<hr/>
+<h2 id="五配置生成器与手改打架用户点名的-p1">五、配置生成器与手改打架（用户点名的 P1）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五配置生成器与手改打架用户点名的-p1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="根因确认">根因确认<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#根因确认" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>scripts/setup_hermes_doubao.py::_merge_mcp()</code> 对所有 server 都是<strong>直接赋值覆盖</strong>：</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">servers[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;tushareMcp&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;url&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">...</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;timeout&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">180</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;connect_timeout&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">60</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}   </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ← 覆盖</span></span></code></pre></figure>
+<p><strong>后果最严重的一处</strong>：<code>tushareMcp</code> 被覆盖后，手工加的 <code>tools.include</code> 白名单<br/>
+（254 → 69 的瘦身成果）<strong>整个丢失</strong>，schema 基线从 18.6k 反弹回 36k。</p>
+<h3 id="修法两道">修法（两道）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#修法两道" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong><code>_merge_server()</code> 按名合并</strong>：存在则只 <code>setdefault</code> 补缺失键，<strong>已有键一律保留</strong></li>
+<li><strong>新增 <code>mcp_servers_opt_out</code></strong>：config 里列出「故意不挂」的 server，生成器不会加回来</li>
+</ol>
+<h3 id="实测验证">实测验证<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#实测验证" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项</th><th>改前</th><th>改后</th></tr></thead><tbody><tr><td>重跑 setup 后 <code>tushareMcp.tools.include</code></td><td>❌ 变 0（全丢）</td><td>✅ 仍 69</td></tr><tr><td>其余 6 个 server</td><td>不变</td><td>不变</td></tr></tbody></table></div>
+<hr/>
+<h2 id="六回填-research_summaryjson">六、回填 <code>research_summary.json</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#六回填-research_summaryjson" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="实际情况比预估严重得多">实际情况比预估严重得多<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#实际情况比预估严重得多" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>我原本说「12 天缺失（09-14～09-29）」，<strong>实测是 41 天缺</strong>（从 07-08 到 09-29 几乎全缺）。</p>
+<p><strong>成功回填 35 天</strong>（其余 6 天 R 文件不足 7 个，无法生成）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>结果</th><th>天数</th><th>日期</th></tr></thead><tbody><tr><td><code>complete</code></td><td>21 天</td><td>08-04, 08-07, 09-04～09-29 等</td></tr><tr><td><code>partial</code></td><td>14 天</td><td>07-08, 07-17, 08-11～09-01</td></tr><tr><td>跳过</td><td>6 天</td><td>R 文件 &lt; 7（07-05 / 08-03 / 09-02 / 09-03 / 09-11 / 09-13）</td></tr></tbody></table></div>
+<p>用 <code>build_research_summary.py</code>（只读脚本，<strong>不跑 orchestrator</strong>，不会用规则版覆盖 LLM 产物）。</p>
+<p><strong>意义</strong>：这 35 天的 D1 当时全部走 <code>_minimal_summary()</code> → <code>orchestrator_status=degraded</code>。<br/>
+现在历史复盘可以用统一口径重跑了。</p>
+<hr/>
+<h2 id="七vibe-trading-探索用户点名要我自己挖">七、vibe-trading 探索（用户点名要我自己挖）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#七vibe-trading-探索用户点名要我自己挖" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="先纠正我上一条的一个错误判断">先纠正我上一条的一个错误判断<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#先纠正我上一条的一个错误判断" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>我说「78 个工具全历史只用 4 个，其余 74 个零调用，可以再收一轮」。<br/>
+<strong>这个建议基本是错的</strong> —— 用 <code>HERMES_DUMP_REQUESTS=1</code> 实测请求体：</p>
+<pre><code>本次请求注册工具数: 21
+  vibe-trading 实际注册进 schema 的工具数: 0
+</code></pre>
+<p><strong>vibe-trading 的工具根本不在 context 里</strong> —— 它们走 Hermes 的<strong>延迟工具目录</strong><br/>
+（<code>tool_search</code>），只在 agent 真要调时才把 schema 拉进来。所以：</p>
+<ul>
+<li>那 74 个「零调用」工具<strong>不花任何常驻 token</strong>（省下来的是 <code>tool_search</code> 那 10,418 字符，与 server 挂几个工具无关）</li>
+<li>「再收一轮白名单」<strong>没有收益</strong> —— 它本来就不占基线</li>
+<li>真要收，那是 <code>tool_search</code> 目录层面的问题，不是 MCP 白名单</li>
+</ul>
+<blockquote>
+<p>我上一条把这份 schema（88,534 字符 ≈ 22k tok）当成了常驻成本。<strong>不是。</strong><br/>
+这个数只在「agent 去 <code>tool_search</code> 搜工具」时才付出。</p>
+</blockquote>
+<h3 id="你问的分析量价直接调它现成的-mcp-是不是更简单-是而且快得多">你问的「分析量价直接调它现成的 MCP 是不是更简单」→ <strong>是，而且快得多</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#你问的分析量价直接调它现成的-mcp-是不是更简单-是而且快得多" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>我把量价相关的工具在<strong>真实 A 股</strong>上全跑了一遍（今日 exec 池的引力传媒 603598.SH）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>工具</th><th>耗时</th><th>实际返回</th><th>参数（易错，注意）</th></tr></thead><tbody><tr><td><code>technical_indicators</code></td><td><strong>0.4s</strong></td><td>RSI14/MACD/BOLL/SMA20,50,200/EMA20 + <strong>量比 ratio_20</strong></td><td><code>symbol</code>, <code>indicators</code>, <code>interval</code>, <code>lookback=200</code></td></tr><tr><td><code>get_market_data</code></td><td><strong>5.4s / 12 票</strong></td><td>OHLCV，返回 <code>{ts_code: [...]}</code></td><td><code>codes</code>(复数!), <code>start_date</code>, <code>end_date</code>, <code>interval</code></td></tr><tr><td><code>get_fund_flow</code></td><td><strong>2.1s</strong></td><td>主力/超大/大/中/小 单资金流</td><td><code>codes</code>(复数!), <code>period</code> ∈ <code>daily|min</code></td></tr><tr><td><code>get_dragon_tiger</code></td><td><strong>1.9s</strong></td><td>当日龙虎榜 71 条 + 净买额</td><td><code>date</code>(非 <code>trade_date</code>), <code>code</code></td></tr><tr><td><code>get_lockup_expiry</code></td><td><strong>1.1s</strong></td><td>解禁明细（含 <code>free_ratio</code>）</td><td><code>code</code>, <code>horizon_days</code></td></tr><tr><td><code>get_sector_info</code></td><td>0.2s</td><td>所属板块（<strong>东财板块代码</strong>）</td><td><code>code</code>, <code>mode</code>, <code>limit</code></td></tr></tbody></table></div>
+<p><strong>关键对比 —— R5 现在最贵的一段</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th>chart_vision_analyze</th><th>vibe-trading <code>technical_indicators</code></th></tr></thead><tbody><tr><td>12 票耗时</td><td><strong>500s</strong>（12 × 42s，串行）</td><td><strong>0.4s × 12</strong>（毫秒级，可批量）</td></tr><tr><td>是否用 LLM</td><td>是（每次一次 vision 调用，花钱）</td><td><strong>否</strong>（纯计算）</td></tr><tr><td>输出</td><td>自然语言形态描述</td><td>精确数值（RSI/MACD/量比/均线）</td></tr></tbody></table></div>
+<h3 id="数值正确性验证不只看它跑通了">数值正确性验证（不只看它「跑通了」）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数值正确性验证不只看它跑通了" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>我拿自主 <code>kb/research.db</code> 的 236 日日线<strong>独立复算</strong>，与 vibe-trading 返回值对比：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>指标</th><th>vibe-trading</th><th>我独立复算</th><th>判定</th></tr></thead><tbody><tr><td>SMA-20</td><td>17.9875</td><td>17.9875</td><td>✅ <strong>完全一致</strong></td></tr><tr><td>SMA-50</td><td>17.5198</td><td>17.5198</td><td>✅ <strong>完全一致</strong></td></tr><tr><td>RSI-14</td><td>55.7943</td><td>55.7876</td><td>✅ 差 0.007（算法变体）</td></tr><tr><td>EMA-20</td><td>17.99963</td><td>17.99980</td><td>✅ 差 0.0002</td></tr><tr><td>MACD line</td><td>0.2463</td><td>0.2457</td><td>✅ 差 0.0006</td></tr><tr><td>最新收盘/成交量</td><td>18.78 / 307,756 手</td><td>18.78 / 307,755.5 手</td><td>✅ <strong>一致</strong></td></tr></tbody></table></div>
+<p>→ <strong>可信，可以直接用于决策输入。</strong></p>
+<h3 id="建议这次是真建议">建议（这次是真建议）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#建议这次是真建议" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>1. R5 的「技术形态」维度应该双轨</strong></p>
+<p>现在只有 chart_vision（LLM 看图，42s/票，只给定性描述）。建议加一路 <code>technical_indicators</code>：</p>
+<ul>
+<li><strong>定位差异</strong>：chart_vision 给「形态/结构」的<strong>定性</strong>判断（涨停突破、下降通道）；<code>technical_indicators</code> 给<strong>精确数值</strong>（量比 1.40、RSI 55.8、在 MA20 上 4.4%）</li>
+<li><strong>互补</strong>：形态识别负责「像不像」，指标负责「够不够」。R5 现在缺后者</li>
+<li><strong>成本</strong>：接近零（0.4s/票，无 LLM）</li>
+<li><strong>落地</strong>：R5 skill 的「技术形态」维加一句「同时调 <code>technical_indicators</code> 取数值佐证」；数值与 chart_vision 结论冲突时标 <code>tech_divergence=true</code> 进 R6 观察池</li>
+</ul>
+<p><strong>2. <code>get_sector_info</code> 补上「板块归属」的自动化</strong></p>
+<p>R2 现在靠 LLM 读文字判断个股属哪个板块。<code>get_sector_info</code> 返回<strong>东财板块代码 + 涨跌幅</strong>，<br/>
+可以拿来做机器校验（避免「这只票真的属于 AI 应用吗」这种误判）。</p>
+<p><strong>3. <code>get_dragon_tiger</code> 可作为 R7 的独立第二源</strong></p>
+<p>R7 现在龙虎榜主源是 tushare <code>top_list</code>。vibe-trading 走的是<strong>东财通道</strong> —— 真正的独立源，<br/>
+可以交叉核验「龙虎榜净买」口径（R7 skill 里已在做「诱多识别」，多一源更稳）。</p>
+<p><strong>4. 不要动的部分</strong></p>
+<ul>
+<li><code>technical_indicators</code> 是<strong>纯计算</strong>，不涉及 LLM —— 符合你「决策必须大模型做」的铁律<br/>
+（它是<strong>数据</strong>，不是决策；决策仍由 R5 的 LLM 下）</li>
+<li>chart_vision <strong>保留</strong>：它是六维里唯一的「视觉证据」，与数值指标不是替代关系</li>
+</ul>
+<p><strong>5. 可删的（低优先级）</strong></p>
+<p><code>pattern_recognition</code> 的参数是 <code>run_dir</code>（要你先准备 vectorbt 的 config.json + CSV），<br/>
+对 R5 场景太重，建议不用 —— 形态识别继续走 chart_vision。</p>
+<hr/>
+<h2 id="八变更文件清单">八、变更文件清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#八变更文件清单" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="新增">新增<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#新增" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>文件</th><th>用途</th></tr></thead><tbody><tr><td><code>src/research/candidate_pool.py</code></td><td>票池推导唯一真源（R5 与快照共用）</td></tr><tr><td><code>scripts/health/check_cron_failures.py</code></td><td>cron 失败/未 pin 巡检</td></tr><tr><td><code>data/runtime/chart_vision_misses_YYYYMMDD.json</code></td><td>快照未覆盖票的补渲队列</td></tr><tr><td><code>chzl_kg/系统进化/2026-09-30（续）快照票池修复与vibe-trading探索.md</code></td><td>本文档</td></tr></tbody></table></div>
+<h3 id="修改">修改<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#修改" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>文件</th><th>改动</th></tr></thead><tbody><tr><td><code>scripts/fetch/run_chart_vision_snapshot.py</code></td><td>票池动态推导 + 覆盖度跳闸 + <code>--force</code> + 合并写</td></tr><tr><td><code>scripts/research/run_research_shell.sh</code></td><td>R2 之后插入并发预渲染</td></tr><tr><td><code>skills/analyze_stock_profile_v1/SKILL.md</code></td><td>v1.4：先读快照，未命中才调 MCP</td></tr><tr><td><code>src/research/r5_stock_profiles.py</code></td><td>覆盖度核对 + 补渲队列</td></tr><tr><td><code>scripts/setup_hermes_doubao.py</code></td><td><code>_merge_server</code> 按名合并 + <code>mcp_servers_opt_out</code></td></tr><tr><td><code>~/.hermes/scripts/canghai_chart_vision_snapshot.sh</code></td><td>单档兜底 + 跳闸不误报</td></tr><tr><td><code>~/.hermes/scripts/canghai_daily_health_check.sh</code></td><td>串入 cron 失败巡检</td></tr></tbody></table></div>
+<h3 id="cron-变更">cron 变更<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cron-变更" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>job</th><th>动作</th></tr></thead><tbody><tr><td><code>fd61c030d180</code> chart_vision_snapshot (06:50+15:50)</td><td><strong>删除</strong>（时点拿不到当日 R2，纯白烧）</td></tr><tr><td><code>b4085b037f87</code> 午盘briefing P2 (11:35)</td><td><strong>删除</strong>（与 canghai-plan 11:40 重复）</td></tr></tbody></table></div>
+<h3 id="数据回填">数据回填<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据回填" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>35 个交易日的 <code>data/research/*/research_summary.json</code></li>
+<li><code>data/raw/20260930/chart_vision_snapshot.json</code> 重建（16 票，100% 命中）</li>
+</ul>
+<h3 id="验证">验证<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#验证" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>快照覆盖度：<strong>1/12 → 12/12</strong></li>
+<li><code>tushareMcp</code> 白名单在重跑 setup 后<strong>保持 69</strong></li>
+<li>覆盖度跳闸生效（重跑 → <code>⏭️ 跳过</code>；<code>--force</code> → 照常重算）</li>
+<li>合并写生效（13 重算 + 3 保留 = 16）</li>
+<li>cron 巡检：未 pin = <strong>0</strong></li>
+</ul>
+<hr/>
+<h2 id="九待办--需你拍板">九、待办 / 需你拍板<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#九待办--需你拍板" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong>R5 是否加 <code>technical_indicators</code> 数值轨</strong>（第七节建议 1）—— 我认为值得，成本近零</li>
+<li><strong><code>data/research/</code> 下 6 天因 R 文件不足无法回填</strong>（07-05 / 08-03 / 09-02 / 09-03 / 09-11 / 09-13）—— 需要的话可从 cron output 恢复</li>
+<li><strong><code>hermes-visitors</code> profile 的旧版 R5 skill 是否清理</strong>（它还会读旧快照，schema 已变）</li>
+<li><strong>cron 是否继续按「一功能一 job」整并</strong>（本轮只处理了确证的 1 处重复）</li>
+</ol></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-671" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#2026-09-30续-快照票池修复--cron-告警--生成器防冲突--vibe-trading-探索" data-for="2026-09-30续-快照票池修复--cron-告警--生成器防冲突--vibe-trading-探索">2026-09-30（续）· 快照票池修复 + cron 告警 + 生成器防冲突 + vibe-trading 探索</a></li><li class="depth-1"><a href="#一必须先纠正我自己上一条的判断-" data-for="一必须先纠正我自己上一条的判断-">一、必须先纠正我自己上一条的判断 ❌</a></li><li class="depth-2"><a href="#事实0650-这个时点拿不到当日-r2" data-for="事实0650-这个时点拿不到当日-r2">事实：06:50 这个时点拿不到当日 R2</a></li><li class="depth-2"><a href="#更深的一层0650-那档根本没在算今天" data-for="更深的一层0650-那档根本没在算今天">更深的一层：06:50 那档根本没在算今天</a></li><li class="depth-2"><a href="#结论唯一正确的位置是r2-之后r5-之前不是任何固定钟点" data-for="结论唯一正确的位置是r2-之后r5-之前不是任何固定钟点">结论：唯一正确的位置是「R2 之后、R5 之前」，不是任何固定钟点</a></li><li class="depth-1"><a href="#二实际采用的方案" data-for="二实际采用的方案">二、实际采用的方案</a></li><li class="depth-2"><a href="#改动清单" data-for="改动清单">改动清单</a></li><li class="depth-2"><a href="#票池口径统一防再次分叉" data-for="票池口径统一防再次分叉">票池口径统一（防再次分叉）</a></li><li class="depth-2"><a href="#实测效果" data-for="实测效果">实测效果</a></li><li class="depth-1"><a href="#三cron-失败告警用户点名的-p0" data-for="三cron-失败告警用户点名的-p0">三、cron 失败告警（用户点名的 P0）</a></li><li class="depth-2"><a href="#新增-scriptshealthcheck_cron_failurespy" data-for="新增-scriptshealthcheck_cron_failurespy">新增 scripts/health/check_cron_failures.py</a></li><li class="depth-2"><a href="#一个重要的防误报设计" data-for="一个重要的防误报设计">一个重要的防误报设计</a></li><li class="depth-2"><a href="#实测输出" data-for="实测输出">实测输出</a></li><li class="depth-1"><a href="#四消除-cron-双轨" data-for="四消除-cron-双轨">四、消除 cron 双轨</a></li><li class="depth-1"><a href="#五配置生成器与手改打架用户点名的-p1" data-for="五配置生成器与手改打架用户点名的-p1">五、配置生成器与手改打架（用户点名的 P1）</a></li><li class="depth-2"><a href="#根因确认" data-for="根因确认">根因确认</a></li><li class="depth-2"><a href="#修法两道" data-for="修法两道">修法（两道）</a></li><li class="depth-2"><a href="#实测验证" data-for="实测验证">实测验证</a></li><li class="depth-1"><a href="#六回填-research_summaryjson" data-for="六回填-research_summaryjson">六、回填 research_summary.json</a></li><li class="depth-2"><a href="#实际情况比预估严重得多" data-for="实际情况比预估严重得多">实际情况比预估严重得多</a></li><li class="depth-1"><a href="#七vibe-trading-探索用户点名要我自己挖" data-for="七vibe-trading-探索用户点名要我自己挖">七、vibe-trading 探索（用户点名要我自己挖）</a></li><li class="depth-2"><a href="#先纠正我上一条的一个错误判断" data-for="先纠正我上一条的一个错误判断">先纠正我上一条的一个错误判断</a></li><li class="depth-2"><a href="#你问的分析量价直接调它现成的-mcp-是不是更简单-是而且快得多" data-for="你问的分析量价直接调它现成的-mcp-是不是更简单-是而且快得多">你问的「分析量价直接调它现成的 MCP 是不是更简单」→ 是，而且快得多</a></li><li class="depth-2"><a href="#数值正确性验证不只看它跑通了" data-for="数值正确性验证不只看它跑通了">数值正确性验证（不只看它「跑通了」）</a></li><li class="depth-2"><a href="#建议这次是真建议" data-for="建议这次是真建议">建议（这次是真建议）</a></li><li class="depth-1"><a href="#八变更文件清单" data-for="八变更文件清单">八、变更文件清单</a></li><li class="depth-2"><a href="#新增" data-for="新增">新增</a></li><li class="depth-2"><a href="#修改" data-for="修改">修改</a></li><li class="depth-2"><a href="#cron-变更" data-for="cron-变更">cron 变更</a></li><li class="depth-2"><a href="#数据回填" data-for="数据回填">数据回填</a></li><li class="depth-2"><a href="#验证" data-for="验证">验证</a></li><li class="depth-1"><a href="#九待办--需你拍板" data-for="九待办--需你拍板">九、待办 / 需你拍板</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-551b937a.js" type="module" data-persist="true"></script></html>

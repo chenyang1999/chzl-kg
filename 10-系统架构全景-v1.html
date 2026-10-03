@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>沧海巨浪 · 系统架构全景 v1</title><meta charset="utf-8"/><link rel="preload" href="./index-5a23ce28.css" as="style"/><link rel="preload" href="./prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="沧海巨浪 · 系统架构全景 v1"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="沧海巨浪 · 系统架构全景 v1"/><meta name="twitter:description" content="沧海巨浪 · 系统架构全景 v1 一句话:沧海巨浪 = 一套信息驱动 A 股短线研究/预案/交易的多 Agent 系统 · 由 Hermes 运行时 + 项目资产 两平面组成 · 研究侧全 LLM(R1-R7 + D1 + E1)· 交易侧全规则(miniQMT + 尾盘调仓)· 契约靠 markdown/JSON schema 冻结,不靠代码耦合。 阅读路径:§1 宏观定位 → §2 功能层 → §3 技术架构层 → §4 数据流层 → §5 每日运行时线 → §6 已知边界与演进 §1 宏观定位 1.1 系统在做什么 flowchart LR Input[信息源&lt;br/>公众号..."/><meta property="og:description" content="沧海巨浪 · 系统架构全景 v1 一句话:沧海巨浪 = 一套信息驱动 A 股短线研究/预案/交易的多 Agent 系统 · 由 Hermes 运行时 + 项目资产 两平面组成 · 研究侧全 LLM(R1-R7 + D1 + E1)· 交易侧全规则(miniQMT + 尾盘调仓)· 契约靠 markdown/JSON schema 冻结,不靠代码耦合。 阅读路径:§1 宏观定位 → §2 功能层 → §3 技术架构层 → §4 数据流层 → §5 每日运行时线 → §6 已知边界与演进 §1 宏观定位 1.1 系统在做什么 flowchart LR Input[信息源&lt;br/>公众号..."/><meta property="og:image:alt" content="沧海巨浪 · 系统架构全景 v1 一句话:沧海巨浪 = 一套信息驱动 A 股短线研究/预案/交易的多 Agent 系统 · 由 Hermes 运行时 + 项目资产 两平面组成 · 研究侧全 LLM(R1-R7 + D1 + E1)· 交易侧全规则(miniQMT + 尾盘调仓)· 契约靠 markdown/JSON schema 冻结,不靠代码耦合。 阅读路径:§1 宏观定位 → §2 功能层 → §3 技术架构层 → §4 数据流层 → §5 每日运行时线 → §6 已知边界与演进 §1 宏观定位 1.1 系统在做什么 flowchart LR Input[信息源&lt;br/>公众号..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/10-系统架构全景-v1"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/10-系统架构全景-v1"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="沧海巨浪 · 系统架构全景 v1 一句话:沧海巨浪 = 一套信息驱动 A 股短线研究/预案/交易的多 Agent 系统 · 由 Hermes 运行时 + 项目资产 两平面组成 · 研究侧全 LLM(R1-R7 + D1 + E1)· 交易侧全规则(miniQMT + 尾盘调仓)· 契约靠 markdown/JSON schema 冻结,不靠代码耦合。 阅读路径:§1 宏观定位 → §2 功能层 → §3 技术架构层 → §4 数据流层 → §5 每日运行时线 → §6 已知边界与演进 §1 宏观定位 1.1 系统在做什么 flowchart LR Input[信息源&lt;br/>公众号..."/><meta name="generator" content="Quartz"/><link href="./index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="10-系统架构全景-v1" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-3" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-3" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>沧海巨浪 · 系统架构全景 v1</a></div></nav><h1 class="article-title">沧海巨浪 · 系统架构全景 v1</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-07T16:00:00.000Z">2026年7月08日</time><span>14分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="沧海巨浪--系统架构全景-v1">沧海巨浪 · 系统架构全景 v1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#沧海巨浪--系统架构全景-v1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><strong>一句话</strong>:沧海巨浪 = 一套<strong>信息驱动 A 股短线研究/预案/交易</strong>的多 Agent 系统 · 由 <strong>Hermes 运行时</strong> + <strong>项目资产</strong> 两平面组成 · 研究侧全 LLM(R1-R7 + D1 + E1)· 交易侧全规则(miniQMT + 尾盘调仓)· 契约靠 markdown/JSON schema 冻结,不靠代码耦合。</p>
+</blockquote>
+<p><strong>阅读路径</strong>:§1 宏观定位 → §2 功能层 → §3 技术架构层 → §4 数据流层 → §5 每日运行时线 → §6 已知边界与演进</p>
+<hr/>
+<h2 id="1-宏观定位">§1 宏观定位<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-宏观定位" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="11-系统在做什么">1.1 系统在做什么<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-系统在做什么" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  Input[信息源&lt;br/>公众号 · WeFlow 群 · 财经新闻 · 官方数据] --> Research[研究引擎&lt;br/>R1-R7 多 Agent 并行]\n  Research --> Plan[决策引擎&lt;br/>D1 预案合成]\n  Plan --> Execute[执行引擎&lt;br/>规则化尾盘调仓]\n  Execute --> Feedback[回溯引擎&lt;br/>E1 T+N 观察追踪]\n  Feedback -.训练信号.-> Research&quot;">flowchart LR
+  Input[信息源&lt;br/>公众号 · WeFlow 群 · 财经新闻 · 官方数据] --> Research[研究引擎&lt;br/>R1-R7 多 Agent 并行]
+  Research --> Plan[决策引擎&lt;br/>D1 预案合成]
+  Plan --> Execute[执行引擎&lt;br/>规则化尾盘调仓]
+  Execute --> Feedback[回溯引擎&lt;br/>E1 T+N 观察追踪]
+  Feedback -.训练信号.-> Research
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>核心命题</strong>:A 股是<strong>协调游戏</strong>,alpha 主要来自”叙事阶段识别 + 集体信念动力学”,不来自基本面掘金 → 系统聚焦<strong>信息处理 + 主力行为建模</strong>,而非因子模型。</p>
+<p><strong>主 alpha 源</strong>:WeFlow 200-300 群 + 财经公众号 messaging 层的多源印证。</p>
+<h3 id="12-关键设计边界">1.2 关键设计边界<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12-关键设计边界" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>维度</th><th>决策</th><th>原因</th></tr></thead><tbody><tr><td><strong>研究 vs 交易</strong></td><td>完全分离(信息不入下单路径)</td><td>研究要发散 · 交易要纪律 · 情报关系图谱不进 log</td></tr><tr><td><strong>研究 Agent 模式</strong></td><td><strong>LLM sub-agent</strong> (delegate_task)</td><td>叙事分析需要语义 · 规则版做 fallback</td></tr><tr><td><strong>交易 Agent 模式</strong></td><td><strong>规则引擎(纯 Python)</strong></td><td>盘中非理性 · 不能 LLM 建模 · 契约驱动</td></tr><tr><td><strong>市场覆盖</strong></td><td>仅 A 股 · 不接 IBKR/加密/美股期权</td><td>焦点资源 · WeFlow 是中文场</td></tr><tr><td><strong>执行时间</strong></td><td>尾盘 14:30-15:00</td><td>情绪冷静 · 避开日内博弈</td></tr></tbody></table></div>
+<hr/>
+<h2 id="2-功能层视角">§2 功能层视角<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-功能层视角" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="21-六大功能域">2.1 六大功能域<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-六大功能域" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;mindmap\n  root((沧海巨浪))\n    情报获取\n      公众号(18 个信号源)\n      WeFlow 200-300 群\n      tushare 行情/财务\n      xtick 高频/热榜\n      iwencai 自然语言选股\n      东财预告库(RPT_PUBLIC_OP)\n      chart_vision 视觉技术面\n    研究分析\n      R1 风格聚类\n      R2 主线板块\n      R3 情绪共振\n      R4 消息催化\n      R5 个股画像\n      R6 反证 devil-advocate\n      R7 资金面\n    决策合成\n      D1 预案 (execution_pool)\n      观察池 (watchlist)\n      分档 (A/A-/B+/B/C)\n      思维链落盘 (硬要求)\n    交易执行\n      miniQMT 下单\n      尾盘调仓\n      单票 ≤15% 板块 ≤40%\n      止损规则引擎\n    回溯校准\n      E1 T+3/T+5 假设验证\n      hit rate 统计\n      user_preferences.yaml 修订\n    知识沉淀\n      chzl_kg (Obsidian)\n      投研交易/YYYYMMDD/\n      skills 沉淀 (~/.hermes + ~/.cursor)\n      cron 定时资产&quot;">mindmap
+  root((沧海巨浪))
+    情报获取
+      公众号(18 个信号源)
+      WeFlow 200-300 群
+      tushare 行情/财务
+      xtick 高频/热榜
+      iwencai 自然语言选股
+      东财预告库(RPT_PUBLIC_OP)
+      chart_vision 视觉技术面
+    研究分析
+      R1 风格聚类
+      R2 主线板块
+      R3 情绪共振
+      R4 消息催化
+      R5 个股画像
+      R6 反证 devil-advocate
+      R7 资金面
+    决策合成
+      D1 预案 (execution_pool)
+      观察池 (watchlist)
+      分档 (A/A-/B+/B/C)
+      思维链落盘 (硬要求)
+    交易执行
+      miniQMT 下单
+      尾盘调仓
+      单票 ≤15% 板块 ≤40%
+      止损规则引擎
+    回溯校准
+      E1 T+3/T+5 假设验证
+      hit rate 统计
+      user_preferences.yaml 修订
+    知识沉淀
+      chzl_kg (Obsidian)
+      投研交易/YYYYMMDD/
+      skills 沉淀 (~/.hermes + ~/.cursor)
+      cron 定时资产
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="22-研究-r1-r7-分工">2.2 研究 R1-R7 分工<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22-研究-r1-r7-分工" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph TB\n  subgraph WIDTH[\&quot;宽度扫描 · 全市场\&quot;]\n    R1[R1 风格&lt;br/>同花顺 22 风格板块聚类&lt;br/>今日市场性格判定]\n    R2[R2 主线板块&lt;br/>全市场 1-3 主线&lt;br/>每条 3-5 候选龙头]\n    R3[R3 情绪共振&lt;br/>Tushare/XTick 热榜&lt;br/>WeFlow 5-24h 共振]\n    R4[R4 消息催化&lt;br/>公众号 + 财联社 + 东财预告&lt;br/>硬事件清单]\n    R7[R7 资金面&lt;br/>时序资金流 + 跷跷板&lt;br/>游资协同 + 昨日十强追踪]\n  end\n\n  subgraph DEPTH[\&quot;深度分析 · 精选个股\&quot;]\n    R5[R5 个股画像&lt;br/>R2 候选 6-15 只逐票&lt;br/>≥6 维度 + 思维链]\n    R6[R6 反证 devil-advocate&lt;br/>消费 R1-R5 全部产出&lt;br/>5 点可证伪判断 HR/SS]\n  end\n\n  R1 --> R5\n  R2 --> R5\n  R3 --> R5\n  R4 --> R5\n  R7 --> R5\n  R5 --> R6\n  R6 -.硬否决 critical_overrides.-> D1[D1 预案合成]\n\n  style R6 fill:#fee,stroke:#c33\n  style D1 fill:#eef,stroke:#33c&quot;">graph TB
+  subgraph WIDTH[&quot;宽度扫描 · 全市场&quot;]
+    R1[R1 风格&lt;br/>同花顺 22 风格板块聚类&lt;br/>今日市场性格判定]
+    R2[R2 主线板块&lt;br/>全市场 1-3 主线&lt;br/>每条 3-5 候选龙头]
+    R3[R3 情绪共振&lt;br/>Tushare/XTick 热榜&lt;br/>WeFlow 5-24h 共振]
+    R4[R4 消息催化&lt;br/>公众号 + 财联社 + 东财预告&lt;br/>硬事件清单]
+    R7[R7 资金面&lt;br/>时序资金流 + 跷跷板&lt;br/>游资协同 + 昨日十强追踪]
+  end
+
+  subgraph DEPTH[&quot;深度分析 · 精选个股&quot;]
+    R5[R5 个股画像&lt;br/>R2 候选 6-15 只逐票&lt;br/>≥6 维度 + 思维链]
+    R6[R6 反证 devil-advocate&lt;br/>消费 R1-R5 全部产出&lt;br/>5 点可证伪判断 HR/SS]
+  end
+
+  R1 --> R5
+  R2 --> R5
+  R3 --> R5
+  R4 --> R5
+  R7 --> R5
+  R5 --> R6
+  R6 -.硬否决 critical_overrides.-> D1[D1 预案合成]
+
+  style R6 fill:#fee,stroke:#c33
+  style D1 fill:#eef,stroke:#33c
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>协作契约</strong>:</p>
+<ul>
+<li>R1-R4/R7 <strong>并行</strong> · 各写一份 markdown 到 <code>chzl_kg/投研交易/YYYYMMDD/</code></li>
+<li>R5 <strong>串行消费</strong> R1-R4/R7 输出</li>
+<li>R6 <strong>串行消费</strong> R5 · 输出 <code>HR{n}</code>(硬风险)/<code>SS{n}</code>(软信号)ID</li>
+<li>D1 <strong>串行合成</strong> · R6 的 critical_overrides 有硬否决权</li>
+</ul>
+<h3 id="23-决策分档语义">2.3 决策分档语义<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#23-决策分档语义" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>档位</th><th>语义</th><th>处置</th><th>今日示例 (2026-07-08)</th></tr></thead><tbody><tr><td><strong>A</strong></td><td>高信心 · 主线正相关 · 无反证</td><td>execution_pool 主推</td><td>000938 紫光股份 +6.80%</td></tr><tr><td><strong>A-</strong></td><td>主线相关 · 有小瑕疵</td><td>execution_pool</td><td>000977 浪潮 +10% · 002396 星网 +10%</td></tr><tr><td><strong>B+/B</strong></td><td>边缘主线 · 或 R6 SS 软信号命中</td><td>watchlist_pool</td><td>001339 智微 -4.80%</td></tr><tr><td><strong>C</strong></td><td>逻辑勉强 · 弱信心</td><td>不入池</td><td>300017 网宿 +19.97%(踏空)</td></tr><tr><td><strong>C 否决</strong></td><td>R6 HR 硬否决</td><td>严格排除</td><td>301308 江波龙 -5.60%(HR4 印证)</td></tr></tbody></table></div>
+<hr/>
+<h2 id="3-技术架构层视角">§3 技术架构层视角<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-技术架构层视角" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="31-双平面结构">3.1 双平面结构<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-双平面结构" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  subgraph RUNTIME[\&quot;🟣 运行时平面 · ~/.hermes/\&quot;]\n    direction TB\n    DAEMON[Hermes daemon]\n    CRON[hermes cron 调度器&lt;br/>每 job 独立 session]\n    PROFILES[canghai-* profiles&lt;br/>默认 default profile 承载 orchestrator]\n    DELEG[delegate_task&lt;br/>sub-agent harness]\n    MCPPOOL[MCP 连接池&lt;br/>tushare/xtick/vibe-trading/canghai/chenhailangju]\n    SKILLS_HERMES[~/.hermes/skills/*&lt;br/>trading/analyze_*_v1]\n\n    DAEMON --> CRON\n    CRON --> PROFILES\n    PROFILES --> DELEG\n    DELEG --> MCPPOOL\n    PROFILES -.load.-> SKILLS_HERMES\n  end\n\n  subgraph ASSET[\&quot;🟢 资产平面 · /沧海巨浪\&quot;]\n    direction TB\n    SRC[src/*&lt;br/>Python fallback · 交易执行 · MCP server]\n    SCRIPTS[scripts/*&lt;br/>fetch/pipeline/research shell]\n    SKILLS_CURSOR[.cursor/skills 或 skills/*&lt;br/>skill 副本]\n    DATA[data/*&lt;br/>raw/cache/plans/research/trades/runtime]\n    KG[chzl_kg/*&lt;br/>Obsidian 知识库]\n    DOCS[docs/*&lt;br/>schema · runbook · contract]\n\n    SKILLS_CURSOR &lt;-.双路径同步.-> SKILLS_HERMES\n    SRC --> DATA\n    SCRIPTS --> DATA\n    DATA --> KG\n    DOCS --> DELEG\n  end\n\n  MCPPOOL &lt;-.stdio.-> SRC\n\n  style RUNTIME fill:#f3e5f5\n  style ASSET fill:#e8f5e9&quot;">flowchart TB
+  subgraph RUNTIME[&quot;🟣 运行时平面 · ~/.hermes/&quot;]
+    direction TB
+    DAEMON[Hermes daemon]
+    CRON[hermes cron 调度器&lt;br/>每 job 独立 session]
+    PROFILES[canghai-* profiles&lt;br/>默认 default profile 承载 orchestrator]
+    DELEG[delegate_task&lt;br/>sub-agent harness]
+    MCPPOOL[MCP 连接池&lt;br/>tushare/xtick/vibe-trading/canghai/chenhailangju]
+    SKILLS_HERMES[~/.hermes/skills/*&lt;br/>trading/analyze_*_v1]
+
+    DAEMON --> CRON
+    CRON --> PROFILES
+    PROFILES --> DELEG
+    DELEG --> MCPPOOL
+    PROFILES -.load.-> SKILLS_HERMES
+  end
+
+  subgraph ASSET[&quot;🟢 资产平面 · /沧海巨浪&quot;]
+    direction TB
+    SRC[src/*&lt;br/>Python fallback · 交易执行 · MCP server]
+    SCRIPTS[scripts/*&lt;br/>fetch/pipeline/research shell]
+    SKILLS_CURSOR[.cursor/skills 或 skills/*&lt;br/>skill 副本]
+    DATA[data/*&lt;br/>raw/cache/plans/research/trades/runtime]
+    KG[chzl_kg/*&lt;br/>Obsidian 知识库]
+    DOCS[docs/*&lt;br/>schema · runbook · contract]
+
+    SKILLS_CURSOR &lt;-.双路径同步.-> SKILLS_HERMES
+    SRC --> DATA
+    SCRIPTS --> DATA
+    DATA --> KG
+    DOCS --> DELEG
+  end
+
+  MCPPOOL &lt;-.stdio.-> SRC
+
+  style RUNTIME fill:#f3e5f5
+  style ASSET fill:#e8f5e9
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>关键约束</strong>:</p>
+<ul>
+<li><strong>skill 双路径</strong>:<code>~/.hermes/skills/</code> 是 Hermes 加载源 · <code>~/.cursor/skills/</code> 是编辑源 · 必须同步(patch 后 rsync)</li>
+<li><strong>cron 是无状态触发器</strong>:每次 fire 起一个 fresh Hermes session · 不继承任何上下文 → prompt 必须自包含</li>
+<li><strong>MCP 是数据平面</strong>:所有外部数据通过 MCP tool 调用 · Agent 不直连 API(除非 fallback)</li>
+</ul>
+<h3 id="32-agent-编排模型">3.2 Agent 编排模型<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-agent-编排模型" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;sequenceDiagram\n  participant Cron as Cron 调度器\n  participant Orch as Orchestrator&lt;br/>(Hermes session)\n  participant Deleg as delegate_task\n  participant Sub1 as R1 sub-agent\n  participant Sub2 as R2 sub-agent\n  participant MCP as MCP tools\n  participant KG as chzl_kg/\n\n  Cron->>Orch: 触发 (每日 09:00)\n  Orch->>Orch: 加载 skill + 读昨日 E1 反馈\n  par 并行派发\n    Orch->>Deleg: dispatch R1 (goal + context + skill)\n    Deleg->>Sub1: fresh session\n    Sub1->>MCP: tushare 板块日线\n    MCP-->>Sub1: 数据\n    Sub1->>KG: write R1_style.md\n    Sub1-->>Deleg: summary\n  and\n    Orch->>Deleg: dispatch R2\n    Deleg->>Sub2: fresh session\n    Sub2->>MCP: iwencai + 板块成分\n    Sub2->>KG: write R2_sectors.md\n    Sub2-->>Deleg: summary\n  end\n  Note over Orch: R3/R4/R7 类似,共 5 路并行\n  Deleg-->>Orch: 所有并行结果\n  Orch->>Deleg: dispatch R5(串行 · 依赖 R1-R4/R7)\n  Deleg-->>Orch: R5_stocks.md\n  Orch->>Deleg: dispatch R6(串行 · 依赖 R5)\n  Deleg-->>Orch: R6_devils_advocate.md\n  Orch->>Orch: D1 合成预案\n  Orch->>KG: write D1_plan.md + execution_pool.json&quot;">sequenceDiagram
+  participant Cron as Cron 调度器
+  participant Orch as Orchestrator&lt;br/>(Hermes session)
+  participant Deleg as delegate_task
+  participant Sub1 as R1 sub-agent
+  participant Sub2 as R2 sub-agent
+  participant MCP as MCP tools
+  participant KG as chzl_kg/
+
+  Cron->>Orch: 触发 (每日 09:00)
+  Orch->>Orch: 加载 skill + 读昨日 E1 反馈
+  par 并行派发
+    Orch->>Deleg: dispatch R1 (goal + context + skill)
+    Deleg->>Sub1: fresh session
+    Sub1->>MCP: tushare 板块日线
+    MCP-->>Sub1: 数据
+    Sub1->>KG: write R1_style.md
+    Sub1-->>Deleg: summary
+  and
+    Orch->>Deleg: dispatch R2
+    Deleg->>Sub2: fresh session
+    Sub2->>MCP: iwencai + 板块成分
+    Sub2->>KG: write R2_sectors.md
+    Sub2-->>Deleg: summary
+  end
+  Note over Orch: R3/R4/R7 类似,共 5 路并行
+  Deleg-->>Orch: 所有并行结果
+  Orch->>Deleg: dispatch R5(串行 · 依赖 R1-R4/R7)
+  Deleg-->>Orch: R5_stocks.md
+  Orch->>Deleg: dispatch R6(串行 · 依赖 R5)
+  Deleg-->>Orch: R6_devils_advocate.md
+  Orch->>Orch: D1 合成预案
+  Orch->>KG: write D1_plan.md + execution_pool.json
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>边界规则</strong>:</p>
+<ul>
+<li>sub-agent <strong>不能</strong> 再 delegate(max_spawn_depth=1)</li>
+<li>sub-agent <strong>不能</strong> 用 clarify/memory/send_message(leaf role)</li>
+<li>sub-agent 有独立 terminal session 与 MCP 连接</li>
+<li>只有 summary 回到 orchestrator · 中间 tool 输出不进主上下文(省 token)</li>
+</ul>
+<h3 id="33-五类核心-mcp-服务">3.3 五类核心 MCP 服务<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#33-五类核心-mcp-服务" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph LR\n  Agent[Agent] --> MCP{MCP router}\n  MCP -->|行情/财务| Tushare[tushare&lt;br/>daily/moneyflow/concept]\n  MCP -->|高频/热榜| XTick[xtick&lt;br/>limit_board/hot_bk/emotion]\n  MCP -->|通用金融| Vibe[vibe-trading&lt;br/>market_data/news/iwencai]\n  MCP -->|视觉技术面| Canghai[canghai-charts&lt;br/>chart_vision_analyze]\n  MCP -->|信号系统| Chenhai[chenhailangju&lt;br/>sise 四色四量]\n  MCP -->|下单| QMT[agentqmt_qmt&lt;br/>miniQMT 实盘/模拟]\n\n  style QMT fill:#fee,stroke:#c33&quot;">graph LR
+  Agent[Agent] --> MCP{MCP router}
+  MCP -->|行情/财务| Tushare[tushare&lt;br/>daily/moneyflow/concept]
+  MCP -->|高频/热榜| XTick[xtick&lt;br/>limit_board/hot_bk/emotion]
+  MCP -->|通用金融| Vibe[vibe-trading&lt;br/>market_data/news/iwencai]
+  MCP -->|视觉技术面| Canghai[canghai-charts&lt;br/>chart_vision_analyze]
+  MCP -->|信号系统| Chenhai[chenhailangju&lt;br/>sise 四色四量]
+  MCP -->|下单| QMT[agentqmt_qmt&lt;br/>miniQMT 实盘/模拟]
+
+  style QMT fill:#fee,stroke:#c33
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>新鲜度红线</strong>:</p>
+<ul>
+<li>行情 tick 数据 · <strong>≤ 15 min</strong> = fresh</li>
+<li>chart_vision 视觉分析 · <strong>≤ 4h</strong> = fresh · 4-24h T-1 标注 · >24h stale(cron 07:30/15:30 保鲜)</li>
+<li>WeFlow 情绪快照 · <strong>≤ 4h</strong> = fresh(cron 08/12/20)</li>
+<li>财报数据 · <strong>T-1</strong> 可接受</li>
+</ul>
+<hr/>
+<h2 id="4-数据流层视角">§4 数据流层视角<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-数据流层视角" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="41-全链路数据流">4.1 全链路数据流<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#41-全链路数据流" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  subgraph SRC[\&quot;源 · 外部信息\&quot;]\n    S1[公众号 · 18 号池]\n    S2[WeFlow 200-300 群]\n    S3[Tushare API]\n    S4[XTick API]\n    S5[东财 RPT_PUBLIC_OP]\n    S6[iwencai NLQ]\n    S7[财经新闻 RSS]\n  end\n\n  subgraph RAW[\&quot;data/raw/YYYYMMDD/\&quot;]\n    R1F[weflow_snapshot.json]\n    R2F[chart_vision_snapshot.json]\n    R3F[wechat_mp_digest.json]\n    R4F[eastmoney_earnings.json]\n  end\n\n  subgraph CACHE[\&quot;data/cache/\&quot;]\n    C1[chart_vision_latest.json&lt;br/>→ symlink 到 latest raw]\n    C2[tushare/*.parquet]\n  end\n\n  subgraph RESEARCH[\&quot;data/research/YYYYMMDD/\&quot;]\n    RS[intel_artifact.json&lt;br/>Agent 消费入口]\n  end\n\n  subgraph OUTPUT[\&quot;chzl_kg/投研交易/YYYYMMDD/\&quot;]\n    O1[R1_style.md]\n    O2[R2_sectors.md]\n    O3[R3_sentiment.md]\n    O4[R4_news.md]\n    O5[R5_stocks.md]\n    O6[R6_devils_advocate.md]\n    O7[R7_capital.md]\n    OD[D1_plan.md 或 execution_pool.json]\n  end\n\n  subgraph PLAN[\&quot;data/plans/YYYYMMDD/\&quot;]\n    P1[watchlist_plan.json]\n    P2[execution_pool.json]\n  end\n\n  subgraph TRADE[\&quot;data/trades/\&quot;]\n    T1[fills.jsonl]\n    T2[positions.json]\n  end\n\n  subgraph FEEDBACK[\&quot;data/evolution/\&quot;]\n    F1[observation_tracking.jsonl]\n    F2[E1 T+N 校验]\n  end\n\n  S1 &amp; S2 --> R3F\n  S3 --> C2\n  S4 --> R2F\n  S5 --> R4F\n  S6 --> RS\n  R2F --> C1\n  R1F &amp; R2F &amp; R3F &amp; R4F &amp; C2 --> RS\n  RS --> O1 &amp; O2 &amp; O3 &amp; O4 &amp; O7\n  O1 &amp; O2 &amp; O3 &amp; O4 &amp; O7 --> O5\n  O5 --> O6\n  O6 --> OD\n  OD --> P1 &amp; P2\n  P2 --> T1\n  T1 --> T2\n  T2 --> F1\n  F1 --> F2\n  F2 -.T+3/T+5 校准.-> RS\n\n  style OD fill:#eef\n  style P2 fill:#fee&quot;">flowchart LR
+  subgraph SRC[&quot;源 · 外部信息&quot;]
+    S1[公众号 · 18 号池]
+    S2[WeFlow 200-300 群]
+    S3[Tushare API]
+    S4[XTick API]
+    S5[东财 RPT_PUBLIC_OP]
+    S6[iwencai NLQ]
+    S7[财经新闻 RSS]
+  end
+
+  subgraph RAW[&quot;data/raw/YYYYMMDD/&quot;]
+    R1F[weflow_snapshot.json]
+    R2F[chart_vision_snapshot.json]
+    R3F[wechat_mp_digest.json]
+    R4F[eastmoney_earnings.json]
+  end
+
+  subgraph CACHE[&quot;data/cache/&quot;]
+    C1[chart_vision_latest.json&lt;br/>→ symlink 到 latest raw]
+    C2[tushare/*.parquet]
+  end
+
+  subgraph RESEARCH[&quot;data/research/YYYYMMDD/&quot;]
+    RS[intel_artifact.json&lt;br/>Agent 消费入口]
+  end
+
+  subgraph OUTPUT[&quot;chzl_kg/投研交易/YYYYMMDD/&quot;]
+    O1[R1_style.md]
+    O2[R2_sectors.md]
+    O3[R3_sentiment.md]
+    O4[R4_news.md]
+    O5[R5_stocks.md]
+    O6[R6_devils_advocate.md]
+    O7[R7_capital.md]
+    OD[D1_plan.md 或 execution_pool.json]
+  end
+
+  subgraph PLAN[&quot;data/plans/YYYYMMDD/&quot;]
+    P1[watchlist_plan.json]
+    P2[execution_pool.json]
+  end
+
+  subgraph TRADE[&quot;data/trades/&quot;]
+    T1[fills.jsonl]
+    T2[positions.json]
+  end
+
+  subgraph FEEDBACK[&quot;data/evolution/&quot;]
+    F1[observation_tracking.jsonl]
+    F2[E1 T+N 校验]
+  end
+
+  S1 &amp; S2 --> R3F
+  S3 --> C2
+  S4 --> R2F
+  S5 --> R4F
+  S6 --> RS
+  R2F --> C1
+  R1F &amp; R2F &amp; R3F &amp; R4F &amp; C2 --> RS
+  RS --> O1 &amp; O2 &amp; O3 &amp; O4 &amp; O7
+  O1 &amp; O2 &amp; O3 &amp; O4 &amp; O7 --> O5
+  O5 --> O6
+  O6 --> OD
+  OD --> P1 &amp; P2
+  P2 --> T1
+  T1 --> T2
+  T2 --> F1
+  F1 --> F2
+  F2 -.T+3/T+5 校准.-> RS
+
+  style OD fill:#eef
+  style P2 fill:#fee
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="42-关键-schema-冻结点">4.2 关键 schema 冻结点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#42-关键-schema-冻结点" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Schema</th><th>位置</th><th>消费方</th><th>作用</th></tr></thead><tbody><tr><td><code>watchlist_plan.json</code></td><td><code>docs/watchlist_plan_schema.md</code></td><td>D1 写 · 交易端读</td><td>观察池契约 · block_prefixes 仅约束自动买入</td></tr><tr><td><code>execution_pool</code></td><td>同上</td><td>D1 写 · miniQMT 读</td><td>尾盘调仓入口 · 5-8 只</td></tr><tr><td><code>research_summary</code></td><td><code>docs/research_summary_schema.md</code></td><td>R5/R6 → D1</td><td>六维画像 + 思维链结构</td></tr><tr><td><code>event_amendment</code></td><td><code>docs/amendment_schema.md</code></td><td>E1 → user_preferences</td><td>每周校准包</td></tr><tr><td><code>chart_vision cache</code></td><td>latest.json 硬约定</td><td>R5 读 · cron 写</td><td>bias/confidence/summary/action</td></tr></tbody></table></div>
+<h3 id="43-provenance--新鲜度审计">4.3 provenance / 新鲜度审计<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#43-provenance--新鲜度审计" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>用户核心交付标准</strong> — 每份研究 md 必须包含<strong>数据源审计表</strong>:</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph LR\n  RawFile[data/raw/*.json] -->|读取 mtime| Auditor[数据源审计器]\n  Auditor -->|列表| Table[📋 每个源:&lt;br/>日期 + 状态 emoji&lt;br/>🟢 fresh · 🟡 T-1 · 🔴 stale]\n  Table --> MD[md front matter]\n\n  style Table fill:#eef&quot;">graph LR
+  RawFile[data/raw/*.json] -->|读取 mtime| Auditor[数据源审计器]
+  Auditor -->|列表| Table[📋 每个源:&lt;br/>日期 + 状态 emoji&lt;br/>🟢 fresh · 🟡 T-1 · 🔴 stale]
+  Table --> MD[md front matter]
+
+  style Table fill:#eef
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p>规则:<strong>日期 + 来源 + 状态 emoji · 无时分秒 · 群名匿名化</strong>(行业分析师群/机构群/游资群)。</p>
+<hr/>
+<h2 id="5-每日运行时线">§5 每日运行时线<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-每日运行时线" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="51-一天里系统在跑什么">5.1 一天里系统在跑什么<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#51-一天里系统在跑什么" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;gantt\n  title 沧海巨浪 · 一日运行时线 (T = 交易日)\n  dateFormat HH:mm\n  axisFormat %H:%M\n\n  section 盘前\n  chart_vision cron (07:30)      :done, 07:30, 5m\n  weflow snapshot (08:00)        :done, 08:00, 3m\n  fetch_all_sources              :done, 08:05, 10m\n  R1-R4/R7 并行 (delegate)       :active, 08:30, 30m\n  R5 六维画像                    :09:00, 20m\n  R6 反证                        :09:20, 15m\n  D1 预案合成                    :crit, 09:35, 15m\n  竞价观察                       :09:15, 10m\n\n  section 盘中\n  盘中简报 (11:30-12:00)         :11:30, 30m\n  weflow snapshot (12:00)        :12:00, 3m\n  盘中监控 (event schema)        :09:30, 5h30m\n\n  section 尾盘\n  chart_vision cron (15:30)      :15:30, 5m\n  尾盘调仓窗口                   :crit, 14:30, 30m\n\n  section 盘后\n  E1 T+N 观察回填                :15:30, 30m\n  周度进化 (周五)                 :16:00, 60m\n  weflow snapshot (20:00)        :20:00, 3m&quot;">gantt
+  title 沧海巨浪 · 一日运行时线 (T = 交易日)
+  dateFormat HH:mm
+  axisFormat %H:%M
+
+  section 盘前
+  chart_vision cron (07:30)      :done, 07:30, 5m
+  weflow snapshot (08:00)        :done, 08:00, 3m
+  fetch_all_sources              :done, 08:05, 10m
+  R1-R4/R7 并行 (delegate)       :active, 08:30, 30m
+  R5 六维画像                    :09:00, 20m
+  R6 反证                        :09:20, 15m
+  D1 预案合成                    :crit, 09:35, 15m
+  竞价观察                       :09:15, 10m
+
+  section 盘中
+  盘中简报 (11:30-12:00)         :11:30, 30m
+  weflow snapshot (12:00)        :12:00, 3m
+  盘中监控 (event schema)        :09:30, 5h30m
+
+  section 尾盘
+  chart_vision cron (15:30)      :15:30, 5m
+  尾盘调仓窗口                   :crit, 14:30, 30m
+
+  section 盘后
+  E1 T+N 观察回填                :15:30, 30m
+  周度进化 (周五)                 :16:00, 60m
+  weflow snapshot (20:00)        :20:00, 3m
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="52-关键-cron-契约">5.2 关键 cron 契约<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#52-关键-cron-契约" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>cron job</th><th>时刻</th><th>目的</th><th>沉淀物</th></tr></thead><tbody><tr><td><code>chart_vision_snapshot_2x_daily</code></td><td>07:30 / 15:30</td><td>12 只候选视觉技术面</td><td><code>data/raw/*/chart_vision_snapshot.json</code></td></tr><tr><td><code>weflow_snapshot_3x_daily</code></td><td>08/12/20</td><td>群聊情绪快照</td><td><code>data/raw/*/weflow_snapshot.json</code></td></tr><tr><td><code>canghai_fetch_all_sources</code></td><td>08:00</td><td>全源合并</td><td><code>data/research/*/intel_artifact.json</code></td></tr><tr><td><code>canghai_research_daily</code></td><td>09:00</td><td>研究链主入口</td><td><code>chzl_kg/投研交易/*/R*.md</code></td></tr><tr><td><code>canghai_sise_daily_sync</code></td><td>15:35</td><td>四色四量信号</td><td><code>data/patterns/*</code></td></tr></tbody></table></div>
+<hr/>
+<h2 id="6-已知边界与演进">§6 已知边界与演进<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-已知边界与演进" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="61-当前系统的边界">6.1 当前系统的边界<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#61-当前系统的边界" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong>交易侧还在过渡</strong> — miniQMT 已接线但<strong>尾盘调仓完全人工确认</strong>,规则引擎还未挂到自动执行</li>
+<li><strong>E1 校准闭环未通</strong> — T+N 假设验证 md 已产出,但 <code>user_preferences.yaml</code> 修订建议还是手工审核</li>
+<li><strong>R2 主线粒度粗</strong> — 今日 20260708 复盘暴露:“存储”应拆成”算力/服务器”vs”存储颗粒”两条(待 patch)</li>
+<li><strong>iwencai 补池未并入 R2 常规流程</strong> — 今日证明有效(3/4 兑现) · 待纳入 R2 skill</li>
+<li><strong>skill 双路径同步靠 rsync</strong> — 未来考虑单源</li>
+</ol>
+<h3 id="62-演进优先级">6.2 演进优先级<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#62-演进优先级" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph LR\n  Now[T1 现状] --> P1[P1 R2 主线拆细&lt;br/>iwencai 并入]\n  P1 --> P2[P2 交易执行自动化&lt;br/>规则引擎接 miniQMT]\n  P2 --> P3[P3 E1 校准闭环&lt;br/>周度自动 user_pref 修订]\n  P3 --> P4[P4 fallback Python 化&lt;br/>R1/R2/R5/R7 极简规则版]\n  P4 --> P5[P5 Web 前端可视化&lt;br/>看板级追踪]\n\n  style Now fill:#e8f5e9\n  style P2 fill:#fee&quot;">graph LR
+  Now[T1 现状] --> P1[P1 R2 主线拆细&lt;br/>iwencai 并入]
+  P1 --> P2[P2 交易执行自动化&lt;br/>规则引擎接 miniQMT]
+  P2 --> P3[P3 E1 校准闭环&lt;br/>周度自动 user_pref 修订]
+  P3 --> P4[P4 fallback Python 化&lt;br/>R1/R2/R5/R7 极简规则版]
+  P4 --> P5[P5 Web 前端可视化&lt;br/>看板级追踪]
+
+  style Now fill:#e8f5e9
+  style P2 fill:#fee
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="63-反脆弱设计">6.3 反脆弱设计<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#63-反脆弱设计" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>Agent 侧失败</strong> → 保留 Python fallback(src/research/r*.py 极简版) · degraded=true 标记 · D1 当天不新开仓</li>
+<li><strong>MCP 侧失败</strong> → 多源冗余(tushare/xtick/iwencai/vibe-trading 相互 backup)</li>
+<li><strong>cron 侧失败</strong> → 每 job 独立 session · 单点失败不传染</li>
+<li><strong>skill 侧漂移</strong> → 双路径同步 + git commit 兜底</li>
+</ul>
+<hr/>
+<h2 id="附录--术语速查">附录 · 术语速查<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#附录--术语速查" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>缩写</th><th>全称</th><th>说明</th></tr></thead><tbody><tr><td>R1-R7</td><td>Research Agent 1-7</td><td>研究侧七大 sub-agent</td></tr><tr><td>D1</td><td>Decision 1</td><td>预案合成 agent</td></tr><tr><td>E1</td><td>Evaluation 1</td><td>T+N 回溯校准 agent</td></tr><tr><td>HR{n}</td><td>Hard Risk n</td><td>R6 反证硬风险(有硬否决权)</td></tr><tr><td>SS{n}</td><td>Soft Signal n</td><td>R6 反证软信号(仅降档)</td></tr><tr><td>WeFlow</td><td>200-300 群聊监控</td><td>核心 alpha 源</td></tr><tr><td>miniQMT</td><td>迅投 QMT</td><td>A 股实盘交易客户端</td></tr><tr><td>主线</td><td>今日市场共识板块</td><td>R2 每日 1-3 条</td></tr><tr><td>execution_pool</td><td>执行池</td><td>D1 输出 · 5-8 只</td></tr><tr><td>watchlist_pool</td><td>观察池</td><td>D1 输出 · 15-25 只</td></tr></tbody></table></div>
+<hr/>
+<p><strong>Sign-off</strong>:本文档为<strong>沧海巨浪 T1 阶段架构快照</strong> · 2026-07-08 · 与 <code>00-CANONICAL-ARCHITECTURE-v1.md</code>(宪法)和 <code>09-架构审阅图-T1prime.md</code>(施工审阅)形成三角:<strong>宪法定原则 · 审阅图定纠偏 · 全景图定当前状态</strong>。</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-3" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#沧海巨浪--系统架构全景-v1" data-for="沧海巨浪--系统架构全景-v1">沧海巨浪 · 系统架构全景 v1</a></li><li class="depth-1"><a href="#1-宏观定位" data-for="1-宏观定位">§1 宏观定位</a></li><li class="depth-2"><a href="#11-系统在做什么" data-for="11-系统在做什么">1.1 系统在做什么</a></li><li class="depth-2"><a href="#12-关键设计边界" data-for="12-关键设计边界">1.2 关键设计边界</a></li><li class="depth-1"><a href="#2-功能层视角" data-for="2-功能层视角">§2 功能层视角</a></li><li class="depth-2"><a href="#21-六大功能域" data-for="21-六大功能域">2.1 六大功能域</a></li><li class="depth-2"><a href="#22-研究-r1-r7-分工" data-for="22-研究-r1-r7-分工">2.2 研究 R1-R7 分工</a></li><li class="depth-2"><a href="#23-决策分档语义" data-for="23-决策分档语义">2.3 决策分档语义</a></li><li class="depth-1"><a href="#3-技术架构层视角" data-for="3-技术架构层视角">§3 技术架构层视角</a></li><li class="depth-2"><a href="#31-双平面结构" data-for="31-双平面结构">3.1 双平面结构</a></li><li class="depth-2"><a href="#32-agent-编排模型" data-for="32-agent-编排模型">3.2 Agent 编排模型</a></li><li class="depth-2"><a href="#33-五类核心-mcp-服务" data-for="33-五类核心-mcp-服务">3.3 五类核心 MCP 服务</a></li><li class="depth-1"><a href="#4-数据流层视角" data-for="4-数据流层视角">§4 数据流层视角</a></li><li class="depth-2"><a href="#41-全链路数据流" data-for="41-全链路数据流">4.1 全链路数据流</a></li><li class="depth-2"><a href="#42-关键-schema-冻结点" data-for="42-关键-schema-冻结点">4.2 关键 schema 冻结点</a></li><li class="depth-2"><a href="#43-provenance--新鲜度审计" data-for="43-provenance--新鲜度审计">4.3 provenance / 新鲜度审计</a></li><li class="depth-1"><a href="#5-每日运行时线" data-for="5-每日运行时线">§5 每日运行时线</a></li><li class="depth-2"><a href="#51-一天里系统在跑什么" data-for="51-一天里系统在跑什么">5.1 一天里系统在跑什么</a></li><li class="depth-2"><a href="#52-关键-cron-契约" data-for="52-关键-cron-契约">5.2 关键 cron 契约</a></li><li class="depth-1"><a href="#6-已知边界与演进" data-for="6-已知边界与演进">§6 已知边界与演进</a></li><li class="depth-2"><a href="#61-当前系统的边界" data-for="61-当前系统的边界">6.1 当前系统的边界</a></li><li class="depth-2"><a href="#62-演进优先级" data-for="62-演进优先级">6.2 演进优先级</a></li><li class="depth-2"><a href="#63-反脆弱设计" data-for="63-反脆弱设计">6.3 反脆弱设计</a></li><li class="depth-1"><a href="#附录--术语速查" data-for="附录--术语速查">附录 · 术语速查</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="./未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="./static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="./static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="./static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="./static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript-551b937a.js" type="module" data-persist="true"></script></html>

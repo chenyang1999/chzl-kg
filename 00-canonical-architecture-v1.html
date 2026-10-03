@@ -1,0 +1,2844 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>00-CANONICAL-ARCHITECTURE-v1</title><meta charset="utf-8"/><link rel="preload" href="./index-5a23ce28.css" as="style"/><link rel="preload" href="./prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="00-CANONICAL-ARCHITECTURE-v1"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="00-CANONICAL-ARCHITECTURE-v1"/><meta name="twitter:description" content="沧海巨浪 · 权威架构文档 v1 版本:v1.2(2026-07-04 深夜) 作者:用户 × Hermes 6 小时对话沉淀 状态:骨架 + 正文一体化,首个可施工版本 替代关系:本文档定稿后成为 docs/ 目录的唯一权威架构描述。现有 00-研究端总览.md / 03-核心设计原则.md / 10-研究端Agent骨架-v1.md / refactor_plan.md 等文档降级为参考文献(不删,但不作权威)。 v1.2 相对 v1.1 的宪法级修订: §1.1 原则一改为”Agent 的比较优势是无情绪,不是无客观”(偏见追溯性降为配套机制) §1.4 明确”用户经验是组件不是主体”、..."/><meta property="og:description" content="沧海巨浪 · 权威架构文档 v1 版本:v1.2(2026-07-04 深夜) 作者:用户 × Hermes 6 小时对话沉淀 状态:骨架 + 正文一体化,首个可施工版本 替代关系:本文档定稿后成为 docs/ 目录的唯一权威架构描述。现有 00-研究端总览.md / 03-核心设计原则.md / 10-研究端Agent骨架-v1.md / refactor_plan.md 等文档降级为参考文献(不删,但不作权威)。 v1.2 相对 v1.1 的宪法级修订: §1.1 原则一改为”Agent 的比较优势是无情绪,不是无客观”(偏见追溯性降为配套机制) §1.4 明确”用户经验是组件不是主体”、..."/><meta property="og:image:alt" content="沧海巨浪 · 权威架构文档 v1 版本:v1.2(2026-07-04 深夜) 作者:用户 × Hermes 6 小时对话沉淀 状态:骨架 + 正文一体化,首个可施工版本 替代关系:本文档定稿后成为 docs/ 目录的唯一权威架构描述。现有 00-研究端总览.md / 03-核心设计原则.md / 10-研究端Agent骨架-v1.md / refactor_plan.md 等文档降级为参考文献(不删,但不作权威)。 v1.2 相对 v1.1 的宪法级修订: §1.1 原则一改为”Agent 的比较优势是无情绪,不是无客观”(偏见追溯性降为配套机制) §1.4 明确”用户经验是组件不是主体”、..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/00-canonical-architecture-v1"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/00-canonical-architecture-v1"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="沧海巨浪 · 权威架构文档 v1 版本:v1.2(2026-07-04 深夜) 作者:用户 × Hermes 6 小时对话沉淀 状态:骨架 + 正文一体化,首个可施工版本 替代关系:本文档定稿后成为 docs/ 目录的唯一权威架构描述。现有 00-研究端总览.md / 03-核心设计原则.md / 10-研究端Agent骨架-v1.md / refactor_plan.md 等文档降级为参考文献(不删,但不作权威)。 v1.2 相对 v1.1 的宪法级修订: §1.1 原则一改为”Agent 的比较优势是无情绪,不是无客观”(偏见追溯性降为配套机制) §1.4 明确”用户经验是组件不是主体”、..."/><meta name="generator" content="Quartz"/><link href="./index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="00-canonical-architecture-v1" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-0" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-0" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>00-CANONICAL-ARCHITECTURE-v1</a></div></nav><h1 class="article-title">00-CANONICAL-ARCHITECTURE-v1</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-17T05:00:09.000Z">2026年9月17日</time><span>84分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="沧海巨浪--权威架构文档-v1">沧海巨浪 · 权威架构文档 v1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#沧海巨浪--权威架构文档-v1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>版本</strong>:v1.2(2026-07-04 深夜)<br/>
+<strong>作者</strong>:用户 × Hermes 6 小时对话沉淀<br/>
+<strong>状态</strong>:骨架 + 正文一体化,首个可施工版本<br/>
+<strong>替代关系</strong>:本文档定稿后成为 <code>docs/</code> 目录的<strong>唯一权威</strong>架构描述。现有<br/>
+<code>00-研究端总览.md</code> / <code>03-核心设计原则.md</code> / <code>10-研究端Agent骨架-v1.md</code> /<br/>
+<code>refactor_plan.md</code> 等文档降级为<strong>参考文献</strong>(不删,但不作权威)。</p>
+<p><strong>v1.2 相对 v1.1 的宪法级修订</strong>:</p>
+<ul>
+<li>§1.1 原则一改为”Agent 的比较优势是无情绪,不是无客观”(偏见追溯性降为配套机制)</li>
+<li>§1.4 明确”用户经验是组件不是主体”、“E2 有权对用户经验提修订建议”</li>
+<li>§5.2 验证 4.5 新增:E2 审 user_preferences.yaml,提修订建议,用户 sign-off 生效</li>
+<li>§5.1 判断节点从 4 个写死改为”由 T3 实盘数据决定”</li>
+</ul>
+<p><strong>阅读顺序</strong>:0 诊断 → 1 宪法 → 2 骨架 → 3 数据流 → 4 skill → 5 机制 → 6 交互 → 7 路线 → 附录</p>
+
+<hr/>
+<h2 id="第-0-章--为什么有这份文档">第 0 章 · 为什么有这份文档<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第-0-章--为什么有这份文档" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="01-当前问题的诊断">§0.1 当前问题的诊断<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#01-当前问题的诊断" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>到 2026-07-04 为止,沧海巨浪系统有以下<strong>症状</strong>:</p>
+<ol>
+<li><strong>持仓实盘代价已经出现</strong>:600522 -14.29% / 603019 -13.79% / 000063 大浮亏,裸奔至 07-06 周一开盘。这不是坏运气,是<strong>契约模糊</strong>的结果 —— cursor 与 Hermes 并行改同一份 <code>watchlist_plan.json</code> 导致 exit_rules 覆盖冲突,浮亏票没有及时执行 stop_loss。</li>
+<li><strong>技术栈臃肿</strong>:项目内 <code>skills/</code> 目录 16 个 skill,<code>~/.hermes/skills/</code> 领域 skill 数十个,多套 profile(canghai-research / trading / intel / risk / orchestrator)并行,cron 拓扑重复(daily-spine 与 daily-sync 同时 19:35 跑),多套 <code>data/</code> 路径(runtime / research / plans / reports / cache 各自演化)。</li>
+<li><strong>agent 边界模糊</strong>:R1-R7 的分工在 <code>docs/10-研究端Agent骨架-v1.md</code> 里写了 3 个版本,每次讨论都在漂移;funds_validator 和 R2 有重叠,event_analyzer 和 R4 有重叠,pattern_recognizer 和 R1 有重叠。</li>
+<li><strong>盘中 cron 全崩</strong>:07-03 起 <code>trading_jobs.sh intraday-once</code> 全部失败,原因初步定位为 event schema 版本漂移(v3 迁 v4 未完成),但根因未找到,cron 现处<strong>暂停</strong>状态。</li>
+<li><strong>Hermes cron 也有历史脏数据</strong>:job <code>11cee3888842</code> 暂停,macOS crontab 12 行,多个 job 引用的 skill 已被改名或删除。</li>
+</ol>
+<p><strong>诊断结论</strong>:<strong>架构层面契约不明,是所有症状的共同根因</strong>。修 event schema、修 cron、加 exit_rule 都是<strong>症状级动作</strong>,不解决根因。<strong>根因是</strong>:</p>
+<ul>
+<li>没有唯一的 plan writer(cursor 和 Hermes 都在写)</li>
+<li>没有唯一的架构文档(3 个版本的 agent 骨架都在流通)</li>
+<li>没有 profile 之间的物理隔离(data 目录混用)</li>
+<li>没有 skill 归属表(改一个 skill 不知道谁在依赖它)</li>
+</ul>
+<h3 id="02-上一版重构的失败教训">§0.2 上一版重构的失败教训<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#02-上一版重构的失败教训" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>2026-07-03 的 9-Agent 重构半途而废</strong>。经过:</p>
+<ul>
+<li>早上定 9-Agent 骨架(R1-R7 + D1 + E1),文档 <code>10-研究端Agent骨架-v1.md</code> 落盘</li>
+<li>中午开始建 skill 骨架(<code>analyze_style_v1</code> / <code>analyze_sentiment_resonance_v1</code> / <code>analyze_devil_advocate_v1</code> / <code>hotlist_rank_signal_v1</code> / <code>observation_tracking_v1</code> / <code>fetch_all_sources_v1</code>)</li>
+<li>下午发现 event schema v3→v4 迁移未完成 → 盘中 cron 全崩</li>
+<li>傍晚放弃 9-Agent 施工,回退到修 cron</li>
+<li>晚上到现在:cron 未修,9-Agent 停滞</li>
+</ul>
+<p><strong>失败原因</strong>:<strong>没有先立宪法就开始改代码</strong>。9-Agent 骨架写了,但<strong>没有写清楚</strong>:</p>
+<ul>
+<li>为什么是 9 不是 8</li>
+<li>Agent 之间怎么协作(delegation 还是独立 profile)</li>
+<li>data 目录归属</li>
+<li>与现有 skill 的兼容策略</li>
+<li>换基座怎么办</li>
+</ul>
+<p><strong>结果</strong>:施工时每一步都要临场决定,决定错了就回滚,一天下来只完成 skill 骨架,核心逻辑没落地。</p>
+<p><strong>本次重构的第一原则</strong>:<strong>先立宪法,再动代码</strong>。本文档就是宪法。<strong>只有本文档定稿,施工才开始</strong>。</p>
+<h3 id="03-本次重构的边界">§0.3 本次重构的边界<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#03-本次重构的边界" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>不推翻</strong>:</p>
+<ul>
+<li>现存 16 个 canghai skill 的核心分析逻辑(它们里面的 tushare/xtick 调用、评分权重、六维画像等是资产)</li>
+<li>MCP 接入(tushare / xtick / datapro / weflow / wechat-cli / QMT / hithink 等)</li>
+<li>Obsidian <code>chzl_kg/</code> 知识库目录结构</li>
+<li>watchlist_plan.json 主 schema(schema 是可演化的资产)</li>
+</ul>
+<p><strong>推翻</strong>:</p>
+<ul>
+<li>Profile 编排(旧 canghai-intel / canghai-risk / canghai-orchestrator 删除,新建 canghai-fetch / canghai-plan)</li>
+<li>Cron 拓扑(旧 crontab 保留过渡期,新 cron 独立时段并行验证)</li>
+<li><code>data/</code> 目录组织(重建 6 大子目录,每个 profile 只写自己那份)</li>
+<li>Agent 分工(R1-R7 + D1 + P1 + P2 + E1 + E2 共 12 个执行单元,归 5 个 profile)</li>
+<li>老 canghai_* 系列 sub-agent 的调度模型(canghai_main_agent_v2 作为唯一 orchestrator 的模型作废)</li>
+</ul>
+<h3 id="04-本文档的地位">§0.4 本文档的地位<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#04-本文档的地位" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>本文档是<strong>施工前</strong>的宪法。<strong>施工完成后</strong>,根据实盘运行结果,本文档需要修订 → v2。</li>
+<li>本文档中每一个”必须”/“禁止”都是<strong>硬约束</strong>。想违反 → 修文档,再改代码;不能反向。</li>
+<li>本文档与其他 docs 冲突时,<strong>以本文档为准</strong>,其他文档标注 “已被 v1 覆盖”。</li>
+<li>本文档由用户 sign-off 生效。E2 自进化机制<strong>可以对本文档提修订建议</strong>,但<strong>不能自动改本文档</strong>。</li>
+</ul>
+
+<hr/>
+<h2 id="第-1-章--宪法3-条硬原则--用户三重角色">第 1 章 · 宪法(3 条硬原则 + 用户三重角色)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第-1-章--宪法3-条硬原则--用户三重角色" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>本章 4 条内容是 2026-07-04 凌晨用户自己挖出来的判断,不是 Hermes 推销的观点。凡与之冲突的架构决策,冲突方让位。</strong></p>
+<h3 id="11-原则一agent-的比较优势是无情绪不是无客观">§1.1 原则一:Agent 的比较优势是无情绪,不是无客观<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-原则一agent-的比较优势是无情绪不是无客观" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>核心断言</strong>:<strong>“客观 agent”是伪目标。Agent 相对人的核心优势是</strong>没有情绪干扰**,不是<strong>更客观</strong>。架构的所有设计以放大无情绪优势为准,承认偏见永远存在。**</p>
+<p><strong>为什么”客观”是伪目标</strong>:</p>
+<ul>
+<li>系统里流通的每一份 artifact 都携带偏见来源:数据源采样偏见(20 个公众号是”中文财经短线圈”的采样)、意识形态偏见(WeFlow 群体本身参与协调游戏)、时代偏见(训练数据凝固在某个时点的因果框架)、规则偏见(用户”单票 ≤15%“是极强的仓位偏好)。</li>
+<li><strong>“无偏见的 agent 无法做决策”</strong>:A 股是叙事驱动市场,不是有效市场,要在其中赚钱必须<strong>站在某个叙事上押注</strong>;绝对客观的 agent 只会等权分散 → 市场平均收益(甚至更差)。</li>
+</ul>
+<p><strong>Agent 相对人的真正优势(无情绪)</strong>:</p>
+<ul>
+<li><strong>不套牢</strong>:亏损票不会因为”套住了”而拒绝换仓</li>
+<li><strong>不贪心</strong>:盈利票不会因为”还想涨”而拒绝止盈</li>
+<li><strong>不硬撑</strong>:市场结构不好不会因为”手痒”而硬开仓</li>
+<li><strong>不迟疑</strong>:signal 到了就执行,不因心情推迟</li>
+</ul>
+<p><strong>这四条是</strong>用户 2026-07-04 深夜原话**,写进宪法**:</p>
+<blockquote>
+<p>“Agent 相对来说比较理性,没有很多情绪上的干扰。这恰恰是它比较大的优势:它不会因为一个票亏了很多钱就有一种’套牢’的感觉,或者因为一个票赚了很多钱就一直在那贪心,也不会在市场大盘表现不好时还要硬着头皮去做,没有太多非理性的判断。”</p>
+</blockquote>
+<p><strong>架构对”无情绪优势”的放大</strong>:</p>
+<ul>
+<li><strong>execute 层全 Python + 硬风控</strong>:确保执行不受任何情绪影响(见 §5.1 L1)</li>
+<li><strong>review 层 fresh context 强制</strong>:E1/E2 每次开新 context,不携带昨天的 confidence bias(见 §5.1 L2/L3)</li>
+<li><strong>判断节点严格边界</strong>:即使有 LLM 参与 execute 层(判断节点),也<strong>只输出枚举结果</strong>、超时保守默认(见 §5.1 层 3)</li>
+</ul>
+<p><strong>偏见追溯性(配套机制)</strong>:</p>
+<ul>
+<li>因为偏见永远存在,系统必须<strong>能追溯每份 artifact 的偏见来源</strong>、可审计、可撤销</li>
+<li>具体机制:5 层偏见承载位置(§1.4)+ 5 层对抗性验证(§5.2)</li>
+<li><strong>但偏见追溯性不是主目标,是保证”无情绪优势不被偏见污染”的辅助机制</strong></li>
+</ul>
+<h3 id="12-原则二llm-时间衰减必须由架构对冲">§1.2 原则二:LLM 时间衰减必须由架构对冲<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12-原则二llm-时间衰减必须由架构对冲" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>核心断言</strong>:<strong>LLM 的因果框架会随时间滞后,不是数据补齐能解决的;架构必须允许基座换代(3-6 个月一次),同时资产完全保留</strong>。</p>
+<p><strong>衰减的 3 层机制</strong>:</p>
+<p><strong>层 1 · 事实缺失(表面层)</strong>:</p>
+<ul>
+<li>LLM 不知道训练截止之后的事件</li>
+<li>通过 fetch 塞给它原始数据 → 能读、能引用、能分析</li>
+<li><strong>这层最好补</strong></li>
+</ul>
+<p><strong>层 2 · 因果关系失效(中间层)</strong>:</p>
+<ul>
+<li>市场里”因果关系”随时代变化(2020-2021 “美联储降息→A 股涨” 有效,2023 起失效)</li>
+<li>LLM 脑子里”因果模型”是训练时凝固的</li>
+<li>看到新数据会<strong>用旧因果框架解释</strong>,得出<strong>看起来合理但实际错的结论</strong></li>
+<li><strong>这层难补</strong> —— 就算 fetch 给最新数据,LLM 也在用滞后的框架</li>
+</ul>
+<p><strong>层 3 · 分布外泛化崩溃(深层)</strong>:</p>
+<ul>
+<li>训练时没见过的市场状态,LLM 会 <strong>confidently 输出错误分析</strong></li>
+<li>不会说”我不知道”,而是<strong>生成看似自洽但实际是训练时不相关知识拼凑的伪分析</strong></li>
+<li><strong>这层无法通过喂数据解决</strong>,必须模型本身更新</li>
+</ul>
+<p><strong>对冲的 3 条路径</strong>:</p>
+<p><strong>路径 A · 定期换基座</strong>:</p>
+<ul>
+<li>每 3-6 个月切换到最新基座(ark → Claude 5 → GPT-5.5 → 未来模型)</li>
+<li>架构不能绑定任何单一 provider</li>
+<li><strong>Hermes 天然支持 provider 切换</strong>,施工时 profile 层不 hardcode 模型名</li>
+</ul>
+<p><strong>路径 B · human_thesis 显式化因果框架</strong>:</p>
+<ul>
+<li>用户通过 <code>data/human_thesis/</code> 提交 top-down 判断(如”科技化债”)</li>
+<li>这些 thesis 等于<strong>在替代 LLM 脑子里滞后的因果框架</strong></li>
+<li>Thesis 有生命周期(有效期 + 破位信号)</li>
+<li>E2 每周评估 thesis 解释力(见 §5.2 验证 4)</li>
+</ul>
+<p><strong>路径 C · Python 收口交易端</strong>:</p>
+<ul>
+<li>Execute 层用 Python 规则引擎,不受 LLM 时间衰减影响</li>
+<li>LLM 判断节点严格受限(3 秒响应 / 枚举输出 / 超时保守 fallback)</li>
+<li>即使 LLM 完全失灵,execute 也能靠 Python 规则维持运行</li>
+</ul>
+<p><strong>基座换代频率现实校准</strong>:</p>
+<ul>
+<li>2026-07 现状:GPT-5.5 / Claude 5 已在市场,ark-code-latest 明显滞后</li>
+<li>意味着基座实际更新速率是 <strong>3-4 个月一次</strong>,不是原估的 6-12 个月</li>
+<li><strong>架构必须承受</strong>”一年内换 2 次基座”,harness 可迁移性是<strong>生存能力</strong>,不是锦上添花</li>
+</ul>
+<h3 id="13-原则三harness-是资产基座是商品">§1.3 原则三:Harness 是资产,基座是商品<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#13-原则三harness-是资产基座是商品" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>核心断言</strong>:<strong>基座 LLM 是可替换商品,skills / profile SOUL / human_thesis / user_preferences / schema / rules / 历史数据是不可替换资产;架构的所有取舍以”最大化资产保留、最小化基座绑定”为准</strong>。</p>
+<p><strong>资产 vs 商品对照表</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">组件</th><th style="text-align:left;">性质</th><th style="text-align:left;">换基座后是否保留</th></tr></thead><tbody><tr><td style="text-align:left;">基座 LLM(ark / Claude 5 / GPT-5.5)</td><td style="text-align:left;">商品</td><td style="text-align:left;">换掉</td></tr><tr><td style="text-align:left;">所有 skills</td><td style="text-align:left;"><strong>资产</strong></td><td style="text-align:left;">保留(prompt 层可能需微调)</td></tr><tr><td style="text-align:left;">Profile SOUL.md</td><td style="text-align:left;"><strong>资产</strong></td><td style="text-align:left;">保留</td></tr><tr><td style="text-align:left;">human_thesis/*.md</td><td style="text-align:left;"><strong>资产</strong></td><td style="text-align:left;">保留</td></tr><tr><td style="text-align:left;">user_preferences.yaml</td><td style="text-align:left;"><strong>资产</strong></td><td style="text-align:left;">保留</td></tr><tr><td style="text-align:left;">watchlist_plan schema</td><td style="text-align:left;"><strong>资产</strong></td><td style="text-align:left;">保留</td></tr><tr><td style="text-align:left;">observation_tracking 历史</td><td style="text-align:left;"><strong>资产</strong></td><td style="text-align:left;">保留</td></tr><tr><td style="text-align:left;">错题本 corrections/</td><td style="text-align:left;"><strong>资产</strong></td><td style="text-align:left;">保留</td></tr><tr><td style="text-align:left;">E2 skill 修改建议历史</td><td style="text-align:left;"><strong>资产</strong></td><td style="text-align:left;">保留</td></tr></tbody></table></div>
+<p><strong>Skill 双层结构</strong>(保证跨基座迁移):</p>
+<ul>
+<li><strong>skill_logic.md</strong>:模型无关的逻辑描述(输入 / 输出 / 约束 / 数据源)</li>
+<li><strong>skill_prompt_<model>.md</model></strong>:针对当前基座的 prompt 实现</li>
+<li>换基座只重写 prompt,logic 不动</li>
+</ul>
+<p><strong>Schema-first, prompt-second 原则</strong>:</p>
+<ul>
+<li>所有 skill 输出<strong>先定 pydantic schema</strong>,再写 prompt</li>
+<li>Schema 是模型无关的契约</li>
+<li>Prompt 只负责”引导 LLM 填这个 schema”</li>
+<li>换基座只影响引导方式,不影响契约</li>
+</ul>
+<p><strong>跨基座测试标注</strong>:</p>
+<ul>
+<li>每个 skill 头部 YAML frontmatter 加 <code>tested_with:</code> 字段</li>
+<li>记录该 skill 在哪些基座上测过、吻合度如何、最后调优日期</li>
+<li>换基座前批量 review 该字段,决定哪些 skill 需要 retest</li>
+</ul>
+<p><strong>多基座策略</strong>(施工到 T4 后可实施):</p>
+<ul>
+<li><strong>canghai-plan (D1 / P1 / P2)</strong>:配 Claude 5 或最新最强模型(需推理深度)</li>
+<li><strong>canghai-review (E1 / E2)</strong>:配 Claude 5(需诚实复盘 + 打破 confidence bias)</li>
+<li><strong>canghai-research (R1-R7)</strong>:可配便宜快模型(广域信息处理)</li>
+<li><strong>canghai-execute 判断节点</strong>:配最便宜快模型(3 秒响应硬要求)</li>
+<li><strong>canghai-fetch</strong>:几乎无 LLM,可配最便宜</li>
+</ul>
+<p><strong>跨市场可迁移性(意外收益)</strong>:</p>
+<ul>
+<li>Skills / thesis / rules / observation_tracking 长期看<strong>可跨市场复用</strong></li>
+<li>换到港股:核心 skill 保留,数据源改(WeFlow → 港股社群)</li>
+<li>换到 crypto:核心 skill 保留,数据源改(Tushare → CoinGecko)</li>
+<li><strong>用户当前不做跨市场,但架构不排除未来可能</strong></li>
+</ul>
+<h3 id="14-用户在系统里的三重角色宪法级">§1.4 用户在系统里的三重角色(宪法级)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#14-用户在系统里的三重角色宪法级" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>核心断言</strong>:<strong>用户的输入是</strong>组件**,不是<strong>决策主体</strong>。用户的经验通过 3 条通道贡献,不进入 R1-R7/D1/execute 的判断逻辑;E2 自进化机制有权对用户经验提修订建议**。</p>
+<p><strong>用户的三重角色</strong>:</p>
+<p><strong>角色 1 · 基础设施提供者</strong>:</p>
+<ul>
+<li>加数据源、加 MCP、造更好的 fetch skill</li>
+<li>修 profile 配置、修 cron、修 schema</li>
+<li><strong>这是用户的核心贡献</strong>,不可替代</li>
+</ul>
+<p><strong>角色 2 · 视野守门员</strong>:</p>
+<ul>
+<li>通过扩展数据源清单减少系统采样偏见</li>
+<li>维护 source_diversity_matrix(数据源多样性矩阵)</li>
+<li>每加一个数据源必须回答”在方法论 / 意识形态 / 时间尺度 / 地域 4 维中,和现有源不同的是哪一维”</li>
+</ul>
+<p><strong>角色 3 · 进化审阅员</strong>:</p>
+<ul>
+<li>Review E2 skill 修改建议,sign-off 或拒绝</li>
+<li>Review E2 preferences 修订建议,sign-off 或拒绝</li>
+<li>Review E2 thesis 撤销建议,sign-off 或拒绝</li>
+<li><strong>用户是唯一 skill/preferences/thesis 变更触发者</strong></li>
+</ul>
+<p><strong>两条可选补充通道</strong>(用户经验的承载位置):</p>
+<p><strong>通道 α · user_preferences.yaml</strong>(永久硬先验):</p>
+<ul>
+<li>用户在 <code>data/user_preferences.yaml</code> 声明永久偏好</li>
+<li>举例:“龙头优先”、“单票 ≤15%”、“板块 ≤40%”、“prefer_pullback_over_breakout”</li>
+<li><strong>永久生效</strong>,无破位条件,但 E2 可以提修订建议</li>
+</ul>
+<p><strong>通道 β · human_thesis/</strong>(临时视角):</p>
+<ul>
+<li>用户在 <code>data/human_thesis/*.md</code> 提交 top-down 判断</li>
+<li>举例:“科技化债 = 政策工具 → 板块选择”</li>
+<li><strong>临时视角</strong>,有效期 + 破位信号 + 影响范围,可撤销即删</li>
+<li><strong>不进 skill,零永久污染</strong></li>
+</ul>
+<p><strong>用户经验</strong>不进入<strong>的地方</strong>:</p>
+<ul>
+<li>不进 R1-R7 判断规则的具体代码</li>
+<li>不进 D1 最终 plan 的直接决定(只能通过 preferences/thesis 间接影响)</li>
+<li>不进 execute 硬风控(除通过 preferences 的 position_hard_rules 间接影响)</li>
+</ul>
+<p><strong>“用户不是首席策略师”</strong>:</p>
+<ul>
+<li>用户的经验是<strong>输入组件</strong>,不是<strong>最终判断者</strong></li>
+<li>系统的最终判断由 R1-R7 + D1 + E2 迭代产生</li>
+<li>用户的特权是<strong>被承载</strong>(preferences + thesis)、<strong>被审阅</strong>(E2 建议提给用户 sign-off),<strong>不是被服从</strong></li>
+</ul>
+<p><strong>E2 对用户经验的修订权</strong>:</p>
+<ul>
+<li><strong>E2 有权对 preferences 提修订建议</strong>(阈值调整、加规则、删规则)</li>
+<li><strong>E2 有权对 thesis 提撤销/修订建议</strong>(基于兑现率数据)</li>
+<li><strong>E2 不能自动改</strong>,必须用户 sign-off</li>
+<li><strong>这一条是</strong>用户 2026-07-04 深夜原话**,写进宪法**:</li>
+</ul>
+<blockquote>
+<p>“人的经验可以作为一部分的输入或者组件注入到整个系统中,但是自进化的机制仍然会去对其进行修订、更改和反思。“</p>
+</blockquote>
+<hr/>
+<h2 id="第-2-章--系统骨架5-profile--12-执行单元">第 2 章 · 系统骨架(5 profile + 12 执行单元)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第-2-章--系统骨架5-profile--12-执行单元" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="21-5-profile-中性命名">§2.1 5 profile 中性命名<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-5-profile-中性命名" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Profile</th><th style="text-align:left;">类脑对应(仅记忆)</th><th style="text-align:left;">职责</th><th style="text-align:left;">载体</th><th style="text-align:left;">LLM 会话数/日</th></tr></thead><tbody><tr><td style="text-align:left;"><code>canghai-fetch</code></td><td style="text-align:left;">丘脑</td><td style="text-align:left;">数据抓取 + MCP 健康检查 + 竞价快照 + 午盘快照 + market_scanner</td><td style="text-align:left;">Python 为主 + 少量 LLM 调用</td><td style="text-align:left;">0-1</td></tr><tr><td style="text-align:left;"><code>canghai-research</code></td><td style="text-align:left;">皮层</td><td style="text-align:left;">R1-R7 分析,主控 + 7 sub-agent(delegation)</td><td style="text-align:left;">主控 LLM + delegation</td><td style="text-align:left;">1 主控 + 7 delegation</td></tr><tr><td style="text-align:left;"><code>canghai-plan</code></td><td style="text-align:left;">前额叶</td><td style="text-align:left;">D1 主决策 + P1 竞价校准 + P2 午盘修订</td><td style="text-align:left;">LLM,每次 fresh context</td><td style="text-align:left;">3</td></tr><tr><td style="text-align:left;"><code>canghai-execute</code></td><td style="text-align:left;">纹状体+杏仁核+小脑</td><td style="text-align:left;">有状态市场感知服务:秒级 tick + 分钟级全市场 + 硬风控 + T 管理 + 判断节点</td><td style="text-align:left;">Python 主导 + 受控 LLM 判断节点</td><td style="text-align:left;">视触发次数</td></tr><tr><td style="text-align:left;"><code>canghai-review</code></td><td style="text-align:left;">海马</td><td style="text-align:left;">E1 日复盘 + E2 周进化</td><td style="text-align:left;">LLM,fresh context</td><td style="text-align:left;">1-2</td></tr></tbody></table></div>
+<p><strong>共 5 profile,分别对应 5 种能力</strong>:</p>
+<ul>
+<li>fetch = <strong>感知</strong>(数据流入 + 健康)</li>
+<li>research = <strong>分析</strong>(信息 → 结论)</li>
+<li>plan = <strong>取舍</strong>(结论 → 决策)</li>
+<li>execute = <strong>执行 + 反应</strong>(决策 → 下单 + 盘中判断)</li>
+<li>review = <strong>反思</strong>(结果 → 修订)</li>
+</ul>
+<h3 id="22-每个-profile-的消灭测试">§2.2 每个 profile 的”消灭测试”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22-每个-profile-的消灭测试" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>“如果消灭这个 profile 会怎样”</strong> —— 这是我们判断 profile 是否<strong>必要</strong>的方法。</p>
+<p><strong>消灭 canghai-fetch</strong>:</p>
+<ul>
+<li>数据抓取分散到每个 agent → 每个 agent 都要处理 MCP 健康检查、fallback、限流、缓存</li>
+<li>数据版本漂移:R1 拉的和 R2 拉的可能不是同一时刻的快照</li>
+<li>降级逻辑散落:20 号公众号挂了 R4 走 fallback,但 R7 不知道数据源已降级</li>
+<li><strong>结论:必须独立</strong></li>
+</ul>
+<p><strong>消灭 canghai-research(把 R1-R7 拆成 7 个 profile)</strong>:</p>
+<ul>
+<li>7 倍配置成本(每个 profile 的 SOUL.md / cron / 环境变量)</li>
+<li>7 倍冷启动时间(每个 profile 的 hermes 初始化)</li>
+<li>跨 profile artifact 读取(R6 反证要读 R1-R5+R7 全部产出,7 profile 之间同步靠磁盘)</li>
+<li>但<strong>如果不拆</strong>:一个 LLM 会话内做完 7 次分析,注意力被稀释</li>
+<li><strong>结论:合并为 1 profile + delegation</strong>。delegation 隔离 sub-agent context,主控只看每个 sub-agent 的最终输出,不受中间 tool call 污染</li>
+<li>每天 7 次 delegation call ≈ 7 个独立 LLM 会话,但共享 1 份 profile 配置</li>
+</ul>
+<p><strong>消灭 canghai-plan(把 D1 塞回 canghai-research)</strong>:</p>
+<ul>
+<li>D1 在同一 context 里跟做 R1-R7 的主控 → 做完 7 次分析后 confidence 已经很高</li>
+<li><strong>接着做取舍时会试图</strong>”平衡所有 warning” → 持仓 >5、单票 &lt;10%、板块过散</li>
+<li><strong>07-03 -14% / -13% 的直接机制就是这个</strong>:D1 在 research context 内被 R2/R5 的多个 “opportunity” 感染 → 分散持仓 → 分散风控失效</li>
+<li><strong>结论:D1 必须 fresh context</strong>,只看 R1-R7 的最终 artifact,不看中间推理过程</li>
+</ul>
+<p><strong>消灭 canghai-execute(交易也用 LLM)</strong>:</p>
+<ul>
+<li>LLM 处理”时间敏感+高频重复+确定性要求高”的任务不适合:
+<ul>
+<li><strong>成本</strong>:秒级 tick 一天 4 万次调用,LLM 成本失控</li>
+<li><strong>确定性</strong>:同样输入 LLM 可能输出略微不同,交易系统不能容忍</li>
+<li><strong>延迟</strong>:秒级 tick 要求 100ms 级响应,LLM 200-2000ms</li>
+<li><strong>Instruction-following 反噬</strong>:LLM 在长 context 下会”发挥”,不按 rule 执行</li>
+</ul>
+</li>
+<li><strong>但完全无 LLM 也不对</strong>:某些判断节点(如”板块效应是否成立”)用 LLM 比硬编码好</li>
+<li><strong>结论:Python 主导 + LLM 判断节点(受控,3 秒内,枚举输出,超时保守 fallback)</strong></li>
+</ul>
+<p><strong>消灭 canghai-review(复盘塞回 canghai-plan)</strong>:</p>
+<ul>
+<li>LLM 在同一 context 里<strong>不会背叛自己刚才的判断</strong></li>
+<li>让 D1 复盘自己昨晚的 plan → confidence bias / sunk cost → 无诚实复盘</li>
+<li><strong>结论:review 必须 fresh context</strong>,重新读 artifact,像第三方分析师那样评估</li>
+</ul>
+<h3 id="23-sub-agent-通过-delegation-实现不通过-profile-拆分">§2.3 sub-agent 通过 delegation 实现,不通过 profile 拆分<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#23-sub-agent-通过-delegation-实现不通过-profile-拆分" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><code>canghai-research</code> 内 1 个主控 + 7 sub-agent(R1/R2/R3/R4/R5/R6/R7)</li>
+<li>通过 <code>delegate_task(goal, context, toolsets)</code> API 委派</li>
+<li>中间 tool call 不进主控 context,只回传最终 artifact 路径</li>
+<li>主控串起时序:R1/R3/R4/R7 并行 → R2/R5 串行 → R6 消费所有 → 主控收集全部 artifact 路径 → 输出 research_summary.json</li>
+</ul>
+<p><strong>Sub-agent 的 tool harness</strong> 通过 <code>toolsets</code> 参数落地:</p>
+<ul>
+<li>R1 风格:<code>[file, tushare, xtick]</code></li>
+<li>R2 主线板块:<code>[file, tushare, datapro, hithink]</code></li>
+<li>R3 情绪:<code>[file, weflow, hotlist]</code></li>
+<li>R4 消息面:<code>[file, wechat, tushare]</code></li>
+<li>R5 个股画像:<code>[file, tushare, serenity-alpha, valuation]</code></li>
+<li>R6 反证:<code>[file]</code> <strong>禁 MCP</strong>(反证必须从已有 artifact 找漏洞,不能自己去找新证据)</li>
+<li>R7 资金面:<code>[file, tushare, xtick, datapro]</code></li>
+</ul>
+<p><strong>这样即使 R7 想用 iwencai,不允许</strong>(不在 toolsets 白名单内),SOUL.md 拦截。</p>
+<p><strong>5 profile ≠ 5 hermes 会话</strong>:sub-agent 是同一 profile 内 delegation,不是独立 profile。</p>
+<h3 id="24-12-执行单元的具体分工">§2.4 12 执行单元的具体分工<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#24-12-执行单元的具体分工" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">单元</th><th style="text-align:left;">归属 profile</th><th style="text-align:left;">时点</th><th style="text-align:left;">唯一职责</th><th style="text-align:left;">详细 spec</th></tr></thead><tbody><tr><td style="text-align:left;"><strong>R1 风格</strong></td><td style="text-align:left;">research</td><td style="text-align:left;">07:30</td><td style="text-align:left;">5 种市场模式识别 + 情绪浓度 + 仓位上限建议</td><td style="text-align:left;"><code>docs/agents/R1-风格Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>R2 主线板块</strong></td><td style="text-align:left;">research</td><td style="text-align:left;">07:45</td><td style="text-align:left;">1-3 条主线 + 每条 3-5 只<strong>龙头</strong>(遵守 preferences)</td><td style="text-align:left;"><code>docs/agents/R2-主线板块Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>R3 情绪与热度</strong></td><td style="text-align:left;">research</td><td style="text-align:left;">07:30</td><td style="text-align:left;">三源共振主题(WeFlow + KOL + 热榜)</td><td style="text-align:left;"><code>docs/agents/R3-情绪与热度Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>R4 消息面</strong></td><td style="text-align:left;">research</td><td style="text-align:left;">07:30</td><td style="text-align:left;">事件抽取 + 板块/个股映射</td><td style="text-align:left;"><code>docs/agents/R4-消息面Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>R5 情报深挖</strong></td><td style="text-align:left;">research</td><td style="text-align:left;">07:45</td><td style="text-align:left;">R2 龙头逐票<strong>六维画像 + serenity 基本面链</strong></td><td style="text-align:left;"><code>docs/agents/R5-情报深挖Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>R6 反证</strong></td><td style="text-align:left;">research</td><td style="text-align:left;">07:55</td><td style="text-align:left;">消费 R1-R5+R7,找漏洞,硬否决权</td><td style="text-align:left;"><code>docs/agents/R6-反证Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>R7 资金面</strong></td><td style="text-align:left;">research</td><td style="text-align:left;">07:30 + 11:35 增量</td><td style="text-align:left;">时序资金流 + 跷跷板配对 + 游资协同</td><td style="text-align:left;">待写 <code>docs/agents/R7-资金面Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>D1 主决策</strong></td><td style="text-align:left;">plan</td><td style="text-align:left;">08:00</td><td style="text-align:left;">出 watchlist_plan.json + 盘前预案 md</td><td style="text-align:left;"><code>docs/agents/D1-主决策Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>P1 竞价校准</strong></td><td style="text-align:left;">plan</td><td style="text-align:left;">09:25-09:29</td><td style="text-align:left;">竞价异常 → auction_amendment.json</td><td style="text-align:left;">待写 <code>docs/agents/P1-竞价校准Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>P2 午盘修订</strong></td><td style="text-align:left;">plan</td><td style="text-align:left;">11:35-12:05</td><td style="text-align:left;">上午打脸检测 → midday_amendment.json + 用户 briefing</td><td style="text-align:left;">待写 <code>docs/agents/P2-午盘修订Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>E1 每日复盘</strong></td><td style="text-align:left;">review</td><td style="text-align:left;">15:10</td><td style="text-align:left;">双重复盘 + 观察池追踪 + missed_alpha + 错题本</td><td style="text-align:left;"><code>docs/agents/E1-每日复盘Agent.md</code></td></tr><tr><td style="text-align:left;"><strong>E2 周度进化</strong></td><td style="text-align:left;">review</td><td style="text-align:left;">周五 15:30</td><td style="text-align:left;">消费 5 天复盘 → skill/preferences/thesis 修订建议</td><td style="text-align:left;"><code>docs/agents/E2-周度进化Agent.md</code></td></tr></tbody></table></div>
+<p><strong>归属汇总</strong>:</p>
+<ul>
+<li>research 内 7 单元(R1-R7)</li>
+<li>plan 内 3 单元(D1 / P1 / P2)</li>
+<li>review 内 2 单元(E1 / E2)</li>
+<li>fetch 内 0 LLM 单元(纯 Python 数据流,但内含 market_scanner)</li>
+<li>execute 内 0 独立单元(判断节点算规则引擎的一部分,不算独立 agent)</li>
+</ul>
+<h3 id="25-现存-profile-的处置">§2.5 现存 profile 的处置<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#25-现存-profile-的处置" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">旧 profile</th><th style="text-align:left;">处置</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;"><code>canghai-research</code></td><td style="text-align:left;"><strong>改造沿用</strong></td><td style="text-align:left;">重定义边界为 R1-R7 主控 + delegation</td></tr><tr><td style="text-align:left;"><code>canghai-review</code></td><td style="text-align:left;"><strong>改造沿用</strong></td><td style="text-align:left;">重定义边界为 E1/E2</td></tr><tr><td style="text-align:left;"><code>canghai-trading</code></td><td style="text-align:left;"><strong>改名 + 重写</strong> → <code>canghai-execute</code></td><td style="text-align:left;">Python 主导,原 LLM 交易逻辑迁 P1/P2</td></tr><tr><td style="text-align:left;"><code>canghai-intel</code></td><td style="text-align:left;"><strong>删除</strong></td><td style="text-align:left;">职责入 R3(情绪)/ R4(消息)/ R7(资金)</td></tr><tr><td style="text-align:left;"><code>canghai-risk</code></td><td style="text-align:left;"><strong>删除</strong></td><td style="text-align:left;">硬规则入 <code>execute/amygdala.py</code>,软规则入 R6 反证</td></tr><tr><td style="text-align:left;"><code>canghai-orchestrator</code></td><td style="text-align:left;"><strong>删除</strong></td><td style="text-align:left;">refactor_plan 已判死刑,delegation 取代</td></tr><tr><td style="text-align:left;"><strong>新建</strong> <code>canghai-fetch</code></td><td style="text-align:left;">新建</td><td style="text-align:left;">数据抓取 + market_scanner</td></tr><tr><td style="text-align:left;"><strong>新建</strong> <code>canghai-plan</code></td><td style="text-align:left;">新建</td><td style="text-align:left;">D1 + P1 + P2</td></tr></tbody></table></div>
+<h3 id="26-profile-与-agent-的物理隔离">§2.6 profile 与 agent 的物理隔离<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#26-profile-与-agent-的物理隔离" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>每个 profile 独立</strong>:</p>
+<ul>
+<li><code>~/.hermes/profiles/canghai-&lt;name>/config.toml</code></li>
+<li><code>~/.hermes/profiles/canghai-&lt;name>/skills/</code></li>
+<li><code>~/.hermes/profiles/canghai-&lt;name>/SOUL.md</code></li>
+<li><code>~/.hermes/profiles/canghai-&lt;name>/cron/</code></li>
+</ul>
+<p><strong>数据目录归属</strong>(项目 root <code>/Users/chenyang/Downloads/demo/沧海巨浪/</code>):</p>
+<ul>
+<li>fetch 只写 <code>data/raw/</code></li>
+<li>research 只写 <code>chzl_kg/</code> + <code>data/research/</code></li>
+<li>plan 只写 <code>data/plans/</code></li>
+<li>execute 只写 <code>data/execution/</code></li>
+<li>review 只写 <code>data/reports/</code> + <code>data/corrections/</code></li>
+<li>E2 只写 <code>data/evolution/</code></li>
+</ul>
+<p><strong>违反物理隔离即 bug</strong>。SOUL.md 里明确写出各 profile 的 write 白名单,越权时施工侧应报错。</p>
+
+<hr/>
+<h2 id="第-3-章--数据流">第 3 章 · 数据流<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第-3-章--数据流" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="31-目录树硬约束">§3.1 目录树(硬约束)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-目录树硬约束" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>/Users/chenyang/Downloads/demo/沧海巨浪/
+├── docs/                              # 权威文档(本文档 + agent spec + schema)
+│   ├── 00-CANONICAL-ARCHITECTURE-v1.md    ← 本文档
+│   ├── agents/                            # 12 个执行单元的 spec
+│   │   ├── R1-风格Agent.md ... R7-资金面Agent.md
+│   │   ├── D1-主决策Agent.md
+│   │   ├── P1-竞价校准Agent.md            ← 新增(v1.2)
+│   │   ├── P2-午盘修订Agent.md            ← 新增(v1.2)
+│   │   ├── E1-每日复盘Agent.md
+│   │   └── E2-周度进化Agent.md
+│   ├── watchlist_plan_schema.md
+│   └── amendment_schema.md                ← 新增(P1/P2 契约)
+│
+├── data/                              # 运行时数据(profile 分区写)
+│   ├── raw/                               # ← 只有 fetch 写
+│   │   ├── YYYYMMDD/
+│   │   │   ├── wechat_official_20.jsonl
+│   │   │   ├── weflow_snapshot.json
+│   │   │   ├── wechat_cli_5groups.jsonl
+│   │   │   ├── auction_snapshot.json        # 09:24 抓
+│   │   │   ├── midday_snapshot.json          # 11:35 抓
+│   │   │   └── mcp_health.json
+│   │   └── manifest.json                    # 数据源健康状态 + fallback 记录
+│   │
+│   ├── research/                          # ← 只有 research 写
+│   │   ├── YYYYMMDD/
+│   │   │   ├── R1_style.json
+│   │   │   ├── R2_main_sectors.json
+│   │   │   ├── R3_sentiment.json
+│   │   │   ├── R4_news.json
+│   │   │   ├── R5_stock_profiles.json
+│   │   │   ├── R6_devil_advocate.json      # 含 hard_reject/strong_suggest
+│   │   │   ├── R7_capital_flow.json         # 新增
+│   │   │   └── research_summary.json        # 主控串接产物
+│   │
+│   ├── plans/                             # ← 只有 plan 写
+│   │   ├── YYYYMMDD/
+│   │   │   ├── watchlist_plan.json          # D1 出
+│   │   │   ├── auction_amendment.json       # P1 出(增量)
+│   │   │   ├── midday_amendment.json         # P2 出(增量)
+│   │   │   └── watchlist_plan.loaded.json   # execute 加载后的合并版
+│   │
+│   ├── execution/                         # ← 只有 execute 写
+│   │   ├── YYYYMMDD/
+│   │   │   ├── events.jsonl                # 全部信号事件
+│   │   │   ├── decisions.jsonl              # 规则决策 + judgment node 记录
+│   │   │   ├── orders.jsonl                # 下单流水
+│   │   │   ├── positions_state.json         # 实时持仓快照
+│   │   │   └── market_snapshot.parquet     # 分钟级全市场(可选归档)
+│   │
+│   ├── reports/                           # ← 只有 review 写
+│   │   ├── YYYYMMDD/
+│   │   │   ├── E1_daily_review.md          # 双重复盘 markdown
+│   │   │   ├── E1_data.json                # 复盘数据 artifact
+│   │   │   └── observation_tracking.json   # T+1/T+5 追踪
+│   │
+│   ├── corrections/                       # ← 只有 review 写(错题本)
+│   │   └── YYYY-Www/
+│   │       └── error_case_XXX.md
+│   │
+│   ├── evolution/                         # ← 只有 E2 写(修订建议 backlog)
+│   │   └── YYYY-Www/
+│   │       ├── skill_patches.md            # skill 修改建议
+│   │       ├── preferences_patches.md      # preferences 修订建议 (新)
+│   │       ├── thesis_reviews.md           # thesis 兑现率评估 (新)
+│   │       └── sign_off_log.md             # 用户 sign-off 历史
+│   │
+│   ├── human_thesis/                      # ← 用户写 + E2 只读评估
+│   │   ├── active/
+│   │   │   └── tech_debt_relief.md         # 举例
+│   │   ├── archived/
+│   │   └── schema.md
+│   │
+│   ├── user_preferences.yaml              # ← 用户写 + E2 只读建议
+│   └── source_diversity_matrix.md         # ← 用户维护
+│
+├── chzl_kg/                           # Obsidian 知识库(research + review 写)
+│   ├── 投研交易/
+│   │   ├── 盘前预案/YYYYMMDD.md          # D1 出
+│   │   ├── 午盘briefing/YYYYMMDD.md      # P2 出 (新)
+│   │   ├── 复盘记录/YYYYMMDD.md          # E1 出
+│   │   ├── 资金面/YYYYMMDD.md            # R7 出 (新)
+│   │   └── 错题本/YYYY-Www/xxx.md        # E1/E2 出
+│   └── 系统进化/
+│       └── YYYY-Www.md                    # E2 出
+│
+├── skills/                            # 项目本地 skill(见 §4)
+│   └── [16 个现存 canghai skill,按 §4.3 迁移]
+│
+└── scripts/                           # execute Python 脚本
+    ├── watcher.py                          # 主循环
+    ├── amygdala.py                         # 硬风控 (新)
+    ├── market_snapshot.py                  # 分钟级全市场 (新)
+    ├── sector_stats.py                     # 板块横截面 (新)
+    ├── market_scanner.py                   # 全市场异动扫描 (新,归 fetch profile)
+    ├── executors/                          # 现有 executor 模块
+    └── judgment_nodes/                     # LLM 判断节点 (新)
+        └── [具体节点由 T3 实盘决定]
+</code></pre>
+<p><strong>目录树是硬约束</strong>。任何 profile 越权写非自己那份 → SOUL.md 拦截 → 施工报错。</p>
+<h3 id="32-契约json-schema-是模型无关的资产">§3.2 契约:JSON schema 是模型无关的资产<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-契约json-schema-是模型无关的资产" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>核心契约 3 份</strong>:</p>
+<p><strong>契约 1 · watchlist_plan.json</strong>(D1 → execute):</p>
+<ul>
+<li>位置:<code>docs/watchlist_plan_schema.md</code></li>
+<li>版本字段:<code>schema_version</code> 硬约束</li>
+<li>核心字段:mode / total_position_cap / execution_pool / watch_pool / exit_rules / entry_rules</li>
+<li>详见现有 <code>docs/watchlist_plan_schema.md</code>(v1 沿用,不改)</li>
+</ul>
+<p><strong>契约 2 · amendment.json</strong>(P1/P2 → execute)【新增】:</p>
+<ul>
+<li>位置:<code>docs/amendment_schema.md</code>(施工时新建)</li>
+<li>类型 3 种:<code>skip</code> / <code>defer</code> / <code>promote</code> / <code>tighten_exit</code> / <code>flag_for_user</code></li>
+<li>每个 amendment 引用 <code>watchlist_plan.schema_version</code>,不兼容即拒</li>
+<li>详见 §3.5</li>
+</ul>
+<p><strong>契约 3 · research_summary.json</strong>(research 主控 → D1):</p>
+<ul>
+<li>位置:<code>docs/research_summary_schema.md</code>(施工时新建)</li>
+<li>汇总 R1-R7 产出的 artifact 路径 + 各自 confidence + R6 hard_reject 清单</li>
+<li>D1 pull 此 summary,再按需 pull 具体 R*.json</li>
+</ul>
+<h3 id="33-每日数据流时间轴v12">§3.3 每日数据流时间轴(v1.2)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#33-每日数据流时间轴v12" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>──────────────────────── 盘前(07:15 - 08:59)────────────────────────
+07:15  fetch                  抓取 20 号公众号 + WeFlow snapshot + wechat-cli 5 群
+                              MCP 健康检查,写 manifest.json
+07:30  R1 / R3 / R4 / R7      并行 delegation(风格 / 情绪 / 消息 / 资金)
+07:45  R2 / R5                串行 delegation(主线 / 个股画像,依赖 R1/R3/R4/R7)
+07:55  R6                     反证 delegation(消费 R1-R5+R7)
+08:00  D1                     fresh context,出 watchlist_plan.json + 盘前预案 md
+                              → 推 iLink 摘要给用户(可 08:30 后阅读)
+
+──────────────────────── 集合竞价(09:15 - 09:30)────────────────────
+09:15  execute service        启动 watcher 服务,warm-up market_snapshot(历史 K)
+                              加载 watchlist_plan.json → watchlist_plan.loaded.json
+09:24  fetch (轻量)            抓 auction_snapshot.json(集合竞价快照)
+09:25  P1                     fresh context,竞价校准 → auction_amendment.json
+                              4 分钟内必须出结果,超时 fallback = 无 amendment
+09:29  execute                reload amendment 合并进 loaded.json
+
+──────────────────────── 盘中上半场(09:30 - 11:30)──────────────────
+execute service 持续运行,内部 4 层频率:
+  · 秒级 tick(1-5s):QMT quote 拉 execution_pool + candidate 深度
+                     → entry/exit rule 检查
+                     → judgment node 触发(如 buy_confirm)
+                     → 硬风控 → 下单
+  · 分钟级(1min):XTick 全市场 1 分钟 K + 板块横截面统计
+                    → 更新 sector_stats / 龙头动态 / 跷跷板确认
+  · 5 分钟级(5min):market_scanner 全市场异动扫描
+                     → iLink 推送用户,不自动买
+                     → 归 fetch profile
+  · 10 分钟级(10min):cron 保活 watcher,读磁盘状态同步
+
+──────────────────────── 中场(11:30 - 13:00)────────────────────────
+11:30  execute                上半场结束,冻结 positions_state.json 快照
+11:35  fetch (轻量)            抓 midday_snapshot.json
+11:35  R7 (research 增量)      北向盘中变盘 + 主力上午净流 + 板块资金上午值
+11:40  P2                     fresh context,午盘修订 → midday_amendment.json
+                              + `chzl_kg/投研交易/午盘briefing/YYYYMMDD.md`(≤500 字)
+                              30 分钟内出结果,12:05 前给用户
+12:05-13:00  用户              读 briefing / iLink 关键 flag(20 分钟)
+
+──────────────────────── 盘中下半场(13:00 - 15:00)──────────────────
+13:00  execute                reload midday_amendment
+13:00-14:55  execute           同上半场 4 层频率
+14:55-15:00  execute EOD       尾盘强制处理:
+                                - rebound_reduce_2(反弹减仓 2)
+                                - eod_forced_exit(尾盘强制平仓)
+
+──────────────────────── 盘后(15:00 - 22:00)────────────────────────
+15:10  E1                     fresh context,日度复盘
+                              → chzl_kg/投研交易/复盘记录/YYYYMMDD.md
+                              → data/reports/YYYYMMDD/
+                              包含:双重复盘 + 观察池追踪 + missed_alpha + 错题本触发
+(周五)15:30  E2              fresh context,周度进化
+                              → data/evolution/YYYY-Www/
+                              包含:skill_patches / preferences_patches / thesis_reviews
+                              → 推 iLink 给用户 sign-off
+</code></pre>
+<p><strong>时点分配的三个原则</strong>:</p>
+<ol>
+<li><strong>盘前所有 research + D1 必须 08:00 前完成</strong>:留出 08:00-09:15 给用户读预案 + 手动干预窗口</li>
+<li><strong>P1 4 分钟 / P2 30 分钟不同</strong>:P1 时间死限,超时保守;P2 可以慢一点,因为午盘 1.5 小时,LLM 有余裕</li>
+<li><strong>E1 15:10 触发</strong>:不在 15:00 是因为要等 EOD 数据落磁盘,15:05 给 execute 收尾 5 分钟</li>
+</ol>
+<h3 id="34-artifact-first-pull-based-通信">§3.4 artifact-first, pull-based 通信<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#34-artifact-first-pull-based-通信" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>核心原则</strong>:sub-agent 之间<strong>不通过 memory / session 通信</strong>,只通过磁盘 artifact 通信。</p>
+<p><strong>具体机制</strong>:</p>
+<ul>
+<li>上游 agent 写 <code>data/research/YYYYMMDD/R*.json</code></li>
+<li>下游 agent 通过 <code>read_file</code> 或 <code>search_files</code> pull</li>
+<li>主控只需要知道<strong>artifact 路径</strong>,不需要看 artifact 内容(除非要合成)</li>
+</ul>
+<p><strong>收益</strong>:</p>
+<ul>
+<li><strong>R6 可以随时重跑</strong>:R6 反证只依赖 R1-R5+R7 的 artifact 文件,任何时候重跑都得到相同输入</li>
+<li><strong>debugging 友好</strong>:所有中间产物都在磁盘,可以事后追溯</li>
+<li><strong>换基座友好</strong>:artifact 是模型无关的 JSON,换基座后 artifact 可以直接被新基座消费</li>
+<li><strong>P1/P2 可以只读 amendment.json,不用重跑 D1</strong>:P1/P2 只需要 D1 的 artifact,不需要 D1 的 context</li>
+</ul>
+<p><strong>代价</strong>:</p>
+<ul>
+<li>磁盘 IO 有一定开销(可以接受,每份 artifact &lt;100KB)</li>
+<li>需要严格的目录规范(见 §3.1)</li>
+</ul>
+<h3 id="35-human_thesis-目录临时视角承载">§3.5 human_thesis 目录(临时视角承载)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#35-human_thesis-目录临时视角承载" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>目录</strong>:<code>data/human_thesis/</code></p>
+<ul>
+<li><code>active/</code>:当前生效的 thesis</li>
+<li><code>archived/</code>:已失效的 thesis(保留复盘用)</li>
+<li><code>schema.md</code>:thesis 格式规范</li>
+</ul>
+<p><strong>Thesis 结构(pydantic schema)</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">---</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">thesis_id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">tech-debt-relief-2026</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">title</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">科技化债作为政策工具</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">author</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">user</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">created</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2026-07-04</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">status</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">active</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">   # active / archived</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">expires</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2026-09-30</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">impact_scope</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  sectors</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">半导体</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">军工</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">商业航天</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  duration</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">3个月</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">breaking_signals</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">大盘破 3050 且科技板块领跌</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">政策转向刺激内需消费</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">半导体设备板块 5 日累计资金净流出 > 30 亿</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">consumers</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">R2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">R6</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">R7</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 哪些 agent 应读</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">---</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># Thesis 正文</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">(用户手写因果框架描述,LLM 消费时作为 extra context)</span></span></code></pre></figure>
+<p><strong>Thesis 生命周期</strong>:</p>
+<ol>
+<li>用户创建 → <code>active/*.md</code></li>
+<li>R2/R6/R7 每天启动时 pull 所有 <code>status=active</code> 的 thesis 作为 extra context</li>
+<li>E2 每周评估兑现率(见 §5.2 验证 4)</li>
+<li><strong>E2 可提修订建议</strong>:撤销 / 修订破位信号 / 延长有效期</li>
+<li>用户 sign-off → 修改 thesis(或移到 archived)</li>
+<li>Thesis 触发破位信号 → E2 强制标记 archived,推 iLink 告警</li>
+</ol>
+<p><strong>Thesis 不进 skill</strong>:zero permanent pollution。撤销即从 active/ 移到 archived/,下次 pull 就不再被消费。</p>
+<h3 id="36-user_preferencesyaml永久硬先验新增">§3.6 user_preferences.yaml(永久硬先验)【新增】<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#36-user_preferencesyaml永久硬先验新增" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>位置</strong>:<code>data/user_preferences.yaml</code><br/>
+<strong>性质</strong>:永久硬先验,与 thesis(临时)、amygdala(不可撤销)三层并列<br/>
+<strong>首版内容</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">schema_version</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">v1</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">last_updated</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2026-07-04</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">last_signed_by</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">user</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 龙头优先规则(用户 2026-07-04 深夜明确)</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">leader_preference</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  enabled</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">true</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  rule</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;same_sector_only_top_2&quot;</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  detail</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">龙一必须满足以下任一:板块内涨停家数 top 1 或 主力资金 5 日累计 top 1 或 连板高度 top 1</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">龙二可以是板块内综合评分 top 2</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">龙三及以下不进 execution_pool(除非龙一 R6 hard_reject)</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  filter_out_rules</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 杂毛过滤:满足 2 项即为杂毛,D1 强制剔除</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">板块内主力资金 5 日累计流入排名 top 3 之外</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">龙虎榜近 30 日无机构/游资席位</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">连板高度 &lt; 板块龙头 -2</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">换手率 &lt; 板块内 median 50%</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 硬风控(与 amygdala.py 同源,给 LLM 读)</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">position_hard_rules</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  max_single_stock_pct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.15</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">       # 单票 ≤15%</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  max_single_sector_pct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.40</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">      # 板块 ≤40%</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  max_total_position_pct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.80</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">     # 总仓 ≤80%</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  max_positions</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">5</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">                  # 持仓 ≤5</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  drop_loss_threshold</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">-0.05</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">        # 非主线浮亏 >5% 换仓</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 板块黑白名单</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">sector_blacklist</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: []  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 用户明确不做的板块(当前空)</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">sector_whitelist_priority</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: []  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 用户长期看好的板块,R2 得分权重 +20%(当前空)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 合规过滤(execution_pool 自动买入的硬门槛)</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">execution_block_prefixes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 自动买入禁用,watch 可含</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;300&quot;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 创业板</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;688&quot;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 科创板</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;920&quot;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 北交所</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">st_filter</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">true</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">   # ST / *ST / 风险警示全部阻断</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 交易时机偏好</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">trading_time_preference</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  no_open_buy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">false</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 允许开盘直接买入</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  prefer_pullback_over_breakout</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">true</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 优先低吸,追高需 R6 明确无诱多</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  eod_close_position_gt_pct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.03</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 尾盘涨停未封,盈利 >3% 强制减仓一半</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 观察池策略(watchlist 侧)</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># ═══════════════════════════════════════════════════════════</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">watchlist_policy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  min_watch_pool_size</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">15</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  max_watch_pool_size</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">25</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  allow_300_688_in_watch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">true</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # watch 可含,execution 不含</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  execution_pool_size_range</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">8</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span></code></pre></figure>
+<p><strong>谁读谁改</strong>:</p>
+<ul>
+<li><strong>R2 / R5 / D1 / P1 / P2 pull 此文件作为强约束</strong>(每次 fresh context 启动时读)</li>
+<li><strong>E2 只读</strong>,可提修订建议但不能自动改</li>
+<li><strong>用户手工编辑 或 通过 hermes 对话触发 patch</strong></li>
+</ul>
+<p><strong>与 human_thesis 的关键区别</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">维度</th><th style="text-align:left;">user_preferences.yaml</th><th style="text-align:left;">human_thesis/*.md</th></tr></thead><tbody><tr><td style="text-align:left;">生命周期</td><td style="text-align:left;">永久</td><td style="text-align:left;">临时(有 expires)</td></tr><tr><td style="text-align:left;">破位条件</td><td style="text-align:left;">无</td><td style="text-align:left;">必须写 breaking_signals</td></tr><tr><td style="text-align:left;">E2 可否修订建议</td><td style="text-align:left;">是</td><td style="text-align:left;">是</td></tr><tr><td style="text-align:left;">是否可自动撤销</td><td style="text-align:left;">否(只能用户改)</td><td style="text-align:left;">是(触发 breaking_signals 时)</td></tr><tr><td style="text-align:left;">承载什么</td><td style="text-align:left;">规则偏好(阈值、黑白名单)</td><td style="text-align:left;">因果视角(叙事、时代判断)</td></tr></tbody></table></div>
+<hr/>
+<h2 id="第-4-章--skills-与-harness资产层">第 4 章 · Skills 与 Harness(资产层)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第-4-章--skills-与-harness资产层" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="41-skill-的双层结构">§4.1 Skill 的双层结构<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#41-skill-的双层结构" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>核心断言</strong>:<strong>换基座时</strong>,skill 的 logic 层完全保留,只调整 prompt 层**。</p>
+<p><strong>目录形态</strong>:</p>
+<pre><code>skills/analyze_style_v1/
+├── SKILL.md               # 传统 skill 入口(YAML frontmatter + prompt)
+├── skill_logic.md         # 【新增】模型无关的逻辑描述
+├── skill_prompt_ark.md    # ark 基座的 prompt 实现(当前默认)
+├── skill_prompt_claude5.md # (未来)Claude 5 的 prompt 实现
+├── skill_prompt_gpt55.md  # (未来)GPT 5.5 的 prompt 实现
+├── references/            # 参考数据、样例
+├── templates/             # 输出模板
+└── scripts/               # 辅助脚本
+</code></pre>
+<p><strong>skill_logic.md 的必写内容</strong>:</p>
+<ol>
+<li><strong>Purpose</strong>:一句话说明这个 skill 是干嘛的</li>
+<li><strong>Inputs</strong>:输入 schema(数据源、字段、格式)</li>
+<li><strong>Outputs</strong>:输出 schema(pydantic 结构,模型无关)</li>
+<li><strong>Rules &amp; Constraints</strong>:必须遵守的硬约束(如”不允许 300/688 进 execution”)</li>
+<li><strong>Data Sources</strong>:允许调用的 MCP / API</li>
+<li><strong>Fallback Behavior</strong>:数据源缺失时的降级策略</li>
+<li><strong>Version History</strong>:版本变更记录</li>
+</ol>
+<p><strong>skill_prompt_<model>.md 的必写内容</model></strong>:</p>
+<ol>
+<li>针对基座的<strong>语言风格调优</strong>(如 Claude 偏好 XML tag,ark 偏好 markdown)</li>
+<li>具体的 few-shot 例子</li>
+<li>输出格式的具体约束(如”输出必须是纯 JSON,禁止解释性文字”)</li>
+<li><strong>tested_with</strong>:测过的基座 + 通过率 + 最后测试日期</li>
+</ol>
+<p><strong>换基座工作流</strong>:</p>
+<ol>
+<li>选定新基座(如 Claude 5)</li>
+<li><code>cp skill_prompt_ark.md skill_prompt_claude5.md</code> 作为起点</li>
+<li>Review 每个 skill 的 logic 层不变</li>
+<li>微调 prompt(风格、few-shot、约束表述)</li>
+<li>Run 回归测试(用 T0 阶段积累的 artifact 作为 fixture)</li>
+<li>更新 <code>tested_with</code> 字段</li>
+<li>切换 profile 配置的模型名</li>
+</ol>
+<h3 id="42-skill-的归属每个-profile-拥有的完整-skill-清单">§4.2 Skill 的归属(每个 profile 拥有的完整 skill 清单)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#42-skill-的归属每个-profile-拥有的完整-skill-清单" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="canghai-fetchskills">canghai-fetch/skills/<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#canghai-fetchskills" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;"><code>fetch_all_sources_v1</code></td><td style="text-align:left;">现存</td><td style="text-align:left;">保留,补 v2</td><td style="text-align:left;">07:15 抓公众号 + WeFlow + wechat-cli</td></tr><tr><td style="text-align:left;"><code>fetch_auction_snapshot_v1</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建</td><td style="text-align:left;">09:24 竞价快照(execute pool 溢价 + 全市场情绪)</td></tr><tr><td style="text-align:left;"><code>fetch_midday_snapshot_v1</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建</td><td style="text-align:left;">11:35 午盘快照(全市场涨跌 + 板块资金上午值)</td></tr><tr><td style="text-align:left;"><code>market_scanner_v1</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建</td><td style="text-align:left;">5 分钟异动扫描 + iLink 推送</td></tr><tr><td style="text-align:left;"><code>mcp_health_check_v1</code></td><td style="text-align:left;">现存(在 fetch_all_sources 内)</td><td style="text-align:left;">独立出来</td><td style="text-align:left;">独立 skill 便于复用</td></tr></tbody></table></div>
+<h4 id="canghai-researchskills主控--7-sub-agent-各自的分析-skill">canghai-research/skills/(主控 + 7 sub-agent 各自的分析 skill)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#canghai-researchskills主控--7-sub-agent-各自的分析-skill" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>主控层(delegation 调度)</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>research_orchestrator_v1</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建。串起 R1-R7 并行/串行 + 收集 artifact 路径</td></tr></tbody></table></div>
+<p><strong>R1 风格 Agent</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>analyze_style_v1</code></td><td style="text-align:left;">现存 skeleton</td><td style="text-align:left;"><strong>合并 pattern_recognizer 的 5 模式识别</strong></td></tr><tr><td style="text-align:left;"><code>~~pattern_recognizer~~</code></td><td style="text-align:left;">现存</td><td style="text-align:left;"><strong>归档</strong>(内容合并进 analyze_style_v1)</td></tr></tbody></table></div>
+<p><strong>R2 主线板块 Agent</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>analyze_main_sectors_v1</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建。1-3 主线 + 每条 3-5 龙头</td></tr><tr><td style="text-align:left;"><code>filter_leader_v1</code></td><td style="text-align:left;"><strong>新增</strong>(用户”龙头优先”落地)</td><td style="text-align:left;">待建。硬约束</td></tr><tr><td style="text-align:left;"><code>~~funds_validator~~</code></td><td style="text-align:left;">现存</td><td style="text-align:left;"><strong>三分</strong>:板块资金入 R2,个股资金入 R5,游资全景入 R7</td></tr></tbody></table></div>
+<p><strong>R3 情绪与热度 Agent</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>analyze_sentiment_resonance_v1</code></td><td style="text-align:left;">现存 skeleton</td><td style="text-align:left;">保留</td></tr></tbody></table></div>
+<p><strong>R4 消息面 Agent</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>analyze_news_impact_v1</code></td><td style="text-align:left;"><strong>改名自 event_analyzer</strong></td><td style="text-align:left;">内容对齐 R4 spec</td></tr><tr><td style="text-align:left;"><strong>补 data source</strong>:wechat-cli 5 群 + 财联社</td><td style="text-align:left;"></td><td style="text-align:left;"></td></tr></tbody></table></div>
+<p><strong>R5 情报深挖 Agent(六维画像 + serenity 基本面链)</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>analyze_stock_profile_v1</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建。六维画像统合</td></tr><tr><td style="text-align:left;"><code>serenity_analyst</code>(canghai_serenity_analyst_v2)</td><td style="text-align:left;">现存</td><td style="text-align:left;"><strong>保留,承担 §3.4 财务估值维度</strong></td></tr><tr><td style="text-align:left;"><code>bayesian-intrinsic-growth-valuation</code></td><td style="text-align:left;">现存(全局 skill)</td><td style="text-align:left;">横切,serenity 调用</td></tr><tr><td style="text-align:left;"><code>tam-adj-peg</code></td><td style="text-align:left;">现存(全局 skill)</td><td style="text-align:left;">横切,serenity 调用</td></tr><tr><td style="text-align:left;"><code>gf-dma-health-index</code></td><td style="text-align:left;">现存(全局 skill)</td><td style="text-align:left;">横切,serenity 调用</td></tr><tr><td style="text-align:left;"><code>buy-side-equity-research-memo</code></td><td style="text-align:left;">现存(全局 skill)</td><td style="text-align:left;">横切,重点票深挖时调用</td></tr></tbody></table></div>
+<p><strong>R6 反证 Agent</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>analyze_devil_advocate_v1</code></td><td style="text-align:left;">现存 skeleton</td><td style="text-align:left;">保留</td></tr><tr><td style="text-align:left;"><code>~~risk_manager~~</code></td><td style="text-align:left;">现存</td><td style="text-align:left;"><strong>拆分</strong>:软规则并入 R6,硬规则迁 amygdala.py</td></tr></tbody></table></div>
+<p><strong>R7 资金面 Agent(新增)</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>analyze_capital_flow_v1</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建。四维统合(北向/主力/游资/ETF+期货) + 时序 5日/10日/20日</td></tr><tr><td style="text-align:left;"><code>detect_seesaw_pairs_v1</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建。板块间跷跷板配对(相关系数 &lt;-0.6 + 5 日方向反转)</td></tr><tr><td style="text-align:left;"><code>hot_money_synergy_v1</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建。游资协同信号(同一游资 3 日内多次上榜同一票)</td></tr></tbody></table></div>
+<p><strong>Research 横切(R3/R7 共用)</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>hotlist_rank_signal_v1</code></td><td style="text-align:left;">现存 skeleton</td><td style="text-align:left;">保留</td></tr></tbody></table></div>
+<h4 id="canghai-planskills">canghai-plan/skills/<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#canghai-planskills" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>main_decision_v1</code>(D1 核心)</td><td style="text-align:left;"><strong>新增</strong>,继承 canghai_main_agent_v2 决策逻辑</td><td style="text-align:left;">待建</td></tr><tr><td style="text-align:left;"><code>exit_rules_derivation_v1</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建。exit_rule 生成(由 R6 + preferences + 个股情况推导)</td></tr><tr><td style="text-align:left;"><code>auction_amendment_v1</code>(P1)</td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建。竞价校准 → skip/defer/promote</td></tr><tr><td style="text-align:left;"><code>midday_amendment_v1</code>(P2)</td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">待建。午盘修订 → tighten_exit/promote/flag_for_user</td></tr><tr><td style="text-align:left;"><code>main_agent</code>(canghai_main_agent_v2)</td><td style="text-align:left;">现存</td><td style="text-align:left;"><strong>骨架保留,内容重写为 D1 spec</strong></td></tr></tbody></table></div>
+<h4 id="canghai-executescripts纯-python不是-skill">canghai-execute/scripts/(纯 Python,不是 skill)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#canghai-executescripts纯-python不是-skill" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">模块</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>watcher.py</code></td><td style="text-align:left;">现存 <code>scripts/trading_agent_intraday_watcher.py</code></td><td style="text-align:left;">沿用,大幅重构</td></tr><tr><td style="text-align:left;"><code>amygdala.py</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">硬风控二次校验(与 preferences.position_hard_rules 同源)</td></tr><tr><td style="text-align:left;"><code>market_snapshot.py</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">分钟级全市场维护(内存 + 可选磁盘 parquet)</td></tr><tr><td style="text-align:left;"><code>sector_stats.py</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">板块横截面统计 + 龙头动态排位 + 跷跷板实时确认</td></tr><tr><td style="text-align:left;"><code>executors/</code></td><td style="text-align:left;">现存 <code>trading/executors/</code></td><td style="text-align:left;">沿用</td></tr><tr><td style="text-align:left;"><code>judgment_nodes/</code></td><td style="text-align:left;"><strong>新增</strong></td><td style="text-align:left;">LLM 判断节点(具体节点由 T3 决定)</td></tr><tr><td style="text-align:left;"><code>~~holding_optimizer~~</code>(canghai_holding_optimizer_v2)</td><td style="text-align:left;">现存 skill</td><td style="text-align:left;"><strong>迁出 research,归 execute Python 实现</strong></td></tr></tbody></table></div>
+<h4 id="canghai-reviewskills">canghai-review/skills/<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#canghai-reviewskills" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Skill</th><th style="text-align:left;">来源</th><th style="text-align:left;">状态</th></tr></thead><tbody><tr><td style="text-align:left;"><code>daily_review_v1</code>(E1)</td><td style="text-align:left;">继承 daily_reviewer,大幅扩展</td><td style="text-align:left;">补观察池追踪 + missed_alpha + preferences 兑现率</td></tr><tr><td style="text-align:left;"><code>weekly_evolution_v1</code>(E2)</td><td style="text-align:left;">继承 weekly_evolution,大幅扩展</td><td style="text-align:left;">补 skill_patches + preferences_patches + thesis_reviews</td></tr><tr><td style="text-align:left;"><code>observation_tracking_v1</code></td><td style="text-align:left;">现存 skeleton</td><td style="text-align:left;">保留(E1 核心 skill)</td></tr><tr><td style="text-align:left;"><code>daily_reviewer</code>(canghai_daily_reviewer_v2)</td><td style="text-align:left;">现存</td><td style="text-align:left;"><strong>骨架保留,内容重写</strong></td></tr><tr><td style="text-align:left;"><code>weekly_evolution</code></td><td style="text-align:left;">现存</td><td style="text-align:left;"><strong>骨架保留,内容重写</strong></td></tr></tbody></table></div>
+<h4 id="共享横切-skill不归任何单一-profile">共享横切 skill(不归任何单一 profile)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#共享横切-skill不归任何单一-profile" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>数据源类</strong>:</p>
+<ul>
+<li><code>iwencai-query</code>:同花顺问财 NL 选股(R2/R5 用)</li>
+<li><code>hithink-*</code>:同花顺问询系列(R2/R4/R5 用)</li>
+<li><code>tushare-*</code>:Tushare API 系列(全 profile 用)</li>
+<li><code>xtick-*</code>:XTick 盘中信号(R7/execute 用)</li>
+<li><code>weflow-*</code>:WeFlow 情绪(R3/R7 用)</li>
+<li><code>wechat-cli</code>:5 群消息拉取(R4 用)</li>
+<li><code>announcement-search</code> / <code>report-search</code> / <code>news-search</code>:研报/公告/新闻(R2/R4/R5 用)</li>
+</ul>
+<p><strong>图表类</strong>:</p>
+<ul>
+<li><code>fast-chart-mcp</code> / <code>chart_lwc_render_kline</code>:K 线渲染(D1 生成盘前预案 md 用)</li>
+</ul>
+<p><strong>交易类</strong>:</p>
+<ul>
+<li><code>qmt-trade-execution</code>:QMT 下单(execute Python 调用)</li>
+</ul>
+<p><strong>研究方法类</strong>:</p>
+<ul>
+<li><code>serenity-alpha</code>:事件驱动 Alpha 框架</li>
+<li><code>bayesian-intrinsic-growth-valuation</code></li>
+<li><code>tam-adj-peg</code></li>
+<li><code>gf-dma-health-index</code></li>
+<li><code>buy-side-equity-research-memo</code></li>
+</ul>
+<h3 id="43-现存-16-个-canghai-skill-迁移映射">§4.3 现存 16 个 canghai skill 迁移映射<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#43-现存-16-个-canghai-skill-迁移映射" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>继承并扩展 <code>skills/README.md</code></strong>,本表为唯一权威。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">旧 skill</th><th style="text-align:left;">新架构位置</th><th style="text-align:left;">处理方式</th><th style="text-align:left;">迁移动作</th></tr></thead><tbody><tr><td style="text-align:left;"><code>main_agent</code>(canghai_main_agent_v2)</td><td style="text-align:left;">D1 主决策(plan)</td><td style="text-align:left;">骨架保留 + 内容重写</td><td style="text-align:left;">保留目录,重写为 D1 orchestrator</td></tr><tr><td style="text-align:left;"><code>event_analyzer</code>(canghai_event_analyzer_v2)</td><td style="text-align:left;">R4 消息面(research)</td><td style="text-align:left;">改名 + 内容对齐</td><td style="text-align:left;">重命名为 <code>analyze_news_impact_v1</code>,补 wechat-cli 5 群</td></tr><tr><td style="text-align:left;"><code>serenity_analyst</code>(canghai_serenity_analyst_v2)</td><td style="text-align:left;">R5 §3.4 财务估值维度(research)</td><td style="text-align:left;">保留,不改</td><td style="text-align:left;">只更新 frontmatter 说明其定位</td></tr><tr><td style="text-align:left;"><code>funds_validator</code>(canghai_funds_validator_v2)</td><td style="text-align:left;">R2 + R5 + R7 三分</td><td style="text-align:left;"><strong>三分,原目录归档</strong></td><td style="text-align:left;">板块资金入 R2,个股资金入 R5,游资全景入 R7</td></tr><tr><td style="text-align:left;"><code>pattern_recognizer</code>(canghai_pattern_recognizer_v1)</td><td style="text-align:left;">R1 风格</td><td style="text-align:left;"><strong>合并进 analyze_style_v1</strong></td><td style="text-align:left;">归档,内容合入 R1 skill</td></tr><tr><td style="text-align:left;"><code>holding_optimizer</code>(canghai_holding_optimizer_v2)</td><td style="text-align:left;">execute Python 实现</td><td style="text-align:left;"><strong>迁出 research</strong></td><td style="text-align:left;">从 skill 变 Python module</td></tr><tr><td style="text-align:left;"><code>daily_reviewer</code>(canghai_daily_reviewer_v2)</td><td style="text-align:left;">E1(review)</td><td style="text-align:left;">骨架保留 + 扩展</td><td style="text-align:left;">补观察池追踪 + missed_alpha</td></tr><tr><td style="text-align:left;"><code>risk_manager</code>(canghai_risk_manager)</td><td style="text-align:left;">R6 + amygdala.py</td><td style="text-align:left;"><strong>拆分</strong></td><td style="text-align:left;">软规则入 R6,硬规则入 execute Python</td></tr><tr><td style="text-align:left;"><code>weekly_evolution</code></td><td style="text-align:left;">E2(review)</td><td style="text-align:left;">骨架保留 + 扩展</td><td style="text-align:left;">补 preferences/thesis 修订建议</td></tr><tr><td style="text-align:left;"><code>analyze_style_v1</code></td><td style="text-align:left;">R1</td><td style="text-align:left;">保留 + 合并 pattern</td><td style="text-align:left;">补 5 模式识别</td></tr><tr><td style="text-align:left;"><code>analyze_sentiment_resonance_v1</code></td><td style="text-align:left;">R3</td><td style="text-align:left;">保留</td><td style="text-align:left;">无重大改动</td></tr><tr><td style="text-align:left;"><code>analyze_devil_advocate_v1</code></td><td style="text-align:left;">R6</td><td style="text-align:left;">保留 + 合并 risk 软规则</td><td style="text-align:left;">补 hard_reject 判定</td></tr><tr><td style="text-align:left;"><code>hotlist_rank_signal_v1</code></td><td style="text-align:left;">R3/R7 共用</td><td style="text-align:left;">保留</td><td style="text-align:left;">无改动</td></tr><tr><td style="text-align:left;"><code>observation_tracking_v1</code></td><td style="text-align:left;">E1</td><td style="text-align:left;">保留</td><td style="text-align:left;">无改动,施工时填充实现</td></tr><tr><td style="text-align:left;"><code>fetch_all_sources_v1</code></td><td style="text-align:left;">fetch</td><td style="text-align:left;">保留 + v2</td><td style="text-align:left;">补 auction/midday snapshot</td></tr><tr><td style="text-align:left;"><code>README.md</code></td><td style="text-align:left;">归档</td><td style="text-align:left;">本表继承</td><td style="text-align:left;">保留原文件作为迁移历史</td></tr></tbody></table></div>
+<p><strong>新增 skill 汇总</strong>(共 15 个):</p>
+<ul>
+<li>Research 内:<code>analyze_main_sectors_v1</code> / <code>filter_leader_v1</code> / <code>analyze_stock_profile_v1</code> / <code>analyze_capital_flow_v1</code> / <code>detect_seesaw_pairs_v1</code> / <code>hot_money_synergy_v1</code> / <code>research_orchestrator_v1</code></li>
+<li>Plan 内:<code>main_decision_v1</code> / <code>exit_rules_derivation_v1</code> / <code>auction_amendment_v1</code> / <code>midday_amendment_v1</code></li>
+<li>Fetch 内:<code>fetch_auction_snapshot_v1</code> / <code>fetch_midday_snapshot_v1</code> / <code>market_scanner_v1</code> / <code>mcp_health_check_v1</code></li>
+</ul>
+<h3 id="44-跨基座测试标注">§4.4 跨基座测试标注<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#44-跨基座测试标注" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Frontmatter 规范</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">---</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">analyze_style_v1</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">description</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">R1 风格 Agent 核心 skill(5 模式识别 + 情绪浓度 + 仓位建议)</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">version</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">v1</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">status</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">skeleton</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # skeleton / draft / production</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">agent_owner</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">R1</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">category</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">research/R1</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">tested_with</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">model</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">ark-code-latest</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">    provider</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">custom</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">    last_tested</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2026-07-05</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">    pass_rate</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.85</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 用 T0 阶段 fixture 回归测试</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">    notes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">基线,已 skeleton 通过</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 未来加入:</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # - model: claude-sonnet-5</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  #   provider: anthropic</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  #   last_tested: null</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  #   pass_rate: null</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  #   notes: 待测</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">updated</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2026-07-05</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">---</span></span></code></pre></figure>
+<p><strong>换基座前 review</strong>:</p>
+<ol>
+<li><code>grep -r &quot;tested_with&quot; skills/</code> 找出所有 skill 的测试记录</li>
+<li>挑选测过 fixture 数最多的 skill 作为回归 baseline</li>
+<li>新基座跑一遍 baseline,记录 pass_rate 差异</li>
+<li>差异 &lt;5% → 直接切换;差异 >5% → 逐 skill 微调 prompt</li>
+</ol>
+
+<hr/>
+<h2 id="第-5-章--机制3-层-loop--5-层对抗性验证">第 5 章 · 机制(3 层 loop + 5 层对抗性验证)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第-5-章--机制3-层-loop--5-层对抗性验证" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="51-3-层-loop">§5.1 3 层 loop<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#51-3-层-loop" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="l1--日内-loop三层混合架构不是纯-python">L1 · 日内 loop(三层混合架构,不是纯 Python)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#l1--日内-loop三层混合架构不是纯-python" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>这是 v1.2 相对 v1.0 的重大澄清</strong>。<strong>execute profile 不是”简单 Python”,是</strong>Python 主导 + 结构化规则 + LLM 判断节点<strong>三层混合</strong>。</p>
+<p><strong>层 1 · 硬约束(纯 Python,不可协商)</strong>:</p>
+<ul>
+<li><code>amygdala.py</code>:硬风控二次校验
+<ul>
+<li>单票 ≤15%</li>
+<li>板块 ≤40%</li>
+<li>总仓 ≤ preferences.total_position_cap</li>
+<li>持仓数 ≤ 5</li>
+<li>execution_block_prefixes 拒绝</li>
+<li>ST/*ST 拒绝</li>
+</ul>
+</li>
+<li>状态机:
+<ul>
+<li>T+1 硬约束(available_qty 校验)</li>
+<li>kill_switch 文件机制</li>
+<li>QMT quote 校验(限价单价格来源)</li>
+</ul>
+</li>
+<li>下单流程:
+<ul>
+<li>限价单价格(买 ask / 卖 bid)</li>
+<li>委托去重</li>
+<li>撤单机制</li>
+</ul>
+</li>
+</ul>
+<p><strong>层 1 对 LLM 完全无话语权。违反即拒</strong>。</p>
+<p><strong>层 2 · 结构化规则(纯 Python,通过 preferences.yaml 调参)</strong>:</p>
+<ul>
+<li>Entry rule:
+<ul>
+<li>trigger_price / max_premium_pct / buy_zone</li>
+<li>filter_leader_v1 具体阈值</li>
+<li>板块效应检测(板块内涨跌家数 / 平均涨跌 / 龙头动态)</li>
+</ul>
+</li>
+<li>Exit rule:
+<ul>
+<li>stop_loss / take_profit</li>
+<li>rebound_reduce_1 / rebound_reduce_2</li>
+<li>eod_forced_exit</li>
+<li>trailing_stop(可选)</li>
+</ul>
+</li>
+<li>做 T 状态机(如启用):
+<ul>
+<li>底仓 base_qty 永久保护</li>
+<li>机动仓 mobile_qty 日内闭环</li>
+<li>上升趋势正 T / 箱体正反 T / 下跌禁 T</li>
+</ul>
+</li>
+</ul>
+<p><strong>层 2 可量化的经验都进这里</strong>。<strong>用户说的”大单少了敢买”的可量化部分进这里</strong>。</p>
+<p><strong>层 3 · 判断节点(受控 LLM,3 秒响应,边界严格)</strong>:</p>
+<ul>
+<li><strong>触发时机</strong>:entry/exit rule <strong>即将触发</strong>时(比如价格触及 trigger_price ±0.5%)</li>
+<li><strong>LLM 任务</strong>:回答一个<strong>是/否/延迟</strong>判断,不做数值决策</li>
+<li><strong>上下文</strong>:该票 5 分钟分时 + 板块横截面 + 龙头动态 + 今天 R1-R7 摘要</li>
+<li><strong>限制</strong>:
+<ul>
+<li>单次响应 &lt;3 秒(用便宜快模型)</li>
+<li>只输出枚举结果:<code>confirm</code> / <code>reject</code> / <code>defer_60s</code></li>
+<li>不能改仓位、不能改 trigger_price、不能改 exit_rule</li>
+<li>超时 → <strong>默认 reject</strong>(保守)</li>
+</ul>
+</li>
+<li><strong>具体判断节点举例</strong>(T3 阶段实盘决定最终选哪几个):
+<ul>
+<li><code>buy_confirm</code>:trigger 触及时,板块效应是否成立?</li>
+<li><code>sell_confirm</code>:take_profit 触及时,是真突破还是诱多?</li>
+<li><code>leader_switch</code>:昨晚龙一今天被龙二反超,是否切换目标?</li>
+<li><code>anomaly_pause</code>:market_scanner 发现异常,是否暂停 entry 序列?</li>
+</ul>
+</li>
+</ul>
+<p><strong>层 3 的哲学定位</strong>:</p>
+<ul>
+<li>Python 是<strong>主控</strong>,LLM 是<strong>顾问</strong></li>
+<li>LLM 的每次调用有明确输入 / 明确输出 / 明确超时 / 明确边界</li>
+<li>LLM hallucinate 或时间衰减 → 最坏结果是拒绝机会(defer/reject),不会造成非法下单</li>
+<li>Python 硬风控在 LLM 之后二次校验</li>
+<li>LLM 挂了 / 慢了 → Python 走 fallback(无 LLM 判断 = 按规则执行 或 保守跳过)</li>
+</ul>
+<p><strong>这就是</strong>”Agent 做研究,交易讲纪律”<strong>的完整落地</strong>:</p>
+<ul>
+<li><strong>纪律 = Python 主控 + 硬风控二次校验 + 明确边界</strong></li>
+<li><strong>判断能力 = LLM 在受控节点提供上下文分析</strong></li>
+<li>不违反用户师傅那句”交易讲纪律”,<strong>也不浪费</strong>用户脑子里那套操盘手直觉</li>
+</ul>
+<p><strong>四层频率</strong>(在三层混合基础上):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">频率</th><th style="text-align:left;">覆盖范围</th><th style="text-align:left;">数据源</th><th style="text-align:left;">主要任务</th></tr></thead><tbody><tr><td style="text-align:left;"><strong>秒级(1-5s)</strong></td><td style="text-align:left;">execution_pool + candidate 深度</td><td style="text-align:left;">QMT quote</td><td style="text-align:left;">trigger/exit 检查 + judgment node 触发</td></tr><tr><td style="text-align:left;"><strong>分钟级(1min)</strong></td><td style="text-align:left;">全市场 5000+ 票 K + 板块统计</td><td style="text-align:left;">XTick 全市场 1min</td><td style="text-align:left;">板块横截面 + 龙头动态 + 跷跷板</td></tr><tr><td style="text-align:left;"><strong>5 分钟级(5min)</strong></td><td style="text-align:left;">全市场异动</td><td style="text-align:left;">XTick 涨停/龙虎榜/情绪</td><td style="text-align:left;">market_scanner 推 iLink</td></tr><tr><td style="text-align:left;"><strong>10 分钟级(10min)</strong></td><td style="text-align:left;">watcher 保活</td><td style="text-align:left;">磁盘状态</td><td style="text-align:left;">reload plan/amendment/state</td></tr></tbody></table></div>
+<p><strong>执行同时消费秒级 + 分钟级</strong>:规则决策不是只看该票深度,是看该票深度 <strong>+ 该票所在板块的横截面</strong>。</p>
+<h4 id="l2--日度复盘-loop每日-1510llmfresh-context">L2 · 日度复盘 loop(每日 15:10,LLM,fresh context)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#l2--日度复盘-loop每日-1510llmfresh-context" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>触发:cron @ 15:10</li>
+<li>载体:canghai-review profile</li>
+<li>Skill:daily_review_v1</li>
+<li>输入:
+<ul>
+<li><code>data/execution/YYYYMMDD/</code> 全部(events / decisions / orders / positions_state)</li>
+<li><code>data/plans/YYYYMMDD/</code> 全部(watchlist_plan / auction_amendment / midday_amendment)</li>
+<li><code>data/research/YYYYMMDD/research_summary.json</code></li>
+<li>昨日 <code>data/reports/YYYY-MM-DD/observation_tracking.json</code></li>
+<li><strong>preferences.yaml + human_thesis/active/*.md</strong>(理解当日 context)</li>
+</ul>
+</li>
+<li>输出:
+<ul>
+<li><code>chzl_kg/投研交易/复盘记录/YYYYMMDD.md</code>(用户看的双重复盘)</li>
+<li><code>data/reports/YYYYMMDD/E1_daily_review.md</code></li>
+<li><code>data/reports/YYYYMMDD/E1_data.json</code></li>
+<li><code>data/reports/YYYYMMDD/observation_tracking.json</code>(watch_pool T+1/T+5 追踪)</li>
+<li>触发时:<code>data/corrections/YYYY-Www/error_case_XXX.md</code>(错题本)</li>
+</ul>
+</li>
+<li>关键计算:
+<ul>
+<li><strong>missed_alpha</strong> = 观察池等权收益 - 执行池实际收益</li>
+<li><strong>watch_pool 兑现率</strong> = 触发 trigger 的 / 总数</li>
+<li><strong>R6 反证兑现率</strong> = hard_reject 后未启动 / 总 hard_reject</li>
+<li><strong>preferences 兑现率</strong> = 每条规则的触发次数 + 触发后收益差</li>
+<li><strong>judgment node 准确率</strong>(如已启用):confirm 后收益 vs reject 后错过收益</li>
+</ul>
+</li>
+</ul>
+<h4 id="l3--周度进化-loop每周五-1530llmfresh-context">L3 · 周度进化 loop(每周五 15:30,LLM,fresh context)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#l3--周度进化-loop每周五-1530llmfresh-context" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>触发:cron 周五 @ 15:30</li>
+<li>载体:canghai-review profile</li>
+<li>Skill:weekly_evolution_v1</li>
+<li>输入:
+<ul>
+<li>5 天 <code>data/reports/*/E1_data.json</code></li>
+<li>5 天 <code>data/corrections/YYYY-Www/*.md</code></li>
+<li>5 天 <code>data/reports/*/observation_tracking.json</code></li>
+<li><code>preferences.yaml + human_thesis/active/*.md</code></li>
+</ul>
+</li>
+<li>输出:
+<ul>
+<li><code>data/evolution/YYYY-Www/skill_patches.md</code>:skill 修改建议(patch 格式,含 old_string/new_string)</li>
+<li><code>data/evolution/YYYY-Www/preferences_patches.md</code>:preferences 修订建议</li>
+<li><code>data/evolution/YYYY-Www/thesis_reviews.md</code>:thesis 兑现率评估 + 撤销/延长建议</li>
+<li><code>chzl_kg/系统进化/YYYY-Www.md</code>:用户看的周报</li>
+<li><code>data/evolution/YYYY-Www/sign_off_log.md</code>:等待用户 sign-off 的清单</li>
+</ul>
+</li>
+<li><strong>用户是唯一 sign-off 触发者</strong>:
+<ul>
+<li>通过 hermes 对话触发 sign-off 或修改</li>
+<li>E2 不能自动 patch 任何东西</li>
+<li>Sign-off 后由 hermes 施工 patch(git commit + 更新 tested_with)</li>
+</ul>
+</li>
+</ul>
+<h3 id="52-5-层对抗性验证">§5.2 5 层对抗性验证<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#52-5-层对抗性验证" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>验证 1 · 硬风控</strong>(不接受 override):</p>
+<ul>
+<li>位置:<code>scripts/amygdala.py</code>(execute profile)</li>
+<li>与 preferences.yaml.position_hard_rules 同源</li>
+<li>单票 ≤15% / 板块 ≤40% / 总仓 ≤ position_cap / 持仓 ≤5</li>
+<li>kill_switch 文件机制:<code>data/execution/KILL_SWITCH</code> 存在时全部拒单</li>
+<li><strong>这一层 LLM 无话语权,用户手工修改也需明确改 preferences.yaml + amygdala.py 双侧</strong></li>
+</ul>
+<p><strong>验证 2 · R6 反证</strong>(消费 R1-R5+R7,产出 hard_reject):</p>
+<ul>
+<li>distribution_alert 是<strong>唯一硬否决权</strong>(D1 不能覆盖)</li>
+<li>strong_suggest 需 D1 显式覆盖并写理由</li>
+<li>weak_suggest 是提示,D1 自由决定</li>
+<li>详见 <code>docs/14-反证机制spec.md</code>(现有,沿用)</li>
+</ul>
+<p><strong>验证 3 · observation_tracking</strong>(watch_pool 兑现率):</p>
+<ul>
+<li>每日 E1 追踪 watch_pool 30-50 只</li>
+<li>T+1 / T+5 / T+20 追踪</li>
+<li>按 <code>watch_reason_code</code> 分组统计兑现率</li>
+<li><strong>兑现率</strong>用于评估:
+<ul>
+<li>watch 逻辑本身的准确度(比如”业绩预增板块 watch” 兑现率如何)</li>
+<li>R6 反证的准确度</li>
+<li>preferences 规则的兑现率</li>
+</ul>
+</li>
+<li>详见 <code>docs/13-观察票追踪spec.md</code>(现有,沿用)</li>
+</ul>
+<p><strong>验证 4 · human_thesis 破位信号 + E2 修订建议</strong>:</p>
+<ul>
+<li>每份 thesis 必须写 <code>breaking_signals</code></li>
+<li>E2 每周评估 thesis 解释力(该 thesis 影响的 sectors 表现 vs 大盘)</li>
+<li><strong>E2 可提建议</strong>:撤销 / 修订 breaking_signals / 延长有效期</li>
+<li><strong>不能自动改</strong>,必须用户 sign-off</li>
+<li>触发 breaking_signal 时,E2 强制标记 archived + 推 iLink 告警(不需 sign-off)</li>
+</ul>
+<p><strong>验证 4.5 · user_preferences E2 审阅</strong>【新增,v1.2】:</p>
+<ul>
+<li>E2 每周评估 preferences 各条规则的兑现率</li>
+<li><strong>E2 可提修订建议</strong>:
+<ul>
+<li>阈值调整(如”龙头 top 1 → top 2”)</li>
+<li>加新规则</li>
+<li>删旧规则</li>
+</ul>
+</li>
+<li><strong>不能自动改</strong>,必须用户 sign-off</li>
+<li>E2 输出 <code>data/evolution/YYYY-Www/preferences_patches.md</code>,含 old_value / new_value / 数据依据</li>
+</ul>
+<p><strong>验证 5 · source_diversity_matrix</strong>(数据源采样偏见):</p>
+<ul>
+<li>位置:<code>data/source_diversity_matrix.md</code></li>
+<li>每加一个数据源必须回答”在方法论 / 意识形态 / 时间尺度 / 地域 4 维中,和现有源不同的是哪一维”</li>
+<li>系统维护矩阵(手工 + E2 辅助)</li>
+<li>过度聚集时警报(比如 “20 个源里 18 个都是 A 股短线圈中文自媒体”)</li>
+<li>E2 每周检查是否需要用户加新维度</li>
+</ul>
+<h3 id="53-harness每个-profile-的执行边界">§5.3 Harness(每个 profile 的执行边界)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#53-harness每个-profile-的执行边界" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>核心断言</strong>:<strong>每个 profile 的 SOUL.md 明确写出”允许什么 / 禁止什么”;delegate_task 通过 toolsets 参数落地 sub-agent 的 tool 白名单</strong>。</p>
+<p><strong>SOUL.md 必写内容</strong>:</p>
+<ol>
+<li><strong>Purpose</strong>:该 profile 做什么</li>
+<li><strong>Ownership</strong>:允许写的目录白名单(硬约束)</li>
+<li><strong>Toolsets</strong>:允许调用的 MCP/tool 白名单</li>
+<li><strong>Consumers</strong>:该 profile 的输出被谁消费</li>
+<li><strong>Constraints</strong>:硬约束(如”D1 fresh context,禁止携带 R1-R7 中间推理”)</li>
+<li><strong>Sub-agent Harness</strong>(仅 research):delegation 的 toolsets 白名单</li>
+</ol>
+<p><strong>举例 · canghai-research SOUL.md 骨架</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="markdown" data-theme="github-light github-dark"><code data-language="markdown" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># canghai-research SOUL</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Purpose</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">盘前 07:30-07:55 完成 R1-R7 分析,输出 research_summary.json 供 D1 消费。</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Ownership (write whitelist)</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> data/research/YYYYMMDD/*.json</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> chzl_kg/投研交易/资金面/YYYYMMDD.md  (R7)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Toolsets (主控)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">[file, delegation]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Sub-agent toolsets</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> R1: [file, tushare, xtick]</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> R2: [file, tushare, datapro, hithink]</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> R3: [file, weflow, hotlist]</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> R4: [file, wechat, tushare]</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> R5: [file, tushare, serenity-alpha, valuation-suite]</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> R6: [</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;" data-token-type="string">file</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]  # 反证禁 MCP</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> R7: [file, tushare, xtick, datapro]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Consumers</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> D1 (canghai-plan)</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> E1 (canghai-review)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Constraints</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 主控禁止直接调用 MCP(必须通过 delegation)</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 主控禁止修改 preferences.yaml / human_thesis/</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> research 输出必须 pydantic schema 校验通过才写盘</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 07:55 前所有 R* 必须完成,超时的 R* 走 fallback(基于昨日 artifact)</span></span></code></pre></figure>
+<p><strong>Harness 是</strong>Agent 边界的物理落地**。SOUL.md 里禁止的东西,施工时 hermes 内核应报错(或至少警告)**。</p>
+<hr/>
+<h2 id="第-6-章--交互3-层用户接触面">第 6 章 · 交互(3 层用户接触面)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第-6-章--交互3-层用户接触面" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>核心断言</strong>:<strong>用户不应每天与系统对话超过 30 分钟。系统输出</strong>静态可读物<strong>为主,<strong>iLink 告警</strong>为辅,<strong>对话</strong>只在明确必要时</strong>。</p>
+<h3 id="61-静态看板默认接触面零对话">§6.1 静态看板(默认接触面,零对话)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#61-静态看板默认接触面零对话" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>载体</strong>:Obsidian <code>chzl_kg/</code></p>
+<p><strong>每日固定产出</strong>(用户想看时读,不想看不读):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">文件</th><th style="text-align:left;">内容</th><th style="text-align:left;">出品时点</th><th style="text-align:left;">阅读时长</th></tr></thead><tbody><tr><td style="text-align:left;"><code>投研交易/盘前预案/YYYYMMDD.md</code></td><td style="text-align:left;">D1 出,含 execution_pool / watch_pool / entry-exit 规则 / R6 反证 / 主线逻辑</td><td style="text-align:left;">08:00</td><td style="text-align:left;">10-15 min</td></tr><tr><td style="text-align:left;"><code>投研交易/资金面/YYYYMMDD.md</code></td><td style="text-align:left;">R7 出,含北向/主力/游资/ETF 四维 + 跷跷板</td><td style="text-align:left;">08:00</td><td style="text-align:left;">3-5 min</td></tr><tr><td style="text-align:left;"><code>投研交易/午盘briefing/YYYYMMDD.md</code></td><td style="text-align:left;">P2 出,含上午打脸检测 + 增量修订</td><td style="text-align:left;">12:05</td><td style="text-align:left;">3-5 min</td></tr><tr><td style="text-align:left;"><code>投研交易/复盘记录/YYYYMMDD.md</code></td><td style="text-align:left;">E1 出,含双重复盘 + 观察池追踪 + missed_alpha</td><td style="text-align:left;">15:15</td><td style="text-align:left;">5-10 min</td></tr><tr><td style="text-align:left;"><code>投研交易/错题本/YYYY-Www/*.md</code></td><td style="text-align:left;">E1/E2 触发时出</td><td style="text-align:left;">事件驱动</td><td style="text-align:left;">2-3 min/条</td></tr><tr><td style="text-align:left;"><code>系统进化/YYYY-Www.md</code></td><td style="text-align:left;">E2 出,每周五</td><td style="text-align:left;">周五 15:30</td><td style="text-align:left;">15-20 min</td></tr></tbody></table></div>
+<p><strong>每日总阅读时长</strong>:15-30 分钟(周内)、45-60 分钟(周五含 E2)。</p>
+<p><strong>静态看板的哲学</strong>:</p>
+<ul>
+<li><strong>信息不主动打扰用户</strong>,用户主动读</li>
+<li>用户可在<strong>任何时段</strong>读,不需要开会</li>
+<li>所有决策的 rationale 都在磁盘,可事后追溯</li>
+<li><strong>不依赖对话</strong> —— 用户不问也能知道系统在做什么</li>
+</ul>
+<h3 id="62-ilink-告警异常接触面只在必要时打扰">§6.2 iLink 告警(异常接触面,只在必要时打扰)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#62-ilink-告警异常接触面只在必要时打扰" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>载体</strong>:iLink(hermes 集成的移动推送)</p>
+<p><strong>推送场景 · 只有以下 6 种,不做其他推送</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">场景</th><th style="text-align:left;">推送时点</th><th style="text-align:left;">内容</th><th style="text-align:left;">用户预期动作</th></tr></thead><tbody><tr><td style="text-align:left;"><strong>D1 完成</strong></td><td style="text-align:left;">08:00-08:05</td><td style="text-align:left;">盘前预案摘要 3 行 + Obsidian 链接</td><td style="text-align:left;">08:30 后打开看</td></tr><tr><td style="text-align:left;"><strong>P1 完成</strong></td><td style="text-align:left;">09:29</td><td style="text-align:left;">竞价校准结果(有 amendment 才推;无 amendment 不推)</td><td style="text-align:left;">09:30 前扫一眼</td></tr><tr><td style="text-align:left;"><strong>P2 完成</strong></td><td style="text-align:left;">12:05</td><td style="text-align:left;">午盘 briefing 摘要 3 行 + Obsidian 链接</td><td style="text-align:left;">12:30 前扫一眼</td></tr><tr><td style="text-align:left;"><strong>market_scanner 严重异动</strong></td><td style="text-align:left;">盘中</td><td style="text-align:left;">某只不在 pool 的票涨停/异动 + 建议是否 watch</td><td style="text-align:left;">用户自行判断,不自动买</td></tr><tr><td style="text-align:left;"><strong>thesis breaking_signal 触发</strong></td><td style="text-align:left;">事件驱动</td><td style="text-align:left;">某 thesis 破位,自动 archived,建议 review</td><td style="text-align:left;">当天有空时 review</td></tr><tr><td style="text-align:left;"><strong>kill_switch 触发</strong></td><td style="text-align:left;">事件驱动</td><td style="text-align:left;">硬风控拒单/系统异常/execute 服务挂</td><td style="text-align:left;">立刻处理</td></tr></tbody></table></div>
+<p><strong>不推送的情况</strong>:</p>
+<ul>
+<li>每笔正常下单(在 Obsidian 复盘看即可)</li>
+<li>每次 rule 触发(events.jsonl 里查即可)</li>
+<li>E1 完成(用户 15:20 主动打开 Obsidian 即可)</li>
+<li>E2 完成(推 iLink,但用户可以周六看)</li>
+</ul>
+<p><strong>iLink 疲劳</strong>是系统交互的头号大敌。<strong>推得多</strong>→ 用户屏蔽通知 → 关键异动被忽略 → 系统失效。</p>
+<h3 id="63-对话按需接触面只在必要时开">§6.3 对话(按需接触面,只在必要时开)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#63-对话按需接触面只在必要时开" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>载体</strong>:hermes 对话(TUI / iLink 反射)</p>
+<p><strong>对话场景 · 只有以下 4 种</strong>:</p>
+<p><strong>场景 A · E2 sign-off</strong>(每周五晚 或 周末):</p>
+<ul>
+<li>E2 出周报后,用户对话:“给我看看这周的进化建议”</li>
+<li>Hermes 读 <code>data/evolution/YYYY-Www/*.md</code>,展示 skill_patches / preferences_patches / thesis_reviews</li>
+<li>用户逐条 sign-off:“这个 patch 通过 / 那个不要 / 这个改一下措辞”</li>
+<li>Hermes 施工 patch(git commit + 更新 tested_with)</li>
+<li><strong>时长预算:15-20 分钟/周</strong></li>
+</ul>
+<p><strong>场景 B · 手动调整</strong>(用户主动):</p>
+<ul>
+<li>用户观察到系统某个行为偏差,主动开对话</li>
+<li>“今天为什么 D1 没把中际旭创进 execution_pool?”</li>
+<li>Hermes 读当日 artifact,追溯原因</li>
+<li>用户可能触发:调 preferences / 新增 thesis / 修某个 skill</li>
+<li><strong>时长预算:不固定,尽量 &lt;15 分钟/次,&lt;3 次/周</strong></li>
+</ul>
+<p><strong>场景 C · 系统故障</strong>(异常):</p>
+<ul>
+<li>kill_switch 触发或 iLink 报错时</li>
+<li>用户开对话:“execute 挂了,查一下”</li>
+<li>Hermes 查日志 → 定位问题 → 修</li>
+<li><strong>时长预算:视故障严重性,目标 &lt;30 分钟/次</strong></li>
+</ul>
+<p><strong>场景 D · 深度架构讨论</strong>(不定期,类似今晚):</p>
+<ul>
+<li>用户对系统某个核心机制有新想法或质疑</li>
+<li>用户和 hermes 深度对话</li>
+<li>结论沉淀进本文档(v2 修订)或 skill</li>
+<li><strong>时长预算:1-3 小时/月</strong></li>
+</ul>
+<p><strong>日常对话时长</strong>:0 分钟/天。<strong>周日常</strong>:E2 sign-off ~ 15 分钟 + 偶发讨论 ~ 30 分钟 = 45 分钟。<strong>月常</strong>:深度讨论 1-3 小时。</p>
+<h3 id="64-3-层接触面的边界">§6.4 3 层接触面的边界<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#64-3-层接触面的边界" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>关键原则</strong>:<strong>尽量把决策推向静态看板 + iLink,减少对话</strong>。</p>
+<p><strong>判断准则</strong>:</p>
+<ul>
+<li>用户能在 Obsidian 读到的信息 → 不推 iLink</li>
+<li>用户能在 iLink 摘要看到的信息 → 不需要对话</li>
+<li>用户能通过 sign-off 触发的动作 → 不需要主动对话</li>
+</ul>
+<p><strong>反例</strong>(该做但没做):</p>
+<ul>
+<li>系统盘中每 10 分钟主动汇报”现在持仓 -0.3% / 无异动” → <strong>绝对不做</strong>(推 iLink 疲劳)</li>
+<li>系统每日给用户发心灵鸡汤或”今天大盘怎么看” → <strong>绝对不做</strong>(无信息量)</li>
+<li>系统每次 skill 修改都问用户”要不要 patch” → <strong>改为周批 sign-off</strong>(用户负担降低)</li>
+</ul>
+<p><strong>用户的合理接触面预算</strong>:</p>
+<ul>
+<li><strong>每天</strong>:15-30 min 读 Obsidian(通勤时 / 早餐时 / 午餐时都行)</li>
+<li><strong>每周</strong>:+ 15-20 min sign-off + 偶发对话</li>
+<li><strong>总量</strong>:&lt; 3 小时/周</li>
+</ul>
+<p><strong>如果超过</strong>:说明某处设计不合理,回本文档 review。</p>
+
+<hr/>
+<h2 id="第-7-章--施工路线图t0-t5">第 7 章 · 施工路线图(T0-T5)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第-7-章--施工路线图t0-t5" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>核心原则</strong>:<strong>契约先立,骨架先建,再逐步替换</strong>。不做”关掉全部再重建”,系统始终 alive。</p>
+<h3 id="71-t0--契约冻结--骨架落地本文档-sign-off--2-天">§7.1 T0 · 契约冻结 &amp; 骨架落地(本文档 sign-off ~ +2 天)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#71-t0--契约冻结--骨架落地本文档-sign-off--2-天" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>目标</strong>:本文档定稿 → 关键契约文件落盘 → 施工侧有明确目标</p>
+<p><strong>具体动作</strong>:</p>
+<ol>
+<li>用户 sign-off 本文档(v1.2 → v1.3 若有修订)</li>
+<li>施工侧建立目录树骨架(空目录 + 占位 README):
+<ul>
+<li><code>data/raw/</code> <code>data/research/</code> <code>data/plans/</code> <code>data/execution/</code> <code>data/reports/</code> <code>data/corrections/</code> <code>data/evolution/</code> <code>data/human_thesis/</code></li>
+<li><code>docs/agents/</code> 补 P1 / P2 / R7 三份 spec</li>
+<li><code>docs/amendment_schema.md</code> 起草</li>
+<li><code>docs/research_summary_schema.md</code> 起草</li>
+</ul>
+</li>
+<li><strong><code>data/user_preferences.yaml</code> 首版落盘</strong>(内容按 §3.6 写死,用户 sign-off)</li>
+<li><code>data/source_diversity_matrix.md</code> 首版落盘</li>
+<li>现存 profile 打 tag <code>v0-legacy</code>(锁快照,不删)</li>
+<li>现存 cron 保留运行不动</li>
+</ol>
+<p><strong>验收</strong>:</p>
+<ul>
+<li>本文档 sign-off</li>
+<li>目录树骨架落盘</li>
+<li>preferences.yaml v1 sign-off</li>
+<li>现有系统仍运行(不影响盘中/复盘 cron)</li>
+</ul>
+<p><strong>时间预算</strong>:1-2 天</p>
+<h3 id="72-t1--profile-新建--数据流验证3-5-天">§7.2 T1 · Profile 新建 + 数据流验证(+3-5 天)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#72-t1--profile-新建--数据流验证3-5-天" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>目标</strong>:5 个新 profile 建成 + 数据流打通 + <strong>原有 profile 并行</strong></p>
+<p><strong>具体动作</strong>:</p>
+<ol>
+<li>创建 5 个新 profile:
+<ul>
+<li><code>canghai-fetch</code>(SOUL.md + skills/ 骨架 + cron 拓扑)</li>
+<li><code>canghai-research</code>(SOUL.md + skills/ 骨架 + sub-agent toolsets)</li>
+<li><code>canghai-plan</code>(SOUL.md + skills/ 骨架)</li>
+<li><code>canghai-execute</code>(SOUL.md + scripts/ 骨架)</li>
+<li><code>canghai-review</code>(SOUL.md + skills/ 骨架)</li>
+</ul>
+</li>
+<li>现存 16 个 canghai skill 按 §4.3 迁移映射逐个移动/复制/归档</li>
+<li><strong>fetch 先跑通</strong>:每天 07:15 抓数据 → 写 <code>data/raw/YYYYMMDD/</code></li>
+<li>Manifest / MCP 健康检查上线</li>
+<li><strong>research 主控 pull fetch 产物,delegation 调 R1-R7</strong>(可先用<strong>旧 skill 内容</strong>跑通链路,skill 内部逻辑暂不改)</li>
+<li><strong>D1 pull research summary</strong> 出 watchlist_plan.json,与旧 canghai-research 产出的 plan <strong>并行</strong>(不合并)</li>
+<li>旧 profile 的 plan 继续供 execute 消费(不切换)</li>
+</ol>
+<p><strong>验收</strong>:</p>
+<ul>
+<li>新 5 profile 全部创建,SOUL.md sign-off</li>
+<li>fetch → research → plan 数据流跑通 1 次</li>
+<li><strong>新 D1 出的 plan 与旧 D1 出的 plan 可对比</strong>(diff 记录进 corrections)</li>
+<li>旧系统仍在跑,盘中/复盘不受影响</li>
+</ul>
+<p><strong>时间预算</strong>:3-5 天</p>
+<h3 id="73-t2--execute-层重构5-7-天">§7.3 T2 · Execute 层重构(+5-7 天)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#73-t2--execute-层重构5-7-天" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>目标</strong>:execute Python 服务上线 → 秒级+分钟级架构落地 → 硬风控 + 状态机稳固</p>
+<p><strong>分阶段落地(选项 B · 最小可用 → 迭代加强)</strong>:</p>
+<p><strong>T2.1 最小可用</strong>(3 天):</p>
+<ul>
+<li><code>amygdala.py</code> 硬风控上线</li>
+<li><code>watcher.py</code> 秒级 tick + entry/exit rule + 现有 executor</li>
+<li>kill_switch 文件机制</li>
+<li><strong>暂不含</strong>分钟级全市场 / 板块横截面 / 判断节点</li>
+<li><strong>上线策略</strong>:午盘小仓位试跑,和现有 intraday-once cron <strong>并行</strong></li>
+<li>每日盘后 diff:新 execute 决策 vs 旧 execute 决策</li>
+</ul>
+<p><strong>T2.2 分钟级全市场</strong>(2 天):</p>
+<ul>
+<li><code>market_snapshot.py</code> 分钟级全市场 K 内存维护</li>
+<li><code>sector_stats.py</code> 板块横截面 + 龙头动态</li>
+<li>规则引擎消费 sector_stats(板块效应检测 / 龙头切换检测)</li>
+</ul>
+<p><strong>T2.3 5 分钟 market_scanner</strong>(2 天):</p>
+<ul>
+<li><code>market_scanner.py</code>(归 fetch profile)全市场异动 → iLink 推送</li>
+<li>与用户约定异动阈值(避免 iLink 疲劳)</li>
+</ul>
+<p><strong>T2.x 判断节点</strong>(推迟到 T3):</p>
+<ul>
+<li>T2 不加 LLM 判断节点,先跑纯 Python</li>
+<li>T3 开始根据 T2 数据决定加哪几个判断节点</li>
+</ul>
+<p><strong>验收</strong>:</p>
+<ul>
+<li>T2 全部结束后,新 execute 服务与旧 intraday-once cron 并行 5 个交易日</li>
+<li>5 天 diff 显示新 execute 无重大偏差</li>
+<li>硬风控 5 天内零违规</li>
+<li>用户 sign-off 切换 → 旧 intraday-once cron 停</li>
+</ul>
+<p><strong>时间预算</strong>:5-7 天</p>
+<h3 id="74-t3--plan-层-p1p2--review-层-e1e2-补强5-7-天">§7.4 T3 · Plan 层 P1/P2 + Review 层 E1/E2 补强(+5-7 天)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#74-t3--plan-层-p1p2--review-层-e1e2-补强5-7-天" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>目标</strong>:P1/P2 上线 → E1 双重复盘 + missed_alpha + preferences 兑现率 → E2 修订建议</p>
+<p><strong>具体动作</strong>:</p>
+<ol>
+<li><strong>P1 竞价校准</strong>上线:
+<ul>
+<li><code>fetch_auction_snapshot_v1</code> 09:24 抓</li>
+<li><code>auction_amendment_v1</code> skill 起草</li>
+<li><code>canghai-plan</code> cron @ 09:25</li>
+<li>首周只出 amendment,execute 不 reload(observe-only)</li>
+<li>首周 diff:P1 amendment 逻辑 vs 现实(人为判断准确率)</li>
+<li>用户 sign-off 后开启 execute reload</li>
+</ul>
+</li>
+<li><strong>P2 午盘修订</strong>同上模式(11:35-12:05)</li>
+<li><strong>E1 daily_review_v1 完整实现</strong>:
+<ul>
+<li>双重复盘 markdown</li>
+<li>观察池 T+1/T+5 追踪</li>
+<li>missed_alpha 计算</li>
+<li><strong>preferences 各条规则的兑现率统计</strong></li>
+<li>错题本触发</li>
+</ul>
+</li>
+<li><strong>E2 weekly_evolution_v1 完整实现</strong>:
+<ul>
+<li>skill_patches</li>
+<li>preferences_patches</li>
+<li>thesis_reviews</li>
+<li>用户周五晚 sign-off 流程</li>
+</ul>
+</li>
+<li><strong>判断节点决策</strong>:根据 T2 5 天数据 + 用户对话,决定加哪几个 LLM 判断节点</li>
+<li>判断节点小范围试点(如只加 buy_confirm)</li>
+</ol>
+<p><strong>验收</strong>:</p>
+<ul>
+<li>P1/P2 各跑通 5 个交易日</li>
+<li>E1 每日出品,用户可读</li>
+<li>E2 出 1 次,用户完成 1 次 sign-off</li>
+<li>用户对判断节点 sign-off,T4 时全量上线</li>
+</ul>
+<p><strong>时间预算</strong>:5-7 天</p>
+<h3 id="75-t4--全量切换--旧系统下线3-5-天">§7.5 T4 · 全量切换 + 旧系统下线(+3-5 天)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#75-t4--全量切换--旧系统下线3-5-天" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>目标</strong>:新系统跑主战场 → 旧 profile / cron 归档</p>
+<p><strong>具体动作</strong>:</p>
+<ol>
+<li>用户 sign-off 全量切换</li>
+<li>旧 cron 停(intraday-once / daily-spine / daily-sync 全部)</li>
+<li>旧 profile 归档(不删,tag v0-legacy)</li>
+<li>旧 skill 归档(不删,tag v0-legacy)</li>
+<li>新 cron 拓扑上线(见 §7.7 cron 一览)</li>
+<li>判断节点全量上线</li>
+<li>R7 完整上线(不再仅 skeleton)</li>
+<li>首周日常运行,每日盘后诊断 + iLink 无异常告警</li>
+</ol>
+<p><strong>验收</strong>:</p>
+<ul>
+<li>新系统跑 5 个交易日无重大 bug</li>
+<li>硬风控零违规</li>
+<li>用户 sign-off “切换完成”</li>
+<li>旧系统归档</li>
+</ul>
+<p><strong>时间预算</strong>:3-5 天</p>
+<h3 id="76-t5--稳定期--e2-首次修订生效2-周持续观察">§7.6 T5 · 稳定期 + E2 首次修订生效(+2 周持续观察)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#76-t5--稳定期--e2-首次修订生效2-周持续观察" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>目标</strong>:E2 首次生效 → 数据驱动进化 → 系统真正 alive</p>
+<p><strong>具体动作</strong>:</p>
+<ol>
+<li>E2 每周五出报告</li>
+<li>用户每周五晚 或 周末 sign-off</li>
+<li>Skill / preferences / thesis 首次真实修订</li>
+<li>Corrections 错题本累积</li>
+<li>Judgment node 准确率数据积累</li>
+<li><strong>2 周后</strong>:review 本文档,若需要 → 出 v2</li>
+</ol>
+<p><strong>验收</strong>:</p>
+<ul>
+<li>E2 至少 2 次 sign-off 完成</li>
+<li>系统运行 2 周无重大 bug</li>
+<li>首次 skill patch 生效</li>
+<li><strong>用户 sign-off 系统正式生产化</strong></li>
+</ul>
+<p><strong>时间预算</strong>:2 周持续观察</p>
+<h3 id="77-cron-拓扑一览新系统">§7.7 Cron 拓扑一览(新系统)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#77-cron-拓扑一览新系统" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>新 cron 时间表</strong>(替换旧 crontab 12 行 + Hermes cron):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Cron</th><th style="text-align:left;">时点</th><th style="text-align:left;">Profile</th><th style="text-align:left;">Job</th><th style="text-align:left;">备注</th></tr></thead><tbody><tr><td style="text-align:left;">pre-fetch</td><td style="text-align:left;">07:15 * * 1-5</td><td style="text-align:left;">canghai-fetch</td><td style="text-align:left;">fetch_all_sources_v1</td><td style="text-align:left;">20 号公众号 + WeFlow + wechat-cli</td></tr><tr><td style="text-align:left;">research</td><td style="text-align:left;">07:30 * * 1-5</td><td style="text-align:left;">canghai-research</td><td style="text-align:left;">research_orchestrator_v1(全流程)</td><td style="text-align:left;">内部 delegation R1-R7</td></tr><tr><td style="text-align:left;">plan</td><td style="text-align:left;">08:00 * * 1-5</td><td style="text-align:left;">canghai-plan</td><td style="text-align:left;">main_decision_v1</td><td style="text-align:left;">fresh context</td></tr><tr><td style="text-align:left;">auction-fetch</td><td style="text-align:left;">09:24 * * 1-5</td><td style="text-align:left;">canghai-fetch</td><td style="text-align:left;">fetch_auction_snapshot_v1</td><td style="text-align:left;">竞价快照</td></tr><tr><td style="text-align:left;">auction-plan(P1)</td><td style="text-align:left;">09:25 * * 1-5</td><td style="text-align:left;">canghai-plan</td><td style="text-align:left;">auction_amendment_v1</td><td style="text-align:left;">4 min 硬窗口</td></tr><tr><td style="text-align:left;">execute-service</td><td style="text-align:left;">09:15-15:05 * * 1-5</td><td style="text-align:left;">canghai-execute</td><td style="text-align:left;">watcher.py(daemon)</td><td style="text-align:left;">服务持续运行</td></tr><tr><td style="text-align:left;">execute-keepalive</td><td style="text-align:left;">*/10 09:30-15:00 * * 1-5</td><td style="text-align:left;">canghai-execute</td><td style="text-align:left;">keepalive.sh</td><td style="text-align:left;">10 min 保活</td></tr><tr><td style="text-align:left;">midday-fetch</td><td style="text-align:left;">11:35 * * 1-5</td><td style="text-align:left;">canghai-fetch</td><td style="text-align:left;">fetch_midday_snapshot_v1</td><td style="text-align:left;">午盘快照</td></tr><tr><td style="text-align:left;">midday-research-r7</td><td style="text-align:left;">11:35 * * 1-5</td><td style="text-align:left;">canghai-research</td><td style="text-align:left;">R7 增量 delegation</td><td style="text-align:left;">只跑 R7 增量</td></tr><tr><td style="text-align:left;">midday-plan(P2)</td><td style="text-align:left;">11:40 * * 1-5</td><td style="text-align:left;">canghai-plan</td><td style="text-align:left;">midday_amendment_v1</td><td style="text-align:left;">30 min 窗口</td></tr><tr><td style="text-align:left;">daily-review</td><td style="text-align:left;">15:10 * * 1-5</td><td style="text-align:left;">canghai-review</td><td style="text-align:left;">daily_review_v1</td><td style="text-align:left;">E1</td></tr><tr><td style="text-align:left;">weekly-evolution</td><td style="text-align:left;">15:30 * * 5</td><td style="text-align:left;">canghai-review</td><td style="text-align:left;">weekly_evolution_v1</td><td style="text-align:left;">E2 周五</td></tr><tr><td style="text-align:left;">health-monitor</td><td style="text-align:left;">*/30 * * * *</td><td style="text-align:left;">canghai-fetch</td><td style="text-align:left;">mcp_health_check_v1</td><td style="text-align:left;">30 min 巡检</td></tr></tbody></table></div>
+<p><strong>共 13 个 cron</strong>,替换掉旧 macOS crontab 12 行 + Hermes cron 若干。</p>
+<p><strong>Cron 归属原则</strong>:</p>
+<ul>
+<li>每个 cron 归<strong>唯一</strong> profile</li>
+<li>不允许 cross-profile 一 cron 跑多 profile</li>
+<li>Cron 命名 = <code>&lt;profile>-&lt;job></code> 前缀,便于诊断</li>
+</ul>
+<h3 id="78-兜底与回滚">§7.8 兜底与回滚<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#78-兜底与回滚" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>回滚触发条件</strong>:</p>
+<ul>
+<li>T2 execute 首日出现硬风控违规 → 立即停用新 execute,回滚 intraday-once cron</li>
+<li>T3 P1/P2 首周准确率 &lt;60% → 关闭 auto-reload,只 observe</li>
+<li>T4 全量切换首日出现 kill_switch 触发 3 次以上 → 部分回滚(只保留 fetch / research,execute 回旧)</li>
+<li>T5 稳定期 E2 首次 sign-off 后系统性下滑 3 日 → 回滚 preferences 修改</li>
+</ul>
+<p><strong>回滚工具</strong>:</p>
+<ul>
+<li>Git tag 每个 T 阶段完成打 tag</li>
+<li>旧 profile / skill 保留(tag v0-legacy)</li>
+<li>用户 sign-off 记录进 <code>data/evolution/YYYY-Www/sign_off_log.md</code></li>
+<li>回滚 = <code>git checkout &lt;tag></code> + 重启 profile</li>
+</ul>
+<p><strong>兜底原则</strong>:</p>
+<ul>
+<li><strong>任何时候用户都可以手工下单</strong>(通过 QMT 客户端,不依赖任何 profile)</li>
+<li><strong>任何时候都可以停系统</strong>(kill_switch 文件放进 <code>data/execution/</code>)</li>
+<li><strong>任何时候都可以 review 决策</strong>(所有 artifact 在磁盘)</li>
+</ul>
+
+<hr/>
+<h2 id="附录-a--术语表">附录 A · 术语表<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#附录-a--术语表" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">术语</th><th style="text-align:left;">定义</th></tr></thead><tbody><tr><td style="text-align:left;"><strong>Profile</strong></td><td style="text-align:left;">Hermes 会话配置单元,一个 profile 一份 config.toml / SOUL.md / skills / cron</td></tr><tr><td style="text-align:left;"><strong>Sub-agent</strong></td><td style="text-align:left;">同一 profile 内通过 delegate_task 派发的独立 LLM 会话</td></tr><tr><td style="text-align:left;"><strong>Skill</strong></td><td style="text-align:left;">可复用的分析/执行逻辑单元(YAML frontmatter + prompt/logic)</td></tr><tr><td style="text-align:left;"><strong>Harness</strong></td><td style="text-align:left;">Agent 的执行边界(允许什么 / 禁止什么)</td></tr><tr><td style="text-align:left;"><strong>SOUL.md</strong></td><td style="text-align:left;">Profile 的执行规约(purpose / ownership / toolsets / constraints)</td></tr><tr><td style="text-align:left;"><strong>Artifact</strong></td><td style="text-align:left;">磁盘上的中间产物(JSON / markdown),模型无关</td></tr><tr><td style="text-align:left;"><strong>watchlist_plan</strong></td><td style="text-align:left;">D1 出的当日 plan,含 execution_pool / watch_pool / entry-exit rules</td></tr><tr><td style="text-align:left;"><strong>amendment</strong></td><td style="text-align:left;">P1/P2 出的增量修订,不重写 plan 只补丁</td></tr><tr><td style="text-align:left;"><strong>research_summary</strong></td><td style="text-align:left;">Research 主控出的汇总 artifact,D1 消费入口</td></tr><tr><td style="text-align:left;"><strong>execution_pool</strong></td><td style="text-align:left;">当日自动下单候选(5-8 只)</td></tr><tr><td style="text-align:left;"><strong>watch_pool</strong></td><td style="text-align:left;">当日观察候选(15-25 只),含 300/688(仅 watch 不买)</td></tr><tr><td style="text-align:left;"><strong>candidate_pool</strong></td><td style="text-align:left;">盘中动态维护的秒级监控池(execution + watch + 分钟级新入围)</td></tr><tr><td style="text-align:left;"><strong>execution_block_prefixes</strong></td><td style="text-align:left;">自动买入禁用代码前缀(300/688/920)</td></tr><tr><td style="text-align:left;"><strong>龙头 (leader)</strong></td><td style="text-align:left;">板块内涨停家数 / 主力资金 / 连板高度综合排名 top</td></tr><tr><td style="text-align:left;"><strong>杂毛</strong></td><td style="text-align:left;">板块内非龙头且满足 filter_out_rules 的票,D1 强制剔除</td></tr><tr><td style="text-align:left;"><strong>跷跷板</strong></td><td style="text-align:left;">板块间资金流负相关(相关系数 &lt;-0.6)且 5 日方向反转</td></tr><tr><td style="text-align:left;"><strong>主线</strong></td><td style="text-align:left;">R2 出的 1-3 条当日核心板块,execution_pool 优先从中选</td></tr><tr><td style="text-align:left;"><strong>thesis (human_thesis)</strong></td><td style="text-align:left;">用户手写的因果框架,临时视角,有 breaking_signals</td></tr><tr><td style="text-align:left;"><strong>preferences (user_preferences.yaml)</strong></td><td style="text-align:left;">用户永久硬先验(阈值 / 黑白名单 / 交易偏好)</td></tr><tr><td style="text-align:left;"><strong>amygdala</strong></td><td style="text-align:left;">硬风控二次校验的比喻名(纯 Python,不可协商)</td></tr><tr><td style="text-align:left;"><strong>judgment node</strong></td><td style="text-align:left;">Execute 内的 LLM 判断节点(3 秒响应,枚举输出,超时保守)</td></tr><tr><td style="text-align:left;"><strong>hard_reject</strong></td><td style="text-align:left;">R6 反证的硬否决权(D1 不能覆盖)</td></tr><tr><td style="text-align:left;"><strong>strong_suggest</strong></td><td style="text-align:left;">R6 反证的强建议(D1 需显式覆盖 + 写理由)</td></tr><tr><td style="text-align:left;"><strong>weak_suggest</strong></td><td style="text-align:left;">R6 反证的弱建议(D1 自由决定)</td></tr><tr><td style="text-align:left;"><strong>missed_alpha</strong></td><td style="text-align:left;">观察池等权收益 - 执行池实际收益(评估选股 vs 选执行)</td></tr><tr><td style="text-align:left;"><strong>observation_tracking</strong></td><td style="text-align:left;">Watch_pool T+1/T+5/T+20 追踪(评估 watch 逻辑准确度)</td></tr><tr><td style="text-align:left;"><strong>corrections</strong></td><td style="text-align:left;">错题本,E1/E2 触发时出,固化系统性偏差</td></tr><tr><td style="text-align:left;"><strong>fresh context</strong></td><td style="text-align:left;">LLM 会话每次开新 context,禁止携带昨日 confidence</td></tr><tr><td style="text-align:left;"><strong>T+1 硬约束</strong></td><td style="text-align:left;">A 股 T+1 交割,available_qty 校验(当日买入不可当日卖出)</td></tr><tr><td style="text-align:left;"><strong>kill_switch</strong></td><td style="text-align:left;"><code>data/execution/KILL_SWITCH</code> 文件存在时全部拒单</td></tr><tr><td style="text-align:left;"><strong>市场感知服务</strong></td><td style="text-align:left;">Execute profile 的完整定位,不仅仅是 watcher</td></tr><tr><td style="text-align:left;"><strong>协调游戏</strong></td><td style="text-align:left;">A 股主力群体协同游戏(用户提出的市场理论,§1 宪法背景)</td></tr><tr><td style="text-align:left;"><strong>无情绪优势</strong></td><td style="text-align:left;">Agent 相对人的核心优势(不套牢/不贪心/不硬撑/不迟疑)</td></tr></tbody></table></div>
+<h2 id="附录-b--关键决策记录与用户对话沉淀">附录 B · 关键决策记录(与用户对话沉淀)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#附录-b--关键决策记录与用户对话沉淀" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">决策 #</th><th style="text-align:left;">决策内容</th><th style="text-align:left;">来源(用户对话)</th><th style="text-align:left;">落地位置</th></tr></thead><tbody><tr><td style="text-align:left;"><strong>决策 1</strong></td><td style="text-align:left;">5 profile 中性命名(fetch/research/plan/execute/review)</td><td style="text-align:left;">用户 06-30 批”命名太脑洞”</td><td style="text-align:left;">§2.1</td></tr><tr><td style="text-align:left;"><strong>决策 2</strong></td><td style="text-align:left;">Sub-agent 用 delegation 不用 profile 拆分</td><td style="text-align:left;">用户”7 profile 太重”</td><td style="text-align:left;">§2.3</td></tr><tr><td style="text-align:left;"><strong>决策 3</strong></td><td style="text-align:left;">Execute 归 Python 主导</td><td style="text-align:left;">用户师傅”交易讲纪律”</td><td style="text-align:left;">§5.1</td></tr><tr><td style="text-align:left;"><strong>决策 4</strong></td><td style="text-align:left;">R1-R7 = 7 agent,不合并不再拆</td><td style="text-align:left;">07-03 深挖后定</td><td style="text-align:left;">§2.4</td></tr><tr><td style="text-align:left;"><strong>决策 5</strong></td><td style="text-align:left;">R6 反证禁 MCP(只读 artifact 找漏洞)</td><td style="text-align:left;">07-03 讨论”反证不能自己找证据”</td><td style="text-align:left;">§2.3</td></tr><tr><td style="text-align:left;"><strong>决策 6</strong></td><td style="text-align:left;">D1 fresh context,不携带 R1-R7 中间推理</td><td style="text-align:left;">07-03 定位 07-03 亏损根因</td><td style="text-align:left;">§2.2 消灭 canghai-plan</td></tr><tr><td style="text-align:left;"><strong>决策 7</strong></td><td style="text-align:left;">R6 hard_reject 硬否决权,strong_suggest 需 D1 覆盖</td><td style="text-align:left;">07-03 定</td><td style="text-align:left;">§5.2 验证 2</td></tr><tr><td style="text-align:left;"><strong>决策 8</strong></td><td style="text-align:left;">Skill 双层结构(logic + prompt_<model>)</model></td><td style="text-align:left;">07-04 深夜”换基座”</td><td style="text-align:left;">§4.1</td></tr><tr><td style="text-align:left;"><strong>决策 9</strong></td><td style="text-align:left;">Schema-first, prompt-second</td><td style="text-align:left;">07-04 “换基座后 schema 保留”</td><td style="text-align:left;">§4.1</td></tr><tr><td style="text-align:left;"><strong>决策 10</strong></td><td style="text-align:left;">定期换基座(3-6 月一次),harness 迁移能力是生存能力</td><td style="text-align:left;">07-04 “GPT-5.5 已出”</td><td style="text-align:left;">§1.2 / §1.3</td></tr><tr><td style="text-align:left;"><strong>决策 11</strong></td><td style="text-align:left;">P1 竞价校准 + P2 午盘修订 归 canghai-plan</td><td style="text-align:left;">07-04 深夜”盘中漏 9:25 / 11:30”</td><td style="text-align:left;">§2.4 / §3.3</td></tr><tr><td style="text-align:left;"><strong>决策 12</strong></td><td style="text-align:left;">R7 资金面 Agent 独立(4 维时序)</td><td style="text-align:left;">07-04 深夜”没有资金面 agent”</td><td style="text-align:left;">§2.4 / §4.2</td></tr><tr><td style="text-align:left;"><strong>决策 13</strong></td><td style="text-align:left;">user_preferences.yaml 承载永久硬先验</td><td style="text-align:left;">07-04 深夜”龙头偏好不是 thesis”</td><td style="text-align:left;">§3.6</td></tr><tr><td style="text-align:left;"><strong>决策 14</strong></td><td style="text-align:left;">龙头偏好硬约束(same_sector_only_top_2) + 4 条杂毛过滤</td><td style="text-align:left;">07-04 深夜</td><td style="text-align:left;">§3.6 / §4.2</td></tr><tr><td style="text-align:left;"><strong>决策 15</strong></td><td style="text-align:left;">R5 必须完整落地 serenity 基本面链</td><td style="text-align:left;">07-04 深夜”基本面在哪”</td><td style="text-align:left;">§4.2</td></tr><tr><td style="text-align:left;"><strong>决策 16</strong></td><td style="text-align:left;">跷跷板配对由 detect_seesaw_pairs_v1 输出</td><td style="text-align:left;">07-04 深夜”跷跷板不能只看快照”</td><td style="text-align:left;">§4.2</td></tr><tr><td style="text-align:left;"><strong>决策 17</strong></td><td style="text-align:left;">Execute 内 4 层频率(秒/分钟/5 分钟/10 分钟 cron)</td><td style="text-align:left;">07-04 深夜”10 分钟太粗”</td><td style="text-align:left;">§5.1</td></tr><tr><td style="text-align:left;"><strong>决策 18</strong></td><td style="text-align:left;">Execute 全市场 1 分钟扫描是必要的(板块横截面)</td><td style="text-align:left;">07-04 深夜”板块共振判断需要”</td><td style="text-align:left;">§5.1</td></tr><tr><td style="text-align:left;"><strong>决策 19</strong></td><td style="text-align:left;">market_scanner 归 fetch profile,不归 execute</td><td style="text-align:left;">07-04 深夜”感知不是执行”</td><td style="text-align:left;">§2.1 / §7.7</td></tr><tr><td style="text-align:left;"><strong>决策 20</strong></td><td style="text-align:left;">Execute 是”Python 主导 + LLM 判断节点”混合架构</td><td style="text-align:left;">07-04 深夜”经验能不能程序化”</td><td style="text-align:left;">§5.1</td></tr><tr><td style="text-align:left;"><strong>决策 21</strong></td><td style="text-align:left;">判断节点严格受限(3 秒 / 枚举 / 超时保守)</td><td style="text-align:left;">07-04 深夜”LLM 不能改仓位”</td><td style="text-align:left;">§5.1 层 3</td></tr><tr><td style="text-align:left;"><strong>决策 22</strong></td><td style="text-align:left;">具体判断节点由 T3 实盘数据决定,不写死</td><td style="text-align:left;">用户 07-04 未答 4 节点问题</td><td style="text-align:left;">§5.1 层 3</td></tr><tr><td style="text-align:left;"><strong>决策 23</strong></td><td style="text-align:left;">宪法原则一改为”Agent 无情绪优势”,客观是伪目标</td><td style="text-align:left;">07-04 深夜”Agent 优势是无情绪”</td><td style="text-align:left;">§1.1</td></tr><tr><td style="text-align:left;"><strong>决策 24</strong></td><td style="text-align:left;">用户经验是组件不是主体</td><td style="text-align:left;">07-04 深夜”人的经验是输入”</td><td style="text-align:left;">§1.4</td></tr><tr><td style="text-align:left;"><strong>决策 25</strong></td><td style="text-align:left;">E2 有权对 preferences / thesis 提修订建议(不能自动改)</td><td style="text-align:left;">07-04 深夜”自进化会修订经验”</td><td style="text-align:left;">§5.2 验证 4.5</td></tr><tr><td style="text-align:left;"><strong>决策 26</strong></td><td style="text-align:left;">静态看板 + iLink + 对话三层接触面,总量 &lt;3 小时/周</td><td style="text-align:left;">07-04 深夜(隐含用户不想 30 min/天对话)</td><td style="text-align:left;">§6</td></tr><tr><td style="text-align:left;"><strong>决策 27</strong></td><td style="text-align:left;">契约冻结 + 逐 profile 替换,不做”关闭全部再重建”</td><td style="text-align:left;">用户 07-04 “反对大重写”</td><td style="text-align:left;">§7 T0-T5</td></tr><tr><td style="text-align:left;"><strong>决策 28</strong></td><td style="text-align:left;">系统始终 alive,旧系统 tag v0-legacy 不删</td><td style="text-align:left;">07-04 “系统不能停”</td><td style="text-align:left;">§7.5 / §7.8</td></tr></tbody></table></div>
+<h2 id="附录-c--与现有文档的对应关系">附录 C · 与现有文档的对应关系<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#附录-c--与现有文档的对应关系" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">现有文档</th><th style="text-align:left;">v1 位置</th><th style="text-align:left;">处置</th></tr></thead><tbody><tr><td style="text-align:left;"><code>00-研究端总览.md</code></td><td style="text-align:left;">§2.1 / §2.4</td><td style="text-align:left;">参考,内容已被 v1 §2 覆盖</td></tr><tr><td style="text-align:left;"><code>03-核心设计原则.md</code></td><td style="text-align:left;">§1</td><td style="text-align:left;">参考,内容已被 v1 §1 覆盖 + 扩展</td></tr><tr><td style="text-align:left;"><code>10-研究端Agent骨架-v1.md</code></td><td style="text-align:left;">§2.4</td><td style="text-align:left;">参考,R1-R7 分工已被 v1 §2.4 覆盖 + 补 R7</td></tr><tr><td style="text-align:left;"><code>13-观察票追踪spec.md</code></td><td style="text-align:left;">§5.2 验证 3</td><td style="text-align:left;"><strong>保留权威</strong>(v1 只引用不重写)</td></tr><tr><td style="text-align:left;"><code>14-反证机制spec.md</code></td><td style="text-align:left;">§5.2 验证 2</td><td style="text-align:left;"><strong>保留权威</strong>(v1 只引用不重写)</td></tr><tr><td style="text-align:left;"><code>agents/R1-风格Agent.md</code> … <code>agents/R6-反证Agent.md</code></td><td style="text-align:left;">§2.4 引用</td><td style="text-align:left;"><strong>保留权威</strong>(具体 spec 在这)</td></tr><tr><td style="text-align:left;"><code>agents/D1-主决策Agent.md</code></td><td style="text-align:left;">§2.4 引用</td><td style="text-align:left;"><strong>保留权威</strong></td></tr><tr><td style="text-align:left;"><code>agents/E1-每日复盘Agent.md</code></td><td style="text-align:left;">§2.4 引用</td><td style="text-align:left;"><strong>保留权威</strong></td></tr><tr><td style="text-align:left;"><code>agents/E2-周度进化Agent.md</code></td><td style="text-align:left;">§2.4 引用</td><td style="text-align:left;"><strong>保留权威</strong></td></tr><tr><td style="text-align:left;"><code>agents/R7-资金面Agent.md</code></td><td style="text-align:left;">§2.4 引用</td><td style="text-align:left;"><strong>待建</strong>(T1 施工时创建)</td></tr><tr><td style="text-align:left;"><code>agents/P1-竞价校准Agent.md</code></td><td style="text-align:left;">§2.4 引用</td><td style="text-align:left;"><strong>待建</strong>(T3 施工时创建)</td></tr><tr><td style="text-align:left;"><code>agents/P2-午盘修订Agent.md</code></td><td style="text-align:left;">§2.4 引用</td><td style="text-align:left;"><strong>待建</strong>(T3 施工时创建)</td></tr><tr><td style="text-align:left;"><code>watchlist_plan_schema.md</code></td><td style="text-align:left;">§3.2 契约 1</td><td style="text-align:left;"><strong>保留权威</strong></td></tr><tr><td style="text-align:left;"><code>amendment_schema.md</code></td><td style="text-align:left;">§3.2 契约 2</td><td style="text-align:left;"><strong>待建</strong>(T0/T3 时创建)</td></tr><tr><td style="text-align:left;"><code>research_summary_schema.md</code></td><td style="text-align:left;">§3.2 契约 3</td><td style="text-align:left;"><strong>待建</strong>(T0/T1 时创建)</td></tr><tr><td style="text-align:left;"><code>HERMES-交易端对接说明.md</code></td><td style="text-align:left;">§5.1 / §3.3</td><td style="text-align:left;">参考,盘中 10 分钟频率描述已被 v1 §5.1 覆盖</td></tr><tr><td style="text-align:left;"><code>trading_agent_datasources.md</code></td><td style="text-align:left;">§5.1 层 1-2</td><td style="text-align:left;">参考,tick 1-5 秒描述已并入 v1 §5.1</td></tr><tr><td style="text-align:left;"><code>trading_agent_runtime_runbook.md</code></td><td style="text-align:left;">§7.7</td><td style="text-align:left;">参考,cron 拓扑已被 v1 §7.7 覆盖</td></tr><tr><td style="text-align:left;"><code>refactor_plan.md</code></td><td style="text-align:left;">§7</td><td style="text-align:left;">覆盖,v1 §7 是新的施工路线</td></tr></tbody></table></div>
+<h2 id="附录-d--未解决问题">附录 D · 未解决问题<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#附录-d--未解决问题" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>以下问题<strong>未在本文档解决</strong>,施工时按 T 阶段决定:</p>
+<ol>
+<li><strong>判断节点具体清单</strong>:T3 阶段根据实盘数据决定(§5.1 层 3)</li>
+<li><strong>市值管理配合减持的识别方法</strong>:已知问题(WeFlow 群消息暗示),但技术实现暂无(可能进 R4)</li>
+<li><strong>龙虎榜数据源</strong>:目前依赖同花顺,是否需要冗余源?(T4 后评估)</li>
+<li><strong>做 T 策略是否启用</strong>:preferences.yaml 未开,T5 后评估(需先看无 T 情况下的收益)</li>
+<li><strong>判断节点用哪个基座</strong>:Claude 5 haiku 或 GPT-5 mini?(T3 阶段实测选)</li>
+<li><strong>E2 周报的 sign-off UI</strong>:hermes 对话 or Obsidian markdown 打勾?(T3 施工时定)</li>
+<li><strong>kill_switch 触发后的恢复流程</strong>:目前只定义触发条件,恢复流程待补(T4 时补 runbook)</li>
+<li><strong>多市场扩展</strong>:港股 / crypto 用同套 harness?(v2 议题,当前不考虑)</li>
+<li><strong>Skill fixture 回归测试基础设施</strong>:目前无,T3 后建</li>
+<li><strong>数据源冗余矩阵</strong>(source_diversity_matrix)的定期 review 机制:E2 每周?或每月一次?(T3 时定)</li>
+</ol>
+<h2 id="附录-e--用户三重角色-checklist">附录 E · 用户三重角色 checklist<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#附录-e--用户三重角色-checklist" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>每周用户应完成的任务</strong>:</p>
+<p><strong>每日</strong>(15-30 分钟):</p>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 早读 Obsidian 盘前预案(08:30 后)</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 中午扫 Obsidian 午盘 briefing(12:05-12:30)</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 傍晚读 Obsidian 复盘记录(15:15 后)</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 处理 iLink 异动告警(如有)</li>
+</ul>
+<p><strong>每周</strong>(15-20 分钟 + 偶发):</p>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 周五晚 或 周末 E2 sign-off</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 手工 review preferences.yaml 是否需要调整</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 手工 review human_thesis/active/ 是否需要补 / 撤</li>
+</ul>
+<p><strong>每月</strong>(可选,1-3 小时):</p>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 深度架构 review(是否需要修订本文档 v2)</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 数据源 review(source_diversity_matrix 是否需要补维度)</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Skill 大改动(如果 E2 累积了大量小修订)</li>
+</ul>
+<p><strong>每季度</strong>(评估,不定时):</p>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 换基座评估(现有基座是否明显落后于市场新基座)</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 系统实盘绩效 review(过去 3 月收益 / 最大回撤 / 换手 / missed_alpha)</li>
+</ul>
+<hr/>
+<h2 id="文档结束">文档结束<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#文档结束" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>本文档 v1.2 定稿于 2026-07-04 深夜</strong>。</p>
+<p><strong>用户 sign-off 后进入 T0 施工阶段</strong>。</p>
+<p><strong>下次修订</strong> = v2,触发条件:</p>
+<ul>
+<li>T5 稳定期结束后的<strong>首次系统性 review</strong></li>
+<li>或用户提出重大架构分歧(如”要不要做港股”、“要不要用 RL fine-tune”)</li>
+<li>或换基座后的<strong>首次 review</strong>(基座换代可能带来能力边界变化)</li>
+</ul>
+<p><strong>修订权</strong>:</p>
+<ul>
+<li>用户 sign-off 生效</li>
+<li>Hermes 可提修订建议</li>
+<li>E2 可提关键机制建议(如”§5.1 层 3 判断节点数量应扩至 6 个”)</li>
+<li><strong>本文档一旦冲突,以用户 sign-off 版本为准</strong></li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-0" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#沧海巨浪--权威架构文档-v1" data-for="沧海巨浪--权威架构文档-v1">沧海巨浪 · 权威架构文档 v1</a></li><li class="depth-1"><a href="#第-0-章--为什么有这份文档" data-for="第-0-章--为什么有这份文档">第 0 章 · 为什么有这份文档</a></li><li class="depth-2"><a href="#01-当前问题的诊断" data-for="01-当前问题的诊断">§0.1 当前问题的诊断</a></li><li class="depth-2"><a href="#02-上一版重构的失败教训" data-for="02-上一版重构的失败教训">§0.2 上一版重构的失败教训</a></li><li class="depth-2"><a href="#03-本次重构的边界" data-for="03-本次重构的边界">§0.3 本次重构的边界</a></li><li class="depth-2"><a href="#04-本文档的地位" data-for="04-本文档的地位">§0.4 本文档的地位</a></li><li class="depth-1"><a href="#第-1-章--宪法3-条硬原则--用户三重角色" data-for="第-1-章--宪法3-条硬原则--用户三重角色">第 1 章 · 宪法(3 条硬原则 + 用户三重角色)</a></li><li class="depth-2"><a href="#11-原则一agent-的比较优势是无情绪不是无客观" data-for="11-原则一agent-的比较优势是无情绪不是无客观">§1.1 原则一:Agent 的比较优势是无情绪,不是无客观</a></li><li class="depth-2"><a href="#12-原则二llm-时间衰减必须由架构对冲" data-for="12-原则二llm-时间衰减必须由架构对冲">§1.2 原则二:LLM 时间衰减必须由架构对冲</a></li><li class="depth-2"><a href="#13-原则三harness-是资产基座是商品" data-for="13-原则三harness-是资产基座是商品">§1.3 原则三:Harness 是资产,基座是商品</a></li><li class="depth-2"><a href="#14-用户在系统里的三重角色宪法级" data-for="14-用户在系统里的三重角色宪法级">§1.4 用户在系统里的三重角色(宪法级)</a></li><li class="depth-1"><a href="#第-2-章--系统骨架5-profile--12-执行单元" data-for="第-2-章--系统骨架5-profile--12-执行单元">第 2 章 · 系统骨架(5 profile + 12 执行单元)</a></li><li class="depth-2"><a href="#21-5-profile-中性命名" data-for="21-5-profile-中性命名">§2.1 5 profile 中性命名</a></li><li class="depth-2"><a href="#22-每个-profile-的消灭测试" data-for="22-每个-profile-的消灭测试">§2.2 每个 profile 的”消灭测试”</a></li><li class="depth-2"><a href="#23-sub-agent-通过-delegation-实现不通过-profile-拆分" data-for="23-sub-agent-通过-delegation-实现不通过-profile-拆分">§2.3 sub-agent 通过 delegation 实现,不通过 profile 拆分</a></li><li class="depth-2"><a href="#24-12-执行单元的具体分工" data-for="24-12-执行单元的具体分工">§2.4 12 执行单元的具体分工</a></li><li class="depth-2"><a href="#25-现存-profile-的处置" data-for="25-现存-profile-的处置">§2.5 现存 profile 的处置</a></li><li class="depth-2"><a href="#26-profile-与-agent-的物理隔离" data-for="26-profile-与-agent-的物理隔离">§2.6 profile 与 agent 的物理隔离</a></li><li class="depth-1"><a href="#第-3-章--数据流" data-for="第-3-章--数据流">第 3 章 · 数据流</a></li><li class="depth-2"><a href="#31-目录树硬约束" data-for="31-目录树硬约束">§3.1 目录树(硬约束)</a></li><li class="depth-2"><a href="#32-契约json-schema-是模型无关的资产" data-for="32-契约json-schema-是模型无关的资产">§3.2 契约:JSON schema 是模型无关的资产</a></li><li class="depth-2"><a href="#33-每日数据流时间轴v12" data-for="33-每日数据流时间轴v12">§3.3 每日数据流时间轴(v1.2)</a></li><li class="depth-2"><a href="#34-artifact-first-pull-based-通信" data-for="34-artifact-first-pull-based-通信">§3.4 artifact-first, pull-based 通信</a></li><li class="depth-2"><a href="#35-human_thesis-目录临时视角承载" data-for="35-human_thesis-目录临时视角承载">§3.5 human_thesis 目录(临时视角承载)</a></li><li class="depth-2"><a href="#36-user_preferencesyaml永久硬先验新增" data-for="36-user_preferencesyaml永久硬先验新增">§3.6 user_preferences.yaml(永久硬先验)【新增】</a></li><li class="depth-1"><a href="#第-4-章--skills-与-harness资产层" data-for="第-4-章--skills-与-harness资产层">第 4 章 · Skills 与 Harness(资产层)</a></li><li class="depth-2"><a href="#41-skill-的双层结构" data-for="41-skill-的双层结构">§4.1 Skill 的双层结构</a></li><li class="depth-2"><a href="#42-skill-的归属每个-profile-拥有的完整-skill-清单" data-for="42-skill-的归属每个-profile-拥有的完整-skill-清单">§4.2 Skill 的归属(每个 profile 拥有的完整 skill 清单)</a></li><li class="depth-2"><a href="#43-现存-16-个-canghai-skill-迁移映射" data-for="43-现存-16-个-canghai-skill-迁移映射">§4.3 现存 16 个 canghai skill 迁移映射</a></li><li class="depth-2"><a href="#44-跨基座测试标注" data-for="44-跨基座测试标注">§4.4 跨基座测试标注</a></li><li class="depth-1"><a href="#第-5-章--机制3-层-loop--5-层对抗性验证" data-for="第-5-章--机制3-层-loop--5-层对抗性验证">第 5 章 · 机制(3 层 loop + 5 层对抗性验证)</a></li><li class="depth-2"><a href="#51-3-层-loop" data-for="51-3-层-loop">§5.1 3 层 loop</a></li><li class="depth-2"><a href="#52-5-层对抗性验证" data-for="52-5-层对抗性验证">§5.2 5 层对抗性验证</a></li><li class="depth-2"><a href="#53-harness每个-profile-的执行边界" data-for="53-harness每个-profile-的执行边界">§5.3 Harness(每个 profile 的执行边界)</a></li><li class="depth-1"><a href="#第-6-章--交互3-层用户接触面" data-for="第-6-章--交互3-层用户接触面">第 6 章 · 交互(3 层用户接触面)</a></li><li class="depth-2"><a href="#61-静态看板默认接触面零对话" data-for="61-静态看板默认接触面零对话">§6.1 静态看板(默认接触面,零对话)</a></li><li class="depth-2"><a href="#62-ilink-告警异常接触面只在必要时打扰" data-for="62-ilink-告警异常接触面只在必要时打扰">§6.2 iLink 告警(异常接触面,只在必要时打扰)</a></li><li class="depth-2"><a href="#63-对话按需接触面只在必要时开" data-for="63-对话按需接触面只在必要时开">§6.3 对话(按需接触面,只在必要时开)</a></li><li class="depth-2"><a href="#64-3-层接触面的边界" data-for="64-3-层接触面的边界">§6.4 3 层接触面的边界</a></li><li class="depth-1"><a href="#第-7-章--施工路线图t0-t5" data-for="第-7-章--施工路线图t0-t5">第 7 章 · 施工路线图(T0-T5)</a></li><li class="depth-2"><a href="#71-t0--契约冻结--骨架落地本文档-sign-off--2-天" data-for="71-t0--契约冻结--骨架落地本文档-sign-off--2-天">§7.1 T0 · 契约冻结 &amp; 骨架落地(本文档 sign-off ~ +2 天)</a></li><li class="depth-2"><a href="#72-t1--profile-新建--数据流验证3-5-天" data-for="72-t1--profile-新建--数据流验证3-5-天">§7.2 T1 · Profile 新建 + 数据流验证(+3-5 天)</a></li><li class="depth-2"><a href="#73-t2--execute-层重构5-7-天" data-for="73-t2--execute-层重构5-7-天">§7.3 T2 · Execute 层重构(+5-7 天)</a></li><li class="depth-2"><a href="#74-t3--plan-层-p1p2--review-层-e1e2-补强5-7-天" data-for="74-t3--plan-层-p1p2--review-层-e1e2-补强5-7-天">§7.4 T3 · Plan 层 P1/P2 + Review 层 E1/E2 补强(+5-7 天)</a></li><li class="depth-2"><a href="#75-t4--全量切换--旧系统下线3-5-天" data-for="75-t4--全量切换--旧系统下线3-5-天">§7.5 T4 · 全量切换 + 旧系统下线(+3-5 天)</a></li><li class="depth-2"><a href="#76-t5--稳定期--e2-首次修订生效2-周持续观察" data-for="76-t5--稳定期--e2-首次修订生效2-周持续观察">§7.6 T5 · 稳定期 + E2 首次修订生效(+2 周持续观察)</a></li><li class="depth-2"><a href="#77-cron-拓扑一览新系统" data-for="77-cron-拓扑一览新系统">§7.7 Cron 拓扑一览(新系统)</a></li><li class="depth-2"><a href="#78-兜底与回滚" data-for="78-兜底与回滚">§7.8 兜底与回滚</a></li><li class="depth-1"><a href="#附录-a--术语表" data-for="附录-a--术语表">附录 A · 术语表</a></li><li class="depth-1"><a href="#附录-b--关键决策记录与用户对话沉淀" data-for="附录-b--关键决策记录与用户对话沉淀">附录 B · 关键决策记录(与用户对话沉淀)</a></li><li class="depth-1"><a href="#附录-c--与现有文档的对应关系" data-for="附录-c--与现有文档的对应关系">附录 C · 与现有文档的对应关系</a></li><li class="depth-1"><a href="#附录-d--未解决问题" data-for="附录-d--未解决问题">附录 D · 未解决问题</a></li><li class="depth-1"><a href="#附录-e--用户三重角色-checklist" data-for="附录-e--用户三重角色-checklist">附录 E · 用户三重角色 checklist</a></li><li class="depth-1"><a href="#文档结束" data-for="文档结束">文档结束</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="./未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="./static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="./static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="./static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="./static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript-551b937a.js" type="module" data-persist="true"></script></html>
