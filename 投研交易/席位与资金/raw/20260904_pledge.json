@@ -1,0 +1,116 @@
+{
+ "301498.SZ": null,
+ "002568.SZ": {
+  "ts_code": "002568.SZ",
+  "end_date": "20260828",
+  "pledge_count": "5",
+  "unrest_pledge": 7134.0,
+  "rest_pledge": 0.0,
+  "total_share": 104162.37,
+  "pledge_ratio": 6.85
+ },
+ "002083.SZ": {
+  "ts_code": "002083.SZ",
+  "end_date": "20260828",
+  "pledge_count": "3",
+  "unrest_pledge": 10264.0,
+  "rest_pledge": 0.0,
+  "total_share": 94663.9,
+  "pledge_ratio": 10.84
+ },
+ "000801.SZ": {
+  "ts_code": "000801.SZ",
+  "end_date": "20260828",
+  "pledge_count": "2",
+  "unrest_pledge": 13707.46,
+  "rest_pledge": 0.0,
+  "total_share": 101632.48,
+  "pledge_ratio": 13.49
+ },
+ "300929.SZ": null,
+ "002192.SZ": {
+  "ts_code": "002192.SZ",
+  "end_date": "20201225",
+  "pledge_count": "2",
+  "unrest_pledge": 4326.0,
+  "rest_pledge": 0.0,
+  "total_share": 25965.52,
+  "pledge_ratio": 16.66
+ },
+ "002049.SZ": {
+  "ts_code": "002049.SZ",
+  "end_date": "20220602",
+  "pledge_count": "1",
+  "unrest_pledge": 9791.75,
+  "rest_pledge": 0.0,
+  "total_share": 60686.24,
+  "pledge_ratio": 16.14
+ },
+ "002456.SZ": {
+  "ts_code": "002456.SZ",
+  "end_date": "20260828",
+  "pledge_count": "1",
+  "unrest_pledge": 1426.32,
+  "rest_pledge": 0.0,
+  "total_share": 349591.52,
+  "pledge_ratio": 0.41
+ },
+ "920187.BJ": null,
+ "600155.SH": {
+  "ts_code": "600155.SH",
+  "end_date": "20260828",
+  "pledge_count": "8",
+  "unrest_pledge": 15913.76,
+  "rest_pledge": 0.0,
+  "total_share": 221354.25,
+  "pledge_ratio": 7.19
+ },
+ "600905.SH": null,
+ "601668.SH": {
+  "ts_code": "601668.SH",
+  "end_date": "20260828",
+  "pledge_count": "9",
+  "unrest_pledge": 7609.08,
+  "rest_pledge": 0.0,
+  "total_share": 4132039.04,
+  "pledge_ratio": 0.18
+ },
+ "000858.SZ": {
+  "ts_code": "000858.SZ",
+  "end_date": "20260828",
+  "pledge_count": "3",
+  "unrest_pledge": 46.32,
+  "rest_pledge": 0.0,
+  "total_share": 388160.8,
+  "pledge_ratio": 0.01
+ },
+ "300482.SZ": {
+  "ts_code": "300482.SZ",
+  "end_date": "20260828",
+  "pledge_count": "1",
+  "unrest_pledge": 116.24,
+  "rest_pledge": 0.0,
+  "total_share": 46815.21,
+  "pledge_ratio": 0.25
+ },
+ "688625.SH": {
+  "ts_code": "688625.SH",
+  "end_date": "20220722",
+  "pledge_count": "1",
+  "unrest_pledge": 130.0,
+  "rest_pledge": 0.0,
+  "total_share": 13333.34,
+  "pledge_ratio": 0.97
+ },
+ "603312.SH": null,
+ "301078.SZ": null,
+ "300832.SZ": {
+  "ts_code": "300832.SZ",
+  "end_date": "20260828",
+  "pledge_count": "22",
+  "unrest_pledge": 10673.01,
+  "rest_pledge": 0.0,
+  "total_share": 78571.88,
+  "pledge_ratio": 13.58
+ }
+}

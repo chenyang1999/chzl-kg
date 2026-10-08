@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>09-架构审阅图-T1prime</title><meta charset="utf-8"/><link rel="preload" href="./index-5a23ce28.css" as="style"/><link rel="preload" href="./prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="09-架构审阅图-T1prime"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="09-架构审阅图-T1prime"/><meta name="twitter:description" content="沧海巨浪 · 架构审阅图（T1’ 纠偏版） 版本: v0.1-draft（待用户 sign-off） 日期: 2026-07-05 依据: docs/00-CANONICAL-ARCHITECTURE-v1.md v1.2 状态: 审阅稿 — sign-off 前不得按旧进度表继续施工 本文档目的: 把 CANONICAL 原设计、当前偏离、T1’ 目标架构、数据流、MCP/工具层、Cron 拓扑 全部用图讲清楚，供全局审阅后再开工。 用户已拍板（2026-07-05）: 决策项选择Research / Plan / Review 主路径Hermes LLM 会话 + delegate_tas..."/><meta property="og:description" content="沧海巨浪 · 架构审阅图（T1’ 纠偏版） 版本: v0.1-draft（待用户 sign-off） 日期: 2026-07-05 依据: docs/00-CANONICAL-ARCHITECTURE-v1.md v1.2 状态: 审阅稿 — sign-off 前不得按旧进度表继续施工 本文档目的: 把 CANONICAL 原设计、当前偏离、T1’ 目标架构、数据流、MCP/工具层、Cron 拓扑 全部用图讲清楚，供全局审阅后再开工。 用户已拍板（2026-07-05）: 决策项选择Research / Plan / Review 主路径Hermes LLM 会话 + delegate_tas..."/><meta property="og:image:alt" content="沧海巨浪 · 架构审阅图（T1’ 纠偏版） 版本: v0.1-draft（待用户 sign-off） 日期: 2026-07-05 依据: docs/00-CANONICAL-ARCHITECTURE-v1.md v1.2 状态: 审阅稿 — sign-off 前不得按旧进度表继续施工 本文档目的: 把 CANONICAL 原设计、当前偏离、T1’ 目标架构、数据流、MCP/工具层、Cron 拓扑 全部用图讲清楚，供全局审阅后再开工。 用户已拍板（2026-07-05）: 决策项选择Research / Plan / Review 主路径Hermes LLM 会话 + delegate_tas..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/09-架构审阅图-t1prime"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/09-架构审阅图-t1prime"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="沧海巨浪 · 架构审阅图（T1’ 纠偏版） 版本: v0.1-draft（待用户 sign-off） 日期: 2026-07-05 依据: docs/00-CANONICAL-ARCHITECTURE-v1.md v1.2 状态: 审阅稿 — sign-off 前不得按旧进度表继续施工 本文档目的: 把 CANONICAL 原设计、当前偏离、T1’ 目标架构、数据流、MCP/工具层、Cron 拓扑 全部用图讲清楚，供全局审阅后再开工。 用户已拍板（2026-07-05）: 决策项选择Research / Plan / Review 主路径Hermes LLM 会话 + delegate_tas..."/><meta name="generator" content="Quartz"/><link href="./index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="./static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="09-架构审阅图-t1prime" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>09-架构审阅图-T1prime</a></div></nav><h1 class="article-title">09-架构审阅图-T1prime</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-17T05:00:09.000Z">2026年9月17日</time><span>21分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="沧海巨浪--架构审阅图t1-纠偏版">沧海巨浪 · 架构审阅图（T1’ 纠偏版）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#沧海巨浪--架构审阅图t1-纠偏版" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>版本</strong>: v0.1-draft（待用户 sign-off）<br/>
+<strong>日期</strong>: 2026-07-05<br/>
+<strong>依据</strong>: <code>docs/00-CANONICAL-ARCHITECTURE-v1.md</code> v1.2<br/>
+<strong>状态</strong>: 审阅稿 — <strong>sign-off 前不得按旧进度表继续施工</strong></p>
+<p><strong>本文档目的</strong>: 把 CANONICAL 原设计、当前偏离、T1’ 目标架构、数据流、MCP/工具层、Cron 拓扑 <strong>全部用图讲清楚</strong>，供全局审阅后再开工。</p>
+<p><strong>用户已拍板（2026-07-05）</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>决策项</th><th>选择</th></tr></thead><tbody><tr><td>Research / Plan / Review 主路径</td><td>Hermes LLM 会话 + <code>delegate_task</code></td></tr><tr><td>Skill 组织</td><td><strong>方案 B</strong>：T1’ 全写进 <code>SKILL.md</code>，跑通后再拆 <code>skill_logic.md</code> + <code>skill_prompt_*.md</code></td></tr><tr><td>Hermes 旧 profile / cron</td><td><strong>可全部推倒重写</strong></td></tr><tr><td>Python 规则版 (r*.py / d1_algorithm)</td><td><strong>Hermes 全部做完之后</strong>再写 fallback，T1’ 不扩展</td></tr><tr><td>Execute 轮询</td><td><strong>30–60s</strong>（无打板）；CANONICAL 秒级描述 = T2.x 可选增强</td></tr><tr><td>旧 research/plan 系统</td><td>Hermes 链跑通即停旧 cron</td></tr><tr><td>Fetch cron</td><td>暂不动（等 research/plan 先通）</td></tr></tbody></table></div>
+<hr/>
+<h2 id="0-一句话总结">0. 一句话总结<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#0-一句话总结" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p><strong>CANONICAL 设计的是「Hermes 运行时 + 项目仓库资产」双平面系统；当前施工几乎只做了资产平面里的 Python 脚本链，Hermes 的 LLM/delegation/harness 未接线。T1’ = 先把 Hermes 跑通，Python fallback 后置。</strong></p>
+</blockquote>
+<hr/>
+<h2 id="1-双平面架构宪法级">1. 双平面架构（宪法级）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-双平面架构宪法级" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>系统由两个平面组成，<strong>不可混为一谈</strong>：</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  subgraph RUNTIME[\&quot;🟣 运行时平面 · ~/.hermes/\&quot;]\n    direction TB\n    DAEMON[Hermes daemon / gateway]\n    PROFILES[5 × canghai-* profile]\n    CRON[hermes cron 调度器]\n    DELEG[delegation harness]\n    HARNESS[SOUL.md toolsets 白名单]\n    MCPRUN[MCP 连接池&lt;br/>~/.hermes/config.yaml]\n    DAEMON --> CRON\n    CRON --> PROFILES\n    PROFILES --> DELEG\n    DELEG --> HARNESS\n    HARNESS --> MCPRUN\n  end\n\n  subgraph ASSET[\&quot;🟢 资产平面 · 项目仓库 /沧海巨浪\&quot;]\n    direction TB\n    SKILLS[skills/*.md]\n    SCHEMAS[docs/*_schema.md]\n    AGENTS[docs/agents/*.md]\n    DATA[data/ 分区目录]\n    KG[chzl_kg/ Obsidian]\n    PYFB[\&quot;src/research|plan/*.py&lt;br/>⏸ T1' 后阶段才启用 fallback\&quot;]\n    PYEXE[\&quot;src/trading/ execute&lt;br/>⏸ T2\&quot;]\n    SKILLS --> PROFILES\n    SCHEMAS --> DATA\n  end\n\n  PROFILES -->|读 raw / 写 research/plans| DATA\n  PROFILES -->|读 skills| SKILLS\n  PYFB -.->|仅 Hermes 失败时| DATA&quot;">flowchart TB
+  subgraph RUNTIME[&quot;🟣 运行时平面 · ~/.hermes/&quot;]
+    direction TB
+    DAEMON[Hermes daemon / gateway]
+    PROFILES[5 × canghai-* profile]
+    CRON[hermes cron 调度器]
+    DELEG[delegation harness]
+    HARNESS[SOUL.md toolsets 白名单]
+    MCPRUN[MCP 连接池&lt;br/>~/.hermes/config.yaml]
+    DAEMON --> CRON
+    CRON --> PROFILES
+    PROFILES --> DELEG
+    DELEG --> HARNESS
+    HARNESS --> MCPRUN
+  end
+
+  subgraph ASSET[&quot;🟢 资产平面 · 项目仓库 /沧海巨浪&quot;]
+    direction TB
+    SKILLS[skills/*.md]
+    SCHEMAS[docs/*_schema.md]
+    AGENTS[docs/agents/*.md]
+    DATA[data/ 分区目录]
+    KG[chzl_kg/ Obsidian]
+    PYFB[&quot;src/research|plan/*.py&lt;br/>⏸ T1' 后阶段才启用 fallback&quot;]
+    PYEXE[&quot;src/trading/ execute&lt;br/>⏸ T2&quot;]
+    SKILLS --> PROFILES
+    SCHEMAS --> DATA
+  end
+
+  PROFILES -->|读 raw / 写 research/plans| DATA
+  PROFILES -->|读 skills| SKILLS
+  PYFB -.->|仅 Hermes 失败时| DATA
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>平面</th><th>路径</th><th>职责</th><th>T1’ 状态</th></tr></thead><tbody><tr><td><strong>运行时</strong></td><td><code>~/.hermes/profiles/canghai-*/</code></td><td>LLM 会话、delegation、tool 拦截、cron</td><td>🔴 名义存在，research/plan <strong>未接线</strong></td></tr><tr><td><strong>资产</strong></td><td><code>/Users/chenyang/Downloads/demo/沧海巨浪/</code></td><td>schema、skill、artifact I/O、（延后）fallback</td><td>🟡 fetch 脚本 ✅；research/plan Python ⚠️ <strong>冻结不扩展</strong></td></tr></tbody></table></div>
+<h3 id="11-当前偏离-vs-目标对照">1.1 当前偏离 vs 目标（对照）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-当前偏离-vs-目标对照" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  subgraph WRONG[\&quot;❌ 当前真实施工\&quot;]\n    W1[\&quot;cron --no-agent&lt;br/>→ Python 脚本\&quot;]\n    W2[\&quot;src/research/r*.py&lt;br/>规则版 R1-R7\&quot;]\n    W3[\&quot;d1_algorithm.py&lt;br/>规则六步\&quot;]\n    W4[\&quot;SOUL.md 写了约束&lt;br/>运行时无 enforcement\&quot;]\n    W1 --> W2 --> W3\n  end\n\n  subgraph RIGHT[\&quot;✅ T1' 目标\&quot;]\n    R1[\&quot;cron agent 模式&lt;br/>+ skill + prompt\&quot;]\n    R2[\&quot;research_orchestrator_v1&lt;br/>delegate_task → R1-R7\&quot;]\n    R3[\&quot;main_decision_v1&lt;br/>fresh context LLM\&quot;]\n    R4[\&quot;pydantic 校验后写盘\&quot;]\n    R1 --> R2 --> R3 --> R4\n  end\n\n  WRONG -.->|纠偏| RIGHT&quot;">flowchart LR
+  subgraph WRONG[&quot;❌ 当前真实施工&quot;]
+    W1[&quot;cron --no-agent&lt;br/>→ Python 脚本&quot;]
+    W2[&quot;src/research/r*.py&lt;br/>规则版 R1-R7&quot;]
+    W3[&quot;d1_algorithm.py&lt;br/>规则六步&quot;]
+    W4[&quot;SOUL.md 写了约束&lt;br/>运行时无 enforcement&quot;]
+    W1 --> W2 --> W3
+  end
+
+  subgraph RIGHT[&quot;✅ T1' 目标&quot;]
+    R1[&quot;cron agent 模式&lt;br/>+ skill + prompt&quot;]
+    R2[&quot;research_orchestrator_v1&lt;br/>delegate_task → R1-R7&quot;]
+    R3[&quot;main_decision_v1&lt;br/>fresh context LLM&quot;]
+    R4[&quot;pydantic 校验后写盘&quot;]
+    R1 --> R2 --> R3 --> R4
+  end
+
+  WRONG -.->|纠偏| RIGHT
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<hr/>
+<h2 id="2-五-profile-总览类脑映射--载体">2. 五 Profile 总览（类脑映射 + 载体）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-五-profile-总览类脑映射--载体" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  subgraph FETCH[\&quot;canghai-fetch · 丘脑 · 感知\&quot;]\n    F1[07:15 pre-fetch]\n    F2[*/30 MCP 健康]\n    F3[09:24 竞价快照 T2]\n    F4[11:35 午盘快照 T2]\n    F5[5min market_scanner T2]\n  end\n\n  subgraph RESEARCH[\&quot;canghai-research · 皮层 · 分析\&quot;]\n    RO[research_orchestrator_v1 主控]\n    R1[R1 风格]\n    R2[R2 主线]\n    R3[R3 情绪]\n    R4[R4 消息]\n    R5[R5 个股]\n    R6[R6 反证]\n    R7[R7 资金]\n    RO --> R1 &amp; R3 &amp; R4 &amp; R7\n    RO --> R2 --> R5 --> R6\n  end\n\n  subgraph PLAN[\&quot;canghai-plan · 前额叶 · 取舍\&quot;]\n    D1[D1 08:00]\n    P1[P1 09:25 T3]\n    P2[P2 11:40 T3]\n  end\n\n  subgraph EXECUTE[\&quot;canghai-execute · 纹状体 · 执行 T2\&quot;]\n    W[watcher daemon]\n    A[amygdala 硬风控]\n    J[judgment nodes T3]\n  end\n\n  subgraph REVIEW[\&quot;canghai-review · 海马 · 反思 T3\&quot;]\n    E1[E1 日复盘]\n    E2[E2 周进化]\n  end\n\n  FETCH -->|data/raw/| RESEARCH\n  RESEARCH -->|research_summary| PLAN\n  PLAN -->|watchlist_plan| EXECUTE\n  EXECUTE -->|execution/*| REVIEW\n  REVIEW -.->|E2 修订建议| PLAN&quot;">flowchart TB
+  subgraph FETCH[&quot;canghai-fetch · 丘脑 · 感知&quot;]
+    F1[07:15 pre-fetch]
+    F2[*/30 MCP 健康]
+    F3[09:24 竞价快照 T2]
+    F4[11:35 午盘快照 T2]
+    F5[5min market_scanner T2]
+  end
+
+  subgraph RESEARCH[&quot;canghai-research · 皮层 · 分析&quot;]
+    RO[research_orchestrator_v1 主控]
+    R1[R1 风格]
+    R2[R2 主线]
+    R3[R3 情绪]
+    R4[R4 消息]
+    R5[R5 个股]
+    R6[R6 反证]
+    R7[R7 资金]
+    RO --> R1 &amp; R3 &amp; R4 &amp; R7
+    RO --> R2 --> R5 --> R6
+  end
+
+  subgraph PLAN[&quot;canghai-plan · 前额叶 · 取舍&quot;]
+    D1[D1 08:00]
+    P1[P1 09:25 T3]
+    P2[P2 11:40 T3]
+  end
+
+  subgraph EXECUTE[&quot;canghai-execute · 纹状体 · 执行 T2&quot;]
+    W[watcher daemon]
+    A[amygdala 硬风控]
+    J[judgment nodes T3]
+  end
+
+  subgraph REVIEW[&quot;canghai-review · 海马 · 反思 T3&quot;]
+    E1[E1 日复盘]
+    E2[E2 周进化]
+  end
+
+  FETCH -->|data/raw/| RESEARCH
+  RESEARCH -->|research_summary| PLAN
+  PLAN -->|watchlist_plan| EXECUTE
+  EXECUTE -->|execution/*| REVIEW
+  REVIEW -.->|E2 修订建议| PLAN
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Profile</th><th>类脑</th><th>载体</th><th>LLM 会话/日</th><th>T1’</th></tr></thead><tbody><tr><td><code>canghai-fetch</code></td><td>丘脑</td><td>Python 脚本为主</td><td>0–1</td><td>✅ 保持 <code>--no-agent</code></td></tr><tr><td><code>canghai-research</code></td><td>皮层</td><td><strong>主控 LLM + 7×delegation</strong></td><td>1 + 7</td><td>🔴 <strong>T1’ 核心</strong></td></tr><tr><td><code>canghai-plan</code></td><td>前额叶</td><td><strong>fresh context LLM ×3</strong></td><td>3（D1 先通）</td><td>🔴 <strong>T1’ 核心</strong></td></tr><tr><td><code>canghai-execute</code></td><td>纹状体</td><td>Python daemon + 受控 LLM 节点</td><td>视触发</td><td>⬜ T2</td></tr><tr><td><code>canghai-review</code></td><td>海马</td><td>fresh context LLM</td><td>1–2</td><td>⬜ T3</td></tr></tbody></table></div>
+<p><strong>关键宪法（不可违反）</strong>:</p>
+<ul>
+<li>D1 / P1 / P2 / E1 / E2 必须 <strong>fresh context</strong>（07-03 分散持仓教训）</li>
+<li>R6 <code>hard_reject</code> 对 D1 有 <strong>唯一硬否决权</strong></li>
+<li>Execute <strong>不做研究、不选股</strong> — 只消费 plan artifact</li>
+</ul>
+<hr/>
+<h2 id="3-每日数据流时间轴canonical-33">3. 每日数据流时间轴（CANONICAL §3.3）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-每日数据流时间轴canonical-33" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;gantt\n  title 交易日数据流（Mon–Fri）\n  dateFormat HH:mm\n  axisFormat %H:%M\n\n  section Fetch\n  pre-fetch 公众号/WeFlow/群聊     :f1, 07:15, 10m\n  MCP 健康 manifest               :f2, 07:15, 10m\n  竞价快照 (T2)                   :f3, 09:24, 1m\n  午盘快照 (T2)                   :f4, 11:35, 5m\n\n  section Research\n  R1/R3/R4/R7 并行 delegation     :r1, 07:30, 15m\n  R2/R5 串行 delegation           :r2, 07:45, 10m\n  R6 反证 delegation              :r6, 07:55, 5m\n  research_summary 落盘           :rs, 08:00, 1m\n  R7 午盘增量 (T2)                :r7, 11:35, 10m\n\n  section Plan\n  D1 watchlist_plan + 盘前 md     :d1, 08:00, 20m\n  P1 竞价校准 (T3)                :p1, 09:25, 4m\n  P2 午盘修订 (T3)                :p2, 11:40, 25m\n\n  section Execute\n  watcher 启动 (T2)               :e1, 09:15, 350m\n  reload amendment (T2)           :e2, 09:29, 1m\n\n  section Review\n  E1 日复盘 (T3)                  :e1r, 15:10, 30m\n  E2 周进化 (T3 Fri)              :e2r, 15:30, 45m\n  &quot;">gantt
+  title 交易日数据流（Mon–Fri）
+  dateFormat HH:mm
+  axisFormat %H:%M
+
+  section Fetch
+  pre-fetch 公众号/WeFlow/群聊     :f1, 07:15, 10m
+  MCP 健康 manifest               :f2, 07:15, 10m
+  竞价快照 (T2)                   :f3, 09:24, 1m
+  午盘快照 (T2)                   :f4, 11:35, 5m
+
+  section Research
+  R1/R3/R4/R7 并行 delegation     :r1, 07:30, 15m
+  R2/R5 串行 delegation           :r2, 07:45, 10m
+  R6 反证 delegation              :r6, 07:55, 5m
+  research_summary 落盘           :rs, 08:00, 1m
+  R7 午盘增量 (T2)                :r7, 11:35, 10m
+
+  section Plan
+  D1 watchlist_plan + 盘前 md     :d1, 08:00, 20m
+  P1 竞价校准 (T3)                :p1, 09:25, 4m
+  P2 午盘修订 (T3)                :p2, 11:40, 25m
+
+  section Execute
+  watcher 启动 (T2)               :e1, 09:15, 350m
+  reload amendment (T2)           :e2, 09:29, 1m
+
+  section Review
+  E1 日复盘 (T3)                  :e1r, 15:10, 30m
+  E2 周进化 (T3 Fri)              :e2r, 15:30, 45m
+  
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="31-盘前主链路t1-验收范围">3.1 盘前主链路（T1’ 验收范围）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-盘前主链路t1-验收范围" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;sequenceDiagram\n  autonumber\n  participant Cron as hermes cron\n  participant Fetch as canghai-fetch (no-agent)\n  participant Raw as data/raw/YYYYMMDD/\n  participant Res as canghai-research (LLM)\n  participant Disk as data/research/YYYYMMDD/\n  participant Plan as canghai-plan (LLM fresh)\n  participant Plans as data/plans/YYYYMMDD/\n  participant Obs as chzl_kg/投研交易/\n\n  Cron->>Fetch: 07:15 触发脚本\n  Fetch->>Raw: wechat_official / weflow / 5groups / mcp_health\n  Fetch->>Raw: manifest.json\n\n  Cron->>Res: 07:30 agent + research_orchestrator_v1\n  Res->>Raw: pull manifest + raw artifacts\n  Res->>Res: delegate R1,R3,R4,R7 并行\n  Res->>Res: delegate R2→R5→R6 串行\n  Res->>Disk: R1..R7.json + research_summary.json\n\n  Cron->>Plan: 08:00 agent + main_decision_v1\n  Plan->>Disk: pull research_summary (+按需 R*.json)\n  Plan->>Plans: watchlist_plan.json (pydantic ✅)\n  Plan->>Obs: 盘前预案/YYYYMMDD.md\n\n  Note over Res,Plan: T1' 不做 Python fallback&lt;br/>Hermes 失败 → 告警 + 空池/不写盘&quot;">sequenceDiagram
+  autonumber
+  participant Cron as hermes cron
+  participant Fetch as canghai-fetch (no-agent)
+  participant Raw as data/raw/YYYYMMDD/
+  participant Res as canghai-research (LLM)
+  participant Disk as data/research/YYYYMMDD/
+  participant Plan as canghai-plan (LLM fresh)
+  participant Plans as data/plans/YYYYMMDD/
+  participant Obs as chzl_kg/投研交易/
+
+  Cron->>Fetch: 07:15 触发脚本
+  Fetch->>Raw: wechat_official / weflow / 5groups / mcp_health
+  Fetch->>Raw: manifest.json
+
+  Cron->>Res: 07:30 agent + research_orchestrator_v1
+  Res->>Raw: pull manifest + raw artifacts
+  Res->>Res: delegate R1,R3,R4,R7 并行
+  Res->>Res: delegate R2→R5→R6 串行
+  Res->>Disk: R1..R7.json + research_summary.json
+
+  Cron->>Plan: 08:00 agent + main_decision_v1
+  Plan->>Disk: pull research_summary (+按需 R*.json)
+  Plan->>Plans: watchlist_plan.json (pydantic ✅)
+  Plan->>Obs: 盘前预案/YYYYMMDD.md
+
+  Note over Res,Plan: T1' 不做 Python fallback&lt;br/>Hermes 失败 → 告警 + 空池/不写盘
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<hr/>
+<h2 id="4-artifact-链与-schema-契约">4. Artifact 链与 Schema 契约<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-artifact-链与-schema-契约" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>原则</strong>: Schema-first, prompt-second — LLM 只负责「填 schema」，契约在 <code>docs/</code> 定义。</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  subgraph RAW[\&quot;data/raw/YYYYMMDD/\&quot;]\n    m[manifest.json]\n    w1[wechat_official_20.jsonl]\n    w2[weflow_snapshot.json]\n    w3[wechat_cli_5groups.jsonl]\n    h[mcp_health.json]\n  end\n\n  subgraph RES[\&quot;data/research/YYYYMMDD/\&quot;]\n    r1[R1_style.json]\n    r2[R2_main_sectors.json]\n    r3[R3_sentiment.json]\n    r4[R4_news.json]\n    r5[R5_stock_profiles.json]\n    r6[R6_devil_advocate.json]\n    r7[R7_capital_flow.json]\n    rs[research_summary.json]\n  end\n\n  subgraph PLN[\&quot;data/plans/YYYYMMDD/\&quot;]\n    wp[watchlist_plan.json]\n    aa[auction_amendment.json]\n    ma[midday_amendment.json]\n    ld[watchlist_plan.loaded.json]\n  end\n\n  subgraph EXE[\&quot;data/execution/YYYYMMDD/ T2\&quot;]\n    ev[events.jsonl]\n    od[orders.jsonl]\n  end\n\n  RAW --> RES\n  RES --> PLN\n  PLN --> EXE&quot;">flowchart LR
+  subgraph RAW[&quot;data/raw/YYYYMMDD/&quot;]
+    m[manifest.json]
+    w1[wechat_official_20.jsonl]
+    w2[weflow_snapshot.json]
+    w3[wechat_cli_5groups.jsonl]
+    h[mcp_health.json]
+  end
+
+  subgraph RES[&quot;data/research/YYYYMMDD/&quot;]
+    r1[R1_style.json]
+    r2[R2_main_sectors.json]
+    r3[R3_sentiment.json]
+    r4[R4_news.json]
+    r5[R5_stock_profiles.json]
+    r6[R6_devil_advocate.json]
+    r7[R7_capital_flow.json]
+    rs[research_summary.json]
+  end
+
+  subgraph PLN[&quot;data/plans/YYYYMMDD/&quot;]
+    wp[watchlist_plan.json]
+    aa[auction_amendment.json]
+    ma[midday_amendment.json]
+    ld[watchlist_plan.loaded.json]
+  end
+
+  subgraph EXE[&quot;data/execution/YYYYMMDD/ T2&quot;]
+    ev[events.jsonl]
+    od[orders.jsonl]
+  end
+
+  RAW --> RES
+  RES --> PLN
+  PLN --> EXE
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>契约</th><th>文件</th><th>生产者</th><th>消费者</th><th>Schema 文档</th></tr></thead><tbody><tr><td>契约 3</td><td><code>research_summary.json</code></td><td>research 主控</td><td>D1, E1</td><td><code>docs/research_summary_schema.md</code></td></tr><tr><td>R* 单元</td><td><code>R1_style.json</code> … <code>R7_*.json</code></td><td>R1–R7 sub-agent</td><td>主控 / D1 pull</td><td><code>docs/agents/R*-*.md</code></td></tr><tr><td>契约 1</td><td><code>watchlist_plan.json</code></td><td>D1</td><td>execute</td><td><code>docs/watchlist_plan_schema.md</code></td></tr><tr><td>契约 2</td><td><code>*_amendment.json</code></td><td>P1/P2</td><td>execute</td><td><code>docs/amendment_schema.md</code></td></tr></tbody></table></div>
+<p><strong>写盘铁律</strong>:</p>
+<ol>
+<li>pydantic 校验 <strong>不过 → 不写盘</strong>（沿用上一版 + 告警）</li>
+<li>各 profile <strong>只能写 SOUL Ownership 白名单目录</strong></li>
+<li>artifact 之间 <strong>只通过磁盘 pull</strong>，不共享 LLM context</li>
+</ol>
+<hr/>
+<h2 id="5-delegation-机制canonical-23">5. Delegation 机制（CANONICAL §2.3）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-delegation-机制canonical-23" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  subgraph MAIN[\&quot;canghai-research · 主控会话\&quot;]\n    ORCH[research_orchestrator_v1]\n    ORCH -->|delegate_task| D1\n    ORCH -->|delegate_task| D3\n    ORCH -->|delegate_task| D4\n    ORCH -->|delegate_task| D7\n    ORCH -->|delegate_task| D2\n    ORCH -->|delegate_task| D5\n    ORCH -->|delegate_task| D6\n  end\n\n  subgraph D1[\&quot;Sub-agent R1 · analyze_style_v1\&quot;]\n    T1[\&quot;toolsets: file, tushare, xtick\&quot;]\n    O1[R1_style.json]\n  end\n\n  subgraph D3[\&quot;Sub-agent R3 · analyze_sentiment_resonance_v1\&quot;]\n    T3[\&quot;toolsets: file, weflow, hotlist\&quot;]\n    O3[R3_sentiment.json]\n  end\n\n  subgraph D4[\&quot;Sub-agent R4 · analyze_news_impact_v1\&quot;]\n    T4[\&quot;toolsets: file, wechat, tushare\&quot;]\n    O4[R4_news.json]\n  end\n\n  subgraph D7[\&quot;Sub-agent R7 · analyze_capital_flow_v1\&quot;]\n    T7[\&quot;toolsets: file, tushare, xtick, datapro\&quot;]\n    O7[R7_capital_flow.json]\n  end\n\n  subgraph D2[\&quot;Sub-agent R2 · analyze_main_sectors_v1\&quot;]\n    T2[\&quot;toolsets: file, tushare, datapro, hithink\&quot;]\n    O2[R2_main_sectors.json]\n  end\n\n  subgraph D5[\&quot;Sub-agent R5 · analyze_stock_profile_v1\&quot;]\n    T5[\&quot;toolsets: file, tushare, serenity-alpha, valuation\&quot;]\n    O5[R5_stock_profiles.json]\n  end\n\n  subgraph D6[\&quot;Sub-agent R6 · analyze_devil_advocate_v1\&quot;]\n    T6[\&quot;toolsets: file ONLY · 禁 MCP\&quot;]\n    O6[R6_devil_advocate.json]\n  end\n\n  O1 &amp; O3 &amp; O4 &amp; O7 &amp; O2 &amp; O5 &amp; O6 --> SUM[research_summary.json]&quot;">flowchart TB
+  subgraph MAIN[&quot;canghai-research · 主控会话&quot;]
+    ORCH[research_orchestrator_v1]
+    ORCH -->|delegate_task| D1
+    ORCH -->|delegate_task| D3
+    ORCH -->|delegate_task| D4
+    ORCH -->|delegate_task| D7
+    ORCH -->|delegate_task| D2
+    ORCH -->|delegate_task| D5
+    ORCH -->|delegate_task| D6
+  end
+
+  subgraph D1[&quot;Sub-agent R1 · analyze_style_v1&quot;]
+    T1[&quot;toolsets: file, tushare, xtick&quot;]
+    O1[R1_style.json]
+  end
+
+  subgraph D3[&quot;Sub-agent R3 · analyze_sentiment_resonance_v1&quot;]
+    T3[&quot;toolsets: file, weflow, hotlist&quot;]
+    O3[R3_sentiment.json]
+  end
+
+  subgraph D4[&quot;Sub-agent R4 · analyze_news_impact_v1&quot;]
+    T4[&quot;toolsets: file, wechat, tushare&quot;]
+    O4[R4_news.json]
+  end
+
+  subgraph D7[&quot;Sub-agent R7 · analyze_capital_flow_v1&quot;]
+    T7[&quot;toolsets: file, tushare, xtick, datapro&quot;]
+    O7[R7_capital_flow.json]
+  end
+
+  subgraph D2[&quot;Sub-agent R2 · analyze_main_sectors_v1&quot;]
+    T2[&quot;toolsets: file, tushare, datapro, hithink&quot;]
+    O2[R2_main_sectors.json]
+  end
+
+  subgraph D5[&quot;Sub-agent R5 · analyze_stock_profile_v1&quot;]
+    T5[&quot;toolsets: file, tushare, serenity-alpha, valuation&quot;]
+    O5[R5_stock_profiles.json]
+  end
+
+  subgraph D6[&quot;Sub-agent R6 · analyze_devil_advocate_v1&quot;]
+    T6[&quot;toolsets: file ONLY · 禁 MCP&quot;]
+    O6[R6_devil_advocate.json]
+  end
+
+  O1 &amp; O3 &amp; O4 &amp; O7 &amp; O2 &amp; O5 &amp; O6 --> SUM[research_summary.json]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="51-调度时序硬约束">5.1 调度时序（硬约束）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#51-调度时序硬约束" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>时点</th><th>动作</th><th>依赖</th></tr></thead><tbody><tr><td>07:30</td><td>并行 delegate: <strong>R1, R3, R4, R7</strong></td><td><code>data/raw/</code> + manifest</td></tr><tr><td>07:45</td><td>串行 delegate: <strong>R2</strong>（读 R1/R3/R4/R7 artifact）</td><td>上一步产出</td></tr><tr><td>07:45</td><td>串行 delegate: <strong>R5</strong>（读 R2 龙头列表）</td><td>R2</td></tr><tr><td>07:55</td><td>delegate: <strong>R6</strong>（读 R1–R5 + R7，<strong>禁 MCP</strong>）</td><td>全部上游</td></tr><tr><td>08:00</td><td>主控写 <code>research_summary.json</code></td><td>全部 R* 路径 + confidence</td></tr></tbody></table></div>
+<p><strong>主控禁止</strong>:</p>
+<ul>
+<li>直接调用 MCP（必须 delegation）</li>
+<li>修改 <code>user_preferences.yaml</code> / <code>human_thesis/</code>（只读）</li>
+</ul>
+<p><strong>Sub-agent 隔离</strong>:</p>
+<ul>
+<li>中间 tool call <strong>不进主控 context</strong></li>
+<li>只回传 <strong>最终 artifact 路径 + schema 校验结果</strong></li>
+</ul>
+<hr/>
+<h2 id="6-节点级llm-主路径-vs-pythont1-范围">6. 节点级：LLM 主路径 vs Python（T1’ 范围）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-节点级llm-主路径-vs-pythont1-范围" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>单元</th><th>主路径</th><th>需要 LLM 的原因</th><th>Python fallback</th></tr></thead><tbody><tr><td><strong>Fetch</strong></td><td>Python <code>--no-agent</code></td><td>确定性采集</td><td>N/A（本身就是 Python）</td></tr><tr><td><strong>R1</strong></td><td>LLM + MCP</td><td>五模式识别 + 情绪浓度语义</td><td>⏸ 后置 <code>r1_style.py</code></td></tr><tr><td><strong>R2</strong></td><td>LLM + MCP</td><td>需消费 R3/R4 叙事共振</td><td>⏸ 后置 <code>r2_main_sectors.py</code></td></tr><tr><td><strong>R3</strong></td><td><strong>LLM 必须</strong></td><td>WeFlow/群聊/热榜 = 非结构化</td><td>⏸ 后置，不扩展关键词版</td></tr><tr><td><strong>R4</strong></td><td><strong>LLM 必须</strong></td><td>公众号事件抽取 + 板块映射</td><td>⏸ 后置</td></tr><tr><td><strong>R5</strong></td><td>LLM + MCP/KB</td><td>六维画像 + serenity 链</td><td>⏸ 后置</td></tr><tr><td><strong>R6</strong></td><td><strong>LLM 必须</strong></td><td>对抗性反证 / hard_reject</td><td>⏸ 后置</td></tr><tr><td><strong>R7</strong></td><td>LLM + MCP</td><td>资金解读 + 跷跷板叙事</td><td>⏸ 后置</td></tr><tr><td><strong>D1</strong></td><td><strong>LLM fresh context</strong></td><td>全局唯一裁决</td><td>⏸ 后置 <code>d1_algorithm.py</code></td></tr><tr><td><strong>P1/P2</strong></td><td>LLM fresh (T3)</td><td>竞价/午盘打脸判断</td><td>T3 后</td></tr><tr><td><strong>E1/E2</strong></td><td>LLM fresh (T3)</td><td>诚实复盘 / 进化</td><td>T3</td></tr><tr><td><strong>Execute L1/L2</strong></td><td>纯 Python (T2)</td><td>纪律 / 硬风控</td><td>—</td></tr><tr><td><strong>Execute L3</strong></td><td>受控 LLM (T3)</td><td>confirm/reject/defer 枚举</td><td>Python 默认 reject</td></tr></tbody></table></div>
+<hr/>
+<h2 id="7-mcp-与工具层全局拓扑">7. MCP 与工具层（全局拓扑）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-mcp-与工具层全局拓扑" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="71-mcp-server-注册hermesconfigyaml">7.1 MCP Server 注册（<code>~/.hermes/config.yaml</code>）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#71-mcp-server-注册hermesconfigyaml" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  subgraph HERMES[\&quot;Hermes Gateway\&quot;]\n    GW[MCP 连接池]\n  end\n\n  subgraph REMOTE_HTTP[\&quot;远程 HTTP/SSE MCP\&quot;]\n    TS[tushareMcp&lt;br/>api.tushare.pro/mcp]\n    DP[datapro&lt;br/>datapro.hqd.volces.com]\n    WF[weflow-analytics&lt;br/>ngrok SSE]\n    OBS[obsidian&lt;br/>127.0.0.1:27123]\n  end\n\n  subgraph LOCAL_STDIO[\&quot;本地 stdio MCP · 项目 .venv\&quot;]\n    RES[chenhailangju-research&lt;br/>run_mcp_server.py&lt;br/>公众号/wechat-cli]\n    SISE[canghai-sise&lt;br/>四色四量]\n    CHART[canghai-charts&lt;br/>K线渲染]\n    XTICK[xtick&lt;br/>xtick_mcp_server.sh]\n    QMT[agentqmt_qmt&lt;br/>192.168.3.17:8787]\n    VIBE[vibe-trading&lt;br/>可选]\n  end\n\n  GW --> TS &amp; DP &amp; WF &amp; OBS\n  GW --> RES &amp; SISE &amp; CHART &amp; XTICK &amp; QMT &amp; VIBE&quot;">flowchart TB
+  subgraph HERMES[&quot;Hermes Gateway&quot;]
+    GW[MCP 连接池]
+  end
+
+  subgraph REMOTE_HTTP[&quot;远程 HTTP/SSE MCP&quot;]
+    TS[tushareMcp&lt;br/>api.tushare.pro/mcp]
+    DP[datapro&lt;br/>datapro.hqd.volces.com]
+    WF[weflow-analytics&lt;br/>ngrok SSE]
+    OBS[obsidian&lt;br/>127.0.0.1:27123]
+  end
+
+  subgraph LOCAL_STDIO[&quot;本地 stdio MCP · 项目 .venv&quot;]
+    RES[chenhailangju-research&lt;br/>run_mcp_server.py&lt;br/>公众号/wechat-cli]
+    SISE[canghai-sise&lt;br/>四色四量]
+    CHART[canghai-charts&lt;br/>K线渲染]
+    XTICK[xtick&lt;br/>xtick_mcp_server.sh]
+    QMT[agentqmt_qmt&lt;br/>192.168.3.17:8787]
+    VIBE[vibe-trading&lt;br/>可选]
+  end
+
+  GW --> TS &amp; DP &amp; WF &amp; OBS
+  GW --> RES &amp; SISE &amp; CHART &amp; XTICK &amp; QMT &amp; VIBE
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>MCP Server</th><th>传输</th><th>主要能力</th><th>α/β/γ/δ 层</th></tr></thead><tbody><tr><td><code>tushareMcp</code></td><td>HTTP</td><td>热榜/连板/资金/板块/公告</td><td>α β γ</td></tr><tr><td><code>xtick</code></td><td>stdio</td><td>实时行情/情绪/新闻聚合</td><td>α β γ</td></tr><tr><td><code>weflow-analytics</code></td><td>SSE</td><td>群聊情绪量化 snapshot</td><td>α</td></tr><tr><td><code>chenhailangju-research</code></td><td>stdio</td><td>20 号公众号 + wechat-cli 5 群</td><td>α γ</td></tr><tr><td><code>datapro</code></td><td>HTTP</td><td>板块资金备源</td><td>β</td></tr><tr><td><code>canghai-sise</code></td><td>stdio</td><td>四色四量/KB 技术</td><td>β</td></tr><tr><td><code>canghai-charts</code></td><td>stdio</td><td>K 线/分时出图</td><td>图表</td></tr><tr><td><code>agentqmt_qmt</code></td><td>HTTP</td><td>持仓/下单/成交</td><td><strong>δ 仅 execute/review</strong></td></tr><tr><td><code>obsidian</code></td><td>HTTP</td><td>KB 读写（可选）</td><td>辅助</td></tr></tbody></table></div>
+<blockquote>
+<p><strong>研究端红线</strong>（<code>docs/11-数据源分层与降级.md</code>）: α β γ 进 research；<strong>δ 执行层数据不进 R1–R7</strong>（QMT 报价不给 research agent）。</p>
+</blockquote>
+<h3 id="72-soul-toolsets-别名--mcp-映射">7.2 SOUL Toolsets 别名 → MCP 映射<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#72-soul-toolsets-别名--mcp-映射" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>SOUL.md 里的 toolsets 是 <strong>逻辑别名</strong>；Hermes harness 将其映射到具体 MCP / 内置 tool：</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  subgraph ALIAS[\&quot;SOUL toolsets 别名\&quot;]\n    file[file]\n    deleg[delegation]\n    ts[tushare]\n    xt[xtick]\n    wf[weflow]\n    wc[wechat]\n    hl[hotlist]\n    dp[datapro]\n    ht[hithink]\n    sa[serenity-alpha]\n    val[valuation-suite]\n    fc[fast-chart-mcp]\n    qmt[agentqmt_qmt]\n  end\n\n  subgraph IMPL[\&quot;运行时实现\&quot;]\n    f1[Hermes read/write/edit_file]\n    d1[delegate_task API]\n    m1[tushareMcp]\n    m2[xtick MCP]\n    m3[weflow-analytics]\n    m4[chenhailangju-research]\n    m5[tushare ths_hot/dc_hot]\n    m6[datapro MCP]\n    m7[iWenCai / hithink skills]\n    m8[serenity-alpha skill]\n    m9[valuation skills 横切]\n    m10[canghai-charts / fast-chart-mcp]\n    m11[agentqmt_qmt MCP]\n  end\n\n  file --> f1\n  deleg --> d1\n  ts --> m1\n  xt --> m2\n  wf --> m3\n  wc --> m4\n  hl --> m5\n  dp --> m6\n  ht --> m7\n  sa --> m8\n  val --> m9\n  fc --> m10\n  qmt --> m11&quot;">flowchart LR
+  subgraph ALIAS[&quot;SOUL toolsets 别名&quot;]
+    file[file]
+    deleg[delegation]
+    ts[tushare]
+    xt[xtick]
+    wf[weflow]
+    wc[wechat]
+    hl[hotlist]
+    dp[datapro]
+    ht[hithink]
+    sa[serenity-alpha]
+    val[valuation-suite]
+    fc[fast-chart-mcp]
+    qmt[agentqmt_qmt]
+  end
+
+  subgraph IMPL[&quot;运行时实现&quot;]
+    f1[Hermes read/write/edit_file]
+    d1[delegate_task API]
+    m1[tushareMcp]
+    m2[xtick MCP]
+    m3[weflow-analytics]
+    m4[chenhailangju-research]
+    m5[tushare ths_hot/dc_hot]
+    m6[datapro MCP]
+    m7[iWenCai / hithink skills]
+    m8[serenity-alpha skill]
+    m9[valuation skills 横切]
+    m10[canghai-charts / fast-chart-mcp]
+    m11[agentqmt_qmt MCP]
+  end
+
+  file --> f1
+  deleg --> d1
+  ts --> m1
+  xt --> m2
+  wf --> m3
+  wc --> m4
+  hl --> m5
+  dp --> m6
+  ht --> m7
+  sa --> m8
+  val --> m9
+  fc --> m10
+  qmt --> m11
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="73-各-profile-的-toolsets-白名单">7.3 各 Profile 的 Toolsets 白名单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#73-各-profile-的-toolsets-白名单" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Profile</th><th>SOUL Toolsets</th><th>说明</th></tr></thead><tbody><tr><td><strong>canghai-fetch</strong></td><td><code>file, tushare, xtick, weflow, wechat, qmt-quote</code></td><td>只读采集；<strong>不做分析</strong></td></tr><tr><td><strong>canghai-research 主控</strong></td><td><code>file, delegation</code></td><td><strong>禁止直接 MCP</strong></td></tr><tr><td><strong>R1</strong></td><td><code>file, tushare, xtick</code></td><td></td></tr><tr><td><strong>R2</strong></td><td><code>file, tushare, datapro, hithink</code></td><td>+ <code>filter_leader_v1</code></td></tr><tr><td><strong>R3</strong></td><td><code>file, weflow, hotlist</code></td><td>+ <code>hotlist_rank_signal_v1</code></td></tr><tr><td><strong>R4</strong></td><td><code>file, wechat, tushare</code></td><td></td></tr><tr><td><strong>R5</strong></td><td><code>file, tushare, serenity-alpha, valuation-suite</code></td><td></td></tr><tr><td><strong>R6</strong></td><td><strong><code>file</code> only</strong></td><td>反证禁 MCP</td></tr><tr><td><strong>R7</strong></td><td><code>file, tushare, xtick, datapro</code></td><td>+ seesaw / hot_money skills</td></tr><tr><td><strong>canghai-plan D1</strong></td><td><code>file, fast-chart-mcp</code></td><td><strong>不直接调数据源</strong></td></tr><tr><td><strong>canghai-plan P1/P2</strong></td><td><code>file</code> only</td><td>4min/30min 硬时限</td></tr><tr><td><strong>canghai-execute</strong></td><td><code>agentqmt_qmt, xtick</code></td><td>无 tushare/公众号/WeFlow</td></tr><tr><td><strong>canghai-review</strong></td><td><code>tushareMcp, agentqmt_qmt, xtick</code></td><td>只回看，不下单</td></tr></tbody></table></div>
+<h3 id="74-数据源三层与-agent-消费关系">7.4 数据源三层与 Agent 消费关系<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#74-数据源三层与-agent-消费关系" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  subgraph ALPHA[\&quot;α 情报层\&quot;]\n    A1[WeFlow 可选]\n    A2[wechat-cli 5群]\n    A3[20号公众号]\n    A4[Tushare 热榜 ths_hot/dc_hot]\n    A5[XTick /doc/hot/*]\n  end\n\n  subgraph BETA[\&quot;β 结构层\&quot;]\n    B1[Tushare 连板/资金/板块]\n    B2[XTick 实时]\n    B3[DataPro 板块资金]\n    B4[canghai-sise 四色四量]\n  end\n\n  subgraph GAMMA[\&quot;γ 催化层\&quot;]\n    G1[XTick 新闻聚合]\n    G2[公众号深度文]\n    G3[Tushare anns/major_news]\n    G4[群聊 KOL 叙事]\n  end\n\n  subgraph DELTA[\&quot;δ 执行层 · 不进 research\&quot;]\n    D1[QMT quote/下单]\n  end\n\n  R3agent[R3] --> ALPHA\n  R4agent[R4] --> GAMMA\n  R1agent[R1] --> BETA\n  R2agent[R2] --> BETA\n  R7agent[R7] --> BETA\n  R5agent[R5] --> BETA &amp; GAMMA\n  EXEC[execute T2] --> DELTA&quot;">flowchart TB
+  subgraph ALPHA[&quot;α 情报层&quot;]
+    A1[WeFlow 可选]
+    A2[wechat-cli 5群]
+    A3[20号公众号]
+    A4[Tushare 热榜 ths_hot/dc_hot]
+    A5[XTick /doc/hot/*]
+  end
+
+  subgraph BETA[&quot;β 结构层&quot;]
+    B1[Tushare 连板/资金/板块]
+    B2[XTick 实时]
+    B3[DataPro 板块资金]
+    B4[canghai-sise 四色四量]
+  end
+
+  subgraph GAMMA[&quot;γ 催化层&quot;]
+    G1[XTick 新闻聚合]
+    G2[公众号深度文]
+    G3[Tushare anns/major_news]
+    G4[群聊 KOL 叙事]
+  end
+
+  subgraph DELTA[&quot;δ 执行层 · 不进 research&quot;]
+    D1[QMT quote/下单]
+  end
+
+  R3agent[R3] --> ALPHA
+  R4agent[R4] --> GAMMA
+  R1agent[R1] --> BETA
+  R2agent[R2] --> BETA
+  R7agent[R7] --> BETA
+  R5agent[R5] --> BETA &amp; GAMMA
+  EXEC[execute T2] --> DELTA
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p>降级策略详见 <code>docs/11-数据源分层与降级.md</code> — <strong>T1’ 由 LLM skill 内实现 fallback 描述</strong>（写进 <code>SKILL.md</code>），不是 Python 规则链。</p>
+<hr/>
+<h2 id="8-skill-资产模型方案-b--t1">8. Skill 资产模型（方案 B · T1’）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#8-skill-资产模型方案-b--t1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Hermes <strong>只认 <code>SKILL.md</code> 入口</strong>。CANONICAL §4.1 的双层结构是 <strong>项目组织约定</strong>，T1’ 阶段 <strong>全部塞进 SKILL.md</strong>，跑通后再拆：</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  subgraph NOW[\&quot;T1' · 现在\&quot;]\n    SK1[SKILL.md&lt;br/>YAML frontmatter&lt;br/>+ Purpose/Inputs/Outputs&lt;br/>+ Rules + Prompt + Few-shot]\n  end\n\n  subgraph LATER[\&quot;T3 前 · 跑通后拆分\&quot;]\n    SK2[SKILL.md 入口]\n    LG[skill_logic.md]\n    PR1[skill_prompt_ark.md]\n    PR2[skill_prompt_claude5.md]\n    SK2 --> LG &amp; PR1 &amp; PR2\n  end\n\n  NOW -->|delegation 稳定后| LATER&quot;">flowchart LR
+  subgraph NOW[&quot;T1' · 现在&quot;]
+    SK1[SKILL.md&lt;br/>YAML frontmatter&lt;br/>+ Purpose/Inputs/Outputs&lt;br/>+ Rules + Prompt + Few-shot]
+  end
+
+  subgraph LATER[&quot;T3 前 · 跑通后拆分&quot;]
+    SK2[SKILL.md 入口]
+    LG[skill_logic.md]
+    PR1[skill_prompt_ark.md]
+    PR2[skill_prompt_claude5.md]
+    SK2 --> LG &amp; PR1 &amp; PR2
+  end
+
+  NOW -->|delegation 稳定后| LATER
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="81-t1-必须实装内容的-skill优先级">8.1 T1’ 必须实装内容的 Skill（优先级）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#81-t1-必须实装内容的-skill优先级" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:center;">优先级</th><th>Skill</th><th>Profile</th><th>说明</th></tr></thead><tbody><tr><td style="text-align:center;">P0</td><td><code>research_orchestrator_v1</code></td><td>research</td><td>主控调度 + 收集 summary</td></tr><tr><td style="text-align:center;">P0</td><td><code>analyze_sentiment_resonance_v1</code></td><td>research R3</td><td>非结构化核心</td></tr><tr><td style="text-align:center;">P0</td><td><code>analyze_news_impact_v1</code></td><td>research R4</td><td>非结构化核心</td></tr><tr><td style="text-align:center;">P0</td><td><code>analyze_devil_advocate_v1</code></td><td>research R6</td><td>hard_reject</td></tr><tr><td style="text-align:center;">P0</td><td><code>main_decision_v1</code></td><td>plan D1</td><td>fresh context 裁决</td></tr><tr><td style="text-align:center;">P1</td><td><code>analyze_style_v1</code></td><td>research R1</td><td></td></tr><tr><td style="text-align:center;">P1</td><td><code>analyze_main_sectors_v1</code> + <code>filter_leader_v1</code></td><td>research R2</td><td></td></tr><tr><td style="text-align:center;">P1</td><td><code>analyze_stock_profile_v1</code></td><td>research R5</td><td></td></tr><tr><td style="text-align:center;">P1</td><td><code>analyze_capital_flow_v1</code></td><td>research R7</td><td></td></tr><tr><td style="text-align:center;">P1</td><td><code>exit_rules_derivation_v1</code></td><td>plan D1</td><td>exit_rule 生成</td></tr><tr><td style="text-align:center;">P2</td><td>fetch 系列 / P1/P2 / E1/E2</td><td>各 profile</td><td>T2/T3</td></tr></tbody></table></div>
+<h3 id="82-skill-与-agent-spec-映射">8.2 Skill 与 Agent Spec 映射<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#82-skill-与-agent-spec-映射" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Sub-agent</th><th>Skill(s)</th><th>Agent Spec</th></tr></thead><tbody><tr><td>R1</td><td><code>analyze_style_v1</code></td><td><code>docs/agents/R1-风格Agent.md</code></td></tr><tr><td>R2</td><td><code>analyze_main_sectors_v1</code>, <code>filter_leader_v1</code></td><td><code>docs/agents/R2-主线板块Agent.md</code></td></tr><tr><td>R3</td><td><code>analyze_sentiment_resonance_v1</code>, <code>hotlist_rank_signal_v1</code></td><td><code>docs/agents/R3-情绪与热度Agent.md</code></td></tr><tr><td>R4</td><td><code>analyze_news_impact_v1</code></td><td><code>docs/agents/R4-消息面Agent.md</code></td></tr><tr><td>R5</td><td><code>analyze_stock_profile_v1</code>, <code>serenity_analyst</code></td><td><code>docs/agents/R5-情报深挖Agent.md</code></td></tr><tr><td>R6</td><td><code>analyze_devil_advocate_v1</code></td><td><code>docs/agents/R6-反证Agent.md</code></td></tr><tr><td>R7</td><td><code>analyze_capital_flow_v1</code>, <code>detect_seesaw_pairs_v1</code>, <code>hot_money_synergy_v1</code></td><td><code>docs/agents/R7-资金面Agent.md</code></td></tr><tr><td>D1</td><td><code>main_decision_v1</code>, <code>exit_rules_derivation_v1</code></td><td><code>docs/agents/D1-主决策Agent.md</code></td></tr></tbody></table></div>
+<hr/>
+<h2 id="9-cron-拓扑纠正版">9. Cron 拓扑（纠正版）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#9-cron-拓扑纠正版" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="91-mode-分类">9.1 Mode 分类<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#91-mode-分类" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>类型</th><th>Hermes cron 参数</th><th>适用 Profile</th><th>示例</th></tr></thead><tbody><tr><td><strong>Script-only</strong></td><td><code>--script xxx.sh --no-agent</code></td><td>canghai-fetch</td><td>07:15 pre-fetch ✅</td></tr><tr><td><strong>Agent + Skill</strong></td><td><code>--skill xxx_v1</code> + prompt（<strong>无</strong> <code>--no-agent</code>）</td><td>research, plan, review</td><td>07:30 research ⏳</td></tr><tr><td><strong>Daemon</strong></td><td>系统服务 + keepalive cron</td><td>canghai-execute</td><td>T2 watcher</td></tr></tbody></table></div>
+<h3 id="92-目标-cron-一览canonical-77">9.2 目标 Cron 一览（CANONICAL §7.7）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#92-目标-cron-一览canonical-77" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  subgraph ACTIVE[\&quot;✅ 已启用\&quot;]\n    C1[\&quot;07:15 pre-fetch&lt;br/>fetch · --no-agent\&quot;]\n    C2[\&quot;*/30 health&lt;br/>fetch · --no-agent\&quot;]\n  end\n\n  subgraph T1P[\&quot;🔴 T1' 待建 · agent 模式\&quot;]\n    C3[\&quot;07:30 research&lt;br/>skill: research_orchestrator_v1\&quot;]\n    C4[\&quot;08:00 plan D1&lt;br/>skill: main_decision_v1\&quot;]\n  end\n\n  subgraph T2T3[\&quot;⬜ T2/T3\&quot;]\n    C5[09:24 auction fetch]\n    C6[09:25 P1]\n    C7[09:15 execute daemon]\n    C8[11:35 midday fetch + R7]\n    C9[11:40 P2]\n    C10[15:10 E1]\n    C11[15:30 E2 Fri]\n  end\n\n  C1 --> C3 --> C4\n  C4 --> C7&quot;">flowchart TB
+  subgraph ACTIVE[&quot;✅ 已启用&quot;]
+    C1[&quot;07:15 pre-fetch&lt;br/>fetch · --no-agent&quot;]
+    C2[&quot;*/30 health&lt;br/>fetch · --no-agent&quot;]
+  end
+
+  subgraph T1P[&quot;🔴 T1' 待建 · agent 模式&quot;]
+    C3[&quot;07:30 research&lt;br/>skill: research_orchestrator_v1&quot;]
+    C4[&quot;08:00 plan D1&lt;br/>skill: main_decision_v1&quot;]
+  end
+
+  subgraph T2T3[&quot;⬜ T2/T3&quot;]
+    C5[09:24 auction fetch]
+    C6[09:25 P1]
+    C7[09:15 execute daemon]
+    C8[11:35 midday fetch + R7]
+    C9[11:40 P2]
+    C10[15:10 E1]
+    C11[15:30 E2 Fri]
+  end
+
+  C1 --> C3 --> C4
+  C4 --> C7
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>Agent 模式 cron 示例（T1’ 目标，非 <code>--no-agent</code>）</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">ROOT</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;/Users/chenyang/Downloads/demo/沧海巨浪&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 07:30 research — LLM 主控 + delegation</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">hermes</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> cron</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;30 7 * * 1-5&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;canghai-research · 盘前分析(research-orchestrator)&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">  --skill</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> research_orchestrator_v1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">  --workdir</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$ROOT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">  --deliver</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> local</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  &quot;执行 research_orchestrator_v1：读取 data/raw/YYYYMMDD/manifest.json，按 SOUL 时序 delegate R1-R7，产出 research_summary.json。trade_date=今日。&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 08:00 D1 — fresh context LLM</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">hermes</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> cron</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;0 8 * * 1-5&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;canghai-plan · 主决策(D1)&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">  --skill</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> main_decision_v1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">  --workdir</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$ROOT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">  --deliver</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> local</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  &quot;执行 main_decision_v1：pull research_summary.json，fresh context 综合裁决，产出 watchlist_plan.json + 盘前预案 md。&quot;</span></span></code></pre></figure>
+<blockquote>
+<p><strong>注意</strong>: cron job 与 profile 的绑定方式需在 T1’ 施工第一步验证（<code>hermes profile use canghai-research</code> 或在 job 元数据中指定）。旧 <code>cron/crontab.txt</code> 里 research/plan 的 <code>--no-agent</code> 模板 <strong>作废</strong>。</p>
+</blockquote>
+<h3 id="93-hermes-边界薄脚本原则">9.3 Hermes 边界（薄脚本原则）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#93-hermes-边界薄脚本原则" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>~/.hermes/scripts/*.sh</code> <strong>≤10 行</strong>，只做 <code>cd → source .venv → exec 项目脚本</code>（见 <code>docs/hermes-project-boundary.md</code>）。</p>
+<ul>
+<li>✅ fetch 继续用薄脚本 + <code>--no-agent</code></li>
+<li>❌ research/plan <strong>不应</strong>再新增 Python orchestrator cron 作为主路径</li>
+</ul>
+<hr/>
+<h2 id="10-execute-层t2--用户拍板-3060s">10. Execute 层（T2 · 用户拍板 30–60s）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#10-execute-层t2--用户拍板-3060s" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>CANONICAL §5.1 描述秒级 tick + 分钟级全市场；<strong>用户拍板 T2.1 用 30–60s 轮询</strong>，秒级/分钟级为后续增强。</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  subgraph L1[\&quot;层1 · 纯 Python · 不可协商\&quot;]\n    AMY[amygdala.py&lt;br/>单票≤15% 板块≤40% 持仓≤5&lt;br/>ST/300/688/920 拒绝&lt;br/>kill_switch]\n  end\n\n  subgraph L2[\&quot;层2 · 纯 Python · preferences 调参\&quot;]\n    ENTRY[entry rules&lt;br/>trigger_price / buy_zone]\n    EXIT[exit rules&lt;br/>stop_loss / take_profit]\n    POLL[30–60s QMT REST 轮询]\n  end\n\n  subgraph L3[\&quot;层3 · 受控 LLM · T3\&quot;]\n    JN[\&quot;judgment_nodes/&lt;br/>confirm / reject / defer_60s&lt;br/>&lt;3s · 超时 reject\&quot;]\n  end\n\n  PLAN[watchlist_plan.loaded.json] --> W[watcher.py]\n  W --> POLL --> ENTRY &amp; EXIT\n  ENTRY &amp; EXIT --> JN\n  JN --> AMY --> QMT[agentqmt_qmt REST/MCP]\n  AMY --> QMT&quot;">flowchart TB
+  subgraph L1[&quot;层1 · 纯 Python · 不可协商&quot;]
+    AMY[amygdala.py&lt;br/>单票≤15% 板块≤40% 持仓≤5&lt;br/>ST/300/688/920 拒绝&lt;br/>kill_switch]
+  end
+
+  subgraph L2[&quot;层2 · 纯 Python · preferences 调参&quot;]
+    ENTRY[entry rules&lt;br/>trigger_price / buy_zone]
+    EXIT[exit rules&lt;br/>stop_loss / take_profit]
+    POLL[30–60s QMT REST 轮询]
+  end
+
+  subgraph L3[&quot;层3 · 受控 LLM · T3&quot;]
+    JN[&quot;judgment_nodes/&lt;br/>confirm / reject / defer_60s&lt;br/>&lt;3s · 超时 reject&quot;]
+  end
+
+  PLAN[watchlist_plan.loaded.json] --> W[watcher.py]
+  W --> POLL --> ENTRY &amp; EXIT
+  ENTRY &amp; EXIT --> JN
+  JN --> AMY --> QMT[agentqmt_qmt REST/MCP]
+  AMY --> QMT
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>频率</th><th>CANONICAL</th><th>用户 T2.1</th><th>说明</th></tr></thead><tbody><tr><td>execution_pool 轮询</td><td>1–5s</td><td><strong>30–60s</strong></td><td>无打板，纪律优先</td></tr><tr><td>全市场横截面</td><td>1min</td><td>T2.2 可选</td><td>板块共振</td></tr><tr><td>market_scanner</td><td>5min</td><td>T2.3</td><td>iLink 异动</td></tr><tr><td>plan reload</td><td>10min</td><td>10min</td><td>amendment 合并</td></tr></tbody></table></div>
+<hr/>
+<h2 id="11-review-层t3--预览">11. Review 层（T3 · 预览）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-review-层t3--预览" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  EX[data/execution/]\n  PL[data/plans/]\n  RS[data/research/]\n  E1[daily_review_v1&lt;br/>fresh context]\n  E2[weekly_evolution_v1&lt;br/>fresh context Fri]\n  RP[data/reports/]\n  EV[data/evolution/]\n  COR[data/corrections/]\n\n  EX &amp; PL &amp; RS --> E1 --> RP &amp; COR\n  RP --> E2 --> EV\n  EV -.->|修订建议·需用户 sign-off| PREF[user_preferences.yaml]\n  EV -.->|修订建议| TH[human_thesis/]&quot;">flowchart LR
+  EX[data/execution/]
+  PL[data/plans/]
+  RS[data/research/]
+  E1[daily_review_v1&lt;br/>fresh context]
+  E2[weekly_evolution_v1&lt;br/>fresh context Fri]
+  RP[data/reports/]
+  EV[data/evolution/]
+  COR[data/corrections/]
+
+  EX &amp; PL &amp; RS --> E1 --> RP &amp; COR
+  RP --> E2 --> EV
+  EV -.->|修订建议·需用户 sign-off| PREF[user_preferences.yaml]
+  EV -.->|修订建议| TH[human_thesis/]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>E2 宪法</strong>: 可提 preferences/thesis/skill 修订建议，<strong>不能自动改</strong> — 用户是唯一变更触发者。</p>
+<hr/>
+<h2 id="12-用户三重角色与输入通道">12. 用户三重角色与输入通道<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12-用户三重角色与输入通道" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  USER[用户]\n\n  subgraph ROLE1[\&quot;角色1 · 基础设施提供者\&quot;]\n    DS[加数据源/MCP]\n    CR[修 cron/schema/profile]\n  end\n\n  subgraph ROLE2[\&quot;角色2 · 视野守门员\&quot;]\n    SDM[source_diversity_matrix]\n  end\n\n  subgraph ROLE3[\&quot;角色3 · 进化审阅员\&quot;]\n    SO[sign-off E2 建议]\n  end\n\n  subgraph INPUT[\&quot;经验输入组件 · 非决策主体\&quot;]\n    PREF[user_preferences.yaml&lt;br/>永久硬先验]\n    THESIS[human_thesis/active/*.md&lt;br/>临时视角]\n  end\n\n  USER --> ROLE1 &amp; ROLE2 &amp; ROLE3\n  PREF --> R2R5D1[R2/R5/D1 pull 强约束]\n  THESIS --> ALL[各 Agent 只读 context]\n\n  E2[E2 周进化] -.->|修订建议| PREF &amp; THESIS\n  E2 -.-> SO&quot;">flowchart TB
+  USER[用户]
+
+  subgraph ROLE1[&quot;角色1 · 基础设施提供者&quot;]
+    DS[加数据源/MCP]
+    CR[修 cron/schema/profile]
+  end
+
+  subgraph ROLE2[&quot;角色2 · 视野守门员&quot;]
+    SDM[source_diversity_matrix]
+  end
+
+  subgraph ROLE3[&quot;角色3 · 进化审阅员&quot;]
+    SO[sign-off E2 建议]
+  end
+
+  subgraph INPUT[&quot;经验输入组件 · 非决策主体&quot;]
+    PREF[user_preferences.yaml&lt;br/>永久硬先验]
+    THESIS[human_thesis/active/*.md&lt;br/>临时视角]
+  end
+
+  USER --> ROLE1 &amp; ROLE2 &amp; ROLE3
+  PREF --> R2R5D1[R2/R5/D1 pull 强约束]
+  THESIS --> ALL[各 Agent 只读 context]
+
+  E2[E2 周进化] -.->|修订建议| PREF &amp; THESIS
+  E2 -.-> SO
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<hr/>
+<h2 id="13-t1-施工顺序hermes-优先--零-python-扩展">13. T1’ 施工顺序（Hermes 优先 · 零 Python 扩展）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#13-t1-施工顺序hermes-优先--零-python-扩展" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n  S0[0. 用户 sign-off 本文档] --> S1\n  S1[1. 推倒旧 Hermes cron/profile 绑定&lt;br/>保留 fetch 2 条 active] --> S2\n  S2[2. 确认 Hermes daemon 运行&lt;br/>profile cwd + external_dirs] --> S3\n  S3[3. 实装 P0 skills 进 SKILL.md&lt;br/>R3/R4/R6/D1 + orchestrator] --> S4\n  S4[4. 手工 smoke: hermes -p canghai-research&lt;br/>跑 20260704 raw 数据] --> S5\n  S5[5. 挂 07:30 research cron agent 模式] --> S6\n  S6[6. 手工 smoke: hermes -p canghai-plan D1] --> S7\n  S7[7. 挂 08:00 plan cron agent 模式] --> S8\n  S8[8. 停旧 research/plan cron] --> S9\n  S9[9. 更新 07-重构进度表 T1 验收标准] --> S10\n  S10[10. ⏸ 再写 Python fallback 钩子]\n\n  style S10 fill:#eee,stroke:#999\n  style S3 fill:#ffd,stroke:#aa0\n  style S5 fill:#ffd,stroke:#aa0\n  style S7 fill:#ffd,stroke:#aa0&quot;">flowchart TD
+  S0[0. 用户 sign-off 本文档] --> S1
+  S1[1. 推倒旧 Hermes cron/profile 绑定&lt;br/>保留 fetch 2 条 active] --> S2
+  S2[2. 确认 Hermes daemon 运行&lt;br/>profile cwd + external_dirs] --> S3
+  S3[3. 实装 P0 skills 进 SKILL.md&lt;br/>R3/R4/R6/D1 + orchestrator] --> S4
+  S4[4. 手工 smoke: hermes -p canghai-research&lt;br/>跑 20260704 raw 数据] --> S5
+  S5[5. 挂 07:30 research cron agent 模式] --> S6
+  S6[6. 手工 smoke: hermes -p canghai-plan D1] --> S7
+  S7[7. 挂 08:00 plan cron agent 模式] --> S8
+  S8[8. 停旧 research/plan cron] --> S9
+  S9[9. 更新 07-重构进度表 T1 验收标准] --> S10
+  S10[10. ⏸ 再写 Python fallback 钩子]
+
+  style S10 fill:#eee,stroke:#999
+  style S3 fill:#ffd,stroke:#aa0
+  style S5 fill:#ffd,stroke:#aa0
+  style S7 fill:#ffd,stroke:#aa0
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="131-t1-验收标准替换旧进度表">13.1 T1’ 验收标准（替换旧进度表）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#131-t1-验收标准替换旧进度表" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 07:30 Hermes agent 会话完成 R1–R7 delegation</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> <code>research_summary.json</code> 由 LLM 产出（非 Python orchestrator）</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> R3/R4 artifact 含 <strong>语义分析字段</strong>（非关键词计数）</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 08:00 D1 fresh context 产出 <strong>pydantic 校验通过</strong> 的 <code>watchlist_plan.json</code></li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 盘前 md 落盘 <code>chzl_kg/投研交易/盘前预案/</code></li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 旧 research/plan cron <strong>已停止</strong></li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> <strong>未新增</strong> Python 规则代码行（fallback 阶段除外）</li>
+</ul>
+<h3 id="132-明确不做防误入歧途">13.2 明确不做（防误入歧途）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#132-明确不做防误入歧途" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>❌ 不做</th><th>原因</th></tr></thead><tbody><tr><td>扩展 <code>src/research/r3_*.py</code> / <code>r4_*.py</code> 关键词规则</td><td>非结构化必须 LLM</td></tr><tr><td>扩展 <code>d1_algorithm.py</code> 六步</td><td>D1 主路径是 LLM</td></tr><tr><td>research/plan cron 用 <code>--no-agent</code></td><td>偏离 CANONICAL</td></tr><tr><td>在 T1’ 写 Python fallback</td><td><strong>Hermes 全部做完之后</strong></td></tr><tr><td>把「R1–R7 规则版 ✅」当 T1 完成</td><td>进度表需重写</td></tr></tbody></table></div>
+<hr/>
+<h2 id="14-目录物理隔离写权限">14. 目录物理隔离（写权限）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#14-目录物理隔离写权限" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  FETCH --> RAW[data/raw/]\n  RESEARCH --> RESEARCH_D[data/research/]\n  RESEARCH --> KG1[chzl_kg/部分]\n  PLAN --> PLANS[data/plans/]\n  PLAN --> KG2[chzl_kg/盘前预案]\n  EXECUTE --> EXEC[data/execution/]\n  EXECUTE --> LOADED[watchlist_plan.loaded.json]\n  REVIEW --> REP[data/reports/]\n  REVIEW --> COR[data/corrections/]\n  REVIEW --> EVO[data/evolution/]\n  USER --> PREF[data/user_preferences.yaml]\n  USER --> HT[data/human_thesis/]&quot;">flowchart LR
+  FETCH --> RAW[data/raw/]
+  RESEARCH --> RESEARCH_D[data/research/]
+  RESEARCH --> KG1[chzl_kg/部分]
+  PLAN --> PLANS[data/plans/]
+  PLAN --> KG2[chzl_kg/盘前预案]
+  EXECUTE --> EXEC[data/execution/]
+  EXECUTE --> LOADED[watchlist_plan.loaded.json]
+  REVIEW --> REP[data/reports/]
+  REVIEW --> COR[data/corrections/]
+  REVIEW --> EVO[data/evolution/]
+  USER --> PREF[data/user_preferences.yaml]
+  USER --> HT[data/human_thesis/]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>目录</th><th>唯一 Writer</th><th>Reader</th></tr></thead><tbody><tr><td><code>data/raw/</code></td><td>fetch</td><td>research, plan(P1/P2)</td></tr><tr><td><code>data/research/</code></td><td>research</td><td>plan, review</td></tr><tr><td><code>data/plans/</code></td><td>plan（D1/P1/P2 写 json；execute 只写 loaded）</td><td>execute, review</td></tr><tr><td><code>data/execution/</code></td><td>execute</td><td>review</td></tr><tr><td><code>data/reports/</code> <code>corrections/</code> <code>evolution/</code></td><td>review</td><td>用户, E2</td></tr><tr><td><code>user_preferences.yaml</code></td><td><strong>用户</strong></td><td>全员只读；E2 只建议</td></tr><tr><td><code>human_thesis/</code></td><td><strong>用户</strong></td><td>全员只读；E2 可建议撤销</td></tr></tbody></table></div>
+<hr/>
+<h2 id="15-多基座策略t4-后--预览">15. 多基座策略（T4 后 · 预览）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#15-多基座策略t4-后--预览" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Profile</th><th>建议基座</th><th>原因</th></tr></thead><tbody><tr><td>canghai-plan (D1/P1/P2)</td><td>最强推理模型</td><td>全局裁决</td></tr><tr><td>canghai-review (E1/E2)</td><td>最强 + 诚实倾向</td><td>打破 confidence bias</td></tr><tr><td>canghai-research (R1–R7)</td><td>快/便宜模型</td><td>广域信息</td></tr><tr><td>canghai-execute 判断节点</td><td>最快模型</td><td>3s 硬限</td></tr><tr><td>canghai-fetch</td><td>几乎无 LLM</td><td>脚本为主</td></tr></tbody></table></div>
+<p>T1’ 统一用 profile 默认 <code>ark-code-latest</code> 即可；换基座 = 只改 prompt（方案 B 拆分后改 <code>skill_prompt_*.md</code>）。</p>
+<hr/>
+<h2 id="16-sign-off-清单">16. Sign-off 清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#16-sign-off-清单" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>审阅时请逐项确认：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>#</th><th>审阅项</th><th>☐</th></tr></thead><tbody><tr><td>1</td><td>双平面划分（Hermes 运行时 vs 项目资产）是否正确</td><td></td></tr><tr><td>2</td><td>Research/Plan 主路径 = Hermes LLM + delegation</td><td></td></tr><tr><td>3</td><td>Fetch 暂保持 <code>--no-agent</code> script</td><td></td></tr><tr><td>4</td><td>T1’ 不写 Python fallback，Hermes 做完再说</td><td></td></tr><tr><td>5</td><td>Skill 方案 B：先充实 SKILL.md</td><td></td></tr><tr><td>6</td><td>Execute T2.1 = 30–60s 轮询</td><td></td></tr><tr><td>7</td><td>R6 hard_reject 对 D1 硬否决</td><td></td></tr><tr><td>8</td><td>MCP 映射与 research 禁 δ 层</td><td></td></tr><tr><td>9</td><td>Cron agent 模式模板（§9.2）</td><td></td></tr><tr><td>10</td><td>旧 cron/profile 可推倒重写</td><td></td></tr></tbody></table></div>
+<p><strong>Sign-off 后下一步</strong>: 按 §13 顺序施工 — <strong>不写新 Python 规则代码</strong>。</p>
+<hr/>
+<h2 id="附录-a--相关文档索引">附录 A · 相关文档索引<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#附录-a--相关文档索引" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>文档</th><th>关系</th></tr></thead><tbody><tr><td><code>docs/00-CANONICAL-ARCHITECTURE-v1.md</code></td><td>唯一权威原文</td></tr><tr><td><code>docs/07-重构进度表.md</code></td><td>待 T1’ 完成后重写验收项</td></tr><tr><td><code>docs/hermes-project-boundary.md</code></td><td>Hermes 薄脚本边界</td></tr><tr><td><code>docs/11-数据源分层与降级.md</code></td><td>MCP 降级策略</td></tr><tr><td><code>docs/research_summary_schema.md</code></td><td>契约 3</td></tr><tr><td><code>docs/watchlist_plan_schema.md</code></td><td>契约 1</td></tr><tr><td><code>docs/amendment_schema.md</code></td><td>契约 2</td></tr><tr><td><code>~/.hermes/profiles/canghai-*/SOUL.md</code></td><td>Profile 约束原文</td></tr><tr><td><code>skills/*/SKILL.md</code></td><td>T1’ 施工主战场</td></tr></tbody></table></div>
+<h2 id="附录-b--当前-hermes-运行时快照2026-07-05">附录 B · 当前 Hermes 运行时快照（2026-07-05）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#附录-b--当前-hermes-运行时快照2026-07-05" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项</th><th>状态</th></tr></thead><tbody><tr><td><code>hermes profile list</code></td><td>canghai-fetch/research/plan/execute/review 均存在；research <strong>running</strong>，其余 <strong>stopped</strong></td></tr><tr><td>Active cron</td><td>2 条：07:15 pre-fetch + */30 health（均 <code>--no-agent</code>）</td></tr><tr><td>research/plan cron</td><td><strong>未建</strong>（旧模板 <code>--no-agent</code> 作废）</td></tr><tr><td>delegation</td><td>config 中 <code>delegation.orchestrator_enabled: true</code>，<code>max_spawn_depth: 1</code></td></tr><tr><td>skills external_dirs</td><td>指向项目 <code>skills/</code></td></tr></tbody></table></div>
+<hr/>
+<p><em>本文档由架构纠偏讨论生成。修改请先改本文档并 re-sign-off，再动代码。</em></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-2" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#沧海巨浪--架构审阅图t1-纠偏版" data-for="沧海巨浪--架构审阅图t1-纠偏版">沧海巨浪 · 架构审阅图（T1’ 纠偏版）</a></li><li class="depth-1"><a href="#0-一句话总结" data-for="0-一句话总结">0. 一句话总结</a></li><li class="depth-1"><a href="#1-双平面架构宪法级" data-for="1-双平面架构宪法级">1. 双平面架构（宪法级）</a></li><li class="depth-2"><a href="#11-当前偏离-vs-目标对照" data-for="11-当前偏离-vs-目标对照">1.1 当前偏离 vs 目标（对照）</a></li><li class="depth-1"><a href="#2-五-profile-总览类脑映射--载体" data-for="2-五-profile-总览类脑映射--载体">2. 五 Profile 总览（类脑映射 + 载体）</a></li><li class="depth-1"><a href="#3-每日数据流时间轴canonical-33" data-for="3-每日数据流时间轴canonical-33">3. 每日数据流时间轴（CANONICAL §3.3）</a></li><li class="depth-2"><a href="#31-盘前主链路t1-验收范围" data-for="31-盘前主链路t1-验收范围">3.1 盘前主链路（T1’ 验收范围）</a></li><li class="depth-1"><a href="#4-artifact-链与-schema-契约" data-for="4-artifact-链与-schema-契约">4. Artifact 链与 Schema 契约</a></li><li class="depth-1"><a href="#5-delegation-机制canonical-23" data-for="5-delegation-机制canonical-23">5. Delegation 机制（CANONICAL §2.3）</a></li><li class="depth-2"><a href="#51-调度时序硬约束" data-for="51-调度时序硬约束">5.1 调度时序（硬约束）</a></li><li class="depth-1"><a href="#6-节点级llm-主路径-vs-pythont1-范围" data-for="6-节点级llm-主路径-vs-pythont1-范围">6. 节点级：LLM 主路径 vs Python（T1’ 范围）</a></li><li class="depth-1"><a href="#7-mcp-与工具层全局拓扑" data-for="7-mcp-与工具层全局拓扑">7. MCP 与工具层（全局拓扑）</a></li><li class="depth-2"><a href="#71-mcp-server-注册hermesconfigyaml" data-for="71-mcp-server-注册hermesconfigyaml">7.1 MCP Server 注册（~/.hermes/config.yaml）</a></li><li class="depth-2"><a href="#72-soul-toolsets-别名--mcp-映射" data-for="72-soul-toolsets-别名--mcp-映射">7.2 SOUL Toolsets 别名 → MCP 映射</a></li><li class="depth-2"><a href="#73-各-profile-的-toolsets-白名单" data-for="73-各-profile-的-toolsets-白名单">7.3 各 Profile 的 Toolsets 白名单</a></li><li class="depth-2"><a href="#74-数据源三层与-agent-消费关系" data-for="74-数据源三层与-agent-消费关系">7.4 数据源三层与 Agent 消费关系</a></li><li class="depth-1"><a href="#8-skill-资产模型方案-b--t1" data-for="8-skill-资产模型方案-b--t1">8. Skill 资产模型（方案 B · T1’）</a></li><li class="depth-2"><a href="#81-t1-必须实装内容的-skill优先级" data-for="81-t1-必须实装内容的-skill优先级">8.1 T1’ 必须实装内容的 Skill（优先级）</a></li><li class="depth-2"><a href="#82-skill-与-agent-spec-映射" data-for="82-skill-与-agent-spec-映射">8.2 Skill 与 Agent Spec 映射</a></li><li class="depth-1"><a href="#9-cron-拓扑纠正版" data-for="9-cron-拓扑纠正版">9. Cron 拓扑（纠正版）</a></li><li class="depth-2"><a href="#91-mode-分类" data-for="91-mode-分类">9.1 Mode 分类</a></li><li class="depth-2"><a href="#92-目标-cron-一览canonical-77" data-for="92-目标-cron-一览canonical-77">9.2 目标 Cron 一览（CANONICAL §7.7）</a></li><li class="depth-2"><a href="#93-hermes-边界薄脚本原则" data-for="93-hermes-边界薄脚本原则">9.3 Hermes 边界（薄脚本原则）</a></li><li class="depth-1"><a href="#10-execute-层t2--用户拍板-3060s" data-for="10-execute-层t2--用户拍板-3060s">10. Execute 层（T2 · 用户拍板 30–60s）</a></li><li class="depth-1"><a href="#11-review-层t3--预览" data-for="11-review-层t3--预览">11. Review 层（T3 · 预览）</a></li><li class="depth-1"><a href="#12-用户三重角色与输入通道" data-for="12-用户三重角色与输入通道">12. 用户三重角色与输入通道</a></li><li class="depth-1"><a href="#13-t1-施工顺序hermes-优先--零-python-扩展" data-for="13-t1-施工顺序hermes-优先--零-python-扩展">13. T1’ 施工顺序（Hermes 优先 · 零 Python 扩展）</a></li><li class="depth-2"><a href="#131-t1-验收标准替换旧进度表" data-for="131-t1-验收标准替换旧进度表">13.1 T1’ 验收标准（替换旧进度表）</a></li><li class="depth-2"><a href="#132-明确不做防误入歧途" data-for="132-明确不做防误入歧途">13.2 明确不做（防误入歧途）</a></li><li class="depth-1"><a href="#14-目录物理隔离写权限" data-for="14-目录物理隔离写权限">14. 目录物理隔离（写权限）</a></li><li class="depth-1"><a href="#15-多基座策略t4-后--预览" data-for="15-多基座策略t4-后--预览">15. 多基座策略（T4 后 · 预览）</a></li><li class="depth-1"><a href="#16-sign-off-清单" data-for="16-sign-off-清单">16. Sign-off 清单</a></li><li class="depth-1"><a href="#附录-a--相关文档索引" data-for="附录-a--相关文档索引">附录 A · 相关文档索引</a></li><li class="depth-1"><a href="#附录-b--当前-hermes-运行时快照2026-07-05" data-for="附录-b--当前-hermes-运行时快照2026-07-05">附录 B · 当前 Hermes 运行时快照（2026-07-05）</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="./未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="./static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="./static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="./static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="./static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript-551b937a.js" type="module" data-persist="true"></script></html>

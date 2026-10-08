@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>个性化交易行为诊断 v1</title><meta charset="utf-8"/><link rel="preload" href="../index-5a23ce28.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="个性化交易行为诊断 v1"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="个性化交易行为诊断 v1"/><meta name="twitter:description" content="个性化交易行为诊断 · v1 你自己说了三条:「上涨后下跌途中接盘 / 浮亏加仓 / 买杂毛票」· 我用原始数据一条条对你验证。结论:三条全部证实,而且比你想的更严重。 §1 浮亏加仓 — 你自己知道,但没意识到有多频繁 量化定义:同一账户同一票 · 多次买入 · 每次买入价低于前次 · 累计降幅 > 3%(即「越买越跌」) 共发现 31 组浮亏加仓事件,累计投入本金 ¥2,754,766 Top-15 浮亏加仓案例(按累计投入排序) 账户代码名称加仓次数首次买入末次买入首价 → 末价跌幅卖出日卖出价累计投入账户3002552宝鼎科技32026-07-032026-07-0662.81 ..."/><meta property="og:description" content="个性化交易行为诊断 · v1 你自己说了三条:「上涨后下跌途中接盘 / 浮亏加仓 / 买杂毛票」· 我用原始数据一条条对你验证。结论:三条全部证实,而且比你想的更严重。 §1 浮亏加仓 — 你自己知道,但没意识到有多频繁 量化定义:同一账户同一票 · 多次买入 · 每次买入价低于前次 · 累计降幅 > 3%(即「越买越跌」) 共发现 31 组浮亏加仓事件,累计投入本金 ¥2,754,766 Top-15 浮亏加仓案例(按累计投入排序) 账户代码名称加仓次数首次买入末次买入首价 → 末价跌幅卖出日卖出价累计投入账户3002552宝鼎科技32026-07-032026-07-0662.81 ..."/><meta property="og:image:alt" content="个性化交易行为诊断 · v1 你自己说了三条:「上涨后下跌途中接盘 / 浮亏加仓 / 买杂毛票」· 我用原始数据一条条对你验证。结论:三条全部证实,而且比你想的更严重。 §1 浮亏加仓 — 你自己知道,但没意识到有多频繁 量化定义:同一账户同一票 · 多次买入 · 每次买入价低于前次 · 累计降幅 > 3%(即「越买越跌」) 共发现 31 组浮亏加仓事件,累计投入本金 ¥2,754,766 Top-15 浮亏加仓案例(按累计投入排序) 账户代码名称加仓次数首次买入末次买入首价 → 末价跌幅卖出日卖出价累计投入账户3002552宝鼎科技32026-07-032026-07-0662.81 ..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/交割单分析/个性化诊断_v1"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/交割单分析/个性化诊断_v1"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="个性化交易行为诊断 · v1 你自己说了三条:「上涨后下跌途中接盘 / 浮亏加仓 / 买杂毛票」· 我用原始数据一条条对你验证。结论:三条全部证实,而且比你想的更严重。 §1 浮亏加仓 — 你自己知道,但没意识到有多频繁 量化定义:同一账户同一票 · 多次买入 · 每次买入价低于前次 · 累计降幅 > 3%(即「越买越跌」) 共发现 31 组浮亏加仓事件,累计投入本金 ¥2,754,766 Top-15 浮亏加仓案例(按累计投入排序) 账户代码名称加仓次数首次买入末次买入首价 → 末价跌幅卖出日卖出价累计投入账户3002552宝鼎科技32026-07-032026-07-0662.81 ..."/><meta name="generator" content="Quartz"/><link href="../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="交割单分析/个性化诊断_v1" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-12" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-12" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../交割单分析/">交割单分析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>个性化交易行为诊断 v1</a></div></nav><h1 class="article-title">个性化交易行为诊断 v1</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-17T05:00:09.000Z">2026年9月17日</time><span>15分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="个性化交易行为诊断--v1">个性化交易行为诊断 · v1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#个性化交易行为诊断--v1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>你自己说了三条:「上涨后下跌途中接盘 / 浮亏加仓 / 买杂毛票」· 我用原始数据一条条对你验证。<strong>结论:三条全部证实,而且比你想的更严重。</strong></p>
+</blockquote>
+<h2 id="1-浮亏加仓--你自己知道但没意识到有多频繁">§1 浮亏加仓 — 你自己知道,但没意识到有多频繁<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-浮亏加仓--你自己知道但没意识到有多频繁" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>量化定义</strong>:同一账户同一票 · 多次买入 · 每次买入价低于前次 · 累计降幅 > 3%(即「越买越跌」)</p>
+<p><strong>共发现 31 组浮亏加仓事件</strong>,累计投入本金 <strong>¥2,754,766</strong></p>
+<h3 id="top-15-浮亏加仓案例按累计投入排序">Top-15 浮亏加仓案例(按累计投入排序)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#top-15-浮亏加仓案例按累计投入排序" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>账户</th><th>代码</th><th>名称</th><th>加仓次数</th><th>首次买入</th><th>末次买入</th><th>首价 → 末价</th><th>跌幅</th><th>卖出日</th><th>卖出价</th><th>累计投入</th></tr></thead><tbody><tr><td>账户3</td><td>002552</td><td>宝鼎科技</td><td>3</td><td>2026-07-03</td><td>2026-07-06</td><td>62.81 → 60.10</td><td>-4.3%</td><td>未卖出</td><td>—</td><td>228,823</td></tr><tr><td>账户2</td><td>600759</td><td>ST洲际</td><td>2</td><td>2026-03-05</td><td>2026-03-05</td><td>9.07 → 8.72</td><td>-3.9%</td><td>2026-03-13</td><td>7.00</td><td>161,953</td></tr><tr><td>账户3</td><td>600745</td><td>*ST闻泰</td><td>2</td><td>2026-07-07</td><td>2026-07-08</td><td>18.10 → 17.49</td><td>-3.4%</td><td>未卖出</td><td>—</td><td>146,153</td></tr><tr><td>账户1</td><td>601138</td><td>工业富联</td><td>3</td><td>2025-11-14</td><td>2025-11-24</td><td>65.48 → 54.61</td><td>-16.6%</td><td>2025-11-26</td><td>58.47</td><td>142,098</td></tr><tr><td>账户2</td><td>600936</td><td>北投科技</td><td>2</td><td>2026-05-22</td><td>2026-05-28</td><td>5.74 → 5.37</td><td>-6.4%</td><td>2026-05-28</td><td>5.42</td><td>130,837</td></tr><tr><td>账户2</td><td>300723</td><td>一品红</td><td>3</td><td>2026-06-05</td><td>2026-06-09</td><td>39.86 → 35.17</td><td>-11.8%</td><td>2026-06-09</td><td>35.18</td><td>123,296</td></tr><tr><td>账户2</td><td>601138</td><td>工业富联</td><td>3</td><td>2026-01-20</td><td>2026-02-09</td><td>59.67 → 55.69</td><td>-6.7%</td><td>2026-02-26</td><td>58.02</td><td>121,455</td></tr><tr><td>账户1</td><td>600936</td><td>北投科技</td><td>3</td><td>2026-06-08</td><td>2026-06-08</td><td>5.81 → 5.60</td><td>-3.6%</td><td>2026-06-09</td><td>5.45</td><td>120,276</td></tr><tr><td>账户1</td><td>603083</td><td>剑桥科技</td><td>5</td><td>2025-10-30</td><td>2025-10-31</td><td>112.10 → 103.40</td><td>-7.8%</td><td>2025-11-13</td><td>107.17</td><td>118,291</td></tr><tr><td>账户2</td><td>002865</td><td>钧达股份</td><td>2</td><td>2026-06-17</td><td>2026-06-18</td><td>69.09 → 64.84</td><td>-6.1%</td><td>2026-06-18</td><td>64.58</td><td>114,054</td></tr><tr><td>账户1</td><td>300502</td><td>新易盛</td><td>2</td><td>2026-02-26</td><td>2026-02-27</td><td>385.23 → 359.01</td><td>-6.8%</td><td>2026-03-02</td><td>377.30</td><td>110,325</td></tr><tr><td>账户4</td><td>600522</td><td>中天科技</td><td>2</td><td>2026-06-23</td><td>2026-06-29</td><td>62.15 → 59.95</td><td>-3.5%</td><td>未卖出</td><td>—</td><td>110,108</td></tr><tr><td>账户1</td><td>000737</td><td>北方铜业</td><td>2</td><td>2026-02-03</td><td>2026-02-05</td><td>17.19 → 16.40</td><td>-4.6%</td><td>2026-02-27</td><td>17.87</td><td>98,972</td></tr><tr><td>账户2</td><td>002866</td><td>传艺科技</td><td>3</td><td>2026-04-23</td><td>2026-04-23</td><td>26.24 → 25.38</td><td>-3.3%</td><td>2026-04-27</td><td>25.96</td><td>90,126</td></tr><tr><td>账户2</td><td>300851</td><td>交大思诺</td><td>4</td><td>2026-05-28</td><td>2026-06-01</td><td>30.56 → 27.50</td><td>-10.0%</td><td>2026-06-01</td><td>27.48</td><td>88,942</td></tr></tbody></table></div>
+<h3 id="-最典型案例账户3--002552-宝鼎科技">🔍 最典型案例:账户3 · 002552 宝鼎科技<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-最典型案例账户3--002552-宝鼎科技" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>日期</th><th>买/卖</th><th>价格</th><th>数量</th><th>金额</th></tr></thead><tbody><tr><td>2026-07-03</td><td>B</td><td>62.81</td><td>1500</td><td>94,215</td></tr><tr><td>2026-07-06</td><td>B</td><td>64.08</td><td>600</td><td>38,448</td></tr><tr><td>2026-07-06</td><td>B</td><td>60.10</td><td>1600</td><td>96,160</td></tr></tbody></table></div>
+<p><strong>你的模式</strong>:2026-07-03 以 62.81 建仓 → 跌了继续加 → 最后 2026-07-06 在 60.10 加到最重(比初始价低 -4.3%)· 这是<strong>教科书级的「死不认错」</strong> —— 用后续资金给最初的错误决策续命。</p>
+<h3 id="浮亏加仓的数学期望">浮亏加仓的数学期望<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#浮亏加仓的数学期望" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>加仓次数分布</strong>:2 次 20 组 · 3 次 7 组 · 4 次及以上 4 组</li>
+<li><strong>平均降价幅度</strong>:-6.5%(第一次买入到最后一次买入之间,平均已跌了这么多)</li>
+<li><strong>关键问题</strong>:你在<strong>已经错的方向上追加筹码</strong>,而不是承认错并换股。加权成本降下来的幻觉掩盖了「这只股的趋势已经坏了」的事实。</li>
+<li><strong>数学期望</strong>:一只票趋势坏了以后,继续下跌的概率 >> 反弹回本的概率(尤其杂毛票)。加仓 = 把炸弹叠起来。</li>
+</ul>
+<h2 id="2-下跌途中接盘--下降通道抄底--你比自己认为的更右侧">§2 下跌途中接盘 / 下降通道抄底 — 你比自己认为的更右侧<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-下跌途中接盘--下降通道抄底--你比自己认为的更右侧" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>量化定义</strong>:每笔买入 · 检查买入日前 60 日 K 线 · 分类到六种进场姿势</p>
+<p><strong>样本</strong>:478 笔已平仓 roundtrip</p>
+<h3 id="进场姿势--结果">进场姿势 × 结果<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#进场姿势--结果" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>进场姿势</th><th>笔数</th><th>胜率</th><th>平均盈亏</th><th>累计盈亏</th></tr></thead><tbody><tr><td>🟢 主升途中</td><td>57</td><td>24.6%</td><td>-993</td><td><strong>-56,575</strong></td></tr><tr><td>🩸 高位回落接盘 (60日高点回撤>10% · 高点在20日内)</td><td>86</td><td>41.9%</td><td>-437</td><td><strong>-37,586</strong></td></tr><tr><td>🟠 深度回撤介入 (从60日高点已跌>15%)</td><td>81</td><td>44.4%</td><td>-326</td><td><strong>-26,414</strong></td></tr><tr><td>⚪ 平台/中性</td><td>59</td><td>42.4%</td><td>-387</td><td><strong>-22,828</strong></td></tr><tr><td>🩸 下降通道抄底 (从60日高点回撤>10% + MA20下行 + 价&lt;MA20)</td><td>56</td><td>33.9%</td><td>-283</td><td><strong>-15,860</strong></td></tr><tr><td>🔴 追涨大阳/涨停</td><td>139</td><td>49.6%</td><td>+217</td><td><strong>+30,132</strong></td></tr></tbody></table></div>
+<h3 id="-下跌途中下降通道接盘专项">🩸 下跌途中/下降通道接盘专项<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-下跌途中下降通道接盘专项" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>这三类姿势合计 <strong>223 笔</strong>(46.7% of 所有 roundtrip)· 累计净盈亏 <strong>-79,860</strong></p>
+<ul>
+<li>你<strong>自认为</strong>在做右侧抄底 · 数据说:这类进场胜率 40.8% · 平均盈亏 -358/笔</li>
+<li>也就是说 · <strong>每次你觉得「跌够了应该反弹」时,数学期望是亏损</strong></li>
+</ul>
+<h3 id="top-10-最惨的下跌接盘案例">Top-10 最惨的「下跌接盘」案例<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#top-10-最惨的下跌接盘案例" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>账户</th><th>代码</th><th>名称</th><th>买入日</th><th>从60日高回撤</th><th>MA20斜率</th><th>前10日</th><th>持有天数</th><th>净盈亏</th></tr></thead><tbody><tr><td>账户1</td><td>600151</td><td>航天机电</td><td>2026-04-21</td><td>-27.7%</td><td>-6.2%</td><td>+19.3%</td><td>7</td><td><strong>-7,785</strong></td></tr><tr><td>账户1</td><td>603399</td><td>永杉锂业</td><td>2026-06-01</td><td>-25.8%</td><td>+57.9%</td><td>-8.3%</td><td>1</td><td><strong>-6,774</strong></td></tr><tr><td>账户1</td><td>002192</td><td>融捷股份</td><td>2026-05-20</td><td>-21.4%</td><td>+32.5%</td><td>-21.0%</td><td>2</td><td><strong>-6,508</strong></td></tr><tr><td>账户1</td><td>300136</td><td>信维通信</td><td>2026-06-11</td><td>-20.3%</td><td>+21.3%</td><td>-15.2%</td><td>4</td><td><strong>-6,297</strong></td></tr><tr><td>账户2</td><td>002455</td><td>百川股份</td><td>2026-04-01</td><td>-19.3%</td><td>+14.6%</td><td>+3.6%</td><td>1</td><td><strong>-5,855</strong></td></tr><tr><td>账户2</td><td>002865</td><td>钧达股份</td><td>2026-06-17</td><td>-39.6%</td><td>-10.6%</td><td>-8.6%</td><td>5</td><td><strong>-5,056</strong></td></tr><tr><td>账户1</td><td>600488</td><td>津药药业</td><td>2026-04-16</td><td>-25.5%</td><td>+29.7%</td><td>+18.8%</td><td>1</td><td><strong>-4,754</strong></td></tr><tr><td>账户1</td><td>300185</td><td>通裕重工</td><td>2026-06-10</td><td>-34.7%</td><td>-9.6%</td><td>-4.3%</td><td>1</td><td><strong>-4,707</strong></td></tr><tr><td>账户2</td><td>600026</td><td>中远海能</td><td>2026-03-26</td><td>-12.0%</td><td>+44.3%</td><td>+12.7%</td><td>5</td><td><strong>-4,543</strong></td></tr><tr><td>账户1</td><td>600865</td><td>百大集团</td><td>2026-01-08</td><td>-25.6%</td><td>+70.7%</td><td>-9.6%</td><td>5</td><td><strong>-3,574</strong></td></tr></tbody></table></div>
+<p><strong>共性</strong>:每一笔进场时 · <strong>60 日高点已在 15-30% 前 + 20 日均线明确下行</strong>。这是<strong>已经形成下降趋势</strong>的形态,不是「上涨中的回调」。</p>
+<h3 id="为什么你会反复做这件事心理学">为什么你会反复做这件事(心理学)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#为什么你会反复做这件事心理学" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong>锚定效应</strong>:你锚定的是这只票的「最近高点」或「我记得它涨过 X 价」 · 于是「现在便宜了」的错觉产生 —— 但股价不会因为你记得高点就回去。</li>
+<li><strong>反弹幻觉</strong>:下跌途中会有小反弹(1-2 日反抽)· 你把小反弹当成「底部信号」进场 —— 但下降通道里每一次反抽都是<strong>下一波下跌的启动位</strong>。</li>
+<li><strong>右侧假象</strong>:你以为看到「日 K 收阳」就是右侧信号 · 但<strong>真右侧要求 MA20 拐头 + 突破前高</strong>,单日阳线不算数。</li>
+</ol>
+<h2 id="3-杂毛票--你的重灾区而且比你想的更多">§3 杂毛票 — 你的重灾区,而且比你想的更多<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-杂毛票--你的重灾区而且比你想的更多" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>量化定义</strong>:市值 &lt; 100 亿 + 无核心题材(AI算力/新能源/军工/白马/创新药)· 高换手投机票</p>
+<p><strong>样本占比</strong>:杂毛票 roundtrip <strong>6</strong> 笔 · 非杂毛 179 笔</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>是否杂毛</th><th>笔数</th><th>胜率</th><th>平均盈亏</th><th>累计盈亏</th></tr></thead><tbody><tr><td>🐋 核心题材/大盘</td><td>179</td><td>43.6%</td><td>-877</td><td><strong>-156,938</strong></td></tr><tr><td>🐛 杂毛</td><td>6</td><td>16.7%</td><td>-4323</td><td><strong>-25,935</strong></td></tr></tbody></table></div>
+<h3 id="top-15-亏得最惨的杂毛票">Top-15 亏得最惨的杂毛票<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#top-15-亏得最惨的杂毛票" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>账户</th><th>代码</th><th>名称</th><th>持有</th><th>买入 → 卖出</th><th>净盈亏</th><th>板块题材</th></tr></thead><tbody><tr><td>账户2</td><td>000759</td><td>中百集团</td><td>6天</td><td>9.07 → 7.67</td><td><strong>-31,210</strong></td><td>内贸流通 · 超市 · 社区团购</td></tr><tr><td>账户1</td><td>000759</td><td>中百集团</td><td>5天</td><td>9.09 → 8.11</td><td><strong>-3,070</strong></td><td>内贸流通 · 超市 · 社区团购</td></tr><tr><td>账户4</td><td>000007</td><td>全新好</td><td>5天</td><td>17.17 → 13.45</td><td><strong>-2,616</strong></td><td>一般零售 · 商贸零售 · 商业物业经营</td></tr><tr><td>账户4</td><td>000007</td><td>全新好</td><td>5天</td><td>17.17 → 13.45</td><td><strong>-2,616</strong></td><td>一般零售 · 商贸零售 · 商业物业经营</td></tr><tr><td>账户3</td><td>002205</td><td>国统股份</td><td>1天</td><td>10.93 → 10.47</td><td><strong>-429</strong></td><td>微盘股 · 水泥制品 · 水泥</td></tr><tr><td>账户1</td><td>603538</td><td>美诺华</td><td>8天</td><td>28.36 → 43.97</td><td><strong>+14,006</strong></td><td>参股新三板 · 辅助生殖 · 宠物经济</td></tr></tbody></table></div>
+<p><strong>杂毛票的三个共性</strong>:</p>
+<ol>
+<li><strong>市值小(20-80 亿)</strong> · 主力可以轻易砸盘或拉抬 · 你是流动性提供者,不是猎手</li>
+<li><strong>题材边缘</strong>(内贸流通/低价股/工程机械配套/贵州板块 …) · 没有主流资金持续关注</li>
+<li><strong>换手率高但净流入弱</strong> · 说明是游资短炒 · 你进去就是接力最后一棒</li>
+</ol>
+<h2 id="4-反复被同一只票割--熟悉不等于懂">§4 反复被同一只票割 — 熟悉不等于懂<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-反复被同一只票割--熟悉不等于懂" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>账户内单票交易 >= 5 笔的股票 Top 20</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>账户</th><th>代码</th><th>名称</th><th>总笔数</th></tr></thead><tbody><tr><td>账户1</td><td>603688</td><td>石英股份</td><td>20</td></tr><tr><td>账户4</td><td>002171</td><td>楚江新材</td><td>19</td></tr><tr><td>账户1</td><td>603259</td><td>药明康德</td><td>19</td></tr><tr><td>账户2</td><td>002025</td><td>航天电器</td><td>18</td></tr><tr><td>账户1</td><td>600580</td><td>卧龙电驱</td><td>16</td></tr><tr><td>账户2</td><td>601138</td><td>工业富联</td><td>13</td></tr><tr><td>账户1</td><td>000831</td><td>中国稀土</td><td>13</td></tr><tr><td>账户1</td><td>600936</td><td>北投科技</td><td>12</td></tr><tr><td>账户1</td><td>601138</td><td>工业富联</td><td>10</td></tr><tr><td>账户2</td><td>600936</td><td>北投科技</td><td>10</td></tr><tr><td>账户2</td><td>300723</td><td>一品红</td><td>10</td></tr><tr><td>账户2</td><td>002866</td><td>传艺科技</td><td>10</td></tr><tr><td>账户1</td><td>603083</td><td>剑桥科技</td><td>10</td></tr><tr><td>账户1</td><td>600759</td><td>ST洲际</td><td>10</td></tr><tr><td>账户4</td><td>603019</td><td>中科曙光</td><td>9</td></tr><tr><td>账户2</td><td>603259</td><td>药明康德</td><td>9</td></tr><tr><td>账户4</td><td>603703</td><td>盛洋科技</td><td>9</td></tr><tr><td>账户1</td><td>300723</td><td>一品红</td><td>9</td></tr><tr><td>账户1</td><td>002171</td><td>楚江新材</td><td>8</td></tr><tr><td>账户2</td><td>600989</td><td>宝丰能源</td><td>8</td></tr></tbody></table></div>
+<h2 id="5-综合诊断--你到底在做什么样的交易">§5 综合诊断 · 你到底在做什么样的交易?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-综合诊断--你到底在做什么样的交易" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="你以为你在做">你以为你在做:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#你以为你在做" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>右侧突破买入 · 主线跟随 · 严格止损</li>
+</ul>
+<h3 id="数据说你实际在做">数据说你实际在做:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据说你实际在做" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>左侧摸底</strong>(下跌 15-30% 后进场 · 期望反弹)</li>
+<li><strong>浮亏加仓</strong>(错了继续投钱)</li>
+<li><strong>广撒网 + 杂毛偏好</strong>(市值下沉能带来「便宜」的感觉,但便宜不代表低估)</li>
+<li><strong>短线套利涨停</strong>(涨停日追入 · 少数几笔大盈 · 但不足以覆盖左侧亏损)</li>
+</ul>
+<h3 id="一句话总结">一句话总结<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一句话总结" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p>你的<strong>盈利单是主动型</strong>(涨停日追入拿 T+1 涨停出)· <strong>亏损单是被动型</strong>(下跌途中接盘 → 浮亏加仓 → 死扛 → 割肉)。<strong>两种模式互相污染</strong> — 涨停套利需要的是纪律(快进快出)· 左侧抄底需要的是耐心(周线级) · 你把它们混在一起做,两头都不到位。</p>
+</blockquote>
+<h2 id="6-给你的六条硬规矩按痛点排序">§6 给你的六条硬规矩(按痛点排序)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-给你的六条硬规矩按痛点排序" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="规矩-1--禁止加仓任何浮亏--3-的股票不允许加仓已经错的方向不加">规矩 1 — 【禁止加仓】任何浮亏 > 3% 的股票不允许加仓,已经错的方向不加<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#规矩-1--禁止加仓任何浮亏--3-的股票不允许加仓已经错的方向不加" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>你 31 组浮亏加仓 · 累计投入 ¥2,754,766 · <strong>一次都不应该做</strong></p>
+<ul>
+<li>如果一只票值得加仓 · <strong>它应该在你手里赚钱之后再加</strong>(金字塔正加仓 · 而非倒金字塔)</li>
+<li>具体机器 gate:miniQMT 里加一条订单前置检查 · 当前仓位浮亏 &lt; -3% 时拒绝同代码买单</li>
+</ul>
+<h3 id="规矩-2--禁止下降通道接盘买入前必须检查-ma20-是否上行">规矩 2 — 【禁止下降通道接盘】买入前必须检查 MA20 是否上行<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#规矩-2--禁止下降通道接盘买入前必须检查-ma20-是否上行" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>你有 223 笔「下跌接盘/下降通道」进场 · 累计亏 -79,860</p>
+<ul>
+<li>硬指标:<strong>买入日 MA20 斜率必须 > 0</strong>(近 20 日均线上行) · 且<strong>收盘价 > MA20</strong></li>
+<li>如果一只票你觉得「跌够了」想买 · 等它至少收 3 根 K 线站上 MA20 再动手</li>
+<li>R6 反证 agent 加规则:MA20 下行 + 从 60 日高回撤 > 10% → 硬否决买入信号</li>
+</ul>
+<h3 id="规矩-3--杂毛票禁买市值--100-亿--无主流题材的股票不进入-execution_pool">规矩 3 — 【杂毛票禁买】市值 &lt; 100 亿 + 无主流题材的股票不进入 execution_pool<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#规矩-3--杂毛票禁买市值--100-亿--无主流题材的股票不进入-execution_pool" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>你 6 笔杂毛交易累计 -25,935</p>
+<ul>
+<li>watchlist 可以放 · 但<strong>不允许自动买入</strong></li>
+<li>具体白名单:市值 > 200 亿 或 前 10 大流通股东有社保/QFII/公募 · 或题材属于 AI 算力/新能源/军工龙头</li>
+</ul>
+<h3 id="规矩-4--单票交易--3-次月反复交易同一只票是没做懂的信号">规矩 4 — 【单票交易 ≤ 3 次/月】反复交易同一只票是没做懂的信号<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#规矩-4--单票交易--3-次月反复交易同一只票是没做懂的信号" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>你有 20 组「月度 >=5 笔同票」交易 · 大部分是反复被割</p>
+<ul>
+<li>如果一只票在你手里割了 2 次 · <strong>第 3 次买入前必须写 200 字理由</strong>(强制冷静期)</li>
+<li>例外:确认为高频套利模板(如账户2 航天电器 002025 那种胜率 75% 的正循环)</li>
+</ul>
+<h3 id="规矩-5--分离两种交易模式涨停套利-vs-趋势跟随不允许混做">规矩 5 — 【分离两种交易模式】涨停套利 vs 趋势跟随,不允许混做<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#规矩-5--分离两种交易模式涨停套利-vs-趋势跟随不允许混做" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>涨停套利仓</strong>:严格 T+1 · 不过夜(即 T+2 上午不涨停就走)· 单笔仓位 ≤ 5%</li>
+<li><strong>趋势跟随仓</strong>:MA20 上行 + 突破前高才进场 · 止损设 MA20 · 单笔仓位 5-15%</li>
+<li>每一笔进场必须自己声明”这是哪种” · 不允许”进去了看情况”</li>
+</ul>
+<h3 id="规矩-6--周复盘量化-3-条不背规矩就写卡在-miniqmt-前">规矩 6 — 【周复盘量化 3 条】不背规矩就写卡在 miniQMT 前<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#规矩-6--周复盘量化-3-条不背规矩就写卡在-miniqmt-前" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>每周日晚 · 从上一周 roundtrip 里找 3 笔典型错误 · 加入 R6 反证 pattern 库</li>
+<li>每月末 · 复算这 6 条规矩的违反次数 · 违反次数不降就是没吃透</li>
+</ul>
+<hr/>
+<h2 id="7-我的评估不加修饰">§7 我的评估(不加修饰)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-我的评估不加修饰" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>你的<strong>信息优势(WeFlow 群 + 公众号)是真实的</strong> · 但<strong>执行层面被这三个病灶抵消了</strong>:</p>
+<ul>
+<li>情报告诉你「某题材要动」 · 你去 execution_pool 里找 · 但选出来的可能是杂毛类似标的(题材蹭上但不是龙头)</li>
+<li>情报错了要止损 · 但你浮亏加仓 · 让「信息错误」变成「资金错误」</li>
+<li>情报对了主升到高位 · 你不追龙头 · 反而在回落后接补涨杂毛 · 完美错过主升</li>
+</ul>
+<p><strong>核心矛盾</strong>:你的<strong>认知(WeFlow 情报)是右侧的</strong> · 但你的<strong>执行姿势(下跌接盘 + 加仓 + 杂毛)是左侧的</strong> · 两者不匹配。</p>
+<p><strong>优化方向</strong>:</p>
+<ol>
+<li><strong>短期(1 周内)</strong>:上线上述 6 条硬 gate 到 miniQMT · 用机器强制你的手</li>
+<li><strong>中期(1 月内)</strong>:把「WeFlow 情报 → execution_pool」的映射改成<strong>只选真龙头</strong>(涨幅榜前 3 · 而非补涨第 8)</li>
+<li><strong>长期(1 季内)</strong>:每周复盘出 3 条 R6 反例 · 建成你个人化的黑名单 pattern 库 · 让下一年不重复这些错误</li>
+</ol>
+<hr/>
+<p><em>数据支持:1075 笔交割单 · 611 笔 roundtrip · 33 只 top 单深度 K 线 + 主力资金流</em></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-9" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#个性化交易行为诊断--v1" data-for="个性化交易行为诊断--v1">个性化交易行为诊断 · v1</a></li><li class="depth-1"><a href="#1-浮亏加仓--你自己知道但没意识到有多频繁" data-for="1-浮亏加仓--你自己知道但没意识到有多频繁">§1 浮亏加仓 — 你自己知道,但没意识到有多频繁</a></li><li class="depth-2"><a href="#top-15-浮亏加仓案例按累计投入排序" data-for="top-15-浮亏加仓案例按累计投入排序">Top-15 浮亏加仓案例(按累计投入排序)</a></li><li class="depth-2"><a href="#-最典型案例账户3--002552-宝鼎科技" data-for="-最典型案例账户3--002552-宝鼎科技">🔍 最典型案例:账户3 · 002552 宝鼎科技</a></li><li class="depth-2"><a href="#浮亏加仓的数学期望" data-for="浮亏加仓的数学期望">浮亏加仓的数学期望</a></li><li class="depth-1"><a href="#2-下跌途中接盘--下降通道抄底--你比自己认为的更右侧" data-for="2-下跌途中接盘--下降通道抄底--你比自己认为的更右侧">§2 下跌途中接盘 / 下降通道抄底 — 你比自己认为的更右侧</a></li><li class="depth-2"><a href="#进场姿势--结果" data-for="进场姿势--结果">进场姿势 × 结果</a></li><li class="depth-2"><a href="#-下跌途中下降通道接盘专项" data-for="-下跌途中下降通道接盘专项">🩸 下跌途中/下降通道接盘专项</a></li><li class="depth-2"><a href="#top-10-最惨的下跌接盘案例" data-for="top-10-最惨的下跌接盘案例">Top-10 最惨的「下跌接盘」案例</a></li><li class="depth-2"><a href="#为什么你会反复做这件事心理学" data-for="为什么你会反复做这件事心理学">为什么你会反复做这件事(心理学)</a></li><li class="depth-1"><a href="#3-杂毛票--你的重灾区而且比你想的更多" data-for="3-杂毛票--你的重灾区而且比你想的更多">§3 杂毛票 — 你的重灾区,而且比你想的更多</a></li><li class="depth-2"><a href="#top-15-亏得最惨的杂毛票" data-for="top-15-亏得最惨的杂毛票">Top-15 亏得最惨的杂毛票</a></li><li class="depth-1"><a href="#4-反复被同一只票割--熟悉不等于懂" data-for="4-反复被同一只票割--熟悉不等于懂">§4 反复被同一只票割 — 熟悉不等于懂</a></li><li class="depth-1"><a href="#5-综合诊断--你到底在做什么样的交易" data-for="5-综合诊断--你到底在做什么样的交易">§5 综合诊断 · 你到底在做什么样的交易?</a></li><li class="depth-2"><a href="#你以为你在做" data-for="你以为你在做">你以为你在做:</a></li><li class="depth-2"><a href="#数据说你实际在做" data-for="数据说你实际在做">数据说你实际在做:</a></li><li class="depth-2"><a href="#一句话总结" data-for="一句话总结">一句话总结</a></li><li class="depth-1"><a href="#6-给你的六条硬规矩按痛点排序" data-for="6-给你的六条硬规矩按痛点排序">§6 给你的六条硬规矩(按痛点排序)</a></li><li class="depth-2"><a href="#规矩-1--禁止加仓任何浮亏--3-的股票不允许加仓已经错的方向不加" data-for="规矩-1--禁止加仓任何浮亏--3-的股票不允许加仓已经错的方向不加">规矩 1 — 【禁止加仓】任何浮亏 > 3% 的股票不允许加仓,已经错的方向不加</a></li><li class="depth-2"><a href="#规矩-2--禁止下降通道接盘买入前必须检查-ma20-是否上行" data-for="规矩-2--禁止下降通道接盘买入前必须检查-ma20-是否上行">规矩 2 — 【禁止下降通道接盘】买入前必须检查 MA20 是否上行</a></li><li class="depth-2"><a href="#规矩-3--杂毛票禁买市值--100-亿--无主流题材的股票不进入-execution_pool" data-for="规矩-3--杂毛票禁买市值--100-亿--无主流题材的股票不进入-execution_pool">规矩 3 — 【杂毛票禁买】市值 &lt; 100 亿 + 无主流题材的股票不进入 execution_pool</a></li><li class="depth-2"><a href="#规矩-4--单票交易--3-次月反复交易同一只票是没做懂的信号" data-for="规矩-4--单票交易--3-次月反复交易同一只票是没做懂的信号">规矩 4 — 【单票交易 ≤ 3 次/月】反复交易同一只票是没做懂的信号</a></li><li class="depth-2"><a href="#规矩-5--分离两种交易模式涨停套利-vs-趋势跟随不允许混做" data-for="规矩-5--分离两种交易模式涨停套利-vs-趋势跟随不允许混做">规矩 5 — 【分离两种交易模式】涨停套利 vs 趋势跟随,不允许混做</a></li><li class="depth-2"><a href="#规矩-6--周复盘量化-3-条不背规矩就写卡在-miniqmt-前" data-for="规矩-6--周复盘量化-3-条不背规矩就写卡在-miniqmt-前">规矩 6 — 【周复盘量化 3 条】不背规矩就写卡在 miniQMT 前</a></li><li class="depth-1"><a href="#7-我的评估不加修饰" data-for="7-我的评估不加修饰">§7 我的评估(不加修饰)</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-551b937a.js" type="module" data-persist="true"></script></html>

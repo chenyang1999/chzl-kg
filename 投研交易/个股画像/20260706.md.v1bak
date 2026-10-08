@@ -1,0 +1,158 @@
+---
+date: 2026-07-06
+agent: R5-stock-profiles
+skill_version: analyze_stock_profile_v1@1.0
+generated_at: 2026-07-06T02:58:30+08:00
+confidence: 0.68
+degraded: false
+data_sources:
+  - name: R2_main_sectors.json
+    path: data/research/20260706/R2_main_sectors.json
+    status: ok
+  - name: tushare_MCP
+    status: ok
+  - name: iwencai_MCP
+    status: ok
+input_freshness: ok
+input_freshness_note: ""
+---
+# 2026-07-06 · 个股画像
+> **数据源新鲜度**: ok  
+> **降级状态**: no  
+> **置信度**: 0.68  
+
+## 一句话结论
+
+TBD · 请从 JSON artifact 提取核心判断
+
+## 详细分析
+
+**核心结构化输出**:
+
+```json
+{
+  "profiles": [
+    {
+      "ts_code": "002050.SZ",
+      "name": "三花智控",
+      "sector": "人形机器人-特斯拉链执行器",
+      "role": "龙一",
+      "execution_status": "execution_eligible",
+      "main_line": "人形机器人（特斯拉链+宇树链）",
+      "one_liner": "R2 主线龙一 + R4 E003 首推 + R7 T-1『机器人执行器』板块 rank7 (+64.73亿/+7.53%) 硬共振;主板 execution_eligible + Tesla Optimus 2026 年底量产催化最直接,D1 执行池首选候选。",
+      "dimensions": {
+        "catalyst": {
+          "score": 19,
+          "summary": "R4 E20260706_003 strength=high polarity=正面 首推;Optimus 2026 年底规模化量产 + 7 月周产 100-200 台(陶琳表态) 直接映射三花执行器订单弹性;R3 rank1『人形机器人』L1+L2 强共振,颜晓滨群+AA盘中+财联社+Tony 综合多源独立点名;催化中长周期(量产爬坡 6-12 个月)非一次性"
+        },
+        "chip_structure": {
+          "score": 14,
+          "summary": "R7 T-1 板块级共振:机器人概念 +143.74亿 rank1、人形机器人 +113.78亿 rank3、特斯拉概念 +84.39亿 rank4、机器人执行器 +64.73亿 (+7.53%);三花为执行器板块核心成分股, R2 已判定为 5 日累计资金 top1;个股级龙虎榜/股东户数 R7 未落地(chenhailangju DOWN);hot_money.synergy_flags 未直接列 002050,量化打板未 2+日重复上榜(负向 = 未过热),定性 '筹码中期集中,机构+游资温和参与'",
+          "partial": true
+        },
+        "sector_linkage": {
+          "score": 18,
+          "summary": "所在板块 R2 主线得分 84.0(全部候选中最高);机器人 ETF(159813)预期同步度极高;上游铜/精密加工链联动;R7 板块流入 rank1-rank10 内三条(机器人概念/人形机器人/机器人执行器)均硬共振,主线内联动最强"
+        },
+        "valuation_safety": {
+          "score": 9,
+          "summary": "白电压缩机主业稳定现金流 + 机器人执行器长周期赛道估值溢价;历史 PE 分位高位(定性 90%+ 分位区间);@bayesian/@tam-adj-peg 未 CLI 调用;主线龙头惯性 + 中长周期催化 → 估值可容忍但缺乏低吸安全边际;仓位建议按龙头分配而非低吸抢筹",
+          "partial": true
+        },
+        "technical_readiness": {
+          "score": 11,
+          "summary": "R2 leaders.pct_chg/limit_times 未落地;R1 定性 T-1 震荡分化型 + 连板塔尖 4 板 1 只,人形机器人是当日少数正 β 主线;canghai-sise DOWN 四色四量不可用;定性 '主线龙一多头结构完整但塔尖不高,拉升初-中期切换态,追高需 R6 反证';盘中警戒线为跌破 5 日均线",
+          "partial": true
+        },
+        "institutional_interest": {
+          "score": 12,
+          "summary": "@report-search/@hithink-insresearch-query 未 CLI 调用;领域先验:三花机构覆盖度极高(白电+汽零+机器人三线覆盖);R3 KOL 3+ 源独立点名 → 机构一致看好概率高;反向信号:分歧极小时警惕拥挤",
+          "partial": true
+        }
+      },
+      "composite_score": 74,
+      "alpha_grade": "A",
+      "risk_grade": "B",
+      "flags": [
+        "main_line_leader_1",
+        "execution_eligible_main_board",
+        "hard_catalyst_tesla_optimus",
+        "sector_flow_top1_resonance",
+        "chip_structure_partial",
+        "technical_partial",
+        "institutional_partial",
+        "crowding_risk_watch"
+      ],
+      "recommendation": "execution_pool 首选(主线龙一 + execution_eligible + 三源硬共振;D1 建议分配主线主要仓位,盘中若龙一炸板视为退潮起点)",
+      "data_sources_used": [
+        "R2",
+        "R3",
+        "R4",
+        "R7"
+      ]
+    },
+    {
+      "ts_code": "002747.SZ",
+      "name": "埃斯顿",
+      "sector": "工业机器人-国产 CR1",
+      "role": "龙二",
+      "execution_status": "execution_eligible",
+      "main_line": "人形机器人（特斯拉链+宇树链）",
+      "one_liner": "工业机器人国产 CR1,人形机器人产业链β;主板 execution_eligible;R7 hot_money.synergy_flags 触及『量化打板 3 日内 2 次上榜 002747』——需警惕游资协同拥挤度,alpha 定性稳但拥挤度高于三花。",
+      "dimensions": {
+        "catalyst": {
+          "score": 14,
+          "summary": "R4 E20260706_003 板块级正面催化,但 stocks_catalyzed 未单独列名(不在首推名单);R3 rank1 主线 L1+L2 共振受益;人形机器人量产将拉动工业机器人本体研发/关节复用弹性,催化传导为间接β"
+        },
+        "chip_structure": {
+          "score": 10,
+          "summary": "R7 hot_money.synergy_flags 明确列出:『量化打板同一游资 3 日内 2 次上榜 002747 (20260703/20260701)』 → 游资协同信号 = 短线拥挤度高,需 R6 反证是否为拉升尾出货;板块级资金流(人形机器人+113.78亿/机器人概念+143.74亿)提供背景支持;个股龙虎榜明细缺失",
+          "partial": true
+        },
+        "sector_linkage": {
+          "score": 16,
+          "summary": "R2 主线得分 84.0;工业机器人 ETF 与人形机器人 ETF 双联动;板块内龙二定位清晰(龙一三花已锁定),alpha 传导路径完整"
+        },
+        "valuation_safety": {
+          "score": 9,
+          "summary": "工业机器人本体成长股,历史盈利波动大;@估值 skill 未调用;定性 '国产替代 + 人形机器人二次成长曲线可支撑估值,但短期股价已提前反应,安全边际有限'",
+          "partial": true
+        },
+        "technical_readiness": {
+          "score": 11,
+          "summary": "R7 量化打板 3 日内 2 次上榜 → 技术上处于活跃拉升区;R2 pct_chg/limit_times 未落地;定性 '拉升初-中期,量化资金主导,警惕情绪二次分歧';canghai-sise DOWN",
+          "partial": true
+  
+```
+
+## 关键证据
+
+_(见上方核心结构化输出 · 主要证据字段随 skill 不同)_
+
+## 数据源审计
+
+| 源 | 状态 | 抓取时间 | 记录数 | 备注 |
+|---|---|---|---|---|
+| R2_main_sectors.json | ok | - | - | - |
+| tushare_MCP | ok | - | - | - |
+| iwencai_MCP | ok | - | - | - |
+
+## 不确定性 / 反证
+
+_(artifact 未显式记录反证段 · 建议后续 skill 补足)_
+
+## 与其他 R/D/E 的关系
+
+- **依赖**: R2 龙头候选, tushare, iwencai
+- **被消费**: R6, D1
+
+## Sub-Agent 元数据
+
+- skill: `analyze_stock_profile_v1`
+- artifact: `data/research/20260706/R5_stock_profiles.json`
+- 生成时间: 2026-07-06T02:58:30+08:00
+- 主 orchestrator: `research_orchestrator_v1` (proc_46cb002764ca · 25 min)
+
+---
+
+_本文件由 `scripts/render_kg_md_backfill.py` 从 artifact 回渲染 · schema: `render_kg_md_v1`_

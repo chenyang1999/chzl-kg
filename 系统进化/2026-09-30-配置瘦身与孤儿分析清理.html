@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-09-30 配置瘦身与孤儿分析清理</title><meta charset="utf-8"/><link rel="preload" href="../index-5a23ce28.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-09-30 配置瘦身与孤儿分析清理"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-09-30 配置瘦身与孤儿分析清理"/><meta name="twitter:description" content="2026-09-30 配置瘦身 + 孤儿分析清理 + Cron 漂移修复 授权: 用户授权直接修改（“我这里授权你修改呀”） 要求: 改完在 chzl_kg/系统进化/ 记录改了什么 触发: 用户三问 —— ① chart_vision_analyze 真在用吗？② 配置瘦身 ③ 老系统每次 3:30 调 API 分析个啥；以及”每天都用掉三四千万 token” 一、结论速览 问题结论chart_vision_analyze 真在用吗✅ 真在用，今日 12 次真实调用，输出进 R5 → D1。但它的旁路产物 chart_vision_snapshot 是废的（只覆盖硬编码旧票池，与 R5 候选..."/><meta property="og:description" content="2026-09-30 配置瘦身 + 孤儿分析清理 + Cron 漂移修复 授权: 用户授权直接修改（“我这里授权你修改呀”） 要求: 改完在 chzl_kg/系统进化/ 记录改了什么 触发: 用户三问 —— ① chart_vision_analyze 真在用吗？② 配置瘦身 ③ 老系统每次 3:30 调 API 分析个啥；以及”每天都用掉三四千万 token” 一、结论速览 问题结论chart_vision_analyze 真在用吗✅ 真在用，今日 12 次真实调用，输出进 R5 → D1。但它的旁路产物 chart_vision_snapshot 是废的（只覆盖硬编码旧票池，与 R5 候选..."/><meta property="og:image:alt" content="2026-09-30 配置瘦身 + 孤儿分析清理 + Cron 漂移修复 授权: 用户授权直接修改（“我这里授权你修改呀”） 要求: 改完在 chzl_kg/系统进化/ 记录改了什么 触发: 用户三问 —— ① chart_vision_analyze 真在用吗？② 配置瘦身 ③ 老系统每次 3:30 调 API 分析个啥；以及”每天都用掉三四千万 token” 一、结论速览 问题结论chart_vision_analyze 真在用吗✅ 真在用，今日 12 次真实调用，输出进 R5 → D1。但它的旁路产物 chart_vision_snapshot 是废的（只覆盖硬编码旧票池，与 R5 候选..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-09-30-配置瘦身与孤儿分析清理"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-09-30-配置瘦身与孤儿分析清理"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="2026-09-30 配置瘦身 + 孤儿分析清理 + Cron 漂移修复 授权: 用户授权直接修改（“我这里授权你修改呀”） 要求: 改完在 chzl_kg/系统进化/ 记录改了什么 触发: 用户三问 —— ① chart_vision_analyze 真在用吗？② 配置瘦身 ③ 老系统每次 3:30 调 API 分析个啥；以及”每天都用掉三四千万 token” 一、结论速览 问题结论chart_vision_analyze 真在用吗✅ 真在用，今日 12 次真实调用，输出进 R5 → D1。但它的旁路产物 chart_vision_snapshot 是废的（只覆盖硬编码旧票池，与 R5 候选..."/><meta name="generator" content="Quartz"/><link href="../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/2026-09-30-配置瘦身与孤儿分析清理" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-714" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-714" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-09-30 配置瘦身与孤儿分析清理</a></div></nav><h1 class="article-title">2026-09-30 配置瘦身与孤儿分析清理</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-30T10:01:00.000Z">2026年9月30日</time><span>13分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="2026-09-30-配置瘦身--孤儿分析清理--cron-漂移修复">2026-09-30 配置瘦身 + 孤儿分析清理 + Cron 漂移修复<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-09-30-配置瘦身--孤儿分析清理--cron-漂移修复" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><strong>授权</strong>: 用户授权直接修改（“我这里授权你修改呀”）<br/>
+<strong>要求</strong>: 改完在 <code>chzl_kg/系统进化/</code> 记录改了什么<br/>
+<strong>触发</strong>: 用户三问 —— ① <code>chart_vision_analyze</code> 真在用吗？② 配置瘦身 ③ 老系统每次 3:30 调 API 分析个啥；以及”每天都用掉三四千万 token”</p>
+</blockquote>
+<hr/>
+<h2 id="一结论速览">一、结论速览<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一结论速览" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>问题</th><th>结论</th></tr></thead><tbody><tr><td><code>chart_vision_analyze</code> 真在用吗</td><td>✅ <strong>真在用</strong>，今日 12 次真实调用，输出进 R5 → D1。但<strong>它的旁路产物 <code>chart_vision_snapshot</code> 是废的</strong>（只覆盖硬编码旧票池，与 R5 候选重合度 1/12）</td></tr><tr><td>配置瘦身</td><td>✅ 5 个 profile 全部瘦身；MCP 10→7、tushare 254→69 工具；<strong>实测基线 36.8k → 18.6k token（-49%）</strong></td></tr><tr><td>老系统 3:30 调 API</td><td>三个候选，最可能是 <strong><code>chart_vision_snapshot</code> 15:50 档</strong>（每天真跑、调 12 次 vision、产完没人读）；老 pipeline 已停跑</td></tr><tr><td>每天三四千万 token</td><td>今日<strong>实测 1.44 亿</strong>（含缓存重复计价）；真凶 = <strong>长 context × 多轮</strong>的乘法，非拉数据</td></tr></tbody></table></div>
+<hr/>
+<h2 id="二chart_vision_analyze-真相用户第一问">二、<code>chart_vision_analyze</code> 真相（用户第一问）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二chart_vision_analyze-真相用户第一问" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="它真在用">它真在用<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#它真在用" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>今日 <code>canghai-research</code> 真实调用 <strong>12 次</strong>，单次 33–44s：</p>
+<pre><code>08:19:06  chart_vision_analyze completed (37.97s, 2571 chars)
+08:19:48  chart_vision_analyze completed (41.29s, 2571 chars)
+...
+</code></pre>
+<p>输出直接进 <code>data/research/20260930/R5_stock_profiles.json</code>：</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;trend&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;多头&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;pattern&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;涨停突破&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation"> &quot;key_levels&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;hi20&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">28.68</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;lo20&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">24.67</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;ma20&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">26.25</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}}</span></span></code></pre></figure>
+<p>→ 流入 <code>research_summary.json</code> → D1 预案。<strong>它是 R5”技术形态”维度的唯一真实输入，不是摆设。</strong></p>
+<h3 id="但它的旁路快照是废的-️">但它的旁路快照是废的 ⚠️<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#但它的旁路快照是废的-️" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>存在一套并行机制 <code>chart_vision_snapshot</code>（cron <code>fd61c030d180</code>，每天 <strong>06:50 + 15:50</strong> 两档），本意是”预生成快照让 R5 读，省掉串行 MCP 调用”。</p>
+<p>实测今日：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项</th><th>值</th></tr></thead><tbody><tr><td>snapshot 覆盖票</td><td><code>000938 000977 001339 002396 300017 300223 301308 603893 603986 688018 688521 688766</code></td></tr><tr><td>R5 实际候选</td><td><code>000823 002074 002912 300075 301308 600825 601238 603200 603328 603533 603598 605058</code></td></tr><tr><td><strong>交集</strong></td><td><strong>1 票</strong>（仅 301308）</td></tr></tbody></table></div>
+<p><strong>根因</strong>：<code>run_chart_vision_snapshot.py</code> 的 <code>DEFAULT_UNIVERSE</code> 是<strong>硬编码的旧票池</strong>（兆易创新/瑞芯微/乐鑫科技/芯原股份…），从不随 R2 龙头更新；cron 调用时也没传 <code>--universe</code>。</p>
+<p><strong>双重浪费</strong>：</p>
+<ol>
+<li>12 次 vision LLM 调用（每次 33–44s）算的全是<strong>昨日/无关的票</strong></li>
+<li>15:50 那档产物次日 06:50 就被覆盖，<strong>且 R5(08:11) 根本不读它</strong>（当前 R5 skill 对 snapshot 引用 = <strong>0 处</strong>）</li>
+</ol>
+<p>→ 每天白烧 <strong>24 次 vision 调用</strong>（两档 × 12 票），产出零价值。</p>
+<hr/>
+<h2 id="三配置瘦身用户第二问">三、配置瘦身（用户第二问）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三配置瘦身用户第二问" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="改动清单">改动清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#改动清单" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项</th><th>改前</th><th>改后</th><th>作用域</th></tr></thead><tbody><tr><td>MCP server 数</td><td>10</td><td><strong>7</strong></td><td>5 个 canghai profile</td></tr><tr><td><code>tushareMcp</code> 工具</td><td>254（schema 252,201 字符）</td><td><strong>69</strong>（白名单）</td><td>同上</td></tr><tr><td><code>disabled_toolsets</code></td><td>0–13</td><td><strong>22</strong></td><td>同上</td></tr><tr><td>default profile</td><td>未动</td><td>未动</td><td>——</td></tr></tbody></table></div>
+<h3 id="删掉的-3-个-mcp-server每个都有硬证据">删掉的 3 个 MCP server（每个都有硬证据）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#删掉的-3-个-mcp-server每个都有硬证据" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>server</th><th>证据</th><th>判定</th></tr></thead><tbody><tr><td><code>chenhailangju-research</code></td><td>脚本注释 <code>Backward-compatible entry: chenhailangju-research → canghai-sise</code>；工具名 diff <strong>完全相同</strong></td><td>同一 server 挂两遍，纯浪费</td></tr><tr><td><code>fast-chart-mcp</code></td><td>日志 <code>failed initial connection after 3 attempts, parking</code>；历史调用 <strong>0 次</strong></td><td>死连接</td></tr><tr><td><code>obsidian</code></td><td>注册 18 个工具；历史真实调用 <strong>0 次</strong>；唯一使用者 <code>obsidian_sync.py</code> 也未被任何 cron 调度</td><td>孤儿</td></tr></tbody></table></div>
+<h3 id="tushare-白名单怎么来的">tushare 白名单怎么来的<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tushare-白名单怎么来的" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>不是拍脑袋</strong>，三个证据源取并集，再与 254 个工具名求交：</p>
+<ol>
+<li><strong>真实调用</strong>（全历史 agent.log 里 <code>tool mcp__tushareMcp__X completed</code>）= 17 个</li>
+<li><strong>skill 点名</strong>（所有 <code>SKILL.md</code> 中反引号包裹且属 tushare 工具名）= 32 个</li>
+<li><strong>必要基础</strong>（K线/交易日历/涨跌停/龙虎榜/资金流等主干）= 补充至 69 个</li>
+</ol>
+<p><strong>安全校验</strong>：对所有 skill 正文做反向检查 —— <strong>“skill 引用但被砍掉” = 0 个</strong>。</p>
+<h3 id="实测收益">实测收益<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#实测收益" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>用 <code>HERMES_DUMP_REQUESTS=1</code> 做前后对比：</p>
+<pre><code>改前: 工具 21 个 38,922+7,000 字 | 合计 ≈ 36,800 tok
+改后: 工具 21 个 38,922 字 | messages 35,656 字 | 合计 ≈ 18,644 tok
+</code></pre>
+<p><strong>基线下降约 49%</strong>。5 个 profile 冒烟测试全部通过。</p>
+<h3 id="保留但未动的">保留但未动的<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#保留但未动的" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><code>vibe-trading</code>（78 工具，schema 89,998 字符）：R5 用作大宗/两融<strong>交叉核验</strong>，虽然量不大但属”有意保留的双源”</li>
+<li><code>xtick</code>（47 工具）：盘口/情绪数据主源</li>
+<li><code>canghai-charts</code>：即 <code>chart_vision_analyze</code> 的宿主，<strong>正是用户问的那个，必须留</strong></li>
+</ul>
+<hr/>
+<h2 id="四老系统-330-调-api用户第三问">四、老系统 3:30 调 API（用户第三问）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四老系统-330-调-api用户第三问" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>三个候选，按可能性排序：</p>
+<h3 id="候选-1最可能chart_vision_snapshot-1550-档">候选 1（最可能）：<code>chart_vision_snapshot</code> 15:50 档<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#候选-1最可能chart_vision_snapshot-1550-档" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>每天真的跑</strong>：今日 <code>15:50:58</code> 起跑 → <code>15:52:30</code> 完成，约 92s</li>
+<li><strong>调 12 次 vision 模型</strong>（每次 33–44s）</li>
+<li><strong>产出没人读</strong>（见第二节）</li>
+<li>用户说”分析个啥” —— 完全对得上：算的是<strong>硬编码旧票池</strong></li>
+</ul>
+<h3 id="候选-2canghai-review--周度进化-e230-15---5">候选 2：<code>canghai-review · 周度进化 E2</code>，<code>30 15 * * 5</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#候选-2canghai-review--周度进化-e230-15---5" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>每周五 15:30，agent 型，调 <code>weekly_evolution_v1</code></li>
+<li><strong>连续失败 5 次</strong>（同款 404 漂移，本轮已修）</li>
+</ul>
+<h3 id="候选-3已排除老-pipeline">候选 3（已排除）：老 pipeline<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#候选-3已排除老-pipeline" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><code>scripts/trading_agent_daily_pipeline.py</code> 的 review 步骤，crontab 模板写的是 <strong>15:10</strong> 而非 15:30</li>
+<li><strong>不在任何调度器</strong>（不在 Hermes cron / launchd / crontab）</li>
+<li><code>pipeline_cron.log</code> 不存在，脚本 mtime 停在 6 月</li>
+<li>→ <strong>老系统早已停跑</strong></li>
+</ul>
+<hr/>
+<h2 id="五顺手挖出的-4-个同款-404-漂移-cron">五、顺手挖出的 4 个同款 404 漂移 cron<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五顺手挖出的-4-个同款-404-漂移-cron" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>这是今早 D1 那个 bug 的<strong>漏网之鱼</strong> —— 同样的 <code>provider=None</code> 漂移到已下线的 <code>api.minimaxi.com/anthropic</code>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>job</th><th>连败次数</th><th>报错</th></tr></thead><tbody><tr><td><code>canghai-fetch · 盘前抓取</code></td><td><strong>27</strong></td><td><code>HTTP 404: 404 page not found</code></td></tr><tr><td><code>canghai-review · 每日复盘 E1</code></td><td><strong>26</strong></td><td>同上</td></tr><tr><td><code>canghai-review · 周度进化 E2</code></td><td><strong>5</strong></td><td>同上</td></tr><tr><td><code>canghai-fetch · 午盘快照</code></td><td>0（未 pin）</td><td>随时会挂</td></tr></tbody></table></div>
+<p><strong>注意</strong>：cron 系统自己知道（“25 failures in a row”），但<strong>从不告警</strong>。这些任务已经静默挂了近一个月。</p>
+<p><strong>处置</strong>：</p>
+<ul>
+<li>4 个全部 pin 到 <code>volcengine-agent-plan</code> / <code>deepseek-v4-flash-ga-260731</code></li>
+<li>删除 3 个纯重复/死 job（<code>f8cfff93db04</code>、<code>9ab15ec23a31</code>、<code>b6a7a8c23050</code>）</li>
+<li>备份：<code>chzl_kg/系统进化/backups/cron_jobs_20260930.json</code>（32 个 job 全量）</li>
+</ul>
+<p><strong>现状</strong>：17 个 agent 型 cron <strong>100% 已 pin</strong>；cron 总数 32 → 29。</p>
+<hr/>
+<h2 id="六token-真相">六、token 真相<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#六token-真相" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="今日实测不是估算">今日实测（不是估算）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#今日实测不是估算" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>profile</th><th>token</th><th>说明</th></tr></thead><tbody><tr><td>default</td><td>101,615,566</td><td><strong>含本对话，单它 20,771,525</strong></td></tr><tr><td>canghai-research</td><td>29,798,841</td><td>盘前 R1–R7</td></tr><tr><td>canghai-plan</td><td>11,427,808</td><td>D1 决策</td></tr><tr><td>其它</td><td>1,109,947</td><td></td></tr><tr><td><strong>合计</strong></td><td><strong>≈ 1.44 亿</strong></td><td></td></tr></tbody></table></div>
+<blockquote>
+<p>注：<code>total=</code> 把<strong>缓存命中的输入也计入</strong>，实际计费低于此数。缓存命中率<strong>中位 94%</strong>。</p>
+</blockquote>
+<h3 id="真凶不是拉数据">真凶不是拉数据<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#真凶不是拉数据" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>用户问”是不是拉数据的方法有点问题” —— <strong>不是</strong>：</p>
+<ul>
+<li>当日 LLM 调用 245 次 = 133 分钟（<strong>91%</strong>）</li>
+<li>工具执行 343 次 = 13.1 分钟（9%）</li>
+<li>其中 MCP 抓数据 76 次 = 9.3 分钟（<strong>6%</strong>）</li>
+</ul>
+<h3 id="真凶是长-context--多轮的乘法">真凶是「长 context × 多轮」的乘法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#真凶是长-context--多轮的乘法" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>单 session context 增长实测：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>session</th><th>调用数</th><th>首调</th><th>末调</th><th>峰值</th></tr></thead><tbody><tr><td><code>c5fde3</code>（R2）</td><td>39</td><td>34,237</td><td><strong>249,860</strong></td><td>249,860</td></tr><tr><td><code>1b91a8</code>（R6）</td><td>33</td><td>34,554</td><td>234,322</td><td>234,322</td></tr><tr><td><code>847d5a</code></td><td>25</td><td>36,520</td><td>195,144</td><td>195,144</td></tr><tr><td><code>ee5caa</code>（R5）</td><td>42</td><td>36,822</td><td>151,511</td><td>151,511</td></tr></tbody></table></div>
+<p><strong>每轮新增 context 中位 3,307、最大 46,453</strong>。延迟随输入线性涨（&lt;50k→11s，>150k→54s）。</p>
+<p>→ 所以<strong>降基线是最高杠杆的动作</strong>：基线 -49% 直接传导到全链路。</p>
+<hr/>
+<h2 id="七我的改进建议">七、我的改进建议<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#七我的改进建议" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="p0--建议立刻做">P0 · 建议立刻做<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#p0--建议立刻做" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>1. <code>chart_vision_snapshot</code> 改造成真正有用，或者关掉</strong></p>
+<p>现状是”每天白烧 24 次 vision 调用，产出 1/12 有用”。两个方向选一：</p>
+<ul>
+<li><strong>方向 A（推荐）</strong>：把 <code>DEFAULT_UNIVERSE</code> 改为<strong>从当日 R2 龙头动态读取</strong>，并把 cron 改成 <strong>只保留 06:50 一档</strong>、15:50 那档删掉。R5 skill 加一句”先读 snapshot，未命中才调 MCP”。<strong>收益</strong>：R5 省 11 次 MCP 调用（约 7–8 分钟），且不再白烧 12 次 vision。</li>
+<li><strong>方向 B（最省事）</strong>：直接删掉 <code>fd61c030d180</code> 这个 cron 和 <code>run_chart_vision_snapshot.py</code>。R5 走纯 MCP 直调（现状行为）。<strong>收益</strong>：每天省 24 次 vision 调用，R5 无变化。</li>
+</ul>
+<p><strong>2. cron 失败必须告警</strong></p>
+<p>这次最刺眼的不是 bug，而是**“25 failures in a row” 没有任何人知道**。建议加一个每日巡检：<code>hermes cron list --all</code> 里凡 <code>failure_streak >= 3</code> 的 job，随早盘简报一起推给用户。已有的 <code>canghai-health · 每日产出健康检查 (20:30)</code> 可以承载这个职责。</p>
+<h3 id="p1--建议本周做">P1 · 建议本周做<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#p1--建议本周做" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>3. 建立”配置变更检查清单”（已部分固化）</strong></p>
+<p>这次三个 config 生成器（<code>setup_hermes_doubao.py</code> / <code>register_hermes_mcps.py</code>）会<strong>把已删的 server 写回去</strong>。本轮已同步修正，但暴露一个模式：<strong>“手改 profile config”和”跑 setup 脚本”会互相打架</strong>。</p>
+<p>建议：profile config 的 <code>mcp_servers</code> 段标注”由 setup 脚本生成，手改会丢”，或反过来 —— 让 setup 脚本<strong>尊重已有配置</strong>（merge 而非覆盖）。</p>
+<p><strong>4. <code>research_summary.json</code> 的生产已修复，但历史欠账</strong></p>
+<p>09-14 ～ 09-29 每天缺失，导致 D1 每天走 <code>_minimal_summary()</code> 兜底、<code>orchestrator_status=degraded</code>。已建只读脚本 <code>build_research_summary.py</code>。建议回填这 12 天，让历史复盘口径一致。</p>
+<p><strong>5. 消除 cron 的”双轨重复”</strong></p>
+<p>现在仍存在结构性重复：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>功能</th><th>default</th><th>profile 级</th></tr></thead><tbody><tr><td>P2 午盘修订</td><td><code>35 11 * * 1-5</code></td><td><code>40 11 * * 1-5</code>（canghai-plan）</td></tr><tr><td>笔记站同步</td><td><code>30 9</code> + <code>18:00</code> 两个</td><td>——</td></tr><tr><td>竞价校准</td><td><code>28 9</code>（default）</td><td>原 <code>757e83acebd7</code>（已删）</td></tr></tbody></table></div>
+<p>建议<strong>统一原则：一个功能只在一个 profile 里有一个 job</strong>。当前”default 里挂 26 个、profile 里挂 1–2 个”的分布是历史遗留，理解和排障成本都高。</p>
+<h3 id="p2--观察项">P2 · 观察项<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#p2--观察项" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>6. <code>tushareMcp</code> 69 个工具是否还能再砍</strong></p>
+<p>当前白名单偏保守（含大量 <code>rt_*</code> 实时接口、<code>*_vip</code> 变体）。观察 1–2 周真实调用后再收一轮。</p>
+<p><strong>7. 15:50 snapshot 若保留，是否该改到 16:30 之后</strong></p>
+<p>A 股 15:00 收盘，15:50 跑拿到的是当日完整日 K。如果将来做”收盘后复盘用图表”，这个时点是对的 —— <strong>但现在没有任何消费者</strong>。</p>
+<hr/>
+<h2 id="八变更文件清单">八、变更文件清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#八变更文件清单" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="修改配置">修改（配置）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#修改配置" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>文件</th><th>改动</th></tr></thead><tbody><tr><td><code>~/.hermes/profiles/canghai-{fetch,research,plan,execute,review}/config.yaml</code></td><td>MCP 7 个、tushare 白名单 69、disabled_toolsets 22</td></tr></tbody></table></div>
+<h3 id="修改代码--根因">修改（代码 / 根因）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#修改代码--根因" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>文件</th><th>改动</th></tr></thead><tbody><tr><td><code>scripts/setup_hermes_doubao.py</code></td><td><code>_merge_mcp</code> 不再注册 <code>chenhailangju-research</code>；<code>_run_checks</code> 名称修正</td></tr><tr><td><code>scripts/register_hermes_mcps.py</code></td><td>同步移除别名（config + cursor 两处）</td></tr><tr><td><code>skills/mcp_health_check_v1/SKILL.md</code></td><td>别名约定更新为”已下线”，canonical = <code>canghai-sise</code></td></tr></tbody></table></div>
+<h3 id="修改cron">修改（cron）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#修改cron" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>job</th><th>动作</th></tr></thead><tbody><tr><td><code>f8cfff93db04</code> canghai-fetch 盘前抓取</td><td>pin + <strong>删除</strong>（与 default 06:00 脚本版重复）</td></tr><tr><td><code>a314bd2ac6bb</code> canghai-fetch 午盘快照</td><td>pin</td></tr><tr><td><code>9ab15ec23a31</code> canghai-review E1</td><td>pin + <strong>删除</strong>（与 default 18:00 版重复）</td></tr><tr><td><code>87d4d030b72b</code> canghai-review E2</td><td>pin</td></tr><tr><td><code>b6a7a8c23050</code> canghai-plan D1 补跑闸门</td><td><strong>删除</strong>（安全网已含 LLM 重试）</td></tr></tbody></table></div>
+<h3 id="新增">新增<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#新增" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>文件</th><th>用途</th></tr></thead><tbody><tr><td><code>chzl_kg/系统进化/backups/cron_jobs_20260930.json</code></td><td>32 个 cron 全量备份（回滚用）</td></tr><tr><td><code>chzl_kg/系统进化/2026-09-30 配置瘦身与孤儿分析清理.md</code></td><td>本文档</td></tr></tbody></table></div>
+<h3 id="验证">验证<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#验证" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><code>pytest tests/pipeline/</code> → <strong>53 passed</strong></li>
+<li>5 个 profile 冒烟测试全部通过</li>
+<li>生成器 dry-run 确认不再产出别名</li>
+<li>tushare 白名单反向校验：skill 引用缺失 = <strong>0</strong></li>
+</ul>
+<hr/>
+<h2 id="九未尽事项需用户拍板">九、未尽事项（需用户拍板）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#九未尽事项需用户拍板" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong><code>chart_vision_snapshot</code> 选方向 A 还是 B</strong>（见 P0-1）</li>
+<li><strong>是否回填 09-14～09-29 的 <code>research_summary.json</code></strong></li>
+<li><strong>cron 双轨重复是否按”一功能一 job”统一</strong>（涉及删除 default 里的若干 job）</li>
+<li><strong><code>vibe-trading</code> 78 工具是否进一步收窄</strong>（R5 全历史只用到 4 个：<code>get_block_trades</code> 15 次 / <code>get_margin_trading</code> 15 次 / <code>get_dragon_tiger</code> 2 次 / <code>get_fund_flow</code> 1 次 —— 其余 74 个零调用）</li>
+</ol></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-680" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#2026-09-30-配置瘦身--孤儿分析清理--cron-漂移修复" data-for="2026-09-30-配置瘦身--孤儿分析清理--cron-漂移修复">2026-09-30 配置瘦身 + 孤儿分析清理 + Cron 漂移修复</a></li><li class="depth-1"><a href="#一结论速览" data-for="一结论速览">一、结论速览</a></li><li class="depth-1"><a href="#二chart_vision_analyze-真相用户第一问" data-for="二chart_vision_analyze-真相用户第一问">二、chart_vision_analyze 真相（用户第一问）</a></li><li class="depth-2"><a href="#它真在用" data-for="它真在用">它真在用</a></li><li class="depth-2"><a href="#但它的旁路快照是废的-️" data-for="但它的旁路快照是废的-️">但它的旁路快照是废的 ⚠️</a></li><li class="depth-1"><a href="#三配置瘦身用户第二问" data-for="三配置瘦身用户第二问">三、配置瘦身（用户第二问）</a></li><li class="depth-2"><a href="#改动清单" data-for="改动清单">改动清单</a></li><li class="depth-2"><a href="#删掉的-3-个-mcp-server每个都有硬证据" data-for="删掉的-3-个-mcp-server每个都有硬证据">删掉的 3 个 MCP server（每个都有硬证据）</a></li><li class="depth-2"><a href="#tushare-白名单怎么来的" data-for="tushare-白名单怎么来的">tushare 白名单怎么来的</a></li><li class="depth-2"><a href="#实测收益" data-for="实测收益">实测收益</a></li><li class="depth-2"><a href="#保留但未动的" data-for="保留但未动的">保留但未动的</a></li><li class="depth-1"><a href="#四老系统-330-调-api用户第三问" data-for="四老系统-330-调-api用户第三问">四、老系统 3:30 调 API（用户第三问）</a></li><li class="depth-2"><a href="#候选-1最可能chart_vision_snapshot-1550-档" data-for="候选-1最可能chart_vision_snapshot-1550-档">候选 1（最可能）：chart_vision_snapshot 15:50 档</a></li><li class="depth-2"><a href="#候选-2canghai-review--周度进化-e230-15---5" data-for="候选-2canghai-review--周度进化-e230-15---5">候选 2：canghai-review · 周度进化 E2，30 15 * * 5</a></li><li class="depth-2"><a href="#候选-3已排除老-pipeline" data-for="候选-3已排除老-pipeline">候选 3（已排除）：老 pipeline</a></li><li class="depth-1"><a href="#五顺手挖出的-4-个同款-404-漂移-cron" data-for="五顺手挖出的-4-个同款-404-漂移-cron">五、顺手挖出的 4 个同款 404 漂移 cron</a></li><li class="depth-1"><a href="#六token-真相" data-for="六token-真相">六、token 真相</a></li><li class="depth-2"><a href="#今日实测不是估算" data-for="今日实测不是估算">今日实测（不是估算）</a></li><li class="depth-2"><a href="#真凶不是拉数据" data-for="真凶不是拉数据">真凶不是拉数据</a></li><li class="depth-2"><a href="#真凶是长-context--多轮的乘法" data-for="真凶是长-context--多轮的乘法">真凶是「长 context × 多轮」的乘法</a></li><li class="depth-1"><a href="#七我的改进建议" data-for="七我的改进建议">七、我的改进建议</a></li><li class="depth-2"><a href="#p0--建议立刻做" data-for="p0--建议立刻做">P0 · 建议立刻做</a></li><li class="depth-2"><a href="#p1--建议本周做" data-for="p1--建议本周做">P1 · 建议本周做</a></li><li class="depth-2"><a href="#p2--观察项" data-for="p2--观察项">P2 · 观察项</a></li><li class="depth-1"><a href="#八变更文件清单" data-for="八变更文件清单">八、变更文件清单</a></li><li class="depth-2"><a href="#修改配置" data-for="修改配置">修改（配置）</a></li><li class="depth-2"><a href="#修改代码--根因" data-for="修改代码--根因">修改（代码 / 根因）</a></li><li class="depth-2"><a href="#修改cron" data-for="修改cron">修改（cron）</a></li><li class="depth-2"><a href="#新增" data-for="新增">新增</a></li><li class="depth-2"><a href="#验证" data-for="验证">验证</a></li><li class="depth-1"><a href="#九未尽事项需用户拍板" data-for="九未尽事项需用户拍板">九、未尽事项（需用户拍板）</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-551b937a.js" type="module" data-persist="true"></script></html>

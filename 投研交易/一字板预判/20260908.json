@@ -1,0 +1,259 @@
+{
+  "trade_date": "20260908",
+  "generated_at": "2026-09-09T00:46:50+08:00",
+  "candidates": [
+    {
+      "trade_date": "20260908",
+      "ts_code": "688825.SH",
+      "name": "长鑫科技",
+      "board_stage": "首板",
+      "probability": 75.0,
+      "trigger_event": "长鑫LPDDR6量产首发小米折叠旗舰 存储涨价四重共振:DRAM季度营收+59.5% 海力士暴涨 江波龙港股40倍认购",
+      "trigger_event_strength": "high",
+      "trigger_sector": "存储/DRAM/HBM",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=首板 (低位启动, 概率加成 +5)",
+        "业务相关度=0.95 ≥ 0.8 (+10)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "600114.SH",
+      "name": "东睦股份",
+      "board_stage": "首板",
+      "probability": 75.0,
+      "trigger_event": "华为Mate XT2三折叠发布 麒麟9050 Pro首款逻辑折叠芯片 鸿蒙7 三折叠全球发货超100万台",
+      "trigger_event_strength": "high",
+      "trigger_sector": "华为链/折叠屏/消费电子",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=首板 (低位启动, 概率加成 +5)",
+        "业务相关度=0.85 ≥ 0.8 (+10)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "000978.SZ",
+      "name": "桂林旅游",
+      "board_stage": "首板",
+      "probability": 75.0,
+      "trigger_event": "平陆运河9月16日建成通航 广西发布会推进智慧物流 桂林旅游催化剂链(服贸会+东盟博览会+13天长假)",
+      "trigger_event_strength": "high",
+      "trigger_sector": "平陆运河/广西基建",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=首板 (低位启动, 概率加成 +5)",
+        "业务相关度=0.85 ≥ 0.8 (+10)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "600770.SH",
+      "name": "综艺股份",
+      "board_stage": "首板",
+      "probability": 70.0,
+      "trigger_event": "GPT-6 Astra零失误通关验证码 Agent化推理抬升CPU需求 国产CPU/腾讯算力/Anthropic链共振",
+      "trigger_event_strength": "high",
+      "trigger_sector": "AI应用/大模型",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=首板 (低位启动, 概率加成 +5)",
+        "业务相关度=0.78 (+5)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "688525.SH",
+      "name": "佰维存储",
+      "board_stage": "二板",
+      "probability": 65.0,
+      "trigger_event": "长鑫LPDDR6量产首发小米折叠旗舰 存储涨价四重共振:DRAM季度营收+59.5% 海力士暴涨 江波龙港股40倍认购",
+      "trigger_event_strength": "high",
+      "trigger_sector": "存储/DRAM/HBM",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=二板 (-5, 相对首板降权)",
+        "业务相关度=0.85 ≥ 0.8 (+10)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "600330.SH",
+      "name": "天通股份",
+      "board_stage": "二板",
+      "probability": 65.0,
+      "trigger_event": "中际旭创市值重回万亿 高盛/花旗首予买入目标3267/1524港元 光博会9/9-11深圳 液冷CPO共振",
+      "trigger_event_strength": "high",
+      "trigger_sector": "光模块/CPO/光通信设备",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=二板 (-5, 相对首板降权)",
+        "业务相关度=0.8 ≥ 0.8 (+10)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "000066.SZ",
+      "name": "中国长城",
+      "board_stage": "二板",
+      "probability": 65.0,
+      "trigger_event": "GPT-6 Astra零失误通关验证码 Agent化推理抬升CPU需求 国产CPU/腾讯算力/Anthropic链共振",
+      "trigger_event_strength": "high",
+      "trigger_sector": "AI应用/大模型",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=二板 (-5, 相对首板降权)",
+        "业务相关度=0.8 ≥ 0.8 (+10)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "000582.SZ",
+      "name": "北部湾港",
+      "board_stage": "二板",
+      "probability": 65.0,
+      "trigger_event": "平陆运河9月16日建成通航 广西发布会推进智慧物流 桂林旅游催化剂链(服贸会+东盟博览会+13天长假)",
+      "trigger_event_strength": "high",
+      "trigger_sector": "平陆运河/广西基建",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=二板 (-5, 相对首板降权)",
+        "业务相关度=0.8 ≥ 0.8 (+10)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "002559.SZ",
+      "name": "亚威股份",
+      "board_stage": "二板",
+      "probability": 60.0,
+      "trigger_event": "长鑫LPDDR6量产首发小米折叠旗舰 存储涨价四重共振:DRAM季度营收+59.5% 海力士暴涨 江波龙港股40倍认购",
+      "trigger_event_strength": "high",
+      "trigger_sector": "存储/DRAM/HBM",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=二板 (-5, 相对首板降权)",
+        "业务相关度=0.75 (+5)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "688379.SH",
+      "name": "华光新材",
+      "board_stage": "二板",
+      "probability": 60.0,
+      "trigger_event": "中际旭创市值重回万亿 高盛/花旗首予买入目标3267/1524港元 光博会9/9-11深圳 液冷CPO共振",
+      "trigger_event_strength": "high",
+      "trigger_sector": "光模块/CPO/光通信设备",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=二板 (-5, 相对首板降权)",
+        "业务相关度=0.7 (+5)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "688018.SH",
+      "name": "乐鑫科技",
+      "board_stage": "二板",
+      "probability": 60.0,
+      "trigger_event": "GPT-6 Astra零失误通关验证码 Agent化推理抬升CPU需求 国产CPU/腾讯算力/Anthropic链共振",
+      "trigger_event_strength": "high",
+      "trigger_sector": "AI应用/大模型",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=二板 (-5, 相对首板降权)",
+        "业务相关度=0.78 (+5)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "002575.SZ",
+      "name": "群兴玩具",
+      "board_stage": "二板",
+      "probability": 60.0,
+      "trigger_event": "GPT-6 Astra零失误通关验证码 Agent化推理抬升CPU需求 国产CPU/腾讯算力/Anthropic链共振",
+      "trigger_event_strength": "high",
+      "trigger_sector": "AI应用/大模型",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=二板 (-5, 相对首板降权)",
+        "业务相关度=0.7 (+5)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    },
+    {
+      "trade_date": "20260908",
+      "ts_code": "000681.SZ",
+      "name": "视觉中国",
+      "board_stage": "二板",
+      "probability": 60.0,
+      "trigger_event": "GPT-6 Astra零失误通关验证码 Agent化推理抬升CPU需求 国产CPU/腾讯算力/Anthropic链共振",
+      "trigger_event_strength": "high",
+      "trigger_sector": "AI应用/大模型",
+      "mainline_score": 0,
+      "rank": "重点关注",
+      "evidence": [
+        "事件强度=high (+50)",
+        "板块自身强度=high (+10)",
+        "板数=二板 (-5, 相对首板降权)",
+        "业务相关度=0.75 (+5)"
+      ],
+      "generated_at": "2026-09-09T00:46:50+08:00"
+    }
+  ],
+  "summary": {
+    "total_candidates": 13,
+    "high_prob_count": 13,
+    "首板_count": 4,
+    "二板_count": 9
+  }
+}
