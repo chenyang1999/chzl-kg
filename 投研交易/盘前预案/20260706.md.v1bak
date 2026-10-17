@@ -1,0 +1,270 @@
+---
+date: 2026-07-06
+agent: D1-main-decision
+skill_version: main_decision_v1@1.0
+generated_at: 2026-07-06T08:12:00+08:00
+confidence: 0.66
+degraded: true
+data_sources:
+  - name: research_summary
+    path: data/research/20260706/research_summary.json
+    status: ok
+    captured_at: 2026-07-06T02:53:53+08:00
+    record_count: 1
+  - name: R1_style
+    path: data/research/20260706/R1_style.json
+    status: ok
+    captured_at: 2026-07-06T07:35:00+08:00
+    record_count: 1
+    confidence: 0.72
+  - name: R2_main_sectors
+    path: data/research/20260706/R2_main_sectors.json
+    status: ok
+    captured_at: 2026-07-06T07:52:00+08:00
+    record_count: 1
+    confidence: 0.70
+  - name: R3_sentiment
+    path: data/research/20260706/R3_sentiment.json
+    status: degraded
+    captured_at: 2026-07-06T02:45:00+08:00
+    record_count: 1
+    confidence: 0.50
+    error: WeFlow L3 死;L1 使用 20260703 T-1 baseline;XTick MCP not_available
+  - name: R4_news
+    path: data/research/20260706/R4_news.json
+    status: ok
+    captured_at: 2026-07-06T07:35:00+08:00
+    record_count: 1
+    confidence: 0.78
+  - name: R5_stock_profiles
+    path: data/research/20260706/R5_stock_profiles.json
+    status: degraded
+    captured_at: 2026-07-06T08:12:00+08:00
+    record_count: 1
+    confidence: 0.68
+    error: chip_structure/technical/institutional 三维 partial;chenhailangju/canghai-sise DOWN
+  - name: R6_devil_advocate
+    path: data/research/20260706/R6_devil_advocate.json
+    status: ok
+    captured_at: 2026-07-06T07:55:00+08:00
+    record_count: 1
+    confidence: 0.70
+  - name: R7_capital_flow
+    path: data/research/20260706/R7_capital_flow.json
+    status: degraded
+    captured_at: 2026-07-06T02:31:50+08:00
+    record_count: 1
+    confidence: 0.50
+    error: 板块级可用,个股级主力5日净流出明细缺失(chenhailangju DOWN)
+  - name: fetch_manifest
+    path: data/raw/20260706/manifest.json
+    status: ok
+    captured_at: 2026-07-06T02:00:00+08:00
+    record_count: 1
+    error: fetch_global_severity=2 (xtick/canghai-sise/canghai-charts/weflow/agentqmt/chenhailangju down)
+input_freshness: partial
+input_freshness_note: R3/R7 上游 confidence=0.5,R5 三维 partial;WeFlow/xtick/chenhailangju/canghai-sise 四大 MCP down;主源 tushare+datapro+本地 jsonl 完好,决策已落地相应保守动作(严守仓位 0.5、埃斯顿仓位压至 6% 延迟入场)
+---
+
+# 2026-07-06 · **主决策 / D1 盘前预案**
+
+> **数据源新鲜度**: partial
+> **降级状态**: true
+> **置信度**: 0.66
+> **交易模式**: aggressive_hunt (mode 由用户指定,dry_run 硬约束仍保留)
+
+## 一句话结论
+
+震荡分化型 + 情绪 58 + 双主线(人形机器人 84 / 商业航天 72),严守仓位上限 50%,execution 池 5 只 · watch 池 17 只,R6 采纳 4 条 strong_suggest 但不动仓位数(mode=aggressive_hunt 授权仓位分配偏进攻)。
+
+## 详细分析
+
+### 一、市场结构与仓位上限(R1 + R6.M2_01)
+
+R1 判定「震荡分化型 + 情绪浓度 55 + 三主线扩散但塔尖仅 4 板 1 只、双龙缺失」,建议 position_cap ≤ 0.50。R6 模式二一致性检查以 strong_suggest 强调「必须严守 0.5 不上修 + 若 09:25 竞价炸板率 >30% 或龙一低开 -2% P1 必须触发降级」。D1 全盘采纳:target_total_position_pct=0.50,不因 aggressive_hunt 上修至 0.60/0.75。**用户指定的 aggressive_hunt 落在仓位分配层(execution_pool 保持 5 只),不落在仓位上限层。**
+
+### 二、主线一 · 人形机器人(30% 仓位分配)
+
+**三源硬共振是全市场唯一(消息 R4 + 情绪 R3 rank1 + 资金 R7 rank1)**。R7 T-1 数据:机器人概念 +143.74亿 rank1、人形机器人 +113.78亿 rank3、特斯拉概念 +84.39亿 rank4、机器人执行器 +64.73亿(+7.53%)、减速器 +61.04亿(+6.32%)——全市场资金唯一 top3 硬共振主线。R4 E003 strength=high polarity=正面:证监会同意宇树 IPO + 特斯拉副总裁陶琳表态 Optimus 2026 年底量产,7 月周产 100-200 台 + 央视机器人出口近 200 亿元。
+
+执行池落地:
+- **002050 三花智控(14%,leader)** — R2 龙一 + R4 首推特斯拉链执行器 + R5 composite 74 主力候选
+- **601689 拓普集团(10%,core_largecap)** — Tesla tier1 送样 + PE 20-30x 低吸友好,主线一低吸备选
+- **002747 埃斯顿(6%,core_midcap)** — R2 龙二,但 R6.M6_01 因 R7 hot_money 量化打板 3日2次协同信号列 strong_suggest;仓位压至 execution_pool 单票下限 6%,延迟至 09:45 视三花走势入场,三花炸板立即剔除
+
+主线内估值风险:R6.M3_01 明确提示三花估值 90%+ 分位 + crowding_risk_watch,execution 已内嵌 exit_rule「冲高回落 3% 分批止盈 50%」+「炸板视为退潮起点全线撤退」。
+
+### 三、主线二 · 商业航天(20% 仓位分配)
+
+R2 score 72(资金强度弱于主线一但硬时间催化临近)。R7 商业航天 +41.87亿 rank23 / 卫星互联网 +33.30亿 rank30 / 军工 +57.50亿 rank11 — 三源正向共振但排名靠后。R4 E007 财通军工《华菱线缆:火箭/卫星线缆领军者》深度覆盖(单箭 400-500w/单星 200-300w/传统火箭线缆市占 80%),叠加 7/10-13 长征十号乙首飞窗口硬时间锚点(4-7 交易日内)。
+
+执行池落地:
+- **001208 华菱线缆(12%,leader)** — R4 唯一 research-report 级 alpha + 主板 execution_eligible
+- **600435 北方导航(8%,core_midcap)** — R2 龙二 + 军工 β 承接 + 低吸友好
+
+主线二 exit_rules 内嵌 R6.M3_02「见光死」保护:首飞成功当日 T+0 涨幅 >7% 减仓 50%,首飞延期/失败次日 exit_at_open 全清。
+
+### 四、回避与降级 (R2.secondary_lines · R6.M2_02)
+
+**R4 的 5 条 strength=high 强催化(韬定律V2 / 存储 / 光通信 / MLCC / 电子布)全部因 R7 T-1 资金背离降入 watch 而非 execution**:先进封装 -60亿、半导体概念 -358亿、存储芯片 -169亿、光纤概念 -127亿、MLCC -41.95亿。R6.M2_02 strong_suggest 明确「D1 严禁在集合竞价阶段主动加仓 secondary_lines 任一票,待 P1 竞价校准资金转向」。D1 全盘采纳,把 12 只 secondary_lines 龙头装入 watch_pool 待 P1 (09:25-09:29) 观察竞价溢价均值,若 >1% 则 P2 午盘可修订建仓,否则维持观察。
+
+### 五、mode=aggressive_hunt 的具体含义
+
+用户 aggressive_hunt ≠ 突破仓位上限。D1 解读为:(a) 在 0.50 仓位铁律内保留 5 只 execution 而非 R6 建议的 ≤3 只,以维持主线厚度;(b) 允许小溢价开盘直接建仓(max_premium_pct=2-3%),不必等回踩;(c) 双主线并行不做单主线 all-in。R6.M2_01 的 execution_pool ≤3 只建议在 meta.r6_devil_advocate.strong_suggests_overridden 显式记录理由,不隐匿。
+
+## 关键证据
+
+- 证据 1: R7 机器人概念 +143.74亿 rank1 · 人形机器人 +113.78 rank3 · 特斯拉概念 +84.39 rank4 · 机器人执行器 +64.73亿(+7.53%) — 唯一三源硬共振主线;来源 R7_capital_flow / main_force.sector_flows
+- 证据 2: R4 E20260706_003 特斯拉副总裁陶琳表态 Optimus 2026 年底量产 + 宇树 IPO 注册 + 央视机器人出口近 200 亿 — 7 独立来源;来源 R4_news / top_events[2]
+- 证据 3: R4 E20260706_007 财通军工《华菱线缆:火箭/卫星线缆领军者》+ 千帆星座组网卫星发射成功 + 7/10-13 长征十号乙首飞窗口锁定;来源 R4_news / top_events[6]
+- 证据 4: R6.M6_01 R7 hot_money.synergy_flags 明确列出「量化打板 3日内 2 次上榜 002747 (20260703/20260701)」→ 埃斯顿降级 strong_suggest,仓位压 6% + 延迟入场;来源 R6_devil_advocate / counter_arguments[5] + R7_capital_flow / hot_money.synergy_flags
+- 证据 5: R1 T-1 涨停 108 家/塔尖 4 板 1 只/炸板率 32.5% · 大盘微涨结构未见攻击性;来源 R1_style / evidence
+- 证据 6: R3 hotlist rank_momentum_up 人形机器人 +2 · 光纤 +7 · 商业航天 +5 · 减速器 new_in_top;来源 R3_sentiment / hotlist_signals
+
+## 数据源审计(方案 β 特有)
+
+| 源 | 状态 | conf | 抓取时间 | 关键结论/降级备注 |
+|---|---|---|---|---|
+| research_summary | ok | - | 02:53:53 | orchestrator_status=complete;fetch_global_severity=2;7 R artifacts 齐全 |
+| R1 style | ok | 0.72 | 07:35:00 | 震荡分化型 · 情绪 55 · main_lines_count=3(扩散伪主线) · position_cap 建议 0.50 |
+| R2 main_sectors | ok | 0.70 | 07:52:00 | 落地 2 主线(人形机器人 84 / 商业航天 72)+ 5 secondary_lines;leader_filter_v1 已应用 |
+| R3 sentiment | **degraded** | **0.50** | 02:45:00 | WeFlow L3 死 → L1+L2 双源;L1 用 T-1 baseline;XTick not_available;情绪评分 58 |
+| R4 news | ok | 0.78 | 07:35:00 | 8 事件:6 正面 + 1 负面(私募风险+ST新规+*ST 披星戴帽) |
+| R5 stock_profiles | **degraded** | **0.68** | 08:12:00 | 10 只画像;chip_structure/technical/institutional 三维 partial(chenhailangju/canghai-sise DOWN + 横切 CLI skill 未跑) |
+| R6 devil_advocate | ok | 0.70 | 07:55:00 | hard_reject 0;strong_suggest 4;soft_suggest 5;模式六硬否决条件 (1)+(2) 均未同时命中 |
+| R7 capital_flow | **degraded** | **0.50** | 02:31:50 | 板块级 T-1 完整;个股级 5 日主力净流出明细缺失(chenhailangju DOWN);hot_money.synergy_flags 已列 002747/300718 |
+| fetch_manifest | ok | - | 02:00:00 | fetch_global_severity=2;xtick/canghai-sise/canghai-charts/weflow/agentqmt/chenhailangju DOWN |
+
+**降级影响的决策映射**:
+- R3 conf=0.5 → 不上修 position_cap 至 0.60,严守 0.50
+- R7 conf=0.5(个股级缺失)→ R6.M6_01 无法升级为 hard_reject → 埃斯顿仅 strong_suggest,D1 采纳降级为 6% 最低仓位 + 09:45 延迟入场,而非直接剔除
+- R5 三维 partial → execution_pool 单票均含明确 exit_rule 五档保险,不做左侧接盘
+
+## Execution Pool(N=5,含思维链)
+
+### 1. 002050.SZ 三花智控 (人形机器人-特斯拉链执行器) · 14% · leader
+
+- **plan_status**: `watch_pool_wait_for_entry`
+- **买入理由**: 主线唯一硬 alpha - 三源硬共振 + Tesla Optimus 量产爬坡 6-12 个月中长周期,机器人执行器板块 T-1 +64.73亿(+7.53%) 龙一。R5 composite_score 74(全部候选最高)。
+- **风险点**: R6.M3_01 估值 90%+ 分位 + crowding_risk_watch;R5 flags 明列拥挤度警报;若首日无法封板即视为退潮起点。
+- **止损条件**: 硬止损 -5%(参考价×0.95);盘中冲高回落 >3% 触发部分止盈 50%;机器人概念板块跌幅 >2% 全清。
+- **可验证假设**:
+  - (a) 09:25 竞价溢价 ≥ 2%
+  - (b) 09:45 前板块内涨停家数 ≥ 3
+  - (c) 三花全天不炸板
+- **entry_rules**: 1 条 (trend_pullback_buy,溢价 ≤3% 分两批 60%+40%,溢价 >5% 撤单转 601689)
+- **exit_rules**: 4 条 (stop_loss_break + intraday_break_exit + sector_switch_exit + take_profit_hit)
+
+### 2. 601689.SH 拓普集团 (人形机器人-Tesla tier1/汽零) · 10% · core_largecap
+
+- **plan_status**: `watch_pool_wait_for_entry`
+- **买入理由**: 主线一低吸候选,PE 20-30x + Tesla 敞口纯正,汽零+机器人双 β 承接主线扩散;契合 prefer_pullback_over_breakout。
+- **风险点**: 大盘蓝筹 β 承接节奏偏慢,可能滞后龙一 1-2 日;若主线一日内退潮,拓普跟跌但幅度轻。
+- **止损条件**: 硬止损 -5%;若连续两日板块内跌幅落后三花 -2% 触发 R6 板块内落后度阈值。
+- **可验证假设**:
+  - (a) 主线一龙一封涨停 → 拓普 T+1 出现 3%+ 承接
+  - (b) 拓普盘中放量 >1.5 倍换手
+- **entry_rules**: 1 条 (trend_pullback_buy 09:30-11:00 分两批,溢价 >4% 撤单)
+- **exit_rules**: 3 条 (stop_loss_break + sector_switch_exit + take_profit_hit)
+
+### 3. 002747.SZ 埃斯顿 (工业机器人-国产 CR1) · 6% · core_midcap
+
+- **plan_status**: `watch_pool_wait_for_entry`
+- **买入理由**: R2 龙二 β 承接 + 工业机器人国产 CR1 长期成长;若三花强封则埃斯顿 T+1 补涨。
+- **风险点**: R6.M6_01 strong_suggest — 量化打板协同拥挤度警报;risk_grade=C+(全部候选最低);霸榜出货第一嫌疑人;R3 distribution_alert=[] 未触发但个股 5 日主力净流出因 chenhailangju DOWN 无法客观核实。
+- **止损条件**: 延迟至 09:45 视三花走势入场;三花若炸板立即剔除本票不建仓;若已建仓触发硬止损 -5% 或分时破 5 日线立退。
+- **可验证假设**:
+  - (a) 09:45 前三花未炸板
+  - (b) 埃斯顿分时不放量出货
+  - (c) 板块内涨停 ≥3 家
+- **entry_rules**: 1 条 (09:45 后条件入场,不满足则跳过并转仓 601689)
+- **exit_rules**: 3 条 (stop_loss_break + volume_price_divergence + sector_switch_exit)
+
+### 4. 001208.SZ 华菱线缆 (商业航天-火箭/卫星线缆) · 12% · leader
+
+- **plan_status**: `watch_pool_wait_for_entry`
+- **买入理由**: R4 唯一 research-report 级 alpha(财通军工深度)+ 4-7 交易日内首飞硬催化 + 主板 execution_eligible;R2/R5 均判定为主线二龙一。
+- **风险点**: R6.M3_02 soft_suggest — 首飞窗口后见光死风险;R6.M1_02 — 板块资金强度 rank23 弱于主线一;R5 composite 62 五维四 partial。
+- **止损条件**: 硬止损 -5%;首飞成功当日 T+0 涨幅 >7% 减仓 50%;若首飞延期或失败 T+1 直接清仓(exit_at_open)。
+- **可验证假设**:
+  - (a) 7/10-13 首飞窗口按时启动
+  - (b) 板块 T+1 出现连板承接
+  - (c) 卫星互联网+军工 T+1 同步正 β
+- **entry_rules**: 1 条 (trend_pullback_buy 09:30-10:30 分两批,溢价 >5% 转 600435)
+- **exit_rules**: 4 条 (stop_loss_break + take_profit_hit 事件驱动 + exit_at_open 首飞失败 + sector_switch_exit)
+
+### 5. 600435.SH 北方导航 (商业航天-火箭飞控/箭载系统) · 8% · core_midcap
+
+- **plan_status**: `watch_pool_wait_for_entry`
+- **买入理由**: 主线二 β 承接龙二 + 传统军工估值中枢中位 + 商业航天转型故事;首飞窗口下承接华菱溢出资金。
+- **风险点**: 弹性次于华菱;若板块整体资金弱则承接空间有限。
+- **止损条件**: 硬止损 -5%;华菱炸板则同步减仓 50%。
+- **可验证假设**:
+  - (a) 华菱高开 5%+
+  - (b) 军工板块 T+0 涨幅 >1%
+  - (c) 分时上午收阳线
+- **entry_rules**: 1 条 (09:35 后视华菱溢价分批入场)
+- **exit_rules**: 3 条 (stop_loss_break + sector_switch_exit + take_profit_hit)
+
+**Execution Pool 汇总**: 5 只 · 总仓 0.50 · 单票均 ≤0.15 · 单板块累计:人形机器人 30% / 商业航天 20% 均 ≤ 0.40。
+
+## Watch Pool (N=17)
+
+**Execution 直接备选(execution_pool 满而未入选)**: 4 只
+- 600879.SH 航天电子(商业航天-测控通信,央企低 β,52) — 华菱冲板切换候选
+- 002151.SZ 北斗星通(商业航天-导航+卫星互联网,52) — 板块 β 分散
+- 300718.SZ 长盛轴承(宇树链-轴承,60,execution_block) — R4 首推+R7 量化基金 10.32亿 active seat 硬 alpha,T+0 高开幅度作主线情绪信号
+- 300124.SZ 汇川技术(机器人-一体化关节,61,execution_block) — 机构标配大盘蓝筹,主线扩散 T+2 观察
+
+**Secondary_lines 竞价校准候选(R6.M2_02 严禁竞价加仓,待 P1 观察)**: 12 只
+- 韬定律V2: 688981 中芯国际 / 688072 拓荆科技 / 301269 华大九天 / 688008 澜起科技
+- 存储: 301308 江波龙(业绩硬 alpha) / 603986 兆易创新
+- 光通信: 300308 中际旭创(负面短期传言,分歧观察) / 688048 长光华芯
+- MLCC: 000636 风华高科 / 002484 江海股份
+- 电子布: 600176 中国巨石(美银连 call) / 603256 宏和科技(双事件)
+
+**Watch Pool 汇总**: 17 只(15-25 区间内);全部 plan_status=`watch_pool_only`,max_position_pct=0.0 保底,不产生任何 execute 层订单。
+
+## R6 反证采纳与覆盖
+
+**hard_rejects_applied**: 0 条(R6 未产生 hard_reject)。
+
+**strong_suggests_accepted (4/4)**:
+1. **R6_M2_01**: 严守 position_cap=0.5,不上修 → `risk_limits.target_total_position_pct=0.50`
+2. **R6_M3_01**: 三花估值 90%+ 分位 + 拥挤度警报 → `002050 max_position_pct=0.14 且 exit_rule 增加冲高回落 3% 分批止盈`
+3. **R6_M6_01**: 埃斯顿量化打板协同拥挤 → `002747 仓位压至 6% + 延迟至 09:45 视三花走势入场 + 三花炸板立即剔除`
+4. **R6_M2_02**: secondary_lines 资金背离 · 09:25 集合竞价校准 → `execution_pool 不直接买入韬定律/存储/光通信/MLCC/电子布任一票,全部转入 watch`
+
+**strong_suggests_overridden (1)**:
+- **R6_M2_01_partial_override**: execution_pool_size ≤ 3 建议部分覆盖。理由:user 请求 mode=aggressive_hunt + 主板 execution_eligible 候选 7 只 + user_preferences.max_positions=5。**严守仓位上限 0.5 不上修的前提下**,保留 5 只 execution 维持主线厚度(3 人形机器人 + 2 商业航天),单票仓位均已下调(埃斯顿 6% / 三花 14% / 华菱 12%)。这是仓位分配的进攻性,不是仓位上限的进攻性。
+
+**soft_notes 收录 5 条**: 见 JSON.meta.r6_devil_advocate.soft_notes(涵盖 M1_01/M1_02/M3_02/M4_01/M5_01)。
+
+## 不确定性 / 反证
+
+1. **R3/R7 conf=0.5 双降级** — WeFlow L3 死 + xtick + chenhailangju 四大 MCP down,情绪浓度多源交叉验证削弱,个股级 5 日主力净流出明细缺失。若 P1 09:25 竞价出现「主线一龙一低开 -2%+ 或全市场炸板率 >30%」信号,P1 amendment 必须触发 execution_pool 降级(削减至 3 只或全部转 watch_pool_wait_for_entry)。
+2. **R1 塔尖 4 板 1 只 · 双龙缺失** — 主线扩散 vs 断层的定性存在合理替代,R6.M2_01 strong_suggest 已提示。若 T+1 三花炸板视为退潮起点,exit_rule 已内嵌全线撤退条款。
+3. **secondary_lines「叙事强/资金弱」赌局** — R4 五条 strength=high 催化被 R7 T-1 资金背离压制降入 watch。若 P1 竞价出现资金转向(secondary 板块溢价均值 >1%),P2 午盘 amendment 允许升级 1-2 只(如江波龙业绩硬 alpha 或中国巨石美银连 call)进 execution。
+4. **埃斯顿霸榜出货第一嫌疑人** — R7 hot_money.synergy_flags 量化打板 3 日 2 次协同信号,但硬否决条件(R3 distribution_alert)未同时命中,只能 strong_suggest。若周一(20260706)人形机器人再次登顶热榜,则形成 R3 distribution_alert 触发条件(连续 2 日 rank1),届时 P1 amendment 应剔除埃斯顿。
+5. **华菱线缆首飞见光死** — 7/10-13 长征十号乙首飞窗口是硬时间锚点,exit_rule 已内嵌事件驱动止盈 + 失败清仓,但如果首飞前 T-1 (7/9) 板块无连板承接则需 P2 amendment 减仓。
+6. **300 / 688 execution_block 但 alpha 强** — 300718 长盛轴承(宇树硬订单)、301308 江波龙(业绩硬 alpha)、688981 中芯国际(韬定律V2 先进制程首推)三票均因 user_preferences.execution_block_prefixes 无法进 execution_pool,建议用户明确是否临时豁免。此为长期合规冲突,D1 严格遵守用户偏好不自行豁免。
+
+## 与其他 R/D/E 的关系
+
+- **依赖(pull-based fresh context)**: research_summary.json + R1_style.json + R2_main_sectors.json + R3_sentiment.json + R4_news.json + R5_stock_profiles.json + R6_devil_advocate.json + R7_capital_flow.json + user_preferences.yaml
+- **被消费**:
+  - P1 auction_amendment_v1 (09:25-09:29) — 消费本 watchlist_plan.json + auction_snapshot.json,校准 execution_pool
+  - P2 midday_amendment_v1 (11:35-12:05) — 消费本 watchlist_plan.json + 上午 execution events + midday_snapshot.json
+  - canghai-execute — 消费本 watchlist_plan.json (schema_version=watchlist_plan_v1) 生成订单流
+  - E1 daily_review_v1 (15:10) — 复盘本 plan 落地情况
+
+## Sub-Agent 元数据
+
+- skill: main_decision_v1@1.0
+- artifact_json: data/plans/20260706/watchlist_plan.json (29 KB,pydantic OK)
+- artifact_md: chzl_kg/投研交易/盘前预案/20260706.md
+- 生成模式: fresh context LLM 主路径(非 d1_algorithm.py 规则版)
+- mode(user 指定): aggressive_hunt
+- mode(schema): dry_run (autonomous_trading_enabled=false, requires_user_confirmation=true)
+- generated_at: 2026-07-06T08:12:00+08:00
+- model: ark-code-latest (custom provider)
