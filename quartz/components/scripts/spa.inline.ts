@@ -92,7 +92,15 @@ async function _navigate(url: URL, isBack: boolean = false) {
   cleanupFns.clear()
 
   const html = p.parseFromString(contents, "text/html")
-  normalizeRelativeURLs(html, url)
+  // Folder pages are served at ".../folder/" . A URL without the trailing
+  // slash makes relative links climb out of the site prefix.
+  const nextSlug = html.body?.dataset?.slug
+  let canonicalUrl = url
+  if (nextSlug?.endsWith("/index") && !url.pathname.endsWith("/")) {
+    canonicalUrl = new URL(url.href)
+    canonicalUrl.pathname = `${url.pathname}/`
+  }
+  normalizeRelativeURLs(html, canonicalUrl)
 
   let title = html.querySelector("title")?.textContent
   if (title) {
@@ -129,7 +137,7 @@ async function _navigate(url: URL, isBack: boolean = false) {
   // delay setting the url until now
   // at this point everything is loaded so changing the url should resolve to the correct addresses
   if (!isBack) {
-    history.pushState({}, "", url)
+    history.pushState({}, "", canonicalUrl)
   }
 
   notifyNav(getFullSlug(window))
@@ -194,6 +202,16 @@ function createRouter() {
   })()
 }
 
+function ensureFolderTrailingSlash() {
+  const slug = document.body?.dataset?.slug ?? ""
+  if (!slug.endsWith("/index")) return
+  if (window.location.pathname.endsWith("/")) return
+  const fixed = new URL(window.location.href)
+  fixed.pathname = `${window.location.pathname}/`
+  history.replaceState(history.state, "", fixed)
+}
+
+ensureFolderTrailingSlash()
 createRouter()
 notifyNav(getFullSlug(window))
 
