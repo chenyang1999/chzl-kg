@@ -1,0 +1,86 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260914",
+  "next_day": "20260915",
+  "generated_at": "2026-10-17T18:55:31+08:00",
+  "n_total": 55,
+  "n_candidates": 5,
+  "candidates": [
+    {
+      "ts_code": "000823.SZ",
+      "name": "超声电子",
+      "industry": "元件",
+      "limit_times": 3,
+      "fd_amount_yi": 2.63,
+      "pct_chg": 10.01,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.6亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002912.SZ",
+      "name": "中新赛克",
+      "industry": "计算机设",
+      "limit_times": 3,
+      "fd_amount_yi": 2.5,
+      "pct_chg": 10.0,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.5亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "600876.SH",
+      "name": "凯盛新能",
+      "industry": "玻璃玻纤",
+      "limit_times": 3,
+      "fd_amount_yi": 0.08,
+      "pct_chg": 10.0,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.1亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "000981.SZ",
+      "name": "山子高科",
+      "industry": "汽车零部件",
+      "limit_times": 1,
+      "fd_amount_yi": 4.54,
+      "pct_chg": 10.04,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.5亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600330.SH",
+      "name": "天通股份",
+      "industry": "电子化学",
+      "limit_times": 1,
+      "fd_amount_yi": 3.18,
+      "pct_chg": 10.01,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.2亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停55只，筛出 5 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}
