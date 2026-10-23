@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-10-23T12:24:14.063335+08:00",
+  "report": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/2026-10-23 前置拦截缺陷修复与验收.md",
+  "report_sha256": "4e4efd9f33fc35da94545f1812f963fd27c625f3725de374eef344416bb9d8cc",
+  "BUG_rows": 17,
+  "distinct_tests": 378,
+  "subtests": 24,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_compile_and_hash_matches": 22,
+  "index_unchanged": true,
+  "head_unchanged": true,
+  "unapplied_policy_targets_hash_unchanged": 16,
+  "artifacts_sha256": {
+    "chzl_kg/系统进化/2026-10-23 前置拦截缺陷修复与验收.md": "4e4efd9f33fc35da94545f1812f963fd27c625f3725de374eef344416bb9d8cc",
+    "chzl_kg/系统进化/backups/2026-10-23-frontgate-repair-verify.py": "86a572d10a97976292b9bd681cf6207dfd1cc40748b69d4f459c5eb0bfb3db93",
+    "chzl_kg/系统进化/backups/2026-10-23-frontgate-repair-acceptance.json": "556e9def0af5da5415b32f050851307b05e54a245f19b410f3383806927f33d6",
+    "chzl_kg/系统进化/backups/2026-10-23-frontgate-repair-acceptance.txt": "5b698153ed8495fd692da96031b07ce3067ba63fe9dc6f5df1aedc62352b0a32",
+    "chzl_kg/系统进化/backups/2026-10-23-frontgate-repair-acceptance.xml": "2377beb4bbd57d8d441ba7032cb493d87e832082d804fbcb792b80ed8f09c23e",
+    "chzl_kg/系统进化/backups/2026-10-23-frontgate-repair-implementation.patch": "0b14804415182f0e38ac13b695b08c3bdb3446c0010daf83b5c013e2abeae641",
+    "chzl_kg/系统进化/backups/2026-10-23-frontgate-repair-status.csv": "40152539d582144147d176584eeb1339109c39aa0f49f8d2f7ae5070727081c8",
+    "chzl_kg/系统进化/backups/2026-10-23-frontgate-policy-proposals.md": "78d7cb8c25e2729153a27fefe0e8a8f926da2a8ed170b624d8aee29d8674a40c",
+    "chzl_kg/系统进化/backups/2026-10-23-frontgate-policy-proposals.patch": "4b1a4f130b90e6c1eae69bbf1120faadeb2ebf752c6c821473a1ad3f5b1ee16b"
+  }
+}

@@ -1,0 +1,641 @@
+{
+  "schema_version": "northbound_reference_proposal_v2",
+  "status": "draft_only_not_applied",
+  "frozen_at": "2026-10-23T12:52:06+08:00",
+  "repository": "/Users/chenyang/Downloads/demo/沧海巨浪",
+  "authorization_scope": "仅生成北向optional参考的精确最小持久规则差异；不应用任何目标",
+  "policy": {
+    "northbound": "optional_reference",
+    "new_numeric_policy_values": [],
+    "new_confidence_formula": false,
+    "new_required_dimensions": false,
+    "valid_zero_preserved": true,
+    "R6_completeness_changed": false,
+    "auto_production_rerun": false,
+    "QMT_called": false,
+    "signoff_written": false,
+    "available_turnover_not_net_purchases": true
+  },
+  "D1_dependency": {
+    "type": "AB_final_prerequisite",
+    "original_sha256": "0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d",
+    "A_result_sha256": "8927d05eaea4ea5850af77af24d7228599e6ce9aff5cc5ccfd546b02be79d2d2",
+    "AB_final_sha256": "b3e8d6d49e42b84a80613e4e63f7f5a578b95a6c1ab009e606cc2eacc6627876",
+    "AB_replayed_exactly_in_memory": true,
+    "actual_disk_at_freeze_matched_AB_final": true,
+    "initial_D1_read_was_intermediate_A": "observed; not used as NB patch base",
+    "requires_rehash_before_any_future_apply": true
+  },
+  "source_inventory": [
+    {
+      "path": "skills/analyze_capital_flow_v1/SKILL.md",
+      "sha256": "e82f07cc276651cacaac808faa786ac37a76dc7394b0c94f3b530c378e76ec77",
+      "line_count": 288,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_capital_flow_v1/SKILL.md"
+    },
+    {
+      "path": "docs/agents/R7-资金面Agent.md",
+      "sha256": "438bcb7e15ca1d12373b19d81a161d801347635ad3276f1c861c939c9cf6b63f",
+      "line_count": 155,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/docs/agents/R7-资金面Agent.md"
+    },
+    {
+      "path": "skills/main_decision_v1/SKILL.md",
+      "sha256": "b3e8d6d49e42b84a80613e4e63f7f5a578b95a6c1ab009e606cc2eacc6627876",
+      "line_count": 1295,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md"
+    },
+    {
+      "path": "src/research/contract_checks.py",
+      "sha256": "2c64dbc88c07506e28bc4e8f6be798d311a29ae38fa680b9685c9e68136e99f7",
+      "line_count": 284,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/research/contract_checks.py"
+    },
+    {
+      "path": "tests/checks/check_r7_staleness.py",
+      "sha256": "327b622c6b668658b01b969cbd0053e54cef1fd8b06b722e99c9744403f1621b",
+      "line_count": 134,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_r7_staleness.py"
+    },
+    {
+      "path": "scripts/research/run_research_shell.sh",
+      "sha256": "dcab3c1d0cc3291c361cbcfca9ac6d2dc9e0da9563b47bfe2aadaee2cb9ac4e6",
+      "line_count": 273,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell.sh"
+    },
+    {
+      "path": "scripts/research/run_research_shell_cron_wrapper.sh",
+      "sha256": "2a72fc27482bcc4d1a78d19c99923e9f104297c05ab88e64e2111e090a077da6",
+      "line_count": 71,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell_cron_wrapper.sh"
+    },
+    {
+      "path": "scripts/research/pipeline_state.py",
+      "sha256": "353dc8e21c88788385b040e0d6e617dc56947df19c6773fd8c1745e9aaea82f5",
+      "line_count": 245,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/pipeline_state.py"
+    },
+    {
+      "path": "scripts/research/pipeline_artifacts.py",
+      "sha256": "790dfee41d40776e10dac270cf2b4a15ab452c654d1ebae5df6e0357631aa4b1",
+      "line_count": 181,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/pipeline_artifacts.py"
+    },
+    {
+      "path": "scripts/research/build_research_summary.py",
+      "sha256": "11ffad8c70624da0898c87b0b97dbd37e80c91b5fd2383410984c98c76d19441",
+      "line_count": 135,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/build_research_summary.py"
+    },
+    {
+      "path": "src/research/orchestrator.py",
+      "sha256": "28fe4f69c6390b44db28ef739b2caeab1f7af7e8ad7bc9c45c7afd9c640ba4c2",
+      "line_count": 419,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/research/orchestrator.py"
+    },
+    {
+      "path": "src/research/r6_devil_advocate.py",
+      "sha256": "d9e35ef8f838f7e49f8c5d433c46f881ae3d70999f29791d43543f0fd812aff1",
+      "line_count": 633,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/research/r6_devil_advocate.py"
+    },
+    {
+      "path": "skills/analyze_devil_advocate_v1/SKILL.md",
+      "sha256": "aeee4559edbb1d095759202b03c33e50dd9fc3a5c6581a254d5d8124b67d0e0d",
+      "line_count": 443,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md"
+    },
+    {
+      "path": "scripts/plan/ensure_watchlist_plan.py",
+      "sha256": "ebaded51b65f9abbdd8af46289af9c00f78a4676bda42c491f59b415d6f5c4c6",
+      "line_count": 385,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/ensure_watchlist_plan.py"
+    },
+    {
+      "path": "trading/load_plan.py",
+      "sha256": "40bddfcb8573ffa5cd35cf592fd6bba7c9fdb3291fd620358fc4e228be0e26cb",
+      "line_count": 386,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/trading/load_plan.py"
+    },
+    {
+      "path": "trading/schema/watchlist_plan.py",
+      "sha256": "e1188f7580712014a438ee90678c3c9c63a9fe009c10fa8d85566daf0d6e686d",
+      "line_count": 158,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/trading/schema/watchlist_plan.py"
+    },
+    {
+      "path": "docs/agents/D1-主决策Agent.md",
+      "sha256": "8009445afe1f058ba823bb548480cd828952e9b6c3c4cb8729592e1a18ca9d9e",
+      "line_count": 267,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/docs/agents/D1-主决策Agent.md"
+    },
+    {
+      "path": "chzl_kg/系统进化/backups/2026-10-23-frontgate-policy-proposals.md",
+      "sha256": "78d7cb8c25e2729153a27fefe0e8a8f926da2a8ed170b624d8aee29d8674a40c",
+      "line_count": 1209,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-frontgate-policy-proposals.md"
+    },
+    {
+      "path": "chzl_kg/系统进化/backups/2026-10-23-frontgate-policy-proposals.patch",
+      "sha256": "4b1a4f130b90e6c1eae69bbf1120faadeb2ebf752c6c821473a1ad3f5b1ee16b",
+      "line_count": 484,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-frontgate-policy-proposals.patch"
+    },
+    {
+      "path": "chzl_kg/系统进化/backups/2026-10-23-northbound-sdk-probe.json",
+      "sha256": "41a924641ae16de07a3f793c298480d9857dc0e709d5e76701a8319674c5d7e0",
+      "line_count": 404,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-northbound-sdk-probe.json"
+    },
+    {
+      "path": "scripts/health/probe_northbound.py",
+      "sha256": "0861bfc0047706c9e36f5d85f99dd2f9d865062555bb36bc648205ae6d87f7cd",
+      "line_count": 104,
+      "read_coverage": "full",
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/health/probe_northbound.py"
+    }
+  ],
+  "external_routing_metadata": [
+    {
+      "path": "/Users/chenyang/.hermes/cron/jobs.json",
+      "sha256": "b28347f1104ed5560d260aa70ab83e9fdfa4333c4dea28ed2f78cb5b337f58cc",
+      "read_scope": "routing/skills keys only; no credentials copied"
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_research_daily.sh",
+      "sha256": "6c3198b2115516d6cc1368c88b489cbac88c528b623dd2536b2dfc9849242f29",
+      "read_scope": "routing/skills keys only; no credentials copied"
+    },
+    {
+      "path": "/Users/chenyang/.hermes/profiles/canghai-research/config.yaml",
+      "sha256": "16f086349781e65e26cdd2fcae1bc8a4d094a4df00342272536ee1db5bd444d0",
+      "read_scope": "routing/skills keys only; no credentials copied"
+    },
+    {
+      "path": "/Users/chenyang/.hermes/profiles/canghai-plan/config.yaml",
+      "sha256": "818f0947a1850c17abb4e937a86998ca736c5952f68d20a6004765ea8c5b9a35",
+      "read_scope": "routing/skills keys only; no credentials copied"
+    }
+  ],
+  "missing_referenced_file": "/Users/chenyang/Downloads/demo/沧海巨浪/tests/check_r7_staleness.py",
+  "actual_standalone_checker": "tests/checks/check_r7_staleness.py",
+  "targets": [
+    {
+      "path": "skills/analyze_capital_flow_v1/SKILL.md",
+      "precondition_sha256": "e82f07cc276651cacaac808faa786ac37a76dc7394b0c94f3b530c378e76ec77",
+      "proposed_sha256": "b67b4c47bd45a3556e0f0bb148e4b478c0209a31e626a675be07c2ad9d157696",
+      "precondition_kind": "actual_frozen_file",
+      "replacement_count": 13,
+      "applied": false
+    },
+    {
+      "path": "docs/agents/R7-资金面Agent.md",
+      "precondition_sha256": "438bcb7e15ca1d12373b19d81a161d801347635ad3276f1c861c939c9cf6b63f",
+      "proposed_sha256": "63c288deb6453ef97178db90d7dddb8fd69898eb51e1e9f549067f362ebfb080",
+      "precondition_kind": "actual_frozen_file",
+      "replacement_count": 8,
+      "applied": false
+    },
+    {
+      "path": "skills/main_decision_v1/SKILL.md",
+      "precondition_sha256": "b3e8d6d49e42b84a80613e4e63f7f5a578b95a6c1ab009e606cc2eacc6627876",
+      "proposed_sha256": "00ce0576b20448d3dc18a0ca670d55f378a212e075bbdaf473fe97bf3baa3e4c",
+      "precondition_kind": "AB_final",
+      "replacement_count": 7,
+      "applied": false
+    }
+  ],
+  "target_count": 3,
+  "exact_replacements": {
+    "skills/analyze_capital_flow_v1/SKILL.md": [
+      {
+        "old": "四维统合 **北向 / 主力 / 游资 / ETF+期货** 时序，输出板块与个股资金约束，供 R2/R5/D1 消费。",
+        "new": "四维统合 **北向 / 主力 / 游资 / ETF+期货** 时序，输出板块与个股资金约束，供 R2/R5/D1 消费。\n\n**北向仅作可选参考**：缺失、口径不可比或延迟时，仅如实记录北向缺口，不升级为整体资金失效、整体置信度归零或全局禁新仓。其余必要数据、逐票资金确认与时效要求沿现有契约，不新增必要维度、评分公式或数值门槛；真正必要输入缺失仍不得认定完成或通过。必要性未明文定义处须列为契约缺口，不擅自补定义，也不据此声称已满足全部开仓条件。\n\n**接口可用性与净买入语义分开**：`moneyflow_hsgt` 有行、当日尚未落库和可信净买入不可得不是同一状态。可得成交总额、原字段值与实际数据日独立留在来源证据，不能因净额不可得写“接口关闭/北向全空”；`north_money` / `hgt` / `sgt` 等原字段未经口径核实不能当净买入；已核为成交总额（Buy+Sell）的值也不得跨口径拼成净流入趋势。净买入未核实时，对应净额/净额趋势仍为 null，写语义缺口；可用成交额只作成交活跃度参考，不补造买卖方向。",
+        "reason": "明确只撤销北向单维硬依赖，不新定义其余维度必要性"
+      },
+      {
+        "old": "2. 拉北向 5/10/20 日趋势 → `northbound`  ",
+        "new": "2. 尝试拉北向 5/10/20 日趋势 → `northbound`（可选参考；缺失写 null、实际日期与缺口，不影响其余研究继续）  ",
+        "reason": "采集步骤不再暗含北向必需"
+      },
+      {
+        "old": "- 北向延迟 → 用最近有效交易日，标注 `stale`  ",
+        "new": "- 北向延迟 → 仅在口径可信时引用最近有效交易日并标实际日期/缺口；无可信值写 null，不用旧值冒充当日或用代理冒充净额  ",
+        "reason": "延迟参考与缺失区分"
+      },
+      {
+        "old": "resolved_trade_date: \"YYYYMMDD\"      # 实际数据归属交易日(可能 = T-1)\nstaleness_status: ok | partial | stale | unavailable",
+        "new": "resolved_trade_date: \"YYYYMMDD\"      # 其余已用必要资金证据的实际归属日，不拿缺失北向代填\nstaleness_status: ok | partial | stale | unavailable  # 资金数据质量，不等于研究完成状态",
+        "reason": "顶层时间归属不再等同北向时间"
+      },
+      {
+        "old": "**staleness 计算与状态机**(由 R7 LLM 在写盘前自动算):",
+        "new": "**完成状态与数据质量分开**：顶层 `status` 表示研究工作是否完成；只有其余现有必需工作及交付已完成才可写 `complete`，不能仅因尝试过或有 JSON 就算完成。北向缺失写 `northbound.status=unavailable`，未取得的数值/序列、`northbound.resolved_trade_date` 与 `northbound.trading_gap` 如实为 null，并写 `northbound.unavailable_reason`；有日期/交易日缺口则保留实值。各维保留来源与实际日期，不伪造统一日期。顶层 `degraded` / `data_health` / `staleness_status` 如实表达质量缺口，但北向单维缺失不得自动把顶层状态设为 `unavailable`、研究工作设为未完成或整体 `confidence` 设为零；也不得把必要数据真正失效洗为正常。整体置信度按已有真实评价保留，未评价为 null，真实零保留零；不新造汇总公式或为缺失补分。\n\n**北向参考数据的时效状态机**（原交易日缺口分档只作用于北向，不充当整体资金门禁）:",
+        "reason": "将原北向状态机限定到北向，保留原交易日档位"
+      },
+      {
+        "old": "if trading_gap <= 0:     status = \"ok\"        # 周一盘前用上周五数据 = 正常, 绝非 stale\nelif trading_gap == 1:   status = \"partial\"   # T-2, 真降级一档\nelif trading_gap == 2:   status = \"stale\"     # T-3, 衰减 0.7\nelse:                    status = \"unavailable\"\n  → unavailable_reason = \"northbound_data_lag_{gap}days\"\n  → 整体 confidence = 0 (消费者应走降级)",
+        "new": "if trading_gap <= 0:     northbound.status = \"ok\"        # 周一盘前用上周五数据 = 正常, 绝非 stale\nelif trading_gap == 1:   northbound.status = \"partial\"   # T-2, 北向参考降级一档\nelif trading_gap == 2:   northbound.status = \"stale\"     # T-3, 仅标北向参考陈旧\nelse:                    northbound.status = \"unavailable\"\n  → northbound.unavailable_reason = \"northbound_data_lag_{gap}days\"\n  → 保留其余资金证据及整体真实评价，不自动覆盖整体 confidence",
+        "reason": "删除单维延迟→整体归零及北向自动衰减，分档数字不变"
+      },
+      {
+        "old": "1. 当 `generated_at.date < trade_date + 06:00` 视为**严重错位**,直接 `status=unavailable`,写 `unavailable_reason=\"generated_at_before_trade_date_06am\"`,**不得**让下游(D1/R6)按 ok 消费",
+        "new": "1. 当 `generated_at.date < trade_date + 06:00` 视为**严重错位**,直接 `staleness_status=unavailable`,写 `unavailable_reason=\"generated_at_before_trade_date_06am\"`,**不得**让下游(D1/R6)按 ok 消费；本项是整份产物的原有时间约束，不因北向可选而豁免",
+        "reason": "保留原时间硬门槛，消除完成status/时效status混淆"
+      },
+      {
+        "old": "**消费契约**(供 D1 / R6 消费):\n- D1 在 §Step 0 读 R7 时,先看 `staleness_status`:\n  - `ok` → 正常消费\n  - `partial` → 消费但 `risk_limits.position_cap_pct` 衰减 ×0.95\n  - `stale` → 消费但 `position_cap_pct` 衰减 ×0.85,且在 `meta.position_cap_source` 追加 `r7_stale_override`\n  - `unavailable` → 跳过 R7 资金维度,`risk_limits.target_total_position_pct` 走 R1 默认 0.50",
+        "new": "**消费契约**(供 D1 / R6 消费):\n- D1 分开核对研究完成、具体维度质量和交易资格；北向仅参考，不能仅凭北向缺失/延迟或其造成的质量标记激活 `R7_STALE`、否认其余资金证据或机械改仓；不新增默认资金/仓位，不抬有效零预算。其余维度的原有资格、时效与仓位约束保持不变，必要资金数据真正失效仍拒绝新仓。\n- R6 的 complete-only 输入定义和逐模式完整性保持不变；只有其余必需研究确已完成时，R7 才可如实 `status=complete`，北向参考缺口仍须披露。不得把原 partial/degraded、空反证或未评对象改成通过。",
+        "reason": "删除北向引起的固定改仓/默认回退，不改R6可用性"
+      },
+      {
+        "old": "- 北向数据完全拉空(Tushare `moneyflow_hsgt` 错)→ `staleness_status=unavailable`,但仍写盘(填空数组),让 E1 复盘能感知",
+        "new": "- 北向净买入参考不可得（净额真缺失或口径未核实，不等于接口关闭/成交总额全空）→ 仅北向净额参考标 `northbound.status=unavailable`，缺失净额/净额趋势为 null，已有成交额原值及实际日期独立保留，明确接口状态与语义缺口；仍写其余已取得证据，不升级整体失效",
+        "reason": "删除第二个单维→整体升级句"
+      },
+      {
+        "old": "- 盘后 `tests/check_r7_staleness.py` 校验四件事:`generated_at` 不早于 `trade_date 06:00`、`staleness_status` 非空、文件名为 `R7_capital_flow_{trade_date}.json`、`unavailable_reason` 在 status=unavailable 时非空。任一失败 → orchestrator 标 R7 失败,触发重跑",
+        "new": "- 主汇总实际调用 `src/research/contract_checks.py::check_r7_staleness`；独立脚本实际位于 `tests/checks/check_r7_staleness.py`，不是 `tests/check_r7_staleness.py`。两者保留顶层时效状态、数据归属日、原生成时间约束和 unavailable 原因检查；不会按北向缺失计算整体置信度或触发交易禁令。命名/别名与分维缺口须另按本契约核对，不能声称独立脚本已实现文件名验收；校验通过不证明必要资金齐全或获准交易。",
+        "reason": "纠正不存在的验证路径及与实际调用不同的通过承诺"
+      },
+      {
+        "old": "trading_gap = trade_date 与 resolved_trade_date 之间的「交易日」间隔",
+        "new": "trading_gap = trade_date 与 northbound.resolved_trade_date 之间的「交易日」间隔\n# 采用沪深港通适用交易日；不能仅凭A股开市判定北向当天应有数据",
+        "reason": "状态机限定北向后不能误用其余必要证据的日期"
+      },
+      {
+        "old": "# 副口径(仅写 note, 不进状态机): hours_since_data = (generated_at - resolved_trade_date 当日 15:00) 小时",
+        "new": "# 副口径(仅写 note, 不进状态机): hours_since_data = (generated_at - northbound.resolved_trade_date 当日 15:00) 小时",
+        "reason": "北向年龄只对应北向日期"
+      },
+      {
+        "old": "# 用 tushare trade_cal(或 manifest 可见的最早交易日)数交易日, 不算自然日/周末",
+        "new": "# 用 tushare trade_cal(或 manifest 可见的最早交易日)数交易日, 不算自然日/周末\n# 北向日期未知时不计算交易日缺口/年龄，保留 null 与原因，不借其它维度日期代填",
+        "reason": "未知日期不伪造可计算值"
+      }
+    ],
+    "docs/agents/R7-资金面Agent.md": [
+      {
+        "old": "  - Tushare MCP:  moneyflow_hsgt / hk_hold / top_list / top_inst / margin_detail",
+        "new": "  - Tushare MCP:  top_list / top_inst / margin_detail",
+        "reason": "从required源列表移出北向接口，保留其余现有要求"
+      },
+      {
+        "old": "  - Tushare MCP:  moneyflow_hsgt（北向盘中）\n",
+        "new": "",
+        "reason": "盘中北向也不再作为必需数据"
+      },
+      {
+        "old": "optional (上游 research):",
+        "new": "optional (北向仅参考，缺失不升级为整体失效或全局禁新):\n  - Tushare MCP:  moneyflow_hsgt / hk_hold（按真实发布频率引用；日频数据/季度持股不能当作实时净买入）\n\noptional (上游 research):",
+        "reason": "明确采集接口可选"
+      },
+      {
+        "old": "  \"northbound\": {\n    \"net_flow_today\": 0,\n    \"trend_5d\": [],\n    \"trend_10d\": [],\n    \"trend_20d\": []\n  },",
+        "new": "  \"northbound\": {\n    \"status\": \"unavailable\",\n    \"resolved_trade_date\": null,\n    \"trading_gap\": null,\n    \"unavailable_reason\": \"未取得可信同口径北向净买入；接口/成交额可得性另列\",\n    \"net_flow_today\": null,\n    \"trend_5d\": null,\n    \"trend_10d\": null,\n    \"trend_20d\": null\n  },",
+        "reason": "缺失不是净流入测得零或真实空序列"
+      },
+      {
+        "old": "11:35 增量批次：同文件追加/覆盖",
+        "new": "顶层 `status` 表示必需研究工作的完成情况，数据质量由 `degraded` / `data_health` / `staleness_status` 与分维来源/日期/缺口表达。仅北向缺失不自动使整体 unavailable、整体 confidence 归零或必需研究未完成；其余必要输入和阈值沿现有契约，必要性未明文定义处列契约缺口，不自行新增维度/门槛。未评价 confidence 为 null，真实零保留零，不新造汇总公式；本示例的北向 null 不代表其余维度已被验证齐全。\n\n11:35 增量批次：同文件追加/覆盖",
+        "reason": "完成/质量分层，与R7/D1契约一致"
+      },
+      {
+        "old": "  \"northbound_intraday\": 0,",
+        "new": "  \"northbound_intraday\": null,",
+        "reason": "缺北向盘中参考也不能填零"
+      },
+      {
+        "old": "| D1 主决策 | 北向趋势 + 板块资金 → 总仓位与 execution_pool 最后确认 |",
+        "new": "| D1 主决策 | 板块/个股资金按现有契约确认；北向趋势仅作可选参考，缺失不单独禁新或机械改仓 |",
+        "reason": "消费者不再把北向作为必要确认"
+      },
+      {
+        "old": "| DataPro 死 | 降级为 Tushare + XTick，`data_health: degraded` |",
+        "new": "| 仅北向缺失/延迟 | 保留其余资金证据；北向缺失值为 null，列来源、实际日期或未知日期与缺口，不升级整体失效或全局禁新 |\n| DataPro 死 | 降级为 Tushare + XTick，`data_health: degraded` |",
+        "reason": "新增北向单维路径，原其它降级/阈值原样保留"
+      }
+    ],
+    "skills/main_decision_v1/SKILL.md": [
+      {
+        "old": "4. 若 `fetch_global_severity >= 3` → 仍可出 plan，但 `mode` 必须为 `dry_run`，`autonomous_trading_enabled=false`",
+        "new": "4. 若 `fetch_global_severity >= 3` → 仍可出 plan，但 `mode` 必须为 `dry_run`，`autonomous_trading_enabled=false`\n\n**北向仅参考**：先核 R7 主产物的研究完成状态，再核各维数据质量与具体缺口。北向缺失/延迟、其导致的质量降级或 summary 对 `degraded` 的状态映射，不单独构成研究未完成或全局禁新依据；不能用这些标记自动清零整体置信度、改仓或补默认资金。顶层/北向实际日期分开，缺失数值保留 null、真实零及有效零预算原样保留。其余必需资金证据、R6 完整性与全部既有门禁仍独立核验；必要数据真缺失仍拒绝新仓，必要性未定义处列契约缺口、不自造要求或认定已通过。旧产物不因新规则被改写为 complete 或抬高零值，须由研究 owner 真实重评，再由 D1 独立裁决。",
+        "reason": "覆盖summary complete→degraded投影造成的间接禁新，不放宽R6和真实缺数"
+      },
+      {
+        "old": "    \"r7_northbound_strength\": \"neutral\",   // strong_inflow / neutral / strong_outflow\n    \"r7_cap_adjustment\": 0.0,              // strong_inflow +0.05, strong_outflow -0.10",
+        "new": "    \"r7_northbound_strength\": null,        // 可选参考；缺失为 null，不写 neutral\n    \"r7_cap_adjustment\": null,             // 缺失跳过该项；有效参考原 strong_inflow +0.05 / strong_outflow -0.10 不变",
+        "reason": "缺北向不伪装neutral/零调整，保留有效数据原数值规则"
+      },
+      {
+        "old": "    \"derivation_formula\": \"min(r1_raw=0.60, r7_adj=0.60, emotion_override=0.60) × main_lines_mult=1.0 = 0.60\",",
+        "new": "    \"derivation_formula\": \"min(r1_raw=0.60, emotion_override=0.60) × main_lines_mult=1.0 = 0.60；北向缺失项未参与\",",
+        "reason": "同步示例不再引用不存在的北向调整"
+      },
+      {
+        "old": "**公式**:\n```\nraw_cap = R1 风格给出的 cap\nr7_adj = raw_cap + r7_cap_adjustment",
+        "new": "**公式**（缺北向时跳过北向项，其余原公式/数字不变；上游有效零预算或禁令优先，不得用本示例的 clamp 下限恢复仓位）:\n```\nraw_cap = R1 风格给出的 cap\nr7_adj = None if r7_cap_adjustment is None else raw_cap + r7_cap_adjustment",
+        "reason": "不引入新confidence/cap公式或默认值，只定义缺失项不参与"
+      },
+      {
+        "old": "final = min(raw_cap, r7_adj, emotion_override) * main_mult",
+        "new": "final = min(raw_cap, emotion_override) * main_mult if r7_cap_adjustment is None else min(raw_cap, r7_adj, emotion_override) * main_mult",
+        "reason": "缺失项不做null算术，不等同真实零"
+      },
+      {
+        "old": "      \"description\": \"R7 staleness_status = unavailable → 不开仓(资金维度失效)\",\n      \"active\": true                       // 命中时, plan.md 顶部必须显式标 \"⚠️ R7 数据失效,今日 no_trade\"",
+        "new": "      \"description\": \"R7 主产物缺失或现有契约要求的必要资金证据真正失效 → 不开仓；仅北向参考缺失/延迟不触发\",\n      \"active\": false                      // 必须按实际必要数据缺口判定；真触发仍在顶部展示禁新仓",
+        "reason": "保留R7_STALE标识及真必要失效禁令，删除北向单维升级"
+      },
+      {
+        "old": "- R7 缺 → `R7_STALE` 自动 `active: true`\n- 全部不交易条件自动激活,plan 报 `no_trade_mode` 状态",
+        "new": "- R7 主产物缺失或现有契约要求的必要资金证据真正失效 → `R7_STALE` 为 `active: true`；仅北向参考缺失/延迟不触发，顶层 unavailable 须核其实际原因，不把其余有效资金证据一并抹去\n- 不交易条件按各自原触发条件逐条核实；不因北向缺失联动激活其他条件，任一真实 active 项仍按既有禁新仓与研究观察契约处理",
+        "reason": "消除第二处自动升级及全部条件级联；其它门禁不变"
+      }
+    ]
+  },
+  "call_chain": [
+    {
+      "from": "enabled cron 24f4119fab82",
+      "to": "~/.hermes/scripts/canghai_research_daily.sh",
+      "evidence": "jobs.json selected entry: enabled=true, script=canghai_research_daily.sh, expr=10 6 * * 1-5"
+    },
+    {
+      "from": "canghai_research_daily.sh",
+      "to": "scripts/research/run_research_shell_cron_wrapper.sh",
+      "evidence": "read actual bridge; exec wrapper, no inference from filename"
+    },
+    {
+      "from": "run_research_shell_cron_wrapper.sh",
+      "to": "run_research_shell.sh",
+      "evidence": "detached worker -> calendar/fetch wait -> exec at L71"
+    },
+    {
+      "from": "run_research_shell.sh::run_agent R7",
+      "to": "hermes -p canghai-research -s analyze_capital_flow_v1",
+      "evidence": "L111-123/L155-162; JSON or dated primary plus state check"
+    },
+    {
+      "from": "pipeline_state.check",
+      "to": "pipeline_artifacts.research_artifact + md_artifact",
+      "evidence": "checks current-attempt mtime/date/status/primary existence and human MD; not financial completeness"
+    },
+    {
+      "from": "R7 primary JSON",
+      "to": "R6 fresh skill; R2/R5 consumers",
+      "evidence": "shell R6 prompt L213; R6 skill Step1 complete-only; no new R6 acceptance range"
+    },
+    {
+      "from": "shell after R6",
+      "to": "build_research_summary.py::collect_artifacts/make_summary",
+      "evidence": "shell L227; independent read current-run primaries, complete+degraded remaps status to degraded at L42-43"
+    },
+    {
+      "from": "make_summary",
+      "to": "contract_checks.run_research_checks -> check_r7_staleness",
+      "evidence": "build L80-102, contract_checks CHECKS_RESEARCH/R7 dispatch; failures recorded, not a confidence formula or no_trade writer"
+    },
+    {
+      "from": "build_research_summary",
+      "to": "orchestrator.build_research_summary/load_fetch_manifest helpers",
+      "evidence": "import at L22 and calls L61/65; does not invoke run_research_orchestrator or R7 rule builder"
+    },
+    {
+      "from": "research_summary + R7 + R6",
+      "to": "hermes -p canghai-plan -s main_decision_v1",
+      "evidence": "shell L241-243; D1 Step0 and no_trade_conditions are LLM rules, not check_r7 code"
+    },
+    {
+      "from": "D1 JSON+MD",
+      "to": "pipeline_state.check -> plan_artifact -> trading.load_plan.validate_plan_for_date -> WatchlistPlan",
+      "evidence": "date/schema/mode/safe flags/rules validation; no R7 numeric eligibility evaluator"
+    },
+    {
+      "from": "successful D1 delivery",
+      "to": "pipeline_state.handoff -> publish_runtime_plan -> stage_plan -> runtime",
+      "evidence": "canonical -> runtime only; does not call run_load_plan/QMT construction"
+    },
+    {
+      "from": "standalone tests/checks/check_r7_staleness.py",
+      "to": "manual CLI main only",
+      "evidence": "no production caller found in scripts/src; live path uses contract_checks, missing tests/check_r7_staleness.py is a stale citation"
+    },
+    {
+      "from": "ensure_watchlist_plan.ensure_plan/retry_llm",
+      "to": "same D1 skill + plan_artifact/publish_runtime_plan",
+      "evidence": "complete LLM/no_trade preserved; explicit interim needs all refreshed R1-R7+summary lineage; no research runner or northbound override"
+    }
+  ],
+  "validators_modified": [],
+  "validator_patch_rationale": "Current validators check top-level times/status/reason only; no northbound-required/confidence/no_trade formula exists to remove. Preserve their original date guard; document missing business completeness coverage.",
+  "tests": {
+    "mode": "AST_only_memory_fixtures_no_production_imports",
+    "synthetic_case_count": 8,
+    "cases": [
+      {
+        "id": "optional_northbound_absent_with_real_top_date",
+        "contract_errors": [],
+        "standalone_exit": 0,
+        "payload_unchanged": true,
+        "expectation_met": true
+      },
+      {
+        "id": "valid_zero_not_promoted",
+        "contract_errors": [],
+        "standalone_exit": 0,
+        "payload_unchanged": true,
+        "expectation_met": true
+      },
+      {
+        "id": "required_top_date_missing_still_rejected",
+        "contract_errors": [
+          "resolved_trade_date 字段缺失"
+        ],
+        "standalone_exit": 1,
+        "payload_unchanged": true,
+        "expectation_met": true
+      },
+      {
+        "id": "top_unavailable_without_reason_still_rejected",
+        "contract_errors": [
+          "status=unavailable 但 unavailable_reason 为空"
+        ],
+        "standalone_exit": 1,
+        "payload_unchanged": true,
+        "expectation_met": true
+      },
+      {
+        "id": "honest_required_failure_is_deliverable_not_permission",
+        "contract_errors": [],
+        "standalone_exit": 0,
+        "payload_unchanged": true,
+        "expectation_met": true
+      },
+      {
+        "id": "existing_generation_time_guard_preserved",
+        "contract_errors": [
+          "generated_at(2026-10-23T05:30:00+08:00) < trade_date 06:00 但 staleness_status=partial(应为 unavailable)"
+        ],
+        "standalone_exit": 1,
+        "payload_unchanged": true,
+        "expectation_met": true
+      },
+      {
+        "id": "top_staleness_required",
+        "contract_errors": [
+          "staleness_status 字段缺失"
+        ],
+        "standalone_exit": 1,
+        "payload_unchanged": true,
+        "expectation_met": true
+      },
+      {
+        "id": "existing_checker_asymmetry_missing_generated_at",
+        "contract_errors": [],
+        "standalone_exit": 1,
+        "payload_unchanged": true,
+        "expectation_met": true
+      }
+    ],
+    "patch_forward_reverse_verified": true,
+    "no_new_numeric_tokens": true,
+    "no_production_or_network_test": true,
+    "LLM_policy_effect_not_exercised": true,
+    "git_apply_check": {
+      "executed": true,
+      "applied": false,
+      "sandbox_forward_reverse_roundtrip": true,
+      "final_semantic_patch_check_passed": true,
+      "exit_code": 0
+    }
+  },
+  "remaining_contract_gaps": [
+    "No unique complete table of necessary non-northbound dimensions/coverage/freshness for new entries; do not invent",
+    "Existing validators do not check dimension evidence or scoring",
+    "Pure and standalone R7 checks differ on missing/unparseable generated_at",
+    "Standalone checker does not enforce its documented filename contract",
+    "Full fresh-session business regression not run"
+  ],
+  "written_target_paths": [],
+  "only_created_paths": [
+    "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-northbound-reference-proposal-v2.md",
+    "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-northbound-reference-proposal-v2.patch",
+    "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-northbound-reference-proposal-v2.manifest.json"
+  ],
+  "verified_probe_evidence": {
+    "path": "chzl_kg/系统进化/backups/2026-10-23-northbound-sdk-probe.json",
+    "sha256": "41a924641ae16de07a3f793c298480d9857dc0e709d5e76701a8319674c5d7e0",
+    "checked_at": "2026-10-23T12:50:56.549544+08:00",
+    "transport": "tushare_python_sdk",
+    "SDK_version": "1.4.29",
+    "previous_completed_day": {
+      "label": "previous_completed_trading_day",
+      "api": "moneyflow_hsgt",
+      "arguments": {
+        "trade_date": "20261022"
+      },
+      "requested_at": "2026-10-23T12:50:55.978143+08:00",
+      "status": "ok",
+      "row_count": 1,
+      "fields": [
+        "trade_date",
+        "ggt_ss",
+        "ggt_sz",
+        "hgt",
+        "sgt",
+        "north_money",
+        "south_money"
+      ],
+      "rows": [
+        {
+          "trade_date": "20261022",
+          "ggt_ss": "32359.18",
+          "ggt_sz": "22865.38",
+          "hgt": "113326.68",
+          "sgt": "119295.4",
+          "north_money": "232622.08",
+          "south_money": "55224.56"
+        }
+      ],
+      "latest_data_date": "20261022",
+      "north_money_interpretation": "raw field only; not certified net purchases",
+      "latest_north_money_raw": "232622.08",
+      "latest_north_money_yi_if_CNY_million": "2326.2208",
+      "elapsed_seconds": 0.118
+    },
+    "recent_range_row_count": 9,
+    "today": {
+      "label": "today",
+      "api": "moneyflow_hsgt",
+      "arguments": {
+        "trade_date": "20261023"
+      },
+      "requested_at": "2026-10-23T12:50:56.312224+08:00",
+      "status": "empty",
+      "row_count": 0,
+      "fields": [
+        "trade_date",
+        "ggt_ss",
+        "ggt_sz",
+        "hgt",
+        "sgt",
+        "north_money",
+        "south_money"
+      ],
+      "rows": [],
+      "latest_data_date": null,
+      "north_money_interpretation": "raw field only; not certified net purchases",
+      "elapsed_seconds": 0.125
+    },
+    "net_flow_semantics_verified": false,
+    "executed_by_this_subtask": false,
+    "parent_verified_MCP": "moneyflow_hsgt operational; parent steering message",
+    "parent_verified_HKEX": "Historical Daily Shanghai Northbound Turnover(Buy+Sell)(RMB mil)=113326.68 matches hgt; disclosure adjusted after 2024-08-19",
+    "HKEX_independently_browsed_by_this_subtask": false
+  },
+  "parent_reviewed_at": "2026-10-23T13:04:17.284358+08:00",
+  "parent_review_notes": [
+    "Quarterly holdings and daily API not labeled intraday",
+    "Applicable Stock Connect trading calendar explicitly required"
+  ],
+  "original_leaf_outputs": [
+    {
+      "path": "/Users/chenyang/.hermes/cache/scratch/canghai_northbound_reference_proposal_20261023.md",
+      "sha256": "9bb72d5a719898a41b7ebc1c9a11079304ca30190ff5adcd85154684261ba161"
+    },
+    {
+      "path": "/Users/chenyang/.hermes/cache/scratch/canghai_northbound_reference_proposal_20261023.patch",
+      "sha256": "851901eaa121e8cab27d778151b2622e834b73a7daa55e5c965a0f45765b8393"
+    },
+    {
+      "path": "/Users/chenyang/.hermes/cache/scratch/canghai_northbound_reference_proposal_20261023.manifest.json",
+      "sha256": null,
+      "self_hash_excluded": true
+    }
+  ],
+  "output_files": [
+    "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-northbound-reference-proposal-v2.md",
+    "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-northbound-reference-proposal-v2.patch",
+    "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-northbound-reference-proposal-v2.manifest.json"
+  ]
+}

@@ -14,6 +14,9 @@ configuration:
     - "*.xlsx"
     - "*.bak"
     - "投研交易/持仓复盘"
+    - chzl
+    - 交割单
+    - 交割单分析
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
