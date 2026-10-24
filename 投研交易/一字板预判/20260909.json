@@ -1,0 +1,86 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260909",
+  "next_day": "20260910",
+  "generated_at": "2026-10-17T18:55:30+08:00",
+  "n_total": 48,
+  "n_candidates": 5,
+  "candidates": [
+    {
+      "ts_code": "000759.SZ",
+      "name": "中百集团",
+      "industry": "一般零售",
+      "limit_times": 3,
+      "fd_amount_yi": 1.68,
+      "pct_chg": 10.0,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.7亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002470.SZ",
+      "name": "金正大",
+      "industry": "农化制品",
+      "limit_times": 3,
+      "fd_amount_yi": 1.75,
+      "pct_chg": 9.88,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.8亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "603042.SH",
+      "name": "华脉科技",
+      "industry": "通信设备",
+      "limit_times": 3,
+      "fd_amount_yi": 1.54,
+      "pct_chg": 10.02,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.5亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "000978.SZ",
+      "name": "桂林旅游",
+      "industry": "旅游及景",
+      "limit_times": 3,
+      "fd_amount_yi": 0.35,
+      "pct_chg": 9.99,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.4亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "000523.SZ",
+      "name": "红棉股份",
+      "industry": "综合Ⅱ",
+      "limit_times": 2,
+      "fd_amount_yi": 3.46,
+      "pct_chg": 10.1,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=3.5亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停48只，筛出 5 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

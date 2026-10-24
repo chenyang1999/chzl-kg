@@ -1,0 +1,108 @@
+{
+  "schema_version": "research_summary_v1",
+  "trade_date": "20261023",
+  "generated_at": "2026-10-23T06:49:11+08:00",
+  "orchestrator_status": "partial",
+  "fetch_manifest": "data/raw/20261023/manifest.json",
+  "fetch_global_severity": 2,
+  "artifacts": {
+    "R1": "data/research/20261023/R1_style.json",
+    "R2": "data/research/20261023/R2_main_sectors.json",
+    "R3": "data/research/20261023/R3_sentiment.json",
+    "R4": "data/research/20261023/R4_news.json",
+    "R5": "data/research/20261023/R5_stock_profiles.json",
+    "R6": "data/research/20261023/R6_devil_advocate.json",
+    "R7": "data/research/20261023/R7_capital_flow.json"
+  },
+  "confidence": {
+    "R1": 0.4,
+    "R2": 0.392,
+    "R3": 0.364,
+    "R4": 0.62,
+    "R5": 0.0,
+    "R6": 0.28,
+    "R7": 0.0
+  },
+  "hard_rejects": [],
+  "timeouts": [],
+  "completed_by": "08:00",
+  "units": {
+    "R1": {
+      "status": "degraded",
+      "started_at": "2026-10-23T06:19:59+08:00",
+      "finished_at": "2026-10-23T06:19:59+08:00",
+      "notes": "LLM primary artifact"
+    },
+    "R2": {
+      "status": "degraded",
+      "started_at": "2026-10-23T06:42:12+08:00",
+      "finished_at": "2026-10-23T06:42:12+08:00",
+      "notes": "主线 = 人形机器人（仅观察），持续性 = null，封板率 = null，明日预期 = null；缺历史口径不能强填1/3/5日或加速/分歧/退潮。其余主题仅评分审计，不产生股票观察池。未访问或写入plans/execution/runtime；未运行整条流水线。"
+    },
+    "R3": {
+      "status": "degraded",
+      "started_at": "2026-10-23T06:31:47+08:00",
+      "finished_at": "2026-10-23T06:31:47+08:00",
+      "notes": "LLM primary artifact"
+    },
+    "R4": {
+      "status": "partial",
+      "started_at": "2026-10-23T06:18:09+08:00",
+      "finished_at": "2026-10-23T06:18:09+08:00",
+      "notes": "LLM primary artifact"
+    },
+    "R5": {
+      "status": "skipped",
+      "started_at": "2026-10-23T06:45:28+08:00",
+      "finished_at": "2026-10-23T06:45:28+08:00",
+      "notes": "LLM primary artifact"
+    },
+    "R6": {
+      "status": "degraded",
+      "started_at": "2026-10-23T06:47:39+08:00",
+      "finished_at": "2026-10-23T06:47:39+08:00",
+      "notes": "LLM primary artifact"
+    },
+    "R7": {
+      "status": "partial",
+      "started_at": "2026-10-23T06:29:07+08:00",
+      "finished_at": "2026-10-23T06:29:07+08:00",
+      "notes": "LLM primary artifact"
+    }
+  },
+  "run_id": "20261023T061047-60743-14677",
+  "contract_results": {
+    "R1": {
+      "status": "degraded",
+      "research_status": "degraded"
+    },
+    "R2": {
+      "status": "degraded",
+      "research_status": "degraded"
+    },
+    "R3": {
+      "status": "degraded",
+      "research_status": "degraded"
+    },
+    "R4": {
+      "status": "degraded",
+      "research_status": "partial"
+    },
+    "R5": {
+      "status": "skipped",
+      "research_status": "skipped"
+    },
+    "R6": {
+      "status": "degraded",
+      "research_status": "degraded"
+    },
+    "R7": {
+      "status": "degraded",
+      "research_status": "partial"
+    }
+  },
+  "contract_failures": {},
+  "contract_checks_passed": true,
+  "decision_source": "llm",
+  "summary_builder": "scripts/research/build_research_summary.py (read-only primary artifacts)"
+}

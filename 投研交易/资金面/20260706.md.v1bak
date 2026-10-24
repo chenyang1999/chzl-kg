@@ -1,0 +1,59 @@
+---
+date: 2026-07-06
+agent: R7-capital-flow
+skill_version: analyze_capital_flow_v1@1.0
+generated_at: 2026-07-06T02:58:30+08:00
+confidence: 0.5
+degraded: true
+data_sources:
+  - name: xtick_MCP
+    status: error
+    error: MCP down
+  - name: tushare_MCP
+    status: ok
+input_freshness: partial
+input_freshness_note: "降级源: xtick_MCP"
+---
+# 2026-07-06 · 资金面
+> **数据源新鲜度**: partial  
+> **降级状态**: yes  
+> **置信度**: 0.5  
+
+## 一句话结论
+
+TBD · 请从 JSON artifact 提取核心判断
+
+## 详细分析
+
+_(artifact 无 high-signal 字段 · 完整 JSON 见下)_
+
+## 关键证据
+
+_(见上方核心结构化输出 · 主要证据字段随 skill 不同)_
+
+## 数据源审计
+
+| 源 | 状态 | 抓取时间 | 记录数 | 备注 |
+|---|---|---|---|---|
+| xtick_MCP | error | - | - | MCP down |
+| tushare_MCP | ok | - | - | - |
+
+## 不确定性 / 反证
+
+数据源降级:降级源: xtick_MCP。相关结论置信度受影响。
+
+## 与其他 R/D/E 的关系
+
+- **依赖**: xtick(error), tushare
+- **被消费**: R2, R6, D1
+
+## Sub-Agent 元数据
+
+- skill: `analyze_capital_flow_v1`
+- artifact: `data/research/20260706/R7_capital_flow.json`
+- 生成时间: 2026-07-06T02:58:30+08:00
+- 主 orchestrator: `research_orchestrator_v1` (proc_46cb002764ca · 25 min)
+
+---
+
+_本文件由 `scripts/render_kg_md_backfill.py` 从 artifact 回渲染 · schema: `render_kg_md_v1`_

@@ -1,0 +1,56 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260910",
+  "next_day": "20260911",
+  "generated_at": "2026-10-17T18:55:30+08:00",
+  "n_total": 35,
+  "n_candidates": 3,
+  "candidates": [
+    {
+      "ts_code": "002790.SZ",
+      "name": "瑞尔特",
+      "industry": "家居用品",
+      "limit_times": 3,
+      "fd_amount_yi": 3.73,
+      "pct_chg": 10.01,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=3.7亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600792.SH",
+      "name": "云煤能源",
+      "industry": "焦炭Ⅱ",
+      "limit_times": 3,
+      "fd_amount_yi": 0.33,
+      "pct_chg": 9.96,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.3亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600667.SH",
+      "name": "太极实业",
+      "industry": "工程咨询",
+      "limit_times": 1,
+      "fd_amount_yi": 5.42,
+      "pct_chg": 10.02,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=5.4亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停35只，筛出 3 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

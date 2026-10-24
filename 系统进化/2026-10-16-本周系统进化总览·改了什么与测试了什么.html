@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-10-16 本周系统进化总览·改了什么与测试了什么</title><meta charset="utf-8"/><link rel="preload" href="../index-5a23ce28.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-10-16 本周系统进化总览·改了什么与测试了什么"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-10-16 本周系统进化总览·改了什么与测试了什么"/><meta name="twitter:description" content="2026-10-16 本周系统进化总览 · 改了什么 + 测试了什么 范围：2026-W42（10-12 ~ 10-16），Plan 「情绪节点预测与首板候选」从 P0 收口到 P6，扩展到 D1 主决策 / 渲染。 索引：19 个 sign-off，17 个改动，8 个文件，4 个 skill，14 章 sign-off 归口。 本地权威源：data/evolution/2026-W42/sign_off_log.md（49 个章节，全量历史 + 验证细节） 一、改了什么（一图流） 阶段模块变更内容文件P0emotion_cyclev1→v2 五档（低位试错/主升/高位震荡/主跌/补跌）+ ..."/><meta property="og:description" content="2026-10-16 本周系统进化总览 · 改了什么 + 测试了什么 范围：2026-W42（10-12 ~ 10-16），Plan 「情绪节点预测与首板候选」从 P0 收口到 P6，扩展到 D1 主决策 / 渲染。 索引：19 个 sign-off，17 个改动，8 个文件，4 个 skill，14 章 sign-off 归口。 本地权威源：data/evolution/2026-W42/sign_off_log.md（49 个章节，全量历史 + 验证细节） 一、改了什么（一图流） 阶段模块变更内容文件P0emotion_cyclev1→v2 五档（低位试错/主升/高位震荡/主跌/补跌）+ ..."/><meta property="og:image:alt" content="2026-10-16 本周系统进化总览 · 改了什么 + 测试了什么 范围：2026-W42（10-12 ~ 10-16），Plan 「情绪节点预测与首板候选」从 P0 收口到 P6，扩展到 D1 主决策 / 渲染。 索引：19 个 sign-off，17 个改动，8 个文件，4 个 skill，14 章 sign-off 归口。 本地权威源：data/evolution/2026-W42/sign_off_log.md（49 个章节，全量历史 + 验证细节） 一、改了什么（一图流） 阶段模块变更内容文件P0emotion_cyclev1→v2 五档（低位试错/主升/高位震荡/主跌/补跌）+ ..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-16-本周系统进化总览·改了什么与测试了什么"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-16-本周系统进化总览·改了什么与测试了什么"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="2026-10-16 本周系统进化总览 · 改了什么 + 测试了什么 范围：2026-W42（10-12 ~ 10-16），Plan 「情绪节点预测与首板候选」从 P0 收口到 P6，扩展到 D1 主决策 / 渲染。 索引：19 个 sign-off，17 个改动，8 个文件，4 个 skill，14 章 sign-off 归口。 本地权威源：data/evolution/2026-W42/sign_off_log.md（49 个章节，全量历史 + 验证细节） 一、改了什么（一图流） 阶段模块变更内容文件P0emotion_cyclev1→v2 五档（低位试错/主升/高位震荡/主跌/补跌）+ ..."/><meta name="generator" content="Quartz"/><link href="../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/2026-10-16-本周系统进化总览·改了什么与测试了什么" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-892" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-892" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-10-16 本周系统进化总览·改了什么与测试了什么</a></div></nav><h1 class="article-title">2026-10-16 本周系统进化总览·改了什么与测试了什么</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-17T10:00:09.000Z">2026年10月17日</time><span>8分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="2026-10-16-本周系统进化总览--改了什么--测试了什么">2026-10-16 本周系统进化总览 · 改了什么 + 测试了什么<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-10-16-本周系统进化总览--改了什么--测试了什么" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><strong>范围</strong>：2026-W42（10-12 ~ 10-16），Plan 「情绪节点预测与首板候选」从 P0 收口到 P6，扩展到 D1 主决策 / 渲染。<br/>
+<strong>索引</strong>：19 个 sign-off，17 个改动，8 个文件，4 个 skill，14 章 sign-off 归口。<br/>
+<strong>本地权威源</strong>：<code>data/evolution/2026-W42/sign_off_log.md</code>（49 个章节，全量历史 + 验证细节）</p>
+</blockquote>
+<hr/>
+<h2 id="一改了什么一图流">一、改了什么（一图流）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一改了什么一图流" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>阶段</th><th>模块</th><th>变更内容</th><th>文件</th></tr></thead><tbody><tr><td><strong>P0</strong></td><td>emotion_cycle</td><td>v1→v2 五档（低位试错/主升/高位震荡/主跌/补跌）+ 马尔科夫 + 跌停判据</td><td><code>src/research/emotion_cycle.py</code></td></tr><tr><td><strong>P1</strong></td><td>node_predict</td><td>时序守卫（premature 时 today=None）+ closed 优先读</td><td><code>src/research/compute_cycle_metrics.py</code> + <code>node_predict.py</code></td></tr><tr><td><strong>P2</strong></td><td>R4 消息面</td><td>v1.5 业绩事件极性协议（拆单季环比 + 周期股 special） / v1.6 直接股名命中（4-8 字长过滤 + 多源=高质量）</td><td><code>src/research/r4_news.py</code> + skill v1.5/v1.6</td></tr><tr><td><strong>P3</strong></td><td>first_board_filter</td><td>17 候选 → 7 首推/5 观察/8 谨慎，三道闸（位置 quant / 资金 moneyflow / 市值）</td><td><code>src/research/first_board_filter.py</code></td></tr><tr><td><strong>P4</strong></td><td>style_observation</td><td>4 指标风格画像</td><td><code>src/research/style_observation.py</code></td></tr><tr><td><strong>P5</strong></td><td>prediction_track</td><td><code>_load_emotion_actual</code> 优先 closed + <code>_prev_date</code> 跳周末（10-12→10-11 修）</td><td><code>src/review/prediction_track.py</code></td></tr><tr><td><strong>P6</strong></td><td>R3 情绪</td><td>群聊次日方向打分（强修复/弱修复/震荡/弱续跌/强续跌 五档）</td><td><code>src/research/r3_sentiment.py</code></td></tr><tr><td><strong>R6 收口</strong></td><td>M4 真实化</td><td>用 prediction_track 30 日滚动 by_phase 替代”v1 阶段人工填案例”</td><td><code>src/research/r6_devil_advocate.py</code></td></tr><tr><td><strong>R6 收口</strong></td><td>M5 真实化</td><td>接 prediction_track.top1 命中率 / rolling_30d</td><td>同上</td></tr><tr><td><strong>R6 收口</strong></td><td>M4 数据流修</td><td>兜底从 node_prediction.most_likely_tomorrow 取（premarket 时 today=None 链式 null 修）</td><td>同上</td></tr><tr><td><strong>D1 v1.7</strong></td><td>个股级 R6 闭环</td><td>step2_r6_filter 抽 ts_code 进 strong_suggest_codes；watch_pool 命中票加 r6_strong_suggest=true / r6_position_factor=0.85</td><td><code>src/plan/d1_algorithm.py</code> + skill v1.7</td></tr><tr><td><strong>D1 v1.8</strong></td><td>全市场级 R6 闭环</td><td>M5/M1 命中 → market_wide_factor 0.7/0.85/1.0；每票 base_mobile_ratio = prev × 个股级 × 全市场级</td><td><code>src/plan/d1_algorithm.py</code> + skill v1.8</td></tr><tr><td><strong>render v1.8</strong></td><td>抽码数据源升级</td><td>个股级 strong_suggest 渲染优先用 meta_r6.strong_suggests_accepted[]（D1 算的），回退 R6 ca 抽码</td><td><code>src/plan/render_markdown.py</code></td></tr><tr><td><strong>渲染补丁</strong></td><td>D1 渲染接 R6 详情</td><td>R6 段显示 hard_rejects / strong_suggest / M5 命中提示 / 全市场级降仓信号</td><td>同上</td></tr><tr><td><strong>辅助工具</strong></td><td>R2 5 维</td><td>独立脚本 <code>scripts/research/r2_supplement_5d.py</code>（不污染 git HEAD 3 维规则版）</td><td>scripts/</td></tr></tbody></table></div>
+<p><strong>未改但已识别的工程缺口</strong>（不在本周范围）：</p>
+<ul>
+<li>D1 算法 mode=dry_run 自动跑（<code>D1_ALGORITHM_V1_IMPLEMENTED=False</code>，等用户 review flip）</li>
+<li>2 个 cron 旧 skill（<code>~/.hermes/skills/trading/analyze-news-catalyst-v1/</code>）未同步</li>
+<li>KOL 群英文化过滤（仅 P6 阶段实跑发现，治理待用户拍板）</li>
+</ul>
+<hr/>
+<h2 id="二测试了什么实事求是">二、测试了什么（实事求是）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二测试了什么实事求是" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="21-真数据回放10-12--10-16-4-天">2.1 真数据回放（10-12 ~ 10-16 4 天）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-真数据回放10-12--10-16-4-天" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>测试项</th><th>测试方法</th><th>实测数据</th><th>结论</th></tr></thead><tbody><tr><td>emotion_cycle 五档</td><td>拉 Tushare 真实行情（10-12/13/14/15/16）跑 compute_cycle_metrics</td><td>10-15 26 跌停被 v1 误判”高位震荡”，v2 修正判”主跌” / 10-16 实际”冰点次日大修复”（涨停 78/跌停 0）</td><td>✅ v2 修复</td></tr><tr><td>node_predict</td><td>同上，5 天出预测</td><td>top1 命中率 0%（4 天）/ top3 命中率 75%（3/4）</td><td>✅ Plan 设计”只吐温度不选票”边界正确</td></tr><tr><td>R4 first_board_candidates</td><td>R4 + first_board_filter 三道闸</td><td>10-15：20 候选 → 7 首推 / 5 观察 / 8 谨慎，净推荐率 35%</td><td>✅ 落地</td></tr><tr><td>R6.M4 真实化</td><td>prediction_track 30 日滚动 by_phase</td><td>10-14/15 n&lt;3 degraded，10-16 拿到 target=主跌但 by_phase 无样本 degraded</td><td>✅ L1 守卫正确，n_total&lt;3 不出信号</td></tr><tr><td>R6.M5 真实化</td><td>prediction_track top1 命中率 &lt; 50% 出 soft_suggest</td><td>10-14/15/16 因 prediction_track.today=None → M5 degraded</td><td>✅ 设计目标正确，需 1-2 周样本积累</td></tr><tr><td>D1 v1.7 闭环</td><td><code>build_watchlist_plan(fallback=True, 10-16)</code></td><td>watch_pool 4 只，命中 R6 strong_suggest：<strong>605058.SH 澳弘电子</strong> base_mobile_ratio=<strong>0.85</strong></td><td>✅ R6.M3 个股级生效</td></tr><tr><td>D1 v1.8 闭环</td><td>同上</td><td>meta_r6.market_wide_factor=1.0（M5/M1 未命中），全市场级信号就位但 10-16 数据未触发</td><td>✅ 算法就位，等真实 M5 命中样本</td></tr><tr><td>render v1.8 抽码</td><td>同上 + <code>render_watchlist_plan_md</code></td><td>渲染 R6 段：605058.SH 澳弘电子 + 估值极贵 + 仓位建议，三层呈现</td><td>✅</td></tr></tbody></table></div>
+<h3 id="22-单元测试py_compile">2.2 单元测试（py_compile）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22-单元测试py_compile" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>8 个改动文件全部 COMPILE_OK</strong>（每次 patch 后立即验证）</li>
+<li>无 pytest 套件（项目无 <code>tests/</code> 目录，依赖真实数据回放代替）</li>
+</ul>
+<h3 id="23-踩过的坑修复并-sign-off">2.3 踩过的坑（修复并 sign-off）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#23-踩过的坑修复并-sign-off" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Bug</th><th>根因</th><th>修复</th></tr></thead><tbody><tr><td>first_board total_mv 单位错</td><td>误把万元当元，澳弘电子报 0.02 亿</td><td>daily_basic.total_mv 除以 10000</td></tr><tr><td>moneyflow 字段名错</td><td>以为有 <code>net_amount</code> 字段</td><td>自算 <code>(buy_lg+buy_md)-(sell_lg+sell_md)</code></td></tr><tr><td><code>_prev_date</code> 自然日 -1 断档</td><td>10-12 周一查 10-11 周日无数据</td><td>改用 Tushare <code>previous_trading_date</code></td></tr><tr><td>M4 today=None 链式 null</td><td>premarket 时 prediction_track.today 是 None</td><td>兜底从 node_prediction.most_likely_tomorrow 取</td></tr><tr><td>缩进错位</td><td>patch 误把 P3 段插到 for 循环内</td><td>多次 read_file 校对 + 重写</td></tr><tr><td><code>.git/index.lock</code> 占锁</td><td>git 冲突未释放</td><td><code>rm .git/index.lock</code></td></tr><tr><td>KOL 关键词命中英文新闻</td><td>抓 Tesla 推特误判强修复</td><td>标注问题，待用户拍板更严过滤</td></tr></tbody></table></div>
+<h3 id="24-没测的部分坦诚">2.4 <strong>没测的部分</strong>（坦诚）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#24-没测的部分坦诚" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>类别</th><th>缺失项</th><th>影响</th></tr></thead><tbody><tr><td><strong>历史回测</strong></td><td>整套链路 4 天实跑（10-13 ~ 10-16），但<strong>未跑 30/60/90 日窗口</strong>验证稳定性</td><td>短样本，下结论偏乐观</td></tr><tr><td><strong>D1 落盘格式</strong></td><td>D1 v1.7/v1.8 算法就位，<strong>LLM 落盘 meta.r6 还是 v1 字段集</strong>（没接 v1.7 字段）</td><td>落盘的 D1 不会显示 R6.M3 个股级降仓，等 LLM 端同步</td></tr><tr><td><strong>execution 实跑</strong></td><td>10-16 实际交易<strong>未触达</strong>（用户没给我执行权）</td><td>算法 ≠ 真实成交</td></tr><tr><td><strong>R6.M5 真实命中样本</strong></td><td>10-14/15/16 M5 都 degraded</td><td>”全市场降仓 0.85x” 真实生效要等预测偏差真出现的日子</td></tr><tr><td><strong>跨情绪周期</strong></td><td>仅跑了 10 月一周，缺”补跌→主升”切换样本</td><td>主跌后修复的降仓信号未验证</td></tr><tr><td><strong>抗扰动</strong></td><td>没做 noise test（人为扰动 R1 输入看 D1 是否稳）</td><td>系统鲁棒性未知</td></tr></tbody></table></div>
+<hr/>
+<h2 id="三关键产品判断">三、关键产品判断<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三关键产品判断" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong>Plan 边界正确</strong>：“只吐温度不选票”（top1 0% / top3 75%）让 D1 守住选票权，避免”模型=选股”幻觉。</li>
+<li><strong>R6 是 D1 的硬否决权</strong>：6 类反证 + M3/M5/M1 三种降仓机制闭环。</li>
+<li><strong>没自动跑</strong>：D1_ALGORITHM_V1_IMPLEMENTED=False 是<strong>有意为之</strong>——D1 算法本体全跑通但执行受守门，等用户 review flip。</li>
+<li><strong>数据层是 LLM/算法 双轨</strong>：LLM 落盘 + D1 fallback 互为校验，算法跑出来是源真值。</li>
+<li><strong>错题本已接闭环</strong>：错题 → 注入 R4 v1.5（业绩极性协议）/ short_line_thinking_v1（低吸术语硬约束）/ emotion_cycle v2（跌停判据）。</li>
+</ol>
+<hr/>
+<h2 id="四下一步用户拍板">四、下一步（用户拍板）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四下一步用户拍板" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong>是否 sign-off D1 v1.7/v1.8 → flip <code>D1_ALGORITHM_V1_IMPLEMENTED=True</code>？</strong>（算法就位，执行权）</li>
+<li><strong>是否回测 30/60/90 日窗口？</strong>（稳定性）</li>
+<li><strong>是否扩展 R6.M4/M5 真实样本源？</strong>（rollling 30d → 60d，让 L1 守卫提早出信号）</li>
+<li><strong>是否同步 ~/.hermes/skills/trading/analyze-news-catalyst-v1/ 到新版本？</strong></li>
+<li><strong>KOL 群英文化过滤规则？</strong></li>
+</ol>
+<hr/>
+<h2 id="五文件路径自检-anchor">五、文件路径（自检 anchor）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五文件路径自检-anchor" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>总览文档</strong>：<code>chzl_kg/系统进化/2026-10-16 本周系统进化总览·改了什么与测试了什么.md</code>（本文件）</li>
+<li><strong>逐日 sign-off</strong>：<code>data/evolution/2026-W42/sign_off_log.md</code>（49 章，权威源）</li>
+<li><strong>Plan 文档</strong>：<code>chzl_kg/系统进化/2026-10-16 系统进化Plan-情绪节点预测与首板候选.md</code></li>
+<li><strong>数据产物</strong>：<code>data/research/{YYYYMMDD}/{R1,R2,R3,R4,R5,R6,R7,prediction_track,style_observation,emotion_cycle_closed,node_prediction,first_board_filter,research_summary}.json</code></li>
+<li><strong>D1 落盘</strong>：<code>data/runtime/watchlist_plan_{YYYYMMDD}.json</code> + <code>watchlist_plan.md</code></li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-858" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#2026-10-16-本周系统进化总览--改了什么--测试了什么" data-for="2026-10-16-本周系统进化总览--改了什么--测试了什么">2026-10-16 本周系统进化总览 · 改了什么 + 测试了什么</a></li><li class="depth-1"><a href="#一改了什么一图流" data-for="一改了什么一图流">一、改了什么（一图流）</a></li><li class="depth-1"><a href="#二测试了什么实事求是" data-for="二测试了什么实事求是">二、测试了什么（实事求是）</a></li><li class="depth-2"><a href="#21-真数据回放10-12--10-16-4-天" data-for="21-真数据回放10-12--10-16-4-天">2.1 真数据回放（10-12 ~ 10-16 4 天）</a></li><li class="depth-2"><a href="#22-单元测试py_compile" data-for="22-单元测试py_compile">2.2 单元测试（py_compile）</a></li><li class="depth-2"><a href="#23-踩过的坑修复并-sign-off" data-for="23-踩过的坑修复并-sign-off">2.3 踩过的坑（修复并 sign-off）</a></li><li class="depth-2"><a href="#24-没测的部分坦诚" data-for="24-没测的部分坦诚">2.4 没测的部分（坦诚）</a></li><li class="depth-1"><a href="#三关键产品判断" data-for="三关键产品判断">三、关键产品判断</a></li><li class="depth-1"><a href="#四下一步用户拍板" data-for="四下一步用户拍板">四、下一步（用户拍板）</a></li><li class="depth-1"><a href="#五文件路径自检-anchor" data-for="五文件路径自检-anchor">五、文件路径（自检 anchor）</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

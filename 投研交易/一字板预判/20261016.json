@@ -1,0 +1,49 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261016",
+  "next_day": "20261019",
+  "generated_at": "2026-10-20T18:16:54+08:00",
+  "n_total": 61,
+  "n_candidates": 2,
+  "candidates": [
+    {
+      "ts_code": "600825.SH",
+      "name": "新华传媒",
+      "industry": "出版",
+      "theme": "财经媒体、融资融券、独角兽概念",
+      "limit_times": 11,
+      "fd_amount_yi": 9.08,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 158.4,
+      "prob_yizi": 31.0,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=11 (一字率20%)",
+        "封单=9.1亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "601811.SH",
+      "name": "新华文轩",
+      "industry": "出版",
+      "theme": "高股息精选、西部大开发、虚拟数字人",
+      "limit_times": 3,
+      "fd_amount_yi": 0.25,
+      "pct_chg": 10.01,
+      "first_time": "95630",
+      "open_times": 5,
+      "float_mv_yi": 222.8,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.2亿 (一字率12%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停61只，筛出 2 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

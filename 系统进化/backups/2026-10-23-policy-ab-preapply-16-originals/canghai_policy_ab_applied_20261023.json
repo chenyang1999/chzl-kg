@@ -1,0 +1,628 @@
+{
+  "status": "applied_and_isolated_acceptance_passed",
+  "prepared_at": "2026-10-23T12:40:21.706157+08:00",
+  "root": "/Users/chenyang/Downloads/demo/沧海巨浪",
+  "proposal_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-frontgate-policy-proposals.md",
+  "proposal_sha256": "78d7cb8c25e2729153a27fefe0e8a8f926da2a8ed170b624d8aee29d8674a40c",
+  "proposal_patch_sha256": "4b1a4f130b90e6c1eae69bbf1120faadeb2ebf752c6c821473a1ad3f5b1ee16b",
+  "files": [
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/docs/10-契约-研究汇总.md",
+      "before_sha256": "99d6d74d8c0abb7d04cd8d74e81035e4eee567588dc29c206509e1ab273cdefb",
+      "bytes_before": 6022,
+      "lines_read": 181,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/docs/10-契约-研究汇总.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/01/10-契约-研究汇总.md",
+      "backup_sha256": "99d6d74d8c0abb7d04cd8d74e81035e4eee567588dc29c206509e1ab273cdefb",
+      "after_sha256": "14e57f6ed5e6292aed312973fbfe37cd2fa34efebdc0a914fbb4b9a4e58229e9",
+      "approved_after_sha256": "14e57f6ed5e6292aed312973fbfe37cd2fa34efebdc0a914fbb4b9a4e58229e9",
+      "actual_after_sha256": "14e57f6ed5e6292aed312973fbfe37cd2fa34efebdc0a914fbb4b9a4e58229e9",
+      "actual_backup_sha256": "99d6d74d8c0abb7d04cd8d74e81035e4eee567588dc29c206509e1ab273cdefb"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/docs/11-契约-盘前预案.md",
+      "before_sha256": "c785655b63a9be5027bbf829f1023b3f3d7b8709819c133d47ea533c4de30652",
+      "bytes_before": 14568,
+      "lines_read": 346,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/docs/11-契约-盘前预案.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/02/11-契约-盘前预案.md",
+      "backup_sha256": "c785655b63a9be5027bbf829f1023b3f3d7b8709819c133d47ea533c4de30652",
+      "after_sha256": "bee1b1fce3a336afac195c3b6a7362054a9ec01c7193781f2d3babfe02d7f9e2",
+      "approved_after_sha256": "bee1b1fce3a336afac195c3b6a7362054a9ec01c7193781f2d3babfe02d7f9e2",
+      "actual_after_sha256": "bee1b1fce3a336afac195c3b6a7362054a9ec01c7193781f2d3babfe02d7f9e2",
+      "actual_backup_sha256": "c785655b63a9be5027bbf829f1023b3f3d7b8709819c133d47ea533c4de30652"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md",
+      "before_sha256": "d9721b4145d3ef9c9832a55ad96f56ce83bc5b173c406d49e424d6714cdd1188",
+      "bytes_before": 19897,
+      "lines_read": 441,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/03/SKILL.md",
+      "backup_sha256": "d9721b4145d3ef9c9832a55ad96f56ce83bc5b173c406d49e424d6714cdd1188",
+      "after_sha256": "aeee4559edbb1d095759202b03c33e50dd9fc3a5c6581a254d5d8124b67d0e0d",
+      "approved_after_sha256": "aeee4559edbb1d095759202b03c33e50dd9fc3a5c6581a254d5d8124b67d0e0d",
+      "actual_after_sha256": "aeee4559edbb1d095759202b03c33e50dd9fc3a5c6581a254d5d8124b67d0e0d",
+      "actual_backup_sha256": "d9721b4145d3ef9c9832a55ad96f56ce83bc5b173c406d49e424d6714cdd1188"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md",
+      "before_sha256": "bbff34144e521172d78b38d28f4c4abf555906348d291ba6a4d2719a0114e878",
+      "bytes_before": 16481,
+      "lines_read": 236,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/04/SKILL.md",
+      "backup_sha256": "bbff34144e521172d78b38d28f4c4abf555906348d291ba6a4d2719a0114e878",
+      "after_sha256": "d1a6ac6d276774946e4e450017cdcd526895dd626776c0a61809496242b20a6c",
+      "approved_after_sha256": "d1a6ac6d276774946e4e450017cdcd526895dd626776c0a61809496242b20a6c",
+      "actual_after_sha256": "d1a6ac6d276774946e4e450017cdcd526895dd626776c0a61809496242b20a6c",
+      "actual_backup_sha256": "bbff34144e521172d78b38d28f4c4abf555906348d291ba6a4d2719a0114e878"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_auction_snapshot_v1/SKILL.md",
+      "before_sha256": "dff225e2c70b77302ac64fe862ac0b3eb937ba7122376ad679494115a71bc478",
+      "bytes_before": 6775,
+      "lines_read": 173,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_auction_snapshot_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/05/SKILL.md",
+      "backup_sha256": "dff225e2c70b77302ac64fe862ac0b3eb937ba7122376ad679494115a71bc478",
+      "after_sha256": "013e8c9d8eb351fdd8695119df5ff26fbe2f4dff52b5e8a8d8bf397802940965",
+      "approved_after_sha256": "013e8c9d8eb351fdd8695119df5ff26fbe2f4dff52b5e8a8d8bf397802940965",
+      "actual_after_sha256": "013e8c9d8eb351fdd8695119df5ff26fbe2f4dff52b5e8a8d8bf397802940965",
+      "actual_backup_sha256": "dff225e2c70b77302ac64fe862ac0b3eb937ba7122376ad679494115a71bc478"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md",
+      "before_sha256": "0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d",
+      "bytes_before": 70146,
+      "lines_read": 1293,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/06/SKILL.md",
+      "backup_sha256": "0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d",
+      "after_sha256": "b3e8d6d49e42b84a80613e4e63f7f5a578b95a6c1ab009e606cc2eacc6627876",
+      "approved_after_sha256": "b3e8d6d49e42b84a80613e4e63f7f5a578b95a6c1ab009e606cc2eacc6627876",
+      "actual_after_sha256": "b3e8d6d49e42b84a80613e4e63f7f5a578b95a6c1ab009e606cc2eacc6627876",
+      "actual_backup_sha256": "0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/research_orchestrator_v1/SKILL.md",
+      "before_sha256": "3171c4bc9b7515a30ec6d461799fb7c63eedf97b7e9ef68a9778216e4aed94e3",
+      "bytes_before": 14678,
+      "lines_read": 308,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/research_orchestrator_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/07/SKILL.md",
+      "backup_sha256": "3171c4bc9b7515a30ec6d461799fb7c63eedf97b7e9ef68a9778216e4aed94e3",
+      "after_sha256": "bb6a99cf16c0d55d511e42e75659cf44684090d7d79441679e6b66e428bbe200",
+      "approved_after_sha256": "bb6a99cf16c0d55d511e42e75659cf44684090d7d79441679e6b66e428bbe200",
+      "actual_after_sha256": "bb6a99cf16c0d55d511e42e75659cf44684090d7d79441679e6b66e428bbe200",
+      "actual_backup_sha256": "3171c4bc9b7515a30ec6d461799fb7c63eedf97b7e9ef68a9778216e4aed94e3"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_md_namespace.py",
+      "before_sha256": "7cc99ec0423c303785bbcd0dcc02e7186d5b9f39a1e06fd22e3454ae367d8040",
+      "bytes_before": 6758,
+      "lines_read": 204,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_md_namespace.py",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/08/check_md_namespace.py",
+      "backup_sha256": "7cc99ec0423c303785bbcd0dcc02e7186d5b9f39a1e06fd22e3454ae367d8040",
+      "after_sha256": "ea1651ee12a058355071d6b943f38b65a6f0687c764942eb03dde5e5f1140634",
+      "approved_after_sha256": "ea1651ee12a058355071d6b943f38b65a6f0687c764942eb03dde5e5f1140634",
+      "actual_after_sha256": "ea1651ee12a058355071d6b943f38b65a6f0687c764942eb03dde5e5f1140634",
+      "actual_backup_sha256": "7cc99ec0423c303785bbcd0dcc02e7186d5b9f39a1e06fd22e3454ae367d8040"
+    },
+    {
+      "path": "/Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md",
+      "before_sha256": "5c6c6c28e72a7b1970a852b3d16f2b033b06d5c0bc10c955cc16bb51ae13e3a2",
+      "bytes_before": 3873,
+      "lines_read": 61,
+      "resolved_path": "/Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/09/SOUL.md",
+      "backup_sha256": "5c6c6c28e72a7b1970a852b3d16f2b033b06d5c0bc10c955cc16bb51ae13e3a2",
+      "after_sha256": "2a1497baba4db228927ac7376b32453044d0126c4378e149c7152fc8b64364b1",
+      "approved_after_sha256": "2a1497baba4db228927ac7376b32453044d0126c4378e149c7152fc8b64364b1",
+      "actual_after_sha256": "2a1497baba4db228927ac7376b32453044d0126c4378e149c7152fc8b64364b1",
+      "actual_backup_sha256": "5c6c6c28e72a7b1970a852b3d16f2b033b06d5c0bc10c955cc16bb51ae13e3a2"
+    },
+    {
+      "path": "/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md",
+      "before_sha256": "9dd5bf534052fa41b2762fa999899a87d3f58b65afe76234b10e4d3fa185fb31",
+      "bytes_before": 4577,
+      "lines_read": 75,
+      "resolved_path": "/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/10/SOUL.md",
+      "backup_sha256": "9dd5bf534052fa41b2762fa999899a87d3f58b65afe76234b10e4d3fa185fb31",
+      "after_sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35",
+      "approved_after_sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35",
+      "actual_after_sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35",
+      "actual_backup_sha256": "9dd5bf534052fa41b2762fa999899a87d3f58b65afe76234b10e4d3fa185fb31"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/_archive/filter_leader_v1/SKILL.md",
+      "before_sha256": "794e312b5bec04787b93b3c6e262b1e6f0fd8dda2a56d2e534b2ea89c3744f03",
+      "bytes_before": 4582,
+      "lines_read": 151,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/_archive/filter_leader_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/11/SKILL.md",
+      "backup_sha256": "794e312b5bec04787b93b3c6e262b1e6f0fd8dda2a56d2e534b2ea89c3744f03",
+      "after_sha256": "f14c371ab1727af7d1649c60c4da00b54ff6d1b2c60a0f6b125553cd145f845b",
+      "approved_after_sha256": "f14c371ab1727af7d1649c60c4da00b54ff6d1b2c60a0f6b125553cd145f845b",
+      "actual_after_sha256": "f14c371ab1727af7d1649c60c4da00b54ff6d1b2c60a0f6b125553cd145f845b",
+      "actual_backup_sha256": "794e312b5bec04787b93b3c6e262b1e6f0fd8dda2a56d2e534b2ea89c3744f03"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_main_sectors_v1/SKILL.md",
+      "before_sha256": "f8326ea438d7da792a072ee91aef9d4450c87b0b3789c91dba90278389b674c7",
+      "bytes_before": 23590,
+      "lines_read": 513,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_main_sectors_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/12/SKILL.md",
+      "backup_sha256": "f8326ea438d7da792a072ee91aef9d4450c87b0b3789c91dba90278389b674c7",
+      "after_sha256": "e327944d4a9a51989b6a6582a1d25a5521e61261170adf14cd996a265dd8aea0",
+      "approved_after_sha256": "e327944d4a9a51989b6a6582a1d25a5521e61261170adf14cd996a265dd8aea0",
+      "actual_after_sha256": "e327944d4a9a51989b6a6582a1d25a5521e61261170adf14cd996a265dd8aea0",
+      "actual_backup_sha256": "f8326ea438d7da792a072ee91aef9d4450c87b0b3789c91dba90278389b674c7"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_stock_profile_v1/SKILL.md",
+      "before_sha256": "a180541fe70ce174e48e181a9e4bc62ea99c63e87f05386b107a290af926d92a",
+      "bytes_before": 21074,
+      "lines_read": 427,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_stock_profile_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/13/SKILL.md",
+      "backup_sha256": "a180541fe70ce174e48e181a9e4bc62ea99c63e87f05386b107a290af926d92a",
+      "after_sha256": "3a69092fc6950939f6c9e563031c1df4ca53088b0ffaf5d51240d8e5482da614",
+      "approved_after_sha256": "3a69092fc6950939f6c9e563031c1df4ca53088b0ffaf5d51240d8e5482da614",
+      "actual_after_sha256": "3a69092fc6950939f6c9e563031c1df4ca53088b0ffaf5d51240d8e5482da614",
+      "actual_backup_sha256": "a180541fe70ce174e48e181a9e4bc62ea99c63e87f05386b107a290af926d92a"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md",
+      "before_sha256": "6097bb83402d836101de3348446129d71e6d3ff337b20dc6b9304455e07c6311",
+      "bytes_before": 13866,
+      "lines_read": 332,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/14/SKILL.md",
+      "backup_sha256": "6097bb83402d836101de3348446129d71e6d3ff337b20dc6b9304455e07c6311",
+      "after_sha256": "40ef3105c0495223b52c510302ee4fa452e5bf43b675830c373da44f326faff6",
+      "approved_after_sha256": "40ef3105c0495223b52c510302ee4fa452e5bf43b675830c373da44f326faff6",
+      "actual_after_sha256": "40ef3105c0495223b52c510302ee4fa452e5bf43b675830c373da44f326faff6",
+      "actual_backup_sha256": "6097bb83402d836101de3348446129d71e6d3ff337b20dc6b9304455e07c6311"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/short_line_thinking_v1/SKILL.md",
+      "before_sha256": "dad7f28dad6779ee40b16ed1cfcdd39348435c5407f63968dfb711e306c49c54",
+      "bytes_before": 8424,
+      "lines_read": 209,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/short_line_thinking_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/15/SKILL.md",
+      "backup_sha256": "dad7f28dad6779ee40b16ed1cfcdd39348435c5407f63968dfb711e306c49c54",
+      "after_sha256": "aab4dd21f870e1cc13c9920ca8d10731e9ec627966874f0c5cffc353a2a94994",
+      "approved_after_sha256": "aab4dd21f870e1cc13c9920ca8d10731e9ec627966874f0c5cffc353a2a94994",
+      "actual_after_sha256": "aab4dd21f870e1cc13c9920ca8d10731e9ec627966874f0c5cffc353a2a94994",
+      "actual_backup_sha256": "dad7f28dad6779ee40b16ed1cfcdd39348435c5407f63968dfb711e306c49c54"
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md",
+      "before_sha256": "076853d910830a033ed05f94830c63debbeb4dea2f972a34094113e4e35e6edf",
+      "bytes_before": 8429,
+      "lines_read": 134,
+      "resolved_path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md",
+      "is_symlink": false,
+      "backup_path": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals/16/SKILL.md",
+      "backup_sha256": "076853d910830a033ed05f94830c63debbeb4dea2f972a34094113e4e35e6edf",
+      "after_sha256": "6ee0609a07e3fd93e11ba3162f47455906641ad4d5ce93238de27ab4fb9ba6e1",
+      "approved_after_sha256": "6ee0609a07e3fd93e11ba3162f47455906641ad4d5ce93238de27ab4fb9ba6e1",
+      "actual_after_sha256": "6ee0609a07e3fd93e11ba3162f47455906641ad4d5ce93238de27ab4fb9ba6e1",
+      "actual_backup_sha256": "076853d910830a033ed05f94830c63debbeb4dea2f972a34094113e4e35e6edf"
+    }
+  ],
+  "package_edits": [
+    {
+      "package": "A",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/docs/10-契约-研究汇总.md",
+      "before_sha256": "99d6d74d8c0abb7d04cd8d74e81035e4eee567588dc29c206509e1ab273cdefb",
+      "after_sha256": "14e57f6ed5e6292aed312973fbfe37cd2fa34efebdc0a914fbb4b9a4e58229e9"
+    },
+    {
+      "package": "A",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/docs/11-契约-盘前预案.md",
+      "before_sha256": "c785655b63a9be5027bbf829f1023b3f3d7b8709819c133d47ea533c4de30652",
+      "after_sha256": "bee1b1fce3a336afac195c3b6a7362054a9ec01c7193781f2d3babfe02d7f9e2"
+    },
+    {
+      "package": "A",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md",
+      "before_sha256": "d9721b4145d3ef9c9832a55ad96f56ce83bc5b173c406d49e424d6714cdd1188",
+      "after_sha256": "8b863ebba7d026becb4538a08606296f4c4c3c854b63521661995fd63bae583b"
+    },
+    {
+      "package": "A",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md",
+      "before_sha256": "bbff34144e521172d78b38d28f4c4abf555906348d291ba6a4d2719a0114e878",
+      "after_sha256": "d1a6ac6d276774946e4e450017cdcd526895dd626776c0a61809496242b20a6c"
+    },
+    {
+      "package": "A",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_auction_snapshot_v1/SKILL.md",
+      "before_sha256": "dff225e2c70b77302ac64fe862ac0b3eb937ba7122376ad679494115a71bc478",
+      "after_sha256": "013e8c9d8eb351fdd8695119df5ff26fbe2f4dff52b5e8a8d8bf397802940965"
+    },
+    {
+      "package": "A",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md",
+      "before_sha256": "0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d",
+      "after_sha256": "8927d05eaea4ea5850af77af24d7228599e6ce9aff5cc5ccfd546b02be79d2d2"
+    },
+    {
+      "package": "A",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/research_orchestrator_v1/SKILL.md",
+      "before_sha256": "3171c4bc9b7515a30ec6d461799fb7c63eedf97b7e9ef68a9778216e4aed94e3",
+      "after_sha256": "bb6a99cf16c0d55d511e42e75659cf44684090d7d79441679e6b66e428bbe200"
+    },
+    {
+      "package": "A",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_md_namespace.py",
+      "before_sha256": "7cc99ec0423c303785bbcd0dcc02e7186d5b9f39a1e06fd22e3454ae367d8040",
+      "after_sha256": "ea1651ee12a058355071d6b943f38b65a6f0687c764942eb03dde5e5f1140634"
+    },
+    {
+      "package": "B",
+      "path": "/Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md",
+      "before_sha256": "5c6c6c28e72a7b1970a852b3d16f2b033b06d5c0bc10c955cc16bb51ae13e3a2",
+      "after_sha256": "2a1497baba4db228927ac7376b32453044d0126c4378e149c7152fc8b64364b1"
+    },
+    {
+      "package": "B",
+      "path": "/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md",
+      "before_sha256": "9dd5bf534052fa41b2762fa999899a87d3f58b65afe76234b10e4d3fa185fb31",
+      "after_sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35"
+    },
+    {
+      "package": "B",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/_archive/filter_leader_v1/SKILL.md",
+      "before_sha256": "794e312b5bec04787b93b3c6e262b1e6f0fd8dda2a56d2e534b2ea89c3744f03",
+      "after_sha256": "f14c371ab1727af7d1649c60c4da00b54ff6d1b2c60a0f6b125553cd145f845b"
+    },
+    {
+      "package": "B",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md",
+      "before_sha256": "8b863ebba7d026becb4538a08606296f4c4c3c854b63521661995fd63bae583b",
+      "after_sha256": "aeee4559edbb1d095759202b03c33e50dd9fc3a5c6581a254d5d8124b67d0e0d"
+    },
+    {
+      "package": "B",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_main_sectors_v1/SKILL.md",
+      "before_sha256": "f8326ea438d7da792a072ee91aef9d4450c87b0b3789c91dba90278389b674c7",
+      "after_sha256": "e327944d4a9a51989b6a6582a1d25a5521e61261170adf14cd996a265dd8aea0"
+    },
+    {
+      "package": "B",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_stock_profile_v1/SKILL.md",
+      "before_sha256": "a180541fe70ce174e48e181a9e4bc62ea99c63e87f05386b107a290af926d92a",
+      "after_sha256": "3a69092fc6950939f6c9e563031c1df4ca53088b0ffaf5d51240d8e5482da614"
+    },
+    {
+      "package": "B",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md",
+      "before_sha256": "6097bb83402d836101de3348446129d71e6d3ff337b20dc6b9304455e07c6311",
+      "after_sha256": "40ef3105c0495223b52c510302ee4fa452e5bf43b675830c373da44f326faff6"
+    },
+    {
+      "package": "B",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md",
+      "before_sha256": "8927d05eaea4ea5850af77af24d7228599e6ce9aff5cc5ccfd546b02be79d2d2",
+      "after_sha256": "b3e8d6d49e42b84a80613e4e63f7f5a578b95a6c1ab009e606cc2eacc6627876"
+    },
+    {
+      "package": "B",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/short_line_thinking_v1/SKILL.md",
+      "before_sha256": "dad7f28dad6779ee40b16ed1cfcdd39348435c5407f63968dfb711e306c49c54",
+      "after_sha256": "aab4dd21f870e1cc13c9920ca8d10731e9ec627966874f0c5cffc353a2a94994"
+    },
+    {
+      "package": "B",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md",
+      "before_sha256": "076853d910830a033ed05f94830c63debbeb4dea2f972a34094113e4e35e6edf",
+      "after_sha256": "6ee0609a07e3fd93e11ba3162f47455906641ad4d5ce93238de27ab4fb9ba6e1"
+    }
+  ],
+  "index_records_sha256": "c24736dd938685a85db19301280d8b9fdafdf6fb2bab56a056068dc026df152b",
+  "index_binary_sha256": "3f2f0150a437b8b7e8ef55a73bc0f9091dee854dbf8a4734428813a997d13c0e",
+  "main_soul_sha256": "b5c993bef4dfa9475ba64935c03c83629e59175a9c36a8e8175c730589f85752",
+  "head": "03c1d25caf94e8c8576765442b55cbf4538559f1",
+  "completed_at": "2026-10-23T12:48:45.835070+08:00",
+  "application_order": [
+    "A",
+    "B"
+  ],
+  "package_A_checkpoint": "actual post-A hash check passed 8/8; B preconditions passed 10/10 before B patch",
+  "unique_modified_policy_targets": 16,
+  "approved_package_entries": 18,
+  "test": {
+    "source": "/Users/chenyang/Downloads/demo/沧海巨浪/tests/test_canghai_policy_AB_20261023.py",
+    "source_sha256": "87939dad4ed9078c0a40dbc8d71c702937c9e643f1fccc729c474ac590fff03d",
+    "scratch_copy_sha256": "87939dad4ed9078c0a40dbc8d71c702937c9e643f1fccc729c474ac590fff03d",
+    "execution": {
+      "command": "python3 -c 'import shutil;from pathlib import Path;s=Path(\"/Users/chenyang/.hermes/cache/scratch\"); shutil.copy2(\"tests/test_canghai_policy_AB_20261023.py\",s/\"test_canghai_policy_AB_20261023.py\"); (s/\"canghai_policy_AB_pytest_20261023.ini\").write_text(\"[pytest]\\n\")' && PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -B -m pytest --noconftest -c /Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_pytest_20261023.ini -p no:cacheprovider /Users/chenyang/.hermes/cache/scratch/test_canghai_policy_AB_20261023.py --basetemp=/Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_pytest_tmp_20261023 --junitxml=/Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_junit_20261023.xml -q",
+      "output": "......................................                                   [100%]\n38 passed in 0.14s",
+      "exit_code": 0,
+      "error": null
+    },
+    "junit": "/Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_junit_20261023.xml",
+    "junit_sha256": "dba0abfc2cb3aa4f8beb8576e91a2f7e4fda727bce6da8e4782a9369741bcf05",
+    "cases": 38,
+    "unique_cases": 38,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "test_ids": [
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/docs/10-\\u5951\\u7ea6-\\u7814\\u7a76\\u6c47\\u603b.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/docs/11-\\u5951\\u7ea6-\\u76d8\\u524d\\u9884\\u6848.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/_archive/filter_leader_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/analyze_devil_advocate_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/analyze_main_sectors_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/analyze_stock_profile_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/analyze_style_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/auction_amendment_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/fetch_auction_snapshot_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/main_decision_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/research_orchestrator_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/short_line_thinking_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/skills/trade_discipline_v1/SKILL.md]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_all_16_final_hashes_and_rollback_originals[/Users/chenyang/Downloads/demo/\\u6ca7\\u6d77\\u5de8\\u6d6a/tests/checks/check_md_namespace.py]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_md_actual_none_and_namespace_mismatch_are_independent"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_md_invalid_confidence_still_rejected[false]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_md_invalid_confidence_still_rejected[nonsense]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_md_nullable_and_valid_numeric_synthetic_only[0.0]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_md_nullable_and_valid_numeric_synthetic_only[0.75]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_md_nullable_and_valid_numeric_synthetic_only[NULL]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_md_nullable_and_valid_numeric_synthetic_only[null]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_md_nullable_and_valid_numeric_synthetic_only[~]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_no_trade_retains_evidenced_research_but_never_buy_permission"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_original_budget_numbers_and_rr_text_unchanged"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_r6_real_usable_predicate_remains_complete_only[None-False]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_r6_real_usable_predicate_remains_complete_only[complete-True]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_r6_real_usable_predicate_remains_complete_only[degraded-False]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_r6_real_usable_predicate_remains_complete_only[failed-False]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_r6_real_usable_predicate_remains_complete_only[partial-False]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_r6_real_usable_predicate_remains_complete_only[skipped-False]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_r6_zero_objects_and_hard_reject_not_passed_or_downgraded"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_real_pure_position_cap_preserves_explicit_zero[None]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_real_pure_position_cap_preserves_explicit_zero[complete]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_real_pure_position_cap_preserves_explicit_zero[degraded]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_real_pure_position_cap_preserves_explicit_zero[failed]"
+      ],
+      [
+        "test_canghai_policy_AB_20261023",
+        "test_real_pure_position_cap_preserves_explicit_zero[partial]"
+      ]
+    ],
+    "scope": "policy text/hash and AST-extracted real pure functions; no production imports or live research",
+    "read_only_source_hashes": {
+      "src/plan/d1_algorithm.py": "263c340a359ddfe43026c2e11163fc0a0a95e0e0d84b2826e28179d9d49a8b61",
+      "src/research/r6_devil_advocate.py": "d9e35ef8f838f7e49f8c5d433c46f881ae3d70999f29791d43543f0fd812aff1",
+      "tests/checks/check_md_namespace.py": "ea1651ee12a058355071d6b943f38b65a6f0687c764942eb03dde5e5f1140634"
+    }
+  },
+  "soul_load": {
+    "loader": "agent.prompt_builder.load_soul_md",
+    "loader_source": "/Users/chenyang/.hermes/hermes-agent/agent/prompt_builder.py",
+    "interpreter": "/Users/chenyang/.hermes/hermes-agent/venv/bin/python",
+    "home_override_used": true,
+    "ambient_home": "/Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_hermes_load_home_20261023",
+    "profile_content_printed": false,
+    "profiles": [
+      {
+        "profile": "canghai-research",
+        "path": "/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md",
+        "loaded": true,
+        "exact_stripped_source": true,
+        "characters": 3009,
+        "file_sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35",
+        "loaded_sha256": "e01748769cee829c2046f307d44d755dba8871aa95b3015d0750e3797760fd1a"
+      },
+      {
+        "profile": "canghai-plan",
+        "path": "/Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md",
+        "loaded": true,
+        "exact_stripped_source": true,
+        "characters": 2675,
+        "file_sha256": "2a1497baba4db228927ac7376b32453044d0126c4378e149c7152fc8b64364b1",
+        "loaded_sha256": "1370b983a42cbf431905ff66990652c137f2f48856c82c59a0aba21c2894b3f8"
+      }
+    ],
+    "outside_scratch_write_or_network_violations": [],
+    "allowed_readonly_subprocesses": [
+      {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "/Users/chenyang/.hermes/hermes-agent"
+      }
+    ],
+    "scope": "loader acceptance only; no production session or research launched"
+  },
+  "soul_load_execution": {
+    "command": "/Users/chenyang/.hermes/hermes-agent/venv/bin/python -B /Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_soul_load_20261023.py",
+    "output": "{\n  \"loader\": \"agent.prompt_builder.load_soul_md\",\n  \"loader_source\": \"/Users/chenyang/.hermes/hermes-agent/agent/prompt_builder.py\",\n  \"interpreter\": \"/Users/chenyang/.hermes/hermes-agent/venv/bin/python\",\n  \"home_override_used\": true,\n  \"ambient_home\": \"/Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_hermes_load_home_20261023\",\n  \"profile_content_printed\": false,\n  \"profiles\": [\n    {\n      \"profile\": \"canghai-research\",\n      \"path\": \"/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md\",\n      \"loaded\": true,\n      \"exact_stripped_source\": true,\n      \"characters\": 3009,\n      \"file_sha256\": \"f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35\",\n      \"loaded_sha256\": \"e01748769cee829c2046f307d44d755dba8871aa95b3015d0750e3797760fd1a\"\n    },\n    {\n      \"profile\": \"canghai-plan\",\n      \"path\": \"/Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md\",\n      \"loaded\": true,\n      \"exact_stripped_source\": true,\n      \"characters\": 2675,\n      \"file_sha256\": \"2a1497baba4db228927ac7376b32453044d0126c4378e149c7152fc8b64364b1\",\n      \"loaded_sha256\": \"1370b983a42cbf431905ff66990652c137f2f48856c82c59a0aba21c2894b3f8\"\n    }\n  ],\n  \"outside_scratch_write_or_network_violations\": [],\n  \"allowed_readonly_subprocesses\": [\n    {\n      \"argv\": [\n        \"git\",\n        \"rev-parse\",\n        \"HEAD\"\n      ],\n      \"cwd\": \"/Users/chenyang/.hermes/hermes-agent\"\n    }\n  ],\n  \"scope\": \"loader acceptance only; no production session or research launched\"\n}",
+    "exit_code": 0,
+    "error": null
+  },
+  "failed_harness_attempt": {
+    "command": "/Users/chenyang/.hermes/hermes-agent/venv/bin/python -B /Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_soul_load_20261023.py",
+    "output": "Traceback (most recent call last):\n  File \"/Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_soul_load_20261023.py\", line 38, in <module>\n    assert not violations, violations\n           ^^^^^^^^^^^^^^\nAssertionError: [['subprocess.Popen', 'external operation denied']]",
+    "exit_code": 1,
+    "error": null
+  },
+  "harness_issue": "Initial strict subprocess guard blocked Hermes version provenance git rev-parse HEAD during provider discovery. Retried allowing only that exact read-only argv/cwd; loader then passed, with all other network/process/outside-scratch writes forbidden. No SOUL/mock bypass used.",
+  "rollback": {
+    "original_count": 16,
+    "backup_root": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-23-policy-AB-preapply-16-originals",
+    "rehearsal_root": "/Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_rollback_rehearsal_20261023",
+    "scratch_restore_verified_count": 16,
+    "production_restored": false,
+    "instructions": "Before authorized rollback, require current path hash == approved_after_sha256, backup hash == before_sha256; restore only each listed backup to its exact listed path, preserving bytes/mode. Do not use git reset/checkout or broad path operations."
+  },
+  "preserved": {
+    "main_soul_sha256_before": "b5c993bef4dfa9475ba64935c03c83629e59175a9c36a8e8175c730589f85752",
+    "main_soul_sha256_after": "b5c993bef4dfa9475ba64935c03c83629e59175a9c36a8e8175c730589f85752",
+    "main_soul_unchanged": true,
+    "index_records_sha256_before": "c24736dd938685a85db19301280d8b9fdafdf6fb2bab56a056068dc026df152b",
+    "index_records_sha256_after": "c24736dd938685a85db19301280d8b9fdafdf6fb2bab56a056068dc026df152b",
+    "index_binary_sha256_before": "3f2f0150a437b8b7e8ef55a73bc0f9091dee854dbf8a4734428813a997d13c0e",
+    "index_binary_sha256_after": "3f2f0150a437b8b7e8ef55a73bc0f9091dee854dbf8a4734428813a997d13c0e",
+    "staged_count": 32,
+    "head_unchanged": "03c1d25caf94e8c8576765442b55cbf4538559f1",
+    "no_git_writes": true
+  },
+  "not_run": [
+    "production fetch",
+    "research R1-R7",
+    "D1",
+    "QMT",
+    "outbound delivery",
+    "full repository pytest",
+    "fresh production sessions"
+  ],
+  "unchanged_scope": [
+    "main SOUL",
+    "cron",
+    "models/providers",
+    "config",
+    "output layout",
+    "account/trading authorization",
+    "northbound policy implementation",
+    "RR thresholds",
+    "sign_off_log"
+  ],
+  "activation": "Both actual profile SOULs load via real Hermes loader. Changed identities/skills must be consumed in fresh profile sessions; none launched by this leaf."
+}
