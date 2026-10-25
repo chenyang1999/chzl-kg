@@ -1,0 +1,620 @@
+{
+  "root": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2",
+  "runs": [
+    {
+      "group": "s1",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "s1"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 93,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 93,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "s1"
+        ],
+        "pytest_argv": [
+          "tests/test_v1_s1_execution_boundaries_20261024.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s1/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s1/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 93,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "i1",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "i1"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 71,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 71,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "i1"
+        ],
+        "pytest_argv": [
+          "tests/test_v1_integration_authorization_20261024.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/i1/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/i1/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 71,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "paper",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "paper"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 156,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 156,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "paper"
+        ],
+        "pytest_argv": [
+          "tests/test_canghai_paper_execution_20261023.py",
+          "tests/test_canghai_paper_parent_review_20261023.py",
+          "tests/test_canghai_paper_plan_driver_20261023.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/paper/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/paper/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 65,
+        "collected_count": 156,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "s2diagnostic",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "s2diagnostic"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 2,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 2,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "s2diagnostic"
+        ],
+        "pytest_argv": [
+          "tests/test_audit_d_diagnostics.py::test_pending_fractional_profit_exit_must_not_block_new_hard_stop",
+          "tests/test_audit_d_diagnostics.py::test_lowlevel_paper_execute_must_honor_same_default_kill_file",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s2diagnostic/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s2diagnostic/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 2,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "s2new",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "s2new"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 34,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 34,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "s2new"
+        ],
+        "pytest_argv": [
+          "tests/test_v1_s2_paper_exit_safety_20261024.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s2new/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s2new/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 34,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "r1",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "r1"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 12,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 12,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "r1"
+        ],
+        "pytest_argv": [
+          "tests/test_v1_independent_contract_review_20261024.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/r1/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/r1/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 12,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "staging",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "staging"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 57,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 57,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "staging"
+        ],
+        "pytest_argv": [
+          "tests/pipeline/test_plan_staging_freshness.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/staging/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/staging/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 57,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "s3",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "s3"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 129,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 129,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "s3"
+        ],
+        "pytest_argv": [
+          "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s3/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s3/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 129,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "s3diagnostic",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "s3diagnostic"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 5,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 5,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "s3diagnostic"
+        ],
+        "pytest_argv": [
+          "tests/test_s3_ast_diagnostics.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s3diagnostic/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s3diagnostic/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 5,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "rrparent",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "rrparent"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 32,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 32,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "rrparent"
+        ],
+        "pytest_argv": [
+          "tests/test_canghai_rr_parent_review_20261023.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/rrparent/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/rrparent/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 32,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "rrscope",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "rrscope"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 109,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 109,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "rrscope"
+        ],
+        "pytest_argv": [
+          "tests/test_canghai_rr_scope_20261023.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/rrscope/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/rrscope/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 109,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "f1",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "f1"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 11,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 11,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "f1"
+        ],
+        "pytest_argv": [
+          "tests/test_v1_final_joint_acceptance_20261024.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/f1/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/f1/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 11,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "closeout",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "closeout"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 32,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 32,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "closeout"
+        ],
+        "pytest_argv": [
+          "tests/test_v1_regression_contract_closeout_20261024.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/closeout/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/closeout/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 32,
+        "collection_only": false
+      }
+    },
+    {
+      "group": "c1",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+        "c1"
+      ],
+      "returncode": 0,
+      "counts": {
+        "passed": 47,
+        "failure": 0,
+        "error": 0,
+        "skipped": 0
+      },
+      "cases": 47,
+      "metadata": {
+        "command": [
+          "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+          "-B",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+          "c1"
+        ],
+        "pytest_argv": [
+          "tests/test_v1_scan_date_binding_20261024.py",
+          "-q",
+          "--noconftest",
+          "-p",
+          "no:cacheprovider",
+          "--basetemp",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/c1/fixtures/pytest",
+          "--junitxml",
+          "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/c1/junit.xml"
+        ],
+        "exit_code": 0,
+        "violations": [],
+        "synthetic_only": true,
+        "rr_adapt": false,
+        "subtest_count": 0,
+        "collected_count": 47,
+        "collection_only": false
+      }
+    }
+  ],
+  "unique_cases": 790,
+  "case_observations": 790,
+  "coverage_errors": [],
+  "current_source_drift": [],
+  "group_source_drift": [],
+  "synthetic_only": true,
+  "fixture_shims": "empty package initializers only; see script; not policy overrides",
+  "rr_fixture_adapted": false,
+  "collection_only": false,
+  "collected_cases": 790
+}

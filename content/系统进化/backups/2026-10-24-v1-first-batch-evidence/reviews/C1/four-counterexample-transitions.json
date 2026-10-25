@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tests.test_f2_final_safety::test_counterexample_scan_date_must_match_authorized_plan[20990104]",
+    "before": "failure",
+    "after": "passed"
+  },
+  {
+    "id": "tests.test_f2_final_safety::test_counterexample_scan_date_must_match_authorized_plan[None]",
+    "before": "failure",
+    "after": "passed"
+  },
+  {
+    "id": "tests.test_f2_final_safety::test_counterexample_low_level_sell_rule_presence_not_full_authority[limit]",
+    "before": "failure",
+    "after": "passed"
+  },
+  {
+    "id": "tests.test_f2_final_safety::test_counterexample_loader_dispatch_cannot_reuse_other_day_scan",
+    "before": "failure",
+    "after": "passed"
+  }
+]

@@ -1,0 +1,64 @@
+................................................................F......F [ 66%]
+....................................F                                    [100%]
+=================================== FAILURES ===================================
+_______ test_actual_common_buy_blocks_only_bad_stock_and_sell_still_runs _______
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...nt-before-closeout-20261024T143915Z-20eb404d/rrscope/fixtures/pytest/rr-scope-code0/trading/schema/watchlist_plan.py'>)
+
+    def test_actual_common_buy_blocks_only_bad_stock_and_sell_still_runs(code):
+        good, bad = stock(), stock("000002.SZ", take=110)
+        ctx = FixtureContext([good, bad])
+        positions = SimpleNamespace(positions={})
+        for s in (good, bad):
+            result = code.buy.run_buy_executor(s, s["entry_rules"][0], ctx, positions,
+                                              expected_type="trend_pullback_buy", simulate=True, force_trigger=True)
+>           assert (result.status == "fixture_order_intent") is (s is good)
+E           AssertionError: assert ('skipped' == 'fixture_order_intent'
+E             
+E             - fixture_order_intent
+E             + skipped) is ({'ts_code': '000001.SZ', 'name': 'SYNTHETIC_NOT_REAL', 'score': 90, 'reference_close': 100.0, ...} is {'ts_code': '000001.SZ', 'name': 'SYNTHETIC_NOT_REAL', 'score': 90, 'reference_close': 100.0, ...})
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/rrscope/app/tests/test_canghai_rr_scope_20261023.py:342: AssertionError
+____________ test_actual_dispatch_mixed_rr_has_no_global_contagion _____________
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...nt-before-closeout-20261024T143915Z-20eb404d/rrscope/fixtures/pytest/rr-scope-code0/trading/schema/watchlist_plan.py'>)
+
+    def test_actual_dispatch_mixed_rr_has_no_global_contagion(code):
+        good, bad = stock(), stock("000002.SZ", take=110)
+        for s in (good, bad):
+            s["exit_rules"] = []
+        p = code.schema.WatchlistPlan.model_validate(plan(execution_pool=[good, bad]))
+        ctx = FixtureContext([good, bad])
+        report = code.dispatch.dispatch_plan(p, ctx, SimpleNamespace(positions={}), simulate=True)
+>       assert len(ctx.calls) == 1 and ctx.calls[0]["ts_code"] == good["ts_code"]
+E       assert (0 == 1)
+E        +  where 0 = len([])
+E        +    where [] = <test_canghai_rr_scope_20261023.FixtureContext object at 0x107545e50>.calls
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/rrscope/app/tests/test_canghai_rr_scope_20261023.py:389: AssertionError
+____________ test_scoped_dispatch_keeps_good_buy_bad_sell_and_watch ____________
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...nt-before-closeout-20261024T143915Z-20eb404d/rrscope/fixtures/pytest/rr-scope-code0/trading/schema/watchlist_plan.py'>)
+
+    def test_scoped_dispatch_keeps_good_buy_bad_sell_and_watch(code):
+        good, bad, observed = stock(), stock("000002.SZ"), stock("000003.SZ", auto_trade_enabled=False)
+        good["exit_rules"] = []
+        bad["exit_rules"] = [{"type": "exit_at_open", "quantity_pct": 1.0}]
+        p = code.schema.WatchlistPlan.model_validate(plan(execution_pool=[good, bad], watch_pool=[observed],
+            no_trade_conditions=[{"scope": "stock", "ts_code": bad["ts_code"], "active": True,
+                                  "code": "STOCK_REVIEW"}]))
+        ctx = FixtureContext([good, bad, observed])
+        report = code.dispatch.dispatch_plan(p, ctx, SimpleNamespace(positions={}), simulate=True)
+>       assert [(x["ts_code"], x["side"]) for x in ctx.calls] == [(good["ts_code"], "buy"), (bad["ts_code"], "sell")]
+E       AssertionError: assert [('000002.SZ', 'sell')] == [('000001.SZ'....SZ', 'sell')]
+E         
+E         At index 0 diff: ('000002.SZ', 'sell') != ('000001.SZ', 'buy')
+E         Right contains one more item: ('000002.SZ', 'sell')
+E         Use -v to get more diff
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/rrscope/app/tests/test_canghai_rr_scope_20261023.py:542: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_canghai_rr_scope_20261023.py::test_actual_common_buy_blocks_only_bad_stock_and_sell_still_runs
+FAILED tests/test_canghai_rr_scope_20261023.py::test_actual_dispatch_mixed_rr_has_no_global_contagion
+FAILED tests/test_canghai_rr_scope_20261023.py::test_scoped_dispatch_keeps_good_buy_bad_sell_and_watch
+3 failed, 106 passed in 0.24s

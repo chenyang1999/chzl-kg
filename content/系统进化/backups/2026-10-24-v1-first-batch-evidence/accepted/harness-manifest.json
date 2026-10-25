@@ -1,0 +1,7 @@
+{
+  "audit_worker.py": "ea769e67dcccfe7022c4928638d27a18342f95ab38f5c9369753e433a956b66d",
+  "case-identity-contract.json": "456dce5c231a2a0fef8a96f50b6d3046104c637479628243c671e09aa416491c",
+  "support/legacy_s2_before_ledger.py": "8751820044a7a57b10a98a25e08a4ea8d97ece40010569638f61dbf1e3b7e562",
+  "support/test_audit_d_diagnostics.py": "9bd55deb328215e0d16dfa889d41bddd698dd719a9b0f76baf8294b435c6a9d0",
+  "support/test_s3_ast_diagnostics.py": "94492997e87a864cd5eec4021718e3c1082d2a291a919c948efa0a3092e54d3d"
+}
