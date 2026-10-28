@@ -1,0 +1,381 @@
+{
+  "snapshot_at": "2026-10-28T17:40:42.053369+08:00",
+  "source": "todo_list revision 66; parent P1/P2 192 current-source-bound snapshot rerun at 17:38; one bounded review pending; frozen replay launched, result pending",
+  "count_note": "Original 37 items include parents, subtasks, audits and implementations; not a work-completion percentage. New visual requirement separately registered.",
+  "original_counts": {
+    "total": 37,
+    "completed": 28,
+    "pending": 8,
+    "in_progress": 1
+  },
+  "all_counts": {
+    "total": 38,
+    "completed": 28,
+    "pending": 9,
+    "in_progress": 1
+  },
+  "original_top_level_counts": {
+    "completed": 1,
+    "pending": 7,
+    "in_progress": 1
+  },
+  "original_leaf_counts": {
+    "completed": 28,
+    "pending": 3
+  },
+  "items": [
+    {
+      "id": "delivery",
+      "status": "completed",
+      "parent": null,
+      "title": "永久错误停止整轮重试：限定验收"
+    },
+    {
+      "id": "safety",
+      "status": "pending",
+      "parent": null,
+      "title": "卖出安全工程已闭包，真实券商适配/旧在途迁移和实盘另验"
+    },
+    {
+      "id": "budget",
+      "status": "pending",
+      "parent": null,
+      "title": "软目标主链限定闭包，全量计量与自然交付未证"
+    },
+    {
+      "id": "preplan",
+      "status": "pending",
+      "parent": null,
+      "title": "分项确认128限定闭包；真实回放启动中，综合质量方法/排序迁移及自然确认发布仍未证"
+    },
+    {
+      "id": "history",
+      "status": "pending",
+      "parent": null,
+      "title": "历史正常接线182项限定闭包，自然模型采用仍未证"
+    },
+    {
+      "id": "amendment",
+      "status": "pending",
+      "parent": null,
+      "title": "正式修订→实际loader/watcher已实现，主控192项亲跑；唯一独审待回、自然owner/上午资金未证"
+    },
+    {
+      "id": "schedule",
+      "status": "pending",
+      "parent": null,
+      "title": "调度父项：股性合并已验，余项保留"
+    },
+    {
+      "id": "convergence",
+      "status": "pending",
+      "parent": null,
+      "title": "网站/数据治理/回测依赖保护：余项保留"
+    },
+    {
+      "id": "acceptance",
+      "status": "in_progress",
+      "parent": null,
+      "title": "核心整合验收及28号盘前数据回放"
+    },
+    {
+      "id": "budget-components",
+      "status": "completed",
+      "parent": "budget",
+      "title": "父预算/进程监督底层组件：仅离线"
+    },
+    {
+      "id": "preplan-render-fixes",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "共享展示门槛与降级来源修复"
+    },
+    {
+      "id": "history-review-fixes",
+      "status": "completed",
+      "parent": "history",
+      "title": "历史适配时间/读取上限/深JSON修复"
+    },
+    {
+      "id": "isolation-reviews",
+      "status": "completed",
+      "parent": "acceptance",
+      "title": "午盘与回测隔离：限定工程"
+    },
+    {
+      "id": "sell-atomic-reservation",
+      "status": "completed",
+      "parent": "safety",
+      "title": "持久原子卖出防重：17:20主控180项限定工程闭包，实盘另验"
+    },
+    {
+      "id": "sell-authority-binding",
+      "status": "completed",
+      "parent": "safety",
+      "title": "卖出权威状态绑定及精确定量"
+    },
+    {
+      "id": "report-assembly",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "完整模型原文加同版JSON共享表格组件"
+    },
+    {
+      "id": "candidate-capacity",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "六候选跨schema/loader/报告运输"
+    },
+    {
+      "id": "six-candidate-skill-signed",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "六新机会技能差异批准应用"
+    },
+    {
+      "id": "today-plan-diagnosis",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "空池与主模型交付拒收成因诊断"
+    },
+    {
+      "id": "d1-contract-and-interim-preservation",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "风险字段契约与失败模型原文保留"
+    },
+    {
+      "id": "fallback-candidate-visibility",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "研究未齐时保留真实研究观察"
+    },
+    {
+      "id": "northbound-review-only",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "北向退出盘前门槛：四文本应用"
+    },
+    {
+      "id": "persistent-empty-pool-audit",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "跨日持续空池有限审计"
+    },
+    {
+      "id": "northbound-python-consumers",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "Python资金消费者北向适用性修复"
+    },
+    {
+      "id": "global-versus-symbol-gate-audit",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "全局与逐票盈亏比门槛有限核查"
+    },
+    {
+      "id": "acceptance-current-crossbatch",
+      "status": "completed",
+      "parent": "acceptance",
+      "title": "历史冻结批次交叉回归"
+    },
+    {
+      "id": "normal-report-production-contract",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "正常模型原文/表格报告技能批准应用"
+    },
+    {
+      "id": "budget-input-version-parity",
+      "status": "completed",
+      "parent": "budget",
+      "title": "主链/安全网启动前后输入同版核验"
+    },
+    {
+      "id": "budget-request-coverage-audit",
+      "status": "completed",
+      "parent": "budget",
+      "title": "模型/辅助/MCP真实调用接点只读核查"
+    },
+    {
+      "id": "candidate-score-provenance",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "旧score来源与真实消费者有限追踪"
+    },
+    {
+      "id": "legacy-score-transparency-implementation",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "旧分未校准身份与来源透明"
+    },
+    {
+      "id": "score-provenance-skill-signoff",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "来源说明及板块复用技能精确并集应用"
+    },
+    {
+      "id": "fallback-producer-candidate-capacity",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "规则兜底仅计六个合格新机会容量"
+    },
+    {
+      "id": "watch-candidate-status-display",
+      "status": "completed",
+      "parent": "preplan",
+      "title": "观察池受阻/未知/等待条件忠实显示"
+    },
+    {
+      "id": "history-feedback-time-order",
+      "status": "completed",
+      "parent": "history",
+      "title": "反馈构造链拒绝时间倒退"
+    },
+    {
+      "id": "stock-character-monthly-merge",
+      "status": "completed",
+      "parent": "schedule",
+      "title": "股性月度任务合并及重复任务暂停"
+    },
+    {
+      "id": "premarket-replay-20261028",
+      "status": "pending",
+      "parent": "acceptance",
+      "title": "28日冻结资料原角色无工具真实回放已启动；结果/校验/原文与JSON同版组装待收"
+    },
+    {
+      "id": "vision-model-render-hot-swap",
+      "status": "pending",
+      "parent": null,
+      "title": "后续：识图模型/API与图像生成渲染独立热插拔"
+    }
+  ],
+  "overall_accepted": false,
+  "model_replay_started": false,
+  "production_release": false,
+  "live_trading_authorized": false,
+  "in_flight_not_accepted": [
+    "native_usage_legacy_fixture_and_joint_regression",
+    "frozen_replay_actual_model_result_and_finalization",
+    "auction_midday_bounded_review"
+  ],
+  "report_scope": "Status/evidence consolidation with new bounded parent offline tests. No real business/model/market/trading runs; no overall production certification.",
+  "previous_snapshot_at": "2026-10-28T12:45:14+08:00",
+  "parent_verification": {
+    "evidence": "/Users/chenyang/.hermes/cache/scratch/parent-reviewed-core-fixes-0e4ze_gt/history-live-closure.json",
+    "score_confirmation_evidence": "/Users/chenyang/.hermes/cache/scratch/parent-reviewed-core-fixes-0e4ze_gt/score-confirm-closure.json",
+    "prior_1342_evidence": "/Users/chenyang/.hermes/cache/scratch/parent-core-consumers-tg_hmh7j/three-edge-closure-index.json",
+    "candidate_filtered_tests": 660,
+    "candidate_excluded_cases": 12,
+    "soft_direct_tests": 114,
+    "soft_focused_reliability_tests": 9,
+    "source_drift": false,
+    "independent_reviews_pending": false,
+    "history_tests": 182,
+    "score_confirmation_tests": 128,
+    "history_evidence": "/Users/chenyang/.hermes/cache/scratch/parent-reviewed-core-fixes-0e4ze_gt/history-live-closure.json",
+    "history_live_shell_applied": true,
+    "history_normal_source_contract_ready": false,
+    "history_new_reception_and_consumer_connected": true,
+    "history_natural_model_adoption_verified": false,
+    "sell_review_fixes_pending": false,
+    "candidate_prior_filtered_tests": 649,
+    "candidate_independent_review_closed": true,
+    "candidate_closure": "/Users/chenyang/.hermes/cache/scratch/parent-core-consumers-tg_hmh7j/candidate-review-closure.json",
+    "soft_target_independent_review_closed": true,
+    "soft_target_closure": "/Users/chenyang/.hermes/cache/scratch/parent-core-consumers-tg_hmh7j/soft-target-closure.json",
+    "pending_review_count": 0,
+    "prior_batch_evidence": "/Users/chenyang/.hermes/cache/scratch/parent-core-consumers-tg_hmh7j/parent-verification.json",
+    "history_prior_tests": 150,
+    "history_independent_review_closed": true,
+    "sell_atomic_closure": "/Users/chenyang/.hermes/cache/scratch/sell-three-fix-z9x0dmvc/parent-closure.json",
+    "native_usage_review_pending": false,
+    "native_usage_supervision_finding_fixed": true,
+    "native_usage_final_joint_regression_pending": true,
+    "amendment_current_source_bound_parent_rerun": {
+      "tests": 192,
+      "receipt": "/Users/chenyang/.hermes/cache/scratch/p1p2-consumer-hm_9kni3/parent-verification-before-review.json",
+      "bounded_review_pending": true,
+      "production_or_natural_event_verified": false
+    },
+    "frozen_replay_actual_launch": {
+      "process_session_id": "proc_e402032111e9",
+      "run_dir": "/Users/chenyang/.hermes/cache/scratch/d1-lastmile-kuq_s5fz/native-ready",
+      "started_at": "2026-10-28T17:29:58.205397+08:00",
+      "source_run_id": "20261028T061020-34978-8176",
+      "manifest_sha256": "dd82d8301a7781de1c2873811bf0da59ca92cef97778d584129efff2b7426019",
+      "tools": [],
+      "production_publish": false,
+      "paid_model_authorized": true,
+      "result_received_and_verified": false
+    }
+  },
+  "limited_engineering_closed": {
+    "history_live_wiring": {
+      "tests": 182,
+      "independent_review_findings_fixed": 1,
+      "parent_red_failures": 2,
+      "closure": "/Users/chenyang/.hermes/cache/scratch/parent-reviewed-core-fixes-0e4ze_gt/history-live-closure.json",
+      "new_reception_and_consumer_connected": true,
+      "natural_model_adoption_verified": false
+    },
+    "price_components_and_confirmation_consumer": {
+      "tests": 128,
+      "independent_review_findings_fixed": 3,
+      "parent_red_failures": 6,
+      "parent_red_passed": 1,
+      "closure": "/Users/chenyang/.hermes/cache/scratch/parent-reviewed-core-fixes-0e4ze_gt/score-confirm-closure.json",
+      "quality_method_completed": false,
+      "natural_authenticated_event_adapter_connected": false,
+      "production_revision_publish_reload_connected": false
+    },
+    "candidate_readonly_review": {
+      "historical_prior_version_only": true,
+      "tests": 660,
+      "excluded_legacy_cases": 12,
+      "owner_confirmation_verified": false,
+      "normal_adoption_verified": false
+    },
+    "soft_target_wiring": {
+      "historical_prior_version_only": true,
+      "direct_tests": 114,
+      "focused_reliability_tests": 9,
+      "all_usage_metered": false,
+      "natural_0830_delivery_verified": false,
+      "unknown_usage_is_not_hard_start_blocker": true
+    },
+    "history_projection_adapter": {
+      "historical_prior_version_only": true,
+      "tests": 158,
+      "scope": "bounded synthetic adapter; explicit trust selection only",
+      "normal_source_contract_ready": false,
+      "live_shell_applied": false,
+      "actual_adoption_verified": false
+    },
+    "sell_atomic_intents": {
+      "tests": 180,
+      "source_files": 68,
+      "independent_review_findings_fixed": 3,
+      "closure": "/Users/chenyang/.hermes/cache/scratch/sell-three-fix-z9x0dmvc/parent-closure.json",
+      "parent_and_nine_child_guard_violations": 0,
+      "legacy_original_i1": {
+        "passed": 69,
+        "failed": 3,
+        "fixture_only_missing_account_identity": true
+      },
+      "production_certified": false,
+      "broker_schema_or_existing_inflight_migration_verified": false
+    }
+  },
+  "business_open_gaps": [
+    "normal producers explicit scope/window coverage and actual next-research model reading/adoption; new trusted reception and live consumer are connected",
+    "reproducible candidate quality scoring",
+    "natural authenticated owner confirmation adapter and revision publishing/reload; in-memory confirmation consumer implemented and bounded-tested",
+    "authoritative usage coverage and normal timely delivery",
+    "20261028 frozen-input real-model replay",
+    "remaining separately tracked safety/amendment/schedule/convergence tasks"
+  ]
+}
