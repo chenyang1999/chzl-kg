@@ -1,0 +1,24 @@
+{
+  "final_cases": 40,
+  "old18_cases_preserved": 18,
+  "old_cases_missing": [],
+  "positive": {
+    "no_trade": false,
+    "risk_limits": {
+      "target_total_position_pct": 0,
+      "max_buy_orders_per_day": 0
+    },
+    "execution_pool": [],
+    "mode": "dry_run"
+  },
+  "partial": {
+    "no_trade": true,
+    "condition_count": 9,
+    "active_codes": [
+      "R6_REVIEW_INCOMPLETE"
+    ],
+    "r6_status": "unresolved"
+  },
+  "guard_startup_receipts": 207,
+  "finished": "2026-10-29T10:54:47.350522+08:00"
+}

@@ -1,0 +1,7 @@
+{
+  "scripts/research/run_research_shell.sh": "e946bdd4a5ebe4a380c18f54d7477b3467815a906ede085752059024c56ded82",
+  "scripts/plan/ensure_watchlist_plan.py": "9f27bb28fbc60dba3b76e1d67395f380af47dcced217a6afb6b94cd96ac95d33",
+  "scripts/research/build_research_summary.py": "32336a82851263497d0630e0f83ab5ae0004cd3518d4e316bb87067f5cce9fcc",
+  "skills/main_decision_v1/SKILL.md": "4a0524ebcd9a2113baa7f3862b5c889c290e1b65e4877a752e410c7ff09e4dec",
+  "tests/pipeline/test_signed_input_review_contract.py": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8"
+}

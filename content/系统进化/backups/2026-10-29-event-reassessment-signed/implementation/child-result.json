@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/pipeline/test_intraday_event_reassessment.py",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/d1-event-final-1039",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/d1-event-20261029-1039/pytest-final.xml",
+    "-q",
+    "--tb=short"
+  ],
+  "exit_code": 0,
+  "source_drift": [],
+  "finished": "2026-10-29T10:53:07.299796+08:00"
+}
