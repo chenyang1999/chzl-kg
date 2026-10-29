@@ -1,27 +1,27 @@
 {
-  "snapshot_at": "2026-10-28T17:40:42.053369+08:00",
-  "source": "todo_list revision 66; parent P1/P2 192 current-source-bound snapshot rerun at 17:38; one bounded review pending; frozen replay launched, result pending",
+  "snapshot_at": "2026-10-28T21:04:09.296759+08:00",
+  "source": "todo_list revision 71; actual interrupted implementation/JUnit inspected; bounded scratch-only recovery deleg_b619c756 accepted, not completed",
   "count_note": "Original 37 items include parents, subtasks, audits and implementations; not a work-completion percentage. New visual requirement separately registered.",
   "original_counts": {
     "total": 37,
-    "completed": 28,
-    "pending": 8,
-    "in_progress": 1
+    "completed": 29,
+    "pending": 6,
+    "in_progress": 2
   },
   "all_counts": {
     "total": 38,
-    "completed": 28,
-    "pending": 9,
-    "in_progress": 1
+    "completed": 29,
+    "pending": 7,
+    "in_progress": 2
   },
   "original_top_level_counts": {
     "completed": 1,
-    "pending": 7,
-    "in_progress": 1
+    "pending": 6,
+    "in_progress": 2
   },
   "original_leaf_counts": {
-    "completed": 28,
-    "pending": 3
+    "completed": 29,
+    "pending": 2
   },
   "items": [
     {
@@ -40,13 +40,13 @@
       "id": "budget",
       "status": "pending",
       "parent": null,
-      "title": "软目标主链限定闭包，全量计量与自然交付未证"
+      "title": "原生+安全网主控57通过；旧fixture已交回，25/30秒边界失败保留，全量用量未知"
     },
     {
       "id": "preplan",
-      "status": "pending",
+      "status": "in_progress",
       "parent": null,
-      "title": "分项确认128限定闭包；真实回放启动中，综合质量方法/排序迁移及自然确认发布仍未证"
+      "title": "质量评分第一版未验；原实施任务中断，已启动有限验证与交接恢复，不把旧51通过当整体完成"
     },
     {
       "id": "history",
@@ -58,7 +58,7 @@
       "id": "amendment",
       "status": "pending",
       "parent": null,
-      "title": "正式修订→实际loader/watcher已实现，主控192项亲跑；唯一独审待回、自然owner/上午资金未证"
+      "title": "17:54两处独审风险已真红绿修复，主控198限定闭包；自然owner和上午真实资金未证"
     },
     {
       "id": "schedule",
@@ -242,9 +242,9 @@
     },
     {
       "id": "premarket-replay-20261028",
-      "status": "pending",
+      "status": "completed",
       "parent": "acceptance",
-      "title": "28日冻结资料原角色无工具真实回放已启动；结果/校验/原文与JSON同版组装待收"
+      "title": "18:47真实模型回放及最小格式纠错交付：schema/原文逐字/同版组装通过，未发布或授实盘"
     },
     {
       "id": "vision-model-render-hot-swap",
@@ -258,9 +258,7 @@
   "production_release": false,
   "live_trading_authorized": false,
   "in_flight_not_accepted": [
-    "native_usage_legacy_fixture_and_joint_regression",
-    "frozen_replay_actual_model_result_and_finalization",
-    "auction_midday_bounded_review"
+    "bounded_trade_quality_validation_recovery"
   ],
   "report_scope": "Status/evidence consolidation with new bounded parent offline tests. No real business/model/market/trading runs; no overall production certification.",
   "previous_snapshot_at": "2026-10-28T12:45:14+08:00",
@@ -294,11 +292,12 @@
     "sell_atomic_closure": "/Users/chenyang/.hermes/cache/scratch/sell-three-fix-z9x0dmvc/parent-closure.json",
     "native_usage_review_pending": false,
     "native_usage_supervision_finding_fixed": true,
-    "native_usage_final_joint_regression_pending": true,
+    "native_usage_final_joint_regression_pending": false,
     "amendment_current_source_bound_parent_rerun": {
-      "tests": 192,
-      "receipt": "/Users/chenyang/.hermes/cache/scratch/p1p2-consumer-hm_9kni3/parent-verification-before-review.json",
-      "bounded_review_pending": true,
+      "tests": 198,
+      "receipt": "/Users/chenyang/.hermes/cache/scratch/parent-amendment-review-fix-_xunbv8c/parent-closure.json",
+      "bounded_review_pending": false,
+      "review_findings_fixed": 2,
       "production_or_natural_event_verified": false
     },
     "frozen_replay_actual_launch": {
@@ -310,7 +309,82 @@
       "tools": [],
       "production_publish": false,
       "paid_model_authorized": true,
-      "result_received_and_verified": false
+      "result_received_and_verified": true,
+      "launch_returncode": 0,
+      "finished_at": "2026-10-28T17:36:45.121646+08:00",
+      "paid_model_calls_reported_by_runtime": 1,
+      "schema_passed": false,
+      "finalize_exit_code": 2,
+      "raw_lines": 235,
+      "raw_sha256": "45cba974ba5d63b745c0f8df9921a67362c9f896a0508d6bd242cbcd33b77c5d",
+      "original_plan_sha256": "9abda4277e360ffe4061eaa531c53b37351caccac2bb1a9512b4e7db1fd579de",
+      "finalize_log": "/Users/chenyang/.hermes/cache/scratch/d1-lastmile-kuq_s5fz/parent-finalize.stdout.log",
+      "schema_errors": [
+        "status partial not in ok/stub/degraded",
+        "unsupported risk_limits fields effective_new_position_budget_pct,note"
+      ],
+      "transport_correction_delegation": "deleg_057cf025",
+      "correction_paid_call_not_yet_started": false,
+      "production_published": false
+    },
+    "native_current_partial_acceptance": "/Users/chenyang/.hermes/cache/scratch/parent-native-supervision-fix-5uigkgmz/parent-current-partial-acceptance.json",
+    "native_usage_legacy_deadline_failures_retained": true,
+    "frozen_replay_corrected_delivery": {
+      "closure": "/Users/chenyang/.hermes/cache/scratch/parent-replay-unknown-counts-bb20tdjg/parent-replay-closure.json",
+      "verification": "/Users/chenyang/.hermes/cache/scratch/parent-replay-unknown-counts-bb20tdjg/prepared/verification.json",
+      "schema_passed": true,
+      "raw_bytes_preserved": true,
+      "producer_binding_checked": true,
+      "independent_semantic_review": "not_performed",
+      "format_correction": {
+        "original_response_sha256": "45802ade7bbea1855bd328512ca57317069b3ccd197dcad35df595dcc3a7c3ff",
+        "original_plan_sha256": "9abda4277e360ffe4061eaa531c53b37351caccac2bb1a9512b4e7db1fd579de",
+        "original_raw_sha256": "45cba974ba5d63b745c0f8df9921a67362c9f896a0508d6bd242cbcd33b77c5d",
+        "original_generated_at": "2026-10-28T09:30:03.299936+00:00",
+        "correction_started_at": "2026-10-28T18:40:24.281442+08:00",
+        "correction_finished_at": "2026-10-28T18:43:23.609534+08:00",
+        "analysis_time_bound_to_original_launch": true,
+        "all_other_business_fields_unchanged": true
+      },
+      "tests": 77,
+      "production_published": false,
+      "scope_paid_requests_only": 2,
+      "known_total_tokens": null
+    },
+    "trade_quality_policy": {
+      "user_choice": "交易质量分：复用现有研究，按固定证据口径评分，不冒称胜率",
+      "implementation_status": "interrupted_unverified_recovery_running",
+      "delegation_id": "deleg_2950356d",
+      "baseline_arithmetic": "/Users/chenyang/.hermes/cache/scratch/trade-quality-policy-baseline-mp4fe7di/baseline.json",
+      "new_weights_invented": false,
+      "primitive_dimensions_contain_model_judgment": true,
+      "independent_empirical_calibration": false,
+      "live_permission_changed": false,
+      "original_delegation_id": "deleg_2950356d",
+      "recovery_delegation_id": "deleg_b619c756",
+      "original_completion_handoff_present": false,
+      "readback_evidence": {
+        "new_final": {
+          "tests": 51,
+          "failures": 0,
+          "current_source_closure": false
+        },
+        "bounded_consumers": {
+          "tests": 335,
+          "failures": 14,
+          "failure_classes": {
+            "legacy_rank_value_assertions": 2,
+            "existing_TState_fixture_import": 12
+          }
+        },
+        "history_separate": {
+          "tests": 56,
+          "failures": 1,
+          "failure_class": "settings-shim provenance assertion"
+        },
+        "full_joint_passed": false,
+        "timeouts_preserved": true
+      }
     }
   },
   "limited_engineering_closed": {
@@ -368,6 +442,18 @@
       },
       "production_certified": false,
       "broker_schema_or_existing_inflight_migration_verified": false
+    },
+    "auction_midday_actual_consumer": {
+      "tests": 198,
+      "closure": "/Users/chenyang/.hermes/cache/scratch/parent-amendment-review-fix-_xunbv8c/parent-closure.json",
+      "review_findings_fixed": 2,
+      "production_certified": false
+    },
+    "frozen_model_replay": {
+      "closure": "/Users/chenyang/.hermes/cache/scratch/parent-replay-unknown-counts-bb20tdjg/parent-replay-closure.json",
+      "report": "/Users/chenyang/.hermes/cache/scratch/parent-replay-unknown-counts-bb20tdjg/prepared/output/20261028.md",
+      "plan": "/Users/chenyang/.hermes/cache/scratch/parent-replay-unknown-counts-bb20tdjg/prepared/output/watchlist_plan.json",
+      "production_certified": false
     }
   },
   "business_open_gaps": [
@@ -377,5 +463,15 @@
     "authoritative usage coverage and normal timely delivery",
     "20261028 frozen-input real-model replay",
     "remaining separately tracked safety/amendment/schedule/convergence tasks"
+  ],
+  "remaining_not_accepted": [
+    "legacy_shell_deadline_stability",
+    "trade_quality_implementation_and_ranking_migration",
+    "natural_history_reading_and_adoption",
+    "natural_owner_confirmation_and_real_morning_funds",
+    "live_broker_schema_and_existing_inflight_migration",
+    "weekly_sequence_and_weekend_manifest",
+    "website_data_and_backtest_scope_protection",
+    "later_independent_vision_hot_swap"
   ]
 }
