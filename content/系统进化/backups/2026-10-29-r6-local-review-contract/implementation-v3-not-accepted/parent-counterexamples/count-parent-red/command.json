@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/parent_cases.py::test_partial_review_updates_explicit_zero_evaluated_count",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/count-parent-red/cases",
+    "--junitxml=/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/count-parent-red/junit.xml",
+    "--tb=short",
+    "-q"
+  ],
+  "environment": {
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/count-parent-red/home",
+    "HERMES_HOME": "/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/count-parent-red/home/.hermes",
+    "XDG_CONFIG_HOME": "/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/count-parent-red/home/.config",
+    "TMPDIR": "/Users/chenyang/.hermes/cache/scratch",
+    "PYTHONPATH": "/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/count-parent-red/bootstrap:/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a",
+    "R6_GUARD_DIR": "/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/count-parent-red/guards",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "LANG": "en_US.UTF-8"
+  },
+  "cwd": "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a"
+}

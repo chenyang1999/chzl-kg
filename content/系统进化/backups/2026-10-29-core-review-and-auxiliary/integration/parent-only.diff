@@ -1,0 +1,287 @@
+--- before/scripts/research/build_research_summary.py
++++ after/scripts/research/build_research_summary.py
+@@ -672,8 +672,9 @@
+         # Optional historical gaps do not stop R2 or erase current research.
+         return 0
+     if args.verify_inputs:
+-        _, saved = verify_saved_inputs(args.date, run_id=args.run_id,
++        version, saved = verify_saved_inputs(args.date, run_id=args.run_id,
+                                        auxiliary_paths=approved_d1_auxiliary_paths(args.date))
++        print("research_summary_input_version=" + json.dumps(version, sort_keys=True))
+         print("research_summary: authorized primary and bound auxiliary versions verified (gaps retained); model consumption not independently verified")
+         return 0 if saved.get("artifacts") else 1
+     since_ns = args.since_ns
+--- before/scripts/research/run_research_shell.sh
++++ after/scripts/research/run_research_shell.sh
+@@ -120,14 +120,16 @@
+         state stage --stage "$agent" --status running --attempt "$attempt"
+ 
+         local rc=0
++        local input_version=""
+         # Explicit conditional capture: set -e otherwise aborts background R1/
+         # R4/R7 before recording/retrying a nonzero Hermes exit.
+         # Verify the saved summary's exact authorized primary versions before
+         # D1, without widening its prompt/read scope or claiming model uptake.
+         if [[ "$agent" == "D1" ]]; then
+-            "$PYTHON" "$ROOT/scripts/research/build_research_summary.py" \
++            input_version=$("$PYTHON" "$ROOT/scripts/research/build_research_summary.py" \
+                 --date "$TRADE_DATE" --run-id "$CHZL_RESEARCH_RUN_ID" --verify-inputs \
+-                >> "$log" 2>&1 || rc=$?
++                2>> "$log") || rc=$?
++            printf '%s\n' "$input_version" >> "$log"
+         fi
+         if [[ $rc -eq 0 ]]; then
+             "$PYTHON" -B "$ROOT/scripts/research/native_usage.py" run \
+@@ -136,6 +138,19 @@
+                 --hermes "$HERMES_BIN" -p "$profile" -s "$skill" \
+                 --max-turns "$turns" --prompt "$prompt" \
+                 >> "$log" 2>&1 || rc=$?
++        fi
++
++        # Match the SAME saved primary/auxiliary binding before accepting D1.
++        if [[ "$agent" == "D1" && $rc -eq 0 ]]; then
++            local current_input_version=""
++            current_input_version=$("$PYTHON" "$ROOT/scripts/research/build_research_summary.py" \
++                --date "$TRADE_DATE" --run-id "$CHZL_RESEARCH_RUN_ID" --verify-inputs \
++                2>> "$log") || rc=$?
++            printf '%s\n' "$current_input_version" >> "$log"
++            if [[ $rc -eq 0 && "$current_input_version" != "$input_version" ]]; then
++                echo "D1 input binding changed during decision; delivery not accepted" >> "$log"
++                rc=1
++            fi
+         fi
+ 
+         # Native machine usage is observed by the launcher, never from prose.
+@@ -297,7 +312,7 @@
+ 
+ echo "[$(date '+%H:%M:%S')] Batch 5: D1"
+ 
+-D1_PROMPT="按 main_decision_v1 skill 综合 R1-R7 全部产出 + 四象限叉乘 + 数据源审计。消费 R6 hard_rejects 从 execution_pool 剔除。trade_date=${TRADE_DATE}。主研究仅使用本次 research_summary.json artifacts 列出的主产物，并沿用 input_manifest 的当前 run/attempt/receipt/hash 校验；失败或缺研究不视为通过，不读同日旧文件冒充本次研究。data/user_preferences.yaml 仅作既有只读政策输入，不是另一批研究。辅助材料仅可读取经用户另签、由受审调用方显式给出的精确路径与版本；当前 auxiliary_candidates 的 pending_approval 或 approved_adapter_only 均不构成 D1 读取授权。未提供已签授权与版本绑定时，不展开错题/观察通配符，不直接读 attention/emotion/calendar 等旁路，也不调用工具补抓；记录相应 skill 输入义务受阻并交回 owner，不把未读当无风险。读取许可不扩大写入范围或交易权限。decision_source 明确标注 llm。产出 data/plans/${TRADE_DATE}/watchlist_plan.json + chzl_kg/投研交易/盘前预案/${TRADE_DATE}.md 散文体。输出范围仅以上核心 JSON 与 KG 主 MD；不写 runtime 副本或其他附加 MD，若 skill 输出要求超出 profile 白名单则报告该项阻塞，勿越权。完成后退出。"
++D1_PROMPT="按 main_decision_v1 skill 综合 R1-R7 全部产出 + 四象限叉乘 + 数据源审计。消费 R6 hard_rejects 从 execution_pool 剔除。trade_date=${TRADE_DATE}。主研究仅使用本次 research_summary.json artifacts 列出的主产物，并沿用 input_manifest 的当前 run/attempt/receipt/hash 校验；失败或缺研究不视为通过，不读同日旧文件冒充本次研究。data/user_preferences.yaml 仅作既有只读政策输入，不是另一批研究。辅助读取只授权本交易日attention_signals.json与emotion_cycle.json两类已有快照：按main_decision_v1中的consume_bound_auxiliary_inputs及approved_d1_auxiliary_paths调用取得实际payload，只用input_manifest.bound_auxiliary_inputs已绑定版本，不混入R1-R7。auxiliary_candidates的pending_approval或approved_adapter_only仍不构成D1读取授权。缺失、非法或旧summary未绑定时保留具体缺口并交回owner，不补抓、不换日期、不现场重建绑定，不把未读当无风险；不展开错题/观察通配符，不直接读日历、账户或其他未授权旁路。启动与交付核对同一主研究/辅助版本；辅助读取成功不是研究就绪或交易通过。读取许可不扩大写入范围或交易权限。decision_source 明确标注 llm。产出 data/plans/${TRADE_DATE}/watchlist_plan.json + chzl_kg/投研交易/盘前预案/${TRADE_DATE}.md 散文体。输出范围仅以上核心 JSON 与 KG 主 MD；不写 runtime 副本或其他附加 MD，若 skill 输出要求超出 profile 白名单则报告该项阻塞，勿越权。完成后退出。"
+ 
+ if run_agent "D1" "main_decision_v1" "$ROOT/data/plans/${TRADE_DATE}/watchlist_plan.json" "$D1_PROMPT" "canghai-plan"; then
+     if [[ "$DRY_RUN" != "dry-run" ]]; then
+--- before/scripts/plan/ensure_watchlist_plan.py
++++ after/scripts/plan/ensure_watchlist_plan.py
+@@ -67,7 +67,7 @@
+ _LLM_PROMPT = (
+     "按 main_decision_v1 skill 综合 R1-R7 全部产出 + 四象限叉乘 + 数据源审计。"
+     "消费 R6 hard_rejects 从 execution_pool 剔除。trade_date={date}。"
+-    "主研究仅使用本次 research_summary.json artifacts 列出的主产物，并沿用 input_manifest 的当前 run/attempt/receipt/hash 校验；失败或缺研究不视为通过，不读同日旧文件冒充本次研究。data/user_preferences.yaml 仅作既有只读政策输入，不是另一批研究。辅助材料仅可读取经用户另签、由受审调用方显式给出的精确路径与版本；当前 auxiliary_candidates 的 pending_approval 或 approved_adapter_only 均不构成 D1 读取授权。未提供已签授权与版本绑定时，不展开错题/观察通配符，不直接读 attention/emotion/calendar 等旁路，也不调用工具补抓；记录相应 skill 输入义务受阻并交回 owner，不把未读当无风险。读取许可不扩大写入范围或交易权限。"
++    "主研究仅使用本次 research_summary.json artifacts 列出的主产物，并沿用 input_manifest 的当前 run/attempt/receipt/hash 校验；失败或缺研究不视为通过，不读同日旧文件冒充本次研究。data/user_preferences.yaml 仅作既有只读政策输入，不是另一批研究。辅助读取只授权本交易日attention_signals.json与emotion_cycle.json两类已有快照：按main_decision_v1中的consume_bound_auxiliary_inputs及approved_d1_auxiliary_paths调用取得实际payload，只用input_manifest.bound_auxiliary_inputs已绑定版本，不混入R1-R7。auxiliary_candidates的pending_approval或approved_adapter_only仍不构成D1读取授权。缺失、非法或旧summary未绑定时保留具体缺口并交回owner，不补抓、不换日期、不现场重建绑定，不把未读当无风险；不展开错题/观察通配符，不直接读日历、账户或其他未授权旁路。启动与交付核对同一主研究/辅助版本；辅助读取成功不是研究就绪或交易通过。读取许可不扩大写入范围或交易权限。"
+     "产出 data/plans/{date}/watchlist_plan.json + chzl_kg/投研交易/盘前预案/{date}.md 散文体。"
+     "decision_source 明确标注 llm；输出范围仅以上核心 JSON 与 KG 主 MD；不写 runtime 副本或其他附加 MD，超出 profile 白名单的输出须报告阻塞，不越权。完成后退出。"
+ )
+@@ -273,7 +273,7 @@
+     # Same read-only version contract as the shell's --verify-inputs. The
+     # standalone safety net has no shell run env: use the current health owner,
+     # never the summary's self-declared run as authority. No new fallback gate.
+-    from scripts.research.build_research_summary import verify_saved_inputs
++    from scripts.research.build_research_summary import approved_d1_auxiliary_paths, verify_saved_inputs
+     try:
+         state_path = ROOT / "data/health" / f"research_pipeline_{date}.json"
+         state = read_object(state_path) if state_path.exists() else {}
+@@ -281,7 +281,8 @@
+                 and (not isinstance(state.get("run_id"), str) or not state["run_id"])):
+             raise ValueError("current research state has no run identity")
+         run_id = os.environ.get("CHZL_RESEARCH_RUN_ID") or state.get("run_id") or ""
+-        input_version, saved = verify_saved_inputs(date, run_id=run_id, root=ROOT)
++        input_version, saved = verify_saved_inputs(
++            date, run_id=run_id, root=ROOT, auxiliary_paths=approved_d1_auxiliary_paths(date))
+         if not saved.get("artifacts"):
+             raise ValueError("summary has no authorized primary inputs")
+     except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
+@@ -338,7 +339,8 @@
+         if (not run_id and state_path.exists()
+                 and not _observation_only_state(read_object(state_path), date)):
+             raise ValueError("research run appeared during standalone LLM retry")
+-        current_version, _ = verify_saved_inputs(date, run_id=run_id, root=ROOT)
++        current_version, _ = verify_saved_inputs(
++            date, run_id=run_id, root=ROOT, auxiliary_paths=approved_d1_auxiliary_paths(date))
+         if current_version != input_version:
+             raise ValueError("summary input version changed during LLM retry")
+         # Canonical -> runtime, never the reverse. A valid empty/no-trade plan
+--- before/skills/main_decision_v1/SKILL.md
++++ after/skills/main_decision_v1/SKILL.md
+@@ -40,9 +40,23 @@
+ 
+ - 主研究版本由实际当前研究 owner 的 run_id、summary 交付回执及其 input_manifest 共同定位；复用 `verify_saved_inputs` / `consume_authorized_inputs` 的原校验，核对 artifacts、run/attempt、receipt 和内容摘要。启动前与交付后必须同版；目录同日、mtime 更新、正文自报“本批”均不能替代绑定。辅助输入不得覆盖主研究版本或混入 artifacts.R1–R7。
+ - `data/user_preferences.yaml` 是既有只读政策输入，须保留实际读取版本，不借本条改值。技能/契约读取与业务辅助材料读取分开；下列历史路径、工具示例和“必读”义务本身不是本轮授权。
+-- 错题、人气、事件日历、观察材料等，仅消费用户已明确签核、由受审调用方提供的精确路径、版本摘要及适用时点集合；启动/结束都核同一集合。复用现有辅助适配器不等于已接通生产：`auxiliary_candidates` 的 `pending_approval` / `approved_adapter_only` 不授予 D1 权限，模型或报告中的 authorized=true 也不能自签。
++- 已批准的辅助读取仅为`data/research/{trade_date}/attention_signals.json`及`data/research/{trade_date}/emotion_cycle.json`两类既有快照。受审调用代码用`approved_d1_auxiliary_paths`固定精确路径，以`input_manifest.bound_auxiliary_inputs`绑定本批主版本、run/attempt与辅助摘要；D1通过`consume_bound_auxiliary_inputs`取得单独返回的实际payload，不将辅助对象混入artifacts.R1–R7。启动/交付复核同一主研究及辅助版本；旧summary无绑定时不得现场重建或补读后来到达的文件。
++- 其余错题、事件日历、观察材料、账户及其他候选没有因此获得许可；不展开通配符、不补抓、不换日期或找替代文件。`auxiliary_candidates`的`pending_approval`/`approved_adapter_only`仍只是适配证据，模型或报告中的 authorized=true 也不能自签。辅助材料的事实日期、观察窗口与生成时间原样保留，不把T-1指标伪装为当日盘中数据。
+ - 未获许可或无版本绑定：不展开 corrections/observation 等通配符，不现场抓数/算新研究，不调用交易账户；在本轮原文和既有 meta 文本留具体缺项及 owner，不能把未读解释成“无错题/无人气/无大事件”。其中必要门禁未完成时保留未就绪、禁新与重评义务；不以新增默认结论填空。
+-- 事件日历尚无此轮已批准的规范输入路径，不假定新建 calendar 文件或任选历史报告。辅助输入的 owner、精确路径集合、时点与失效规则需另签；未签继续受阻。只读许可与核心 JSON/KG 主 MD 的写许可分开，所有原交易门禁不变。
++- 事件日历尚无此轮已批准的规范输入路径，不假定新建calendar文件或任选历史报告；不把两类快照许可扩为其他类别的读取许可。只读许可与核心JSON/KG主MD的写许可分开，所有原交易门禁不变。
++
++两类快照的实际读取使用已有工作对象`saved`（本轮已核版本的summary）、`date`与项目`ROOT`：
++
++```python
++from scripts.research.build_research_summary import (
++    approved_d1_auxiliary_paths, consume_bound_auxiliary_inputs,
++)
++auxiliary = consume_bound_auxiliary_inputs(
++    saved, root=ROOT, approved_paths=approved_d1_auxiliary_paths(date),
++)
++```
++
++逐项使用`available`条目的`payload`并引用实际版本/时点；`unavailable`仅表示绑定时的缺口，没有payload，不补0/false或“无风险”。消费者返回内容和绑定成功不认证模型已理解或采用；本轮正文说明实际采用/未采用及缺口，不能因此解除R6、禁新或有效零预算。盘中事件差分重评仍按Step 3.5.9的独立输入边界运行，不因这里的正常D1接线新增其前置依赖。
+ 
+ 
+ ### 必填
+--- before/tests/pipeline/test_d1_auxiliary_caller_wiring.py
++++ after/tests/pipeline/test_d1_auxiliary_caller_wiring.py
+@@ -0,0 +1,153 @@
++"""Synthetic D1 caller regression; no model, business data or publication.
++
++Exercise the real safety-net retry function and real bound input consumers.
++Only the external model transport and downstream plan acceptance/publication
++are substituted: this is not a complete plan-schema or production-model test.
++The shell check below is syntax/source-order coverage, not a business replay.
++"""
++from __future__ import annotations
++
++from copy import deepcopy
++import importlib
++import json
++import os
++from pathlib import Path
++import re
++import shutil
++import sys
++from types import SimpleNamespace
++
++import pytest
++
++from test_bound_auxiliary_inputs import DATE, RUN, REPO, make, native, save
++
++
++def commit_summary(n, summary):
++    path = n.root / f"data/research/{DATE}/research_summary.json"
++    save(path, summary)
++    fp = n.a.file_version(n.root, path)
++    n.state["stages"]["summary"] = {"attempt": 1, "attempt_started_ns": fp["mtime_ns"] - 1}
++    n.state["contract_results"]["summary"] = {**fp, "passed": True, "run_id": RUN, "attempt": 1}
++    save(n.state_path, n.state)
++    return path
++
++
++@pytest.mark.parametrize("case", ["valid", "missing", "old-summary", "drift-before", "drift-during", "rebind-during"])
++def test_real_safety_net_rechecks_approved_auxiliary_before_acceptance(native, monkeypatch, case):
++    n = native
++    if case == "missing":
++        (n.root / n.scope["attention"][0]).unlink()
++    summary = make(n, approved=case != "old-summary")
++    commit_summary(n, summary)
++    if case == "drift-before":
++        save(n.root / n.scope["attention"][0], {"trade_date": DATE, "zero": 1})
++
++    plan_dir = n.root / "scripts/plan"
++    plan_dir.mkdir()
++    (plan_dir / "__init__.py").write_text("")
++    # Optional frozen source is used only for the baseline red comparison.
++    source = Path(os.environ.get("INPUT01_TEST_CALLER_SOURCE", str(REPO / "scripts/plan/ensure_watchlist_plan.py")))
++    shutil.copyfile(source, plan_dir / "ensure_watchlist_plan.py")
++    caller = importlib.import_module("scripts.plan.ensure_watchlist_plan")
++    monkeypatch.setenv("CHZL_RESEARCH_RUN_ID", RUN)
++    monkeypatch.setattr(caller, "_hermes_bin", lambda: "/synthetic/hermes")
++    verified, transports, publications, returned_aux = [], [], [], []
++    real_verify = n.b.verify_saved_inputs
++
++    def verify(*args, **kwargs):
++        verified.append(deepcopy(kwargs.get("auxiliary_paths")))
++        return real_verify(*args, **kwargs)
++
++    def fake_model(argv, **kwargs):
++        assert "canghai-plan" in argv and "main_decision_v1" in argv
++        transports.append(argv)
++        # The synthetic transport exercises the documented pull interface. It
++        # does not certify that an actual model read or understood these bytes.
++        returned_aux.append(n.b.consume_bound_auxiliary_inputs(summary, root=n.root, approved_paths=n.scope))
++        save(n.root / f"data/plans/{DATE}/watchlist_plan.json", {
++            "trade_date": DATE, "decision_source": "llm", "no_trade": True,
++            "generated_at": "2099-01-06T08:00:00+08:00",
++            "mode": "dry_run", "autonomous_trading_enabled": False,
++            "execution_pool": [], "risk_limits": {"new_buy_budget": 0},
++        })
++        if case == "drift-during":
++            save(n.root / n.scope["attention"][0], {"trade_date": DATE, "zero": 1})
++        if case == "rebind-during":
++            replacement = make(n)
++            replacement["synthetic_rebind"] = True
++            commit_summary(n, replacement)
++        return SimpleNamespace(returncode=0)
++
++    monkeypatch.setattr(n.b, "verify_saved_inputs", verify)
++    monkeypatch.setattr(caller.subprocess, "run", fake_model)
++    monkeypatch.setattr(caller, "plan_artifact", lambda *args, **kwargs: {"passed": True})
++    monkeypatch.setattr(caller, "publish_runtime_plan", lambda *args, **kwargs: publications.append(args))
++    accepted, detail = caller.retry_llm(DATE)
++    # Missing optional file is a bound gap. Missing protocol binding is not a
++    # file gap: the caller must not self-bind old research or launch a model.
++    preflight_blocked = case in {"drift-before", "old-summary"}
++    expected = case in {"valid", "missing"}
++    assert accepted is expected, detail
++    assert len(transports) == (0 if preflight_blocked else 1)
++    assert len(publications) == (1 if expected else 0)
++    assert verified == [n.scope] * (1 if preflight_blocked else 2)
++    if expected:
++        plan = json.loads((n.root / f"data/plans/{DATE}/watchlist_plan.json").read_text())
++        assert plan["no_trade"] is True and plan["risk_limits"]["new_buy_budget"] == 0
++        assert plan["execution_pool"] == [] and plan["autonomous_trading_enabled"] is False
++        aux = returned_aux[0]
++        if case == "valid":
++            assert aux["attention"]["payload"]["zero"] == 0
++            assert aux["emotion_cycle"]["payload"]["metrics_date"] == "20990105"
++        else:
++            assert aux["attention"]["status"] == "unavailable" and "payload" not in aux["attention"]
++
++
++def test_actual_cli_preflight_emits_same_summary_fingerprint(native, monkeypatch, capsys):
++    n = native
++    commit_summary(n, make(n))
++    monkeypatch.setattr(sys, "argv", ["build_research_summary.py", "--date", DATE, "--run-id", RUN, "--verify-inputs"])
++    outputs = []
++    for _ in range(2):
++        assert n.b.main() == 0
++        output = capsys.readouterr().out
++        line = next(line for line in output.splitlines() if line.startswith("research_summary_input_version="))
++        version = json.loads(line.split("=", 1)[1])
++        assert version == n.a.file_version(n.root, n.root / f"data/research/{DATE}/research_summary.json")
++        outputs.append(output)
++    assert outputs[0] == outputs[1]
++
++
++def test_prior_session_attention_window_is_preserved_not_rejected_or_relabelled(native):
++    n = native
++    # Match the existing producer's distinct target day and observation day.
++    payload = {**n.payloads["attention"], "requested_trade_date": DATE,
++               "resolved_trade_date": "20990105", "status": "degraded",
++               "degraded": ["today contains the latest completed session, not today's open"]}
++    save(n.root / n.scope["attention"][0], payload)
++    result = n.b.consume_bound_auxiliary_inputs(make(n), root=n.root, approved_paths=n.scope)
++    assert result["attention"]["status"] == "available"  # readable, not trade-approved
++    assert result["attention"]["payload"] == payload
++    assert result["attention"]["payload"]["status"] == "degraded"
++    assert result["attention"]["payload"]["resolved_trade_date"] == "20990105"
++
++
++def test_shell_rechecks_same_input_version_before_attempt_acceptance():
++    source = (REPO / "scripts/research/run_research_shell.sh").read_text()
++    function = source.split("run_agent() {", 1)[1].split("# 07:15", 1)[0]
++    first = function.index("input_version=$(")
++    model = function.index('"$ROOT/scripts/research/native_usage.py" run')
++    second = function.index("current_input_version=$(")
++    compare = function.index('"$current_input_version" != "$input_version"')
++    acceptance = function.index("state attempt-result")
++    assert first < model < second < compare < acceptance
++    assert function.count("--verify-inputs") == 2
++    # Both actual launcher prompts must permit the same two bound consumers.
++    match = re.search(r'^D1_PROMPT="([^\n]*)"$', source, re.M)
++    assert match is not None
++    normal = match.group(1)
++    safety = (REPO / "scripts/plan/ensure_watchlist_plan.py").read_text()
++    for text in [normal, safety]:
++        for required in ("attention_signals.json", "emotion_cycle.json", "consume_bound_auxiliary_inputs",
++                         "approved_d1_auxiliary_paths", "bound_auxiliary_inputs", "不补抓", "不把未读当无风险"):
++            assert required in text

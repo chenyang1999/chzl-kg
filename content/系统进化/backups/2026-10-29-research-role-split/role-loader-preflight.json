@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "mode": "baseline",
+      "loaded": true,
+      "exact_stripped_text_match": true,
+      "source_sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35",
+      "loaded_chars": 3009,
+      "invocation_mode_present": false
+    },
+    {
+      "mode": "candidate",
+      "loaded": true,
+      "exact_stripped_text_match": true,
+      "source_sha256": "02e14bd405246a3ed45c8bc1e2a78635018397b8a4b934798c226fee3ac0cb10",
+      "loaded_chars": 3348,
+      "invocation_mode_present": true
+    }
+  ],
+  "violations": [
+    {
+      "event": "subprocess.Popen"
+    },
+    {
+      "event": "open",
+      "basename": ".env"
+    }
+  ],
+  "paid_model_calls": 0,
+  "network_calls": 0,
+  "live_profile_written": false,
+  "passed": false
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="0.788" timestamp="2026-10-29T14:45:38.859814+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname=".hermes.cache.scratch.r6-parent-review-20261029.parent_cases" name="test_second_distinct_incomplete_target_can_be_reviewed_without_restarting_base" time="0.262"><failure message="ValueError: baseline summary version mismatch or already revised">../../../.hermes/cache/scratch/r6-parent-review-20261029/parent_cases.py:15: in test_second_distinct_incomplete_target_can_be_reviewed_without_restarting_base
+    result = n.s.run_r6_revision(n.root, DATE, 'second-target',
+../../../.hermes/cache/scratch/r6-parent-review-20261029/first-parent-red/cases/test_second_distinct_incomplet0/app/scripts/research/pipeline_state.py:498: in run_r6_revision
+    raise ValueError('baseline summary version mismatch or already revised')
+E   ValueError: baseline summary version mismatch or already revised</failure></testcase><testcase classname=".hermes.cache.scratch.r6-parent-review-20261029.parent_cases" name="test_new_hard_reject_without_original_contract_evidence_is_rejected" time="0.069"><failure message="Failed: DID NOT RAISE ValueError">../../../.hermes/cache/scratch/r6-parent-review-20261029/parent_cases.py:32: in test_new_hard_reject_without_original_contract_evidence_is_rejected
+    with pytest.raises(ValueError):
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname=".hermes.cache.scratch.r6-parent-review-20261029.parent_cases" name="test_new_valid_evidence_can_replace_old_incomplete_null_reference" time="0.065"><failure message="ValueError: null evidence cannot certify completion">../../../.hermes/cache/scratch/r6-parent-review-20261029/parent_cases.py:48: in test_new_valid_evidence_can_replace_old_incomplete_null_reference
+    revised, coverage = n.a.merge_r6_revision(original, delta, {A:[7]}, [A,B], sources)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/r6-parent-review-20261029/first-parent-red/cases/test_new_valid_evidence_can_re0/app/scripts/research/pipeline_artifacts.py:616: in merge_r6_revision
+    coverage = r6_coverage(result, codes, sources)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/r6-parent-review-20261029/first-parent-red/cases/test_new_valid_evidence_can_re0/app/scripts/research/pipeline_artifacts.py:537: in r6_coverage
+    raise ValueError('null evidence cannot certify completion')
+E   ValueError: null evidence cannot certify completion</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="0.086" timestamp="2026-10-29T13:53:54.995114+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname="tests.pipeline.test_r6_local_revision" name="test_explicit_local_branch_precedes_full_batch" time="0.002"><failure message="assert '--r6-local-review' in '#!/bin/bash\n# 沧海巨浪 · 研究端 R1-R7 shell wait 编排（替代 delegate_task process-local 陷阱）\n# 2026-07-06 用户签 B 口径：R1-R7 必须 LLM ...ss result in data/health/research_pipeline_%s.json) ===\\n\' &quot;$(date \'+%F %T\')&quot; &quot;$TRADE_DATE&quot;\nexit &quot;$PIPELINE_RC&quot;\n'">def test_explicit_local_branch_precedes_full_batch():
+        text = (REPO/'scripts/research/run_research_shell.sh').read_text()
+&gt;       assert '--r6-local-review' in text
+E       assert '--r6-local-review' in '#!/bin/bash\n# 沧海巨浪 · 研究端 R1-R7 shell wait 编排（替代 delegate_task process-local 陷阱）\n# 2026-07-06 用户签 B 口径：R1-R7 必须 LLM ...ss result in data/health/research_pipeline_%s.json) ===\\n\' "$(date \'+%F %T\')" "$TRADE_DATE"\nexit "$PIPELINE_RC"\n'
+
+tests/pipeline/test_r6_local_revision.py:91: AssertionError</failure></testcase><testcase classname="tests.pipeline.test_r6_local_revision" name="test_cross_terminal_revision_supported_without_restarting" time="0.028"><failure message="AssertionError: assert False&#10; +  where False = callable(None)&#10; +    where None = getattr(&lt;module 'scripts.research.pipeline_state' from '/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/scripts/research/pipeline_state.py'&gt;, 'run_r6_revision', None)&#10; +      where &lt;module 'scripts.research.pipeline_state' from '/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/scripts/research/pipeline_state.py'&gt; = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/...cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/data/research/20990106/research_summary.json')).s">native = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/...cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/data/research/20990106/research_summary.json'))
+
+    def test_cross_terminal_revision_supported_without_restarting(native):
+&gt;       assert callable(getattr(native.s, 'run_r6_revision', None))
+E       AssertionError: assert False
+E        +  where False = callable(None)
+E        +    where None = getattr(&lt;module 'scripts.research.pipeline_state' from '/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/scripts/research/pipeline_state.py'&gt;, 'run_r6_revision', None)
+E        +      where &lt;module 'scripts.research.pipeline_state' from '/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/scripts/research/pipeline_state.py'&gt; = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/...cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/data/research/20990106/research_summary.json')).s
+
+tests/pipeline/test_r6_local_revision.py:96: AssertionError</failure></testcase><testcase classname="tests.pipeline.test_r6_local_revision" name="test_global_boolean_does_not_prove_per_stock_review" time="0.023"><failure message="AttributeError: module 'scripts.research.pipeline_artifacts' has no attribute 'r6_coverage'">native = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_global_boolean_does_not_p0/...cache/scratch/r6-local-red-20261029/test_global_boolean_does_not_p0/app/data/research/20990106/research_summary.json'))
+
+    def test_global_boolean_does_not_prove_per_stock_review(native):
+        payload = {'formal_review_completed':True, 'review_passed':True,'hard_rejects':[]}
+&gt;       assert native.a.r6_coverage(payload, [A,B], {})['completed'] == []
+               ^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.research.pipeline_artifacts' has no attribute 'r6_coverage'
+
+tests/pipeline/test_r6_local_revision.py:101: AttributeError</failure></testcase></testsuite></testsuites>

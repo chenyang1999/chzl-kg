@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="6" time="0.565" timestamp="2026-10-29T12:04:11.150757+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname="" name="test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[valid]" time="0.082"><failure message="AssertionError: assert [None, None] == [{'attention'...cycle.json']}]&#10;  &#10;  At index 0 diff: None != {'attention': ['data/research/20990106/attention_signals.json'], 'emotion_cycle': ['data/research/20990106/emotion_cycle.json']}&#10;  Use -v to get more diff">tests/pipeline/test_d1_auxiliary_caller_wiring.py:93: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    assert verified == [n.scope] * (1 if preflight_blocked else 2)
+E   AssertionError: assert [None, None] == [{'attention'...cycle.json']}]
+E     
+E     At index 0 diff: None != {'attention': ['data/research/20990106/attention_signals.json'], 'emotion_cycle': ['data/research/20990106/emotion_cycle.json']}
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[missing]" time="0.079"><failure message="AssertionError: assert [None, None] == [{'attention'...cycle.json']}]&#10;  &#10;  At index 0 diff: None != {'attention': ['data/research/20990106/attention_signals.json'], 'emotion_cycle': ['data/research/20990106/emotion_cycle.json']}&#10;  Use -v to get more diff">tests/pipeline/test_d1_auxiliary_caller_wiring.py:93: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    assert verified == [n.scope] * (1 if preflight_blocked else 2)
+E   AssertionError: assert [None, None] == [{'attention'...cycle.json']}]
+E     
+E     At index 0 diff: None != {'attention': ['data/research/20990106/attention_signals.json'], 'emotion_cycle': ['data/research/20990106/emotion_cycle.json']}
+E     Use -v to get more diff</failure></testcase><testcase classname="" name="test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[old-summary]" time="0.059"><failure message="ValueError: reviewed auxiliary binding missing or main version/scope changed">tests/pipeline/test_d1_auxiliary_caller_wiring.py:85: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    accepted, detail = caller.retry_llm(DATE)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/input01-parent-integrated/red-cases/test_real_safety_net_rechecks_2/isolated-application/scripts/plan/ensure_watchlist_plan.py:318: in retry_llm
+    proc = subprocess.run(
+tests/pipeline/test_d1_auxiliary_caller_wiring.py:66: in fake_model
+    returned_aux.append(n.b.consume_bound_auxiliary_inputs(summary, root=n.root, approved_paths=n.scope))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/input01-parent-integrated/red-cases/test_real_safety_net_rechecks_2/isolated-application/scripts/research/build_research_summary.py:327: in consume_bound_auxiliary_inputs
+    raise ValueError("reviewed auxiliary binding missing or main version/scope changed")
+E   ValueError: reviewed auxiliary binding missing or main version/scope changed</failure></testcase><testcase classname="" name="test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[drift-before]" time="0.056"><failure message="ValueError: attention: auxiliary input version changed">tests/pipeline/test_d1_auxiliary_caller_wiring.py:85: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    accepted, detail = caller.retry_llm(DATE)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/input01-parent-integrated/red-cases/test_real_safety_net_rechecks_3/isolated-application/scripts/plan/ensure_watchlist_plan.py:318: in retry_llm
+    proc = subprocess.run(
+tests/pipeline/test_d1_auxiliary_caller_wiring.py:66: in fake_model
+    returned_aux.append(n.b.consume_bound_auxiliary_inputs(summary, root=n.root, approved_paths=n.scope))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/input01-parent-integrated/red-cases/test_real_safety_net_rechecks_3/isolated-application/scripts/research/build_research_summary.py:341: in consume_bound_auxiliary_inputs
+    raise ValueError(f"{name}: auxiliary input version changed")
+E   ValueError: attention: auxiliary input version changed</failure></testcase><testcase classname="" name="test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[drift-during]" time="0.073"><failure message="AssertionError: LLM 重跑成功：execution_pool=0 只&#10;assert True is False">tests/pipeline/test_d1_auxiliary_caller_wiring.py:90: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    assert accepted is expected, detail
+E   AssertionError: LLM 重跑成功：execution_pool=0 只
+E   assert True is False</failure></testcase><testcase classname="" name="test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[rebind-during]" time="0.094"><failure message="AssertionError: assert [None, None] == [{'attention'...cycle.json']}]&#10;  &#10;  At index 0 diff: None != {'attention': ['data/research/20990106/attention_signals.json'], 'emotion_cycle': ['data/research/20990106/emotion_cycle.json']}&#10;  Use -v to get more diff">tests/pipeline/test_d1_auxiliary_caller_wiring.py:93: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    assert verified == [n.scope] * (1 if preflight_blocked else 2)
+E   AssertionError: assert [None, None] == [{'attention'...cycle.json']}]
+E     
+E     At index 0 diff: None != {'attention': ['data/research/20990106/attention_signals.json'], 'emotion_cycle': ['data/research/20990106/emotion_cycle.json']}
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

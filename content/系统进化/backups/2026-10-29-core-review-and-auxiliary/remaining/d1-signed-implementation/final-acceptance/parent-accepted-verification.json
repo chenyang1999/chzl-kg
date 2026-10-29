@@ -1,0 +1,22 @@
+{
+  "exit": 0,
+  "cases": 106,
+  "groups": {
+    "tests.pipeline.test_d1_selective_reassessment": 50,
+    "tests.pipeline.test_bound_auxiliary_inputs": 28,
+    "tests.pipeline.test_d1_auxiliary_caller_wiring": 9,
+    "tests.pipeline.test_signed_input_review_contract": 17,
+    "tests.pipeline.test_native_usage_observation": 2
+  },
+  "failures": [],
+  "errors": [],
+  "skipped": [],
+  "prior95_cases_preserved": true,
+  "source_count": 27,
+  "source_drift": [],
+  "guard_violations": [],
+  "guard_processes": 259,
+  "synthetic_child_processes": 90,
+  "unguarded_native_children": [],
+  "index_unchanged": true
+}

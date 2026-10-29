@@ -1,0 +1,242 @@
+F.........FFFFFFFFFFFFF......                                            [100%]
+=================================== FAILURES ===================================
+_____________ test_old_six_and_trusted_local_r6_actually_reach_d1 ______________
+tests/pipeline/test_d1_selective_reassessment.py:154: in test_old_six_and_trusted_local_r6_actually_reach_d1
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_old_six_and_trusted_local0/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+____ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[exit] _____
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca0/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+____ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[empty] ____
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca1/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+__ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[all_pass] ___
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca2/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+___ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[budget] ____
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca3/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+_ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[missing_budget] _
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca4/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+__ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[user_ban] ___
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca5/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+____ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[pool] _____
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca6/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+__ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[exit_rule] __
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca7/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+_ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[entry_rule] __
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca8/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+___ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[consent] ___
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca9/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+_ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[hard_reject] _
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca10/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+____ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[drift] ____
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca11/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+_ test_failed_or_unauthorized_candidate_preserves_last_valid_plan[wrong_binding] _
+tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca12/app/d1.count'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: fresh research batch; no fabricated fallback
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_old_six_and_trusted_local_r6_actually_reach_d1
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[exit]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[empty]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[all_pass]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[budget]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[missing_budget]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[user_ban]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[pool]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[exit_rule]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[entry_rule]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[consent]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[hard_reject]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[drift]
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[wrong_binding]
+14 failed, 15 passed in 8.49s

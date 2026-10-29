@@ -1,0 +1,40 @@
+{
+  "verified_at": "2026-10-29T14:32:37.470865+08:00",
+  "scope": "Backwards compatibility of approved auxiliary-input binding on this observed shared revision; not acceptance of new R6 revision business path or natural production",
+  "cases": 54,
+  "exit": 0,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "audit_violations": 0,
+  "run_drift": [],
+  "native_case_name_parameter_multiset_matches_original54": true,
+  "historical_junit_classname_empty": true,
+  "identity_binding": "Unique original names plus identical three test-source hashes bind to current native module/path/parameter identities; historical raw identities are not rewritten",
+  "archive_first_attempt": {
+    "exit": 1,
+    "reason": "strict raw classname comparison failed because historical classname is empty; not a business test failure",
+    "fixed_by": "explicit lossless identity binding, no pytest rerun or test/assert change"
+  },
+  "source_sha256": {
+    "docs/06-专题-反证机制.md": "c6af453bd6aec812274d9a72ca0154f5f3733d89d9ad8ec34bf9e89667c520f7",
+    "docs/agents/R6-反证Agent.md": "2215386a0065f1f0e9607b07f321e65dc840b0c142c4929a852dff1b9918487e",
+    "scripts/plan/ensure_watchlist_plan.py": "08688d64512fbda8db711195298cba5ff659fa4cce32402f91fa8208f504b5a1",
+    "scripts/research/build_research_summary.py": "afd5a5b4ea09ed12f3ad4c3ad3fe456ae3312f01759c911d1e782d0669c67c44",
+    "scripts/research/native_usage.py": "a1dd43f16d814ee9c75387103be2f07c4cd708d7aac8fe7df01eb3aaa7e7c1c0",
+    "scripts/research/pipeline_artifacts.py": "4e351c1494b1ccf1efb6013dbc7d59f5a01cfc14ca0d89c8d49ac6af2b54a5ca",
+    "scripts/research/pipeline_state.py": "1feb3d5522747b7776d8db06180f155c4279a93bff185651608ae130c30d3e66",
+    "scripts/research/run_research_shell.sh": "b146e3923ceef93e6dc9953532c6afe69fa0319c7f040fdc34c29b80a8e3759b",
+    "skills/analyze_devil_advocate_v1/SKILL.md": "b6ab02eaf3f7b7b6ebb775d3a5b5f38cb4009e715494e14236b4ca00019e1d25",
+    "skills/main_decision_v1/SKILL.md": "72bc196a0690af6d5a5a74efaa33a9f7c1e9683eeafd5efb47fbac7215d50f2b",
+    "tests/pipeline/test_bound_auxiliary_inputs.py": "166ffe44ccc8cda58e65b3a1254bdb0fbcd207dd98d28645ea749ad7058ab25c",
+    "tests/pipeline/test_d1_auxiliary_caller_wiring.py": "55bfbb32f860bb91684c7215a70d4a628c6187de544e93267b6e55e5422be4ad",
+    "tests/pipeline/test_signed_input_review_contract.py": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8"
+  },
+  "source_changes_after_run_before_archive": [],
+  "further_research_writer_changes_require_affected_revalidation": true,
+  "d1_pending_diff_applied": false,
+  "latest_explicit_d1_diff_clarification": "timed_out/unanswered",
+  "real_recovery_or_model_run": false,
+  "price154_not_rerun": true
+}

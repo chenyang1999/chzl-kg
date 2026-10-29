@@ -1,0 +1,73 @@
+FFFFFF                                                                   [100%]
+=================================== FAILURES ===================================
+__ test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[valid] ___
+tests/pipeline/test_d1_auxiliary_caller_wiring.py:93: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    assert verified == [n.scope] * (1 if preflight_blocked else 2)
+E   AssertionError: assert [None, None] == [{'attention'...cycle.json']}]
+E     
+E     At index 0 diff: None != {'attention': ['data/research/20990106/attention_signals.json'], 'emotion_cycle': ['data/research/20990106/emotion_cycle.json']}
+E     Use -v to get more diff
+----------------------------- Captured stdout call -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+_ test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[missing] __
+tests/pipeline/test_d1_auxiliary_caller_wiring.py:93: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    assert verified == [n.scope] * (1 if preflight_blocked else 2)
+E   AssertionError: assert [None, None] == [{'attention'...cycle.json']}]
+E     
+E     At index 0 diff: None != {'attention': ['data/research/20990106/attention_signals.json'], 'emotion_cycle': ['data/research/20990106/emotion_cycle.json']}
+E     Use -v to get more diff
+----------------------------- Captured stdout call -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+_ test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[old-summary] _
+tests/pipeline/test_d1_auxiliary_caller_wiring.py:85: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    accepted, detail = caller.retry_llm(DATE)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/input01-parent-integrated/red-cases/test_real_safety_net_rechecks_2/isolated-application/scripts/plan/ensure_watchlist_plan.py:318: in retry_llm
+    proc = subprocess.run(
+tests/pipeline/test_d1_auxiliary_caller_wiring.py:66: in fake_model
+    returned_aux.append(n.b.consume_bound_auxiliary_inputs(summary, root=n.root, approved_paths=n.scope))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/input01-parent-integrated/red-cases/test_real_safety_net_rechecks_2/isolated-application/scripts/research/build_research_summary.py:327: in consume_bound_auxiliary_inputs
+    raise ValueError("reviewed auxiliary binding missing or main version/scope changed")
+E   ValueError: reviewed auxiliary binding missing or main version/scope changed
+----------------------------- Captured stdout call -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+_ test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[drift-before] _
+tests/pipeline/test_d1_auxiliary_caller_wiring.py:85: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    accepted, detail = caller.retry_llm(DATE)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/input01-parent-integrated/red-cases/test_real_safety_net_rechecks_3/isolated-application/scripts/plan/ensure_watchlist_plan.py:318: in retry_llm
+    proc = subprocess.run(
+tests/pipeline/test_d1_auxiliary_caller_wiring.py:66: in fake_model
+    returned_aux.append(n.b.consume_bound_auxiliary_inputs(summary, root=n.root, approved_paths=n.scope))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/input01-parent-integrated/red-cases/test_real_safety_net_rechecks_3/isolated-application/scripts/research/build_research_summary.py:341: in consume_bound_auxiliary_inputs
+    raise ValueError(f"{name}: auxiliary input version changed")
+E   ValueError: attention: auxiliary input version changed
+----------------------------- Captured stdout call -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+_ test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[drift-during] _
+tests/pipeline/test_d1_auxiliary_caller_wiring.py:90: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    assert accepted is expected, detail
+E   AssertionError: LLM 重跑成功：execution_pool=0 只
+E   assert True is False
+----------------------------- Captured stdout call -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+_ test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[rebind-during] _
+tests/pipeline/test_d1_auxiliary_caller_wiring.py:93: in test_real_safety_net_rechecks_approved_auxiliary_before_acceptance
+    assert verified == [n.scope] * (1 if preflight_blocked else 2)
+E   AssertionError: assert [None, None] == [{'attention'...cycle.json']}]
+E     
+E     At index 0 diff: None != {'attention': ['data/research/20990106/attention_signals.json'], 'emotion_cycle': ['data/research/20990106/emotion_cycle.json']}
+E     Use -v to get more diff
+----------------------------- Captured stdout call -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+=========================== short test summary info ============================
+FAILED ../../../../../dev::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[valid]
+FAILED ../../../../../dev::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[missing]
+FAILED ../../../../../dev::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[old-summary]
+FAILED ../../../../../dev::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[drift-before]
+FAILED ../../../../../dev::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[drift-during]
+FAILED ../../../../../dev::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[rebind-during]
+6 failed in 0.56s
+AUDIT_RESULT {"pytest_exit": 1, "violations": []}

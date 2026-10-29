@@ -1,0 +1,326 @@
+[
+  {
+    "historical_classname": "",
+    "name": "test_actual_summary_and_consumers_preserve_main_and_auxiliary_identity",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_only_reviewed_paths_read_and_default_never_promotes_adapter",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[missing]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[wrong_date]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[missing_date]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[not_object]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[bad_json]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[symlink]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[bytes]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[mtime]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[deleted]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[date]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[path]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[hash]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[size]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[schema]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[run]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[main_version]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[main_attempt]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[receipt]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_drift_rejected_even_with_rehashed_manifest[projection]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_reviewed_caller_cannot_expand_approved_scope[extra]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_reviewed_caller_cannot_expand_approved_scope[wrong_date]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_reviewed_caller_cannot_expand_approved_scope[traversal]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_reviewed_caller_cannot_expand_approved_scope[absolute]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_reviewed_caller_cannot_expand_approved_scope[wildcard]",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_saved_summary_pre_and_post_delivery_rechecks_bound_versions",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_cli_uses_reviewed_code_for_actual_binding_and_preflight",
+    "current_classname": "tests.pipeline.test_bound_auxiliary_inputs",
+    "path": "tests/pipeline/test_bound_auxiliary_inputs.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_consumer_preserves_partial_objects_zero_and_veto",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_consumer_rejects_version_or_identity_drift[bytes]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_consumer_rejects_version_or_identity_drift[run]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_consumer_rejects_version_or_identity_drift[attempt]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_consumer_rejects_version_or_identity_drift[receipt]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_consumer_rejects_version_or_identity_drift[mapping]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_consumer_rejects_version_or_identity_drift[projection]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_auxiliary_default_does_not_read_and_opt_in_is_not_d1_permission",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_auxiliary_adapter_rejects_outside_exact_candidate_scope[../.env]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_auxiliary_adapter_rejects_outside_exact_candidate_scope[/outside/attention_signals.json]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_auxiliary_adapter_rejects_outside_exact_candidate_scope[data/unapproved.json]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_actual_launch_prompts_keep_signed_read_and_write_boundaries[normal-shell]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_actual_launch_prompts_keep_signed_read_and_write_boundaries[safety-net]",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_normal_and_safety_net_use_the_same_signed_read_boundary",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_r6_signed_contract_removes_blanket_gate_but_not_final_permission",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_d1_signed_auxiliary_contract_preserves_separate_event_reassessment",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_confirmed_required_review_scope_and_auxiliary_downgrade_are_explicit",
+    "current_classname": "tests.pipeline.test_signed_input_review_contract",
+    "path": "tests/pipeline/test_signed_input_review_contract.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[valid]",
+    "current_classname": "tests.pipeline.test_d1_auxiliary_caller_wiring",
+    "path": "tests/pipeline/test_d1_auxiliary_caller_wiring.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[missing]",
+    "current_classname": "tests.pipeline.test_d1_auxiliary_caller_wiring",
+    "path": "tests/pipeline/test_d1_auxiliary_caller_wiring.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[old-summary]",
+    "current_classname": "tests.pipeline.test_d1_auxiliary_caller_wiring",
+    "path": "tests/pipeline/test_d1_auxiliary_caller_wiring.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[drift-before]",
+    "current_classname": "tests.pipeline.test_d1_auxiliary_caller_wiring",
+    "path": "tests/pipeline/test_d1_auxiliary_caller_wiring.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[drift-during]",
+    "current_classname": "tests.pipeline.test_d1_auxiliary_caller_wiring",
+    "path": "tests/pipeline/test_d1_auxiliary_caller_wiring.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[rebind-during]",
+    "current_classname": "tests.pipeline.test_d1_auxiliary_caller_wiring",
+    "path": "tests/pipeline/test_d1_auxiliary_caller_wiring.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_actual_cli_preflight_emits_same_summary_fingerprint",
+    "current_classname": "tests.pipeline.test_d1_auxiliary_caller_wiring",
+    "path": "tests/pipeline/test_d1_auxiliary_caller_wiring.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_prior_session_attention_window_is_preserved_not_rejected_or_relabelled",
+    "current_classname": "tests.pipeline.test_d1_auxiliary_caller_wiring",
+    "path": "tests/pipeline/test_d1_auxiliary_caller_wiring.py"
+  },
+  {
+    "historical_classname": "",
+    "name": "test_shell_rechecks_same_input_version_before_attempt_acceptance",
+    "current_classname": "tests.pipeline.test_d1_auxiliary_caller_wiring",
+    "path": "tests/pipeline/test_d1_auxiliary_caller_wiring.py"
+  }
+]

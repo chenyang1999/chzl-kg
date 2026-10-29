@@ -1,0 +1,30 @@
+{
+  "exit_code": 1,
+  "cases": [
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_real_normal_shell_delivery_can_later_use_selective_reassessment",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    }
+  ],
+  "source_unchanged": true,
+  "index_unchanged": true,
+  "guard_violations": [],
+  "guard_pids": [
+    17316,
+    17527,
+    17529,
+    17530,
+    17531,
+    17533,
+    17534,
+    17535,
+    17536,
+    17537
+  ],
+  "native_child_pids": [
+    17531
+  ],
+  "unguarded_native_children": []
+}

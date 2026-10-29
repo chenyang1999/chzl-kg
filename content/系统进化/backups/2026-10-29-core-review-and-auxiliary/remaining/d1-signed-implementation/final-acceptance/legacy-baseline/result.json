@@ -1,0 +1,457 @@
+{
+  "exit_code": 1,
+  "cases": [
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[missing_summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[legacy_summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[primary_same_mtime]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[missing_primary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[wrong_run]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[attempt]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[corrupt_state]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[env_run]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[old_summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[empty_state]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_valid_versioned_partial_and_zero_budget_delivery[True-False]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_valid_versioned_partial_and_zero_budget_delivery[False-False]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_valid_versioned_partial_and_zero_budget_delivery[True-True]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[primary_same_mtime]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[missing_summary]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[wrong_run]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[attempt]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[old_summary]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_new_valid_summary_during_llm_cannot_switch_input_batch",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_standalone_cannot_deliver_after_new_run_appears",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_preflight_failure_preserves_rejected_llm_bytes[False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_preflight_failure_preserves_rejected_llm_bytes[True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_failed_preflight_does_not_add_rule_fallback_completeness_gate[False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_failed_preflight_does_not_add_rule_fallback_completeness_gate[True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[unready_live-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[unready_live-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[unready_live-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[unready_live-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[missing_generated-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[missing_generated-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[missing_generated-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[missing_generated-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[bad_pool-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[bad_pool-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[bad_pool-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[bad_pool-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[wrong_date-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[wrong_date-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[wrong_date-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[wrong_date-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[nested_source-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[nested_source-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[nested_source-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[nested_source-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_fallback-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_fallback-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_fallback-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_fallback-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_sources-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_sources-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_sources-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_sources-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-absent]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-rejected_llm]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-fallback]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-absent]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-rejected_llm]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-fallback]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-removed-absent]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-removed-rejected_llm]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-removed-fallback]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-absent]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-rejected_llm]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-fallback]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-absent]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-rejected_llm]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-fallback]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-removed-absent]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-removed-rejected_llm]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-removed-fallback]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_real_absence_still_allows_conspicuous_rule_placeholder[False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_real_absence_still_allows_conspicuous_rule_placeholder[True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_old_llm_can_be_repaired_by_real_retry",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_missing_research_does_not_fabricate_or_launch",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    }
+  ],
+  "source_unchanged": true,
+  "index_unchanged": true,
+  "guard_violations": [],
+  "guard_pids": [
+    2528
+  ],
+  "native_child_pids": [],
+  "unguarded_native_children": []
+}

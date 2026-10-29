@@ -1,0 +1,198 @@
+{
+  "cases.json": {
+    "bytes": 19164,
+    "sha256": "fac1addd306884d980862c904900a15c50d08582a26c389e25b5311e0886091d"
+  },
+  "child-red/final.cases.json": {
+    "bytes": 12544,
+    "sha256": "4ad3553954e68af0af526fe26dfc75614f36f63baeacf838b7f8c35556594a36"
+  },
+  "child-red/final.command.json": {
+    "bytes": 1052,
+    "sha256": "7f998efafe715a7fac6b17c444732a55827b7dd18775690b4820f2e4ffe98974"
+  },
+  "child-red/final.log": {
+    "bytes": 188478,
+    "sha256": "22c70e14d0aca5e89eec26a7e6beeb4dd6cce7f16e0ad3823e8ad0e59b242035"
+  },
+  "child-red/final.receipt.json": {
+    "bytes": 128549,
+    "sha256": "990d2b6e8f0f14eaf9fdb0594aa45e5c0f74e942d91423554aa2c98f0c716666"
+  },
+  "child-red/final.summary.json": {
+    "bytes": 767,
+    "sha256": "4b2ca3d4603155ed1dc53fea989f23fba924cf83282587c4a9d5e183be2f2743"
+  },
+  "child-red/final.xml": {
+    "bytes": 16613,
+    "sha256": "089315988ac792eee0b7c476aac92bffeb9d2551aea4a6c289808c7a82d0f337"
+  },
+  "child-red/only.diff": {
+    "bytes": 9508,
+    "sha256": "b6fda35d48da2de7777867284eba18b7fc65d18c121e9ef9120762911111e7a9"
+  },
+  "closure.json": {
+    "bytes": 4815,
+    "sha256": "5c208639bdb65407cff4eada62c7d807f3645999365d9f174737054c9f9f573c"
+  },
+  "command.json": {
+    "bytes": 888,
+    "sha256": "17142ad4a43958b01e1a769e262e860827d89ce6ea0e99da38b75361d5d849c1"
+  },
+  "guarded-run.receipt.json": {
+    "bytes": 6582,
+    "sha256": "dbcca7566706fcfb50914383620d581d7315654e88b11d156f9f5d2976710501"
+  },
+  "junit.xml": {
+    "bytes": 22814,
+    "sha256": "71940c423277e94b01d2c177a5259ba2a3b7510de362392b941120df287437c8"
+  },
+  "parent-only.diff": {
+    "bytes": 3044,
+    "sha256": "20e439977dff0d91c67073d52a3ee48821acbd448e7e48d8cc401189ade1154e"
+  },
+  "pytest.log": {
+    "bytes": 9920,
+    "sha256": "45934e33755595ca4649369aa5015665eca83e925db89d0cbf4b63af59d29518"
+  },
+  "rr-parent-before.manifest.json": {
+    "bytes": 3539,
+    "sha256": "7b4679d6889a686305b4fa2a3df0e3a1f68a4f229ef8ce2f6f5cebc6c0d2397f"
+  },
+  "rr-parent-before.py": {
+    "bytes": 30679,
+    "sha256": "6df94c0b0d8c5ac6272f14c3eb3a0258e0c0a7c0bdc011baa14004728d284a48"
+  },
+  "tested-source/scripts/plan/apply_price_levels.py": {
+    "bytes": 11964,
+    "sha256": "124b0eee2ce1cef02f8abad1d4aefb651c3bcf535953833ba779527536175c0e"
+  },
+  "tested-source/src/__init__.py": {
+    "bytes": 32,
+    "sha256": "ceaa53d0f89d6b8615d90814b49e9ba659f98ce86e2c052a50eaeeea1d66de40"
+  },
+  "tested-source/src/plan/__init__.py": {
+    "bytes": 214,
+    "sha256": "fecae8e280caee2915aa279da5b0866f4dc3cf5f465fc5268e0864e590942d7f"
+  },
+  "tested-source/src/plan/buy_eligibility.py": {
+    "bytes": 12765,
+    "sha256": "a342b55787ec3a548c6133e1f9bd2872fb857b365266e8b2c10160f84ccf0d9f"
+  },
+  "tested-source/src/plan/price_levels.py": {
+    "bytes": 11583,
+    "sha256": "c547df87ecbf58f9e5f8ef9562e8d416c559d1681125f99d8cc11a8a97115380"
+  },
+  "tested-source/src/plan/risk_reward.py": {
+    "bytes": 6834,
+    "sha256": "0534c00839c6f4a1b600062e71c2825a2f46850cd4b9fefd0f8aa5db69696612"
+  },
+  "tested-source/tests/pipeline/test_price_contract_alignment.py": {
+    "bytes": 11018,
+    "sha256": "c96a3993f6d68cb697bac89495753494df1404c19a3204afc6d902be543c5088"
+  },
+  "tested-source/tests/pipeline/test_price_geometry_validity.py": {
+    "bytes": 8148,
+    "sha256": "c097c1be88fc845764dcf4a39b34fb9e3c7fb88362b2e5f77e64588800058f34"
+  },
+  "tested-source/tests/test_canghai_rr_scope_20261023.py": {
+    "bytes": 32329,
+    "sha256": "13d49451c298044d37aea23c3988b67b2ac395f6d130b6e4ed2bbf70fdb5bef6"
+  },
+  "tested-source/trading/__init__.py": {
+    "bytes": 102,
+    "sha256": "c205a161f9ec0524a2bb1065ee6e2c6327669cd13f60c665ac361fca96e347e3"
+  },
+  "tested-source/trading/execution_authorization.py": {
+    "bytes": 8956,
+    "sha256": "b7f1f95a0d6a9572f91795a353ccefacf9cfc28dbb10ac2c3d710e912166c927"
+  },
+  "tested-source/trading/executors/__init__.py": {
+    "bytes": 885,
+    "sha256": "f4d9a69ec4d9ab9d5a273babeebff072795b427f9d2dfd1fce3f2d08df464b1c"
+  },
+  "tested-source/trading/executors/_buy_common.py": {
+    "bytes": 5173,
+    "sha256": "b7033cb1d1ff926803c99eef9fe50f9857df7ffd7947e9c70d7248cf95f97d3f"
+  },
+  "tested-source/trading/executors/_sell_common.py": {
+    "bytes": 5754,
+    "sha256": "d685ba03f002ccdbdd81e010ec7c75b1224a4bb5efc080b15e3c653a4e57dea7"
+  },
+  "tested-source/trading/executors/base.py": {
+    "bytes": 7809,
+    "sha256": "21f630bbcda3588e0afa63cb27fc907f6ad2d50d5f01774e82707257924c9f9b"
+  },
+  "tested-source/trading/executors/execute_daban_confirm.py": {
+    "bytes": 891,
+    "sha256": "f0e1192d1cebcb3af50cec0a59e89406a9353e29088dd1e4f378084ba71cd009"
+  },
+  "tested-source/trading/executors/execute_exit_at_open.py": {
+    "bytes": 298,
+    "sha256": "51c49d104f0192c4ee4015e612a64c255ab9ae3ce37ea56a05cb66a33185ca9c"
+  },
+  "tested-source/trading/executors/execute_exit_if_no_new_high.py": {
+    "bytes": 305,
+    "sha256": "c60b4f4bff2090af01338ebc55297b351b3e308850b6447f7691cbb337dacfe2"
+  },
+  "tested-source/trading/executors/execute_intraday_break_exit.py": {
+    "bytes": 305,
+    "sha256": "4e98d82d567ee0d57c39f7fdd21c1804c11cac203d16326e5e753c03be1e00c2"
+  },
+  "tested-source/trading/executors/execute_leader_breakout.py": {
+    "bytes": 597,
+    "sha256": "6348163ffcaacd50777a15d901d9a8a26ceaeca3a80278feebbc1041c2bbc3a6"
+  },
+  "tested-source/trading/executors/execute_low_absorption_intraday.py": {
+    "bytes": 605,
+    "sha256": "63efa91777df548e6eb5ccf1eb1a3c4fea393b309ca26f1d0c1bc0db37c4c566"
+  },
+  "tested-source/trading/executors/execute_sector_switch_exit.py": {
+    "bytes": 304,
+    "sha256": "ea61e8f1fc9ab0facc4ada8910aa6d8ed73617779b231be5387546d64d76ea52"
+  },
+  "tested-source/trading/executors/execute_stop_loss_break.py": {
+    "bytes": 301,
+    "sha256": "d7467083db3842e5d03fc02133349b720013310f0f5fb58224b2a2199cdff7c1"
+  },
+  "tested-source/trading/executors/execute_t_add_pullback.py": {
+    "bytes": 1657,
+    "sha256": "682f8c5ae0b10cd6a9f624b587dd2128721143d6798a112aba66af5f435cbdd6"
+  },
+  "tested-source/trading/executors/execute_t_reduce_resistance.py": {
+    "bytes": 305,
+    "sha256": "9f87ac24a5073ee5f96f73465c9162f5907ed3571e17c9746dcc88e8d0202977"
+  },
+  "tested-source/trading/executors/execute_take_profit_hit.py": {
+    "bytes": 301,
+    "sha256": "8acd8e00f7aff21f37004f4e1088e0f7c398cf973a47d11a0080de5e8316b1be"
+  },
+  "tested-source/trading/executors/execute_trend_pullback_buy.py": {
+    "bytes": 600,
+    "sha256": "99a2cd16891c5d543d40d331f9f71985c880002e7bb7b0d29acf0e25bfa7fec3"
+  },
+  "tested-source/trading/executors/execute_volume_price_divergence.py": {
+    "bytes": 309,
+    "sha256": "0b1b6d420cdb6c2bb5b2b21947cf626c446fc3def4de442fd2a5c36c7a0a4a97"
+  },
+  "tested-source/trading/executors/registry.py": {
+    "bytes": 2203,
+    "sha256": "7d3baca1ab6439c293a5ff351e4cd1c489c4562dde458fcac60cfb7cdc959ea7"
+  },
+  "tested-source/trading/schema/watchlist_plan.py": {
+    "bytes": 5476,
+    "sha256": "693153c988eb7bcd8edd0db2d18c843cf7374857421483435a148d4b27c907ca"
+  },
+  "tested-source/trading/watcher/dispatch.py": {
+    "bytes": 8024,
+    "sha256": "0054258c59d80c8259d22c6889a55a2b0ff9902d735abcd401706f549d1ef5d2"
+  },
+  "tested-source/trading/watcher/session_context.py": {
+    "bytes": 3308,
+    "sha256": "3d4bdb5d98b03879f15356c316314dfea549820ea0c37d07ca568e843e25be20"
+  },
+  "verification.json": {
+    "bytes": 7703,
+    "sha256": "5479003c2ca989879ea48aa5facfc1a7e2d5b320e379a30e2cc57465b87cd91d"
+  }
+}

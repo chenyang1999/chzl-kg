@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-29T12:45:59.346050+08:00",
+  "job_id": "e6517ca3c755",
+  "job_last_run_at": "2026-10-29T11:40:43.987875+08:00",
+  "job_last_status": "ok",
+  "job_next_run_at": "2026-10-30T10:00:00+08:00",
+  "detector_state": "not_applicable",
+  "detector_checked_at": "2026-10-29T11:40:43+08:00",
+  "detector_handoff_status": null,
+  "output_is_file": false,
+  "output_is_directory": true,
+  "latest_job_output_metadata": {
+    "file": "2026-10-29_11-40-43.md",
+    "mtime": "2026-10-29T11:40:43.980037+08:00",
+    "sha256": "3bd060f8e3de65b1f033790c0ed08cd8ab4c543819ce685d7ffbb224cec17b5b",
+    "has_not_applicable_marker": true,
+    "contains_reassessment_handoff_failure_marker": false
+  },
+  "counts_as_confirmed_event_delivery": false,
+  "role_file_was_applied_after_observed_run": true
+}
