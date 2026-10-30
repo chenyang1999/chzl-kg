@@ -1,0 +1,39 @@
+{
+  "scope": "REASSESS-01 duplicate-work prevention, no production authority",
+  "other_coordinator_session": "20261029_121656_152b79",
+  "other_handoff": "/Users/chenyang/.hermes/cache/scratch/r6-per-stock-review-readmission-handoff-20261029.md",
+  "observed_stage": "R6 local research delivery accepted upstream at 16:06; this approved D1 implementation accepted by parent at 2026-10-29T17:47:31.498188+08:00 on current 27-source closure. Natural model/production adoption remains unverified",
+  "approved_contract_application": "chzl_kg/系统进化/backups/2026-10-29-r6-local-review-contract/contract-application.json",
+  "research_implementation_writer": "deleg_db660637/sa-0-217bd0ca",
+  "existing_auxiliary_consumer_compatibility": {
+    "verified_at": "2026-10-29T17:47:31.498188+08:00",
+    "closure": "d1-signed-implementation/final-acceptance/closure.json",
+    "full_cases_passed": 54,
+    "scope": "Original full 54 cases retained inside parent current joint106; also includes new selective/normal producer entry and continuous trusted R6 revision flow with synthetic external transport",
+    "final_merge_requirement": "Satisfied for the recorded current 27-source closure; changed affecting source requires a new bounded acceptance, not repeat review of this same version"
+  },
+  "shared_blockers": [
+    "terminal research runs cannot be silently restarted or edited",
+    "current main-input consumer requires actual current-run receipts; unchanged old inputs cannot be relabelled as new deliveries",
+    "per-stock four-required-review representation and local delivery implemented; real evidence supplementation and model adoption not certified by offline acceptance",
+    "global formal review completion and mode6-only audit are not per-stock four-risk approval",
+    "review delivery and plan readmission/budget authority must remain separate"
+  ],
+  "this_session_preserves": [
+    "approved D1 selective implementation and normal-shell input/output receipt connection accepted; no policy, profile, schedule or original business plan changed",
+    "R6-local shell entry prefix unchanged; normal D1 conditional hooks are the necessary downstream caller increment, not a competing research producer",
+    "scripts/research/pipeline_state.py and pipeline_artifacts.py not edited",
+    "no competing partial-review producer or receipt synthesizer added"
+  ],
+  "reuse_existing_evidence": {
+    "gap_table": "gaps/conf-data-bounded-analysis.json",
+    "gap_source_hashes_checked": 13,
+    "adoption_and_health": "adoption/chart-health-evidence.json",
+    "adoption_source_hashes_checked": 32
+  },
+  "approved_skill_patch": "price-and-selective-reassessment.pending.patch",
+  "skill_application_receipt": "d1-signed-implementation/skill-application.json",
+  "implementation_receipt": "d1-signed-implementation/final-acceptance/closure.json",
+  "real_recovery_confirmation": "not included in explicit isolated-only approval; no real recovery launched",
+  "trading_permission_changed": false
+}

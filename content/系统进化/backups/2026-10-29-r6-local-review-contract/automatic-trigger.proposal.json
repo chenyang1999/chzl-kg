@@ -1,0 +1,13 @@
+{
+  "prepared_at": "2026-10-29T18:39:43.775200+08:00",
+  "status": "pending_not_applied",
+  "approval_outcome": "timed_out",
+  "approval_response": null,
+  "target": "skills/main_decision_v1/SKILL.md",
+  "before_sha256": "3eb4f6695151edc5422ca3ffabccf84f2fce9b347406a46d5ec43193fe3bce5c",
+  "candidate_sha256": "b75bbeeb96e1e944ac2fe37512876393c15fcd30e073afaad175aab8b9ee7ae3",
+  "diff_sha256": "cc3adf1127763d5cba0c82310fb5024acf0a4d1773e30a96c8b3ebdd99b82184",
+  "automatic_trigger_implemented": false,
+  "production_or_model_or_account_started": false,
+  "stock_readmission_permission_changed": false
+}

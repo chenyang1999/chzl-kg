@@ -1,0 +1,10 @@
+{
+  "src/agents/chart_vision_agent.py": "492c80b38ee2b77a66635b61948663c37ed31ca9b3a15e3dc19649781e3f3847",
+  "src/analytics/lwc_chart_renderer.py": "066852c98780a9cd8d6f2dea4ce7595a9f2224f603fab2fe7f933c28816cfae1",
+  "scripts/fetch/run_chart_vision_snapshot.py": "43c185b576e68958a9af3484c14e33e08eb2c05d18a1c54642e4fb547b0835cf",
+  "src/research/candidate_pool.py": "7b970336e44c639e14af3955a735e9a4d6dd82e696527c9f31803fc64cf44e96",
+  "src/mcp/tools.py": "dd1175d99988a389792cc8095c0f6dc2c1054c8c328532f7f9ccdf5477fd7156",
+  "web/scripts/headless/lwc_headless_render.mjs": "2b17e371e1bd81a3d730383bfea5013d8217afeec3a76ee568636c9c1f35354d",
+  "web/scripts/headless/chart_template.html": "6d089c080c5d64fee38b8a3a0faa95065e74700c3751853b9777f11a27d491c7",
+  "tests/pipeline/test_chart_candidate_routing_guardrail.py": "6c5ccd38e0e0281f3b07f08d9215d7ca299ef2b00c4b9d1b61ced248c390aeae"
+}

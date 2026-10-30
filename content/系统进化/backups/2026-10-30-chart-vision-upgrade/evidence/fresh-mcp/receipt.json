@@ -1,0 +1,28 @@
+{
+  "verified_at": "2026-10-30T00:56:26.238363+08:00",
+  "native_stdio_mcp": true,
+  "fresh_service_closed_after_test": true,
+  "model": "deepseek-v4.1-flash-1017",
+  "response_model": "deepseek-flash",
+  "shared_input_context_verified": true,
+  "optional_indicators_verified": true,
+  "image": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_000977_SZ_20261030_005606_304535.png",
+  "image_sha256": "dd81a2a7769d70bb30b62926a8ebd8927ae8672dec54eaab08bdef3d51791396",
+  "run_id": "60700bd8971f44e1a70b274900746bf8",
+  "elapsed_s": 21.362,
+  "source_sha_before": {
+    "src/mcp/tools.py": "d2356d8aaa6d8b699180a55ec38f3633efacd32965e32285714c95fa36769238",
+    "src/mcp/charts_server.py": "28ecd3b61b4012976491f0bbcc99acbf7bb546421a41441d09c7c4515a7c40b7",
+    "src/agents/chart_vision_agent.py": "63af32c87e7b5b3ace7665a4f67b073308bafa75902f433d72d9a594ef362a87",
+    "src/analytics/chart_input.py": "f035d034d6376a21ec3f4c7cf78ee135d97b3b7efd460d01dfdc75bfca1851b0",
+    "src/analytics/lwc_chart_renderer.py": "1425e9f4a913397f626cb7010f3201bbfd446dcbf010acb39c83868049a8bea8"
+  },
+  "source_sha_after": {
+    "src/mcp/tools.py": "d2356d8aaa6d8b699180a55ec38f3633efacd32965e32285714c95fa36769238",
+    "src/mcp/charts_server.py": "28ecd3b61b4012976491f0bbcc99acbf7bb546421a41441d09c7c4515a7c40b7",
+    "src/agents/chart_vision_agent.py": "63af32c87e7b5b3ace7665a4f67b073308bafa75902f433d72d9a594ef362a87",
+    "src/analytics/chart_input.py": "f035d034d6376a21ec3f4c7cf78ee135d97b3b7efd460d01dfdc75bfca1851b0",
+    "src/analytics/lwc_chart_renderer.py": "1425e9f4a913397f626cb7010f3201bbfd446dcbf010acb39c83868049a8bea8"
+  },
+  "other_app_servers_restarted": false
+}

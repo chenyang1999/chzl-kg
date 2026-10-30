@@ -1,0 +1,101 @@
+--- a/scripts/plan/ensure_watchlist_plan.py
++++ b/scripts/plan/ensure_watchlist_plan.py
+@@ -223,7 +223,7 @@
+     """
+     from scripts.research.build_research_summary import (
+         approved_d1_auxiliary_paths, consume_authorized_inputs, verify_saved_inputs,
+-        _accepted_r6_revision,
++        _accepted_r6_revision, consume_bound_auxiliary_inputs,
+     )
+     from scripts.research.pipeline_artifacts import file_version, md_artifact, verified_delivery, safe_artifact_path
+     state = read_object(safe_artifact_path(ROOT, ROOT / f"data/health/research_pipeline_{date}.json"))
+@@ -234,6 +234,8 @@
+     version, saved = verify_saved_inputs(date, run_id=run, root=ROOT,
+                                         auxiliary_paths=approved_d1_auxiliary_paths(date))
+     primary = consume_authorized_inputs(saved, root=ROOT)
++    auxiliary = consume_bound_auxiliary_inputs(
++        saved, root=ROOT, approved_paths=approved_d1_auxiliary_paths(date))
+     revision = _accepted_r6_revision(saved, ROOT, state)
+     if set(primary) != set(UNIT_FILES):
+         raise ValueError("primary identities missing")
+@@ -329,7 +331,8 @@
+                 raise ValueError("R6 inherited receipt/input mismatch")
+             ancestor = prior
+     return {"trade_date": date, "base_plan": plan, "binding": binding,
+-            "summary": saved, "research_inputs": primary, "changed_units": changed}
++            "summary": saved, "research_inputs": primary, "changed_units": changed,
++            "auxiliary_inputs": auxiliary}
+ 
+ 
+ 
+@@ -913,6 +916,24 @@
+     return event
+ 
+ 
++def _event_review_coverage(primary):
++    """Prefer the signed per-item matrix; legacy absence is not new coverage."""
++    r6 = primary.get("R6", {})
++    if "patterns_status" not in r6:
++        return None
++    patterns = r6["patterns_status"]
++    if not isinstance(patterns, dict):
++        raise ValueError("R6 patterns_status must be an object")
++    if not any(isinstance(p, dict) and "candidate_checks" in p for p in patterns.values()):
++        return None
++    from scripts.research.pipeline_artifacts import r6_coverage
++    codes = {p["ts_code"] for p in primary.get("R5", {}).get("profiles", [])}
++    r2 = primary.get("R2", {})
++    for line in r2.get("main_lines", []) + r2.get("secondary_lines", []):
++        codes.update(p["ts_code"] for p in line.get("leaders", []))
++    return r6_coverage(r6, sorted(codes), {u:p for u,p in primary.items() if u != "R6"})
++
++
+ def reassess_event(date, event_path):
+     """Receive a bounded JSON proposal on stdout; the model never writes a plan.
+ 
+@@ -984,11 +1005,13 @@
+         # No raw-source sweep, shell rerun, P2 promotion or alternate model.
+         from scripts.research.build_research_summary import consume_authorized_inputs
+         primary = consume_authorized_inputs(summary, root=ROOT)
++        coverage = _event_review_coverage(primary)
+         sources = market_condition_sources(base, date, bound, primary)
+         codes = {row["ts_code"] for pool in ("execution_pool", "watch_pool") for row in base[pool]}
+         required_targets = sorted({"market", *allowed_event_targets(base)})
+         context = {"event": event, "base_plan": base, "required_targets": required_targets,
+                    "condition_sources": sources,
++                   "review_coverage": coverage,
+                    "projection_scope": "完整R1/R2最终结论及R6最终反证/权限/缺口，R5仅原池选中完整对象；其他研究仅版本引用，不读原始全市场数据。未提供事实时点保持未知，不把生成时点充首次可用时点。",
+                    "review_evidence": {
+                        "R1": primary.get("R1", {}), "R2": primary.get("R2", {}),
+@@ -1003,6 +1026,8 @@
+             "updates(顶层字段字典), adjudications(逐项对象列表), report_markdown(至少5行)。"
+             "逐项adjudications必须含target、status(retained/superseded/unresolved)、evidence、window。"
+             "required_targets每项恰好一条；retained仅保留原状态，不代表新审核通过；未审票不得superseded冒充新通过。明确原研究事实时点与本次生成时点。"
++            "已提供review_coverage时，以其中逐票四项完成明细为准，不以旧模式六或全局布尔替代；其他票未完成不抹掉已完成项。"
++            "stock的superseded只记录本票审核事项有据完成且无本票硬否决，不代表改变原资格、入池、预算或买权。"
+             "只可updates market_context/no_trade/decision_status/no_trade_conditions；变更依据仅限本次读取投影"
+             "condition_sources封闭映射及绑定版本（不是原计划已有metadata）；仅已绑定condition可改变active，其余对象逐字保留。"
+             "active=false保护项不阻塞解禁；未知active或R6审核缺口/硬拒绝仍阻塞。无来源禁令不可撤销，只写retained/unresolved。"
+@@ -1085,11 +1110,21 @@
+             if isinstance(audit, dict):
+                 audit = [dict(v, ts_code=k) for k, v in audit.items() if isinstance(v, dict)]
+             reviewed = {r.get("ts_code") for r in audit if isinstance(r, dict) and r.get("formal_evaluated") is True}
++            if coverage is not None:
++                reviewed = set(coverage["completed"])
++            vetoes = [*summary.get("hard_rejects", []), *r6.get("hard_rejects", []),
++                      *[r for r in r6.get("counter_arguments", [])
++                        if isinstance(r, dict) and r.get("severity") == "hard_reject"]]
+             statuses = {r["target"]: r["status"] for r in judgments}
+             for row in judgments:
+                 if row["target"].startswith("stock:") and row["status"] == "superseded":
+-                    if (row["target"][6:] not in reviewed or permission.get("formal_review_completed") is not True):
++                    code = row["target"][6:]
++                    if (code not in reviewed or coverage is None and permission.get("formal_review_completed") is not True):
+                         raise ValueError("unreviewed stock cannot claim new approval")
++                    if any(not isinstance(v, dict) or
++                           (v.get("ts_code") or v.get("code") or v.get("target")) in (None, code)
++                           for v in vetoes):
++                        raise ValueError("hard-rejected stock cannot claim new approval")
+             conditions = base.get("no_trade_conditions", [])
+             revised = updates.get("no_trade_conditions", conditions)
+             if not isinstance(revised, list) or len(revised) != len(conditions):

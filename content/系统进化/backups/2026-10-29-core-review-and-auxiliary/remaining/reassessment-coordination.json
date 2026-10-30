@@ -2,15 +2,15 @@
   "scope": "REASSESS-01 duplicate-work prevention, no production authority",
   "other_coordinator_session": "20261029_121656_152b79",
   "other_handoff": "/Users/chenyang/.hermes/cache/scratch/r6-per-stock-review-readmission-handoff-20261029.md",
-  "observed_stage": "R6 local research delivery accepted upstream at 16:06; this approved D1 implementation accepted by parent at 2026-10-29T17:47:31.498188+08:00 on current 27-source closure. Natural model/production adoption remains unverified",
+  "observed_stage": "R6 local research delivery accepted upstream at 16:06; D1 and legacy compatibility accepted by single-writer parent at 2026-10-29T18:17:04.894663+08:00 on current 30-source closure, 184 passed. No agents used in this continuation. Natural model/production adoption remains unverified",
   "approved_contract_application": "chzl_kg/系统进化/backups/2026-10-29-r6-local-review-contract/contract-application.json",
   "research_implementation_writer": "deleg_db660637/sa-0-217bd0ca",
   "existing_auxiliary_consumer_compatibility": {
-    "verified_at": "2026-10-29T17:47:31.498188+08:00",
-    "closure": "d1-signed-implementation/final-acceptance/closure.json",
+    "verified_at": "2026-10-29T18:17:04.894663+08:00",
+    "closure": "solo-compatibility/closure.json",
     "full_cases_passed": 54,
-    "scope": "Original full 54 cases retained inside parent current joint106; also includes new selective/normal producer entry and continuous trusted R6 revision flow with synthetic external transport",
-    "final_merge_requirement": "Satisfied for the recorded current 27-source closure; changed affecting source requires a new bounded acceptance, not repeat review of this same version"
+    "scope": "Original full54, original selective/normal producer and old74 cases retained inside current joint184; four additional binding/standalone/owned-receipt checks. Synthetic external transport only",
+    "final_merge_requirement": "Satisfied for the recorded current 30-source closure; changed affecting source requires bounded acceptance, not repeat review of this same version"
   },
   "shared_blockers": [
     "terminal research runs cannot be silently restarted or edited",
@@ -33,7 +33,8 @@
   },
   "approved_skill_patch": "price-and-selective-reassessment.pending.patch",
   "skill_application_receipt": "d1-signed-implementation/skill-application.json",
-  "implementation_receipt": "d1-signed-implementation/final-acceptance/closure.json",
+  "implementation_receipt": "solo-compatibility/closure.json",
+  "current_business_evidence_check": "solo-compatibility/existing-business-version-check.json",
   "real_recovery_confirmation": "not included in explicit isolated-only approval; no real recovery launched",
   "trading_permission_changed": false
 }
