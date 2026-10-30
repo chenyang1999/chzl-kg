@@ -1,0 +1,835 @@
+---
+### 09:30 截面
+
+返回样本: 涨413/跌5064 广度0.07（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停10 跌停10；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交774.0亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T09:30:54.459738+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 33.459738, "quote_age_min_seconds": 6.459738, "source_age_limit_seconds": null} ｜ 预案池热点: 上海沪工+10.03%、普冉股份-8.24%、博盈特焊-7.75%、传智教育+6.41%、文投控股-4.85%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.63 | +6.41% | up |
+| 中国卫星 `600118.SH` | watch_pool | 56.09 | +0.34% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.16 | -4.85% | down |
+| 普冉股份 `688766.SH` | watch_pool | 248.22 | -8.24% | down |
+| 三花智控 `002050.SZ` | watch_pool | 33.94 | -1.62% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.96 | -7.75% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 46.68 | -0.72% | down |
+
+---
+### 09:40 截面
+
+返回样本: 涨1362/跌4050 广度0.24（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停28 跌停9；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交3131.9亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T09:40:50.382002+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 26.382002, "quote_age_min_seconds": 2.382002, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-11.58%、传智教育+10.06%、上海沪工+10.03%、文投控股-9.69%、三花智控+2.12%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.8 | +1.61% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.05 | -9.69% | down |
+| 普冉股份 `688766.SH` | watch_pool | 271.11 | +0.23% | up |
+| 三花智控 `002050.SZ` | watch_pool | 35.23 | +2.12% | up |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.88 | -11.58% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 47.23 | +0.45% | up |
+
+---
+### 09:50 截面
+
+返回样本: 涨992/跌4452 广度0.18（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停32 跌停14；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交4476.6亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T09:50:51.092345+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 51.092345, "quote_age_min_seconds": 3.092345, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-12.40%、传智教育+10.06%、上海沪工+10.03%、文投控股-8.81%、中国卫星+5.94%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 59.22 | +5.94% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.07 | -8.81% | down |
+| 普冉股份 `688766.SH` | watch_pool | 270.33 | -0.06% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.81 | +0.90% | up |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.65 | -12.40% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 47.05 | +0.06% | up |
+
+---
+### 10:00 截面
+
+返回样本: 涨1220/跌4154 广度0.22（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停36 跌停14；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交5633.1亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T10:00:51.892750+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 57.89275, "quote_age_min_seconds": 3.89275, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-13.40%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、中国卫星+5.01%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 58.7 | +5.01% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 269.45 | -0.39% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.34 | -0.46% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.37 | -13.40% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 47.03 | +0.02% | up |
+
+---
+### 10:10 截面
+
+返回样本: 涨1527/跌3851 广度0.27（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停34 跌停12；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交6504.8亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T10:10:51.633566+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 69.633566, "quote_age_min_seconds": 3.633566, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-12.22%、传智教育+10.06%、上海沪工+10.03%、文投控股-9.69%、中国卫星+4.01%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 58.14 | +4.01% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.05 | -9.69% | down |
+| 普冉股份 `688766.SH` | watch_pool | 266.0 | -1.66% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.11 | -1.13% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.7 | -12.22% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 47.22 | +0.43% | up |
+
+---
+### 10:20 截面
+
+返回样本: 涨1951/跌3407 广度0.35（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停37 跌停13；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交7325.7亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T10:20:52.152248+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 40.152248, "quote_age_min_seconds": 1.152248, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-11.51%、传智教育+10.06%、上海沪工+10.03%、文投控股-9.69%、中国卫星+2.67%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.39 | +2.67% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.05 | -9.69% | down |
+| 普冉股份 `688766.SH` | watch_pool | 269.15 | -0.50% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.15 | -1.01% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.9 | -11.51% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 47.14 | +0.26% | up |
+
+---
+### 10:30 截面
+
+返回样本: 涨1801/跌3574 广度0.32（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停38 跌停16；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交7915.0亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T10:30:52.711175+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 70.711175, "quote_age_min_seconds": 1.711175, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-11.55%、传智教育+10.06%、上海沪工+10.03%、文投控股-8.81%、普冉股份-2.03%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.8 | +1.61% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.07 | -8.81% | down |
+| 普冉股份 `688766.SH` | watch_pool | 265.0 | -2.03% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.02 | -1.39% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.89 | -11.55% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 46.81 | -0.45% | down |
+
+---
+### 10:40 截面
+
+返回样本: 涨1287/跌4139 广度0.23（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停35 跌停20；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交8374.8亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T10:40:50.716099+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 83.716099, "quote_age_min_seconds": 2.716099, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.27%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、普冉股份-2.91%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.0 | +0.18% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 262.62 | -2.91% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.14 | -1.04% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.25 | -10.27% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 46.37 | -1.38% | down |
+
+---
+### 10:50 截面
+
+返回样本: 涨1233/跌4182 广度0.22（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停37 跌停22；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交8777.4亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T10:50:52.046728+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 61.046728, "quote_age_min_seconds": 4.046728, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-11.34%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、普冉股份-3.27%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 55.39 | -0.91% | down |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 261.65 | -3.27% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.19 | -0.90% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.95 | -11.34% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 46.67 | -0.74% | down |
+
+---
+### 11:00 截面
+
+返回样本: 涨1344/跌4056 广度0.24（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停41 跌停22；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交9112.5亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T11:00:50.857100+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 77.8571, "quote_age_min_seconds": 2.8571, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-11.05%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、普冉股份-3.42%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.1 | +0.36% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 261.24 | -3.42% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.53 | +0.09% | up |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.03 | -11.05% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 47.86 | +1.79% | up |
+
+---
+### 11:10 截面
+
+返回样本: 涨1182/跌4242 广度0.21（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停39 跌停25；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交9429.3亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T11:10:49.617182+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 67.617182, "quote_age_min_seconds": 1.617182, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-11.83%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、普冉股份-3.73%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.15 | +0.45% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 260.41 | -3.73% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.11 | -1.13% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.81 | -11.83% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 47.1 | +0.17% | up |
+
+---
+### 11:20 截面
+
+返回样本: 涨1165/跌4274 广度0.21（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停41 跌停25；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交9718.3亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T11:20:50.418373+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 80.418373, "quote_age_min_seconds": 2.418373, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-12.30%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、普冉股份-3.72%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.17 | +0.48% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 260.43 | -3.72% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.05 | -1.30% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.68 | -12.30% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 47.23 | +0.45% | up |
+
+---
+### 11:30 截面
+
+返回样本: 涨2522/跌2819 广度0.45（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停45 跌停18；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交10180.5亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T11:30:45.596058+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 45.596058, "quote_age_min_seconds": 1.596058, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.80%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+6.76%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.05 | +2.06% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 268.0 | -0.92% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.46 | -0.12% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.1 | -10.80% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 50.2 | +6.76% | up |
+
+---
+### 11:40 截面
+
+返回样本: 涨2522/跌2819 广度0.45（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停45 跌停18；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交10180.5亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T11:40:45.340613+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 60.340613, "quote_age_min_seconds": 1.340613, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.80%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+6.76%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.05 | +2.06% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 268.0 | -0.92% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.46 | -0.12% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.1 | -10.80% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 50.2 | +6.76% | up |
+
+---
+### 11:50 截面
+
+返回样本: 涨2522/跌2819 广度0.45（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停45 跌停18；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交10180.5亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T11:50:45.801080+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 60.80108, "quote_age_min_seconds": 1.80108, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.80%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+6.76%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.05 | +2.06% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 268.0 | -0.92% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.46 | -0.12% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.1 | -10.80% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 50.2 | +6.76% | up |
+
+---
+### 12:00 截面
+
+返回样本: 涨2522/跌2819 广度0.45（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停45 跌停18；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交10180.5亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T12:00:45.444380+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 60.44438, "quote_age_min_seconds": 1.44438, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.80%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+6.76%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.05 | +2.06% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 268.0 | -0.92% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.46 | -0.12% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.1 | -10.80% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 50.2 | +6.76% | up |
+
+---
+### 12:10 截面
+
+返回样本: 涨2522/跌2819 广度0.45（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停45 跌停18；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交10180.5亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T12:10:45.032107+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 60.032107, "quote_age_min_seconds": 1.032107, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.80%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+6.76%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.05 | +2.06% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 268.0 | -0.92% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.46 | -0.12% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.1 | -10.80% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 50.2 | +6.76% | up |
+
+---
+### 12:20 截面
+
+返回样本: 涨2522/跌2819 广度0.45（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停45 跌停18；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交10180.5亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T12:20:45.311657+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 60.311657, "quote_age_min_seconds": 1.311657, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.80%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+6.76%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.05 | +2.06% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 268.0 | -0.92% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.46 | -0.12% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.1 | -10.80% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 50.2 | +6.76% | up |
+
+---
+### 12:30 截面
+
+返回样本: 涨2522/跌2819 广度0.45（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停45 跌停18；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交10180.5亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T12:30:45.482893+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 60.482893, "quote_age_min_seconds": 1.482893, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.80%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+6.76%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.05 | +2.06% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 268.0 | -0.92% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.46 | -0.12% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.1 | -10.80% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 50.2 | +6.76% | up |
+
+---
+### 12:40 截面
+
+返回样本: 涨2522/跌2819 广度0.45（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停45 跌停18；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交10180.5亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T12:40:45.083978+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 60.083978, "quote_age_min_seconds": 2.083978, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.80%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+6.76%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.05 | +2.06% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 268.0 | -0.92% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.46 | -0.12% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.1 | -10.80% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 50.2 | +6.76% | up |
+
+---
+### 12:50 截面
+
+返回样本: 涨2522/跌2819 广度0.45（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停45 跌停18；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交10180.5亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T12:50:45.163430+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 60.16343, "quote_age_min_seconds": 1.16343, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.80%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+6.76%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.05 | +2.06% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 268.0 | -0.92% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.46 | -0.12% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.1 | -10.80% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 50.2 | +6.76% | up |
+
+---
+### 13:00 截面
+
+返回样本: 涨3556/跌1852 广度0.64（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停51 跌停13；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交10411.2亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T13:00:50.749448+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 44.749448, "quote_age_min_seconds": 2.749448, "source_age_limit_seconds": null} ｜ 预案池热点: 文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、博盈特焊-8.60%、上海洗霸+6.87%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.75 | +3.31% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 271.81 | +0.48% | up |
+| 三花智控 `002050.SZ` | watch_pool | 34.64 | +0.41% | up |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.72 | -8.60% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 50.25 | +6.87% | up |
+
+---
+### 13:10 截面
+
+返回样本: 涨3244/跌2136 广度0.58（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停61 跌停14；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交11306.7亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T13:10:52.116710+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 73.11671, "quote_age_min_seconds": 1.11671, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-10.87%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+10.00%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 57.14 | +2.22% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 267.73 | -1.02% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.6 | +0.29% | up |
+| 博盈特焊 `301468.SZ` | watch_pool | 25.08 | -10.87% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.72 | +10.00% | limit_up |
+
+---
+### 13:20 截面
+
+返回样本: 涨2282/跌3094 广度0.41（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停59 跌停17；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交11762.3亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T13:20:50.281470+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 86.28147, "quote_age_min_seconds": 2.28147, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-11.73%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+10.00%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.56 | +1.18% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 263.73 | -2.50% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.47 | -0.09% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.84 | -11.73% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.72 | +10.00% | limit_up |
+
+---
+### 13:30 截面
+
+返回样本: 涨2129/跌3292 广度0.38（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停58 跌停22；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交12122.9亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T13:30:53.241874+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 80.241874, "quote_age_min_seconds": 5.241874, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-12.05%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+10.00%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.63 | +1.31% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 262.68 | -2.89% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.36 | -0.41% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.75 | -12.05% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.72 | +10.00% | limit_up |
+
+---
+### 13:40 截面
+
+返回样本: 涨2076/跌3320 广度0.37（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停61 跌停21；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交12538.8亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T13:40:50.590451+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 71.590451, "quote_age_min_seconds": 2.590451, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-12.30%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+10.00%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.98 | +1.93% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 261.46 | -3.34% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.2 | -0.87% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.68 | -12.30% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.72 | +10.00% | limit_up |
+
+---
+### 13:50 截面
+
+返回样本: 涨1882/跌3538 广度0.34（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停58 跌停28；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交12837.3亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T13:50:50.450536+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 80.450536, "quote_age_min_seconds": 2.450536, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-12.94%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+10.00%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.56 | +1.18% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 261.23 | -3.43% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.16 | -0.99% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.5 | -12.94% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.72 | +10.00% | limit_up |
+
+---
+### 14:00 截面
+
+返回样本: 涨1623/跌3798 广度0.29（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停58 跌停32；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交13177.4亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T14:00:50.501790+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 98.50179, "quote_age_min_seconds": 2.50179, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-13.93%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+10.00%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.23 | +0.59% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 260.05 | -3.86% | down |
+| 三花智控 `002050.SZ` | watch_pool | 34.03 | -1.36% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.22 | -13.93% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.72 | +10.00% | limit_up |
+
+---
+### 14:10 截面
+
+返回样本: 涨1431/跌4023 广度0.26（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停57 跌停39；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交13596.3亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T14:10:50.190190+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 86.19019, "quote_age_min_seconds": 2.19019, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-15.10%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+10.00%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 56.03 | +0.23% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 258.04 | -4.61% | down |
+| 三花智控 `002050.SZ` | watch_pool | 33.91 | -1.71% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 23.89 | -15.10% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.72 | +10.00% | limit_up |
+
+---
+### 14:20 截面
+
+返回样本: 涨1307/跌4149 广度0.23（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停55 跌停41；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交14015.2亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T14:20:50.277336+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 65.277336, "quote_age_min_seconds": 2.277336, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-14.39%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+9.63%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 55.92 | +0.04% | up |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 256.26 | -5.26% | down |
+| 三花智控 `002050.SZ` | watch_pool | 33.78 | -2.09% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 24.09 | -14.39% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.55 | +9.63% | up |
+
+---
+### 14:30 截面
+
+返回样本: 涨1100/跌4388 广度0.20（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停51 跌停53；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交14483.4亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T14:30:51.113503+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 54.113503, "quote_age_min_seconds": 3.113503, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-15.39%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+8.72%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 55.68 | -0.39% | down |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 256.3 | -5.25% | down |
+| 三花智控 `002050.SZ` | watch_pool | 33.71 | -2.29% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 23.81 | -15.39% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.12 | +8.72% | up |
+
+---
+### 14:40 截面
+
+返回样本: 涨914/跌4578 广度0.16（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停50 跌停79；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交15151.3亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T14:40:49.371758+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 49.371758, "quote_age_min_seconds": 3.371758, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-15.64%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+8.46%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 55.45 | -0.81% | down |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 253.28 | -6.37% | down |
+| 三花智控 `002050.SZ` | watch_pool | 33.42 | -3.13% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 23.74 | -15.64% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.0 | +8.46% | up |
+
+---
+### 14:50 截面
+
+返回样本: 涨956/跌4551 广度0.17（有效样本分母） ｜ 返回5581/有效5571/缺失10；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停49 跌停82；边界已知样本5571/未知样本0（未知不等于0） ｜ 成交15965.8亿（金额缺失0，求和溢出False） ｜ 数据质量: 返回样本可用（非全A覆盖保证） ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T14:50:51.118008+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 30.118008, "quote_age_min_seconds": 3.118008, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-17.02%、文投控股-10.13%、传智教育+10.06%、上海沪工+10.03%、上海洗霸+10.00%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 17.55 | +10.03% | limit_up |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 55.7 | -0.36% | down |
+| 文投控股 `600715.SH` | watch_pool | 2.04 | -10.13% | limit_down |
+| 普冉股份 `688766.SH` | watch_pool | 252.43 | -6.68% | down |
+| 三花智控 `002050.SZ` | watch_pool | 33.39 | -3.22% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 23.35 | -17.02% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 51.72 | +10.00% | limit_up |
+
+---
+### 15:00 截面
+
+返回样本: 涨413/跌2456 广度0.14（有效样本分母） ｜ 返回5581/有效2903/缺失2678；全A覆盖未核验 ｜ 涨跌停已确认计数: 涨停26 跌停40；边界已知样本2903/未知样本0（未知不等于0） ｜ 成交9101.6亿（金额缺失0，求和溢出False） ｜ 数据质量: 降级/不足 ｜ 仅供市场参考，不授予交易权限；D1预算/no_trade/个股资格原样有效 ｜ D1预算上下文: {"market_context": {"calendar_evidence": {"five_day_window": ["20261023", "20261026", "20261027", "20261028", "20261029"], "previous_trade_date": "20261029", "source": "本次实时tushare.trade_cal", "trade_date_is_open": true, "twenty_day_window": ["20260924", "20260928", "20260929", "20260930", "20261008", "20261009", "20261012", "20261013", "20261014", "20261015", "20261016", "20261019", "20261020", "20261021", "20261022", "20261023", "20261026", "20261027", "20261028", "20261029"]}, "emotion": "主跌（T-1风险背景）", "emotion_cycle": {"bound_snapshot_phase": "high_chop", "bound_snapshot_premium_pct": 1.89, "conflict_unresolved": true, "metrics_date": "20261029", "phase": "main_down", "r1_full_pool_premium_pct": -0.9373208333333333, "resolution": "采用R1可追溯72/72全池负反馈作为保守温度背景；两指标并非已经证明同定义，冲突交回R1/快照owner，不重算/覆写辅助文件，不定性今日盘中。"}, "main_lines_count": 0, "metrics": {"benchmarks": {"000001.SH": {"amount": 715620694.9063, "last_date": "20261029", "prior_amount": 751019235.6019, "ret_1d": -0.8159}, "000016.SH": {"amount": 124805650.9967, "last_date": "20261029", "prior_amount": 130900005.7834, "ret_1d": 0.3554}, "000300.SH": {"amount": 411892973.3376, "last_date": "20261029", "prior_amount": 419279465.575, "ret_1d": -1.0292}, "000688.SH": {"amount": 71099759.2325, "last_date": "20261029", "prior_amount": 75675743.8115, "ret_1d": -4.2746}, "000852.SH": {"amount": 320931773.5302, "last_date": "20261029", "prior_amount": 337463984.1779, "ret_1d": -3.03}, "000905.SH": {"amount": 271552262.7089, "last_date": "20261029", "prior_amount": 284287793.5727, "ret_1d": -2.8185}, "399001.SZ": {"amount": 417530298.99832, "last_date": "20261029", "prior_amount": 435378071.06169, "ret_1d": -2.9197}, "399006.SZ": {"amount": 173610468.99271, "last_date": "20261029", "prior_amount": 183224637.6484, "ret_1d": -4.4472}}, "breadth": {"down": 4728, "flat": 61, "median_pct": -2.599, "total": 5570, "up": 781}, "break_rate": 0.390625, "break_rate_pct": 39.0625, "broken": 25, "concept_strength_proxy_count": 2, "first_boards": 29, "ladder_distribution_ex_st": {"2": 6, "3": 2, "4": 2}, "limit_down": 41, "limit_up": 39, "max_ladder_ex_st": 4, "metrics_date": "20261029", "premium_full_pool_pct": {"basis": "前一日收盘涨停群体在观察日的收盘涨跌幅；不是开盘溢价", "cohort_date": "20261028", "feedback_date": "20261029", "independent_requery_same_source": true, "matched": 72, "mean": -0.9373208333333333, "median": -2.3998, "pool_size": 72}, "previous_day_counts": {"D": 5, "U": 72, "Z": 69}, "seal_rate": 0.609375, "xtick_cross_check": {"break_rate_recomputed": 0.4, "broken": 26, "limit_down": 42, "limit_up": 39, "max_ladder": 4, "metrics_date": "20261029", "note": "raw_zbl并非本报告炸板率；以U/Z家数另算40%。比主源多1跌停与1炸板，方向一致但不混用统计口径。", "raw_zbl": 8.22, "request_date_format": "2026-10-29", "source": "xtick.market_emotion live MCP", "update_time": "2026-10-30T06:11:29.615+08:00"}}, "structure": "T-1广度与涨停反馈弱，局部航天/短剧有辨识度却未确认主线；本次仅研究禁新。", "style": "震荡分化型"}, "no_trade": true, "risk_limits": {"block_prefixes": ["920"], "block_st": true, "kill_switch_file": "data/runtime/KILL_SWITCH", "max_buy_orders_per_day": 0, "max_orders_per_symbol_per_day": 0, "max_positions": 5, "target_total_position_pct": 0.0}, "trade_date": "20261030"} ｜ 报价年龄上限未配置，未验证新鲜；时点质量: {"age_reference_at": "2026-10-30T15:00:45.686840+08:00", "freshness_status": "age_limit_not_configured", "quote_age_max_seconds": 45.68684, "quote_age_min_seconds": 45.68684, "source_age_limit_seconds": null} ｜ 预案池热点: 博盈特焊-16.70%、传智教育+10.06%、三花智控-3.65%
+
+| 票 | 池 | 现价 | 涨幅 | 状态 |
+|---|---|---|---|---|
+| 上海沪工 `603131.SH` | execution_pool | 未知 | 未知 | no_data |
+| 传智教育 `003032.SZ` | execution_pool | 9.96 | +10.06% | limit_up |
+| 中国卫星 `600118.SH` | watch_pool | 未知 | 未知 | no_data |
+| 文投控股 `600715.SH` | watch_pool | 未知 | 未知 | no_data |
+| 普冉股份 `688766.SH` | watch_pool | 未知 | 未知 | no_data |
+| 三花智控 `002050.SZ` | watch_pool | 33.24 | -3.65% | down |
+| 博盈特焊 `301468.SZ` | watch_pool | 23.44 | -16.70% | down |
+| 上海洗霸 `603200.SH` | watch_pool | 未知 | 未知 | no_data |
+
+## 15:00 盘中分析
+
+> **结论**：全市场涨892/跌4602（广度0.16）；涨停49/跌停86；中位涨幅-3.12%；普跌格局。 钱在：白酒概念(涨停5/成分48，中位+0.46%)、啤酒概念(涨停3/成分29，中位+0.59%)、社区团购(涨停3/成分51，中位-0.68%)；零星涨停：芬太尼(1)、天津自贸区(2)、中韩自贸区(2)、青蒿素(1)、高压氧舱(1)。 退潮：AI应用(跌停24)、文化传媒概念(跌停21)、电子商务(跌停21)。 梯队：5板×1、3板×2、2板×6、1板×40，最高5板。 预案：超买区 上海沪工、传智教育、上海洗霸；未到价 中国卫星、文投控股、普冉股份、三花智控。 较上一轮广度回升 +0.09。
+
+> 🔒 **no_trade / 买入预算 0 / max_position_pct 0 —— 全部内容仅供研究，不授予交易权限。**
+
+### 板块扩散
+
+> 口径：XTick 概念成分 × 全市场实时报价；分母 = 板块内有有效报价的成分数。排序用涨停密度（涨停数/有效成分数），已剔除宽基属性板块（全市场 432 个板块中剔 16 个）。
+
+**扩散中（题材，按涨停密度排序）**
+
+| 板块 | 涨停 | 有效成分 | 涨停密度 | 上涨广度 | 中位涨幅 | 相对全市场 | 成交(亿) |
+|---|---|---|---|---|---|---|---|
+| 芬太尼 ⬦ | 1 | 8 | 0.125 | 0.62 | +0.63% | +3.75% | 13 |
+| 天津自贸区 ⬦ | 2 | 17 | 0.118 | 0.41 | +0.00% | +3.12% | 34 |
+| 中韩自贸区 ⬦ | 2 | 17 | 0.118 | 0.29 | -0.48% | +2.64% | 51 |
+| 白酒概念 | 5 | 48 | 0.104 | 0.54 | +0.46% | +3.58% | 287 |
+| 啤酒概念 | 3 | 29 | 0.103 | 0.52 | +0.59% | +3.71% | 78 |
+| 青蒿素 ⬦ | 1 | 11 | 0.091 | 0.82 | +1.40% | +4.52% | 37 |
+| 高压氧舱 ⬦ | 1 | 11 | 0.091 | 0.64 | +0.34% | +3.46% | 37 |
+| 可燃冰 ⬦ | 1 | 14 | 0.071 | 0.43 | -0.67% | +2.45% | 56 |
+| 供销社 ⬦ | 1 | 15 | 0.067 | 0.27 | -2.09% | +1.03% | 19 |
+| 社区团购 | 3 | 51 | 0.059 | 0.45 | -0.68% | +2.44% | 85 |
+| 乳业 ⬦ | 2 | 36 | 0.056 | 0.47 | -0.28% | +2.84% | 105 |
+| 农村电商 ⬦ | 2 | 37 | 0.054 | 0.32 | -1.66% | +1.46% | 65 |
+
+> ⬦ = 涨停 <3 只，零星个例，不构成扩散（不计入「钱在」判定）。
+
+```mermaid
+pie showData
+    title 涨停数分布（扩散板块，Top 3）
+    "白酒概念" : 5
+    "啤酒概念" : 3
+    "社区团购" : 3
+```
+
+零星涨停板块（<3 只）：芬太尼(1)、天津自贸区(2)、中韩自贸区(2)、青蒿素(1)、高压氧舱(1)、可燃冰(1)、供销社(1)、乳业(2)
+
+**退潮中（跌停集中）**
+
+| 板块 | 跌停 | 有效成分 | 上涨广度 | 中位涨幅 |
+|---|---|---|---|---|
+| AI应用 | 24 | 551 | 0.10 | -4.96% |
+| 文化传媒概念 | 21 | 197 | 0.08 | -5.39% |
+| 电子商务 | 21 | 676 | 0.24 | -2.36% |
+| AIGC概念 | 19 | 298 | 0.06 | -5.71% |
+| IP经济(谷子经济) | 17 | 198 | 0.13 | -3.78% |
+| 一带一路 | 16 | 797 | 0.16 | -2.95% |
+| DeepSeek概念 | 15 | 769 | 0.13 | -4.26% |
+| 短剧游戏 | 14 | 99 | 0.08 | -6.81% |
+| AI智能体 | 14 | 471 | 0.09 | -4.91% |
+| 虚拟现实 | 13 | 287 | 0.08 | -5.29% |
+| 数字经济 | 13 | 513 | 0.10 | -4.14% |
+| 人形机器人 | 13 | 482 | 0.11 | -4.41% |
+
+### 涨停梯队
+
+> 最高 5 板 ｜ 涨停 49 ｜ 跌停 86 ｜ 炸板 31 ｜ 封板率 61.3% ｜ 打板成功率 23.08% ｜ 一进二 20.69% ｜ 二进三 33.33%
+
+| 身位 | 家数 | 成员（涨幅/封单亿/首封） |
+|---|---|---|
+| 5板 | 1 | 青岛食品 +9.98%/0.006亿/09:30 |
+| 3板 | 2 | 上海沪工 +10.03%/0.026亿/09:25；澳洋健康 +10.06%/0.006亿/10:25 |
+| 2板 | 6 | 阳光照明 +9.95%/0.061亿/09:25；盛洋科技 +10.04%/0.024亿/09:25；桂林三金 +9.99%/0.011亿/09:30；传智教育 +10.06%/0.009亿/09:31；东方海洋 +10.12%/0.008亿/09:54 |
+| 1板 | 40 | 万邦医药 +20.00%/0.014亿/13:00；九安医疗 +9.99%/0.012亿/09:33；永安药业 +9.98%/0.010亿/09:30；百花医药 +9.96%/0.009亿/13:00；迎驾贡酒 +9.99%/0.008亿/09:44 |
+
+```mermaid
+flowchart TD
+    B_5板["5板 × 1"]
+    B_3板["3板 × 2"]
+    B_2板["2板 × 6"]
+    B_1板["1板 × 40"]
+    ROOT["涨停梯队"]
+    ROOT --> B_5板
+    ROOT --> B_3板
+    ROOT --> B_2板
+    ROOT --> B_1板
+```
+
+炸板 31 只（前几）：华阳国际(9次)、宏昌电子(6次)、西部材料(6次)、毕得医药(6次)、力鼎光电(4次)
+
+### 预案池对照
+
+| 票 | 池 | 板块 | 现价 | 涨幅 | 触发价 | 买区 | 风险位 | 判定 |
+|---|---|---|---|---|---|---|---|---|
+| 上海沪工 `603131.SH` | 执行池 | 商业航天 | 17.55 | +10.03% | 15.95 | [15.87, 16.19] | 15.38 | **超买区** |
+| 传智教育 `003032.SZ` | 执行池 | 短剧游戏 | 9.96 | +10.06% | 9.54 | [9.49, 9.68] | 9.2 | **超买区** |
+| 中国卫星 `600118.SH` | 观察池 | 商业航天 | 55.91 | +0.02% | 59.72 | [59.42, 60.62] | 57.59 | **未到价** |
+| 文投控股 `600715.SH` | 观察池 | 短剧游戏 | 2.04 | -10.13% | 2.27 | [2.26, 2.3] | 2.18 | **未到价** |
+| 普冉股份 `688766.SH` | 观察池 | 存储芯片 | 251.0 | -7.21% | 270.5 | [269.15, 274.56] | 252.6 | **未到价** |
+| 三花智控 `002050.SZ` | 观察池 | 液冷热管理 | 33.24 | -3.65% | 36.97 | [36.79, 37.52] | 35.64 | **未到价** |
+| 博盈特焊 `301468.SZ` | 观察池 | 海工装备/并购重组 | 23.44 | -16.70% | — | — | — | **无预案价** |
+| 上海洗霸 `603200.SH` | 观察池 | 固态电池/新型储能 | 51.72 | +10.00% | 47.02 | [46.78, 47.73] | 45.34 | **超买区** |
+
+- **上海沪工** — 现价17.55 已高于买区上沿16.19，预案买点不再适用
+- **传智教育** — 现价9.96 已高于买区上沿9.68，预案买点不再适用
+- **上海洗霸** — 现价51.72 已高于买区上沿47.73，预案买点不再适用
+
+> ⚠ D1 明确 no_trade=true、买入预算 0、个股 max_position_pct=0。以上为研究对照，**不构成任何买入许可**。
+
+### 盘面 vs 静态复盘 vs 消息面
+
+| 维度 | 对象 | T-1 静态基线 | 今日盘面 | 关系 |
+|---|---|---|---|---|
+| 板块主线 | 商业航天 | R2 次线 score=66 涨停11（T-1 口径） | 今日盘中该板块 6 只涨停 / 成分507 广度0.11 中位-4.24%（相对全市场-1.12%），较 T-1 的 11 只保留 55% | **部分印证** |
+| 板块主线 | 短剧游戏 | R2 次线 score=52 涨停4（T-1 口径） | 今日盘中该板块 1 只涨停 / 成分99 广度0.08 中位-6.81%（相对全市场-3.69%），较 T-1 的 4 只保留 25% | **背离** |
+| 梯队结构 | 最高5板 | T-1 最高梯队 4 板、首板 29、炸板率 39.06% | 今日 5板×1、3板×2、2板×6、1板×40；封板率0.6125 炸板31只 | **印证** |
+| 预案验证 | 上海沪工(603131.SH) | 预案 商业航天／watch／触发价15.95／买区[15.87, 16.19] | 超买区：现价17.55 已高于买区上沿16.19，预案买点不再适用 | **背离** |
+| 预案验证 | 传智教育(003032.SZ) | 预案 短剧游戏／watch／触发价9.54／买区[9.49, 9.68] | 超买区：现价9.96 已高于买区上沿9.68，预案买点不再适用 | **背离** |
+| 预案验证 | 中国卫星(600118.SH) | 预案 商业航天／watch／触发价59.72／买区[59.42, 60.62] | 未到价：现价55.91，触发价59.72，还差6.81% | **无响应** |
+| 预案验证 | 文投控股(600715.SH) | 预案 短剧游戏／watch／触发价2.27／买区[2.26, 2.3] | 未到价：现价2.04，触发价2.27，还差11.27% | **无响应** |
+| 预案验证 | 普冉股份(688766.SH) | 预案 存储芯片／watch／触发价270.5／买区[269.15, 274.56] | 未到价：现价251.0，触发价270.5，还差7.77% | **无响应** |
+| 预案验证 | 三花智控(002050.SZ) | 预案 液冷热管理／watch／触发价36.97／买区[36.79, 37.52] | 未到价：现价33.24，触发价36.97，还差11.22% | **无响应** |
+| 预案验证 | 博盈特焊(301468.SZ) | 预案 海工装备/并购重组／watch／触发价None／买区None | 无预案价：预案未给触发价/买区（情景作废或待重导） | **无响应** |
+| 预案验证 | 上海洗霸(603200.SH) | 预案 固态电池/新型储能／watch／触发价47.02／买区[46.78, 47.73] | 超买区：现价51.72 已高于买区上沿47.73，预案买点不再适用 | **背离** |
+| 消息面对照 | 盘面热点板块 | R4 消息面（T-1 口径） | 实时快讯未出现热点板块关键词 | **无响应** |
+
+**分歧点（不掩盖）：**
+- 板块主线·商业航天 → 部分印证：R2 未确认主线（main_lines_count=0），此处仅为有辨识度次线的盘中验证
+- 板块主线·短剧游戏 → 背离：R2 未确认主线（main_lines_count=0），此处仅为有辨识度次线的盘中验证
+- 预案验证·上海沪工(603131.SH) → 背离：仅研究对照，不授予交易权限
+- 预案验证·传智教育(003032.SZ) → 背离：仅研究对照，不授予交易权限
+- 预案验证·上海洗霸(603200.SH) → 背离：仅研究对照，不授予交易权限
+
+### 全天广度轨迹
+
+| 时点 | 涨 | 跌 | 广度 | 涨停 | 跌停 | 成交(亿) | 有效样本 |
+|---|---|---|---|---|---|---|---|
+| 0930 | 413 | 5064 | 0.074 | 10 | 10 | 774 | 5571 |
+| 0940 | 1362 | 4050 | 0.244 | 28 | 9 | 3,132 | 5571 |
+| 0950 | 992 | 4452 | 0.178 | 32 | 14 | 4,477 | 5571 |
+| 1000 | 1220 | 4154 | 0.219 | 36 | 14 | 5,633 | 5571 |
+| 1010 | 1527 | 3851 | 0.274 | 34 | 12 | 6,505 | 5571 |
+| 1020 | 1951 | 3407 | 0.350 | 37 | 13 | 7,326 | 5571 |
+| 1030 | 1801 | 3574 | 0.323 | 38 | 16 | 7,915 | 5571 |
+| 1040 | 1287 | 4139 | 0.231 | 35 | 20 | 8,375 | 5571 |
+| 1050 | 1233 | 4182 | 0.221 | 37 | 22 | 8,777 | 5571 |
+| 1100 | 1344 | 4056 | 0.241 | 41 | 22 | 9,112 | 5571 |
+| 1110 | 1182 | 4242 | 0.212 | 39 | 25 | 9,429 | 5571 |
+| 1120 | 1165 | 4274 | 0.209 | 41 | 25 | 9,718 | 5571 |
+| 1130 | 2522 | 2819 | 0.453 | 45 | 18 | 10,180 | 5571 |
+| 1140 | 2522 | 2819 | 0.453 | 45 | 18 | 10,180 | 5571 |
+| 1150 | 2522 | 2819 | 0.453 | 45 | 18 | 10,180 | 5571 |
+| 1200 | 2522 | 2819 | 0.453 | 45 | 18 | 10,180 | 5571 |
+| 1210 | 2522 | 2819 | 0.453 | 45 | 18 | 10,180 | 5571 |
+| 1220 | 2522 | 2819 | 0.453 | 45 | 18 | 10,180 | 5571 |
+| 1230 | 2522 | 2819 | 0.453 | 45 | 18 | 10,180 | 5571 |
+| 1240 | 2522 | 2819 | 0.453 | 45 | 18 | 10,180 | 5571 |
+| 1250 | 2522 | 2819 | 0.453 | 45 | 18 | 10,180 | 5571 |
+| 1300 | 3556 | 1852 | 0.638 | 51 | 13 | 10,411 | 5571 |
+| 1310 | 3244 | 2136 | 0.582 | 61 | 14 | 11,307 | 5571 |
+| 1320 | 2282 | 3094 | 0.410 | 59 | 17 | 11,762 | 5571 |
+| 1330 | 2129 | 3292 | 0.382 | 58 | 22 | 12,123 | 5571 |
+| 1340 | 2076 | 3320 | 0.373 | 61 | 21 | 12,539 | 5571 |
+| 1350 | 1882 | 3538 | 0.338 | 58 | 28 | 12,837 | 5571 |
+| 1400 | 1623 | 3798 | 0.291 | 58 | 32 | 13,177 | 5571 |
+| 1410 | 1431 | 4023 | 0.257 | 57 | 39 | 13,596 | 5571 |
+| 1420 | 1307 | 4149 | 0.235 | 55 | 41 | 14,015 | 5571 |
+| 1430 | 1100 | 4388 | 0.198 | 51 | 53 | 14,483 | 5571 |
+| 1440 | 914 | 4578 | 0.164 | 50 | 79 | 15,151 | 5571 |
+| 1450 | 956 | 4551 | 0.172 | 49 | 82 | 15,966 | 5571 |
+| 1500 | 413 | 2456 | 0.142 | 26 | 40 | 9,102 | 2903 |
+
+> ⚠ **数据冻结段**：1130–1250 数值连续完全一致，说明行情源未刷新，**不是市场横盘**，该段不可解读为盘面变化。
+
+> ⚠ **分母变化**：1500（5571→2903） 有效样本变动超 15%，该时点广度与前后不可直接比较（数据降级）。
+
+```mermaid
+gantt
+    title 全天截面时点分布（每个截面一个条目）
+    09:30 截面 :done
+    09:40 截面 :done
+    09:50 截面 :done
+    10:00 截面 :done
+    10:10 截面 :done
+    10:20 截面 :done
+    10:30 截面 :done
+    10:40 截面 :done
+    10:50 截面 :done
+    11:00 截面 :done
+    11:10 截面 :done
+    11:20 截面 :done
+    11:30 截面 :done
+    11:40 截面 :done
+    11:50 截面 :done
+    12:00 截面 :done
+    12:10 截面 :done
+    12:20 截面 :done
+    12:30 截面 :done
+    12:40 截面 :done
+    12:50 截面 :done
+    13:00 截面 :done
+    13:10 截面 :done
+    13:20 截面 :done
+    13:30 截面 :done
+    13:40 截面 :done
+    13:50 截面 :done
+    14:00 截面 :done
+    14:10 截面 :done
+    14:20 截面 :done
+    14:30 截面 :done
+    14:40 截面 :done
+    14:50 截面 :done
+    15:00 截面 :done
+```
+
+### 观察建议（仅研究）
+
+- **环境**：跌停 86 > 涨停 49，炸板 31.0，打板成功率 23.1%，一进二 20.7%。情绪处于**退潮/弱势**区间，右侧信号稀缺，不宜按主升期打法出手。
+- **方向**：今日形成实质扩散的是 白酒概念（涨停5/成分48，密度0.104，中位+0.46%）、啤酒概念（涨停3/成分29，密度0.103，中位+0.59%）、社区团购（涨停3/成分51，密度0.059，中位-0.68%）。**需确认**：次日能否维持涨停家数且中位涨幅不掉队，否则只是普跌中的避险轮动。
+- **零星**：芬太尼(1只/8成分)、天津自贸区(2只/17成分)、中韩自贸区(2只/17成分)、青蒿素(1只/11成分)、高压氧舱(1只/11成分) 属零星个例，不视为题材，不据此选股。
+- **回避**：AI应用（跌停24）、文化传媒概念（跌停21）、电子商务（跌停21） 板块中位跌幅深，趋势未止跌前不接。
+- **身位**：最高 5 板。梯队有高度不等于可接力，需逐票核验封单稳定性与开板次数后再定。
+- **预案**：上海沪工（现价17.55 已高于买区上沿16.19，预案买点不再适用）、传智教育（现价9.96 已高于买区上沿9.68，预案买点不再适用）、上海洗霸（现价51.72 已高于买区上沿47.73，预案买点不再适用）。买区已错过，**不追高**；要参与需等新剧本，不能沿用原预案价位。
+- **预案待检验**：中国卫星(触发价59.72，还差+6.81%)、文投控股(触发价2.27，还差+11.27%)、普冉股份(触发价270.5，还差+7.77%)、三花智控(触发价36.97，还差+11.22%) 尚未触及触发价，剧本未被盘面检验，继续按原失效条件看。
+
+<details>
+<summary>原始截面与数据质量（折叠）</summary>
+
+**跨源校验**
+
+```json
+{
+  "xtick": {
+    "up": 892,
+    "down": 4602,
+    "n": 5577,
+    "amount_yi": 16742.0
+  },
+  "rtk_snapshot": {
+    "up": 413,
+    "down": 2456,
+    "valid_n": 2903,
+    "amount_yi": 9101.6,
+    "up_limit": 26,
+    "down_limit": 40
+  },
+  "note": "两源口径不同（XTick 全市场含全部票；rt_k 返回样本）"
+}
+```
+
+**rt_k 截面（原始）**
+
+```json
+{
+  "market": {
+    "total": 5581,
+    "up": 413,
+    "down": 2456,
+    "flat": 34,
+    "requested_n": 5581,
+    "received_n": 5581,
+    "valid_n": 2903,
+    "missing_n": 2678,
+    "universe_requested_n": null,
+    "population_scope": "returned_rows_not_verified_all_a_universe",
+    "up_ratio": 0.074,
+    "legacy_up_ratio_placeholder": false,
+    "up_ratio_is_observed": true,
+    "up_ratio_all": 0.074,
+    "up_ratio_valid": 0.1423,
+    "up_ratio_denominator": "requested_n",
+    "degraded": true,
+    "limit_known_n": 2903,
+    "limit_unknown_n": 0,
+    "limit_counts_complete": true,
+    "limit_source_errors": [],
+    "up_gt3": 126,
+    "up_gt5": 61,
+    "up_limit": 26,
+    "down_gt3": 1571,
+    "down_gt5": 799,
+    "down_limit": 40,
+    "amount_yi": 9101.6,
+    "amount_sum_overflow": false,
+    "amount_valid_n": 2903,
+    "amount_missing_n": 0
+  },
+  "source_time_quality": {
+    "quote_age_min_seconds": 45.68684,
+    "quote_age_max_seconds": 45.68684,
+    "source_age_limit_seconds": null,
+    "freshness_status": "age_limit_not_configured",
+    "age_reference_at": "2026-10-30T15:00:45.686840+08:00"
+  },
+  "trading_authorized": false
+}
+```
+
+</details>
