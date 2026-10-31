@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-10-31 盘中分析管道升级与LLM研判改造</title><meta charset="utf-8"/><link rel="preload" href="../index-5a23ce28.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-10-31 盘中分析管道升级与LLM研判改造"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-10-31 盘中分析管道升级与LLM研判改造"/><meta name="twitter:description" content="2026-10-31 盘中分析管道升级：LLM 研判增量 + 14:55 尾盘定论 一、授权与要求 用户口径： 盘中分析”不能只是价格表和接收文件”——要看得到板块、核心辨识度个股、预案股票怎么样，要有盘面结论，最好配 mermaid 图。 要把实时盘面与静态复盘、消息面做对比。 mermaid 在 Obsidian 看。 LLM job 选择 A：保留但改造——每 10 分钟只写”研判增量”（跨时点趋势解读、跨板块轮动推断），不重复已有块。 加 14:55 尾盘定论。 本次授权范围：盘中分析管道（脚本 + cron + skill）。不动交易权限、预算、账户、持仓、订单。 二、结论速览 项改..."/><meta property="og:description" content="2026-10-31 盘中分析管道升级：LLM 研判增量 + 14:55 尾盘定论 一、授权与要求 用户口径： 盘中分析”不能只是价格表和接收文件”——要看得到板块、核心辨识度个股、预案股票怎么样，要有盘面结论，最好配 mermaid 图。 要把实时盘面与静态复盘、消息面做对比。 mermaid 在 Obsidian 看。 LLM job 选择 A：保留但改造——每 10 分钟只写”研判增量”（跨时点趋势解读、跨板块轮动推断），不重复已有块。 加 14:55 尾盘定论。 本次授权范围：盘中分析管道（脚本 + cron + skill）。不动交易权限、预算、账户、持仓、订单。 二、结论速览 项改..."/><meta property="og:image:alt" content="2026-10-31 盘中分析管道升级：LLM 研判增量 + 14:55 尾盘定论 一、授权与要求 用户口径： 盘中分析”不能只是价格表和接收文件”——要看得到板块、核心辨识度个股、预案股票怎么样，要有盘面结论，最好配 mermaid 图。 要把实时盘面与静态复盘、消息面做对比。 mermaid 在 Obsidian 看。 LLM job 选择 A：保留但改造——每 10 分钟只写”研判增量”（跨时点趋势解读、跨板块轮动推断），不重复已有块。 加 14:55 尾盘定论。 本次授权范围：盘中分析管道（脚本 + cron + skill）。不动交易权限、预算、账户、持仓、订单。 二、结论速览 项改..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-31-盘中分析管道升级与llm研判改造"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-31-盘中分析管道升级与llm研判改造"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="2026-10-31 盘中分析管道升级：LLM 研判增量 + 14:55 尾盘定论 一、授权与要求 用户口径： 盘中分析”不能只是价格表和接收文件”——要看得到板块、核心辨识度个股、预案股票怎么样，要有盘面结论，最好配 mermaid 图。 要把实时盘面与静态复盘、消息面做对比。 mermaid 在 Obsidian 看。 LLM job 选择 A：保留但改造——每 10 分钟只写”研判增量”（跨时点趋势解读、跨板块轮动推断），不重复已有块。 加 14:55 尾盘定论。 本次授权范围：盘中分析管道（脚本 + cron + skill）。不动交易权限、预算、账户、持仓、订单。 二、结论速览 项改..."/><meta name="generator" content="Quartz"/><link href="../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/2026-10-31-盘中分析管道升级与llm研判改造" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1009" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1009" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-10-31 盘中分析管道升级与LLM研判改造</a></div></nav><h1 class="article-title">2026-10-31 盘中分析管道升级与LLM研判改造</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-31T10:00:08.000Z">2026年10月31日</time><span>12分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="2026-10-31-盘中分析管道升级llm-研判增量--1455-尾盘定论">2026-10-31 盘中分析管道升级：LLM 研判增量 + 14:55 尾盘定论<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-10-31-盘中分析管道升级llm-研判增量--1455-尾盘定论" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="一授权与要求">一、授权与要求<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一授权与要求" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>用户口径：</p>
+<ol>
+<li>盘中分析”不能只是价格表和接收文件”——要看得到<strong>板块</strong>、<strong>核心辨识度个股</strong>、<strong>预案股票怎么样</strong>，要有<strong>盘面结论</strong>，最好配 <strong>mermaid 图</strong>。</li>
+<li>要把<strong>实时盘面</strong>与<strong>静态复盘</strong>、<strong>消息面</strong>做对比。</li>
+<li>mermaid 在 <strong>Obsidian</strong> 看。</li>
+<li>LLM job 选择 <strong>A：保留但改造</strong>——每 10 分钟只写”研判增量”（跨时点趋势解读、跨板块轮动推断），不重复已有块。</li>
+<li><strong>加 14:55 尾盘定论</strong>。</li>
+</ol>
+<p>本次授权范围：盘中分析管道（脚本 + cron + skill）。不动交易权限、预算、账户、持仓、订单。</p>
+<h2 id="二结论速览">二、结论速览<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二结论速览" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项</th><th>改前</th><th>改后</th></tr></thead><tbody><tr><td>盘中分析产出</td><td>广度行 + 预案池现价表 + 有则无的 LLM 段</td><td>三段管道：快照→分析层→决策件渲染（结论/板块/梯队/预案对照/三方对照/轨迹/建议 + mermaid + 证据折叠）</td></tr><tr><td>LLM job</td><td><code>cae686ec450a</code> 挂 <code>market_scanner_v1</code>，每小时</td><td>挂 <code>intraday_snapshot_v1</code>，每 10 分钟，写”研判增量”</td></tr><tr><td>尾盘定论</td><td>无</td><td><code>3298d8bc8192</code>（已存在），落点改为独立 <code>## 尾盘定论</code> 小节</td></tr><tr><td>板块维度</td><td><strong>完全没有</strong></td><td>XTick 概念成分 × 全市场实时，带成分与分母</td></tr><tr><td>涨停梯队</td><td><strong>完全没有</strong></td><td>XTick 连板天梯，含身位/封单/首封/炸板</td></tr><tr><td>预案对照</td><td>只有现价与涨幅</td><td>逐票对照触发价/买区/风险位 → 判定</td></tr><tr><td>三方对照</td><td><strong>完全没有</strong></td><td>盘面 vs T-1 复盘 vs 消息面，逐条标印证/背离/无响应</td></tr></tbody></table></div>
+<h2 id="三逐项真相可核验硬数据">三、逐项真相（可核验硬数据）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三逐项真相可核验硬数据" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="管道结构">管道结构<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#管道结构" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>Tushare rt_k（4 批）→ run_intraday_snapshot.py → intraday_snapshot_{HHMM}.json（广度+预案现价）
+XTick 六端点（HTTP 直连）→ build_intraday_analysis.py → intraday_analysis_{HHMM}.json（分析层）
+  → render_intraday_md.py → 盘中分析 md（决策件）
+降级：分析层关键源失败（退出码 2）→ append_intraday_md.py（基础价格表），不中断整条链
+</code></pre>
+<ul>
+<li>XTick 六端点实测：<code>/doc/order/day?code=all</code> 5577 行 / <strong>0.42s</strong>；<code>/doc/hot/board</code> 49 行 / <strong>0.21s</strong>；<code>/doc/hot/emotion</code> <strong>0.23s</strong>；<code>/doc/hot/bk?symbol=agn</code> 458 个板块 / <strong>0.24s</strong>；<code>sw1</code> 68 个 / <strong>0.22s</strong>；<code>/doc/order/amount</code> <strong>—</strong>；<code>/doc/hot/news?minutes=30</code> 440 条 / 132.7KB。</li>
+<li>分析层全量耗时 <strong>1.23–1.97s</strong>，<code>errors: []</code>。</li>
+<li>渲染产出 <strong>15441 字节</strong>，含 12 个扩散板块、8 只预案票、12 条三方对照。</li>
+</ul>
+<h3 id="关键判定修正均为实测发现非设计推演">关键判定修正（均为实测发现，非设计推演）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#关键判定修正均为实测发现非设计推演" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong>板块排序不能用涨停绝对数</strong>。普跌日”融资融券 25 只涨停”实为成分 3888 只的宽基噪声（密度 0.0064、中位 -3.07%）；“白酒概念 5 只涨停/48 成分”密度 0.104、中位 +0.46% 才是扩散。改为<strong>涨停密度</strong>排序 + 宽基属性板块按名称剔除（全市场 432 个中剔 16 个）。</li>
+<li><strong>“钱在”门槛是涨停 ≥3 只</strong>。芬太尼密度 0.125 排第一但只有 1 只涨停，进结论会误导选股。改为 ⬦ 标注零星、不进结论、不进饼图。</li>
+<li><strong><code>stop_loss</code> 不是”现价跌破即失效”</strong>。预案 <code>exit_rules</code> 明写”以拟买上沿为基准的引擎风险参考；无当日新仓卖权，不是卖出指令”，且三花智控 stop 35.64 高于昨收 34.50、低于买区 36.79。原实现把 8 只票里 4 只误判成”已失效”。改为按触发价/买区判定（超买区/已触发/买区内/未到价/无预案价），止损只在条件已满足后才谈失效。</li>
+<li><strong>“印证”判据不能是 <code>live_lu >= 1</code></strong>。商业航天 T-1 有 11 只涨停、今日只剩 6 只且中位 -4.24%，明显是背离却判成印证。改为按涨停家数保留比例（≥80% 印证 / ≥40% 部分印证 / &lt;40% 背离）+ 相对强度。</li>
+<li><strong>“超买区”是背离不是利好</strong>（原映射归到”无响应”）。票走强但预案买点错过 = 追高风险，结论必须写”不追高”。</li>
+</ol>
+<h3 id="2026-10-30-收盘实测真数据">2026-10-30 收盘实测（真数据）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-10-30-收盘实测真数据" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>全市场涨 892 / 跌 4602（广度 0.16），涨停 49 / 跌停 86，中位 -3.12% → 普跌格局。</li>
+<li><strong>扩散</strong>：白酒概念（涨停 5 / 成分 48 / 密度 0.104 / 中位 +0.46%）、啤酒概念（3/29 / +0.59%）。</li>
+<li><strong>退潮</strong>：AI应用跌停 24 只（-4.96%）、文化传媒跌停 21 只（-5.39%）、AIGC 跌停 19 只（-5.71%）。</li>
+<li><strong>梯队</strong>：5板×1（青岛食品）、3板×2（上海沪工/澳洋健康）、2板×6、1板×40，最高 5 板（T-1 为 4 板）。</li>
+<li><strong>预案 8 只</strong>：上海沪工（3板，17.55）、传智教育（2板，9.96）、上海洗霸（51.72）→ 3 只<strong>超买区</strong>（买区已错过，不追高）；中国卫星/文投控股/普冉股份/三花智控 → <strong>未到价</strong>；博盈特焊 → <strong>无预案价</strong>（情景作废，待复牌重导）。</li>
+<li><strong>三方对照</strong>：商业航天较 T-1 保留 55% → 部分印证；短剧游戏保留 25% → 背离。</li>
+</ul>
+<h3 id="llm-冒烟真实调用非模拟">LLM 冒烟（真实调用，非模拟）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#llm-冒烟真实调用非模拟" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><code>hermes chat --provider minimax-cn --model MiniMax-M3.1-Flash --skills intraday_snapshot_v1</code>，6 分 43 秒，56 消息 / 54 工具调用。</li>
+<li>实际写入 <code>20261030.md</code> 第 851–859 行并回读校验：h2 仍 2 个、h3 仍 41 个、34 段历史截面<strong>零丢失</strong>、研判增量标题仍 1 个、未创建尾盘定论小节、无”建议买入/低吸区/止损/目标价”措辞。</li>
+<li><strong>LLM 产出超出脚本层</strong>，自行识别出脚本算不出的四件事：
+<ul>
+<li>“放量下跌，不是缩量回踩”（成交额 10411 亿 → 15966 亿）</li>
+<li>“涨停家数增加来自首板宽度，梯队高度与封板质量没同步跟上，宽度盖住了尾部塌陷”</li>
+<li>“资金不做容量”（上海沪工流通市值 53.7 亿涨停 vs 中国卫星 661 亿几乎平收）</li>
+<li>“尾盘偷袭型 2 板巴比食品（开板 7 次、13:32 首封、封单 0）不计入梯队质量”</li>
+</ul>
+</li>
+</ul>
+<h3 id="配置侧变更">配置侧变更<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#配置侧变更" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>job</th><th>变更</th></tr></thead><tbody><tr><td><code>cae686ec450a</code></td><td>skills <code>market_scanner_v1</code> → <code>intraday_snapshot_v1</code>；调度 <code>5 10-14</code> → <code>5,15,25,35,45,55 9-11,13-14</code>；prompt 改为消费 analysis JSON 写 <code>### {HH:MM} 研判增量</code></td></tr><tr><td><code>3298d8bc8192</code></td><td>落点改为独立 <code>## 尾盘定论</code> 小节（禁写 <code>## 分时研判记录</code>）；加”无数据即退出”守卫</td></tr><tr><td><code>8b9ff2eb44f2</code></td><td>不变（no-agent，wrapper 已接三段管道）</td></tr></tbody></table></div>
+<p><strong>两个 LLM job 落点互斥</strong>：增量禁写尾盘定论，尾盘定论禁写分时研判记录。否则 md 会出现两个同名标题，读者无法判断哪段是当轮结论。</p>
+<p><strong>“无数据即退出”守卫</strong>：两 job 都先 <code>date</code> 确认日期、检查当日 analysis 文件是否存在；不存在（周末/节假日/数据未落盘）立即停止不写盘，绝不写”今日无数据”占位段落污染文件。</p>
+<h2 id="四根因">四、根因<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四根因" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>为什么原来只有价格表</strong>：方法论一直在 skill 里（<code>intraday_snapshot_v1</code> 的”交付物契约”段明确要求结论/板块/梯队/预案对照/三方对照），但<strong>契约写在 skill 里 ≠ 代码实现了它</strong>。<code>run_intraday_snapshot.py</code> 只算 market(广度) + pool(现价)，snapshot JSON 里根本没有板块/梯队字段，预案的 <code>trigger_price</code>/<code>buy_zone</code>/<code>stop_loss</code> 在落盘时被丢弃。LLM job 又挂错 skill（<code>market_scanner_v1</code>），且从 2026-10-26 起持续 429 失败——分析层实际上从未运行过。</p>
+<p><strong>为什么原来”没有板块”</strong>：不是没数据源，是没接。XTick <code>/doc/hot/bk</code> 与 <code>/doc/hot/board</code> 一直可用（0.2s 级），项目里也有 <code>XTICK_TOKEN</code>，但没人把它们接进盘中管道。</p>
+<h2 id="五改进建议">五、改进建议<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五改进建议" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>P0（已完成）</strong>：三段管道接入 cron wrapper + 分析层失败自动降级。</p>
+<p><strong>P1（建议，需签核）</strong>：</p>
+<ol>
+<li><strong>补单元测试</strong>：<code>build_intraday_analysis.py</code> 的判定逻辑（涨停密度排序、宽基剔除、stop_loss 语义、三方对照比例判据）目前无自动化回归，改动后靠人工比对。建议加 <code>tests/intraday/test_analysis_judgments.py</code>，用固定输入快照断言判定结果。</li>
+<li><strong>跨源一致性强校验</strong>：本次发现 XTick 全市场（892/4602, n=5577）与 rt_k 返回样本（413/2456, valid_n=2903）口径差异巨大，同一份 md 里两个数并存容易误读。建议渲染时统一标注两者口径，或在 rt_k 有效样本低于 90% 时自动改用 XTick 口径并标降级。</li>
+<li><strong>板块成分缓存</strong>：<code>/doc/hot/bk?symbol=agn</code> 返回 458 个板块全成分（约 1.1MB），每 10 分钟拉一次浪费 XTick 日配额（限额约 8 万次）。建议按日缓存成分表，只实时取行情。</li>
+</ol>
+<p><strong>P2（可选）</strong>：<br/>
+4. <code>xtick_hot_bk</code> 的 MCP 工具描述（<code>symbol: all=全市场</code>）与官方文档（<code>symbol=agn|sw1|...</code>）不一致，实际 <code>all</code> 报”参数错误”。已在 <code>docs/13-参考-XTick-API文档.md</code> 记录官方枚举；可考虑把 MCP server 的描述同步为官方枚举，避免后续 agent 重踩。</p>
+<h2 id="六变更文件清单">六、变更文件清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#六变更文件清单" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>新建</strong></p>
+<ul>
+<li><code>scripts/intraday/xtick_intraday.py</code>（13792 B）— XTick 六端点封装 + 冒烟自检</li>
+<li><code>scripts/intraday/build_intraday_analysis.py</code>（30449 B）— 分析层</li>
+<li><code>scripts/intraday/render_intraday_md.py</code>（28102 B）— 决策件渲染</li>
+</ul>
+<p><strong>修改</strong></p>
+<ul>
+<li><code>~/.hermes/scripts/canghai_intraday_snapshot.sh</code> — 接入三段管道 + 降级回落（备份 <code>.bak-20261030</code>）</li>
+<li><code>~/.hermes/cron/jobs.json</code> — 两个 LLM job 的 skills/调度/prompt/落点（备份 <code>.pre-intraday-upgrade-20261030</code>）</li>
+<li><code>~/.hermes/skills/intraday_snapshot_v1/SKILL.md</code> — v2：数据链路、脚本表、cron 表、落点互斥、12 条 Pitfalls</li>
+<li><code>~/.hermes/skills/workflow-discipline/codebase-modification-discipline/SKILL.md</code> — 新增自检 6（写文件以磁盘为准）、自检 7（stop_loss 语义）</li>
+<li><code>data/evolution/2026-W44/sign_off_log.md</code> — 签核留痕（4 条 WEEK44-INTRADAY-*）</li>
+</ul>
+<p><strong>落盘产物</strong></p>
+<ul>
+<li><code>data/raw/20261030/intraday_analysis_1500.json</code> — 分析层</li>
+<li><code>chzl_kg/投研交易/盘中分析/20261030.md</code> — 决策件 + 研判增量（备份 <code>.bak-smoke-incr</code>）</li>
+</ul>
+<h2 id="七未尽事项">七、未尽事项<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#七未尽事项" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong>两个 LLM job 的自然调度未观测</strong>：下一个交易日 2026-11-02 09:05 起首次自然触发，真实盘中增量的连续性、并发容量、尾盘定论实际产出均未验证。</li>
+<li><strong>今日（10-31 周六）非交易日</strong>，10-31 无交易数据；“无数据即退出”守卫仅经构造验证（<code>XTICK_TOKEN=&quot;&quot;</code> 模拟），未在真实周末调度中观测。</li>
+<li><strong>测试缺失</strong>：判定逻辑无自动化回归（见 P1 建议 1）。</li>
+<li><strong>板块成分未缓存</strong>，每轮重复拉 458 个板块成分。</li>
+<li><strong>工具层异常</strong>：本次多次 <code>write_file</code> 报告 <code>verified:true</code> 但磁盘内容未被替换（最终经 mtime + 特征串比对定位）。已沉淀为 skill 自检 6，但工具层根因未查明。</li>
+</ol></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-978" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#2026-10-31-盘中分析管道升级llm-研判增量--1455-尾盘定论" data-for="2026-10-31-盘中分析管道升级llm-研判增量--1455-尾盘定论">2026-10-31 盘中分析管道升级：LLM 研判增量 + 14:55 尾盘定论</a></li><li class="depth-1"><a href="#一授权与要求" data-for="一授权与要求">一、授权与要求</a></li><li class="depth-1"><a href="#二结论速览" data-for="二结论速览">二、结论速览</a></li><li class="depth-1"><a href="#三逐项真相可核验硬数据" data-for="三逐项真相可核验硬数据">三、逐项真相（可核验硬数据）</a></li><li class="depth-2"><a href="#管道结构" data-for="管道结构">管道结构</a></li><li class="depth-2"><a href="#关键判定修正均为实测发现非设计推演" data-for="关键判定修正均为实测发现非设计推演">关键判定修正（均为实测发现，非设计推演）</a></li><li class="depth-2"><a href="#2026-10-30-收盘实测真数据" data-for="2026-10-30-收盘实测真数据">2026-10-30 收盘实测（真数据）</a></li><li class="depth-2"><a href="#llm-冒烟真实调用非模拟" data-for="llm-冒烟真实调用非模拟">LLM 冒烟（真实调用，非模拟）</a></li><li class="depth-2"><a href="#配置侧变更" data-for="配置侧变更">配置侧变更</a></li><li class="depth-1"><a href="#四根因" data-for="四根因">四、根因</a></li><li class="depth-1"><a href="#五改进建议" data-for="五改进建议">五、改进建议</a></li><li class="depth-1"><a href="#六变更文件清单" data-for="六变更文件清单">六、变更文件清单</a></li><li class="depth-1"><a href="#七未尽事项" data-for="七未尽事项">七、未尽事项</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

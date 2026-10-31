@@ -1,0 +1,36 @@
+--- before/scripts/health/check_daily_output.py
++++ after/scripts/health/check_daily_output.py
+@@ -44,7 +44,7 @@
+     ("每日复盘 E1", "复盘记录", None, "important"),
+     # 低频/周更
+     ("事件追踪", "事件追踪", None, "nice"),  # 不是每日
+-    ("催化剂日历", "催化剂", None, "nice"),  # 每周一
++    ("催化剂日历", "催化剂", None, "important"),  # 每天07:30（含周末/节假日）
+     ("周度进化 E2", "周度进化", None, "nice"),  # 每周五
+     ("席位与资金", "席位与资金", None, "nice"),  # 每周五
+     ("扩池", "扩池", None, "nice"),
+--- before/scripts/cron/holiday_maintenance.py
++++ after/scripts/cron/holiday_maintenance.py
+@@ -59,6 +59,7 @@
+     "canghai-holiday",  # this tooling's own resume job
+     "canghai-event-tracker",  # 公告日历没有休市日（2026-10-19）：放假期间照样有公告
+     "canghai-weekend",        # 周末/假期情报包（群聊+公众号+新闻+公告窗口）
++    "canghai-catalyst-calendar",  # 催化日历按自然日更新，不因A股休市暂停
+ )
+ 
+ HERMES_BIN = shutil.which("hermes") or "hermes"
+--- before/chzl_kg/投研交易/催化剂/README.md
++++ after/chzl_kg/投研交易/催化剂/README.md
+@@ -1,4 +1,11 @@
+ # 催化剂
+ 
+-本目录由 SkillHub 集成产生。
++本目录保留催化剂日历的逐日分析报告，文件名为 `YYYYMMDD.md`。
+ 
++- 更新：每天北京时间07:30启动，包含周末和节假日；这是启动时间，不是报告完成时间。
++- 范围：未来四周A股相关的宏观、产业、公司财报、会议、产品与监管等关键事件。
++- 内容：完整事件日历及重点分析，首先列出新增事件、日期修订、临近重点、已兑现或证伪事件。
++- 方法：由Agent使用现有资料和数据接口分析；明确来源、数据时点与待核实项，不换日期复制旧市场判断。
++- 定时任务：`canghai-catalyst-calendar`（`8588cd3d9943`），沿用Codex模型，不新增重复任务。
++- 历史报告原样保留；夜间补更标实际生成时间，不冒充盘前预测。
++

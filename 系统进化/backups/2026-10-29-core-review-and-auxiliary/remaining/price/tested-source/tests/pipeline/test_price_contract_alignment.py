@@ -1,0 +1,215 @@
+"""Synthetic price-contract checks; run only behind a pre-collection guard.
+
+Unresolved caller contracts remain real failures, not xfails or weakened tests.
+No exchange tick-size or new tolerance is inferred from two-decimal formatting.
+"""
+from __future__ import annotations
+
+from copy import deepcopy
+import importlib.util
+import os
+from pathlib import Path
+import shutil
+import sys
+from types import ModuleType, SimpleNamespace
+
+import pytest
+
+REPO = Path(os.environ.get("PRICE_CONTRACT_SOURCE_ROOT", Path(__file__).resolve().parents[2]))
+SCRATCH = Path.home() / ".hermes/cache/scratch"
+DATE = "20990101"
+FILES = ("src/plan/price_levels.py", "src/plan/buy_eligibility.py", "scripts/plan/apply_price_levels.py")
+
+
+@pytest.fixture
+def env(tmp_path, monkeypatch):
+    assert tmp_path.resolve().is_relative_to(SCRATCH.resolve())
+    root = tmp_path / "app"
+    for rel in FILES:
+        dest = root / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(REPO / rel, dest)
+    saved = {k: v for k, v in sys.modules.items() if k.split(".")[0] in ("src", "scripts")}
+    for key in saved:
+        sys.modules.pop(key)
+    for name, directory in (("src", "src"), ("src.plan", "src/plan"),
+                            ("scripts", "scripts"), ("scripts.plan", "scripts/plan")):
+        package = ModuleType(name)
+        package.__file__ = "<synthetic namespace>"
+        package.__path__ = [str(root / directory)]
+        monkeypatch.setitem(sys.modules, name, package)
+    modules = []
+    try:
+        for name, rel in zip(("src.plan.price_levels", "src.plan.buy_eligibility", "scripts.plan.apply_price_levels"), FILES):
+            spec = importlib.util.spec_from_file_location(name, root / rel)
+            assert spec is not None and spec.loader is not None
+            module = importlib.util.module_from_spec(spec)
+            sys.modules[name] = module
+            spec.loader.exec_module(module)
+            modules.append(module)
+        def deny(*args, **kwargs):
+            pytest.fail("technical DB access is forbidden")
+        monkeypatch.setattr(modules[0], "load_tech", deny)
+        yield SimpleNamespace(levels=modules[0], helper=modules[1], apply=modules[2])
+    finally:
+        for key in list(sys.modules):
+            if key.split(".")[0] in ("src", "scripts"):
+                sys.modules.pop(key)
+        sys.modules.update(saved)
+
+
+@pytest.mark.parametrize("channel", [None, "", "unknown", "MA50", "low_absorption_intraday"])
+def test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50(env, channel):
+    row = env.levels.derive("000001.SZ", DATE, ref_close=100, channel=channel)
+    assert row["ok"] is False
+    assert "channel" in row["reason"]
+    assert row.get("trigger_price") is None and row.get("risk_reward_ratio") is None
+    assert "buy_zone" not in row
+
+
+def test_omitted_channel_is_not_implicit_authorization(env):
+    row = env.levels.derive("000001.SZ", DATE, ref_close=100)
+    assert row["ok"] is False and "channel" in row["reason"]
+
+
+@pytest.mark.parametrize("one_word", [False, True])
+def test_unreachable_explicit_trend_keeps_original_zone_never_switches_ma10(env, monkeypatch, one_word):
+    monkeypatch.setattr(env.levels, "load_tech", lambda *a: {"close": 100., "ma50": 70., "ma10": 95.})
+    row = env.levels.derive("000001.SZ", DATE, channel="trend_pullback_buy", one_word=one_word)
+    assert row["ok"] is False and "unreachable_buy_zone" in row["reason"]
+    assert row["channel"] == "trend_pullback_buy" and row["buy_zone"] == [69.3, 70.7]
+    assert row["trigger_price"] is None and row["risk_reward_ratio"] is None
+
+
+@pytest.mark.parametrize("upper,ok", [(90., True), (89.99, False)])
+def test_existing_ten_percent_unreachable_boundary_without_new_tolerance(env, monkeypatch, upper, ok):
+    monkeypatch.setattr(env.levels, "load_tech", lambda *a: {"close": 100., "ma50": upper / 1.01})
+    row = env.levels.derive("000001.SZ", DATE, channel="trend_pullback_buy")
+    assert row["ok"] is ok
+    assert row["buy_zone"][1] == upper
+
+
+@pytest.mark.parametrize("code,channel,tech,trigger", [
+    ("000001.SZ", "trend_pullback_buy", {"close": 100., "ma50": 100., "hi20": 120.}, 99.),
+    ("000001.SZ", "leader_breakout", {"close": 100., "hi20": 100.}, 100.),
+    ("300001.SZ", "divergence_pullback", {"close": 100., "ma10": 80.}, 97.),
+])
+def test_explicit_legal_scenarios_share_planned_high_stop_rr_and_quote_precision(env, monkeypatch, code, channel, tech, trigger):
+    monkeypatch.setattr(env.levels, "load_tech", lambda *a: deepcopy(tech))
+    row = env.levels.derive(code, DATE, channel=channel)
+    assert row["ok"] is True
+    low, buy = row["buy_zone"]
+    assert row["trigger_price"] == trigger  # trigger condition is not the proposed buy price
+    assert row["stop_loss"] == round(buy * (1 - (.08 if code.startswith("300") else .05)), 2)
+    risk = round(buy - row["stop_loss"], 2)
+    assert row["take_profit"] == round(buy + 2 * risk, 2)
+    assert row["risk_reward_ratio"] == round((row["take_profit"] - buy) / risk, 2)
+    assert 0 < row["stop_loss"] < low <= buy < row["take_profit"]
+    for value in (*row["buy_zone"], row["trigger_price"], row["stop_loss"], row["take_profit"], row["max_acceptable_ask"]):
+        assert value == round(value, 2)
+    rule = {"type": channel, "buy_zone": row["buy_zone"], "trigger_price": trigger, "price_src": "engine"}
+    stock = {"ts_code": code, "engine_levels": row, "entry_rules": [rule]}
+    planned = env.helper.evaluate_stock_buy_eligibility(stock)
+    assert planned["risk_reward_ratio"] == row["risk_reward_ratio"]
+    assert planned["buy_price"] == buy and planned["status"] == "eligible"
+    actual = env.helper.evaluate_stock_buy_eligibility(stock, {"ask": row["max_acceptable_ask"]}, entry_rule=rule)
+    assert actual["buy_price"] == row["max_acceptable_ask"]
+    assert actual["risk_reward_ratio"] == round((row["take_profit"] - actual["buy_price"]) / round(actual["buy_price"] - row["stop_loss"], 2), 2)
+    assert actual["status"] == "blocked"  # a passing planned RR never authorizes the higher limit
+
+
+@pytest.mark.parametrize("take,status", [(117.94, "blocked"), (117.95, "eligible")])
+def test_existing_rr_rounding_boundary_not_new_tick_tolerance(env, take, status):
+    stock = {"ts_code": "000001.SZ", "entry_rules": [{"buy_zone": [99., 100.]}],
+             "stop_loss": 90., "take_profit": take}
+    assert env.helper.evaluate_stock_buy_eligibility(stock)["status"] == status
+    assert env.helper.RR_MIN == 1.8
+
+
+@pytest.mark.parametrize("rules", [
+    [], None, "trend_pullback_buy", [None],
+    [{"type": "unknown"}],
+    [{"type": "trend_pullback_buy", "price_src": "engine"}],
+    [{"type": "trend_pullback_buy"}, {"type": "leader_breakout"}],
+])
+def test_picker_missing_generated_or_conflicting_channel_never_reads_tech(env, rules):
+    stock = {"ts_code": "000001.SZ", "entry_rules": deepcopy(rules)}
+    before = deepcopy(stock)
+    assert env.apply.pick_channel(stock, DATE) is None
+    assert stock == before
+
+
+@pytest.mark.parametrize("channel", ["trend_pullback_buy", "leader_breakout", "divergence_pullback"])
+def test_picker_retains_explicit_channel_without_loading_technical_data(env, channel):
+    stock = {"ts_code": "000001.SZ", "entry_rules": [{"type": channel}]}
+    assert env.apply.pick_channel(stock, DATE) == channel
+
+
+def fixture_stock(**updates):
+    return {"ts_code": "300001.SZ", "reference_close": 100., "entry_rules": [], "exit_rules": [],
+            "auto_trade_enabled": False, "requires_user_confirmation": True,
+            "max_position_pct": 0., **updates}
+
+
+def fixture_plan(stock):
+    return {"trade_date": DATE, "mode": "dry_run", "execution_pool": [], "watch_pool": [stock],
+            "no_trade": True, "autonomous_trading_enabled": False,
+            "risk_limits": {"target_total_position_pct": 0.}}
+
+
+@pytest.mark.parametrize("group", ["watch_pool", "b_plan"])
+def test_caller_empty_entry_without_channel_must_not_manufacture_ma50(env, monkeypatch, group):
+    monkeypatch.setattr(env.levels, "load_tech", lambda *a: {"close": 100., "ma50": 100., "hi20": 120.})
+    stock = fixture_stock()
+    plan = fixture_plan(stock)
+    if group == "b_plan":
+        plan["watch_pool"] = []
+        plan["seesaw_plan"] = {"seesaw_directions": [{"candidates": [stock]}]}
+    original = deepcopy(stock)
+    rows = env.apply.apply_to_plan(plan, DATE)
+    assert rows[0]["ok"] is False, "caller still invents channel for empty entry"
+    assert stock["entry_rules"] == original["entry_rules"] and "buy_zone" not in stock
+    assert stock["buy_eligibility"]["status"] != "eligible"
+    assert not stock["auto_trade_enabled"] and stock["max_position_pct"] == 0.
+    assert env.helper.evaluate_plan_buy_gate(plan)["status"] == "blocked"
+
+
+def test_caller_cannot_replace_explicit_legal_trend_with_divergence(env, monkeypatch):
+    monkeypatch.setattr(env.levels, "load_tech", lambda *a: {"close": 100., "ma50": 95., "ma10": 80.})
+    rule = {"type": "trend_pullback_buy", "buy_zone": [94.05, 95.95], "trigger_price": 94.05}
+    stock = fixture_stock(entry_rules=[deepcopy(rule)])
+    rows = env.apply.apply_to_plan(fixture_plan(stock), DATE)
+    assert rows[0]["channel"] == "trend_pullback_buy", "caller overrides explicit authorized channel"
+    assert rows[0]["buy_zone"] == rule["buy_zone"] and stock["entry_rules"] == [rule]
+
+
+@pytest.mark.parametrize("group", ["execution_pool", "watch_pool", "b_plan"])
+def test_explicit_geometry_failure_reaches_engine_and_preserves_selected_rule(env, monkeypatch, group):
+    monkeypatch.setattr(env.levels, "load_tech", lambda *a: {"close": 100., "ma10": 80.})
+    rule = {"type": "divergence_pullback"}
+    stock = fixture_stock(ts_code="000001.SZ", entry_rules=[deepcopy(rule)])
+    plan = fixture_plan(stock)
+    if group != "watch_pool":
+        plan["watch_pool"] = []
+        if group == "b_plan":
+            plan["seesaw_plan"] = {"seesaw_directions": [{"candidates": [stock]}]}
+        else:
+            plan["execution_pool"] = [stock]
+    rows = env.apply.apply_to_plan(plan, DATE)
+    assert rows[0]["ok"] is False and "invalid_stop_geometry" in rows[0]["reason"]
+    assert stock["entry_rules"] == [rule] and stock["exit_rules"] == []
+    assert stock["buy_eligibility"]["status"] != "eligible"
+    assert env.helper.evaluate_plan_buy_gate(plan)["status"] == "blocked"
+
+
+def test_explicit_leader_roundtrip_keeps_entry_exits_budget_and_buy_gate(env, monkeypatch):
+    monkeypatch.setattr(env.levels, "load_tech", lambda *a: {"close": 100., "hi20": 100.})
+    rule = {"type": "leader_breakout", "buy_zone": [99.5, 101.5], "trigger_price": 100.}
+    stock = fixture_stock(entry_rules=[deepcopy(rule)], stop_loss=90., take_profit=125.)
+    before = deepcopy(stock)
+    plan = fixture_plan(stock)
+    rows = env.apply.apply_to_plan(plan, DATE)
+    assert rows[0]["channel"] == "leader_breakout" and rows[0]["ok"] is True
+    for key, value in before.items():
+        assert stock[key] == value
+    assert env.helper.evaluate_plan_buy_gate(plan)["status"] == "blocked"

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>SKILL</title><meta charset="utf-8"/><link rel="preload" href="../../../../index-5a23ce28.css" as="style"/><link rel="preload" href="../../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="SKILL"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="SKILL"/><meta name="twitter:description" content="canghai-research 主控 — delegate_task 调度 R1-R7，收集 artifact 路径，产出 research_summary.json"/><meta property="og:description" content="canghai-research 主控 — delegate_task 调度 R1-R7，收集 artifact 路径，产出 research_summary.json"/><meta property="og:image:alt" content="canghai-research 主控 — delegate_task 调度 R1-R7，收集 artifact 路径，产出 research_summary.json"/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/backups/2026-10-23-policy-ab-preapply-16-originals/07/skill"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/backups/2026-10-23-policy-ab-preapply-16-originals/07/skill"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="canghai-research 主控 — delegate_task 调度 R1-R7，收集 artifact 路径，产出 research_summary.json"/><meta name="generator" content="Quartz"/><link href="../../../../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/backups/2026-10-23-policy-ab-preapply-16-originals/07/skill" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../../..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1031" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1031" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../系统进化/backups/">backups</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../系统进化/backups/2026-10-23-policy-ab-preapply-16-originals/">2026-10-23-policy-AB-preapply-16-originals</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../系统进化/backups/2026-10-23-policy-ab-preapply-16-originals/07/">07</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>SKILL</a></div></nav><h1 class="article-title">SKILL</h1><details class="note-properties metadata-container" open data-collapsed="false"><summary class="note-properties-header"><span class="note-properties-title">Properties</span><span class="note-properties-count">1</span></summary><table class="note-properties-table"><tbody><tr class="note-properties-row metadata-property"><td class="note-properties-key metadata-property-key">description</td><td class="note-properties-value metadata-property-value"><span class="note-properties-text">canghai-research 主控 — delegate_task 调度 R1-R7，收集 artifact 路径，产出 research_summary.json</span></td></tr></tbody></table></details><p show-comma="true" class="content-meta"><time datetime="2026-07-04T16:00:00.000Z">2026年7月05日</time><span>13分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="research_orchestrator_v1">research_orchestrator_v1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#research_orchestrator_v1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>归属</strong>: <code>canghai-research</code> profile 主控（调度层，不是任何单一 R* 单元）<br/>
+<strong>目的</strong>: 按当前启用的盘前任务日程，读取 <code>data/raw/YYYYMMDD/</code> 与 manifest，依实际输入依赖派发 R1–R7，收集并核验单元产物，写 <strong><code>data/research/YYYYMMDD/research_summary.json</code></strong> 供计划端消费；本技能中的示例时刻不覆盖运行配置。</p>
+<p><strong>架构依据</strong>: <code>docs/01-系统现状全景.md</code> §5 · <code>docs/10-契约-研究汇总.md</code><br/>
+<strong>Cron 模式</strong>: Hermes <strong>agent + skill</strong>（主路径 = LLM + delegation；<strong>禁止</strong> <code>--no-agent</code> Python orchestrator）</p>
+<hr/>
+<h2 id="purpose">Purpose<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#purpose" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>主控 <strong>不做分析、不直接调 MCP</strong>，只做:</p>
+<ol>
+<li>校验 fetch 上游 manifest</li>
+<li><code>delegate_task</code> 按硬约束时序派发 R1–R7</li>
+<li>收集 sub-agent 回传的 artifact 路径 + schema 校验结果</li>
+<li>写 <code>research_summary.json</code></li>
+</ol>
+<p>Sub-agent 的中间 tool call <strong>不进主控 context</strong> — 只回传最终 artifact 路径。</p>
+<hr/>
+<h2 id="execution-promptagent-加载本-skill-后按序执行">Execution Prompt（Agent 加载本 skill 后按序执行）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#execution-promptagent-加载本-skill-后按序执行" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="step-0--初始化">Step 0 · 初始化<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-0--初始化" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>trade_date = 今日 YYYYMMDD（上海时区，或 cron 指定）</span></span>
+<span data-line><span>raw_dir    = data/raw/{trade_date}/</span></span>
+<span data-line><span>out_dir    = data/research/{trade_date}/</span></span></code></pre></figure>
+<p>读取并缓存:</p>
+<pre><code>data/raw/{trade_date}/manifest.json          # 必需；缺则 orchestrator_status=failed，告警退出
+data/user_preferences.yaml                   # 只读，传给各 sub-agent
+data/human_thesis/active/*.md                # 只读，传给各 sub-agent
+</code></pre>
+<p>记录 <code>fetch_global_severity = manifest.global_severity</code>（0–3）。</p>
+<p><strong>禁止</strong>:</p>
+<ul>
+<li>❌ 主控直接调用 tushare / xtick / weflow / wechat MCP</li>
+<li>❌ 修改 <code>user_preferences.yaml</code> / <code>human_thesis/</code></li>
+<li>❌ 调用 <code>scripts/research/run_research_orchestrator.py</code> 或 <code>src/research/orchestrator.py</code>（T1’ Python fallback 冻结）</li>
+</ul>
+<h3 id="step-1--sub-agent-映射skill--agent-spec">Step 1 · Sub-agent 映射（skill + agent spec）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-1--sub-agent-映射skill--agent-spec" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>每个 <code>delegate_task</code> 的 <code>prompt</code> 必须指向对应 <strong>流水线 skill</strong> 与 <strong>agent spec</strong>（schema 冻结在 spec + 各 R*.json 契约）:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>单元</th><th>delegate 加载 skill</th><th>Agent Spec（必读契约）</th></tr></thead><tbody><tr><td>R1</td><td><code>analyze_style_v1</code></td><td><code>docs/agents/R1-风格Agent.md</code></td></tr><tr><td>R2</td><td><code>analyze_main_sectors_v1</code>, <code>filter_leader_v1</code></td><td><code>docs/agents/R2-主线板块Agent.md</code></td></tr><tr><td>R3</td><td><code>analyze_sentiment_resonance_v1</code>, <code>hotlist_rank_signal_v1</code></td><td><code>docs/agents/R3-情绪与热度Agent.md</code></td></tr><tr><td>R4</td><td><code>analyze_news_impact_v1</code></td><td><code>docs/agents/R4-消息面Agent.md</code></td></tr><tr><td>R5</td><td><code>analyze_stock_profile_v1</code>, <code>serenity_analyst</code></td><td><code>docs/agents/R5-情报深挖Agent.md</code></td></tr><tr><td>R6</td><td><code>analyze_devil_advocate_v1</code></td><td><code>docs/agents/R6-反证Agent.md</code></td></tr><tr><td>R7</td><td><code>analyze_capital_flow_v1</code>, <code>detect_seesaw_pairs_v1</code>, <code>hot_money_synergy_v1</code></td><td><code>docs/agents/R7-资金面Agent.md</code></td></tr></tbody></table></div>
+<p>横切 <code>_shared/</code> skill 由各 R* skill 内 <code>@</code> 引用 — 见 <code>docs/01-系统现状全景.md</code> §1.2；<strong>主控不重写</strong> hithink/news/估值逻辑。</p>
+<p><strong>各 sub-agent 统一输入上下文</strong>（写入 delegate prompt）:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">trade_date</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">YYYYMMDD</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">raw_dir</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">data/raw/YYYYMMDD/</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">manifest</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">data/raw/YYYYMMDD/manifest.json</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">preferences</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">data/user_preferences.yaml</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">          # 只读</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">thesis</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">data/human_thesis/active/*.md</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">            # 只读</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">output_path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">data/research/YYYYMMDD/R{N}_*.json</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 见下表</span></span></code></pre></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>单元</th><th>默认 output_path</th></tr></thead><tbody><tr><td>R1</td><td><code>data/research/YYYYMMDD/R1_style.json</code></td></tr><tr><td>R2</td><td><code>data/research/YYYYMMDD/R2_main_sectors.json</code></td></tr><tr><td>R3</td><td><code>data/research/YYYYMMDD/R3_sentiment.json</code></td></tr><tr><td>R4</td><td><code>data/research/YYYYMMDD/R4_news.json</code></td></tr><tr><td>R5</td><td><code>data/research/YYYYMMDD/R5_stock_profiles.json</code></td></tr><tr><td>R6</td><td><code>data/research/YYYYMMDD/R6_devil_advocate.json</code></td></tr><tr><td>R7</td><td><code>data/research/YYYYMMDD/R7_capital_flow.json</code></td></tr></tbody></table></div>
+<h3 id="step-2--按实际依赖分批按完成结果交接">Step 2 · 按实际依赖分批，按完成结果交接<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-2--按实际依赖分批按完成结果交接" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>先辨认当前启用入口：shell 控制层逐单元启动 LLM，与纯 Python 代替研究决策不是同一回事；不得因看到 shell/状态记录程序就擅自改回另一条主路径。若使用 delegation，按当前运行时的异步返回约定处理，不沿用历史保活轮询经验。</p>
+<p>按输入依赖执行：</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>Batch 1: R1 / R4 / R7，独立任务在实际可用并发槽内运行</span></span>
+<span data-line><span>Batch 2: R3，读取本交易日已核验的 R1 基线</span></span>
+<span data-line><span>Batch 3: R2，读取已核验的 R1 / R3 / R4 / R7</span></span>
+<span data-line><span>Batch 4: R5，读取本次 R2 候选及其缺口</span></span>
+<span data-line><span>Batch 5: R6，只读本次 R1-R5 / R7，不抓新行情</span></span>
+<span data-line><span>最后: 收集完整结果与契约检查，写 research_summary.json</span></span></code></pre></figure>
+<ul>
+<li>按当前可用并发槽拆批；提交成功不等于释放并发槽，也不等于依赖完成。</li>
+<li>完成结果到达后，再核对该单元的本次 run/attempt、交易日、JSON 与承诺的人读报告；不要用旧同日文件存在代替当前任务终态。</li>
+<li>不用 sleep/文件或转录轮询等待异步子任务；遵守当前工具的完成通知机制，依赖未就绪不启动消费者。</li>
+<li>读完整回传，包括剩余问题；用任务与产物版本去重迟到通知，已审阅整合的结果不重复运行或补写。</li>
+<li>超时预算从当前任务配置、交付截止点及实测关键路径取得；不能把历史测试耗时当永久运行时上限。到点按实际缺口写 partial/failed，不默许消费者读半成品。</li>
+<li>研究汇总交给计划端消费；D1 必须由 <code>canghai-plan</code> 启动，研究身份不得替写计划、触发价或运行副本。</li>
+</ul>
+<h3 id="step-3--消费依赖硬约束">Step 3 · 消费依赖硬约束<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-3--消费依赖硬约束" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>阶段</th><th>动作</th><th>必需证据</th></tr></thead><tbody><tr><td>基础研究</td><td>并行 R1 / R4 / R7</td><td>本交易日 raw 与 manifest；缺口显式保留</td></tr><tr><td>情绪研究</td><td>R3</td><td>本次 R1 基线已就绪，不能自动换成昨日或固定默认值</td></tr><tr><td>主线研究</td><td>R2</td><td>本次 R1 / R3 / R4 / R7 已核验</td></tr><tr><td>个股画像</td><td>R5</td><td>本次 R2 候选或明确的空池原因</td></tr><tr><td>反证</td><td>R6</td><td>本次 R1-R5 / R7；唯一硬否决权来源不变</td></tr><tr><td>汇总交接</td><td>写 research_summary.json</td><td>单元路径、质量状态、缺口及交付结果</td></tr></tbody></table></div>
+<p>实际时刻以启用的任务日程和交付截止点为准；本技能不授权修改 cron、模型、并发配置或交易门控。</p>
+<h3 id="step-4--收集-artifact">Step 4 · 收集 artifact<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-4--收集-artifact" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>对每个 R* sub-agent 回传:</p>
+<ol>
+<li>使用 Step 1 的显式主产物映射，不把 evidence/validation/draft 文件当研究单元</li>
+<li>核对本次 run/attempt、交易日、合法 JSON 和对应实际存在的 schema/契约校验器；校验器缺失或报错必须记录，不能自报全通过</li>
+<li>分别核验 JSON 可消费性、数据质量和承诺的人读报告交付；可用 JSON 不掩盖 MD 缺交付，降级也不自动等于执行失败</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>结果</th><th>处理</th></tr></thead><tbody><tr><td>✅ 校验通过</td><td>写入真实 <code>artifacts.R{N}</code> 与原稿 confidence；保留有效零值，缺失按实际契约显式标未知，不默补固定置信度</td></tr><tr><td>🟡 partial/degraded</td><td>保留可消费的主研究及其原始缺口，不当 skeleton，也不改成完整通过</td></tr><tr><td>⏸️ 合法 skipped</td><td>核对理由和前置条件（如 R2 确实无候选），保留跳过说明及应交付的人读报告；不强凑画像</td></tr><tr><td>❌ 超时/失败</td><td>记 <code>timeouts: [&quot;R{N}&quot;]</code> 与实际错误；<strong>不写</strong>非法或陈旧路径冒充本次 artifacts</td></tr><tr><td>⚠️ skeleton</td><td>明确标记不可用于完整研究结论，<code>orchestrator_status=partial</code></td></tr></tbody></table></div>
+<p><strong>R6 特殊</strong>: 从 <code>R6_devil_advocate.json</code> 提取 <code>severity: hard_reject</code> 条目 → 填入 <code>hard_rejects[]</code>（schema 见 <code>docs/10-契约-研究汇总.md</code> §4）。</p>
+<p><strong>Fallback（T1’ 软降级）</strong>: 某 R* 失败时可读 <strong>昨日</strong> 同路径 artifact 作替代，<code>confidence=0</code>，<code>timeouts</code> 标注 — <strong>不</strong>调用 Python <code>src/research/r*.py</code>。</p>
+<h3 id="step-5--写-research_summaryjson">Step 5 · 写 research_summary.json<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-5--写-research_summaryjson" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>路径: <code>data/research/YYYYMMDD/research_summary.json</code></p>
+<p>契约: <strong><code>docs/10-契约-研究汇总.md</code></strong>（字段冻结，pydantic 校验不过 → 不写盘，告警）</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;schema_version&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;research_summary_v1&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;trade_date&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;YYYYMMDD&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;generated_at&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;ISO8601+08:00&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;orchestrator_status&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;complete|partial|failed&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;fetch_manifest&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;data/raw/YYYYMMDD/manifest.json&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;fetch_global_severity&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;artifacts&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;R1&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;data/research/YYYYMMDD/R1_style.json&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;R2&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;data/research/YYYYMMDD/R2_main_sectors.json&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;R3&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;data/research/YYYYMMDD/R3_sentiment.json&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;R4&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;data/research/YYYYMMDD/R4_news.json&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;R5&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;data/research/YYYYMMDD/R5_stock_profiles.json&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;R6&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;data/research/YYYYMMDD/R6_devil_advocate.json&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;R7&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;data/research/YYYYMMDD/R7_capital_flow.json&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  },</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;confidence&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;R1&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;R2&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;R3&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;R4&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;R5&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;R6&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">&quot;R7&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">},</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;hard_rejects&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [],</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;timeouts&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [],</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">  &quot;completed_by&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;08:00&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<p><strong>Report 模板</strong>（cron deliver）:</p>
+<pre><code>【research_orchestrator_v1 · YYYYMMDD】
+orchestrator_status: {complete|partial|failed}
+fetch_global_severity: {0-3}
+delegation_batches: {实际批次} · {N} 轮
+
+units:
+  R1: {ok|timeout} · confidence={x}
+  ...
+  R7: {ok|timeout} · confidence={x}
+
+hard_rejects: {count} 条（来源 R6）
+timeouts: [{...}]
+
+summary: data/research/YYYYMMDD/research_summary.json
+</code></pre>
+<hr/>
+<h2 id="inputs">Inputs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#inputs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>输入</th><th>路径</th></tr></thead><tbody><tr><td>Fetch manifest</td><td><code>data/raw/YYYYMMDD/manifest.json</code></td></tr><tr><td>Raw artifacts</td><td><code>data/raw/YYYYMMDD/wechat_official_20.jsonl</code>, <code>wechat_cli_5groups.jsonl</code>, <code>weflow_snapshot.json</code>, <code>mcp_health.json</code></td></tr><tr><td>用户先验</td><td><code>data/user_preferences.yaml</code>（只读）</td></tr><tr><td>临时视角</td><td><code>data/human_thesis/active/*.md</code>（只读）</td></tr></tbody></table></div>
+<h2 id="outputs">Outputs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#outputs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>产出</th><th>路径</th></tr></thead><tbody><tr><td>R1–R7 单元 JSON</td><td><code>data/research/YYYYMMDD/R1_style.json</code> … <code>R7_capital_flow.json</code></td></tr><tr><td>各 R* 人读报告</td><td>各单元技能与已批准 SOUL 指定的 <code>chzl_kg/投研交易/</code> 目标；不得把已承诺的 MD 交付擅改为可选</td></tr><tr><td><strong>契约 3 汇总</strong></td><td><code>data/research/YYYYMMDD/research_summary.json</code></td></tr></tbody></table></div>
+<h2 id="rules--constraints">Rules &amp; Constraints<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rules--constraints" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="主控-toolsetssoul-白名单">主控 toolsets（SOUL 白名单）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#主控-toolsetssoul-白名单" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>✅ <code>file</code>, <code>delegation</code></li>
+<li>❌ 直接 MCP（tushare / xtick / weflow / wechat / datapro / hithink …）</li>
+</ul>
+<h3 id="sub-agent-toolsets文档约束--附录-c-实测为软约束">Sub-agent toolsets（文档约束 · 附录 C 实测为软约束）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sub-agent-toolsets文档约束--附录-c-实测为软约束" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>单元</th><th>期望 toolsets</th></tr></thead><tbody><tr><td>R1</td><td>file, tushare, xtick</td></tr><tr><td>R2</td><td>file, tushare, datapro, hithink</td></tr><tr><td>R3</td><td>file, weflow, hotlist</td></tr><tr><td>R4</td><td>file, wechat, tushare</td></tr><tr><td>R5</td><td>file, tushare, serenity-alpha, valuation-suite</td></tr><tr><td>R6</td><td><strong>file only</strong>（反证禁 MCP — 靠 R6 skill prompt 约束）</td></tr><tr><td>R7</td><td>file, tushare, xtick, datapro</td></tr></tbody></table></div>
+<blockquote>
+<p>不把文档中的 toolset 列表当作隔离证明；启动时核验当前运行权限。R6 即使能看到行情工具，也必须遵守只读上游产物、禁止行情 MCP 的研究边界。</p>
+</blockquote>
+<h3 id="step-6--契约校验v21-新增--2026-08-10">Step 6 · 契约校验（v2.1 新增 · 2026-08-10）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-6--契约校验v21-新增--2026-08-10" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>所有单元 artifact 落盘后、summary 最终写盘前，<strong>必须</strong>运行契约校验脚本。</p>
+<p><strong>调用方式</strong>：</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> src.research.contract_checks </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> run_research_checks</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 读回各单元 JSON</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">contract_failures </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function"> run_research_checks(unit_data, trade_date)</span></span></code></pre></figure>
+<p><strong>校验范围</strong>（来自 P0/P1 修复的硬约束）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>单元</th><th>校验项</th><th>对应修复</th><th>级别</th></tr></thead><tbody><tr><td>R2</td><td>cross_validation 字段 + consensus_themes</td><td>P0-3</td><td>P0</td></tr><tr><td>R5</td><td>非空候选分支核验候选数量及降级标记；经 R2 理由与空池证据核验的合法 skipped 单列，不当画像执行失败</td><td>候选契约</td><td>P0</td></tr><tr><td>R7</td><td>staleness 状态机 + resolved_trade_date</td><td>P0-2</td><td>P0</td></tr><tr><td>R4</td><td>top_pick_logic + stop_loss</td><td>P1-3</td><td>P1</td></tr></tbody></table></div>
+<p><strong>失败处理</strong>：</p>
+<ul>
+<li>P0 级失败 → <code>orchestrator_status</code> 从 <code>complete</code> 降级为 <code>partial</code></li>
+<li>P1 级失败 → 记入 <code>contract_failures</code>，不降级</li>
+<li>所有失败写入 <code>research_summary.contract_failures</code> 字段（格式 <code>{unit: [error_strings]}</code>）</li>
+<li>新增 <code>contract_checks_passed: bool</code> 字段（全部通过 = true）</li>
+</ul>
+<p><strong>失败不阻塞流水线</strong>：宁可有瑕疵的研究输出，也不能因为校验失败导致 D1 无数据可用。D1 消费时检查 <code>contract_checks_passed</code> 字段自行决定仓位策略。</p>
+<hr/>
+<h3 id="其他铁律">其他铁律<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#其他铁律" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>artifact 之间 <strong>只通过磁盘 pull</strong>，不共享 LLM context</li>
+<li>δ 层数据（QMT 报价/持仓）<strong>不进</strong> R1–R7 — 见 <code>docs/03-数据源与降级.md</code></li>
+<li>主控仅写研究汇总；各 R* 的 JSON 与人读报告按本次已批准的 Ownership 白名单执行，技能加载本身不新增权限。研究端不写 raw、计划、执行状态或 runtime 副本。</li>
+</ul>
+<h2 id="fallback-behavior">Fallback Behavior<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fallback-behavior" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>场景</th><th>行为</th></tr></thead><tbody><tr><td>manifest 缺失</td><td><code>orchestrator_status=failed</code>，不写 summary，告警</td></tr><tr><td>单 R* 超时</td><td>昨日 artifact + <code>confidence=0</code> + <code>timeouts</code></td></tr><tr><td>R6 超时</td><td>D1 视为「无反证」保守处理；<strong>不可</strong>自行放宽 R6 约束</td></tr><tr><td>Hermes delegation 全失败</td><td>告警 + 空池；<strong>不</strong>跑 Python orchestrator（T1’ 冻结）</td></tr><tr><td><strong>LLM quota 超限</strong></td><td>保留已验证研究并明确失败单元、实际错误与可恢复状态；D1 交由计划端及已授权安全网处理，研究端不写计划/触发价，不自动切换模型</td></tr></tbody></table></div>
+<p>兜底不得冒充 LLM 主决策，也不得因合法空池覆盖已有 LLM 计划。研究端只交付真实输入和缺口，不能跨身份拼造交易预案。</p>
+<h2 id="_shared-引用主控不直接调"><code>_shared/</code> 引用（主控不直接调）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#_shared-引用主控不直接调" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>主控 <strong>不</strong> <code>@</code> 横切 skill。各 R* 实装时在自身 SKILL.md 内引用 — 完整映射见 <code>docs/01-系统现状全景.md</code> §1.2:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>R*</th><th>主要 <code>@</code> skills</th></tr></thead><tbody><tr><td>R2</td><td><code>@hithink-sector-selector</code>, <code>@hithink-industry-query</code>, <code>@hithink-market-query</code>, <code>@iwencai-query</code></td></tr><tr><td>R3</td><td>（weflow MCP 为主；横切少）</td></tr><tr><td>R4</td><td><code>@hithink-event-query</code>, <code>@news-search</code>, <code>@announcement-search</code></td></tr><tr><td>R5</td><td><code>@serenity-alpha</code>, <code>@bayesian-intrinsic-growth-valuation</code>, <code>@tam-adj-peg</code>, <code>@gf-dma-health-index</code>, <code>@buy-side-equity-research-memo</code>, <code>@report-search</code>, <code>@hithink-insresearch-query</code>, <code>@hithink-management-query</code>, <code>@hithink-business-query</code></td></tr><tr><td>R6</td><td><code>@announcement-search</code>（核验用，禁行情 MCP）</td></tr><tr><td>R7</td><td><code>@hithink-market-query</code></td></tr></tbody></table></div>
+<h2 id="version-history">Version History<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#version-history" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>v2.1 (2026-08-10)</strong>: Step 6 契约校验 — <code>src.research.contract_checks</code> 模块集成，P0/P1 硬约束自动检测 + 失败降级</li>
+<li><strong>v2 (2026-07-05)</strong>: T1’ Hermes 主路径 — <code>delegate_task</code> + 方案 A/B 批次 + <code>research_summary.json</code>；移除 Python orchestrator 为主入口</li>
+<li>v1 (2026-07-04): T1 skeleton（Python artifact-first，已降级为后置 fallback）</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1000" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#research_orchestrator_v1" data-for="research_orchestrator_v1">research_orchestrator_v1</a></li><li class="depth-1"><a href="#purpose" data-for="purpose">Purpose</a></li><li class="depth-1"><a href="#execution-promptagent-加载本-skill-后按序执行" data-for="execution-promptagent-加载本-skill-后按序执行">Execution Prompt（Agent 加载本 skill 后按序执行）</a></li><li class="depth-2"><a href="#step-0--初始化" data-for="step-0--初始化">Step 0 · 初始化</a></li><li class="depth-2"><a href="#step-1--sub-agent-映射skill--agent-spec" data-for="step-1--sub-agent-映射skill--agent-spec">Step 1 · Sub-agent 映射（skill + agent spec）</a></li><li class="depth-2"><a href="#step-2--按实际依赖分批按完成结果交接" data-for="step-2--按实际依赖分批按完成结果交接">Step 2 · 按实际依赖分批，按完成结果交接</a></li><li class="depth-2"><a href="#step-3--消费依赖硬约束" data-for="step-3--消费依赖硬约束">Step 3 · 消费依赖硬约束</a></li><li class="depth-2"><a href="#step-4--收集-artifact" data-for="step-4--收集-artifact">Step 4 · 收集 artifact</a></li><li class="depth-2"><a href="#step-5--写-research_summaryjson" data-for="step-5--写-research_summaryjson">Step 5 · 写 research_summary.json</a></li><li class="depth-1"><a href="#inputs" data-for="inputs">Inputs</a></li><li class="depth-1"><a href="#outputs" data-for="outputs">Outputs</a></li><li class="depth-1"><a href="#rules--constraints" data-for="rules--constraints">Rules &amp; Constraints</a></li><li class="depth-2"><a href="#主控-toolsetssoul-白名单" data-for="主控-toolsetssoul-白名单">主控 toolsets（SOUL 白名单）</a></li><li class="depth-2"><a href="#sub-agent-toolsets文档约束--附录-c-实测为软约束" data-for="sub-agent-toolsets文档约束--附录-c-实测为软约束">Sub-agent toolsets（文档约束 · 附录 C 实测为软约束）</a></li><li class="depth-2"><a href="#step-6--契约校验v21-新增--2026-08-10" data-for="step-6--契约校验v21-新增--2026-08-10">Step 6 · 契约校验（v2.1 新增 · 2026-08-10）</a></li><li class="depth-2"><a href="#其他铁律" data-for="其他铁律">其他铁律</a></li><li class="depth-1"><a href="#fallback-behavior" data-for="fallback-behavior">Fallback Behavior</a></li><li class="depth-1"><a href="#_shared-引用主控不直接调" data-for="_shared-引用主控不直接调">_shared/ 引用（主控不直接调）</a></li><li class="depth-1"><a href="#version-history" data-for="version-history">Version History</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../../../../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

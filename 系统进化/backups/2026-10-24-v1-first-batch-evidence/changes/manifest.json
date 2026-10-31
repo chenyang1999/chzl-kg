@@ -1,0 +1,186 @@
+[
+  {
+    "path": "scripts/execute/run_paper_plan_once.py",
+    "kind": "implementation",
+    "operation": "modified",
+    "before_sha256": "d416ea2ba601224ccafeb51b5359130d4a8fc4401752f25faf733b078a90093e",
+    "after_sha256": "966599762dd0797a1dbcb50789d8204f441c305aaa9714f8744da44ec624a44b",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/S2/before/scripts/execute/run_paper_plan_once.py"
+  },
+  {
+    "path": "src/execute/watcher_daemon.py",
+    "kind": "implementation",
+    "operation": "modified",
+    "before_sha256": "a7713d4c2e9a344704a7182ef0cff43345a8946517b5428fb0c7ab766c28b96e",
+    "after_sha256": "c304050e486a893d55de8821f36f54d66dc5265f024921066e2d3071e7caae9f",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/S1/originals/src/execute/watcher_daemon.py"
+  },
+  {
+    "path": "tests/pipeline/test_plan_staging_freshness.py",
+    "kind": "test",
+    "operation": "modified",
+    "before_sha256": "a42b7d17c090958a6d9cede0c862fa4c9374118f66eaa28a04072f34efb0813b",
+    "after_sha256": "0a827d6a320a673785a0b36321aea1ec8b9ad36fff6ac912ec8b31859309635e",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/R1/original-tests/tests/pipeline/test_plan_staging_freshness.py"
+  },
+  {
+    "path": "tests/test_canghai_paper_plan_driver_20261023.py",
+    "kind": "test",
+    "operation": "modified",
+    "before_sha256": "98d0bffcf281a7acb10d787d982a3c81f060bd74efc0f52a2426b500330ebcdf",
+    "after_sha256": "aaeabf150df78a8a12e26e63c3b2dbc7706b8fdcb8285e04af988c5ef41b6ff3",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/R1/original-tests/tests/test_canghai_paper_plan_driver_20261023.py"
+  },
+  {
+    "path": "tests/test_canghai_rr_scope_20261023.py",
+    "kind": "test",
+    "operation": "modified",
+    "before_sha256": "a4fae850ad9724415810aca8b96131cf4033075d2e3c9874b152b5b8fcd0fd12",
+    "after_sha256": "844df1facee1ae8b5881fbe31b4285b1e66dfa425cc870100f7ae83fb6adf3d4",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/T1/originals/tests/test_canghai_rr_scope_20261023.py"
+  },
+  {
+    "path": "tests/test_v1_final_joint_acceptance_20261024.py",
+    "kind": "test",
+    "operation": "created",
+    "before_sha256": null,
+    "after_sha256": "b081869466fea3ba712c8d3a979daba00c13db837c67be5aabeb23e79af56da8",
+    "original_evidence": null
+  },
+  {
+    "path": "tests/test_v1_independent_contract_review_20261024.py",
+    "kind": "test",
+    "operation": "created",
+    "before_sha256": null,
+    "after_sha256": "39946982f581b020a8ff1ecdcccca8ed51f8a6def33fb91f5e887edaf56885f6",
+    "original_evidence": null
+  },
+  {
+    "path": "tests/test_v1_integration_authorization_20261024.py",
+    "kind": "test",
+    "operation": "created",
+    "before_sha256": null,
+    "after_sha256": "dc43ba3894805b7e276ec04d9825d7beda1d0acc4fc70b7cf801e5fca88272e1",
+    "original_evidence": null
+  },
+  {
+    "path": "tests/test_v1_regression_contract_closeout_20261024.py",
+    "kind": "test",
+    "operation": "created",
+    "before_sha256": null,
+    "after_sha256": "21b1a0a3e79a9ca55510df0a10485283912bfca7483ff10d0d499e8fcecc5247",
+    "original_evidence": null
+  },
+  {
+    "path": "tests/test_v1_s1_execution_boundaries_20261024.py",
+    "kind": "test",
+    "operation": "created",
+    "before_sha256": null,
+    "after_sha256": "fb7b7e4138d5cf79d2754a7699d94df875d5b95e39c16e9b37295515214bb81a",
+    "original_evidence": null
+  },
+  {
+    "path": "tests/test_v1_s2_paper_exit_safety_20261024.py",
+    "kind": "test",
+    "operation": "created",
+    "before_sha256": null,
+    "after_sha256": "a4ed8cda0d82a235e04324d60bbe8163279c665fe83aef07819ebbe5e0aecab0",
+    "original_evidence": null
+  },
+  {
+    "path": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+    "kind": "test",
+    "operation": "created",
+    "before_sha256": null,
+    "after_sha256": "4d45be2db001d88717ee50d70438fec3661ef1bbb3bd90cfd878021b42d186ab",
+    "original_evidence": null
+  },
+  {
+    "path": "tests/test_v1_scan_date_binding_20261024.py",
+    "kind": "test",
+    "operation": "created",
+    "before_sha256": null,
+    "after_sha256": "9368afa751c1b6a47c7a7c2782be52e1b6bc48520c90d78259a91f28cfbf1515",
+    "original_evidence": null
+  },
+  {
+    "path": "trading/entry_selector.py",
+    "kind": "implementation",
+    "operation": "modified",
+    "before_sha256": "98b764ba18d108fe47fd7de8427c935262131e0d47f633e0c243157053b5fd6f",
+    "after_sha256": "b3c11a6562806258c73e46f79330ead5cde80ab3b9a033b672f4571478bf2b35",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/S3/before/app/trading/entry_selector.py"
+  },
+  {
+    "path": "trading/execution_authorization.py",
+    "kind": "implementation",
+    "operation": "created",
+    "before_sha256": null,
+    "after_sha256": "b7f1f95a0d6a9572f91795a353ccefacf9cfc28dbb10ac2c3d710e912166c927",
+    "original_evidence": null
+  },
+  {
+    "path": "trading/executors/_buy_common.py",
+    "kind": "implementation",
+    "operation": "modified",
+    "before_sha256": "2ecaad89a32e8a652245cfb7c90b2af948dd8c1fcee3048219eeb6923b338799",
+    "after_sha256": "b7033cb1d1ff926803c99eef9fe50f9857df7ffd7947e9c70d7248cf95f97d3f",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/S3/before/app/trading/executors/_buy_common.py"
+  },
+  {
+    "path": "trading/executors/base.py",
+    "kind": "implementation",
+    "operation": "modified",
+    "before_sha256": "8de60568494b0b1decad12d88233d94d7976f59fefabe9c7e1604bd026ee6048",
+    "after_sha256": "21f630bbcda3588e0afa63cb27fc907f6ad2d50d5f01774e82707257924c9f9b",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/S3/before/app/trading/executors/base.py"
+  },
+  {
+    "path": "trading/load_plan.py",
+    "kind": "implementation",
+    "operation": "modified",
+    "before_sha256": "40bddfcb8573ffa5cd35cf592fd6bba7c9fdb3291fd620358fc4e228be0e26cb",
+    "after_sha256": "6c3625d22103bd00e22e2f988dedf792ec463a3d9c3c5737d55ff47e2a8dbd77",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/S1/originals/trading/load_plan.py"
+  },
+  {
+    "path": "trading/order/qmt_context.py",
+    "kind": "implementation",
+    "operation": "modified",
+    "before_sha256": "d774b37b60027aa3556de13a7e63f0dfb49f35f7a3cd3222bddd8d696c2ffd18",
+    "after_sha256": "91d9135e7b9fdace0202cb88bf308e49484d5d9730f79e82db3949bd53437f68",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/S3/before/app/trading/order/qmt_context.py"
+  },
+  {
+    "path": "trading/paper/ledger.py",
+    "kind": "implementation",
+    "operation": "modified",
+    "before_sha256": "8751820044a7a57b10a98a25e08a4ea8d97ece40010569638f61dbf1e3b7e562",
+    "after_sha256": "40d77a426defe9118d31960412da85e8b5dfd038b35eabd519f904db51ba2175",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/S2/before/trading/paper/ledger.py"
+  },
+  {
+    "path": "trading/paper/safety.py",
+    "kind": "implementation",
+    "operation": "created",
+    "before_sha256": null,
+    "after_sha256": "208686a5f1f826ecaaf1b291368bc270b946d4951a07f91a7fdc298d075c744a",
+    "original_evidence": null
+  },
+  {
+    "path": "trading/watcher/run_once.py",
+    "kind": "implementation",
+    "operation": "modified",
+    "before_sha256": "23fe3981c64463f99fcbf55fa5a68d406c4294e4ad528d4d843a4e90dcf4678c",
+    "after_sha256": "ce77e2bdfa4637fa08f55d3dfdde4c0baa0b1c0bf3c0ba057cbf21688e0d6d30",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/S1/originals/trading/watcher/run_once.py"
+  },
+  {
+    "path": "trading/watcher/session_context.py",
+    "kind": "implementation",
+    "operation": "modified",
+    "before_sha256": "1c58f4a4205d16a7a0120a835cf14b4e2065ce97204cb1330dde5fb202815a73",
+    "after_sha256": "3d4bdb5d98b03879f15356c316314dfea549820ea0c37d07ca568e843e25be20",
+    "original_evidence": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/S3/before/app/trading/watcher/session_context.py"
+  }
+]

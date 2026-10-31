@@ -1,0 +1,53 @@
+{
+  "command": [
+    "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/pipeline/test_chart_vision_snapshot_minimal.py",
+    "--noconftest",
+    "-c",
+    "/dev/null",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/parent-chart-verification-7rxxiig9/pytest-base",
+    "-q",
+    "--tb=short",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/parent-chart-verification-7rxxiig9/pytest.xml"
+  ],
+  "environment": {
+    "PATH": "/bin:/usr/bin",
+    "HOME": "/Users/chenyang/.hermes/cache/scratch/parent-chart-verification-7rxxiig9",
+    "TMPDIR": "/Users/chenyang/.hermes/cache/scratch",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "LANG": "en_US.UTF-8"
+  },
+  "exit_code": 0,
+  "cases": 30,
+  "failed": [],
+  "skipped": [],
+  "source_before": {
+    "scripts/fetch/run_chart_vision_snapshot.py": "43c185b576e68958a9af3484c14e33e08eb2c05d18a1c54642e4fb547b0835cf",
+    "src/research/candidate_pool.py": "7b970336e44c639e14af3955a735e9a4d6dd82e696527c9f31803fc64cf44e96",
+    "src/research/r5_stock_profiles.py": "2936d100b3cfdc4a7214fb988338e93f8eb9b2a29e5aa9450c8d125f868d104f",
+    "src/research/data_sources.py": "567fa004286710b2d97c58e90249dd68228a1b253e603e8cf7c4b8dc1bfa7acc",
+    "tests/pipeline/test_chart_vision_snapshot_minimal.py": "5a6438c0617900b9df90aadee0595e53af86df0438741e9555c0ba014cc311a4"
+  },
+  "source_after": {
+    "scripts/fetch/run_chart_vision_snapshot.py": "43c185b576e68958a9af3484c14e33e08eb2c05d18a1c54642e4fb547b0835cf",
+    "src/research/candidate_pool.py": "7b970336e44c639e14af3955a735e9a4d6dd82e696527c9f31803fc64cf44e96",
+    "src/research/r5_stock_profiles.py": "2936d100b3cfdc4a7214fb988338e93f8eb9b2a29e5aa9450c8d125f868d104f",
+    "src/research/data_sources.py": "567fa004286710b2d97c58e90249dd68228a1b253e603e8cf7c4b8dc1bfa7acc",
+    "tests/pipeline/test_chart_vision_snapshot_minimal.py": "5a6438c0617900b9df90aadee0595e53af86df0438741e9555c0ba014cc311a4"
+  },
+  "source_unchanged": true,
+  "index_before": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143",
+  "index_after": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143",
+  "index_unchanged": true,
+  "evidence_dir": "/Users/chenyang/.hermes/cache/scratch/parent-chart-verification-7rxxiig9",
+  "production_run": false,
+  "actual_model_or_renderer_exercised": false
+}

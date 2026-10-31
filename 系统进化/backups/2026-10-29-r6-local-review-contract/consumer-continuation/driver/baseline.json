@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-29T18:17:24.436182+08:00",
+  "current_d1_acceptance_sources_changed": [
+    "scripts/plan/ensure_watchlist_plan.py"
+  ],
+  "index": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143",
+  "before": {
+    "scripts/plan/ensure_watchlist_plan.py": "f01223b6cf0a43d601db250af5b35c2b0edc6a1ec7b491dfd4143037044fe6f3",
+    "scripts/plan/run_retreat_reversal.py": "3e12eadbdb72f0353678cdd48e4700234bee27d744759c696474ec4d44516644",
+    "scripts/research/run_research_shell.sh": "0a75fa89a4d6909a6731e3c23b80db5f88a9100f593412d8cc8c5663b63cb2f2",
+    "skills/main_decision_v1/SKILL.md": "3eb4f6695151edc5422ca3ffabccf84f2fce9b347406a46d5ec43193fe3bce5c"
+  },
+  "no_new_delegation": true,
+  "real_research_sessions_since_role_change": 0,
+  "natural_query_cutoff": "2026-10-29T18:16:41.595845+08:00",
+  "read_only_metadata_only": true
+}

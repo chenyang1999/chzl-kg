@@ -1,0 +1,28 @@
+.............F.......................................................... [ 94%]
+..F.                                                                     [100%]
+=================================== FAILURES ===================================
+______ test_valid_versioned_partial_and_zero_budget_delivery[False-False] ______
+tests/pipeline/test_safety_net_input_versions.py:152: in test_valid_versioned_partial_and_zero_budget_delivery
+    assert ok, note
+E   AssertionError: LLM 重跑交付失败: D1 original input owner missing，日志 /Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-solo-fixture-red/cases/test_valid_versioned_partial_a1/data/logs/research_shell/20261023/D1_llm_retry.log
+E   assert False
+----------------------------- Captured stdout call -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+_____________ test_rejected_old_llm_can_be_repaired_by_real_retry ______________
+tests/pipeline/test_plan_interim_preservation.py:141: in test_rejected_old_llm_can_be_repaired_by_real_retry
+    assert env.ensure.ensure_plan(DATE, force=True) == 0
+E   AssertionError: assert 1 == 0
+E    +  where 1 = <function ensure_plan at 0x107e43880>('20261023', force=True)
+E    +    where <function ensure_plan at 0x107e43880> = <module 'scripts.plan.ensure_watchlist_plan' from '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-solo-fixture-red/cases/plan-contract-code1/scripts/plan/ensure_watchlist_plan.py'>.ensure_plan
+E    +      where <module 'scripts.plan.ensure_watchlist_plan' from '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-solo-fixture-red/cases/plan-contract-code1/scripts/plan/ensure_watchlist_plan.py'> = namespace(artifacts=<module 'scripts.research.pipeline_artifacts' from '/Users/chenyang/.hermes/cache/scratch/d1-selec...ive-20261029/legacy-solo-fixture-red/cases/test_rejected_old_llm_can_be_r0/data/runtime/watchlist_plan_20261023.json')).ensure
+----------------------------- Captured stdout call -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+❌ LLM 重跑交付失败: D1 original input owner missing，日志 /Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-solo-fixture-red/cases/test_rejected_old_llm_can_be_r0/data/logs/research_shell/20261023/D1_llm_retry.log
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; original analysis retained, not accepted for trading
+[ensure_watchlist_plan] LLM delivery incomplete; no rule overwrite
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_valid_versioned_partial_and_zero_budget_delivery[False-False]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_rejected_old_llm_can_be_repaired_by_real_retry
+2 failed, 74 passed in 4.81s

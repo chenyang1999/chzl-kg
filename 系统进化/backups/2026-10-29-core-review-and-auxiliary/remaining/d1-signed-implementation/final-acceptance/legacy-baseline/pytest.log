@@ -1,0 +1,277 @@
+..........FFFFFFFFFF................................FFFFFFFFFFFFFFFFFF.. [ 97%]
+F.                                                                       [100%]
+=================================== FAILURES ===================================
+______ test_valid_versioned_partial_and_zero_budget_delivery[True-False] _______
+tests/pipeline/test_safety_net_input_versions.py:135: in test_valid_versioned_partial_and_zero_budget_delivery
+    assert ok, note
+E   AssertionError: LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+E   assert False
+______ test_valid_versioned_partial_and_zero_budget_delivery[False-False] ______
+tests/pipeline/test_safety_net_input_versions.py:135: in test_valid_versioned_partial_and_zero_budget_delivery
+    assert ok, note
+E   AssertionError: LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+E   assert False
+_______ test_valid_versioned_partial_and_zero_budget_delivery[True-True] _______
+tests/pipeline/test_safety_net_input_versions.py:135: in test_valid_versioned_partial_and_zero_budget_delivery
+    assert ok, note
+E   AssertionError: LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+E   assert False
+_ test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[primary_same_mtime] _
+tests/pipeline/test_safety_net_input_versions.py:152: in test_input_changes_during_llm_refuse_handoff_without_restoring_analysis
+    assert len(calls) == 1 and not env.runtime.exists()
+E   assert (0 == 1)
+E    +  where 0 = len([])
+_ test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[missing_summary] _
+tests/pipeline/test_safety_net_input_versions.py:152: in test_input_changes_during_llm_refuse_handoff_without_restoring_analysis
+    assert len(calls) == 1 and not env.runtime.exists()
+E   assert (0 == 1)
+E    +  where 0 = len([])
+_ test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[wrong_run] _
+tests/pipeline/test_safety_net_input_versions.py:152: in test_input_changes_during_llm_refuse_handoff_without_restoring_analysis
+    assert len(calls) == 1 and not env.runtime.exists()
+E   assert (0 == 1)
+E    +  where 0 = len([])
+_ test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[attempt] _
+tests/pipeline/test_safety_net_input_versions.py:152: in test_input_changes_during_llm_refuse_handoff_without_restoring_analysis
+    assert len(calls) == 1 and not env.runtime.exists()
+E   assert (0 == 1)
+E    +  where 0 = len([])
+_ test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[old_summary] _
+tests/pipeline/test_safety_net_input_versions.py:152: in test_input_changes_during_llm_refuse_handoff_without_restoring_analysis
+    assert len(calls) == 1 and not env.runtime.exists()
+E   assert (0 == 1)
+E    +  where 0 = len([])
+_________ test_new_valid_summary_during_llm_cannot_switch_input_batch __________
+tests/pipeline/test_safety_net_input_versions.py:167: in test_new_valid_summary_during_llm_cannot_switch_input_batch
+    assert not env.runtime.exists() and env.canonical.exists()
+E   AssertionError: assert (not False and False)
+E    +  where False = exists()
+E    +    where exists = PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-baseline/cases/test_new_valid_summary_during_0/data/runtime/watchlist_plan_20261023.json').exists
+E    +      where PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-baseline/cases/test_new_valid_summary_during_0/data/runtime/watchlist_plan_20261023.json') = namespace(artifacts=<module 'scripts.research.pipeline_artifacts' from '/Users/chenyang/.hermes/cache/scratch/d1-selec...1-selective-20261029/legacy-baseline/cases/test_new_valid_summary_during_0/data/runtime/watchlist_plan_20261023.json')).runtime
+E    +  and   False = exists()
+E    +    where exists = PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-baseline/cases/test_new_valid_summary_during_0/data/plans/20261023/watchlist_plan.json').exists
+E    +      where PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-baseline/cases/test_new_valid_summary_during_0/data/plans/20261023/watchlist_plan.json') = namespace(artifacts=<module 'scripts.research.pipeline_artifacts' from '/Users/chenyang/.hermes/cache/scratch/d1-selec...1-selective-20261029/legacy-baseline/cases/test_new_valid_summary_during_0/data/runtime/watchlist_plan_20261023.json')).canonical
+_____________ test_standalone_cannot_deliver_after_new_run_appears _____________
+tests/pipeline/test_safety_net_input_versions.py:176: in test_standalone_cannot_deliver_after_new_run_appears
+    assert not env.runtime.exists() and env.canonical.exists()
+E   AssertionError: assert (not False and False)
+E    +  where False = exists()
+E    +    where exists = PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-baseline/cases/test_standalone_cannot_deliver0/data/runtime/watchlist_plan_20261023.json').exists
+E    +      where PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-baseline/cases/test_standalone_cannot_deliver0/data/runtime/watchlist_plan_20261023.json') = namespace(artifacts=<module 'scripts.research.pipeline_artifacts' from '/Users/chenyang/.hermes/cache/scratch/d1-selec...1-selective-20261029/legacy-baseline/cases/test_standalone_cannot_deliver0/data/runtime/watchlist_plan_20261023.json')).runtime
+E    +  and   False = exists()
+E    +    where exists = PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-baseline/cases/test_standalone_cannot_deliver0/data/plans/20261023/watchlist_plan.json').exists
+E    +      where PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-baseline/cases/test_standalone_cannot_deliver0/data/plans/20261023/watchlist_plan.json') = namespace(artifacts=<module 'scripts.research.pipeline_artifacts' from '/Users/chenyang/.hermes/cache/scratch/d1-selec...1-selective-20261029/legacy-baseline/cases/test_standalone_cannot_deliver0/data/runtime/watchlist_plan_20261023.json')).canonical
+_ test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-absent] _
+tests/pipeline/test_plan_interim_preservation.py:109: in test_retry_current_bytes_win_without_snapshot_restore
+    assert rc == (1 if protected else 0)
+E   assert 0 == 1
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+_ test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-rejected_llm] _
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; original analysis retained, not accepted for trading
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; no rule overwrite
+_ test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-fallback] _
+tests/pipeline/test_plan_interim_preservation.py:109: in test_retry_current_bytes_win_without_snapshot_restore
+    assert rc == (1 if protected else 0)
+E   assert 0 == 1
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+___ test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-absent] ____
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+_ test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-rejected_llm] _
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; original analysis retained, not accepted for trading
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; no rule overwrite
+__ test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-fallback] ___
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+___ test_retry_current_bytes_win_without_snapshot_restore[0-removed-absent] ____
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+_ test_retry_current_bytes_win_without_snapshot_restore[0-removed-rejected_llm] _
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; original analysis retained, not accepted for trading
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; no rule overwrite
+__ test_retry_current_bytes_win_without_snapshot_restore[0-removed-fallback] ___
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+_ test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-absent] _
+tests/pipeline/test_plan_interim_preservation.py:109: in test_retry_current_bytes_win_without_snapshot_restore
+    assert rc == (1 if protected else 0)
+E   assert 0 == 1
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+_ test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-rejected_llm] _
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; original analysis retained, not accepted for trading
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; no rule overwrite
+_ test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-fallback] _
+tests/pipeline/test_plan_interim_preservation.py:109: in test_retry_current_bytes_win_without_snapshot_restore
+    assert rc == (1 if protected else 0)
+E   assert 0 == 1
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+___ test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-absent] ___
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+_ test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-rejected_llm] _
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; original analysis retained, not accepted for trading
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; no rule overwrite
+__ test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-fallback] __
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+___ test_retry_current_bytes_win_without_snapshot_restore[17-removed-absent] ___
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+_ test_retry_current_bytes_win_without_snapshot_restore[17-removed-rejected_llm] _
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; original analysis retained, not accepted for trading
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; no rule overwrite
+__ test_retry_current_bytes_win_without_snapshot_restore[17-removed-fallback] __
+tests/pipeline/test_plan_interim_preservation.py:110: in test_retry_current_bytes_win_without_snapshot_restore
+    assert len(written) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+🚨 D1 20261023 已用 python 兜底 (decision_source=python_fallback · 非大模型决策 · 勿据此下单)。
+_____________ test_rejected_old_llm_can_be_repaired_by_real_retry ______________
+tests/pipeline/test_plan_interim_preservation.py:132: in test_rejected_old_llm_can_be_repaired_by_real_retry
+    assert env.ensure.ensure_plan(DATE, force=True) == 0
+E   AssertionError: assert 1 == 0
+E    +  where 1 = <function ensure_plan at 0x109a16ca0>('20261023', force=True)
+E    +    where <function ensure_plan at 0x109a16ca0> = <module 'scripts.plan.ensure_watchlist_plan' from '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-baseline/cases/plan-contract-code1/scripts/plan/ensure_watchlist_plan.py'>.ensure_plan
+E    +      where <module 'scripts.plan.ensure_watchlist_plan' from '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-baseline/cases/plan-contract-code1/scripts/plan/ensure_watchlist_plan.py'> = namespace(artifacts=<module 'scripts.research.pipeline_artifacts' from '/Users/chenyang/.hermes/cache/scratch/d1-selec...1-selective-20261029/legacy-baseline/cases/test_rejected_old_llm_can_be_r0/data/runtime/watchlist_plan_20261023.json')).ensure
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 输入预检失败: reviewed auxiliary binding missing or main version/scope changed
+大模型重跑未成功，兜底必须显式标注非大模型决策。
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; original analysis retained, not accepted for trading
+[ensure_watchlist_plan] LLM contract blocked: unready plan must remain dry_run with explicit user confirmation and no autonomy; no rule overwrite
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_valid_versioned_partial_and_zero_budget_delivery[True-False]
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_valid_versioned_partial_and_zero_budget_delivery[False-False]
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_valid_versioned_partial_and_zero_budget_delivery[True-True]
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[primary_same_mtime]
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[missing_summary]
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[wrong_run]
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[attempt]
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[old_summary]
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_new_valid_summary_during_llm_cannot_switch_input_batch
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_standalone_cannot_deliver_after_new_run_appears
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-absent]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-rejected_llm]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-fallback]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-absent]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-rejected_llm]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-fallback]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[0-removed-absent]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[0-removed-rejected_llm]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[0-removed-fallback]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-absent]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-rejected_llm]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-fallback]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-absent]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-rejected_llm]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-fallback]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[17-removed-absent]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[17-removed-rejected_llm]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_retry_current_bytes_win_without_snapshot_restore[17-removed-fallback]
+FAILED tests/pipeline/test_plan_interim_preservation.py::test_rejected_old_llm_can_be_repaired_by_real_retry
+29 failed, 45 passed in 3.67s

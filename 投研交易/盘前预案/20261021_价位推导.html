@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>20261021_价位推导</title><meta charset="utf-8"/><link rel="preload" href="../../index-5a23ce28.css" as="style"/><link rel="preload" href="../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="20261021_价位推导"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="20261021_价位推导"/><meta name="twitter:description" content="20261021 价位推导明细（规则引擎，非模型拍价） 引擎: src/plan/price_levels.py ｜ 止损=以买入价为基准三者取高；买区=决策线/牛线回踩或 pivot 突破；止盈=2R 或前高压制。 分组票现价买区触发止损止盈RR判定买区关系执行池凡拓数创 301313.SZ46.8043.06~45.4045.4041.7752.662.00pass回踩 3.0% 到买区才触发执行池长盈精密 300115.SZ24.6722.70~23.9323.9322.0227.752.00pass回踩 3.0% 到买区才触发观察池吉大正元 003029.SZ26.6126.48~27..."/><meta property="og:description" content="20261021 价位推导明细（规则引擎，非模型拍价） 引擎: src/plan/price_levels.py ｜ 止损=以买入价为基准三者取高；买区=决策线/牛线回踩或 pivot 突破；止盈=2R 或前高压制。 分组票现价买区触发止损止盈RR判定买区关系执行池凡拓数创 301313.SZ46.8043.06~45.4045.4041.7752.662.00pass回踩 3.0% 到买区才触发执行池长盈精密 300115.SZ24.6722.70~23.9323.9322.0227.752.00pass回踩 3.0% 到买区才触发观察池吉大正元 003029.SZ26.6126.48~27..."/><meta property="og:image:alt" content="20261021 价位推导明细（规则引擎，非模型拍价） 引擎: src/plan/price_levels.py ｜ 止损=以买入价为基准三者取高；买区=决策线/牛线回踩或 pivot 突破；止盈=2R 或前高压制。 分组票现价买区触发止损止盈RR判定买区关系执行池凡拓数创 301313.SZ46.8043.06~45.4045.4041.7752.662.00pass回踩 3.0% 到买区才触发执行池长盈精密 300115.SZ24.6722.70~23.9323.9322.0227.752.00pass回踩 3.0% 到买区才触发观察池吉大正元 003029.SZ26.6126.48~27..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/投研交易/盘前预案/20261021_价位推导"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/投研交易/盘前预案/20261021_价位推导"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="20261021 价位推导明细（规则引擎，非模型拍价） 引擎: src/plan/price_levels.py ｜ 止损=以买入价为基准三者取高；买区=决策线/牛线回踩或 pivot 突破；止盈=2R 或前高压制。 分组票现价买区触发止损止盈RR判定买区关系执行池凡拓数创 301313.SZ46.8043.06~45.4045.4041.7752.662.00pass回踩 3.0% 到买区才触发执行池长盈精密 300115.SZ24.6722.70~23.9323.9322.0227.752.00pass回踩 3.0% 到买区才触发观察池吉大正元 003029.SZ26.6126.48~27..."/><meta name="generator" content="Quartz"/><link href="../../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="投研交易/盘前预案/20261021_价位推导" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-715" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-715" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../投研交易/">投研交易</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../投研交易/盘前预案/">盘前预案</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>20261021_价位推导</a></div></nav><h1 class="article-title">20261021_价位推导</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-21T10:00:49.000Z">2026年10月21日</time><span>17分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="20261021-价位推导明细规则引擎非模型拍价">20261021 价位推导明细（规则引擎，非模型拍价）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#20261021-价位推导明细规则引擎非模型拍价" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>引擎: <code>src/plan/price_levels.py</code> ｜ 止损=以买入价为基准三者取高；买区=决策线/牛线回踩或 pivot 突破；止盈=2R 或前高压制。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>分组</th><th>票</th><th>现价</th><th>买区</th><th>触发</th><th>止损</th><th>止盈</th><th>RR</th><th>判定</th><th>买区关系</th></tr></thead><tbody><tr><td>执行池</td><td>凡拓数创 301313.SZ</td><td>46.80</td><td>43.06~45.40</td><td>45.40</td><td>41.77</td><td>52.66</td><td>2.00</td><td>pass</td><td>回踩 3.0% 到买区才触发</td></tr><tr><td>执行池</td><td>长盈精密 300115.SZ</td><td>24.67</td><td>22.70~23.93</td><td>23.93</td><td>22.02</td><td>27.75</td><td>2.00</td><td>pass</td><td>回踩 3.0% 到买区才触发</td></tr><tr><td>观察池</td><td>吉大正元 003029.SZ</td><td>26.61</td><td>26.48~27.01</td><td>26.61</td><td>25.66</td><td>29.71</td><td>2.00</td><td>pass</td><td>买区覆盖现价，按盘中承接执行</td></tr><tr><td>观察池</td><td>索辰科技 688507.SH</td><td>162.07</td><td>149.10~157.21</td><td>157.21</td><td>144.63</td><td>167.87</td><td>0.85</td><td>RR_FAIL</td><td>回踩 3.0% 到买区才触发</td></tr><tr><td>观察池</td><td>博汇科技 688004.SH</td><td>37.19</td><td>34.21~36.07</td><td>36.07</td><td>34.08</td><td>40.05</td><td>2.00</td><td>pass</td><td>回踩 3.0% 到买区才触发</td></tr><tr><td>观察池</td><td>奥比中光-W 688322.SH</td><td>90.67</td><td>83.42~87.95</td><td>87.95</td><td>82.36</td><td>93.48</td><td>0.99</td><td>RR_FAIL</td><td>回踩 3.0% 到买区才触发</td></tr><tr><td>观察池</td><td>达实智能 002421.SZ</td><td>3.35</td><td>3.17~3.32</td><td>3.17</td><td>3.15</td><td>3.50</td><td>1.06</td><td>RR_FAIL</td><td>回踩 0.9% 到买区才触发</td></tr><tr><td>观察池</td><td>昆仑万维 300418.SZ</td><td>39.57</td><td>40.89~43.34</td><td>40.89</td><td>40.42</td><td>45.67</td><td>0.80</td><td>RR_FAIL</td><td>需上破 +3.3% 站上买区才成立（不是现在能买）</td></tr><tr><td>观察池</td><td>数字认证 300579.SZ</td><td>25.07</td><td>22.87~23.33</td><td>22.87</td><td>21.46</td><td>25.73</td><td>1.28</td><td>RR_FAIL</td><td>回踩 6.9% 到买区才触发</td></tr><tr><td>观察池</td><td>南威软件 603636.SH</td><td>8.89</td><td>8.18~8.62</td><td>8.62</td><td>8.19</td><td>9.48</td><td>2.00</td><td>pass</td><td>回踩 3.0% 到买区才触发</td></tr><tr><td>观察池</td><td>天娱数科 002354.SZ</td><td>7.68</td><td>7.40~7.79</td><td>7.40</td><td>7.40</td><td>8.27</td><td>1.23</td><td>RR_FAIL</td><td>买区覆盖现价，按盘中承接执行</td></tr><tr><td>观察池</td><td>亨通光电 600487.SH</td><td>52.07</td><td>59.85~61.67</td><td>59.85</td><td>58.59</td><td>67.83</td><td>2.00</td><td>pass</td><td>需上破 +14.9% 站上买区才成立（不是现在能买）</td></tr><tr><td>观察池</td><td>澜起科技 688008.SH</td><td>169.27</td><td>196.43~202.42</td><td>196.43</td><td>193.49</td><td>220.28</td><td>2.00</td><td>pass</td><td>需上破 +16.0% 站上买区才成立（不是现在能买）</td></tr><tr><td>观察池</td><td>润建股份 002929.SZ</td><td>51.04</td><td>46.96~49.51</td><td>49.51</td><td>47.03</td><td>54.00</td><td>1.81</td><td>pass</td><td>回踩 3.0% 到买区才触发</td></tr><tr><td>观察池</td><td>超声电子 000823.SZ</td><td>25.61</td><td>23.52~24.24</td><td>23.52</td><td>23.34</td><td>26.04</td><td>2.00</td><td>pass</td><td>回踩 5.3% 到买区才触发</td></tr><tr><td>观察池</td><td>利君股份 002651.SZ</td><td>8.16</td><td>7.94~8.36</td><td>7.94</td><td>7.94</td><td>9.20</td><td>2.00</td><td>pass</td><td>买区覆盖现价，按盘中承接执行</td></tr><tr><td>观察池</td><td>东安动力 600178.SH</td><td>12.41</td><td>11.42~12.04</td><td>12.04</td><td>11.44</td><td>13.24</td><td>2.00</td><td>pass</td><td>回踩 3.0% 到买区才触发</td></tr><tr><td>观察池</td><td>宇树科技 688836.SH</td><td>526.03</td><td>520.77~531.29</td><td>520.77</td><td>488.79</td><td>616.29</td><td>2.00</td><td>pass</td><td>买区覆盖现价，按盘中承接执行</td></tr><tr><td>观察池</td><td>九阳股份 002242.SZ</td><td>20.56</td><td>18.92~19.94</td><td>19.94</td><td>18.94</td><td>21.94</td><td>2.00</td><td>pass</td><td>回踩 3.0% 到买区才触发</td></tr><tr><td>观察池</td><td>蓝色光标 300058.SZ</td><td>12.20</td><td>13.53~13.94</td><td>13.53</td><td>12.82</td><td>16.18</td><td>2.00</td><td>pass</td><td>需上破 +10.9% 站上买区才成立（不是现在能买）</td></tr><tr><td>观察池</td><td>宁德时代 300750.SZ</td><td>259.08</td><td>337.33~347.61</td><td>337.33</td><td>319.80</td><td>403.23</td><td>2.00</td><td>pass</td><td>需上破 +30.2% 站上买区才成立（不是现在能买）</td></tr><tr><td>观察池</td><td>福莱新材 605488.SH</td><td>30.99</td><td>28.51~30.06</td><td>30.06</td><td>28.56</td><td>33.06</td><td>2.00</td><td>pass</td><td>回踩 3.0% 到买区才触发</td></tr><tr><td>观察池</td><td>联创电子 002036.SZ</td><td>5.63</td><td>6.46~6.65</td><td>6.46</td><td>6.32</td><td>7.31</td><td>2.00</td><td>pass</td><td>需上破 +14.7% 站上买区才成立（不是现在能买）</td></tr><tr><td>观察池</td><td>赛摩智能 300244.SZ</td><td>21.79</td><td>20.05~21.14</td><td>21.14</td><td>19.80</td><td>23.82</td><td>2.00</td><td>pass</td><td>回踩 3.0% 到买区才触发</td></tr></tbody></table></div>
+<h2 id="逐票公式">逐票公式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#逐票公式" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🚫 <strong>RR_FAIL（不参与开仓）</strong>: 索辰科技 RR=0.85、奥比中光-W RR=0.99、达实智能 RR=1.06、昆仑万维 RR=0.8、数字认证 RR=1.28、天娱数科 RR=1.23 —— 已写入 no_trade_conditions.RR_FAIL</p>
+</blockquote>
+<h3 id="凡拓数创-301313sz执行池divergence_pullback">凡拓数创 301313.SZ（执行池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#凡拓数创-301313sz执行池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-8%) → 41.77（三者取最高: 买价×(1-8%)=41.77, 熊线×0.99=30.75, MA10×0.99=33.02）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收46.80为基准, 买区=[昨收×0.92=43.06, 昨收×0.97=45.40] (回撤 3%~8%); 最高接受=昨收×0.995=46.57</li>
+<li><strong>止盈</strong> 2R目标 = 买45.40 + 2×(买入价-止损3.63) = 52.66</li>
+<li><strong>RR</strong> RR=(52.66-45.40)/(45.40-41.77)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=33.35 ｜ MA50=33.50 ｜ 牛线=32.73 ｜ 熊线=31.06 ｜ 20日高=46.80 ｜ 20日低=26.08</li>
+</ul>
+<h3 id="长盈精密-300115sz执行池divergence_pullback">长盈精密 300115.SZ（执行池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#长盈精密-300115sz执行池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-8%) → 22.02（三者取最高: 买价×(1-8%)=22.02, 熊线×0.99=21.95, MA10×0.99=21.03）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收24.67为基准, 买区=[昨收×0.92=22.70, 昨收×0.97=23.93] (回撤 3%~8%); 最高接受=昨收×0.995=24.55</li>
+<li><strong>止盈</strong> 2R目标 = 买23.93 + 2×(买入价-止损1.91) = 27.75</li>
+<li><strong>RR</strong> RR=(27.75-23.93)/(23.93-22.02)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=21.25 ｜ MA50=24.53 ｜ 牛线=21.76 ｜ 熊线=22.17 ｜ 20日高=24.79 ｜ 20日低=19.16</li>
+</ul>
+<h3 id="吉大正元-003029sz观察池leader_breakout">吉大正元 003029.SZ（观察池｜leader_breakout）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#吉大正元-003029sz观察池leader_breakout" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 25.66（三者取最高: 买价×(1-5%)=25.66, 熊线×0.99=18.29, MA10×0.99=19.96）</li>
+<li><strong>买区</strong> pivot=max(昨收26.61, 20日高26.61)=26.61; 买区=[pivot×0.995, pivot×(1+1.5%)]; 溢价上限7%</li>
+<li><strong>止盈</strong> 2R目标 = 买27.01 + 2×(买入价-止损1.35) = 29.71</li>
+<li><strong>RR</strong> RR=(29.71-27.01)/(27.01-25.66)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=20.16 ｜ MA50=17.89 ｜ 牛线=19.70 ｜ 熊线=18.48 ｜ 20日高=26.61 ｜ 20日低=16.33</li>
+</ul>
+<h3 id="索辰科技-688507sh观察池divergence_pullback">索辰科技 688507.SH（观察池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#索辰科技-688507sh观察池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-8%) → 144.63（三者取最高: 买价×(1-8%)=144.63, 熊线×0.99=132.23, MA10×0.99=130.20）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收162.07为基准, 买区=[昨收×0.92=149.10, 昨收×0.97=157.21] (回撤 3%~8%); 最高接受=昨收×0.995=161.26</li>
+<li><strong>止盈</strong> 20日高点167.87 低于2R目标182.37 且高于买价5%以上 → 取前高作第一压力位</li>
+<li><strong>RR</strong> RR=(167.87-157.21)/(157.21-144.63)=0.85 → <code>RR_FAIL</code></li>
+<li><strong>技术位</strong> MA10=131.51 ｜ MA50=150.04 ｜ 牛线=133.66 ｜ 熊线=133.56 ｜ 20日高=167.87 ｜ 20日低=115.00</li>
+</ul>
+<h3 id="博汇科技-688004sh观察池divergence_pullback">博汇科技 688004.SH（观察池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#博汇科技-688004sh观察池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=MA10×0.99 → 34.08（三者取最高: 买价×(1-8%)=33.18, 熊线×0.99=33.07, MA10×0.99=34.08）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收37.19为基准, 买区=[昨收×0.92=34.21, 昨收×0.97=36.07] (回撤 3%~8%); 最高接受=昨收×0.995=37.00</li>
+<li><strong>止盈</strong> 2R目标 = 买36.07 + 2×(买入价-止损1.99) = 40.05</li>
+<li><strong>RR</strong> RR=(40.05-36.07)/(36.07-34.08)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=34.43 ｜ MA50=26.72 ｜ 牛线=34.01 ｜ 熊线=33.40 ｜ 20日高=44.70 ｜ 20日低=27.41</li>
+</ul>
+<h3 id="奥比中光-w-688322sh观察池divergence_pullback">奥比中光-W 688322.SH（观察池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#奥比中光-w-688322sh观察池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=熊线×0.99 → 82.36（三者取最高: 买价×(1-8%)=80.91, 熊线×0.99=82.36, MA10×0.99=78.14）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收90.67为基准, 买区=[昨收×0.92=83.42, 昨收×0.97=87.95] (回撤 3%~8%); 最高接受=昨收×0.995=90.22</li>
+<li><strong>止盈</strong> 20日高点93.48 低于2R目标99.13 且高于买价5%以上 → 取前高作第一压力位</li>
+<li><strong>RR</strong> RR=(93.48-87.95)/(87.95-82.36)=0.99 → <code>RR_FAIL</code></li>
+<li><strong>技术位</strong> MA10=78.93 ｜ MA50=94.65 ｜ 牛线=81.36 ｜ 熊线=83.19 ｜ 20日高=93.48 ｜ 20日低=69.02</li>
+</ul>
+<h3 id="达实智能-002421sz观察池trend_pullback_buy">达实智能 002421.SZ（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#达实智能-002421sz观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 3.15（三者取最高: 买价×(1-5%)=3.15）</li>
+<li><strong>买区</strong> 决策线MA50=3.29, 牛线=3.21; 买区=[min(MA50,牛线)×0.99=3.17, MA50×1.01=3.32]; 最高接受=3.39</li>
+<li><strong>止盈</strong> 20日高点3.50 低于2R目标3.66 且高于买价5%以上 → 取前高作第一压力位</li>
+<li><strong>RR</strong> RR=(3.50-3.32)/(3.32-3.15)=1.06 → <code>RR_FAIL</code></li>
+<li><strong>技术位</strong> MA10=3.22 ｜ MA50=3.29 ｜ 牛线=3.21 ｜ 熊线=3.20 ｜ 20日高=3.50 ｜ 20日低=3.06</li>
+</ul>
+<h3 id="昆仑万维-300418sz观察池trend_pullback_buy">昆仑万维 300418.SZ（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#昆仑万维-300418sz观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=MA10×0.99 → 40.42（三者取最高: 买价×(1-8%)=39.87, MA10×0.99=40.42）</li>
+<li><strong>买区</strong> 决策线MA50=42.91, 牛线=41.30; 买区=[min(MA50,牛线)×0.99=40.89, MA50×1.01=43.34]; 最高接受=44.21</li>
+<li><strong>止盈</strong> 20日高点45.67 低于2R目标49.18 且高于买价5%以上 → 取前高作第一压力位</li>
+<li><strong>RR</strong> RR=(45.67-43.34)/(43.34-40.42)=0.8 → <code>RR_FAIL</code></li>
+<li><strong>技术位</strong> MA10=40.83 ｜ MA50=42.91 ｜ 牛线=41.30 ｜ 熊线=41.84 ｜ 20日高=45.67 ｜ 20日低=37.12</li>
+</ul>
+<h3 id="数字认证-300579sz观察池trend_pullback_buy">数字认证 300579.SZ（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数字认证-300579sz观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-8%) → 21.46（三者取最高: 买价×(1-8%)=21.46）</li>
+<li><strong>买区</strong> 决策线MA50=23.10, 牛线=23.99; 买区=[min(MA50,牛线)×0.99=22.87, MA50×1.01=23.33]; 最高接受=23.80</li>
+<li><strong>止盈</strong> 20日高点25.73 低于2R目标27.07 且高于买价5%以上 → 取前高作第一压力位</li>
+<li><strong>RR</strong> RR=(25.73-23.33)/(23.33-21.46)=1.28 → <code>RR_FAIL</code></li>
+<li><strong>技术位</strong> MA10=24.25 ｜ MA50=23.10 ｜ 牛线=23.99 ｜ 熊线=23.80 ｜ 20日高=25.73 ｜ 20日低=22.07</li>
+</ul>
+<h3 id="南威软件-603636sh观察池divergence_pullback">南威软件 603636.SH（观察池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#南威软件-603636sh观察池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 8.19（三者取最高: 买价×(1-5%)=8.19, 熊线×0.99=7.54, MA10×0.99=7.82）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收8.89为基准, 买区=[昨收×0.92=8.18, 昨收×0.97=8.62] (回撤 3%~8%); 最高接受=昨收×0.995=8.85</li>
+<li><strong>止盈</strong> 2R目标 = 买8.62 + 2×(买入价-止损0.43) = 9.48</li>
+<li><strong>RR</strong> RR=(9.48-8.62)/(8.62-8.19)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=7.90 ｜ MA50=7.29 ｜ 牛线=7.78 ｜ 熊线=7.62 ｜ 20日高=8.89 ｜ 20日低=6.86</li>
+</ul>
+<h3 id="天娱数科-002354sz观察池trend_pullback_buy">天娱数科 002354.SZ（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#天娱数科-002354sz观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 7.40（三者取最高: 买价×(1-5%)=7.40, MA10×0.99=7.36）</li>
+<li><strong>买区</strong> 决策线MA50=7.71, 牛线=7.47; 买区=[min(MA50,牛线)×0.99=7.40, MA50×1.01=7.79]; 最高接受=7.95</li>
+<li><strong>止盈</strong> 20日高点8.27 低于2R目标8.57 且高于买价5%以上 → 取前高作第一压力位</li>
+<li><strong>RR</strong> RR=(8.27-7.79)/(7.79-7.40)=1.23 → <code>RR_FAIL</code></li>
+<li><strong>技术位</strong> MA10=7.43 ｜ MA50=7.71 ｜ 牛线=7.47 ｜ 熊线=7.49 ｜ 20日高=8.27 ｜ 20日低=6.81</li>
+</ul>
+<h3 id="亨通光电-600487sh观察池trend_pullback_buy">亨通光电 600487.SH（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#亨通光电-600487sh观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 58.59（三者取最高: 买价×(1-5%)=58.59, 熊线×0.99=57.11, MA10×0.99=50.12）</li>
+<li><strong>买区</strong> 决策线MA50=60.76, 牛线=54.85; 买区=[min(MA50,牛线)×0.99=59.85, MA50×1.01=61.67]; 最高接受=62.90（原始[MA50/牛线]区间过宽已收窄至基准线±1.5%）</li>
+<li><strong>止盈</strong> 2R目标 = 买61.67 + 2×(买入价-止损3.08) = 67.83</li>
+<li><strong>RR</strong> RR=(67.83-61.67)/(61.67-58.59)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=50.63 ｜ MA50=60.76 ｜ 牛线=54.85 ｜ 熊线=57.69 ｜ 20日高=76.35 ｜ 20日低=45.10</li>
+</ul>
+<h3 id="澜起科技-688008sh观察池trend_pullback_buy">澜起科技 688008.SH（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#澜起科技-688008sh观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=熊线×0.99 → 193.49（三者取最高: 买价×(1-8%)=186.23, 熊线×0.99=193.49, MA10×0.99=181.14）</li>
+<li><strong>买区</strong> 决策线MA50=199.42, 牛线=188.39; 买区=[min(MA50,牛线)×0.99=196.43, MA50×1.01=202.42]; 最高接受=206.47（原始[MA50/牛线]区间过宽已收窄至基准线±1.5%）</li>
+<li><strong>止盈</strong> 2R目标 = 买202.42 + 2×(买入价-止损8.93) = 220.28</li>
+<li><strong>RR</strong> RR=(220.28-202.42)/(202.42-193.49)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=182.97 ｜ MA50=199.42 ｜ 牛线=188.39 ｜ 熊线=195.44 ｜ 20日高=233.19 ｜ 20日低=157.65</li>
+</ul>
+<h3 id="润建股份-002929sz观察池divergence_pullback">润建股份 002929.SZ（观察池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#润建股份-002929sz观察池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 47.03（三者取最高: 买价×(1-5%)=47.03, 熊线×0.99=46.31, MA10×0.99=44.06）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收51.04为基准, 买区=[昨收×0.92=46.96, 昨收×0.97=49.51] (回撤 3%~8%); 最高接受=昨收×0.995=50.78</li>
+<li><strong>止盈</strong> 20日高点54.00 低于2R目标54.47 且高于买价5%以上 → 取前高作第一压力位</li>
+<li><strong>RR</strong> RR=(54.00-49.51)/(49.51-47.03)=1.81 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=44.51 ｜ MA50=51.24 ｜ 牛线=46.17 ｜ 熊线=46.78 ｜ 20日高=54.00 ｜ 20日低=40.10</li>
+</ul>
+<h3 id="超声电子-000823sz观察池trend_pullback_buy">超声电子 000823.SZ（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#超声电子-000823sz观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=熊线×0.99 → 23.34（三者取最高: 买价×(1-5%)=23.03, 熊线×0.99=23.34）</li>
+<li><strong>买区</strong> 决策线MA50=18.82 距现价25.61达25.8%(不可达) → 退用MA10=23.76: 买区=[MA10×0.99=23.52, MA10×1.02=24.24]</li>
+<li><strong>止盈</strong> 2R目标 = 买24.24 + 2×(买入价-止损0.90) = 26.04</li>
+<li><strong>RR</strong> RR=(26.04-24.24)/(24.24-23.34)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=23.76 ｜ MA50=18.82 ｜ 牛线=24.05 ｜ 熊线=23.58 ｜ 20日高=27.74 ｜ 20日低=20.00</li>
+</ul>
+<h3 id="利君股份-002651sz观察池trend_pullback_buy">利君股份 002651.SZ（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#利君股份-002651sz观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 7.94（三者取最高: 买价×(1-5%)=7.94, MA10×0.99=7.87）</li>
+<li><strong>买区</strong> 决策线MA50=8.27, 牛线=8.02; 买区=[min(MA50,牛线)×0.99=7.94, MA50×1.01=8.36]; 最高接受=8.53</li>
+<li><strong>止盈</strong> 2R目标 = 买8.36 + 2×(买入价-止损0.42) = 9.20</li>
+<li><strong>RR</strong> RR=(9.20-8.36)/(8.36-7.94)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=7.95 ｜ MA50=8.27 ｜ 牛线=8.02 ｜ 熊线=8.07 ｜ 20日高=8.56 ｜ 20日低=7.60</li>
+</ul>
+<h3 id="东安动力-600178sh观察池divergence_pullback">东安动力 600178.SH（观察池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#东安动力-600178sh观察池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 11.44（三者取最高: 买价×(1-5%)=11.44, 熊线×0.99=9.75, MA10×0.99=10.10）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收12.41为基准, 买区=[昨收×0.92=11.42, 昨收×0.97=12.04] (回撤 3%~8%); 最高接受=昨收×0.995=12.35</li>
+<li><strong>止盈</strong> 2R目标 = 买12.04 + 2×(买入价-止损0.60) = 13.24</li>
+<li><strong>RR</strong> RR=(13.24-12.04)/(12.04-11.44)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=10.21 ｜ MA50=9.80 ｜ 牛线=10.14 ｜ 熊线=9.85 ｜ 20日高=12.41 ｜ 20日低=9.26</li>
+</ul>
+<h3 id="宇树科技-688836sh观察池trend_pullback_buy">宇树科技 688836.SH（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#宇树科技-688836sh观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-8%) → 488.79（三者取最高: 买价×(1-8%)=488.79）</li>
+<li><strong>买区</strong> 决策线MA50=526.03, 牛线=526.03; 买区=[min(MA50,牛线)×0.99=520.77, MA50×1.01=531.29]; 最高接受=541.92</li>
+<li><strong>止盈</strong> 2R目标 = 买531.29 + 2×(买入价-止损42.50) = 616.29</li>
+<li><strong>RR</strong> RR=(616.29-531.29)/(531.29-488.79)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=— ｜ MA50=— ｜ 牛线=— ｜ 熊线=— ｜ 20日高=556.00 ｜ 20日低=404.03</li>
+</ul>
+<h3 id="九阳股份-002242sz观察池divergence_pullback">九阳股份 002242.SZ（观察池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#九阳股份-002242sz观察池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 18.94（三者取最高: 买价×(1-5%)=18.94, 熊线×0.99=13.10, MA10×0.99=16.37）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收20.56为基准, 买区=[昨收×0.92=18.92, 昨收×0.97=19.94] (回撤 3%~8%); 最高接受=昨收×0.995=20.46</li>
+<li><strong>止盈</strong> 2R目标 = 买19.94 + 2×(买入价-止损1.00) = 21.94</li>
+<li><strong>RR</strong> RR=(21.94-19.94)/(19.94-18.94)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=16.53 ｜ MA50=10.50 ｜ 牛线=14.85 ｜ 熊线=13.23 ｜ 20日高=20.56 ｜ 20日低=9.28</li>
+</ul>
+<h3 id="蓝色光标-300058sz观察池trend_pullback_buy">蓝色光标 300058.SZ（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#蓝色光标-300058sz观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-8%) → 12.82（三者取最高: 买价×(1-8%)=12.82, 熊线×0.99=12.73, MA10×0.99=12.37）</li>
+<li><strong>买区</strong> 决策线MA50=13.73, 牛线=12.66; 买区=[min(MA50,牛线)×0.99=13.53, MA50×1.01=13.94]; 最高接受=14.22（原始[MA50/牛线]区间过宽已收窄至基准线±1.5%）</li>
+<li><strong>止盈</strong> 2R目标 = 买13.94 + 2×(买入价-止损1.12) = 16.18</li>
+<li><strong>RR</strong> RR=(16.18-13.94)/(13.94-12.82)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=12.50 ｜ MA50=13.73 ｜ 牛线=12.66 ｜ 熊线=12.86 ｜ 20日高=14.22 ｜ 20日低=11.66</li>
+</ul>
+<h3 id="宁德时代-300750sz观察池trend_pullback_buy">宁德时代 300750.SZ（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#宁德时代-300750sz观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-8%) → 319.80（三者取最高: 买价×(1-8%)=319.80, 熊线×0.99=291.56, MA10×0.99=279.66）</li>
+<li><strong>买区</strong> 决策线MA50=342.47, 牛线=286.79; 买区=[min(MA50,牛线)×0.99=337.33, MA50×1.01=347.61]; 最高接受=354.56（原始[MA50/牛线]区间过宽已收窄至基准线±1.5%）</li>
+<li><strong>止盈</strong> 2R目标 = 买347.61 + 2×(买入价-止损27.81) = 403.23</li>
+<li><strong>RR</strong> RR=(403.23-347.61)/(347.61-319.80)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=282.49 ｜ MA50=342.47 ｜ 牛线=286.79 ｜ 熊线=294.51 ｜ 20日高=308.69 ｜ 20日低=254.55</li>
+</ul>
+<h3 id="福莱新材-605488sh观察池divergence_pullback">福莱新材 605488.SH（观察池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#福莱新材-605488sh观察池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 28.56（三者取最高: 买价×(1-5%)=28.56, 熊线×0.99=28.36, MA10×0.99=27.55）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收30.99为基准, 买区=[昨收×0.92=28.51, 昨收×0.97=30.06] (回撤 3%~8%); 最高接受=昨收×0.995=30.84</li>
+<li><strong>止盈</strong> 2R目标 = 买30.06 + 2×(买入价-止损1.50) = 33.06</li>
+<li><strong>RR</strong> RR=(33.06-30.06)/(30.06-28.56)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=27.83 ｜ MA50=28.97 ｜ 牛线=28.38 ｜ 熊线=28.64 ｜ 20日高=34.00 ｜ 20日低=24.78</li>
+</ul>
+<h3 id="联创电子-002036sz观察池trend_pullback_buy">联创电子 002036.SZ（观察池｜trend_pullback_buy）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#联创电子-002036sz观察池trend_pullback_buy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=买价×(1-5%) → 6.32（三者取最高: 买价×(1-5%)=6.32, 熊线×0.99=5.90, MA10×0.99=5.65）</li>
+<li><strong>买区</strong> 决策线MA50=6.55, 牛线=5.83; 买区=[min(MA50,牛线)×0.99=6.46, MA50×1.01=6.65]; 最高接受=6.78（原始[MA50/牛线]区间过宽已收窄至基准线±1.5%）</li>
+<li><strong>止盈</strong> 2R目标 = 买6.65 + 2×(买入价-止损0.33) = 7.31</li>
+<li><strong>RR</strong> RR=(7.31-6.65)/(6.65-6.32)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=5.71 ｜ MA50=6.55 ｜ 牛线=5.83 ｜ 熊线=5.96 ｜ 20日高=6.50 ｜ 20日低=5.39</li>
+</ul>
+<h3 id="赛摩智能-300244sz观察池divergence_pullback">赛摩智能 300244.SZ（观察池｜divergence_pullback）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#赛摩智能-300244sz观察池divergence_pullback" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>止损</strong> 止损=MA10×0.99 → 19.80（三者取最高: 买价×(1-8%)=19.45, 熊线×0.99=19.74, MA10×0.99=19.80）</li>
+<li><strong>买区</strong> 强势票分歧口径: 以昨收21.79为基准, 买区=[昨收×0.92=20.05, 昨收×0.97=21.14] (回撤 3%~8%); 最高接受=昨收×0.995=21.68</li>
+<li><strong>止盈</strong> 2R目标 = 买21.14 + 2×(买入价-止损1.34) = 23.82</li>
+<li><strong>RR</strong> RR=(23.82-21.14)/(21.14-19.80)=2.0 → <code>pass</code></li>
+<li><strong>技术位</strong> MA10=20.01 ｜ MA50=19.44 ｜ 牛线=19.93 ｜ 熊线=19.94 ｜ 20日高=21.92 ｜ 20日低=17.68</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-694" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#20261021-价位推导明细规则引擎非模型拍价" data-for="20261021-价位推导明细规则引擎非模型拍价">20261021 价位推导明细（规则引擎，非模型拍价）</a></li><li class="depth-1"><a href="#逐票公式" data-for="逐票公式">逐票公式</a></li><li class="depth-2"><a href="#凡拓数创-301313sz执行池divergence_pullback" data-for="凡拓数创-301313sz执行池divergence_pullback">凡拓数创 301313.SZ（执行池｜divergence_pullback）</a></li><li class="depth-2"><a href="#长盈精密-300115sz执行池divergence_pullback" data-for="长盈精密-300115sz执行池divergence_pullback">长盈精密 300115.SZ（执行池｜divergence_pullback）</a></li><li class="depth-2"><a href="#吉大正元-003029sz观察池leader_breakout" data-for="吉大正元-003029sz观察池leader_breakout">吉大正元 003029.SZ（观察池｜leader_breakout）</a></li><li class="depth-2"><a href="#索辰科技-688507sh观察池divergence_pullback" data-for="索辰科技-688507sh观察池divergence_pullback">索辰科技 688507.SH（观察池｜divergence_pullback）</a></li><li class="depth-2"><a href="#博汇科技-688004sh观察池divergence_pullback" data-for="博汇科技-688004sh观察池divergence_pullback">博汇科技 688004.SH（观察池｜divergence_pullback）</a></li><li class="depth-2"><a href="#奥比中光-w-688322sh观察池divergence_pullback" data-for="奥比中光-w-688322sh观察池divergence_pullback">奥比中光-W 688322.SH（观察池｜divergence_pullback）</a></li><li class="depth-2"><a href="#达实智能-002421sz观察池trend_pullback_buy" data-for="达实智能-002421sz观察池trend_pullback_buy">达实智能 002421.SZ（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#昆仑万维-300418sz观察池trend_pullback_buy" data-for="昆仑万维-300418sz观察池trend_pullback_buy">昆仑万维 300418.SZ（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#数字认证-300579sz观察池trend_pullback_buy" data-for="数字认证-300579sz观察池trend_pullback_buy">数字认证 300579.SZ（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#南威软件-603636sh观察池divergence_pullback" data-for="南威软件-603636sh观察池divergence_pullback">南威软件 603636.SH（观察池｜divergence_pullback）</a></li><li class="depth-2"><a href="#天娱数科-002354sz观察池trend_pullback_buy" data-for="天娱数科-002354sz观察池trend_pullback_buy">天娱数科 002354.SZ（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#亨通光电-600487sh观察池trend_pullback_buy" data-for="亨通光电-600487sh观察池trend_pullback_buy">亨通光电 600487.SH（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#澜起科技-688008sh观察池trend_pullback_buy" data-for="澜起科技-688008sh观察池trend_pullback_buy">澜起科技 688008.SH（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#润建股份-002929sz观察池divergence_pullback" data-for="润建股份-002929sz观察池divergence_pullback">润建股份 002929.SZ（观察池｜divergence_pullback）</a></li><li class="depth-2"><a href="#超声电子-000823sz观察池trend_pullback_buy" data-for="超声电子-000823sz观察池trend_pullback_buy">超声电子 000823.SZ（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#利君股份-002651sz观察池trend_pullback_buy" data-for="利君股份-002651sz观察池trend_pullback_buy">利君股份 002651.SZ（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#东安动力-600178sh观察池divergence_pullback" data-for="东安动力-600178sh观察池divergence_pullback">东安动力 600178.SH（观察池｜divergence_pullback）</a></li><li class="depth-2"><a href="#宇树科技-688836sh观察池trend_pullback_buy" data-for="宇树科技-688836sh观察池trend_pullback_buy">宇树科技 688836.SH（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#九阳股份-002242sz观察池divergence_pullback" data-for="九阳股份-002242sz观察池divergence_pullback">九阳股份 002242.SZ（观察池｜divergence_pullback）</a></li><li class="depth-2"><a href="#蓝色光标-300058sz观察池trend_pullback_buy" data-for="蓝色光标-300058sz观察池trend_pullback_buy">蓝色光标 300058.SZ（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#宁德时代-300750sz观察池trend_pullback_buy" data-for="宁德时代-300750sz观察池trend_pullback_buy">宁德时代 300750.SZ（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#福莱新材-605488sh观察池divergence_pullback" data-for="福莱新材-605488sh观察池divergence_pullback">福莱新材 605488.SH（观察池｜divergence_pullback）</a></li><li class="depth-2"><a href="#联创电子-002036sz观察池trend_pullback_buy" data-for="联创电子-002036sz观察池trend_pullback_buy">联创电子 002036.SZ（观察池｜trend_pullback_buy）</a></li><li class="depth-2"><a href="#赛摩智能-300244sz观察池divergence_pullback" data-for="赛摩智能-300244sz观察池divergence_pullback">赛摩智能 300244.SZ（观察池｜divergence_pullback）</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

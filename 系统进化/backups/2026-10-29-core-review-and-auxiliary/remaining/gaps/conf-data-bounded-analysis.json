@@ -1,0 +1,1469 @@
+{
+  "scope": "只读CONF-01/DATA-01；20261029 R1-R7/summary、两已批准辅助及必要来源审计/生产消费契约；无账户/.env/凭证/DB/联网/模型/生产重跑/git写/委派；仅scratch写报告。",
+  "generated_at": "2026-10-29T12:29:37.885788+08:00",
+  "confidence": {
+    "r1": {
+      "value": 0.392,
+      "breakdown": {
+        "base_confidence": 0.7,
+        "freshness_factor": 0.7,
+        "source_agreement_factor": 0.8,
+        "independent_source_count": 2,
+        "input_freshness": "partial",
+        "formula": "0.70 * 0.70 * 0.80 = 0.392; clamp[0.05,0.95] = 0.392"
+      },
+      "rationale": "基准0.70；连续窗口/宏观/KOL缺口使freshness_factor=0.70；Tushare与XTick计数风险方向一致取0.80，置信度0.392。数据请求成功不等于全覆盖。",
+      "recomputed": 0.39199999999999996,
+      "source": "data/research/20261029/R1_style.json#/confidence_breakdown",
+      "generated_at": "2026-10-29T06:23:54.965292+08:00"
+    },
+    "meaning": "基准研究判断 × 数据新鲜度/覆盖等级 × 独立源一致度的复合启发式可信程度；不是纯市场确定性、不是完整度比例、不是经校准盈利概率。",
+    "formula_origin": "skills/_shared/canghai_writing_contract_v1.md:199-278；0.392甚至为265行示例；今日选因子有rationale，不因示例相同断言抄写。",
+    "threshold_origin": "skills/main_decision_v1/SKILL.md:1221-1231明确任何命中不开仓与R1_FAIL<0.4；docs/architecture/01-设计哲学.md:146-154为显式纪律条件。未见阈值推导/签核原始记录。",
+    "production_route": "scripts/research/run_research_shell.sh:315-317；scripts/plan/ensure_watchlist_plan.py:60-70将main_decision_v1交给模型；是模型必须生成条件的政策，不是已发现独立Python从confidence重算R1_FAIL的数值断言。",
+    "calibration": "有限授权检索src/research、src/plan、docs/agents、docs/architecture、tests/pipeline未见Brier/可靠性曲线/阈值校准证据；写作契约275-278只有拟统计及训练建议。未读收益库/账户/DB，不推断全仓绝无校准。",
+    "policy_effect": "0.392满足既有<0.4；本分析不改变数值、不使用emotion 0.75替代、不把补证自动变为旧报告提分或解禁。"
+  },
+  "candidate_rows": [
+    {
+      "ts_code": "002708.SZ",
+      "name": "光洋股份",
+      "review": "资金消息",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/dimensions/chip_structure/flow_5d",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/dimensions/catalyst",
+        "data/research/20261029/R4_news.json#/top_events",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/0/score_evidence"
+      ],
+      "observation_date_or_window": [
+        "20261022",
+        "20261023",
+        "20261026",
+        "20261027",
+        "20261028"
+      ],
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R4消息/R7资金；R5逐票口径；R6交叉裁决",
+      "true_gap": "不是原始资金缺失；四票存在口径冲突、需保留并裁决。行业催化非公司订单，未核部分保留未知",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/evidence_data/moneyflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/evidence_data/moneyflow_dc",
+        "data/research/20261029/R4_news.json#/sector_polarity_cross_product"
+      ],
+      "note": {
+        "self_net_big_5d_yi": 1.7791249999999996,
+        "dc_net_5d_yi": 1.7582579999999999,
+        "conflict_dates": [],
+        "captured_at": {
+          "moneyflow": "2026-10-29T06:46:53.019545+08:00",
+          "moneyflow_dc": "2026-10-29T06:46:53.145340+08:00",
+          "anns_d": "2026-10-29T06:46:53.149036+08:00",
+          "fina_indicator": "2026-10-29T06:46:53.146353+08:00"
+        },
+        "event_ids": [
+          "E20261029_006",
+          "E20261029_007"
+        ],
+        "catalyst_summary": "研报确认汽车轴承、机器人与PCB布局叙事；PCB主营收入纯度未核。R4机器人进口谈判为新增负向风险，奥士康扩产并非本公司订单。"
+      }
+    },
+    {
+      "ts_code": "002708.SZ",
+      "name": "光洋股份",
+      "review": "风格",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/style",
+        "data/research/20261029/R1_style.json#/objective_metrics",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/0/leaders/0"
+      ],
+      "observation_date_or_window": "20261028收盘；20261029研究TTL",
+      "generated_at": {
+        "R1": "2026-10-29T06:23:54.965292+08:00",
+        "R2": "2026-10-29T06:40:10+08:00"
+      },
+      "classification": "必要",
+      "owner": "R6；缺对象关联回R2",
+      "true_gap": "核心输入不缺；正式逐票比较未完成，不因根partial判数据不存在",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/evidence",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/0/risks"
+      ],
+      "note": {
+        "style": "主线扩散型",
+        "emotion": "震荡",
+        "role": "龙一",
+        "trading_permission": false
+      }
+    },
+    {
+      "ts_code": "002708.SZ",
+      "name": "光洋股份",
+      "review": "出货",
+      "actual_source_fields": [
+        "data/research/20261029/R3_sentiment.json#/hotlist_signals/distribution_alert",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/dimensions/chip_structure/flow_5d"
+      ],
+      "observation_date_or_window": "alert对比20261027/28；资金20261022-28",
+      "generated_at": {
+        "R3": "2026-10-29T06:31:38+08:00",
+        "R5": "2026-10-29T06:56:30+08:00",
+        "R6": "2026-10-29T07:03:25.677737+08:00"
+      },
+      "classification": "必要",
+      "owner": "R3显式alert/精确归属；R5资金；R6裁决",
+      "true_gap": "显式正向alert仅机器人拥挤代理且confirmed_distribution=false；缺逐对象已核alert结果不能当false，需R3声明覆盖/非命中而非重抓全部热榜",
+      "reusable_evidence": [
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/distribution_alerts_as_reported",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/exact_r2_sector_matches"
+      ],
+      "note": {
+        "fund_source_conflict": false,
+        "net_big_5d_yi": 1.7791249999999996,
+        "dc_net_5d_yi": 1.7582579999999999,
+        "no_cross_concept_stitching": true,
+        "no_hard_reject_adjudicated_here": true
+      }
+    },
+    {
+      "ts_code": "002708.SZ",
+      "name": "光洋股份",
+      "review": "财务合规",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/dimensions/valuation_safety/fundamental_flags",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/dimensions/valuation_safety/fundamental_check_status",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/evidence_data/financial_statements",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/evidence_data/anns_d"
+      ],
+      "observation_date_or_window": {
+        "report_end": "20260630",
+        "ann_date": "20260829"
+      },
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R5补完整检查范围/所需财务合规事实；R6依原规则裁决",
+      "true_gap": "真缺：审计意见/质押/关联交易及S轴等未核；不等于三表全缺。flags空不代表安全",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/dimensions/valuation_safety/latest_income",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/dimensions/valuation_safety/latest_balance",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/dimensions/valuation_safety/latest_cashflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/0/evidence_data/pledge_stat"
+      ],
+      "note": {
+        "flags": [
+          {
+            "code": "F1",
+            "detail": "货币资金/资产=21.1742%；短借/资产=24.3912%",
+            "source": "tushare.balancesheet",
+            "severity": "strong_suggest"
+          },
+          {
+            "code": "F9",
+            "detail": "期末应收/本期累计收入=53.1281%；半年与全年不可无调整横比",
+            "source": "tushare.balancesheet+income",
+            "severity": "soft_suggest"
+          },
+          {
+            "code": "F10",
+            "detail": "已知有息负债/归母净资产下限=100.4694%；空字段未补0，完整比例未知",
+            "source": "tushare.balancesheet",
+            "severity": "soft_suggest"
+          },
+          {
+            "code": "F6",
+            "detail": "1-扣非净利/净利=95.621%",
+            "source": "tushare.fina_indicator",
+            "severity": "soft_suggest"
+          },
+          {
+            "code": "F8",
+            "detail": "最近两个可计算单季经营现金流均负，而最近累计归母净利为正；单季由累计差分，不混同重复披露",
+            "source": "tushare.cashflow+income",
+            "severity": "strong_suggest"
+          }
+        ],
+        "check_status": "partial",
+        "unverified_checklist": [
+          "F3/F4同比及周转",
+          "F5资本化",
+          "F7关联交易",
+          "F11控股股东质押（pledge_stat空行不能判无质押）",
+          "F12审计意见",
+          "S1两年完整财务轴",
+          "S2合规轴",
+          "S3临近轴"
+        ],
+        "flags_count_not_automatic_adjudication": 5,
+        "valuation_V_items_not_automatic_F_count": true
+      }
+    },
+    {
+      "ts_code": "002636.SZ",
+      "name": "金安国纪",
+      "review": "资金消息",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/dimensions/chip_structure/flow_5d",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/dimensions/catalyst",
+        "data/research/20261029/R4_news.json#/top_events",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/0/score_evidence"
+      ],
+      "observation_date_or_window": [
+        "20261022",
+        "20261023",
+        "20261026",
+        "20261027",
+        "20261028"
+      ],
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R4消息/R7资金；R5逐票口径；R6交叉裁决",
+      "true_gap": "不是原始资金缺失；四票存在口径冲突、需保留并裁决。行业催化非公司订单，未核部分保留未知",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/evidence_data/moneyflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/evidence_data/moneyflow_dc",
+        "data/research/20261029/R4_news.json#/sector_polarity_cross_product"
+      ],
+      "note": {
+        "self_net_big_5d_yi": -0.5538739999999995,
+        "dc_net_5d_yi": -0.6182750000000015,
+        "conflict_dates": [
+          "20261027"
+        ],
+        "captured_at": {
+          "moneyflow": "2026-10-29T06:46:53.573479+08:00",
+          "moneyflow_dc": "2026-10-29T06:46:53.581234+08:00",
+          "anns_d": "2026-10-29T06:46:53.699925+08:00",
+          "fina_indicator": "2026-10-29T06:46:53.654657+08:00"
+        },
+        "event_ids": [
+          "E20261029_006",
+          "E20261029_007"
+        ],
+        "catalyst_summary": "10月28日三季报为本公司硬事件；R4奥士康扩产仅为同行资本开支信号，同时存在供给和融资压力。不能将其视作本票新增订单。"
+      }
+    },
+    {
+      "ts_code": "002636.SZ",
+      "name": "金安国纪",
+      "review": "风格",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/style",
+        "data/research/20261029/R1_style.json#/objective_metrics",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/0/leaders/1"
+      ],
+      "observation_date_or_window": "20261028收盘；20261029研究TTL",
+      "generated_at": {
+        "R1": "2026-10-29T06:23:54.965292+08:00",
+        "R2": "2026-10-29T06:40:10+08:00"
+      },
+      "classification": "必要",
+      "owner": "R6；缺对象关联回R2",
+      "true_gap": "核心输入不缺；正式逐票比较未完成，不因根partial判数据不存在",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/evidence",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/0/risks"
+      ],
+      "note": {
+        "style": "主线扩散型",
+        "emotion": "震荡",
+        "role": "龙二",
+        "trading_permission": false
+      }
+    },
+    {
+      "ts_code": "002636.SZ",
+      "name": "金安国纪",
+      "review": "出货",
+      "actual_source_fields": [
+        "data/research/20261029/R3_sentiment.json#/hotlist_signals/distribution_alert",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/dimensions/chip_structure/flow_5d"
+      ],
+      "observation_date_or_window": "alert对比20261027/28；资金20261022-28",
+      "generated_at": {
+        "R3": "2026-10-29T06:31:38+08:00",
+        "R5": "2026-10-29T06:56:30+08:00",
+        "R6": "2026-10-29T07:03:25.677737+08:00"
+      },
+      "classification": "必要",
+      "owner": "R3显式alert/精确归属；R5资金；R6裁决",
+      "true_gap": "显式正向alert仅机器人拥挤代理且confirmed_distribution=false；缺逐对象已核alert结果不能当false，需R3声明覆盖/非命中而非重抓全部热榜",
+      "reusable_evidence": [
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/distribution_alerts_as_reported",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/exact_r2_sector_matches"
+      ],
+      "note": {
+        "fund_source_conflict": true,
+        "net_big_5d_yi": -0.5538739999999995,
+        "dc_net_5d_yi": -0.6182750000000015,
+        "no_cross_concept_stitching": true,
+        "no_hard_reject_adjudicated_here": true
+      }
+    },
+    {
+      "ts_code": "002636.SZ",
+      "name": "金安国纪",
+      "review": "财务合规",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/dimensions/valuation_safety/fundamental_flags",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/dimensions/valuation_safety/fundamental_check_status",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/evidence_data/financial_statements",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/evidence_data/anns_d"
+      ],
+      "observation_date_or_window": {
+        "report_end": "20260930",
+        "ann_date": "20261028"
+      },
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R5补完整检查范围/所需财务合规事实；R6依原规则裁决",
+      "true_gap": "真缺：审计意见/质押/关联交易及S轴等未核；不等于三表全缺。flags空不代表安全",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/dimensions/valuation_safety/latest_income",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/dimensions/valuation_safety/latest_balance",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/dimensions/valuation_safety/latest_cashflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/1/evidence_data/pledge_stat"
+      ],
+      "note": {
+        "flags": [
+          {
+            "code": "V4",
+            "detail": "ROE=42.4807%；CFO/合并净利润=0.4672",
+            "source": "tushare.cashflow+income+fina_indicator",
+            "severity": "soft_suggest"
+          }
+        ],
+        "check_status": "partial",
+        "unverified_checklist": [
+          "F3/F4同比及周转",
+          "F5资本化",
+          "F7关联交易",
+          "F11控股股东质押（pledge_stat空行不能判无质押）",
+          "F12审计意见",
+          "S1两年完整财务轴",
+          "S2合规轴",
+          "S3临近轴"
+        ],
+        "flags_count_not_automatic_adjudication": 1,
+        "valuation_V_items_not_automatic_F_count": true
+      }
+    },
+    {
+      "ts_code": "600601.SH",
+      "name": "方正科技",
+      "review": "资金消息",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/dimensions/chip_structure/flow_5d",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/dimensions/catalyst",
+        "data/research/20261029/R4_news.json#/top_events",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/1/score_evidence"
+      ],
+      "observation_date_or_window": [
+        "20261022",
+        "20261023",
+        "20261026",
+        "20261027",
+        "20261028"
+      ],
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R4消息/R7资金；R5逐票口径；R6交叉裁决",
+      "true_gap": "不是原始资金缺失；四票存在口径冲突、需保留并裁决。行业催化非公司订单，未核部分保留未知",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/evidence_data/moneyflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/evidence_data/moneyflow_dc",
+        "data/research/20261029/R4_news.json#/sector_polarity_cross_product"
+      ],
+      "note": {
+        "self_net_big_5d_yi": 1.8515060000000014,
+        "dc_net_5d_yi": 2.06541,
+        "conflict_dates": [
+          "20261023"
+        ],
+        "captured_at": {
+          "moneyflow": "2026-10-29T06:46:54.348899+08:00",
+          "moneyflow_dc": "2026-10-29T06:46:54.389143+08:00",
+          "anns_d": "2026-10-29T06:46:54.672959+08:00",
+          "fina_indicator": "2026-10-29T06:46:54.467089+08:00"
+        },
+        "event_ids": [
+          "E20261029_003",
+          "E20261029_001",
+          "E20261029_004"
+        ],
+        "catalyst_summary": "10月28日三季报与募集资金相关公告可核；微软/谷歌盘前新财报正负并存，不得倒用于解释28日涨停。PCB主业与CPO概念映射并非相同产品。"
+      }
+    },
+    {
+      "ts_code": "600601.SH",
+      "name": "方正科技",
+      "review": "风格",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/style",
+        "data/research/20261029/R1_style.json#/objective_metrics",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/1/leaders/0"
+      ],
+      "observation_date_or_window": "20261028收盘；20261029研究TTL",
+      "generated_at": {
+        "R1": "2026-10-29T06:23:54.965292+08:00",
+        "R2": "2026-10-29T06:40:10+08:00"
+      },
+      "classification": "必要",
+      "owner": "R6；缺对象关联回R2",
+      "true_gap": "核心输入不缺；正式逐票比较未完成，不因根partial判数据不存在",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/evidence",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/1/risks"
+      ],
+      "note": {
+        "style": "主线扩散型",
+        "emotion": "震荡",
+        "role": "龙一",
+        "trading_permission": false
+      }
+    },
+    {
+      "ts_code": "600601.SH",
+      "name": "方正科技",
+      "review": "出货",
+      "actual_source_fields": [
+        "data/research/20261029/R3_sentiment.json#/hotlist_signals/distribution_alert",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/dimensions/chip_structure/flow_5d"
+      ],
+      "observation_date_or_window": "alert对比20261027/28；资金20261022-28",
+      "generated_at": {
+        "R3": "2026-10-29T06:31:38+08:00",
+        "R5": "2026-10-29T06:56:30+08:00",
+        "R6": "2026-10-29T07:03:25.677737+08:00"
+      },
+      "classification": "必要",
+      "owner": "R3显式alert/精确归属；R5资金；R6裁决",
+      "true_gap": "显式正向alert仅机器人拥挤代理且confirmed_distribution=false；缺逐对象已核alert结果不能当false，需R3声明覆盖/非命中而非重抓全部热榜",
+      "reusable_evidence": [
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/distribution_alerts_as_reported",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/exact_r2_sector_matches"
+      ],
+      "note": {
+        "fund_source_conflict": true,
+        "net_big_5d_yi": 1.8515060000000014,
+        "dc_net_5d_yi": 2.06541,
+        "no_cross_concept_stitching": true,
+        "no_hard_reject_adjudicated_here": true
+      }
+    },
+    {
+      "ts_code": "600601.SH",
+      "name": "方正科技",
+      "review": "财务合规",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/dimensions/valuation_safety/fundamental_flags",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/dimensions/valuation_safety/fundamental_check_status",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/evidence_data/financial_statements",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/evidence_data/anns_d"
+      ],
+      "observation_date_or_window": {
+        "report_end": "20260930",
+        "ann_date": "20261028"
+      },
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R5补完整检查范围/所需财务合规事实；R6依原规则裁决",
+      "true_gap": "真缺：审计意见/质押/关联交易及S轴等未核；不等于三表全缺。flags空不代表安全",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/dimensions/valuation_safety/latest_income",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/dimensions/valuation_safety/latest_balance",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/dimensions/valuation_safety/latest_cashflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/2/evidence_data/pledge_stat"
+      ],
+      "note": {
+        "flags": [
+          {
+            "code": "F9",
+            "detail": "期末应收/本期累计收入=41.5691%；半年与全年不可无调整横比",
+            "source": "tushare.balancesheet+income",
+            "severity": "soft_suggest"
+          }
+        ],
+        "check_status": "partial",
+        "unverified_checklist": [
+          "F3/F4同比及周转",
+          "F5资本化",
+          "F7关联交易",
+          "F11控股股东质押（pledge_stat空行不能判无质押）",
+          "F12审计意见",
+          "S1两年完整财务轴",
+          "S2合规轴",
+          "S3临近轴"
+        ],
+        "flags_count_not_automatic_adjudication": 1,
+        "valuation_V_items_not_automatic_F_count": true
+      }
+    },
+    {
+      "ts_code": "300308.SZ",
+      "name": "中际旭创",
+      "review": "资金消息",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/dimensions/chip_structure/flow_5d",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/dimensions/catalyst",
+        "data/research/20261029/R4_news.json#/top_events",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/1/score_evidence"
+      ],
+      "observation_date_or_window": [
+        "20261022",
+        "20261023",
+        "20261026",
+        "20261027",
+        "20261028"
+      ],
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R4消息/R7资金；R5逐票口径；R6交叉裁决",
+      "true_gap": "不是原始资金缺失；四票存在口径冲突、需保留并裁决。行业催化非公司订单，未核部分保留未知",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/evidence_data/moneyflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/evidence_data/moneyflow_dc",
+        "data/research/20261029/R4_news.json#/sector_polarity_cross_product"
+      ],
+      "note": {
+        "self_net_big_5d_yi": 30.124619000000024,
+        "dc_net_5d_yi": 29.721538,
+        "conflict_dates": [
+          "20261026"
+        ],
+        "captured_at": {
+          "moneyflow": "2026-10-29T06:47:00.641431+08:00",
+          "moneyflow_dc": "2026-10-29T06:47:00.788744+08:00",
+          "anns_d": "2026-10-29T06:47:00.813014+08:00",
+          "fina_indicator": "2026-10-29T06:47:00.790576+08:00"
+        },
+        "event_ids": [
+          "E20261029_003",
+          "E20261029_001",
+          "E20261029_004"
+        ],
+        "catalyst_summary": "R4微软云需求正向与谷歌资本回报负向共同映射，主营光模块相关性较清晰；10月23日经营公告只核标题，不擅自认定新增大单。"
+      }
+    },
+    {
+      "ts_code": "300308.SZ",
+      "name": "中际旭创",
+      "review": "风格",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/style",
+        "data/research/20261029/R1_style.json#/objective_metrics",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/1/leaders/1"
+      ],
+      "observation_date_or_window": "20261028收盘；20261029研究TTL",
+      "generated_at": {
+        "R1": "2026-10-29T06:23:54.965292+08:00",
+        "R2": "2026-10-29T06:40:10+08:00"
+      },
+      "classification": "必要",
+      "owner": "R6；缺对象关联回R2",
+      "true_gap": "核心输入不缺；正式逐票比较未完成，不因根partial判数据不存在",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/evidence",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/1/risks"
+      ],
+      "note": {
+        "style": "主线扩散型",
+        "emotion": "震荡",
+        "role": "候补",
+        "trading_permission": false
+      }
+    },
+    {
+      "ts_code": "300308.SZ",
+      "name": "中际旭创",
+      "review": "出货",
+      "actual_source_fields": [
+        "data/research/20261029/R3_sentiment.json#/hotlist_signals/distribution_alert",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/dimensions/chip_structure/flow_5d"
+      ],
+      "observation_date_or_window": "alert对比20261027/28；资金20261022-28",
+      "generated_at": {
+        "R3": "2026-10-29T06:31:38+08:00",
+        "R5": "2026-10-29T06:56:30+08:00",
+        "R6": "2026-10-29T07:03:25.677737+08:00"
+      },
+      "classification": "必要",
+      "owner": "R3显式alert/精确归属；R5资金；R6裁决",
+      "true_gap": "显式正向alert仅机器人拥挤代理且confirmed_distribution=false；缺逐对象已核alert结果不能当false，需R3声明覆盖/非命中而非重抓全部热榜",
+      "reusable_evidence": [
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/distribution_alerts_as_reported",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/exact_r2_sector_matches"
+      ],
+      "note": {
+        "fund_source_conflict": true,
+        "net_big_5d_yi": 30.124619000000024,
+        "dc_net_5d_yi": 29.721538,
+        "no_cross_concept_stitching": true,
+        "no_hard_reject_adjudicated_here": true
+      }
+    },
+    {
+      "ts_code": "300308.SZ",
+      "name": "中际旭创",
+      "review": "财务合规",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/dimensions/valuation_safety/fundamental_flags",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/dimensions/valuation_safety/fundamental_check_status",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/evidence_data/financial_statements",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/evidence_data/anns_d"
+      ],
+      "observation_date_or_window": {
+        "report_end": "20260630",
+        "ann_date": "20260822"
+      },
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R5补完整检查范围/所需财务合规事实；R6依原规则裁决",
+      "true_gap": "真缺：审计意见/质押/关联交易及S轴等未核；不等于三表全缺。flags空不代表安全",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/dimensions/valuation_safety/latest_income",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/dimensions/valuation_safety/latest_balance",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/dimensions/valuation_safety/latest_cashflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/3/evidence_data/pledge_stat"
+      ],
+      "note": {
+        "flags": [
+          {
+            "code": "V4",
+            "detail": "ROE=39.2137%；CFO/合并净利润=0.1221",
+            "source": "tushare.cashflow+income+fina_indicator",
+            "severity": "soft_suggest"
+          }
+        ],
+        "check_status": "partial",
+        "unverified_checklist": [
+          "F3/F4同比及周转",
+          "F5资本化",
+          "F7关联交易",
+          "F11控股股东质押（pledge_stat空行不能判无质押）",
+          "F12审计意见",
+          "S1两年完整财务轴",
+          "S2合规轴",
+          "S3临近轴"
+        ],
+        "flags_count_not_automatic_adjudication": 1,
+        "valuation_V_items_not_automatic_F_count": true
+      }
+    },
+    {
+      "ts_code": "000670.SZ",
+      "name": "盈方微",
+      "review": "资金消息",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/dimensions/chip_structure/flow_5d",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/dimensions/catalyst",
+        "data/research/20261029/R4_news.json#/top_events",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/2/score_evidence"
+      ],
+      "observation_date_or_window": [
+        "20261022",
+        "20261023",
+        "20261026",
+        "20261027",
+        "20261028"
+      ],
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R4消息/R7资金；R5逐票口径；R6交叉裁决",
+      "true_gap": "不是原始资金缺失；四票存在口径冲突、需保留并裁决。行业催化非公司订单，未核部分保留未知",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/evidence_data/moneyflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/evidence_data/moneyflow_dc",
+        "data/research/20261029/R4_news.json#/sector_polarity_cross_product"
+      ],
+      "note": {
+        "self_net_big_5d_yi": 2.6988659999999993,
+        "dc_net_5d_yi": 2.690914,
+        "conflict_dates": [],
+        "captured_at": {
+          "moneyflow": "2026-10-29T06:47:01.710204+08:00",
+          "moneyflow_dc": "2026-10-29T06:47:01.902804+08:00",
+          "anns_d": "2026-10-29T06:47:02.083502+08:00",
+          "fina_indicator": "2026-10-29T06:47:01.904269+08:00"
+        },
+        "event_ids": [
+          "E20261029_010",
+          "E20261029_009"
+        ],
+        "catalyst_summary": "10月27日三季报、28日首板为已知事实；海力士长单与需求是行业映射，不是盈方微获得同类订单。亏损收窄不等于已经盈利。"
+      }
+    },
+    {
+      "ts_code": "000670.SZ",
+      "name": "盈方微",
+      "review": "风格",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/style",
+        "data/research/20261029/R1_style.json#/objective_metrics",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/2/leaders/0"
+      ],
+      "observation_date_or_window": "20261028收盘；20261029研究TTL",
+      "generated_at": {
+        "R1": "2026-10-29T06:23:54.965292+08:00",
+        "R2": "2026-10-29T06:40:10+08:00"
+      },
+      "classification": "必要",
+      "owner": "R6；缺对象关联回R2",
+      "true_gap": "核心输入不缺；正式逐票比较未完成，不因根partial判数据不存在",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/evidence",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/2/risks"
+      ],
+      "note": {
+        "style": "主线扩散型",
+        "emotion": "震荡",
+        "role": "龙一",
+        "trading_permission": false
+      }
+    },
+    {
+      "ts_code": "000670.SZ",
+      "name": "盈方微",
+      "review": "出货",
+      "actual_source_fields": [
+        "data/research/20261029/R3_sentiment.json#/hotlist_signals/distribution_alert",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/dimensions/chip_structure/flow_5d"
+      ],
+      "observation_date_or_window": "alert对比20261027/28；资金20261022-28",
+      "generated_at": {
+        "R3": "2026-10-29T06:31:38+08:00",
+        "R5": "2026-10-29T06:56:30+08:00",
+        "R6": "2026-10-29T07:03:25.677737+08:00"
+      },
+      "classification": "必要",
+      "owner": "R3显式alert/精确归属；R5资金；R6裁决",
+      "true_gap": "显式正向alert仅机器人拥挤代理且confirmed_distribution=false；缺逐对象已核alert结果不能当false，需R3声明覆盖/非命中而非重抓全部热榜",
+      "reusable_evidence": [
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/distribution_alerts_as_reported",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/exact_r2_sector_matches"
+      ],
+      "note": {
+        "fund_source_conflict": false,
+        "net_big_5d_yi": 2.6988659999999993,
+        "dc_net_5d_yi": 2.690914,
+        "no_cross_concept_stitching": true,
+        "no_hard_reject_adjudicated_here": true
+      }
+    },
+    {
+      "ts_code": "000670.SZ",
+      "name": "盈方微",
+      "review": "财务合规",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/dimensions/valuation_safety/fundamental_flags",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/dimensions/valuation_safety/fundamental_check_status",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/evidence_data/financial_statements",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/evidence_data/anns_d"
+      ],
+      "observation_date_or_window": {
+        "report_end": "20260930",
+        "ann_date": "20261027"
+      },
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R5补完整检查范围/所需财务合规事实；R6依原规则裁决",
+      "true_gap": "真缺：审计意见/质押/关联交易及S轴等未核；不等于三表全缺。flags空不代表安全",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/dimensions/valuation_safety/latest_income",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/dimensions/valuation_safety/latest_balance",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/dimensions/valuation_safety/latest_cashflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/4/evidence_data/pledge_stat"
+      ],
+      "note": {
+        "flags": [
+          {
+            "code": "F2",
+            "detail": "商誉/归母净资产=858.8700%；合并商誉与归母分母口径需附注，不等于审计否决",
+            "source": "tushare.balancesheet",
+            "severity": "strong_suggest"
+          },
+          {
+            "code": "F9",
+            "detail": "期末应收/本期累计收入=40.0300%；半年与全年不可无调整横比",
+            "source": "tushare.balancesheet+income",
+            "severity": "soft_suggest"
+          },
+          {
+            "code": "F10",
+            "detail": "已知有息负债/归母净资产下限=3591.8481%；空字段未补0，完整比例未知",
+            "source": "tushare.balancesheet",
+            "severity": "soft_suggest"
+          }
+        ],
+        "check_status": "partial",
+        "unverified_checklist": [
+          "F3/F4同比及周转",
+          "F5资本化",
+          "F7关联交易",
+          "F11控股股东质押（pledge_stat空行不能判无质押）",
+          "F12审计意见",
+          "S1两年完整财务轴",
+          "S2合规轴",
+          "S3临近轴"
+        ],
+        "flags_count_not_automatic_adjudication": 3,
+        "valuation_V_items_not_automatic_F_count": true
+      }
+    },
+    {
+      "ts_code": "603986.SH",
+      "name": "兆易创新",
+      "review": "资金消息",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/dimensions/chip_structure/flow_5d",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/dimensions/catalyst",
+        "data/research/20261029/R4_news.json#/top_events",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/2/score_evidence"
+      ],
+      "observation_date_or_window": [
+        "20261022",
+        "20261023",
+        "20261026",
+        "20261027",
+        "20261028"
+      ],
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R4消息/R7资金；R5逐票口径；R6交叉裁决",
+      "true_gap": "不是原始资金缺失；四票存在口径冲突、需保留并裁决。行业催化非公司订单，未核部分保留未知",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/evidence_data/moneyflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/evidence_data/moneyflow_dc",
+        "data/research/20261029/R4_news.json#/sector_polarity_cross_product"
+      ],
+      "note": {
+        "self_net_big_5d_yi": 18.405834999999996,
+        "dc_net_5d_yi": 19.429916,
+        "conflict_dates": [
+          "20261022",
+          "20261027",
+          "20261028"
+        ],
+        "captured_at": {
+          "moneyflow": "2026-10-29T06:47:02.857005+08:00",
+          "moneyflow_dc": "2026-10-29T06:47:02.900966+08:00",
+          "anns_d": "2026-10-29T06:47:03.198321+08:00",
+          "fina_indicator": "2026-10-29T06:47:03.066468+08:00"
+        },
+        "event_ids": [
+          "E20261029_010",
+          "E20261029_009"
+        ],
+        "catalyst_summary": "海力士长单需求与净利环比回落为正负双轴；本公司28日回购进展公告可核标题，但回购规模和执行率未核，不夸大成新增业绩。"
+      }
+    },
+    {
+      "ts_code": "603986.SH",
+      "name": "兆易创新",
+      "review": "风格",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/style",
+        "data/research/20261029/R1_style.json#/objective_metrics",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/2/leaders/1"
+      ],
+      "observation_date_or_window": "20261028收盘；20261029研究TTL",
+      "generated_at": {
+        "R1": "2026-10-29T06:23:54.965292+08:00",
+        "R2": "2026-10-29T06:40:10+08:00"
+      },
+      "classification": "必要",
+      "owner": "R6；缺对象关联回R2",
+      "true_gap": "核心输入不缺；正式逐票比较未完成，不因根partial判数据不存在",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/evidence",
+        "data/research/20261029/R2_main_sectors.json#/main_lines/2/risks"
+      ],
+      "note": {
+        "style": "主线扩散型",
+        "emotion": "震荡",
+        "role": "候补",
+        "trading_permission": false
+      }
+    },
+    {
+      "ts_code": "603986.SH",
+      "name": "兆易创新",
+      "review": "出货",
+      "actual_source_fields": [
+        "data/research/20261029/R3_sentiment.json#/hotlist_signals/distribution_alert",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/dimensions/chip_structure/flow_5d"
+      ],
+      "observation_date_or_window": "alert对比20261027/28；资金20261022-28",
+      "generated_at": {
+        "R3": "2026-10-29T06:31:38+08:00",
+        "R5": "2026-10-29T06:56:30+08:00",
+        "R6": "2026-10-29T07:03:25.677737+08:00"
+      },
+      "classification": "必要",
+      "owner": "R3显式alert/精确归属；R5资金；R6裁决",
+      "true_gap": "显式正向alert仅机器人拥挤代理且confirmed_distribution=false；缺逐对象已核alert结果不能当false，需R3声明覆盖/非命中而非重抓全部热榜",
+      "reusable_evidence": [
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/distribution_alerts_as_reported",
+        "data/research/20261029/R6_devil_advocate.json#/mode6_audit/exact_r2_sector_matches"
+      ],
+      "note": {
+        "fund_source_conflict": true,
+        "net_big_5d_yi": 18.405834999999996,
+        "dc_net_5d_yi": 19.429916,
+        "no_cross_concept_stitching": true,
+        "no_hard_reject_adjudicated_here": true
+      }
+    },
+    {
+      "ts_code": "603986.SH",
+      "name": "兆易创新",
+      "review": "财务合规",
+      "actual_source_fields": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/dimensions/valuation_safety/fundamental_flags",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/dimensions/valuation_safety/fundamental_check_status",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/evidence_data/financial_statements",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/evidence_data/anns_d"
+      ],
+      "observation_date_or_window": {
+        "report_end": "20260630",
+        "ann_date": "20260819"
+      },
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "classification": "必要",
+      "owner": "R5补完整检查范围/所需财务合规事实；R6依原规则裁决",
+      "true_gap": "真缺：审计意见/质押/关联交易及S轴等未核；不等于三表全缺。flags空不代表安全",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/dimensions/valuation_safety/latest_income",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/dimensions/valuation_safety/latest_balance",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/dimensions/valuation_safety/latest_cashflow",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/5/evidence_data/pledge_stat"
+      ],
+      "note": {
+        "flags": [],
+        "check_status": "partial",
+        "unverified_checklist": [
+          "F3/F4同比及周转",
+          "F5资本化",
+          "F7关联交易",
+          "F11控股股东质押（pledge_stat空行不能判无质押）",
+          "F12审计意见",
+          "S1两年完整财务轴",
+          "S2合规轴",
+          "S3临近轴"
+        ],
+        "flags_count_not_automatic_adjudication": 0,
+        "valuation_V_items_not_automatic_F_count": true
+      }
+    },
+    {
+      "ts_code": "002913.SZ",
+      "name": "奥士康",
+      "review": "资金消息",
+      "actual_source_fields": [
+        "data/research/20261029/R4_news.json#/research_candidates"
+      ],
+      "observation_date_or_window": "事件日20261028/29；详见R4事件first_known_at",
+      "generated_at": "2026-10-29T06:23:34+08:00",
+      "classification": "必要（若纳入本批D1候选）",
+      "owner": "研究主控确认候选边界；R2归属/R5画像/R3 alert/R6审核",
+      "true_gap": "R4-only对象不在本轮R2六票及R5/R6逐票覆盖；消息已有，不可说完全无证或默认为通过",
+      "reusable_evidence": [
+        "data/research/20261029/R4_news.json#/stocks_catalyzed",
+        "data/research/20261029/R4_news.json#/top_events"
+      ],
+      "note": {
+        "not_auto_promoted_to_r2": true,
+        "underlying_event_id": "B4",
+        "candidate_scope_pending": true
+      }
+    },
+    {
+      "ts_code": "002913.SZ",
+      "name": "奥士康",
+      "review": "风格",
+      "actual_source_fields": [
+        "data/research/20261029/R4_news.json#/research_candidates"
+      ],
+      "observation_date_or_window": "事件日20261028/29；详见R4事件first_known_at",
+      "generated_at": "2026-10-29T06:23:34+08:00",
+      "classification": "必要（若纳入本批D1候选）",
+      "owner": "研究主控确认候选边界；R2归属/R5画像/R3 alert/R6审核",
+      "true_gap": "R4-only对象不在本轮R2六票及R5/R6逐票覆盖；消息已有，不可说完全无证或默认为通过",
+      "reusable_evidence": [
+        "data/research/20261029/R4_news.json#/stocks_catalyzed",
+        "data/research/20261029/R4_news.json#/top_events"
+      ],
+      "note": {
+        "not_auto_promoted_to_r2": true,
+        "underlying_event_id": "B4",
+        "candidate_scope_pending": true
+      }
+    },
+    {
+      "ts_code": "002913.SZ",
+      "name": "奥士康",
+      "review": "出货",
+      "actual_source_fields": [
+        "data/research/20261029/R4_news.json#/research_candidates"
+      ],
+      "observation_date_or_window": "事件日20261028/29；详见R4事件first_known_at",
+      "generated_at": "2026-10-29T06:23:34+08:00",
+      "classification": "必要（若纳入本批D1候选）",
+      "owner": "研究主控确认候选边界；R2归属/R5画像/R3 alert/R6审核",
+      "true_gap": "R4-only对象不在本轮R2六票及R5/R6逐票覆盖；消息已有，不可说完全无证或默认为通过",
+      "reusable_evidence": [
+        "data/research/20261029/R4_news.json#/stocks_catalyzed",
+        "data/research/20261029/R4_news.json#/top_events"
+      ],
+      "note": {
+        "not_auto_promoted_to_r2": true,
+        "underlying_event_id": "B4",
+        "candidate_scope_pending": true
+      }
+    },
+    {
+      "ts_code": "002913.SZ",
+      "name": "奥士康",
+      "review": "财务合规",
+      "actual_source_fields": [
+        "data/research/20261029/R4_news.json#/research_candidates"
+      ],
+      "observation_date_or_window": "事件日20261028/29；详见R4事件first_known_at",
+      "generated_at": "2026-10-29T06:23:34+08:00",
+      "classification": "必要（若纳入本批D1候选）",
+      "owner": "研究主控确认候选边界；R2归属/R5画像/R3 alert/R6审核",
+      "true_gap": "R4-only对象不在本轮R2六票及R5/R6逐票覆盖；消息已有，不可说完全无证或默认为通过",
+      "reusable_evidence": [
+        "data/research/20261029/R4_news.json#/stocks_catalyzed",
+        "data/research/20261029/R4_news.json#/top_events"
+      ],
+      "note": {
+        "not_auto_promoted_to_r2": true,
+        "underlying_event_id": "B4",
+        "candidate_scope_pending": true
+      }
+    },
+    {
+      "ts_code": "002792.SZ",
+      "name": "通宇通讯",
+      "review": "资金消息",
+      "actual_source_fields": [
+        "data/research/20261029/R4_news.json#/research_candidates"
+      ],
+      "observation_date_or_window": "事件日20261028/29；详见R4事件first_known_at",
+      "generated_at": "2026-10-29T06:23:34+08:00",
+      "classification": "必要（若纳入本批D1候选）",
+      "owner": "研究主控确认候选边界；R2归属/R5画像/R3 alert/R6审核",
+      "true_gap": "R4-only对象不在本轮R2六票及R5/R6逐票覆盖；消息已有，不可说完全无证或默认为通过",
+      "reusable_evidence": [
+        "data/research/20261029/R4_news.json#/stocks_catalyzed",
+        "data/research/20261029/R4_news.json#/top_events"
+      ],
+      "note": {
+        "not_auto_promoted_to_r2": true,
+        "underlying_event_id": "B8",
+        "candidate_scope_pending": true
+      }
+    },
+    {
+      "ts_code": "002792.SZ",
+      "name": "通宇通讯",
+      "review": "风格",
+      "actual_source_fields": [
+        "data/research/20261029/R4_news.json#/research_candidates"
+      ],
+      "observation_date_or_window": "事件日20261028/29；详见R4事件first_known_at",
+      "generated_at": "2026-10-29T06:23:34+08:00",
+      "classification": "必要（若纳入本批D1候选）",
+      "owner": "研究主控确认候选边界；R2归属/R5画像/R3 alert/R6审核",
+      "true_gap": "R4-only对象不在本轮R2六票及R5/R6逐票覆盖；消息已有，不可说完全无证或默认为通过",
+      "reusable_evidence": [
+        "data/research/20261029/R4_news.json#/stocks_catalyzed",
+        "data/research/20261029/R4_news.json#/top_events"
+      ],
+      "note": {
+        "not_auto_promoted_to_r2": true,
+        "underlying_event_id": "B8",
+        "candidate_scope_pending": true
+      }
+    },
+    {
+      "ts_code": "002792.SZ",
+      "name": "通宇通讯",
+      "review": "出货",
+      "actual_source_fields": [
+        "data/research/20261029/R4_news.json#/research_candidates"
+      ],
+      "observation_date_or_window": "事件日20261028/29；详见R4事件first_known_at",
+      "generated_at": "2026-10-29T06:23:34+08:00",
+      "classification": "必要（若纳入本批D1候选）",
+      "owner": "研究主控确认候选边界；R2归属/R5画像/R3 alert/R6审核",
+      "true_gap": "R4-only对象不在本轮R2六票及R5/R6逐票覆盖；消息已有，不可说完全无证或默认为通过",
+      "reusable_evidence": [
+        "data/research/20261029/R4_news.json#/stocks_catalyzed",
+        "data/research/20261029/R4_news.json#/top_events"
+      ],
+      "note": {
+        "not_auto_promoted_to_r2": true,
+        "underlying_event_id": "B8",
+        "candidate_scope_pending": true
+      }
+    },
+    {
+      "ts_code": "002792.SZ",
+      "name": "通宇通讯",
+      "review": "财务合规",
+      "actual_source_fields": [
+        "data/research/20261029/R4_news.json#/research_candidates"
+      ],
+      "observation_date_or_window": "事件日20261028/29；详见R4事件first_known_at",
+      "generated_at": "2026-10-29T06:23:34+08:00",
+      "classification": "必要（若纳入本批D1候选）",
+      "owner": "研究主控确认候选边界；R2归属/R5画像/R3 alert/R6审核",
+      "true_gap": "R4-only对象不在本轮R2六票及R5/R6逐票覆盖；消息已有，不可说完全无证或默认为通过",
+      "reusable_evidence": [
+        "data/research/20261029/R4_news.json#/stocks_catalyzed",
+        "data/research/20261029/R4_news.json#/top_events"
+      ],
+      "note": {
+        "not_auto_promoted_to_r2": true,
+        "underlying_event_id": "B8",
+        "candidate_scope_pending": true
+      }
+    }
+  ],
+  "shared_rows": [
+    {
+      "id": "R6_FORMAL",
+      "classification": "必要",
+      "owner": "R6",
+      "true_gap": "事实审核交付真缺，非六份研究全缺",
+      "actual_source_fields": [
+        "data/research/20261029/R6_devil_advocate.json#/formal_review_completed",
+        "data/research/20261029/R6_devil_advocate.json#/candidates_evaluated"
+      ],
+      "observation_date_or_window": "本批20261029",
+      "generated_at": "2026-10-29T07:03:25.677737+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R6_devil_advocate.json#/stock_research_audit",
+        "data/research/20261029/R6_devil_advocate.json#/research_risk_observations"
+      ],
+      "note": "candidates_evaluated=0；研究观察有六票；空hard_rejects不是通过。新已签契约允许partial对象必要逐项审查，不应重开政策签核。"
+    },
+    {
+      "id": "R1_CORE",
+      "classification": "必要",
+      "owner": "R1/R6",
+      "true_gap": "核心风格、涨停、天梯、广度、溢价不缺",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/objective_metrics"
+      ],
+      "observation_date_or_window": "20261028",
+      "generated_at": "2026-10-29T06:23:54.965292+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/evidence"
+      ],
+      "note": "高炸板风险保留；输入可比不等于可交易。"
+    },
+    {
+      "id": "R1_WINDOW",
+      "classification": "R1研究完整性缺口；不得自动提升为四类审核的全局必需",
+      "owner": "R1",
+      "true_gap": "883999.TI缺20261014/20连续日；共同30观测已有",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/style_cluster_analysis/skipped_latest30"
+      ],
+      "observation_date_or_window": "共同窗口20260907-20261028",
+      "generated_at": "2026-10-29T06:23:54.965292+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/style_cluster_analysis/assets"
+      ],
+      "note": "不能称连续30交易日；补两日或保留方法限制，不改confidence。"
+    },
+    {
+      "id": "ATTENTION_90D",
+      "classification": "辅助绑定；若主张90日则该主张证据必要",
+      "owner": "R3",
+      "true_gap": "真缺90日历史，非当日/双日热榜缺失",
+      "actual_source_fields": [
+        "data/research/20261029/attention_signals.json#/persistent",
+        "data/research/20261029/attention_signals.json#/degraded"
+      ],
+      "observation_date_or_window": "仅20261027/28",
+      "generated_at": "2026-10-29T06:31:38+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R3_sentiment.json#/hotlist_signals"
+      ],
+      "note": "不得将2天当90天，也不能据未命中推90日无人气；不另扩辅助绑定。"
+    },
+    {
+      "id": "EMOTION_BOUND",
+      "classification": "辅助绑定",
+      "owner": "R1/原生产owner",
+      "true_gap": "文件已存在；metrics日期应按内部字段而非文件名",
+      "actual_source_fields": [
+        "data/research/20261029/emotion_cycle.json#/metrics",
+        "data/research/20261029/R1_style.json#/emotion_cycle_phase"
+      ],
+      "observation_date_or_window": "已收盘历史指标；本次未认证新日盘中",
+      "generated_at": "2026-10-29T06:03:14+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/objective_metrics"
+      ],
+      "note": "0.75是该周期分类输出，不是替换R1 confidence=0.392的理由。"
+    },
+    {
+      "id": "US_INDICES",
+      "classification": "隔夜指数主张所需，非ETF替代",
+      "owner": "R1补证可供R7在原授权路径接收",
+      "true_gap": "SPX/IXIC/SOX的10月28日收盘已在R1；R7原快照仍旧，不必再次抓这三指数",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/overseas_analysis",
+        "data/research/20261029/R7_capital_flow.json#/overseas_indices"
+      ],
+      "observation_date_or_window": "美国20261028；America/New_York",
+      "generated_at": "2026-10-29T06:23:54.965292+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/overseas_analysis",
+        "data/research/20261029/R1_evidence.json#/source_records"
+      ],
+      "note": "R1备用hithink捕获06:15:03.806955+08:00；provider_published_at=null，不能认证秒级可得性。"
+    },
+    {
+      "id": "US_STOCKS",
+      "classification": "隔夜个股共振主张所需",
+      "owner": "R7",
+      "true_gap": "MU/NVDA/AVGO/AMD/TSM仍观察20261027，缺20261028",
+      "actual_source_fields": [
+        "data/research/20261029/R7_capital_flow.json#/overseas_core_stocks"
+      ],
+      "observation_date_or_window": "美国20261027，预期20261028",
+      "generated_at": "2026-10-29T06:23:13.324973+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R7_capital_flow.json#/overseas_core_stocks"
+      ],
+      "note": "指数补齐不等于个股补齐；不能用旧正向盘面抵销新利空。"
+    },
+    {
+      "id": "HK",
+      "classification": "市场时点独立项",
+      "owner": "R1",
+      "true_gap": "HSI/HKTECH收盘和HK日历已有，不缺",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/overseas_analysis"
+      ],
+      "observation_date_or_window": "香港20261028；Asia/Hong_Kong",
+      "generated_at": "2026-10-29T06:23:54.965292+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/overseas_analysis"
+      ],
+      "note": "原HSTECH标识与HKTECH显式映射保留，不静默改标识。"
+    },
+    {
+      "id": "JP_KR",
+      "classification": "市场时点独立项",
+      "owner": "R1",
+      "true_gap": "日线10月28已有，本市场交易日历认证真缺",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/overseas_analysis"
+      ],
+      "observation_date_or_window": "日韩20261028；Asia/Tokyo / Asia/Seoul",
+      "generated_at": "2026-10-29T06:23:54.965292+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/overseas_analysis"
+      ],
+      "note": "latest_session_calendar_unverified；不是行情完全无数据。"
+    },
+    {
+      "id": "MACRO",
+      "classification": "对应宏观方向主张所需；不新造全局门槛",
+      "owner": "R1",
+      "true_gap": "黄金/USDCNH观察27日且切点未核；铜/油/ICE美元指数未齐",
+      "actual_source_fields": [
+        "data/research/20261029/R1_style.json#/macro_analysis"
+      ],
+      "observation_date_or_window": "20261027或null",
+      "generated_at": "2026-10-29T06:23:54.965292+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R1_style.json#/macro_analysis"
+      ],
+      "note": "FXCM美元篮子不冒充ICE DXY；无新鲜度认证不得叫隔夜最新。"
+    },
+    {
+      "id": "ETF_PRIMARY",
+      "classification": "R7原必要资金维度缺口（不擅自降辅助）",
+      "owner": "fetch/R7",
+      "true_gap": "etf_net_flow=null；一级净申购真缺",
+      "actual_source_fields": [
+        "data/research/20261029/R7_capital_flow.json#/etf_futures/etf_net_flow",
+        "data/research/20261029/R7_evidence_20261029.json#/source_errors"
+      ],
+      "observation_date_or_window": "所需20261028",
+      "generated_at": "2026-10-29T06:23:13.324973+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R7_capital_flow.json#/etf_futures/etf_secondary_market_flows"
+      ],
+      "note": "二级大单净额、期现收盘基差和海外指数都不能代净申赎；原失败4013/key记录不证明源当前不可用，本次禁联网未验证现状。"
+    },
+    {
+      "id": "MARGIN",
+      "classification": "逐对象适用性，不新造统一硬门槛",
+      "owner": "R5/R7",
+      "true_gap": "资格内票最新27日，28日生成时尚未披露；光洋/盈方不适用",
+      "actual_source_fields": [
+        "data/research/20261029/R7_capital_flow.json#/dimension_freshness/margin",
+        "data/research/20261029/R5_stock_profiles.json#/profiles/*/dimensions/chip_structure/margin_status"
+      ],
+      "observation_date_or_window": "已披露15交易日至20261027",
+      "generated_at": "2026-10-29T06:56:30+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/*/dimensions/chip_structure/margin_15d_trend"
+      ],
+      "note": "不适用不补0；未到披露窗口是pending，不是接口失败。"
+    },
+    {
+      "id": "NORTHBOUND",
+      "classification": "不适用（盘前/盘中必要门槛）；仅复盘参考",
+      "owner": "R7",
+      "true_gap": "无须补抓、不得作为解禁条件",
+      "actual_source_fields": [
+        "data/research/20261029/R7_capital_flow.json#/northbound",
+        "docs/agents/R7-资金面Agent.md:13"
+      ],
+      "observation_date_or_window": "原时点保留",
+      "generated_at": "2026-10-29T06:23:13.324973+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R7_capital_flow.json#/northbound"
+      ],
+      "note": "排除置信度分子分母；成交额不当净额；本报告不恢复旧分、不抬预算。"
+    },
+    {
+      "id": "AUX_MODES",
+      "classification": "辅助（已签R6范围，非新增辅助输入绑定）",
+      "owner": "R6/研究主控",
+      "true_gap": "估值/历史/昨日兑现扩展缺口可局部保留，不拦已核必要项",
+      "actual_source_fields": [
+        "skills/analyze_devil_advocate_v1/SKILL.md:83-96,171-184"
+      ],
+      "observation_date_or_window": "各材料原时点",
+      "generated_at": "2026-10-29T07:03:25.677737+08:00",
+      "reusable_evidence": [
+        "data/research/20261029/R5_stock_profiles.json#/profiles/*/dimensions/valuation_safety"
+      ],
+      "note": "估值V项不自动计作F财务硬否决；不借此豁免财务/合规未知，也不访问额外历史库。"
+    }
+  ],
+  "minimal_pending_policy": [
+    {
+      "id": "CONF-01",
+      "minimal_pending_signature": "仅当要变更现行语义/门控时，用户须明确confidence究竟继续作为复合研究可信度硬禁新还是拆分市场判断与证据覆盖；阈值沿用0.4，任何另定阈值须独立依据和签核。现阶段推荐保留原政策，交R1/R6/D1以真实新证据重评，不以本报告解禁。",
+      "not_approved": "未建议新数值，未声称校准完成。"
+    },
+    {
+      "id": "DATA-01",
+      "minimal_pending_signature": "四类必要审核和两辅助绑定已有批准，不重复求签。若D1要把R4-only奥士康/通宇也当本批候选，仅需研究主控明确对象边界并补R2/R5/R3/R6对应证据；不是主控代跑抓数。",
+      "owner": "研究主控协调；fetch及R1/R3/R4/R5/R7各自补证，R6实际审核，D1最终裁决。"
+    }
+  ],
+  "implementation_notes": [
+    "src/research/r6_devil_advocate.py:73-74、473-474仍complete-only；527-545还保留旧不足3只保护，且build无模式7。真实主路径是shell模型R6，不应把这份规则实现当今日实际执行路径；若仍可独立调用，需按已签契约兼容，不能启用保护来降硬否决。",
+    "今日R6产物07:03仍记全部上游unusable并正式评估0；当前已签skill允许partial逐对象，今天旧产物不是新契约自然采用回执。",
+    "src/research/contract_checks.py:185-191只检字段及全部active为空池；不能以该结构校验证明0.392门禁已由Python数值重算。",
+    "最小施工：保留原证据定位，R3补逐票alert覆盖/非命中声明，R5补必要财务合规检查范围/未知项，R6按四类逐票出覆盖；资金冲突交对应owner核语义而非择优或全量重抓。",
+    "光洋R5已检出F1/F9/F10/F6/F8五条；现行模式7有≥4红旗硬否决条款，但本轮执行资格和检查适用范围未核，须R6依原对象范围及检出依据裁决；不得删旗美化或让本只读报告直接交易裁决。",
+    "R4-only两票虽无R5，不得静默补进R2或写正式审核完成；可保留事件研究。"
+  ],
+  "source_manifest": [
+    {
+      "path": "data/research/20261029/R1_style.json",
+      "sha256": "a02f324ef182506265f5658295a679020d28de13900fd96eb6754236deed0a9b",
+      "bytes": 105116,
+      "generated_at": "2026-10-29T06:23:54.965292+08:00"
+    },
+    {
+      "path": "data/research/20261029/R2_main_sectors.json",
+      "sha256": "fea9cb6f12f8bf93eabd06808d0a10b557fbd7884c575fdcfed99efb03e6f761",
+      "bytes": 63671,
+      "generated_at": "2026-10-29T06:40:10+08:00"
+    },
+    {
+      "path": "data/research/20261029/R3_sentiment.json",
+      "sha256": "45faea23f6924eba26431de57117eb481b7035fd7c429bd5ac400dd080d74781",
+      "bytes": 186506,
+      "generated_at": "2026-10-29T06:31:38+08:00"
+    },
+    {
+      "path": "data/research/20261029/R4_news.json",
+      "sha256": "2113a5ab02c326cea12143879b28802a527018c79566a5a695afcdb252328944",
+      "bytes": 388416,
+      "generated_at": "2026-10-29T06:23:34+08:00"
+    },
+    {
+      "path": "data/research/20261029/R5_stock_profiles.json",
+      "sha256": "df504bcce6c20b751d5c5c1aab394fb2001e3d8e157f9f19ef0ba728e85f2bb9",
+      "bytes": 3968372,
+      "generated_at": "2026-10-29T06:56:30+08:00"
+    },
+    {
+      "path": "data/research/20261029/R6_devil_advocate.json",
+      "sha256": "04b0bfe0b1e85cf6d49ef11b5986ddfb4f3551b9193e309473e7bba6e863ed95",
+      "bytes": 176759,
+      "generated_at": "2026-10-29T07:03:25.677737+08:00"
+    },
+    {
+      "path": "data/research/20261029/R7_capital_flow.json",
+      "sha256": "0e2b21e5d820e3b5582c5f0d683192878eccecc5799d29a6f23a8753b57a32f4",
+      "bytes": 507599,
+      "generated_at": "2026-10-29T06:23:13.324973+08:00"
+    },
+    {
+      "path": "data/research/20261029/research_summary.json",
+      "sha256": "75b97c540a9adde7f5e25b4e371d746dc918b4f8763a92a46df40dfcca87c8b2",
+      "bytes": 5122004,
+      "generated_at": "2026-10-29T07:03:47+08:00"
+    },
+    {
+      "path": "data/research/20261029/attention_signals.json",
+      "sha256": "7d261e18af9c154e689e1b31b0b85f2fe8a52b0a3bdc7a8033e8e6765f33fa23",
+      "bytes": 157840,
+      "generated_at": "2026-10-29T06:31:38+08:00"
+    },
+    {
+      "path": "data/research/20261029/emotion_cycle.json",
+      "sha256": "2ff72d1d54f09db0b04de2c3a523958fc39fc25656013049dc7962f7e56f67d1",
+      "bytes": 748,
+      "generated_at": "2026-10-29T06:03:14+08:00"
+    },
+    {
+      "path": "data/research/20261029/R1_evidence.json",
+      "sha256": "8fb05617fc38b19aca59f66bdd1a3b7c44c7ccba61f239bf4d903fccb60dfa4c",
+      "bytes": 1706058,
+      "generated_at": "2026-10-29T06:23:54.965292+08:00"
+    },
+    {
+      "path": "data/research/20261029/R7_evidence_20261029.json",
+      "sha256": "13d4a27c8fe0208b80165d74548a72bfb6adb9d6da0e4e4f2f2a9fb633fc4495",
+      "bytes": 4974583,
+      "generated_at": "2026-10-29T06:23:13.324973+08:00"
+    },
+    {
+      "path": "data/research/20261029/R3_source_audit.json",
+      "sha256": "36bae9394d6c07338c118ba3821963bdb393b2399b5ca0e4167b1ae22c6b77ad",
+      "bytes": 44808,
+      "generated_at": "2026-10-29T06:31:38+08:00"
+    }
+  ],
+  "counts": {
+    "r2_r5_candidates": 6,
+    "r4_only_candidates": 2,
+    "union_candidates": 8,
+    "candidate_review_rows": 32,
+    "shared_rows": 14
+  },
+  "not_done": "未对研究事实做外网复核、未跑任何生产角色、未核账户和实际交易、未宣称审核通过或解禁。"
+}

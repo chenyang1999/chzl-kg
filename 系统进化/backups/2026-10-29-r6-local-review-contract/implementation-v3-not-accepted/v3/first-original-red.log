@@ -1,0 +1,38 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+________________ test_explicit_local_branch_precedes_full_batch ________________
+
+    def test_explicit_local_branch_precedes_full_batch():
+        text = (REPO/'scripts/research/run_research_shell.sh').read_text()
+>       assert '--r6-local-review' in text
+E       assert '--r6-local-review' in '#!/bin/bash\n# 沧海巨浪 · 研究端 R1-R7 shell wait 编排（替代 delegate_task process-local 陷阱）\n# 2026-07-06 用户签 B 口径：R1-R7 必须 LLM ...ss result in data/health/research_pipeline_%s.json) ===\\n\' "$(date \'+%F %T\')" "$TRADE_DATE"\nexit "$PIPELINE_RC"\n'
+
+tests/pipeline/test_r6_local_revision.py:91: AssertionError
+__________ test_cross_terminal_revision_supported_without_restarting ___________
+
+native = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/...cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/data/research/20990106/research_summary.json'))
+
+    def test_cross_terminal_revision_supported_without_restarting(native):
+>       assert callable(getattr(native.s, 'run_r6_revision', None))
+E       AssertionError: assert False
+E        +  where False = callable(None)
+E        +    where None = getattr(<module 'scripts.research.pipeline_state' from '/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/scripts/research/pipeline_state.py'>, 'run_r6_revision', None)
+E        +      where <module 'scripts.research.pipeline_state' from '/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/scripts/research/pipeline_state.py'> = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/...cache/scratch/r6-local-red-20261029/test_cross_terminal_revision_s0/app/data/research/20990106/research_summary.json')).s
+
+tests/pipeline/test_r6_local_revision.py:96: AssertionError
+_____________ test_global_boolean_does_not_prove_per_stock_review ______________
+
+native = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-local-red-20261029/test_global_boolean_does_not_p0/...cache/scratch/r6-local-red-20261029/test_global_boolean_does_not_p0/app/data/research/20990106/research_summary.json'))
+
+    def test_global_boolean_does_not_prove_per_stock_review(native):
+        payload = {'formal_review_completed':True, 'review_passed':True,'hard_rejects':[]}
+>       assert native.a.r6_coverage(payload, [A,B], {})['completed'] == []
+               ^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.research.pipeline_artifacts' has no attribute 'r6_coverage'
+
+tests/pipeline/test_r6_local_revision.py:101: AttributeError
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_r6_local_revision.py::test_explicit_local_branch_precedes_full_batch
+FAILED tests/pipeline/test_r6_local_revision.py::test_cross_terminal_revision_supported_without_restarting
+FAILED tests/pipeline/test_r6_local_revision.py::test_global_boolean_does_not_prove_per_stock_review
+3 failed in 0.09s

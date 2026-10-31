@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-10-26 架构审阅图与决策路径</title><meta charset="utf-8"/><link rel="preload" href="../index-5a23ce28.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-10-26 架构审阅图与决策路径"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-10-26 架构审阅图与决策路径"/><meta name="twitter:description" content="架构审阅图与决策路径 · 2026-10-26 本机工作树与任务库核对，2026-10-26 CST。配套系统全景与完整任务表、重构进度与验收边界。保留旧图，不修改身份、技能、调度、风控或交易许可。 证据图例：实线＝源码明确调用/读取/交接或当前已登记的任务义务，绝不等同本次业务成功；虚线＝模型应履行但实际消费未独立证明，或尚未接通/待授权的关系。需要区别时在边上直接写明。本文不是从画图反推系统已经实现。 1."/><meta property="og:description" content="架构审阅图与决策路径 · 2026-10-26 本机工作树与任务库核对，2026-10-26 CST。配套系统全景与完整任务表、重构进度与验收边界。保留旧图，不修改身份、技能、调度、风控或交易许可。 证据图例：实线＝源码明确调用/读取/交接或当前已登记的任务义务，绝不等同本次业务成功；虚线＝模型应履行但实际消费未独立证明，或尚未接通/待授权的关系。需要区别时在边上直接写明。本文不是从画图反推系统已经实现。 1."/><meta property="og:image:alt" content="架构审阅图与决策路径 · 2026-10-26 本机工作树与任务库核对，2026-10-26 CST。配套系统全景与完整任务表、重构进度与验收边界。保留旧图，不修改身份、技能、调度、风控或交易许可。 证据图例：实线＝源码明确调用/读取/交接或当前已登记的任务义务，绝不等同本次业务成功；虚线＝模型应履行但实际消费未独立证明，或尚未接通/待授权的关系。需要区别时在边上直接写明。本文不是从画图反推系统已经实现。 1."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-26-架构审阅图与决策路径"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-26-架构审阅图与决策路径"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="架构审阅图与决策路径 · 2026-10-26 本机工作树与任务库核对，2026-10-26 CST。配套系统全景与完整任务表、重构进度与验收边界。保留旧图，不修改身份、技能、调度、风控或交易许可。 证据图例：实线＝源码明确调用/读取/交接或当前已登记的任务义务，绝不等同本次业务成功；虚线＝模型应履行但实际消费未独立证明，或尚未接通/待授权的关系。需要区别时在边上直接写明。本文不是从画图反推系统已经实现。 1."/><meta name="generator" content="Quartz"/><link href="../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/2026-10-26-架构审阅图与决策路径" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-990" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-990" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-10-26 架构审阅图与决策路径</a></div></nav><h1 class="article-title">2026-10-26 架构审阅图与决策路径</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-26T10:00:22.000Z">2026年10月26日</time><span>19分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="架构审阅图与决策路径--2026-10-26">架构审阅图与决策路径 · 2026-10-26<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#架构审阅图与决策路径--2026-10-26" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>本机工作树与任务库核对，2026-10-26 CST。配套<a href="../系统进化/2026-10-26-系统架构全景与定时任务数据流" class="internal internal-link alias" data-slug="系统进化/2026-10-26-系统架构全景与定时任务数据流">系统全景与完整任务表</a>、<a href="../系统进化/2026-10-26-重构进度与验收边界" class="internal internal-link alias" data-slug="系统进化/2026-10-26-重构进度与验收边界">重构进度与验收边界</a>。保留旧图，不修改身份、技能、调度、风控或交易许可。</p>
+<p><strong>证据图例</strong>：实线＝源码明确调用/读取/交接或当前已登记的任务义务，绝不等同本次业务成功；虚线＝模型应履行但实际消费未独立证明，或尚未接通/待授权的关系。需要区别时在边上直接写明。本文不是从画图反推系统已经实现。</p>
+</blockquote>
+<h2 id="1-总图研究决策执行不是一个黑箱">1. 总图：研究、决策、执行不是一个黑箱<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-总图研究决策执行不是一个黑箱" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n    subgraph IN[来源与研究]\n        F[源快照 / manifest]\n        B[R1 风格 · R4 消息 · R7 资金&lt;br/>并行独立会话]\n        R3[R3 情绪热度]\n        R2[R2 主线与核心候选]\n        C[图表快照]\n        R5[R5 个股画像]\n        R6[R6 独立反证]\n        F --> B\n        B --> R3\n        R3 --> R2\n        R2 --> C --> R5 --> R6\n        B --> R6\n        R3 --> R6\n        R2 --> R6\n    end\n    subgraph DE[传递与决策]\n        S[汇总 / 本轮主输入版本清单]\n        V[主链每次尝试前预检]\n        D[D1 大模型取舍]\n        P[正式计划 JSON + 主 MD]\n        S --> V --> D --> P\n    end\n    B --> S\n    R3 --> S\n    R2 --> S\n    R5 --> S\n    R6 --> S\n    AUX[错题 / 股性 / 题材锚 / 宏观&lt;br/>预测 / 情绪 / 热度] -.七类辅助接线仍待签.-> D\n    P --> J[交付检查&lt;br/>JSON 与 MD 分账]\n    J --> RT[校验后单向 runtime 副本]\n    RT --> L[交易 loader&lt;br/>叠加账户约束]\n    L --> E[盘中扫描 / 最终权限检查]\n    E --> X[受限订单意图 / 执行分支]\n    P --> PR[独立 paper 单次驱动&lt;br/>需另有模拟授权与本地证据]\n    X --> RV[日复盘 / 可卖性追踪]\n    PR --> RV\n    RV --> EV[周度提案]\n    EV -.用户逐项签核后才改变规则.-> D&quot;">flowchart LR
+    subgraph IN[来源与研究]
+        F[源快照 / manifest]
+        B[R1 风格 · R4 消息 · R7 资金&lt;br/>并行独立会话]
+        R3[R3 情绪热度]
+        R2[R2 主线与核心候选]
+        C[图表快照]
+        R5[R5 个股画像]
+        R6[R6 独立反证]
+        F --> B
+        B --> R3
+        R3 --> R2
+        R2 --> C --> R5 --> R6
+        B --> R6
+        R3 --> R6
+        R2 --> R6
+    end
+    subgraph DE[传递与决策]
+        S[汇总 / 本轮主输入版本清单]
+        V[主链每次尝试前预检]
+        D[D1 大模型取舍]
+        P[正式计划 JSON + 主 MD]
+        S --> V --> D --> P
+    end
+    B --> S
+    R3 --> S
+    R2 --> S
+    R5 --> S
+    R6 --> S
+    AUX[错题 / 股性 / 题材锚 / 宏观&lt;br/>预测 / 情绪 / 热度] -.七类辅助接线仍待签.-> D
+    P --> J[交付检查&lt;br/>JSON 与 MD 分账]
+    J --> RT[校验后单向 runtime 副本]
+    RT --> L[交易 loader&lt;br/>叠加账户约束]
+    L --> E[盘中扫描 / 最终权限检查]
+    E --> X[受限订单意图 / 执行分支]
+    P --> PR[独立 paper 单次驱动&lt;br/>需另有模拟授权与本地证据]
+    X --> RV[日复盘 / 可卖性追踪]
+    PR --> RV
+    RV --> EV[周度提案]
+    EV -.用户逐项签核后才改变规则.-> D
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p>R1—R7 是七类业务单元，并不等于七个独立 profile 或七条定时任务。汇总是确定性文件与版本检查，<strong>不会替 D1 选票</strong>。本轮只证明接线；“Python 预检读过”不能冒充“大模型读过”。</p>
+<p>依据：<code>scripts/research/run_research_shell.sh:158-278</code>；<code>scripts/research/build_research_summary.py:294-369</code>。</p>
+<h2 id="2-一份主决策到底怎么形成">2. 一份主决策到底怎么形成<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-一份主决策到底怎么形成" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>以下按职责解释判断路径，<strong>不是声称每条思考义务都已经被代码强制或被真实模型履行</strong>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>顺序</th><th>要回答的问题</th><th>主要证据/职责</th><th>输出去向与边界</th></tr></thead><tbody><tr><td>① 市场背景</td><td>市场在奖励什么？广度、涨停溢价、梯队、炸板及风格如何？</td><td>R1、情绪/热度证据</td><td>决定风险温度与预算上限；不预设“某情绪节点必配某打法”</td></tr><tr><td>② 主线与候选</td><td>哪些方向有持续资金、叙事共振与辨识度核心？</td><td>R2 消费 R3/R4；R7 提供资金证据</td><td>形成主/次线和候选，不直接下单；概念池不等于纯度已核验</td></tr><tr><td>③ 个股证据</td><td>候选的基本面、价格位置、股性、资金和事件能否支持参与？</td><td>R5 对真实 R2 候选画像，图表只作其中证据</td><td>分清产业逻辑与短期资金逻辑；缺数据保留缺口</td></tr><tr><td>④ 独立反证</td><td>哪些假设被反证？哪些是不可覆盖的硬否决？</td><td>R6 只读 R1—R5/R7</td><td>大模型主决策须承接明确 hard_reject；建议项可解释取舍</td></tr><tr><td>⑤ 独立取舍</td><td>谁只观察、谁可进入计划执行池、何时不能交易？</td><td>D1 综合获准主研究输入</td><td>执行池、观察池、拒绝原因、反向剧本及仓位；合法空执行池也正确</td></tr><tr><td>⑥ 行为条件</td><td>符合/超/不及竞价预期怎么办？买卖触发及失效条件是什么？</td><td>D1 计划规则；P1/P2 后续对照</td><td>计划文本不是成交指令；未知执行谓词不能自动变成可执行条件</td></tr><tr><td>⑦ 权限兑现</td><td>这个账户、这只票、这个报价和时点真的允许提交吗？</td><td>loader、扫描、执行器、最终下单复核</td><td>账户只能收紧，不能给计划补权限或把零预算改正数</td></tr></tbody></table></div>
+<p><strong>术语保留用户定义</strong>：低吸是预判当日能涨停、相对涨停价仍低的强势参与，不等于大跌抄底；半路是平开后放量突破压力位跟随。本文不增设策略或参数。当前规则备用算法仍有按风格字符串选通道的固定映射，这只是该分支的实现，不能当作大模型主决策或用户方法论的完整实现。</p>
+<p>主决策技能职责：<code>skills/main_decision_v1/SKILL.md:208-311,339-481,1191-1240</code>；规则备用分支：<code>src/plan/d1_algorithm.py:254-353,731-990</code>。</p>
+<h2 id="3-三种通过必须拆开">3. 三种“通过”必须拆开<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-三种通过必须拆开" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[产物存在] --> B{本次交付可验吗？&lt;br/>日期 / 来源 / JSON / MD / run / attempt / 版本}\n    B -- 否 --> STOP[标交付缺失或拒绝&lt;br/>不能用旧文件冒充]\n    B -- 是 --> C{研究是否就绪？&lt;br/>缺研究 / 降级 / 需重评分别记录}\n    C -- 明确未就绪 --> SAFE[只许安全临时版&lt;br/>dry_run / 禁自主 / 需确认]\n    C -- 有就绪证据 --> D{计划与账户都授权吗？}\n    SAFE --> OBS[保留真实观察与待补证&lt;br/>不自动获得新买许可]\n    D -- 否 --> OBS\n    D -- 是 --> E{逐票预算 / 合规 / 真实报价&lt;br/>同日扫描 / 买点条件 / 最终复核}\n    E -- 不满足 --> OBS\n    E -- 满足 --> I[进入对应执行分支&lt;br/>意图 / 订单 / 成交仍分账]&quot;">flowchart TD
+    A[产物存在] --> B{本次交付可验吗？&lt;br/>日期 / 来源 / JSON / MD / run / attempt / 版本}
+    B -- 否 --> STOP[标交付缺失或拒绝&lt;br/>不能用旧文件冒充]
+    B -- 是 --> C{研究是否就绪？&lt;br/>缺研究 / 降级 / 需重评分别记录}
+    C -- 明确未就绪 --> SAFE[只许安全临时版&lt;br/>dry_run / 禁自主 / 需确认]
+    C -- 有就绪证据 --> D{计划与账户都授权吗？}
+    SAFE --> OBS[保留真实观察与待补证&lt;br/>不自动获得新买许可]
+    D -- 否 --> OBS
+    D -- 是 --> E{逐票预算 / 合规 / 真实报价&lt;br/>同日扫描 / 买点条件 / 最终复核}
+    E -- 不满足 --> OBS
+    E -- 满足 --> I[进入对应执行分支&lt;br/>意图 / 订单 / 成交仍分账]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<ul>
+<li><strong>交付</strong>：机器 JSON、人读 MD 与本次版本可核验；不能证明研究判断正确。</li>
+<li><strong>研究就绪</strong>：显式未就绪必须保留安全限制；旧格式缺少就绪标记仍有兼容行为，不能写成“缺字段就已经证明就绪”。独立 paper 对买入要求更强的正向就绪证据。</li>
+<li><strong>交易许可</strong>：计划与账户双授权、逐票开关及最终边界共同决定；<code>--mode live</code>、入池、资格 PASS、观察 promote 都不能单独授权。</li>
+<li><strong>退出分支单独处理</strong>：买入预算为零/禁止新买不应抹掉合法存量退出；不把一个笼统“停机”框当成所有买卖行为完全相同。</li>
+</ul>
+<p>依据：<code>scripts/research/pipeline_artifacts.py:198-234</code>；<code>trading/load_plan.py:83-133,186-213</code>；<code>trading/execution_authorization.py:51-105</code>；<code>scripts/execute/run_paper_plan_once.py:81-106</code>。</p>
+<h2 id="4-主路径安全网规则降级不要画成同一种决策">4. 主路径、安全网、规则降级：不要画成同一种决策<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-主路径安全网规则降级不要画成同一种决策" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    MAIN[06:10 全量研究与主决策] --> CHECK[主输入版本预检]\n    CHECK --> LLM[D1 大模型生成]\n    NET[08:50 安全网] --> EXIST{已有合法完整 LLM 交付？}\n    EXIST -- 是且无重评要求 --> KEEP[保留；不重跑研究]\n    EXIST -- 安全临时版需重评 --> NEW{重评输入是否更新且可用？}\n    NEW -- 否 --> BLOCK[保持限制并报告阻塞]\n    NEW -- 是 --> RETRY[独立重试 D1]\n    EXIST -- 否 --> UP{上游就绪检查}\n    UP -- 不满足 --> BLOCK\n    UP -- 满足 --> RETRY\n    RETRY --> OK{形成有效新 LLM 交付？}\n    OK -- 是 --> PUB[检查 JSON / MD 并单向交接]\n    OK -- 否 --> F{是否有必须保护的合法 LLM 决策？}\n    F -- 有 --> BLOCK\n    F -- 无且满足降级条件 --> RULE[显式 python_fallback&lt;br/>不冒称大模型成功]\n    LLM --> PUB&quot;">flowchart TD
+    MAIN[06:10 全量研究与主决策] --> CHECK[主输入版本预检]
+    CHECK --> LLM[D1 大模型生成]
+    NET[08:50 安全网] --> EXIST{已有合法完整 LLM 交付？}
+    EXIST -- 是且无重评要求 --> KEEP[保留；不重跑研究]
+    EXIST -- 安全临时版需重评 --> NEW{重评输入是否更新且可用？}
+    NEW -- 否 --> BLOCK[保持限制并报告阻塞]
+    NEW -- 是 --> RETRY[独立重试 D1]
+    EXIST -- 否 --> UP{上游就绪检查}
+    UP -- 不满足 --> BLOCK
+    UP -- 满足 --> RETRY
+    RETRY --> OK{形成有效新 LLM 交付？}
+    OK -- 是 --> PUB[检查 JSON / MD 并单向交接]
+    OK -- 否 --> F{是否有必须保护的合法 LLM 决策？}
+    F -- 有 --> BLOCK
+    F -- 无且满足降级条件 --> RULE[显式 python_fallback&lt;br/>不冒称大模型成功]
+    LLM --> PUB
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>已见差异</strong>：主链每次 D1 前执行 <code>--verify-inputs</code>；安全网重试没有调用同一完整版本预检，普通初次检查重点是 R5/R6。安全临时版的重评有更严格时间/path/run 检查，但仍不能画成两入口完全同强度。</p>
+<p><strong>已见规则差异</strong>：规则分支对 R6 否决来源的汇合不如 summary 完整；缺参考价有旧 fallback；顶层决策来源和嵌套标签有不一致风险。不能说规则版与 LLM 等价，也不能用规则兜底掩盖主链失败。</p>
+<p>依据：<code>scripts/plan/ensure_watchlist_plan.py:116-176,241-301,324-381</code>；<code>src/plan/main_decision.py:258-350,393-401</code>；<code>src/plan/d1_algorithm.py:102-146,579-595</code>。</p>
+<h2 id="5-竞价与午盘修订建议有产物义务但交易应用仍有缺口">5. 竞价与午盘：修订建议有产物义务，但交易应用仍有缺口<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-竞价与午盘修订建议有产物义务但交易应用仍有缺口" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n    P[正式盘前预案] --> AU[09:27 竞价快照&lt;br/>执行池 + 观察池 + 情绪篮子]\n    AU --> A[09:28 P1&lt;br/>池内 skip / defer / promote]\n    P --> A\n    A --> AM[auction_amendment.json]\n    AM --> READ[人读竞价判断 / 日复盘输入]\n    P --> MD[11:35 午盘快照&lt;br/>须区分 live 与 stub]\n    R7[R7 午盘增量&lt;br/>独立调度未在当前清单中见到] -.上下文要求.-> MD\n    MD --> M[11:40 P2&lt;br/>收紧退出 / 提示 / 观察晋级]\n    M --> MM[midday_amendment.json + 简报]\n    MM --> READ\n    AM -.交易应用器未见；不能当已应用.-> EXEC[执行 loader / watcher]\n    MM -.交易应用器未见；不能当已应用.-> EXEC&quot;">flowchart LR
+    P[正式盘前预案] --> AU[09:27 竞价快照&lt;br/>执行池 + 观察池 + 情绪篮子]
+    AU --> A[09:28 P1&lt;br/>池内 skip / defer / promote]
+    P --> A
+    A --> AM[auction_amendment.json]
+    AM --> READ[人读竞价判断 / 日复盘输入]
+    P --> MD[11:35 午盘快照&lt;br/>须区分 live 与 stub]
+    R7[R7 午盘增量&lt;br/>独立调度未在当前清单中见到] -.上下文要求.-> MD
+    MD --> M[11:40 P2&lt;br/>收紧退出 / 提示 / 观察晋级]
+    M --> MM[midday_amendment.json + 简报]
+    MM --> READ
+    AM -.交易应用器未见；不能当已应用.-> EXEC[执行 loader / watcher]
+    MM -.交易应用器未见；不能当已应用.-> EXEC
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>核对项</th><th>实际接线/限制</th><th>文档不能怎么写</th></tr></thead><tbody><tr><td>P1 时窗</td><td>当前任务 09:27/09:28；技能要求 09:29 前；默认只观察</td><td>不能写成旧 09:23/09:25，也不能保证实际每次准时</td></tr><tr><td>P1 采集回退</td><td>主源批次有有效价则保留该批；整批无有效价才切回退，非逐票自动补齐</td><td>不宣称每只票都经双源补全</td></tr><tr><td>P1 人读版</td><td>渲染正式计划、快照与修订；并非完整版本/时窗执行核验器</td><td>人读“超预期”不自动产生买权</td></tr><tr><td>午盘 live</td><td>CLI 默认 stub，需 <code>--live</code> 或对应显式开关；本轮没跑</td><td>不凭定时任务叫“快照”就认定真实 live</td></tr><tr><td>午盘广度/资金</td><td>live 基础模块主要按计划池 sector stats 聚合，另有三通道分时及分块健康</td><td>不冒充全 A 股真实涨跌家数/完整主力净流</td></tr><tr><td>R7 更新</td><td>增量实现会原地写回早盘 R7 canonical；当前清单无独立 R7 午盘更新任务</td><td>不能把同一路径画成全天不变；旧摘要复验可能拒绝新版本</td></tr><tr><td>P1/P2 自动应用</td><td>本次检索并读 loader/watch/executor/paper 入口，未找到修订合并读取路径</td><td>不画 09:29/13:00 自动 reload 已实现实线</td></tr></tbody></table></div>
+<p>证据：<code>scripts/fetch/run_auction_snapshot.py:145-170,448-525</code>；<code>scripts/plan/render_auction_judgment.py:57-172,236-258</code>；<code>scripts/fetch/run_midday_snapshot.py:22-36</code>；<code>src/fetch/midday_snapshot.py:229-259,302-414</code>；<code>src/research/r7_capital_flow.py:375-400</code>。旧午盘技能仍有 runtime→plans 补拷建议，与现行单向交接冲突；本次只登记，未执行。</p>
+<h2 id="6-执行路径文本条件不能自动变成市场判断">6. 执行路径：文本条件不能自动变成市场判断<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-执行路径文本条件不能自动变成市场判断" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>实际机器链：</p>
+<p><strong>正式计划 → 日期/schema/权限校验 → 单向 staging → 账户约束交集 → loaded → 同日扫描 → 会话证据 → 分派 → 最终下单复核。</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>层</th><th>已实现的边界</th><th>仍须明示的限制</th></tr></thead><tbody><tr><td>计划加载</td><td>正式源优先；不拿旧 runtime 绕过坏正式源；原子替换</td><td>runtime-only 历史兼容仍存在，不能统一称所有消费者 canonical-only</td></tr><tr><td>预算与模式</td><td>缺失计划预算不由账户补值；零值保持禁买；双边同意才可 live</td><td><code>risk_limits</code> 只接收明确字段，未知键拒绝；不能删保护字段来“跑通”</td></tr><tr><td>买入资格</td><td>实际拟提交价的盈亏比、来源/冲突/待复核检查</td><td>PASS 是资格，不是独立许可</td></tr><tr><td>扫描与会话</td><td>缺/异日/其他票扫描不能复用；新扫描先清旧成功缓存</td><td>有规则类型不表示所有附加谓词都支持；未知条件及非零溢价约束可能 fail-closed</td></tr><tr><td>订单最终边界</td><td>再核 kill、权限、日期、池、规则、预算、报价和数量</td><td>不替代策略本身缺失的市场触发判断</td></tr><tr><td>卖出</td><td>与买预算/买扫描分开；须合法可卖量与报价</td><td>某些板块切换/量价背离条件实现仍不完整；另有低层精确触发/数量原反例未关闭</td></tr></tbody></table></div>
+<p>依据：<code>trading/entry_selector.py:75-209</code>；<code>trading/watcher/session_context.py:21-87</code>；<code>trading/watcher/dispatch.py:76-149</code>；<code>trading/order/qmt_context.py:139-181,234-308</code>；<code>trading/executors/base.py:58-151</code>。</p>
+<p><strong>两种模拟不要混：</strong></p>
+<ol>
+<li>当前 watcher cron 固定启动 <code>--mode dry_run</code>，受理/订单意图日志不能当成交。dry_run 也不天然保证所有路径离线，不应为写文档而调用它。</li>
+<li><code>scripts/execute/run_paper_plan_once.py</code> 是独立账本单次 driver，需显式模拟授权、本地行情/日历、来源与就绪证明；与真实账户分账，也没有在本次任务清单中证明已自动调度。其结果区分 intents/orders/fills，不能拿第一种日志充第二种成交回执。</li>
+</ol>
+<h2 id="7-审阅红点本轮只记录不借文档改行为">7. 审阅红点：本轮只记录，不借文档改行为<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-审阅红点本轮只记录不借文档改行为" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>优先级</th><th>红点</th><th>收口要求，不是本次已完成</th></tr></thead><tbody><tr><td>P0</td><td>两个低层卖出触发/数量残余，以及跨进程提交/券商对账未认证</td><td>保留原失败断言、关闭真实绕过；合法退出不受误阻；未经许可不碰真实账户</td></tr><tr><td>P1</td><td>主链与安全网输入校验不同</td><td>获准后统一版本/来源判定，覆盖旧文件/错 run/改稿拒绝场景</td></tr><tr><td>P1</td><td>七类辅助输入仍待签；模型实际读取未证</td><td>按窄来源政策另行授权；实际工具成功事件与采用/拒绝理由分别留证</td></tr><tr><td>P1</td><td>P1/P2 自动应用未见</td><td>先决定是否授权自动应用；实现需绑定原计划版本/时窗/预算与复核，不因报告有 promote 就升权</td></tr><tr><td>P1</td><td>午盘取样口径、R7 增量生产/版本覆盖</td><td>确认实际 producer、live 参数、来源日期和早午版本，保留真实降级</td></tr><tr><td>P1</td><td>周五进化 17:00 早于日复盘 18:00</td><td>报缺本周末日输入；调度变更另签，不在本轮挪时刻</td></tr><tr><td>P2</td><td>周末 manifest 与重跑 manifest_intel 的固定读取可能错位</td><td>对同日首次/重跑分别验消费者，不用旧 manifest 充新输入</td></tr><tr><td>P2</td><td>股性月内重复能力及任务名/注释落后</td><td>列精确消费者和差异再决定，不能由“重复”自动推出可删除</td></tr></tbody></table></div>
+<h2 id="8-实际证据链应当留哪四张收据">8. 实际证据链应当留哪四张收据<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#8-实际证据链应当留哪四张收据" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong>交付收据</strong>：谁在何业务日、何次运行/尝试交了哪个 JSON 和 MD，内容版本是什么。</li>
+<li><strong>传递收据</strong>：汇总及主决策获准读取清单指向哪些精确版本。</li>
+<li><strong>读取收据</strong>：真实模型成功读取这些版本的工具事件；不是仅有 skill 必读要求、Python 预检或文件路径。</li>
+<li><strong>裁决收据</strong>：采用/拒绝/延后/未读的理由及对应计划字段。自报采纳不是理解正确，理解也不是成交。</li>
+</ol>
+<p>当前主输入前两层已有实现；后两层及辅助接线不能冒认闭环。历史工程回归与本次静态核对均不等于自然调度稳定、交易放行或账户盈利证明。</p>
+<h2 id="9-阅读与历史对照">9. 阅读与历史对照<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#9-阅读与历史对照" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>旧 <a href="../系统进化/09-架构审阅图-t1prime" class="internal internal-link alias" data-slug="系统进化/09-架构审阅图-t1prime">09-架构审阅图-T1prime.md</a> 保留当年设计和待签上下文；本图解释现存实现，不让旧稿的“全用 Agent / 不新增 Python / 周度自动改偏好”等历史表述覆盖当前已批准的分工与签核边界。</p>
+<p>完整来源摘要、任务与输入输出证据见<a href="../系统进化/backups/2026-10-26-architecture-doc-evidence.json" class="internal internal-link alias" data-slug="系统进化/backups/2026-10-26-architecture-doc-evidence.json">本次证据快照</a>。本轮没有运行图中任何业务流程。</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-959" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#架构审阅图与决策路径--2026-10-26" data-for="架构审阅图与决策路径--2026-10-26">架构审阅图与决策路径 · 2026-10-26</a></li><li class="depth-1"><a href="#1-总图研究决策执行不是一个黑箱" data-for="1-总图研究决策执行不是一个黑箱">1. 总图：研究、决策、执行不是一个黑箱</a></li><li class="depth-1"><a href="#2-一份主决策到底怎么形成" data-for="2-一份主决策到底怎么形成">2. 一份主决策到底怎么形成</a></li><li class="depth-1"><a href="#3-三种通过必须拆开" data-for="3-三种通过必须拆开">3. 三种“通过”必须拆开</a></li><li class="depth-1"><a href="#4-主路径安全网规则降级不要画成同一种决策" data-for="4-主路径安全网规则降级不要画成同一种决策">4. 主路径、安全网、规则降级：不要画成同一种决策</a></li><li class="depth-1"><a href="#5-竞价与午盘修订建议有产物义务但交易应用仍有缺口" data-for="5-竞价与午盘修订建议有产物义务但交易应用仍有缺口">5. 竞价与午盘：修订建议有产物义务，但交易应用仍有缺口</a></li><li class="depth-1"><a href="#6-执行路径文本条件不能自动变成市场判断" data-for="6-执行路径文本条件不能自动变成市场判断">6. 执行路径：文本条件不能自动变成市场判断</a></li><li class="depth-1"><a href="#7-审阅红点本轮只记录不借文档改行为" data-for="7-审阅红点本轮只记录不借文档改行为">7. 审阅红点：本轮只记录，不借文档改行为</a></li><li class="depth-1"><a href="#8-实际证据链应当留哪四张收据" data-for="8-实际证据链应当留哪四张收据">8. 实际证据链应当留哪四张收据</a></li><li class="depth-1"><a href="#9-阅读与历史对照" data-for="9-阅读与历史对照">9. 阅读与历史对照</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../readme" class="internal">README</a></li><li><a href="../系统进化/2026-10-26-系统架构全景与定时任务数据流" class="internal">2026-10-26 系统架构全景与定时任务数据流</a></li><li><a href="../系统进化/2026-10-26-重构进度与验收边界" class="internal">2026-10-26 重构进度与验收边界</a></li><li><a href="../系统进化/readme" class="internal">README</a></li><li><a href="../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

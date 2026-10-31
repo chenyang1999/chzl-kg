@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>20261020</title><meta charset="utf-8"/><link rel="preload" href="../../index-5a23ce28.css" as="style"/><link rel="preload" href="../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="20261020"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="20261020"/><meta name="twitter:description" content="2026-10-20 公司事件追踪报告 数据口径（快照口径，非当日全量）：窗口 = 20261020 单日（ann_date=20261020），19:00 拉取。anns_d 快照 1102 条 / 525 只（常态量约 1200+）。实测当日全量比 19:00 可见的多 14-15%，19:00 后披露/入库的增量由明日 06:00 盘前公告窗口补齐（src/fetch/anns_window.py → anns_window.jsonl + 20261021_premarket.md），本报告不宣称已全量覆盖，只做已判定信号。 今日主线：修复日第 2 天（广度转正 + 跌停收敛，但分歧仍..."/><meta property="og:description" content="2026-10-20 公司事件追踪报告 数据口径（快照口径，非当日全量）：窗口 = 20261020 单日（ann_date=20261020），19:00 拉取。anns_d 快照 1102 条 / 525 只（常态量约 1200+）。实测当日全量比 19:00 可见的多 14-15%，19:00 后披露/入库的增量由明日 06:00 盘前公告窗口补齐（src/fetch/anns_window.py → anns_window.jsonl + 20261021_premarket.md），本报告不宣称已全量覆盖，只做已判定信号。 今日主线：修复日第 2 天（广度转正 + 跌停收敛，但分歧仍..."/><meta property="og:image:alt" content="2026-10-20 公司事件追踪报告 数据口径（快照口径，非当日全量）：窗口 = 20261020 单日（ann_date=20261020），19:00 拉取。anns_d 快照 1102 条 / 525 只（常态量约 1200+）。实测当日全量比 19:00 可见的多 14-15%，19:00 后披露/入库的增量由明日 06:00 盘前公告窗口补齐（src/fetch/anns_window.py → anns_window.jsonl + 20261021_premarket.md），本报告不宣称已全量覆盖，只做已判定信号。 今日主线：修复日第 2 天（广度转正 + 跌停收敛，但分歧仍..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/投研交易/事件追踪/20261020"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/投研交易/事件追踪/20261020"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="2026-10-20 公司事件追踪报告 数据口径（快照口径，非当日全量）：窗口 = 20261020 单日（ann_date=20261020），19:00 拉取。anns_d 快照 1102 条 / 525 只（常态量约 1200+）。实测当日全量比 19:00 可见的多 14-15%，19:00 后披露/入库的增量由明日 06:00 盘前公告窗口补齐（src/fetch/anns_window.py → anns_window.jsonl + 20261021_premarket.md），本报告不宣称已全量覆盖，只做已判定信号。 今日主线：修复日第 2 天（广度转正 + 跌停收敛，但分歧仍..."/><meta name="generator" content="Quartz"/><link href="../../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="投研交易/事件追踪/20261020" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-197" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-197" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../投研交易/">投研交易</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../投研交易/事件追踪/">事件追踪</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>20261020</a></div></nav><h1 class="article-title">20261020</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-19T16:00:00.000Z">2026年10月20日</time><span>32分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="2026-10-20-公司事件追踪报告">2026-10-20 公司事件追踪报告<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-10-20-公司事件追踪报告" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><strong>数据口径（快照口径，非当日全量）</strong>：窗口 = 20261020 单日（ann_date=20261020），19:00 拉取。anns_d 快照 <strong>1102 条 / 525 只</strong>（常态量约 1200+）。实测当日全量比 19:00 可见的多 14-15%，19:00 后披露/入库的增量由明日 06:00 盘前公告窗口补齐（<code>src/fetch/anns_window.py</code> → <code>anns_window.jsonl</code> + <code>20261021_premarket.md</code>），本报告<strong>不宣称已全量覆盖</strong>，只做已判定信号。</p>
+<p>今日主线：<strong>修复日第 2 天（广度转正 + 跌停收敛，但分歧仍在）+ 三季报披露季爆发 + 高位派发集中验证</strong>。上证 3735.37（+0.12%）、深成指 11801.29（-0.14%）、创业板 2739.20（-0.26%）、科创50 1342.42（<strong>+1.00%</strong>）；涨 3778 / 跌 1668（昨 2275/3129 广度反转）、成交 <strong>14715 亿</strong>（较 1019 的 14488 亿 +227 亿温和放量）；涨停 <strong>54</strong>（昨 46）、跌停 <strong>6</strong>（昨 22 大幅收敛）、炸板 29（炸板率 34.9% 仍在分歧线≥25% 上方）；天梯最高 <strong>4 板 1 只</strong>（吉大正元，开板 4 次=弱 4 板）+ 3 板 5 只 + 2 板 8 只。赚钱效应修复但高度不足。</p>
+<p>公司事件面三件事最重：<strong>① 三季报批量披露点燃业绩线</strong>（低位/超预期涨停潮 vs 高位/不及预期大跌潮，极端分化）；<strong>② 并购重组线再爆硬事件</strong>（三峡新材重组预案复牌一字涨停 + 华天科技标的过户完成 + 博盈特焊新停牌）；<strong>③ 高位派发日</strong>（R3 霸榜出货预警全验证：新华传媒 11 板后 -2.50%、新华文轩 -9.24%、读者传媒跌停、东方嘉盛 -6.67% 断板、莱美药业 -15.49%）。</p>
+</blockquote>
+<h2 id="一事件分类总览当日全市场关键词分类粗放口径">一、事件分类总览（当日全市场，关键词分类粗放口径）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一事件分类总览当日全市场关键词分类粗放口径" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>类别</th><th>条数</th><th>关键标的</th></tr></thead><tbody><tr><td>定增/再融资/可转债</td><td>139</td><td><strong>德马科技(可转债预案+17.00%)、杭州高新(定增注册批复)、中材科技(定增上市)、中鼎股份(可转债发行)、龙芯中科(定增修订)、万朗磁塑(定增预案)</strong></td></tr><tr><td>业绩/财报(含三季报)</td><td>103</td><td><strong>迪安诊断(20cm涨停)、移远通信/昂立教育/富春环保/骏亚科技(三季报涨停)、银河微电(+16.22%)、善水科技(-18.94%)、三维化学(-8.95%)、洛阳钼业(-7.00%)、科大讯飞/海光信息(三季报)</strong></td></tr><tr><td>股权激励/员工持股</td><td>70</td><td>例行归属/授予（乐鑫科技 +16.86%、华大智造 +8.50% 同日激励公告）</td></tr><tr><td>回购</td><td>68(+36 API)</td><td><strong>长龄液压(提议涨停)、晶华新材(完成涨停)、中控技术(5亿/1%)、新华百货(2.18亿/6%)、鹏鼎控股/裕同科技/生益电子/金海通(预案)</strong></td></tr><tr><td>停复牌/核查</td><td>37</td><td><strong>三峡新材(复牌+预案一字)、海天股份(终止复牌-4.03%)、绝味食品(摘帽复牌-0.83%)、四通股份(复牌-5.87%)、博盈特焊(新停牌)</strong></td></tr><tr><td>增减持/权益变动</td><td>31(+81 API)</td><td><strong>永安行(减持11.65%)、海默科技(减持5.46%)、供销大集(减持1.17%)、峰岹科技(减持3.69%)、*ST威领(增持+8.72%)、金域医学(减持日+7.98%)</strong></td></tr><tr><td>异动/风险提示</td><td>16</td><td>3板5只(海洋王/长春一东/东安动力/京城股份/大业股份)异动确认、文灿股份(-6%)、<strong>慈文传媒(持仓,异动)</strong></td></tr><tr><td>并购/重组/控制权</td><td>16</td><td><strong>三峡新材(预案)、华天科技(过户完成)、博盈特焊(新停牌)、海天股份(终止)、东方证券(问询回复)、兆日科技(控制权进展)</strong></td></tr><tr><td>ST/退市/摘帽</td><td>8</td><td><strong>*ST卓然(-15.46% 第五次双退提示)、元道退(整理期第三次提示)、绝味食品(摘帽复牌)、*ST威领(+8.72% 增持博弈)</strong></td></tr><tr><td>监管/问询/处罚</td><td>5</td><td><strong>清新环境(董事被纪律审查)、ST新华锦(整改报告)</strong>、北交所问询回复×3</td></tr></tbody></table></div>
+<blockquote>
+<p>注：本次分类为关键词首命中粗放口径（“回购”类含大量激励注销配套公告、“停复牌/核查”类含保荐核查意见），精确条数以原始明细为准；高优先级事件全部人工复核。</p>
+</blockquote>
+<h2 id="二高优先级事件信号强度--事件标的映射">二、高优先级事件（信号强度 + 事件→标的映射）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二高优先级事件信号强度--事件标的映射" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="a-st退市高危延续--摘帽复牌兑现弱">A. ST/退市（高危延续 + 摘帽复牌兑现弱）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a-st退市高危延续--摘帽复牌兑现弱" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>标的</th><th>事件</th><th>当日表现</th><th>信号强度</th><th>判定</th></tr></thead><tbody><tr><td><strong>*ST卓然 688121</strong></td><td><strong>市值&lt;3亿终止上市第五次风险提示 + 重大违法强制退市风险提示</strong></td><td><strong>-15.46%</strong> 收 0.82 元</td><td>极高(双退倒计时)</td><td>面值+市值双退线全压，全场最高危，坚决规避</td></tr><tr><td><strong>元道退 301139</strong></td><td>退市整理期交易第三次风险提示</td><td>-1.27% 收 0.78 元</td><td>极高(整理期)</td><td>整理期续跌，面值以下，规避</td></tr><tr><td><strong>绝味食品 603517</strong></td><td><strong>撤销其他风险警示（摘帽）复牌</strong>（撤销公告 10-19，今日复牌）</td><td>-0.83% 收 10.78（盘中 hi 11.34 冲高回落）</td><td>中(摘帽落地)</td><td>摘帽复牌兑现弱——修复日摘帽也不给溢价，按出货窗口定价</td></tr><tr><td>*ST萃华 002731 / *ST康佳A 000016 / *ST岭南 002717 / *ST清越 688496</td><td>停牌延续（退市/处罚通道）</td><td>停牌</td><td>极高</td><td>延续</td></tr><tr><td><strong>*ST威领 002667</strong></td><td><strong>5% 以上股东（西藏山南锑金资源）增持 250 万股/1.06% 触及 1% 暨后续增持计划</strong></td><td><strong>+8.72%</strong> 收 25.18</td><td>中(*ST博弈)</td><td>锑矿资源 +*ST 增持计划=摘帽/重整预期博弈，高风偏样本，不参与（*ST 一律规避）</td></tr><tr><td>金田股份/洪城环境/中国东航/国信证券</td><td>转债/债券到期兑付摘牌（例行）</td><td>微跌</td><td>弱</td><td>治理级噪音</td></tr></tbody></table></div>
+<blockquote>
+<p><strong>规律</strong>：退市硬落地延续（*ST卓然/元道退双高危），摘帽复牌（绝味）兑现弱——修复期市场不奖励摘帽博弈，除非有重组/增持资金（*ST威领是唯一异类）。</p>
+</blockquote>
+<h3 id="b-并购重组控制权预案涨停--过户落地--终止利空三型齐现">B. 并购/重组/控制权（预案涨停 + 过户落地 + 终止利空三型齐现）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b-并购重组控制权预案涨停--过户落地--终止利空三型齐现" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>标的</th><th>事件</th><th>当日表现</th><th>信号强度</th><th>判定</th></tr></thead><tbody><tr><td><strong>三峡新材 600293</strong></td><td><strong>发行股份+现金购资产重组预案披露 + 复牌</strong>（预案 15 份公告）</td><td><strong>+9.92% 一字涨停</strong> 收 4.32（fd 5.3 亿封单）</td><td><strong>强(预案+复牌硬落地)</strong></td><td>今日最强事件股。重组预案复牌一字=硬事件直接定价；连板性看明日（低价 4.32、流通盘待核）</td></tr><tr><td><strong>华天科技 002185</strong></td><td><strong>发行股份+现金购资产 标的资产过户完成</strong></td><td>+3.31% 收 14.35</td><td>中-强(交割落地)</td><td>半导体封测并购交割完成=硬节点，事件接近兑现尾声</td></tr><tr><td><strong>博盈特焊 301468</strong></td><td><strong>筹划发行股份+现金购资产 → 停牌</strong>（新）</td><td>停牌</td><td>中(筹划期)</td><td>与三峡同波并购潮，停牌期无买点，10/22 前后披露截止观察</td></tr><tr><td><strong>海天股份 603759</strong></td><td><strong>终止筹划重大事项 → 复牌</strong></td><td><strong>-4.03%</strong> 收 7.15</td><td>中(终止利空)</td><td>终止=利空兑现（连续第 N 个”终止即跌”样本：金银河/通鼎/和达后又一例），复牌首日不接</td></tr><tr><td>东方证券 600958</td><td>发行股份+现金购资产问询函回复专项说明（券商并购）</td><td>-1.85%</td><td>弱(问询回复)</td><td>券商并购推进中，软事件</td></tr><tr><td>兆日科技 300333</td><td>控股股东股份转让补充协议暨控制权变更进展</td><td>-1.23%</td><td>弱(进展)</td><td>控制权变更推进，软事件</td></tr><tr><td>本钢板材 000761</td><td>重大资产置换进展</td><td>-2.62%</td><td>弱(进展)</td><td>软事件</td></tr><tr><td>彩虹股份 600707</td><td>收购子公司少数股权完成工商变更</td><td>+0.66%</td><td>弱(兑现)</td><td>完成=兑现</td></tr></tbody></table></div>
+<blockquote>
+<p><strong>规律</strong>：并购线今日”预案/落地/终止”三型齐现——预案（三峡）一字、落地（华天）小幅正、终止（海天）必跌。<strong>只做预案复牌和过户完成两类硬节点，终止/进展一律出货窗口定价</strong>。</p>
+</blockquote>
+<h3 id="c-三季报业绩线当日最强事件流极端分化">C. 三季报业绩线（当日最强事件流，极端分化）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c-三季报业绩线当日最强事件流极端分化" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>涨停/大涨兑现（低位 + 超预期 + 有题材共振）</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>标的</th><th>事件</th><th>当日表现</th><th>信号强度</th></tr></thead><tbody><tr><td><strong>迪安诊断 300244</strong></td><td>2026 年三季度报告</td><td><strong>+19.99% 涨停 20cm</strong>（开板 12 次、fd 4577 万=弱封；同日席位减持 165 万股记录）</td><td>强（业绩+弹性，但巨震板）</td></tr><tr><td><strong>移远通信 603236</strong></td><td>三季报 + 变更募投项目</td><td><strong>+10.00% 涨停</strong>（开板 3 次）</td><td>强</td></tr><tr><td><strong>昂立教育 600661</strong></td><td>三季报</td><td><strong>+10.00% 一字涨停</strong></td><td>中-强（一字）</td></tr><tr><td><strong>富春环保 002479</strong></td><td>三季报</td><td><strong>+10.07% 一字涨停</strong></td><td>中-强</td></tr><tr><td><strong>骏亚科技 603386</strong></td><td>三季报（PCB）</td><td><strong>+9.98% 涨停</strong></td><td>中-强</td></tr><tr><td>银河微电 688689</td><td>三季报 + 计提减值</td><td><strong>+16.22%</strong> 收 39.34</td><td>中（计提还大涨=业绩超预期）</td></tr><tr><td>立昂微 605358</td><td>前三季度扭亏预告（+261%）</td><td>+3.46%</td><td>中（扭亏+低位修复）</td></tr></tbody></table></div>
+<p><strong>大跌兑现（高位 / 不及预期 / 权重兑现）</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>标的</th><th>事件</th><th>当日表现</th><th>信号强度</th></tr></thead><tbody><tr><td><strong>善水科技 301190</strong></td><td>三季报 + 利润分配预案</td><td><strong>-18.94%</strong></td><td><strong>强(反例)</strong>：业绩暴雷型，利润分配也救不回</td></tr><tr><td>三维化学 002469</td><td>三季报</td><td>-8.95%</td><td>中(兑现)</td></tr><tr><td>润本股份 603193</td><td>三季报</td><td>-8.64%</td><td>中(兑现)</td></tr><tr><td><strong>洛阳钼业 603993</strong></td><td>三季报业绩说明会公告日</td><td><strong>-7.00%</strong> 收 14.35</td><td>中(权重兑现)：高位资源权重，说明会=利空定价窗口</td></tr><tr><td>物产环能 603071</td><td>三季报</td><td>-6.16%</td><td>弱-中</td></tr><tr><td>*ST联翔 603272</td><td>三季报</td><td>-5.44%</td><td>弱</td></tr></tbody></table></div>
+<p><strong>API forecast 仅 3 条（接口 20:00-21:00 更新，19:00 快照偏少，非空接口）</strong>：盛达资源 000603 预增 +104.57%~116.96%（-0.88% 高位兑现）、赛分科技 688758 预增 +70%~80%（+1.39%）、立昂微 605358 扭亏（+3.46%）。</p>
+<p><strong>关键反例 — 瑞芯微 603893：昨日预增跌停（-9.99%）→ 今日涨停反包（+10.00%，开板 5 次 14:46 封）</strong>。“高位预增=出货窗口”（华通线缆/瑞芯微 1016 两样本）不是铁律——<strong>资金态度决定</strong>：昨日跌停后若筹码不崩、竞价有承接，反包同样成立。业绩线的定价公式仍是：位置 + 超预期程度 + 板块共振，三者缺一即兑现跌。</p>
+<blockquote>
+<p><strong>规律（三季报季全面启动）</strong>：业绩线进入”披露即定价”阶段——低位+超预期+题材共振（迪安/移远/昂立/骏亚）涨停潮，高位/权重/不及预期（善水/洛阳钼业/三维化学）兑现跌。<strong>只做披露日有资金确认的低位业绩票，高位业绩一律视为卖点</strong>。</p>
+</blockquote>
+<h3 id="d-增减持信号81-条-api--31-条公告修复日减持利空被稀释">D. 增减持信号（81 条 API + 31 条公告，修复日减持利空被稀释）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#d-增减持信号81-条-api--31-条公告修复日减持利空被稀释" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>大额/关键减持（API，当日多为红盘=修复日稀释）</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>标的</th><th>减持方</th><th>规模</th><th>当日表现</th><th>判定</th></tr></thead><tbody><tr><td><strong>永安行 603776</strong></td><td>上海哈茂</td><td><strong>3272 万股 / 11.65%</strong>（API 最大单）</td><td>+1.87%</td><td>大额减持落地但当日红盘；今日公告仅”控股股东名称变更”，减持数据在 API 口径</td></tr><tr><td><strong>海默科技 300084</strong></td><td>宁波新越征程</td><td>2743 万股 / 5.46% + 协议转让过户完成</td><td>+1.83%</td><td>减持+协议转让组合，修复日稀释</td></tr><tr><td><strong>供销大集 000564</strong></td><td>新合作商贸</td><td>17611 万股 / 1.17% + 司法拍卖进展</td><td>0.00% 收 1.37</td><td>低价股减持+拍卖，弱空</td></tr><tr><td><strong>峰岹科技 688279</strong></td><td>上海华芯</td><td>345 万股 / 3.69% 触及 1% 暨结果</td><td>+5.61%</td><td>减持结果日大涨——筹码干净+题材（芯片）</td></tr><tr><td>丽尚国潮 600738</td><td>红楼集团</td><td>1607 万股 / 2.11% 触及 1%</td><td>0.00%</td><td>弱空</td></tr><tr><td><strong>金域医学 603882</strong></td><td>国创开元</td><td>463 万股 / 1.01% 触及 1%</td><td><strong>+7.98%</strong></td><td>减持日大涨（医疗诊断/三季报行情），减持被题材盖过</td></tr><tr><td>迪哲医药 688192</td><td>ZHANG XIAOLIN</td><td>413 万股 / 0.90% 触及 5%</td><td>-2.85%</td><td>触及 5% 刻度，中性偏空</td></tr><tr><td>万里股份 600847</td><td>满瑞佳德等</td><td>253 万股 / 1.65% 触及 1%</td><td>-1.23%</td><td>弱空</td></tr></tbody></table></div>
+<p><strong>增持（看多，修复日兑现分化）</strong>：*ST威领 002667（+8.72%，增持+锑资源博弈）、湖南海利 600731（控股股东 220 万股进展 +0.34%）、五洲交通 600368（控股股东首次 100 万股 +0.46%）、东宏股份 603856（控股股东进展 -0.17%）、森特股份 603098（董事高管 58.9 万股 +0.29%）、帝尔激光 300776（董秘增持完成 +2.72%）。</p>
+<p><strong>承诺不减持 / 减持终止 / 未减持（正向）</strong>：西安奕材 688783（5% 股东自愿承诺不减持 +2.63%）、飞荣达 300602（控股股东承诺 6 个月不减持 +3.05%）、海通发展 603162（承诺不减持 -0.78%）、<strong>黄山谷捷 301581（减持计划提前终止 +2.95%）</strong>、欣锐科技 300745（届满未减持 +1.95%）。</p>
+<p><strong>协议转让</strong>：明新旭腾 605068（5% 股东协议转让 +3.30%）。</p>
+<blockquote>
+<p><strong>规律</strong>：修复日减持利空普遍被稀释（大额减持票大多红盘），但这不是减持失效——<strong>退潮日这些票会补跌</strong>（10-16 和达减持 -11% 先例）。只把”减持结果+题材共振上涨”当弱信号，不追；增持计划（软）兑现弱，只有增持执行+题材共振（*ST威领）才给溢价。</p>
+</blockquote>
+<h3 id="e-回购预案批量--提议批量--完成兑现产业资本低位表态延续">E. 回购（预案批量 + 提议批量 + 完成兑现，产业资本低位表态延续）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#e-回购预案批量--提议批量--完成兑现产业资本低位表态延续" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>预案</strong>：鹏鼎控股 002938（<strong>5 亿</strong>，上限 80 元）、裕同科技 002831（<strong>4 亿</strong>，+4.38%）、生益电子 688183（2 亿）、金海通 603061（1.5 亿，上限 350 元）、信宇人 688573（3000 万，+6.59%）</li>
+<li><strong>董事长/实控人提议</strong>：<strong>长龄液压 605389（提议日 +10.00% 一字涨停 10:31 封）</strong>、凯格精机 301338（+4.40%）、金发科技 600143（+2.67%）、良信股份 002706（+3.38%）、日联科技 688531（+3.33%）、优迅股份 688807（+1.09%）、华海清科 688120（<strong>-4.81%</strong> 提议日大跌——高标提议也救不了位置）</li>
+<li><strong>实施（大额）</strong>：中控技术 688777（<strong>5.0 亿 / 达 1%</strong> +2.70%）、新华百货 600785（2.18 亿 / <strong>达 6%</strong> -0.55%）、公牛集团 603195（2.47 亿 -2.34%）、永和股份 605020（2.28 亿 +1.89%）、广深铁路 601333（9000 万 -0.32%）、盛和资源 600392（9866 万 +2.90%）、恒瑞医药 600276（6697 万）</li>
+<li><strong>完成</strong>：<strong>晶华新材 603683（6958 万，完成日 +9.99% 涨停！）</strong>、佰维存储 688525（2.5 亿 +0.73%）、天奈科技 688116（8246 万 +2.29%）、上海谊众 688091（4492 万 +1.91%）、众鑫股份 603091（4847 万 -1.10%）、上海机电 600835（+4.50%）</li>
+</ul>
+<blockquote>
+<p><strong>规律</strong>：提议/完成也有兑现涨停样本（长龄液压/晶华新材）——<strong>回购的兑现强度取决于位置和题材</strong>（低位+小盘+提议=弹性；高标+提议=华海清科式反跌）。产业资本批量表态延续（昨日半导体 5 家提议后今日又 7 家），是低位情绪的底仓信号，不是买点信号。</p>
+</blockquote>
+<h3 id="f-定增再融资可转债当日最大类-139-条兑现分化">F. 定增/再融资/可转债（当日最大类 139 条，兑现分化）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#f-定增再融资可转债当日最大类-139-条兑现分化" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>硬事件（批复/上市/发行）</strong>：<strong>德马科技 688360（可转债预案披露 → +17.00%，当日事件弹性最大）</strong>、杭州高新 300478（<strong>定增获证监会注册批复</strong> +2.23%）、中复神鹰 688295（定增获国资委批复 +0.48%）、中材科技 002080（定增上市公告书 -0.17%）、中鼎股份 000887（可转债发行公告 +1.76%）、申菱环境 301018（可转债发行提示）</li>
+<li><strong>软事件（预案/修订/问询回复）</strong>：龙芯中科 688047（定增预案二次修订 +0.43%）、万朗磁塑 603150（定增预案披露 -2.48%）、国发股份 600538（简易程序定增预案 +2.25%）、美利信 301307（问询回复更新 +2.56%）、瑞松科技 688090（问询回复 +1.66%）、富佳股份 603219（可转债预案二次修订 +0.56%）</li>
+<li><strong>失效/终止（利空）</strong>：蜂助手 301382（<strong>定增方案到期失效</strong> +3.59%——修复日失效也不跌）、天晟新材 300169（<strong>终止定增 + 终止激励</strong> +1.41%）</li>
+<li><strong>解禁</strong>：五洲新春 603667（定增限售股上市流通 <strong>+5.20%</strong>——解禁利空当日涨，修复日稀释）</li>
+</ul>
+<blockquote>
+<p><strong>规律</strong>：可转债预案（德马 +17%）与注册批复（杭州高新）是再融资线仅有的两个正向硬节点；预案/修订/问询回复按软事件打折，失效/终止在修复日也不跌（说明资金已price-in）。</p>
+</blockquote>
+<h3 id="g-停牌复牌11-只s5--r6">G. 停牌/复牌（11 只：S5 / R6）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#g-停牌复牌11-只s5--r6" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>代码</th><th>名称</th><th>状态</th><th>原因/表现</th></tr></thead><tbody><tr><td>600293.SH</td><td><strong>三峡新材</strong></td><td><strong>复牌</strong></td><td>重组预案 → <strong>一字涨停 +9.92%</strong>（fd 5.3 亿）</td></tr><tr><td>603517.SH</td><td><strong>绝味食品</strong></td><td><strong>复牌</strong></td><td>撤销 ST（摘帽）→ -0.83% 弱兑现</td></tr><tr><td>603759.SH</td><td><strong>海天股份</strong></td><td><strong>复牌</strong></td><td>终止筹划 → <strong>-4.03%</strong>（终止利空）</td></tr><tr><td>603838.SH</td><td>四通股份</td><td>复牌</td><td>-5.87%（原因待核，无今日公告）</td></tr><tr><td>301468.SZ</td><td><strong>博盈特焊</strong></td><td><strong>停牌(新)</strong></td><td>筹划发行股份+现金购资产</td></tr><tr><td>002388.SZ</td><td>新亚制程</td><td>停牌</td><td>并购延续</td></tr><tr><td>301314.SZ</td><td>科瑞思</td><td>停牌</td><td>并购延续</td></tr><tr><td>002731/000016/002717/688496</td><td>*ST萃华/*ST康佳A/*ST岭南/*ST清越</td><td>停牌</td><td>退市/处罚通道</td></tr></tbody></table></div>
+<blockquote>
+<p>今日复牌 4 只全部兑现分歧（三峡一字除外）——复牌事件按原因定价：预案/摘帽/终止三种结局已分化完毕。</p>
+</blockquote>
+<h3 id="h-监管5-条">H. 监管（5 条）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#h-监管5-条" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>清新环境 002573：董事接受纪律审查和监察调查</strong> → -0.66%（负面硬事件，涉高管被查）</li>
+<li>ST新华锦 600735：证监局责令改正整改报告 → +1.33%</li>
+<li>北交所半年报问询回复：吉冈精密 920720 / 新天力 920218 / 大鹏工业 920091（例行软事件）</li>
+</ul>
+<h2 id="三事件板块映射--r4d1-盘前判定验证当日盘面含义">三、事件→板块映射 + R4/D1 盘前判定验证（当日盘面含义）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三事件板块映射--r4d1-盘前判定验证当日盘面含义" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>1. 三季报业绩线成为当日最强事件主线</strong>：披露即定价——迪安诊断 20cm（开 12 次弱封）/移远/昂立/富春/骏亚涨停 vs 善水 -18.94%/三维化学 -8.95%/洛阳钼业 -7.00%。<strong>业绩线按”位置+超预期+题材共振”三因子定价，与 10 月预增定律同构</strong>（低位预增涨、高位预增跌），今日新增反例：瑞芯微预增跌停次日涨停反包——资金态度才是终审。</p>
+<p><strong>2. 并购重组线再爆硬事件</strong>：三峡新材重组预案复牌一字（fd 5.3 亿）+ 华天科技过户完成 + 博盈特焊新停牌——并购潮延续；海天股份终止复牌 -4.03% 是”终止必跌”第 N 个样本。<strong>预案/过户/终止三型定价分化明确</strong>。</p>
+<p><strong>3. R4 盘前 8 事件兑现度（cross-check）</strong>：</p>
+<ul>
+<li>E001 协创数据 374.9 亿（high 正）→ <strong>✗ 证伪</strong>：竞价仅 +0.57% 高开（弱确认），盘中 +2.8% 后崩至 -7.14% 破止损。R6_M7_01（86.8% 负债率+履约存疑）完全验证。</li>
+<li>E002 美股存储+美光 10/21 技术会（high 正）→ <strong>✓ 部分兑现</strong>：科创50 +1.00%、恒玄/长盈/博汇 20cm、瑞芯微涨停反包；但光模块双雄中际旭创 -1.94%/新易盛 -3.19%（子方向分裂）。</li>
+<li>E003 英伟达投机器人+优必选（high 正）→ <strong>✓ 兑现</strong>：兆威 +7.96%（弱转强成功）、浙江荣泰 2 板、步科 +11.76%、宇树 +6.07%、凡拓数创 20cm 2 板。</li>
+<li>E004 无人机出口管制（high 正）→ <strong>✗ 未兑现</strong>：甘化科工 -4.97% 断板、六九一二 +0.08%。明牌被资金兑现（军工流出）。</li>
+<li>E005 华为引望入宁德换电（medium 正）→ <strong>△ 部分</strong>：东安动力 3 板一字、宁波东力 2 板；三花仅 +1.16%（中军低吸）。</li>
+<li>E006 金融街论坛（high 正）→ <strong>✗ 未兑现</strong>：中信证券 -2.07%、农行 -1.07%、工行 -0.23%——护盘锚今日回落，资金切科技修复而非防御。</li>
+<li>E007 苹果 10/28（medium 正）→ <strong>△ 发酵中</strong>：博士眼镜 +5.09%。</li>
+<li>E008 高盛砍科技股（负）→ <strong>✓ 兑现</strong>：协创 -7.14%、新易盛 -3.19%、澳弘 -2.31%、中际旭创 -1.94%、长鑫 -2.89%。</li>
+</ul>
+<p><strong>4. D1 预案池验证（4 execution + 26 watch）</strong>：</p>
+<ul>
+<li>执行池：兆威 +7.96% 弱转强成功 ✓（预案”只给确认不给开盘价”正确，收 72.57 已过止盈 72.3）；三花 +1.16% 低吸 ✓（+1.8%）；亨通 +3.62% 低吸 ✓（+4.1%，high 52.88 逼近止盈 53.8）；<strong>协创 -7.14% ✗（竞价弱确认仍执行=本轮最大执行错误）</strong>。</li>
+<li>观察池正向：浙江荣泰 2 板、步科 +11.76%、博士眼镜 +5.09%、风语筑 +7.23%。</li>
+<li>观察池预警验证（全部命中）：<strong>新华传媒 -2.50% / 新华文轩 -9.24%（R3 霸榜出货警报）、东方嘉盛 -6.67% 断板（R1 孤塔拆钱）、澳弘 -2.31%、甘化 -4.97%、新易盛 -3.19%、长鑫 -2.89%、中际旭创 -1.94%、保隆 -3.96%</strong>。</li>
+</ul>
+<p><strong>5. 高标崩塌日</strong>：东方嘉盛（前 3 板总龙）-6.67% 断板、读者传媒跌停、莱美药业 -15.49%（昨日 20cm 后崩）、新华文轩 -9.24%——高位孤塔簇拆钱加速（R1 聚类”高标孤塔簇 30 日 +129% 但当日 -3.81%“完全验证）。<strong>吉大正元 4 板（开 4 次）是全场唯一 4 板但属弱板，明日是全场高标情绪闸门</strong>。</p>
+<h2 id="四持仓影响评估simulated-口径from-持仓复盘-rolling20261020md">四、持仓影响评估（simulated 口径，from 持仓复盘 rolling/20261020.md）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四持仓影响评估simulated-口径from-持仓复盘-rolling20261020md" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>持仓票</th><th>事件扫描</th><th>当日表现</th><th>影响</th><th>动作建议</th></tr></thead><tbody><tr><td><strong>协创数据 300857</strong>（在持，1020@218.0，浮亏 <strong>-7.6%</strong>）</td><td>今日无公告（374.9 亿合同为 10-19 盘后公告，属昨日窗口）</td><td><strong>-7.14%</strong> 收 201.30（high 222.93 冲高 +2.8% 后崩塌，low <strong>199.7 已跌破止损 200</strong>）</td><td><strong>最高风险。事件票资金不认 = 逻辑证伪先于价格</strong>。R6_M7_01（86.8% 负债率+履约存疑）完全验证</td><td><strong>止损线已破</strong>：明日低开直接止损；若反抽 205-210 减仓不恋战。<strong>复盘教训：竞价仅 +0.57% 高开（预案要求 +3-5% 放量确认）即不该执行</strong>，事件票只跟确认资金</td></tr><tr><td><strong>慈文传媒 002343</strong>（在持，1015@8.91，mark <strong>+15.04%</strong>）</td><td><strong>今日股票交易异常波动公告</strong>（连续大涨触发）</td><td>-0.10% 收 10.25（high <strong>10.54 = best_exit +18.29% 已现</strong>，low 9.95）</td><td>偏空。<strong>出版/AI 内容线板块退潮</strong>（新华传媒 -2.50%、新华文轩 -9.24%、读者传媒跌停——R3 霸榜出货预警全验证），慈文高位滞涨</td><td><strong>best_exit 已现 → 兑现一半</strong>；明日新华传媒续弱/低开即再减；板块退潮不接回</td></tr><tr><td><strong>锐科激光 300747</strong>（在持，1019@39.3，mark <strong>+9.97%</strong>）</td><td>今日无公告（昨日窗口有董事长增持完成公告）</td><td><strong>+2.30%</strong> 收 43.22</td><td>偏正。军工链激光低位补涨续强</td><td>持有，浮盈近 10% 可兑现部分；破 41（今日 low）再减</td></tr><tr><td><strong>三花智控 002050</strong>（在持，1020@32.45，+1.8%）</td><td>今日无公告</td><td>+1.16% 收 33.03（high 33.44）</td><td>中性偏正。机器人×车链中军低吸成功，未到 MA20 压力 34.04</td><td>持有；<strong>34.04（MA20）到位减半</strong>；机器人线退潮（板块涨停&lt;2 家）即走</td></tr><tr><td><strong>亨通光电 600487</strong>（在持，1020@50.0，+4.1%）</td><td>今日无公告</td><td><strong>+3.62%</strong> 收 52.07（high 52.88）</td><td>偏正。硬件反抽第三根兑现，止盈 53.8 临近</td><td>持有；<strong>53.8 到位减半</strong>；明日美光 10/21 技术会+外盘验证第三根反抽，竞价集体低开或费半夜盘回吐>2% → 反抽证伪先撤（46 止损）</td></tr><tr><td><strong>华力创通 300045</strong>（在持，1020@13.08，-0.2%）</td><td>今日无公告</td><td>+0.31% 收 13.06（low 12.66）</td><td>中性偏空。军工副线弱（甘化 -4.97% 断板）</td><td>观察；破 12.66 或军工续弱止损；兵装重组无空间板不补</td></tr></tbody></table></div>
+<p><strong>关键提示</strong>：</p>
+<ul>
+<li><strong>协创数据是本日最大风险敞口（-7.6% 且已破止损）</strong>——事件票”竞价弱确认仍买”是执行错误，与预案白纸黑字的”平开/低开=资金不认可，直接放弃”冲突。明日执行止损不找理由。</li>
+<li>三只持仓（慈文/锐科/亨通）浮盈在手，其中<strong>慈文板块退潮 + best_exit 已现 = 兑现一半</strong>；亨通接近止盈位；锐科可兑现部分。</li>
+<li>事件面零正向贡献的持仓矛盾集中在：协创（事件票证伪）、慈文（板块退潮）、华力（军工弱）——与修复日”低位业绩/并购/回购兑现上涨”的资金偏好完全相反，<strong>持仓结构需要向事件面低头</strong>。</li>
+</ul>
+<h2 id="五明日观察清单">五、明日/观察清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五明日观察清单" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong>协创数据 300857 止损执行</strong>（200 已破，低开即走/反抽 205-210 减仓）；复盘”事件票竞价弱确认不执行”入错题本。</li>
+<li><strong>慈文传媒 002343 兑现一半</strong>（best_exit +18.29% 已现 + 出版线退潮验证）；新华传媒续弱即再减。</li>
+<li><strong>亨通光电 600487 止盈 53.8</strong> + 硬件第三根反抽次日验证（美光 10/21 技术会、费半夜盘、CPO 竞价）——前两根反抽次日埋人，明日是第三根的生死线。</li>
+<li><strong>三花智控 002050 34.04（MA20）减半</strong>；机器人线涨停家数萎缩即走。</li>
+<li><strong>高标情绪闸门：吉大正元 4 板（开 4 次弱板）断板与否</strong> + 东方嘉盛续杀与否——断板/核按钮则全场高标降仓（dragon_switch 触发）。</li>
+<li><strong>三峡新材 600293 重组预案连板性</strong>（今日 fd 5.3 亿一字；低价 4.32 情绪票，一字不顶纪律，只观察）。</li>
+<li><strong>*ST卓然 688121（0.82 元 双退线第五次提示）续跌触发</strong>；元道退整理期（0.78 元）——规避清单不参与。</li>
+<li><strong>三季报批量继续</strong>：业绩线按”位置+超预期+题材”三因子定价，善水 -18.94% 同型风险票规避。</li>
+<li><strong>绝味食品摘帽复牌次日</strong>（今日 -0.83% 弱兑现，看是否补跌）。</li>
+<li><strong>兆威机电 72.3 止盈后机器人线延续度</strong>（浙江荣泰 2 板/步科/宇树是否续）；英伟达机器人+优必选代理发酵二日确认。</li>
+<li><strong>博盈特焊并购停牌</strong> 10/22 披露截止前是否出方案（与三峡同波）。</li>
+</ol>
+<h2 id="六数据质量说明">六、数据质量说明<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#六数据质量说明" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>anns_d 快照 1102 条 / 525 只已落盘 <code>data/raw/20261020/anns_20261020.json</code></strong>（19:00 快照口径；19:00 后 +14-15% 增量由明日 06:00 盘前窗口补齐，见 <code>20261021_premarket.md</code>）</li>
+<li>stk_holdertrade <strong>81 条</strong>（非空）、repurchase <strong>36 条</strong>（非空）、suspend_d <strong>11 条</strong>（S5/R6）、forecast <strong>3 条</strong>（非空但接口 20:00-21:00 更新、快照偏少——三季报季实际业绩披露远多于此，以 anns 内三季报公告为准）→ <code>events_api_20261020.json</code> / <code>forecast_detail_20261020.json</code></li>
+<li>全市场日线 5568 只已落盘 <code>prices_20261020.json</code>，所有”当日表现”为 tushare daily 收盘实值；指数 5 日 <code>index_20261020.json</code>；涨停池 U54/D6/Z29 <code>limit_*.json</code>；stock_basic 5575 只 <code>stock_basic_map.json</code></li>
+<li>指数：上证 3735.37（+0.12%）、深成指 11801.29（-0.14%）、创业板 2739.20（-0.26%）、科创50 1342.42（+1.00%）；成交 14715 亿（较 1019 +227 亿）</li>
+<li>持仓口径：持仓复盘 rolling/20261020.json 为 simulated=true（计划口径推演，非账户真实成交），浮盈浮亏为 mark 值非已实现</li>
+<li>四通股份复牌原因今日无公告（-5.87%），待盘前窗口复核</li>
+<li>本报告按修复确认日+高位派发验证日定价：<strong>只认已落地硬事件（重组预案复牌/标的过户/摘帽复牌/三季报披露/回购提议完成/减持结果/定增批复/立案）</strong>；软事件（进展/问询回复/意向/名称变更）一律打折；<strong>高位票利好=出货窗口（R3 霸榜出货预警今日全验证）；“事件票只跟确认资金”（协创）与”终止必跌”（海天）为今日两条最硬教训</strong></li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-190" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#2026-10-20-公司事件追踪报告" data-for="2026-10-20-公司事件追踪报告">2026-10-20 公司事件追踪报告</a></li><li class="depth-1"><a href="#一事件分类总览当日全市场关键词分类粗放口径" data-for="一事件分类总览当日全市场关键词分类粗放口径">一、事件分类总览（当日全市场，关键词分类粗放口径）</a></li><li class="depth-1"><a href="#二高优先级事件信号强度--事件标的映射" data-for="二高优先级事件信号强度--事件标的映射">二、高优先级事件（信号强度 + 事件→标的映射）</a></li><li class="depth-2"><a href="#a-st退市高危延续--摘帽复牌兑现弱" data-for="a-st退市高危延续--摘帽复牌兑现弱">A. ST/退市（高危延续 + 摘帽复牌兑现弱）</a></li><li class="depth-2"><a href="#b-并购重组控制权预案涨停--过户落地--终止利空三型齐现" data-for="b-并购重组控制权预案涨停--过户落地--终止利空三型齐现">B. 并购/重组/控制权（预案涨停 + 过户落地 + 终止利空三型齐现）</a></li><li class="depth-2"><a href="#c-三季报业绩线当日最强事件流极端分化" data-for="c-三季报业绩线当日最强事件流极端分化">C. 三季报业绩线（当日最强事件流，极端分化）</a></li><li class="depth-2"><a href="#d-增减持信号81-条-api--31-条公告修复日减持利空被稀释" data-for="d-增减持信号81-条-api--31-条公告修复日减持利空被稀释">D. 增减持信号（81 条 API + 31 条公告，修复日减持利空被稀释）</a></li><li class="depth-2"><a href="#e-回购预案批量--提议批量--完成兑现产业资本低位表态延续" data-for="e-回购预案批量--提议批量--完成兑现产业资本低位表态延续">E. 回购（预案批量 + 提议批量 + 完成兑现，产业资本低位表态延续）</a></li><li class="depth-2"><a href="#f-定增再融资可转债当日最大类-139-条兑现分化" data-for="f-定增再融资可转债当日最大类-139-条兑现分化">F. 定增/再融资/可转债（当日最大类 139 条，兑现分化）</a></li><li class="depth-2"><a href="#g-停牌复牌11-只s5--r6" data-for="g-停牌复牌11-只s5--r6">G. 停牌/复牌（11 只：S5 / R6）</a></li><li class="depth-2"><a href="#h-监管5-条" data-for="h-监管5-条">H. 监管（5 条）</a></li><li class="depth-1"><a href="#三事件板块映射--r4d1-盘前判定验证当日盘面含义" data-for="三事件板块映射--r4d1-盘前判定验证当日盘面含义">三、事件→板块映射 + R4/D1 盘前判定验证（当日盘面含义）</a></li><li class="depth-1"><a href="#四持仓影响评估simulated-口径from-持仓复盘-rolling20261020md" data-for="四持仓影响评估simulated-口径from-持仓复盘-rolling20261020md">四、持仓影响评估（simulated 口径，from 持仓复盘 rolling/20261020.md）</a></li><li class="depth-1"><a href="#五明日观察清单" data-for="五明日观察清单">五、明日/观察清单</a></li><li class="depth-1"><a href="#六数据质量说明" data-for="六数据质量说明">六、数据质量说明</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

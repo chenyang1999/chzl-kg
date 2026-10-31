@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>20261027</title><meta charset="utf-8"/><link rel="preload" href="../../index-5a23ce28.css" as="style"/><link rel="preload" href="../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="20261027"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="20261027"/><meta name="twitter:description" content="20261027 盘前预案 🚨 本预案由 Python 量价规则兜底 生成，不是大模型决策 大模型 D1（main_decision_v1 fresh context）今晨未能产出预案，安全网用 src/plan/d1_algorithm.py（纯量价规则）补位。规则只看得到量价与档位， 看不到题材、消息、情绪与博弈——不可据此下单，务必等大模型重跑或人工重出。 触发时机：provider 超时 / 404 / 上游 artifact 缺失。排障先看 data/logs/research_shell/&lt;date>/D1.log。 一句话结论 🚨 本预案由 Python 量价规则..."/><meta property="og:description" content="20261027 盘前预案 🚨 本预案由 Python 量价规则兜底 生成，不是大模型决策 大模型 D1（main_decision_v1 fresh context）今晨未能产出预案，安全网用 src/plan/d1_algorithm.py（纯量价规则）补位。规则只看得到量价与档位， 看不到题材、消息、情绪与博弈——不可据此下单，务必等大模型重跑或人工重出。 触发时机：provider 超时 / 404 / 上游 artifact 缺失。排障先看 data/logs/research_shell/&lt;date>/D1.log。 一句话结论 🚨 本预案由 Python 量价规则..."/><meta property="og:image:alt" content="20261027 盘前预案 🚨 本预案由 Python 量价规则兜底 生成，不是大模型决策 大模型 D1（main_decision_v1 fresh context）今晨未能产出预案，安全网用 src/plan/d1_algorithm.py（纯量价规则）补位。规则只看得到量价与档位， 看不到题材、消息、情绪与博弈——不可据此下单，务必等大模型重跑或人工重出。 触发时机：provider 超时 / 404 / 上游 artifact 缺失。排障先看 data/logs/research_shell/&lt;date>/D1.log。 一句话结论 🚨 本预案由 Python 量价规则..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/投研交易/盘前预案/20261027"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/投研交易/盘前预案/20261027"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="20261027 盘前预案 🚨 本预案由 Python 量价规则兜底 生成，不是大模型决策 大模型 D1（main_decision_v1 fresh context）今晨未能产出预案，安全网用 src/plan/d1_algorithm.py（纯量价规则）补位。规则只看得到量价与档位， 看不到题材、消息、情绪与博弈——不可据此下单，务必等大模型重跑或人工重出。 触发时机：provider 超时 / 404 / 上游 artifact 缺失。排障先看 data/logs/research_shell/&lt;date>/D1.log。 一句话结论 🚨 本预案由 Python 量价规则..."/><meta name="generator" content="Quartz"/><link href="../../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="投研交易/盘前预案/20261027" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-721" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-721" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../投研交易/">投研交易</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../投研交易/盘前预案/">盘前预案</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>20261027</a></div></nav><h1 class="article-title">20261027</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-26T16:00:00.000Z">2026年10月27日</time><span>15分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="20261027-盘前预案">20261027 盘前预案<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#20261027-盘前预案" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<h2 id="-本预案由-python-量价规则兜底-生成不是大模型决策">🚨 本预案由 <strong>Python 量价规则兜底</strong> 生成，<strong>不是大模型决策</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-本预案由-python-量价规则兜底-生成不是大模型决策" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>大模型 D1（<code>main_decision_v1</code> fresh context）今晨<strong>未能产出</strong>预案，安全网用<br/>
+<code>src/plan/d1_algorithm.py</code>（纯量价规则）补位。规则只看得到量价与档位，<br/>
+<strong>看不到题材、消息、情绪与博弈</strong>——不可据此下单，务必等大模型重跑或人工重出。</p>
+<p>触发时机：provider 超时 / 404 / 上游 artifact 缺失。排障先看 <code>data/logs/research_shell/&lt;date>/D1.log</code>。</p>
+</blockquote>
+<h2 id="一句话结论">一句话结论<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一句话结论" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>🚨 本预案由 Python 量价规则兜底生成，非大模型决策，勿据此下单。D1 规则版 v1: 今日按震荡分化型处理，情绪浓度66不代表全市场普涨，周期为高位震荡。55家涨停与26家跌停并存，炸板率29.49%，最高4板，前日涨停池开盘溢价为正；但深市指数回落，样本的相对承接与高波动表现分离。六簇只是42个统计样本的收益共振分区，不是六条可交易主线。主线数量暂用涨停板块重叠代理归为三主线以上，真实归属由R2独立确认。态度为观察，R1研究仓位上限40%不是调仓指令，也不授予任何标的开仓权限。研究筛选继续，具体通道待当日赚钱效应、资金与逐票门禁验证，不从阶段机械推出固定打法。 execution=0 watch=3 position_cap=40%. mode=fallback(🚨 python 量价兜底 · 非大模型决策).</p>
+<h2 id="入口通道regime-决策">入口通道（regime 决策）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#入口通道regime-决策" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>市场风格: <strong>震荡分化型</strong></li>
+<li>今日启用通道: 低吸·决策线回踩(<code>trend_pullback_buy</code>)</li>
+<li>点火 regime: <code>False</code> ｜ 候选数: <code>0</code></li>
+<li>判据: R1 style=‘震荡分化型’ → 通道=[‘trend_pullback_buy’] ignition=False</li>
+</ul>
+<h2 id="板块机会总览">板块机会总览<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#板块机会总览" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>市场背景：🚨 本预案由 Python 量价规则兜底生成，非大模型决策，勿据此下单。D1 规则版 v1: 今日按震荡分化型处理，情绪浓度66不代表全市场普涨，周期为高位震荡。55家涨停与26家跌停并存，炸板率29.49%，最高4板，前日涨停池开盘溢价为正；但深市指数回落，样本的相对承接与高波动表现分离。六簇只是42个统计样本的收益共振分区，不是六条可交易主线。主线数量暂用涨停板块重叠代理归为三主线以上，真实归属由R2独立确认。态度为观察，R1研究仓位上限40%不是调仓指令，也不授予任何标的开仓权限。研究筛选继续，具体通道待当日赚钱效应、资金与逐票门禁验证，不从阶段机械推出固定打法。 execution=0 watch=3 position_cap=40%. mode=fallback(🚨 python 量价兜底 · 非大模型决策).</p>
+<blockquote>
+<p>先市场／板块效应，再个股地位；未提供关系证据不推断龙头带动或板块扩散。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>板块／本轮行情</th><th>阶段／窗口</th><th>效应与延续</th><th>核心与梯队（上游标签）</th><th>共振／分离证据</th><th>主／反向剧本（名单归属非关系证明）</th><th>确认条件</th><th>共同失效条件</th><th>观测时点</th></tr></thead><tbody><tr><td>人形机器人</td><td>⚠️未给</td><td>main_fund_inflow</td><td>ts_code: 603528.SH；name: 多伦科技；role: 龙一；account_allowed: True；ts_code: 603028.SH；name: 赛福天；role: 龙二；account_allowed: True；ts_code: 605488.SH；name: 福莱新材；role: 候补；account_allowed: True；ts_code: 600353.SH；name: 旭光电子；role: 候补；account_allowed: True；ts_code: 002579.SZ；name: 中京电子；role: 候补；account_allowed: True</td><td>关系证据未给（概念归属不证明联动）</td><td>观察</td><td>⚠️未给</td><td>⚠️未给</td><td>⚠️未给</td></tr></tbody></table></div>
+<h2 id="全局约束与数据边界">全局约束与数据边界<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#全局约束与数据边界" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>模式：fallback；自动交易：False；需用户确认：True</p>
+</li>
+<li>
+<p>总仓上限：40%；持仓上限：5；每日买单上限：4</p>
+</li>
+<li>
+<p>单票上限：⚠️未给；单板块上限：⚠️未给</p>
+</li>
+<li>
+<p>表格仅展示已给计划，不构成自动下单授权；观察／反向候选不自动晋级。候选数量不等于持仓名额。</p>
+</li>
+<li>
+<p>评分未校准：未批准评分公式，不采用旧 score／默认50／板块分充个股分；原序展示，不另行排名。</p>
+</li>
+<li>
+<p>静态价位非实时；数据日、复权／报价口径、有效期或动态线更新时间未给时均未核验，不以计划生成时间冒充价格时点。</p>
+</li>
+<li>
+<p>新买入当日不可卖（T+1）；底仓是否可卖未核验。触发信号不保证可卖或成交。</p>
+</li>
+<li>
+<p>强制风控（原字段）：block_prefixes=920；block_st=True；max_orders_per_symbol_per_day=2；kill_switch_file=data/execution/KILL_SWITCH</p>
+</li>
+</ul>
+<h2 id="执行池0-只">执行池(0 只)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#执行池0-只" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="执行池逐票说明">执行池逐票说明<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#执行池逐票说明" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="执行池机会与买入">执行池机会与买入<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#执行池机会与买入" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>股票／场景键</th><th>优先级（原计划）</th><th>池／当前状态</th><th>所属板块／角色</th><th>质量分／评分时点</th><th>机会类型与理由</th><th>时间窗</th><th>触发价</th><th>可买区间</th><th>最高接受价</th><th>板块／量价确认</th><th>不做／取消条件</th></tr></thead></table></div>
+<h3 id="执行池退出与风险">执行池退出与风险<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#执行池退出与风险" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>股票／对应场景键</th><th>初始止损／绑定范围</th><th>止损依据与动作</th><th>分档止盈价及动作</th><th>移动止盈／其他退出</th><th>失效／取消条件</th><th>可卖限制</th><th>数据时点与缺口</th></tr></thead></table></div>
+<blockquote>
+<p>本池为空；无对象不凑数，原因须由决策者提供。</p>
+</blockquote>
+<h2 id="观察池3-只">观察池(3 只)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#观察池3-只" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="观察池逐票说明">观察池逐票说明<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#观察池逐票说明" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>福莱新材 605488.SH：R2 候补 候补/待决策线回踩；状态 watch_pool_wait_for_entry；仅观察／缺证待补；单票上限 10%；逐票权限 auto_trade_enabled=False；requires_user_confirmation=True
+<ul>
+<li>股性原始指标（非综合质量分）：limit_up_times: 10.0；broken_rate: 0.091；avg_ladder: 1.4；max_ladder: 3.0；next_day_premium_pct: 0.0；first_board_next_limit_rate: 0.0；p1t2_promotion_rate: 0.286</li>
+</ul>
+</li>
+<li>旭光电子 600353.SH：R2 候补 候补/待决策线回踩；状态 watch_pool_wait_for_entry；仅观察／缺证待补；单票上限 10%；逐票权限 auto_trade_enabled=False；requires_user_confirmation=True
+<ul>
+<li>股性原始指标（非综合质量分）：limit_up_times: 17.0；broken_rate: 0.393；avg_ladder: 1.94；max_ladder: 5.0；next_day_premium_pct: 0.0；first_board_next_limit_rate: 0.0；p1t2_promotion_rate: 0.2</li>
+</ul>
+</li>
+<li>中京电子 002579.SZ：R2 候补 候补/待决策线回踩；状态 watch_pool_wait_for_entry；仅观察／缺证待补；单票上限 10%；逐票权限 auto_trade_enabled=False；requires_user_confirmation=True
+<ul>
+<li>股性原始指标（非综合质量分）：limit_up_times: 18.0；broken_rate: 0.28；avg_ladder: 1.44；max_ladder: 3.0；next_day_premium_pct: 0.0；first_board_next_limit_rate: 0.0；p1t2_promotion_rate: 0.455</li>
+</ul>
+</li>
+</ul>
+<h3 id="观察池机会与买入">观察池机会与买入<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#观察池机会与买入" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>股票／场景键</th><th>优先级（原计划）</th><th>池／当前状态</th><th>所属板块／角色</th><th>质量分／评分时点</th><th>机会类型与理由</th><th>时间窗</th><th>触发价</th><th>可买区间</th><th>最高接受价</th><th>板块／量价确认</th><th>不做／取消条件</th></tr></thead><tbody><tr><td>观察池:1:605488.SH:1<br/>福莱新材</td><td>原序1／⚠️未给</td><td>观察池／仅观察／缺证待补</td><td>人形机器人／watch</td><td>未校准／评分时点未给</td><td>⚠️未给／R2 候补 候补/待决策线回踩</td><td>⚠️未给</td><td>⚠️未给</td><td>⚠️未给</td><td>⚠️未给</td><td>板块：⚠️未给；量价：⚠️未给；本场景依据：⚠️未给；需盘中确认：⚠️未给；原建议仓位：⚠️未给</td><td>⚠️未给；逐票权限 auto_trade_enabled=False；requires_user_confirmation=True；板块禁入 ；场景禁令 ⚠️未给；个股禁令 ⚠️未给；观察原因 await_pullback；原资格 ⚠️未给；利空反证 ⚠️未给</td></tr><tr><td>观察池:2:600353.SH:1<br/>旭光电子</td><td>原序2／⚠️未给</td><td>观察池／仅观察／缺证待补</td><td>人形机器人／watch</td><td>未校准／评分时点未给</td><td>⚠️未给／R2 候补 候补/待决策线回踩</td><td>⚠️未给</td><td>⚠️未给</td><td>⚠️未给</td><td>⚠️未给</td><td>板块：⚠️未给；量价：⚠️未给；本场景依据：⚠️未给；需盘中确认：⚠️未给；原建议仓位：⚠️未给</td><td>⚠️未给；逐票权限 auto_trade_enabled=False；requires_user_confirmation=True；板块禁入 ；场景禁令 ⚠️未给；个股禁令 ⚠️未给；观察原因 await_pullback；原资格 ⚠️未给；利空反证 ⚠️未给</td></tr><tr><td>观察池:3:002579.SZ:1<br/>中京电子</td><td>原序3／⚠️未给</td><td>观察池／仅观察／缺证待补</td><td>人形机器人／watch</td><td>未校准／评分时点未给</td><td>⚠️未给／R2 候补 候补/待决策线回踩</td><td>⚠️未给</td><td>⚠️未给</td><td>⚠️未给</td><td>⚠️未给</td><td>板块：⚠️未给；量价：⚠️未给；本场景依据：⚠️未给；需盘中确认：⚠️未给；原建议仓位：⚠️未给</td><td>⚠️未给；逐票权限 auto_trade_enabled=False；requires_user_confirmation=True；板块禁入 ；场景禁令 ⚠️未给；个股禁令 ⚠️未给；观察原因 await_pullback；原资格 ⚠️未给；利空反证 ⚠️未给</td></tr></tbody></table></div>
+<h3 id="观察池退出与风险">观察池退出与风险<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#观察池退出与风险" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>股票／对应场景键</th><th>初始止损／绑定范围</th><th>止损依据与动作</th><th>分档止盈价及动作</th><th>移动止盈／其他退出</th><th>失效／取消条件</th><th>可卖限制</th><th>数据时点与缺口</th></tr></thead><tbody><tr><td>观察池:1:605488.SH:1<br/>福莱新材</td><td>⚠️未给；个股共用</td><td>⚠️未给</td><td>⚠️未给；⚠️未给</td><td>移动止盈／其他退出未给</td><td>⚠️未给；逐票权限 auto_trade_enabled=False；requires_user_confirmation=True；板块禁入 ；场景禁令 ⚠️未给；个股禁令 ⚠️未给；观察原因 await_pullback；原资格 ⚠️未给；利空反证 ⚠️未给</td><td>T+1：新增仓当日不可卖；底仓可卖数量未给；触价不保证成交</td><td>昨收 41.97；price_source=xtick；price_fq=前复权；数据日／有效期未核验；非实时</td></tr><tr><td>观察池:2:600353.SH:1<br/>旭光电子</td><td>⚠️未给；个股共用</td><td>⚠️未给</td><td>⚠️未给；⚠️未给</td><td>移动止盈／其他退出未给</td><td>⚠️未给；逐票权限 auto_trade_enabled=False；requires_user_confirmation=True；板块禁入 ；场景禁令 ⚠️未给；个股禁令 ⚠️未给；观察原因 await_pullback；原资格 ⚠️未给；利空反证 ⚠️未给</td><td>T+1：新增仓当日不可卖；底仓可卖数量未给；触价不保证成交</td><td>昨收 22.24；price_source=xtick；price_fq=前复权；数据日／有效期未核验；非实时</td></tr><tr><td>观察池:3:002579.SZ:1<br/>中京电子</td><td>⚠️未给；个股共用</td><td>⚠️未给</td><td>⚠️未给；⚠️未给</td><td>移动止盈／其他退出未给</td><td>⚠️未给；逐票权限 auto_trade_enabled=False；requires_user_confirmation=True；板块禁入 ；场景禁令 ⚠️未给；个股禁令 ⚠️未给；观察原因 await_pullback；原资格 ⚠️未给；利空反证 ⚠️未给</td><td>T+1：新增仓当日不可卖；底仓可卖数量未给；触价不保证成交</td><td>昨收 12.94；price_source=xtick；price_fq=前复权；数据日／有效期未核验；非实时</td></tr></tbody></table></div>
+<h2 id="反向剧本b计划">反向剧本／B计划<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#反向剧本b计划" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>总触发：⚠️未给<br/>
+互斥／共同失效：⚠️未给<br/>
+关系：仅展示原剧本，不推断主／反向可同时买入；不得跨池借用未绑定场景价位。</p>
+<blockquote>
+<p>反向方向／候选未给，不自动补票。</p>
+</blockquote>
+<h2 id="r6-反证采纳">R6 反证采纳<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#r6-反证采纳" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>hard_rejects: 0 (D1 采纳) / 落盘原始: 0</li>
+<li>strong_suggest: D1 v1 记录 0 条 / R6 落盘原始 0 条（差值= D1 未自动接的强 suggest）</li>
+</ul>
+<p><strong>全市场级降仓信号（D1 v1.8 实算）</strong>：market_wide_factor = <strong>1.0</strong></p>
+<ul>
+<li>rule: M5+M1 → 0.7, M5 → 0.85, else → 1.0</li>
+<li>M5_hit: False</li>
+<li>M1_strong_hit: False</li>
+</ul>
+<h2 id="r3-群聊情绪--r4-消息面整合">R3 群聊情绪 + R4 消息面整合<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#r3-群聊情绪--r4-消息面整合" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>R3 群聊情绪</strong>：data_quality=degraded | sentiment_score=66 | verdict=无</p>
+<ul>
+<li>共振主题（top5）：
+<ul>
+<li>机器人（具身智能与触觉数采） | L1+L2 | sectors=[‘机器人（具身智能与触觉数采）’] | middle</li>
+<li>商贸零售 | L1+L2 | sectors=[‘商贸零售’] | middle</li>
+<li>油气开采 | L1+L2 | sectors=[‘油气开采’] | middle</li>
+</ul>
+</li>
+<li>KOL 群聊观点（5 条）：
+<ul>
+<li>[G1] 日内有高位谨慎、反弹减损判断，盘后转为机器人空间有限并预判宇树次日下跌；短观点“不要追高”“休息一个月”保留。出货系作者主张，不是本Agent确认资金行为。</li>
+<li>[G2] 数采从视觉向触觉扩散，另有油气事件短线方向；短句不因不足60字被丢弃。重发卖方稿合并。</li>
+<li>[G3] 具身数采、三胎消费、炒菜机器人等多支线；触觉预测多为同一研判传播，不独立增权；me的SKY-001完全排除。</li>
+</ul>
+</li>
+</ul>
+<p><strong>R4 消息面</strong>：data_quality=degraded | top_events=8 条 | 首板候选高质量=0 条</p>
+<ul>
+<li>重大事件（top5）：
+<ul>
+<li>[正面/high] 行云科技V客户租赁补充协议总额升至88.48亿元</li>
+<li>[负面/high] 宇树科技异动公告警示物理AI规模化商业落地风险</li>
+<li>[负面/high] 上纬新材提示机器人量产爬坡与盈利贡献尚不确定</li>
+<li>[正面/high] 央行设立债市非银大额赎回互换便利BNSF</li>
+<li>[正面/high] 小鹏获批广州全域L4级Robotaxi示范运营资格</li>
+</ul>
+</li>
+</ul>
+<p><strong>LLM 整合任务（程序不算，留给 LLM 端）</strong>：</p>
+<ul>
+<li>verdict_check: 请检查 R3.next_day_signal.verdict 是否与 emotion_cycle 阶段一致；若 R3 判强修复 + emotion_cycle 判主跌/低位试错 → 倾向采纳 R3 修复信号</li>
+<li>policy_catalyst: 请检查 R4.top_events 中强政策/业绩催化的板块；若 R4 催化 R2 主线内板块 → 强化该主线信心</li>
+<li>kol_corroboration: 请检查 R3.kol_summary 是否多源验证同一修复/退潮方向；若 ≥3 条 KOL 同向 → 调整 R3 段位强度</li>
+<li>first_board_quality: 请检查 R4.first_board_candidates 中 quality=high 的票；若 R4 命中但 D1 execution_pool 未包含 → 候选回灌 watch_pool</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-700" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#20261027-盘前预案" data-for="20261027-盘前预案">20261027 盘前预案</a></li><li class="depth-1"><a href="#-本预案由-python-量价规则兜底-生成不是大模型决策" data-for="-本预案由-python-量价规则兜底-生成不是大模型决策">🚨 本预案由 Python 量价规则兜底 生成，不是大模型决策</a></li><li class="depth-1"><a href="#一句话结论" data-for="一句话结论">一句话结论</a></li><li class="depth-1"><a href="#入口通道regime-决策" data-for="入口通道regime-决策">入口通道（regime 决策）</a></li><li class="depth-1"><a href="#板块机会总览" data-for="板块机会总览">板块机会总览</a></li><li class="depth-1"><a href="#全局约束与数据边界" data-for="全局约束与数据边界">全局约束与数据边界</a></li><li class="depth-1"><a href="#执行池0-只" data-for="执行池0-只">执行池(0 只)</a></li><li class="depth-2"><a href="#执行池逐票说明" data-for="执行池逐票说明">执行池逐票说明</a></li><li class="depth-2"><a href="#执行池机会与买入" data-for="执行池机会与买入">执行池机会与买入</a></li><li class="depth-2"><a href="#执行池退出与风险" data-for="执行池退出与风险">执行池退出与风险</a></li><li class="depth-1"><a href="#观察池3-只" data-for="观察池3-只">观察池(3 只)</a></li><li class="depth-2"><a href="#观察池逐票说明" data-for="观察池逐票说明">观察池逐票说明</a></li><li class="depth-2"><a href="#观察池机会与买入" data-for="观察池机会与买入">观察池机会与买入</a></li><li class="depth-2"><a href="#观察池退出与风险" data-for="观察池退出与风险">观察池退出与风险</a></li><li class="depth-1"><a href="#反向剧本b计划" data-for="反向剧本b计划">反向剧本／B计划</a></li><li class="depth-1"><a href="#r6-反证采纳" data-for="r6-反证采纳">R6 反证采纳</a></li><li class="depth-1"><a href="#r3-群聊情绪--r4-消息面整合" data-for="r3-群聊情绪--r4-消息面整合">R3 群聊情绪 + R4 消息面整合</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

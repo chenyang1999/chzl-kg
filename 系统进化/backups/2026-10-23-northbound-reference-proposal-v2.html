@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-10-23-northbound-reference-proposal-v2</title><meta charset="utf-8"/><link rel="preload" href="../../index-5a23ce28.css" as="style"/><link rel="preload" href="../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-10-23-northbound-reference-proposal-v2"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-10-23-northbound-reference-proposal-v2"/><meta name="twitter:description" content="北向仅参考：长期规则差异待确认 状态：未应用。只修资金研究技能、资金研究说明、主决策技能这三处；不改SOUL、账户、定时任务、模型、RR数值或其他风控。当前补跑已按用户本轮指令将北向作为参考，下面的长期文件差异仍待确认。 变化摘要 北向缺可信净买入只标该项缺口，不把全部资金评价归零、全局禁新或停止研究。 原始成交额与净买入分开；当日未发布、接口故障和净额口径未知分开。 其他真实数据失效、风险禁令、反证要求、逐票买点和有效零预算保持。没有自动提高仓位。 日频资金、季度持股不能写成实时净买入；日期判断须核沪深港通适用交易日。 精确前置与拟议结果 文件当前SHA256拟议SHA256skills/a..."/><meta property="og:description" content="北向仅参考：长期规则差异待确认 状态：未应用。只修资金研究技能、资金研究说明、主决策技能这三处；不改SOUL、账户、定时任务、模型、RR数值或其他风控。当前补跑已按用户本轮指令将北向作为参考，下面的长期文件差异仍待确认。 变化摘要 北向缺可信净买入只标该项缺口，不把全部资金评价归零、全局禁新或停止研究。 原始成交额与净买入分开；当日未发布、接口故障和净额口径未知分开。 其他真实数据失效、风险禁令、反证要求、逐票买点和有效零预算保持。没有自动提高仓位。 日频资金、季度持股不能写成实时净买入；日期判断须核沪深港通适用交易日。 精确前置与拟议结果 文件当前SHA256拟议SHA256skills/a..."/><meta property="og:image:alt" content="北向仅参考：长期规则差异待确认 状态：未应用。只修资金研究技能、资金研究说明、主决策技能这三处；不改SOUL、账户、定时任务、模型、RR数值或其他风控。当前补跑已按用户本轮指令将北向作为参考，下面的长期文件差异仍待确认。 变化摘要 北向缺可信净买入只标该项缺口，不把全部资金评价归零、全局禁新或停止研究。 原始成交额与净买入分开；当日未发布、接口故障和净额口径未知分开。 其他真实数据失效、风险禁令、反证要求、逐票买点和有效零预算保持。没有自动提高仓位。 日频资金、季度持股不能写成实时净买入；日期判断须核沪深港通适用交易日。 精确前置与拟议结果 文件当前SHA256拟议SHA256skills/a..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/backups/2026-10-23-northbound-reference-proposal-v2"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/backups/2026-10-23-northbound-reference-proposal-v2"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="北向仅参考：长期规则差异待确认 状态：未应用。只修资金研究技能、资金研究说明、主决策技能这三处；不改SOUL、账户、定时任务、模型、RR数值或其他风控。当前补跑已按用户本轮指令将北向作为参考，下面的长期文件差异仍待确认。 变化摘要 北向缺可信净买入只标该项缺口，不把全部资金评价归零、全局禁新或停止研究。 原始成交额与净买入分开；当日未发布、接口故障和净额口径未知分开。 其他真实数据失效、风险禁令、反证要求、逐票买点和有效零预算保持。没有自动提高仓位。 日频资金、季度持股不能写成实时净买入；日期判断须核沪深港通适用交易日。 精确前置与拟议结果 文件当前SHA256拟议SHA256skills/a..."/><meta name="generator" content="Quartz"/><link href="../../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/backups/2026-10-23-northbound-reference-proposal-v2" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1024" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1024" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../系统进化/backups/">backups</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-10-23-northbound-reference-proposal-v2</a></div></nav><h1 class="article-title">2026-10-23-northbound-reference-proposal-v2</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-23T08:34:25.000Z">2026年10月23日</time><span>21分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="北向仅参考长期规则差异待确认">北向仅参考：长期规则差异待确认<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#北向仅参考长期规则差异待确认" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>状态：未应用。只修资金研究技能、资金研究说明、主决策技能这三处；不改SOUL、账户、定时任务、模型、RR数值或其他风控。当前补跑已按用户本轮指令将北向作为参考，下面的长期文件差异仍待确认。</p>
+<h2 id="变化摘要">变化摘要<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#变化摘要" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>北向缺可信净买入只标该项缺口，不把全部资金评价归零、全局禁新或停止研究。</li>
+<li>原始成交额与净买入分开；当日未发布、接口故障和净额口径未知分开。</li>
+<li>其他真实数据失效、风险禁令、反证要求、逐票买点和有效零预算保持。没有自动提高仓位。</li>
+<li>日频资金、季度持股不能写成实时净买入；日期判断须核沪深港通适用交易日。</li>
+</ul>
+<h2 id="精确前置与拟议结果">精确前置与拟议结果<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#精确前置与拟议结果" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>文件</th><th>当前SHA256</th><th>拟议SHA256</th></tr></thead><tbody><tr><td><code>skills/analyze_capital_flow_v1/SKILL.md</code></td><td><code>e82f07cc276651cacaac808faa786ac37a76dc7394b0c94f3b530c378e76ec77</code></td><td><code>b67b4c47bd45a3556e0f0bb148e4b478c0209a31e626a675be07c2ad9d157696</code></td></tr><tr><td><code>docs/agents/R7-资金面Agent.md</code></td><td><code>438bcb7e15ca1d12373b19d81a161d801347635ad3276f1c861c939c9cf6b63f</code></td><td><code>63c288deb6453ef97178db90d7dddb8fd69898eb51e1e9f549067f362ebfb080</code></td></tr><tr><td><code>skills/main_decision_v1/SKILL.md</code></td><td><code>b3e8d6d49e42b84a80613e4e63f7f5a578b95a6c1ab009e606cc2eacc6627876</code></td><td><code>00ce0576b20448d3dc18a0ca670d55f378a212e075bbdaf473fe97bf3baa3e4c</code></td></tr></tbody></table></div>
+<h2 id="精确差异">精确差异<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#精确差异" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="diff" data-theme="github-light github-dark"><code data-language="diff" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="punctuation">--- a/skills/analyze_capital_flow_v1/SKILL.md</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="punctuation">+++ b/skills/analyze_capital_flow_v1/SKILL.md</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -22,6 +22,10 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 四维统合 **北向 / 主力 / 游资 / ETF+期货** 时序，输出板块与个股资金约束，供 R2/R5/D1 消费。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+**北向仅作可选参考**：缺失、口径不可比或延迟时，仅如实记录北向缺口，不升级为整体资金失效、整体置信度归零或全局禁新仓。其余必要数据、逐票资金确认与时效要求沿现有契约，不新增必要维度、评分公式或数值门槛；真正必要输入缺失仍不得认定完成或通过。必要性未明文定义处须列为契约缺口，不擅自补定义，也不据此声称已满足全部开仓条件。</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+**接口可用性与净买入语义分开**：`moneyflow_hsgt` 有行、当日尚未落库和可信净买入不可得不是同一状态。可得成交总额、原字段值与实际数据日独立留在来源证据，不能因净额不可得写“接口关闭/北向全空”；`north_money` / `hgt` / `sgt` 等原字段未经口径核实不能当净买入；已核为成交总额（Buy+Sell）的值也不得跨口径拼成净流入趋势。净买入未核实时，对应净额/净额趋势仍为 null，写语义缺口；可用成交额只作成交活跃度参考，不补造买卖方向。</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> **禁止**: 风格(R1)、板块排序(R2)、个股画像(R5)、hard_reject(R6)。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ---</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -82,7 +86,7 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 1. 读 manifest；severity≥2 时在 JSON 标注 `data_health`  </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 1.5. **读 `data/raw/YYYYMMDD/overseas_snapshot.json`（v1.3 新增·必做）** — 提取 `us_stocks`（MU/NVDA/AVGO/AMD/TSM/AAPL/MSFT/META 等）与美股指数（SPX/IXIC/SOX）隔夜涨跌，写入 `overseas_core_stocks` 段，并在 md 落盘的「外部传导」节给出：*美股半导体/存储方向(MU/NVDA/AVGO/AMD/TSM)隔夜涨跌 → 今日 A 股存储/CPO/半导体链情绪压制或提振* 的判断。数据源来自 `overseas_snapshot.json::us_stocks`（无该文件则标 `overseas_stale: true`，不编造数值）</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-2. 拉北向 5/10/20 日趋势 → `northbound`  </span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+2. 尝试拉北向 5/10/20 日趋势 → `northbound`（可选参考；缺失写 null、实际日期与缺口，不影响其余研究继续）  </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 3. 板块主力净流入排名 → `main_force`</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 4. **vibe-trading 交叉核实(硬调用)** — 对 R2 候选票池(6-15 只)逐票并行调:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    - `get_block_trades(code, days=30)` → `block_trades[]` = {trade_date, price, volume, amount, premium_pct, buyer_seat, seller_seat}</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -109,7 +113,7 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ## 降级</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-- 北向延迟 → 用最近有效交易日，标注 `stale`  </span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+- 北向延迟 → 仅在口径可信时引用最近有效交易日并标实际日期/缺口；无可信值写 null，不用旧值冒充当日或用代理冒充净额  </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> - 子 skill 失败 → 对应字段空数组，不阻塞主 JSON 落盘</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ---</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -230,50 +234,51 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ```yaml</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> # R7 落盘前必填的三时间字段</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> generated_at: &quot;ISO8601+08:00&quot;        # 本次落盘时刻(机器时)</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-resolved_trade_date: &quot;YYYYMMDD&quot;      # 实际数据归属交易日(可能 = T-1)</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-staleness_status: ok | partial | stale | unavailable</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+resolved_trade_date: &quot;YYYYMMDD&quot;      # 其余已用必要资金证据的实际归属日，不拿缺失北向代填</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+staleness_status: ok | partial | stale | unavailable  # 资金数据质量，不等于研究完成状态</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> stale_threshold_hours: 24             # 硬阈值</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> unavailable_reason: &quot;&quot;                # 当 status=unavailable 时必填</span></span></code></pre></figure>
+<p>-<strong>staleness 计算与状态机</strong>(由 R7 LLM 在写盘前自动算):<br/>
++<strong>完成状态与数据质量分开</strong>：顶层 <code>status</code> 表示研究工作是否完成；只有其余现有必需工作及交付已完成才可写 <code>complete</code>，不能仅因尝试过或有 JSON 就算完成。北向缺失写 <code>northbound.status=unavailable</code>，未取得的数值/序列、<code>northbound.resolved_trade_date</code> 与 <code>northbound.trading_gap</code> 如实为 null，并写 <code>northbound.unavailable_reason</code>；有日期/交易日缺口则保留实值。各维保留来源与实际日期，不伪造统一日期。顶层 <code>degraded</code> / <code>data_health</code> / <code>staleness_status</code> 如实表达质量缺口，但北向单维缺失不得自动把顶层状态设为 <code>unavailable</code>、研究工作设为未完成或整体 <code>confidence</code> 设为零；也不得把必要数据真正失效洗为正常。整体置信度按已有真实评价保留，未评价为 null，真实零保留零；不新造汇总公式或为缺失补分。<br/>
++<br/>
++<strong>北向参考数据的时效状态机</strong>（原交易日缺口分档只作用于北向，不充当整体资金门禁）:</p>
+<pre><code># 主口径: 交易日缺口(trading_gap)—— 小时数会误伤周一/长假(64h 的周五数据其实是最新 T-1)
+-trading_gap = trade_date 与 resolved_trade_date 之间的「交易日」间隔
++trading_gap = trade_date 与 northbound.resolved_trade_date 之间的「交易日」间隔
++# 采用沪深港通适用交易日；不能仅凭A股开市判定北向当天应有数据
+             (0 = T-1 或当日 → 数据就是最新可得; 1 = T-2 缺一档; 2 = T-3 缺两档; ...)
+# 用 tushare trade_cal(或 manifest 可见的最早交易日)数交易日, 不算自然日/周末
+-
+-if trading_gap &lt;= 0:     status = &quot;ok&quot;        # 周一盘前用上周五数据 = 正常, 绝非 stale
+-elif trading_gap == 1:   status = &quot;partial&quot;   # T-2, 真降级一档
+-elif trading_gap == 2:   status = &quot;stale&quot;     # T-3, 衰减 0.7
+-else:                    status = &quot;unavailable&quot;
+-  → unavailable_reason = &quot;northbound_data_lag_{gap}days&quot;
+-  → 整体 confidence = 0 (消费者应走降级)
+-
+-# 副口径(仅写 note, 不进状态机): hours_since_data = (generated_at - resolved_trade_date 当日 15:00) 小时
++# 北向日期未知时不计算交易日缺口/年龄，保留 null 与原因，不借其它维度日期代填
++
++if trading_gap &lt;= 0:     northbound.status = &quot;ok&quot;        # 周一盘前用上周五数据 = 正常, 绝非 stale
++elif trading_gap == 1:   northbound.status = &quot;partial&quot;   # T-2, 北向参考降级一档
++elif trading_gap == 2:   northbound.status = &quot;stale&quot;     # T-3, 仅标北向参考陈旧
++else:                    northbound.status = &quot;unavailable&quot;
++  → northbound.unavailable_reason = &quot;northbound_data_lag_{gap}days&quot;
++  → 保留其余资金证据及整体真实评价，不自动覆盖整体 confidence
++
++# 副口径(仅写 note, 不进状态机): hours_since_data = (generated_at - northbound.resolved_trade_date 当日 15:00) 小时
+# 周一盘前它天然是 ~64h(周末), 不代表数据旧 —— 不要用小时数直接定 status
+</code></pre>
+<p><strong>硬约束(新增强制项)</strong>:<br/>
+-1. 当 <code>generated_at.date &lt; trade_date + 06:00</code> 视为<strong>严重错位</strong>,直接 <code>status=unavailable</code>,写 <code>unavailable_reason=&quot;generated_at_before_trade_date_06am&quot;</code>,<strong>不得</strong>让下游(D1/R6)按 ok 消费<br/>
++1. 当 <code>generated_at.date &lt; trade_date + 06:00</code> 视为<strong>严重错位</strong>,直接 <code>staleness_status=unavailable</code>,写 <code>unavailable_reason=&quot;generated_at_before_trade_date_06am&quot;</code>,<strong>不得</strong>让下游(D1/R6)按 ok 消费；本项是整份产物的原有时间约束，不因北向可选而豁免<br/>
+2. 文件名必须带 trade_date 后缀:<code>R7_capital_flow_{trade_date}.json</code>(老路径 <code>R7_capital_flow.json</code> 保留作 soft link 指向当日)<br/>
+3. <code>resolved_trade_date ∈ {trade_date, T-1}</code> 为<strong>正常</strong>(尤其周一 T-1=上周五);仅当 resolved 早于 T-1 才写 <code>cross_date_mismatch=true</code>。<strong>禁止</strong>把正常的 T-1 误判为 mismatch<br/>
+4. <code>staleness_status</code> 字段<strong>不得为 null</strong>,<strong>不得省略</strong></p>
+<p><strong>消费契约</strong>(供 D1 / R6 消费):<br/>
+— D1 在 §Step 0 读 R7 时,先看 <code>staleness_status</code>:</p>
+<ul>
+<li>
+<ul>
+<li><code>ok</code> → 正常消费</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><code>partial</code> → 消费但 <code>risk_limits.position_cap_pct</code> 衰减 ×0.95</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><code>stale</code> → 消费但 <code>position_cap_pct</code> 衰减 ×0.85,且在 <code>meta.position_cap_source</code> 追加 <code>r7_stale_override</code></li>
+</ul>
+</li>
+<li>
+<ul>
+<li><code>unavailable</code> → 跳过 R7 资金维度,<code>risk_limits.target_total_position_pct</code> 走 R1 默认 0.50<br/>
++- D1 分开核对研究完成、具体维度质量和交易资格；北向仅参考，不能仅凭北向缺失/延迟或其造成的质量标记激活 <code>R7_STALE</code>、否认其余资金证据或机械改仓；不新增默认资金/仓位，不抬有效零预算。其余维度的原有资格、时效与仓位约束保持不变，必要资金数据真正失效仍拒绝新仓。<br/>
++- R6 的 complete-only 输入定义和逐模式完整性保持不变；只有其余必需研究确已完成时，R7 才可如实 <code>status=complete</code>，北向参考缺口仍须披露。不得把原 partial/degraded、空反证或未评对象改成通过。</li>
+</ul>
+</li>
+</ul>
+<p><strong>降级</strong>:<br/>
+— 北向数据完全拉空(Tushare <code>moneyflow_hsgt</code> 错)→ <code>staleness_status=unavailable</code>,但仍写盘(填空数组),让 E1 复盘能感知<br/>
++- 北向净买入参考不可得（净额真缺失或口径未核实，不等于接口关闭/成交总额全空）→ 仅北向净额参考标 <code>northbound.status=unavailable</code>，缺失净额/净额趋势为 null，已有成交额原值及实际日期独立保留，明确接口状态与语义缺口；仍写其余已取得证据，不升级整体失效</p>
+<ul>
+<li>硬约束 1 触发时,<code>degraded=true</code> 必须写入 JSON 顶层</li>
+</ul>
+<p><strong>验收</strong>:<br/>
+— 盘后 <code>tests/check_r7_staleness.py</code> 校验四件事:<code>generated_at</code> 不早于 <code>trade_date 06:00</code>、<code>staleness_status</code> 非空、文件名为 <code>R7_capital_flow_{trade_date}.json</code>、<code>unavailable_reason</code> 在 status=unavailable 时非空。任一失败 → orchestrator 标 R7 失败,触发重跑<br/>
++- 主汇总实际调用 <code>src/research/contract_checks.py::check_r7_staleness</code>；独立脚本实际位于 <code>tests/checks/check_r7_staleness.py</code>，不是 <code>tests/check_r7_staleness.py</code>。两者保留顶层时效状态、数据归属日、原生成时间约束和 unavailable 原因检查；不会按北向缺失计算整体置信度或触发交易禁令。命名/别名与分维缺口须另按本契约核对，不能声称独立脚本已实现文件名验收；校验通过不证明必要资金齐全或获准交易。</p>
+<hr/>
+<p>--- a/docs/agents/R7-资金面Agent.md<br/>
++++ b/docs/agents/R7-资金面Agent.md<br/>
+@@ -26,14 +26,16 @@</p>
+<ul>
+<li>data/raw/YYYYMMDD/mcp_health.json</li>
+</ul>
+<p>required (07:30 全量 · 按需调 MCP):</p>
+<ul>
+<li>
+<ul>
+<li>Tushare MCP:  moneyflow_hsgt / hk_hold / top_list / top_inst / margin_detail</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<ul>
+<li>Tushare MCP:  top_list / top_inst / margin_detail</li>
+<li>DataPro MCP:  板块/个股主力资金、超大单拆分</li>
+<li>XTick MCP:    /doc/hot/moneyflow</li>
+</ul>
+</li>
+</ul>
+<p>required (11:35 增量 · 按需调 MCP):</p>
+<ul>
+<li>
+<ul>
+<li>Tushare MCP:  moneyflow_hsgt（北向盘中）</li>
+<li>DataPro MCP:  板块上午主力净流</li>
+<li>XTick MCP:    盘中实时资金流</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<p>+optional (北向仅参考，缺失不升级为整体失效或全局禁新):</p>
+<ul>
+<li>
+<ul>
+<li>Tushare MCP:  moneyflow_hsgt / hk_hold（按真实发布频率引用；日频数据/季度持股不能当作实时净买入）</li>
+</ul>
+</li>
+</ul>
+<p>optional (上游 research):</p>
+<ul>
+<li>data/research/YYYYMMDD/R1_style.json         # 风格 → 仓位上限参考<br/>
+@@ -63,10 +65,14 @@<br/>
+“status”: “complete”,<br/>
+“confidence”: 0.0,<br/>
+“northbound”: {</li>
+<li>“net_flow_today”: 0,</li>
+<li>“trend_5d”: [],</li>
+<li>“trend_10d”: [],</li>
+<li>“trend_20d”: []</li>
+</ul>
+<ul>
+<li>“status”: “unavailable”,</li>
+<li>“resolved_trade_date”: null,</li>
+<li>“trading_gap”: null,</li>
+<li>“unavailable_reason”: “未取得可信同口径北向净买入；接口/成交额可得性另列”,</li>
+<li>“net_flow_today”: null,</li>
+<li>“trend_5d”: null,</li>
+<li>“trend_10d”: null,</li>
+<li>“trend_20d”: null<br/>
+},<br/>
+“main_force”: {<br/>
+“sector_flows”: {},<br/>
+@@ -86,12 +92,14 @@<br/>
+}</li>
+</ul>
+<pre><code>
++顶层 `status` 表示必需研究工作的完成情况，数据质量由 `degraded` / `data_health` / `staleness_status` 与分维来源/日期/缺口表达。仅北向缺失不自动使整体 unavailable、整体 confidence 归零或必需研究未完成；其余必要输入和阈值沿现有契约，必要性未明文定义处列契约缺口，不自行新增维度/门槛。未评价 confidence 为 null，真实零保留零，不新造汇总公式；本示例的北向 null 不代表其余维度已被验证齐全。
++
+11:35 增量批次：同文件追加/覆盖 `midday_increment` 段（不重算全量 `northbound`/`main_force` 历史）:
+
+```json
+&quot;midday_increment&quot;: {
+  &quot;generated_at&quot;: &quot;2026-07-04T11:40:00+08:00&quot;,
+-  &quot;northbound_intraday&quot;: 0,
++  &quot;northbound_intraday&quot;: null,
+  &quot;main_force_morning&quot;: {},
+  &quot;notes&quot;: &quot;&quot;
+}
+@@ -121,7 +129,7 @@
+| R2 主线板块 | `main_force.top_inflow_sectors` → 验证主线资金是否配合 |
+| R5 情报深挖 | 个股主力/游资字段 → 画像资金侧 |
+| R6 反证 | 资金与 R2/R3 是否矛盾 |
+-| D1 主决策 | 北向趋势 + 板块资金 → 总仓位与 execution_pool 最后确认 |
++| D1 主决策 | 板块/个股资金按现有契约确认；北向趋势仅作可选参考，缺失不单独禁新或机械改仓 |
+| P2 午盘修订 | `midday_increment` → 上午资金变盘 flag |
+
+---
+@@ -130,6 +138,7 @@
+
+| 数据源死了 | 应对 |
+|-----------|------|
++| 仅北向缺失/延迟 | 保留其余资金证据；北向缺失值为 null，列来源、实际日期或未知日期与缺口，不升级整体失效或全局禁新 |
+| DataPro 死 | 降级为 Tushare + XTick，`data_health: degraded` |
+| XTick 死 | 07:30 仍可用 Tushare+DataPro；11:35 增量整批跳过 |
+| Tushare 死 | 仅 DataPro 口径，标注 severity |
+--- a/skills/main_decision_v1/SKILL.md
++++ b/skills/main_decision_v1/SKILL.md
+@@ -95,6 +95,8 @@
+2. 读取 `data/user_preferences.yaml` 全文
+3. 若 `orchestrator_status == &quot;failed&quot;` 或 R2 artifact 缺失 → **中止**，不写 plan
+4. 若 `fetch_global_severity >= 3` → 仍可出 plan，但 `mode` 必须为 `dry_run`，`autonomous_trading_enabled=false`
++
++**北向仅参考**：先核 R7 主产物的研究完成状态，再核各维数据质量与具体缺口。北向缺失/延迟、其导致的质量降级或 summary 对 `degraded` 的状态映射，不单独构成研究未完成或全局禁新依据；不能用这些标记自动清零整体置信度、改仓或补默认资金。顶层/北向实际日期分开，缺失数值保留 null、真实零及有效零预算原样保留。其余必需资金证据、R6 完整性与全部既有门禁仍独立核验；必要数据真缺失仍拒绝新仓，必要性未定义处列契约缺口、不自造要求或认定已通过。旧产物不因新规则被改写为 complete 或抬高零值，须由研究 owner 真实重评，再由 D1 独立裁决。
+
+### Step 0.4 — 近期错题本注入（快回路 · 2026-08-31 新增）
+
+@@ -1094,27 +1096,27 @@
+  &quot;position_cap_derivation&quot;: {
+    &quot;r1_style_signal&quot;: &quot;震荡分化&quot;,
+    &quot;r1_raw_cap&quot;: 0.60,
+-    &quot;r7_northbound_strength&quot;: &quot;neutral&quot;,   // strong_inflow / neutral / strong_outflow
+-    &quot;r7_cap_adjustment&quot;: 0.0,              // strong_inflow +0.05, strong_outflow -0.10
++    &quot;r7_northbound_strength&quot;: null,        // 可选参考；缺失为 null，不写 neutral
++    &quot;r7_cap_adjustment&quot;: null,             // 缺失跳过该项；有效参考原 strong_inflow +0.05 / strong_outflow -0.10 不变
+    &quot;r1_sentiment_score&quot;: 75,              // 来自 R1
+    &quot;emotion_cycle_phase&quot;: &quot;贪婪&quot;,          // 来自 Step 0.5
+    &quot;emotion_cap_override&quot;: 0.60,          // 情绪联动:贪婪 → 顶格 0.60
+    &quot;r2_main_lines_count&quot;: 2,
+    &quot;main_lines_cap_multiplier&quot;: 1.0,      // 1 main=0.8, 2 main=1.0, 3 main=1.1
+    &quot;final_position_cap_pct&quot;: 0.60,
+-    &quot;derivation_formula&quot;: &quot;min(r1_raw=0.60, r7_adj=0.60, emotion_override=0.60) × main_lines_mult=1.0 = 0.60&quot;,
++    &quot;derivation_formula&quot;: &quot;min(r1_raw=0.60, emotion_override=0.60) × main_lines_mult=1.0 = 0.60；北向缺失项未参与&quot;,
+    &quot;derivation_confidence&quot;: 0.85
+  }
+}
+</code></pre>
+<p>-<strong>公式</strong>:<br/>
++<strong>公式</strong>（缺北向时跳过北向项，其余原公式/数字不变；上游有效零预算或禁令优先，不得用本示例的 clamp 下限恢复仓位）:</p>
+<pre><code>raw_cap = R1 风格给出的 cap
+-r7_adj = raw_cap + r7_cap_adjustment
++r7_adj = None if r7_cap_adjustment is None else raw_cap + r7_cap_adjustment
+emotion_override = 0.60 if phase==贪婪/狂热 else 0.55 if phase==极恐 else raw_cap
+main_mult = {1: 0.8, 2: 1.0, 3: 1.1}.get(main_lines_count, 0.7)
+-final = min(raw_cap, r7_adj, emotion_override) * main_mult
++final = min(raw_cap, emotion_override) * main_mult if r7_cap_adjustment is None else min(raw_cap, r7_adj, emotion_override) * main_mult
+clamp(final, 0.20, 0.85)
+</code></pre>
+<p>@@ -1184,8 +1186,8 @@<br/>
+},<br/>
+{<br/>
+“code”: “R7_STALE”,</p>
+<ul>
+<li>
+<pre><code> &quot;description&quot;: &quot;R7 staleness_status = unavailable → 不开仓(资金维度失效)&quot;,
+</code></pre>
+</li>
+<li>
+<pre><code> &quot;active&quot;: true                       // 命中时, plan.md 顶部必须显式标 &quot;⚠️ R7 数据失效,今日 no_trade&quot;
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>
+<pre><code> &quot;description&quot;: &quot;R7 主产物缺失或现有契约要求的必要资金证据真正失效 → 不开仓；仅北向参考缺失/延迟不触发&quot;,
+</code></pre>
+</li>
+<li>
+<pre><code> &quot;active&quot;: false                      // 必须按实际必要数据缺口判定；真触发仍在顶部展示禁新仓
+</code></pre>
+},<br/>
+{<br/>
+“code”: “GLOBAL_SEVERITY_3”,<br/>
+@@ -1213,8 +1215,8 @@</li>
+</ul>
+<p><strong>降级</strong>:</p>
+<ul>
+<li>R1 缺 → <code>R1_FAIL</code> 自动 <code>active: true</code><br/>
+— R7 缺 → <code>R7_STALE</code> 自动 <code>active: true</code><br/>
+— 全部不交易条件自动激活,plan 报 <code>no_trade_mode</code> 状态<br/>
++- R7 主产物缺失或现有契约要求的必要资金证据真正失效 → <code>R7_STALE</code> 为 <code>active: true</code>；仅北向参考缺失/延迟不触发，顶层 unavailable 须核其实际原因，不把其余有效资金证据一并抹去<br/>
++- 不交易条件按各自原触发条件逐条核实；不因北向缺失联动激活其他条件，任一真实 active 项仍按既有禁新仓与研究观察契约处理</li>
+</ul>
+<h3 id="step-27--跷跷板强对冲减仓2026-09-06-周末会议纪要落地">Step 2.7 — 跷跷板强对冲减仓（2026-09-06 周末会议纪要落地）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-27--跷跷板强对冲减仓2026-09-06-周末会议纪要落地" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>
+## 验证边界
+
+父审核对当前哈希、全部替换唯一性；在独立scratch目录实际正向检查/应用和反向检查/恢复，3份前后哈希一致；未写生产目标。原子任务的8个合成案例仅证明既有验证者对日期/缺失/零值的行为，不是新规则的生产验收。本版另纠正原草案将日频/季度接口写成盘中参考的表述。生产补跑与模拟执行另行验收，不因本草案自动完成。
+</code></pre></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-993" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#北向仅参考长期规则差异待确认" data-for="北向仅参考长期规则差异待确认">北向仅参考：长期规则差异待确认</a></li><li class="depth-1"><a href="#变化摘要" data-for="变化摘要">变化摘要</a></li><li class="depth-1"><a href="#精确前置与拟议结果" data-for="精确前置与拟议结果">精确前置与拟议结果</a></li><li class="depth-1"><a href="#精确差异" data-for="精确差异">精确差异</a></li><li class="depth-2"><a href="#step-27--跷跷板强对冲减仓2026-09-06-周末会议纪要落地" data-for="step-27--跷跷板强对冲减仓2026-09-06-周末会议纪要落地">Step 2.7 — 跷跷板强对冲减仓（2026-09-06 周末会议纪要落地）</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,65 @@
+FFFFFF.                                                                  [100%]
+=================================== FAILURES ===================================
+______ test_typed_single_item_completion_is_consumed_without_global_pass _______
+tests/pipeline/test_r6_consumer_continuation.py:51: in test_typed_single_item_completion_is_consumed_without_global_pass
+    assert p.returncode==0,p.stderr
+E   AssertionError: [event_reassessment] rejected: unreviewed stock cannot claim new approval
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python', '-B', 'scripts/plan/run_retreat_reversa...zl_kg/投研交易/翻多检测/20261029.md"}\n', stderr='[event_reassessment] rejected: unreviewed stock cannot claim new approval\n').returncode
+_ test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean[missing_mode] __
+tests/pipeline/test_r6_consumer_continuation.py:71: in test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean
+    assert p.returncode==1,(p.stdout,p.stderr)
+E   AssertionError: ('{"state": "reversal_confirmed", "suggested_cap": 0.45, "cap_semantics": "reference", "trading_authorized": false, "j.../20261029.md"}
+E     [event_reassessment] published 8545eec762c2fdae7888b49fc2a277c1795d4993205f4507928d73c0d3a47ebe
+E     ', '')
+E   assert 0 == 1
+E    +  where 0 = CompletedProcess(args=['/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python', '-B', 'scripts/plan/run_retreat_reversa...29.md"}\n[event_reassessment] published 8545eec762c2fdae7888b49fc2a277c1795d4993205f4507928d73c0d3a47ebe\n', stderr='').returncode
+____ test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean[bad_ref] ____
+tests/pipeline/test_r6_consumer_continuation.py:71: in test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean
+    assert p.returncode==1,(p.stdout,p.stderr)
+E   AssertionError: ('{"state": "reversal_confirmed", "suggested_cap": 0.45, "cap_semantics": "reference", "trading_authorized": false, "j.../20261029.md"}
+E     [event_reassessment] published b6dd8a57fc9a52f82ce5aef56db99f035bd5758e87afb32cb2b158207ed140a0
+E     ', '')
+E   assert 0 == 1
+E    +  where 0 = CompletedProcess(args=['/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python', '-B', 'scripts/plan/run_retreat_reversa...29.md"}\n[event_reassessment] published b6dd8a57fc9a52f82ce5aef56db99f035bd5758e87afb32cb2b158207ed140a0\n', stderr='').returncode
+___ test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean[hard_veto] ___
+tests/pipeline/test_r6_consumer_continuation.py:71: in test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean
+    assert p.returncode==1,(p.stdout,p.stderr)
+E   AssertionError: ('{"state": "reversal_confirmed", "suggested_cap": 0.45, "cap_semantics": "reference", "trading_authorized": false, "j.../20261029.md"}
+E     [event_reassessment] published 4c51481c0c7a504fac2ab4f2f67ac5091e43f23dbbce4dbe6c80c496e96513f0
+E     ', '')
+E   assert 0 == 1
+E    +  where 0 = CompletedProcess(args=['/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python', '-B', 'scripts/plan/run_retreat_reversa...29.md"}\n[event_reassessment] published 4c51481c0c7a504fac2ab4f2f67ac5091e43f23dbbce4dbe6c80c496e96513f0\n', stderr='').returncode
+________ test_selective_owner_receives_actual_bound_auxiliary_payloads _________
+tests/pipeline/test_r6_consumer_continuation.py:95: in test_selective_owner_receives_actual_bound_auxiliary_payloads
+    assert {k:v['payload'] for k,v in ctx['auxiliary_inputs'].items()}==n.expected_auxiliary
+                                      ^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'auxiliary_inputs'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 安全版已交付，但仍须重评: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] reassessment incomplete; rule fallback cannot replace the interim LLM decision
+_____ test_selective_owner_receives_unavailable_as_gaps_not_empty_success ______
+tests/pipeline/test_r6_consumer_continuation.py:108: in test_selective_owner_receives_unavailable_as_gaps_not_empty_success
+    assert set(ctx['auxiliary_inputs'])=={'attention','emotion_cycle'}
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'auxiliary_inputs'
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stdout call -----------------------------
+❌ LLM 安全版已交付，但仍须重评: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] reassessment incomplete; rule fallback cannot replace the interim LLM decision
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_r6_consumer_continuation.py::test_typed_single_item_completion_is_consumed_without_global_pass
+FAILED tests/pipeline/test_r6_consumer_continuation.py::test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean[missing_mode]
+FAILED tests/pipeline/test_r6_consumer_continuation.py::test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean[bad_ref]
+FAILED tests/pipeline/test_r6_consumer_continuation.py::test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean[hard_veto]
+FAILED tests/pipeline/test_r6_consumer_continuation.py::test_selective_owner_receives_actual_bound_auxiliary_payloads
+FAILED tests/pipeline/test_r6_consumer_continuation.py::test_selective_owner_receives_unavailable_as_gaps_not_empty_success
+6 failed, 1 passed in 3.85s

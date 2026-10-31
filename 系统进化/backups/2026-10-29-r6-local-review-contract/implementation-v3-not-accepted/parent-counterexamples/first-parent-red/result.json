@@ -1,0 +1,22 @@
+{
+  "exit_code": 1,
+  "cases": [
+    {
+      "name": "test_second_distinct_incomplete_target_can_be_reviewed_without_restarting_base",
+      "failed": true,
+      "error": false
+    },
+    {
+      "name": "test_new_hard_reject_without_original_contract_evidence_is_rejected",
+      "failed": true,
+      "error": false
+    },
+    {
+      "name": "test_new_valid_evidence_can_replace_old_incomplete_null_reference",
+      "failed": true,
+      "error": false
+    }
+  ],
+  "source_unchanged": true,
+  "guard_violations": []
+}

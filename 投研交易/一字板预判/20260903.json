@@ -1,0 +1,26 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260903",
+  "next_day": "20260904",
+  "generated_at": "2026-10-17T18:55:28+08:00",
+  "n_total": 44,
+  "n_candidates": 1,
+  "candidates": [
+    {
+      "ts_code": "601086.SH",
+      "name": "国芳集团",
+      "industry": "一般零售",
+      "limit_times": 5,
+      "fd_amount_yi": 1.07,
+      "pct_chg": 10.0,
+      "prob_yizi": 20.0,
+      "prob_up": 42.0,
+      "rank": "关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=1.1亿 (一字率19%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停44只，筛出 1 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

@@ -1,0 +1,2447 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>20261029</title><meta charset="utf-8"/><link rel="preload" href="../../index-5a23ce28.css" as="style"/><link rel="preload" href="../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="20261029"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="20261029"/><meta name="twitter:description" content="数据源台账 · 2026-10-29 生成/快照时间：2026-10-29T08:30:42+08:00 · 引擎：scripts/health/datasource_ledger.py 总览：125/203 正常 · 🟡 32 降级 · 🔴 30 失败 · ⏳ 7 待产出 · ⏸️ 9 停用/合法跳过 统一单位：(层级, 稳定 key)，同一单位取最差；不同 job 或产物不因报错相同而合并。降级不是失败；wrapper completed 不证明业务完成。 一、结论速览 ✅ 无 critical 真失败；质量降级、待产出和合法跳过见下表。 二、分层明细 L1 抓取层（3/6 正常 · ..."/><meta property="og:description" content="数据源台账 · 2026-10-29 生成/快照时间：2026-10-29T08:30:42+08:00 · 引擎：scripts/health/datasource_ledger.py 总览：125/203 正常 · 🟡 32 降级 · 🔴 30 失败 · ⏳ 7 待产出 · ⏸️ 9 停用/合法跳过 统一单位：(层级, 稳定 key)，同一单位取最差；不同 job 或产物不因报错相同而合并。降级不是失败；wrapper completed 不证明业务完成。 一、结论速览 ✅ 无 critical 真失败；质量降级、待产出和合法跳过见下表。 二、分层明细 L1 抓取层（3/6 正常 · ..."/><meta property="og:image:alt" content="数据源台账 · 2026-10-29 生成/快照时间：2026-10-29T08:30:42+08:00 · 引擎：scripts/health/datasource_ledger.py 总览：125/203 正常 · 🟡 32 降级 · 🔴 30 失败 · ⏳ 7 待产出 · ⏸️ 9 停用/合法跳过 统一单位：(层级, 稳定 key)，同一单位取最差；不同 job 或产物不因报错相同而合并。降级不是失败；wrapper completed 不证明业务完成。 一、结论速览 ✅ 无 critical 真失败；质量降级、待产出和合法跳过见下表。 二、分层明细 L1 抓取层（3/6 正常 · ..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/投研交易/数据源台账/20261029"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/投研交易/数据源台账/20261029"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="数据源台账 · 2026-10-29 生成/快照时间：2026-10-29T08:30:42+08:00 · 引擎：scripts/health/datasource_ledger.py 总览：125/203 正常 · 🟡 32 降级 · 🔴 30 失败 · ⏳ 7 待产出 · ⏸️ 9 停用/合法跳过 统一单位：(层级, 稳定 key)，同一单位取最差；不同 job 或产物不因报错相同而合并。降级不是失败；wrapper completed 不证明业务完成。 一、结论速览 ✅ 无 critical 真失败；质量降级、待产出和合法跳过见下表。 二、分层明细 L1 抓取层（3/6 正常 · ..."/><meta name="generator" content="Quartz"/><link href="../../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="投研交易/数据源台账/20261029" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-551" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-551" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../投研交易/">投研交易</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../投研交易/数据源台账/">数据源台账</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>20261029</a></div></nav><h1 class="article-title">20261029</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-29T00:30:45.000Z">2026年10月29日</time><span>61分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="数据源台账--2026-10-29">数据源台账 · 2026-10-29<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据源台账--2026-10-29" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>生成/快照时间：2026-10-29T08:30:42+08:00 · 引擎：<code>scripts/health/datasource_ledger.py</code><br/>
+总览：<strong>125/203 正常</strong> · 🟡 32 降级 · 🔴 30 失败 · ⏳ 7 待产出 · ⏸️ 9 停用/合法跳过<br/>
+统一单位：(层级, 稳定 key)，同一单位取最差；不同 job 或产物不因报错相同而合并。降级不是失败；wrapper completed 不证明业务完成。</p>
+</blockquote>
+<h2 id="一结论速览">一、结论速览<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一结论速览" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>✅ 无 critical 真失败；质量降级、待产出和合法跳过见下表。</p>
+<h2 id="二分层明细">二、分层明细<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二分层明细" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="l1-抓取层36-正常---1-降级---0-失败---0-待产出--️-2-跳过">L1 抓取层（3/6 正常 · 🟡 1 降级 · 🔴 0 失败 · ⏳ 0 待产出 · ⏸️ 2 跳过）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#l1-抓取层36-正常---1-降级---0-失败---0-待产出--️-2-跳过" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>状态</th><th>源 / job / 产物（稳定 key）</th><th>条数</th><th>观测时间</th><th>备注</th></tr></thead><tbody><tr><td>⏸️</td><td>公众号 (公号三刀 sanji) (<code>wechat_official_sanji</code>)</td><td>[]</td><td>-</td><td>用户 2026-08-20 取消（需每天手动同步，嫌麻烦）</td></tr><tr><td>✅</td><td>微信群 5 群 (wechat-cli) (<code>wechat_cli_groups</code>)</td><td>614</td><td>-</td><td>5/5 群正常</td></tr><tr><td>⏸️</td><td>WeFlow 群聊情绪快照 (<code>weflow_snapshot</code>)</td><td>-</td><td>2026-10-29T06:03:05+08:00</td><td>ngrok 隧道离线（2026-08-19 起），cron 已暂停</td></tr><tr><td>🟡</td><td>外盘快照 (美股/亚太/FX) (<code>overseas_snapshot</code>)</td><td>-</td><td>2026-10-29T06:03:06+08:00</td><td>status=degraded</td></tr><tr><td>✅</td><td>新闻补足 (财联社/要闻/业绩预告) (<code>news_extras</code>)</td><td>3784</td><td>2026-10-29T06:03:11+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>公众号 (取阅 RSS) (<code>wechat_official_rss</code>)</td><td>95</td><td>2026-10-29T06:01:51+08:00</td><td>可达 15/15 号 · core 9/9</td></tr></tbody></table></div>
+<h3 id="l2-mcpapi1218-正常---0-降级---0-失败---0-待产出--️-6-跳过">L2 MCP/API（12/18 正常 · 🟡 0 降级 · 🔴 0 失败 · ⏳ 0 待产出 · ⏸️ 6 跳过）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#l2-mcpapi1218-正常---0-降级---0-失败---0-待产出--️-6-跳过" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>状态</th><th>源 / job / 产物（稳定 key）</th><th>条数</th><th>观测时间</th><th>备注</th></tr></thead><tbody><tr><td>✅</td><td>chenhailangju-research (<code>source:chenhailangju-research</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>2488ms · 5 tools</td></tr><tr><td>⏸️</td><td>weflow-analytics (<code>source:weflow-analytics</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>已知停用：ngrok 隧道离线（2026-08-19 起），cron 已暂停 · 原始说明：Server ‘weflow-analytics’ not found in config.</td></tr><tr><td>⏸️</td><td>agentqmt_qmt (<code>source:agentqmt_qmt</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>已知停用：Windows miniQMT 主机离线/局域网不可达（盘中才需要） · 原始说明：timeout>45s</td></tr><tr><td>✅</td><td>tushareMcp (<code>source:tushareMcp</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>2473ms · 258 tools</td></tr><tr><td>✅</td><td>datapro (<code>source:datapro</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>1739ms · 1 tools · status=None</td></tr><tr><td>✅</td><td>canghai-sise (<code>source:canghai-sise</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>2517ms · 5 tools</td></tr><tr><td>✅</td><td>canghai-charts (<code>source:canghai-charts</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>1509ms · 4 tools</td></tr><tr><td>✅</td><td>rss_official (<code>source:rss_official</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>feed 可达但 0 条 = 该号近期未发文或订阅尚未抓完历史, 非故障</td></tr><tr><td>⏸️</td><td>sanji (<code>source:sanji</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>已知停用：用户 2026-08-20 取消（需每天手动同步，嫌麻烦） · 原始说明：initialize HTTP 502</td></tr><tr><td>⏸️</td><td>mptext (<code>source:mptext</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>已知停用：2026-08-16 被微信封禁（ret=200013），无法恢复 · 原始说明：authkey HTTP 502</td></tr><tr><td>✅</td><td>tushare (<code>source:tushare</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>status=None</td></tr><tr><td>✅</td><td>xtick (<code>source:xtick</code>)</td><td>5</td><td>2026-10-29T06:02:44</td><td>401ms</td></tr><tr><td>⏸️</td><td>weflow (<code>source:weflow</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>已知停用：ngrok 隧道离线（2026-08-19 起），cron 已暂停 · 原始说明：ngrok 隧道离线 (ERR_NGROK)</td></tr><tr><td>⏸️</td><td>qmt (<code>source:qmt</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>已知停用：Windows miniQMT 主机离线/局域网不可达（盘中才需要）</td></tr><tr><td>✅</td><td>iwencai (<code>source:iwencai</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>SSL verify disabled (iwencai 证书 hostname mismatch)</td></tr><tr><td>✅</td><td>tushare_anns (<code>source:tushare_anns</code>)</td><td>4017</td><td>2026-10-29T06:02:44</td><td>status=None</td></tr><tr><td>✅</td><td>tushare_major (<code>source:tushare_major</code>)</td><td>300</td><td>2026-10-29T06:02:44</td><td>status=None</td></tr><tr><td>✅</td><td>llm (<code>source:llm</code>)</td><td>-</td><td>2026-10-29T06:02:44</td><td>status=None</td></tr></tbody></table></div>
+<h3 id="l3-研究层108167-正常---28-降级---30-失败---0-待产出--️-1-跳过">L3 研究层（108/167 正常 · 🟡 28 降级 · 🔴 30 失败 · ⏳ 0 待产出 · ⏸️ 1 跳过）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#l3-研究层108167-正常---28-降级---30-失败---0-待产出--️-1-跳过" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>状态</th><th>源 / job / 产物（稳定 key）</th><th>条数</th><th>观测时间</th><th>备注</th></tr></thead><tbody><tr><td>🟡</td><td>R1 消费口径 (<code>research:R1</code>)</td><td>17</td><td>2026-10-29T06:23:54.965292+08:00</td><td>status=degraded conf=0.392</td></tr><tr><td>🟡</td><td>R2 消费口径 (<code>research:R2</code>)</td><td>-</td><td>2026-10-29T06:40:10+08:00</td><td>status=partial conf=0.392</td></tr><tr><td>🔴</td><td>R2 明细 · R1 (<code>research:R2:R1</code>)</td><td>1</td><td>2026-10-29T06:23:54.965292+08:00</td><td>status=error · 上游降级或partial；已解析当前版本，不是工具抓取成功声明</td></tr><tr><td>🔴</td><td>R2 明细 · R3 (<code>research:R2:R3</code>)</td><td>1</td><td>2026-10-29T06:31:38+08:00</td><td>status=error · 上游降级或partial；已解析当前版本，不是工具抓取成功声明</td></tr><tr><td>🔴</td><td>R2 明细 · R4 (<code>research:R2:R4</code>)</td><td>1</td><td>2026-10-29T06:23:34+08:00</td><td>status=error · 上游降级或partial；已解析当前版本，不是工具抓取成功声明</td></tr><tr><td>🔴</td><td>R2 明细 · R7 (<code>research:R2:R7</code>)</td><td>1</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=error · 上游降级或partial；已解析当前版本，不是工具抓取成功声明</td></tr><tr><td>🟡</td><td>R3 消费口径 (<code>research:R3</code>)</td><td>-</td><td>2026-10-29T06:31:38+08:00</td><td>status=degraded conf=0.364</td></tr><tr><td>⏸️</td><td>R3 明细 · weflow (<code>research:R3:weflow</code>)</td><td>-</td><td>-</td><td>status=retired_not_called · 已知停用：ngrok 隧道离线（2026-08-19 起），cron 已暂停</td></tr><tr><td>🟡</td><td>R3 明细 · wechat_cli_by_group.群01 (<code>research:R3:wechat_cli_by_group.群01</code>)</td><td>-</td><td>-</td><td>status=partial_readability</td></tr><tr><td>🟡</td><td>R3 明细 · wechat_cli_by_group.群02 (<code>research:R3:wechat_cli_by_group.群02</code>)</td><td>-</td><td>-</td><td>status=partial_readability</td></tr><tr><td>🟡</td><td>R3 明细 · wechat_cli_by_group.群03 (<code>research:R3:wechat_cli_by_group.群03</code>)</td><td>-</td><td>-</td><td>status=partial_readability</td></tr><tr><td>🟡</td><td>R3 明细 · wechat_cli_by_group.群04 (<code>research:R3:wechat_cli_by_group.群04</code>)</td><td>-</td><td>-</td><td>status=partial_readability</td></tr><tr><td>🟡</td><td>R3 明细 · wechat_cli_by_group.群05 (<code>research:R3:wechat_cli_by_group.群05</code>)</td><td>-</td><td>-</td><td>status=partial_readability</td></tr><tr><td>🟡</td><td>R3 明细 · hotlist.ths (<code>research:R3:hotlist.ths</code>)</td><td>-</td><td>-</td><td>status=ok_latest_completed_session</td></tr><tr><td>🟡</td><td>R3 明细 · hotlist.eastmoney (<code>research:R3:hotlist.eastmoney</code>)</td><td>-</td><td>-</td><td>status=ok_latest_completed_session</td></tr><tr><td>🟡</td><td>R3 明细 · hotlist.20261029 (<code>research:R3:hotlist.20261029</code>)</td><td>-</td><td>-</td><td>status=empty_premarket_not_zero_interest</td></tr><tr><td>🟡</td><td>R3 明细 · xtick (<code>research:R3:xtick</code>)</td><td>-</td><td>-</td><td>status=http_fallback</td></tr><tr><td>🟡</td><td>R3 明细 · attention_signals (<code>research:R3:attention_signals</code>)</td><td>-</td><td>-</td><td>status=rebuilt_live_2day_partial_history</td></tr><tr><td>🟡</td><td>R3 明细 · official_rss (<code>research:R3:official_rss</code>)</td><td>-</td><td>-</td><td>status=ok_supplement_only</td></tr><tr><td>🟡</td><td>R3 明细 · manifest (<code>research:R3:manifest</code>)</td><td>-</td><td>-</td><td>status=severity_2</td></tr><tr><td>🟡</td><td>R3 明细 · mcp_health (<code>research:R3:mcp_health</code>)</td><td>-</td><td>-</td><td>status=fetch_health_not_a_current_probe</td></tr><tr><td>🟡</td><td>R3 明细 · hithink (<code>research:R3:hithink</code>)</td><td>-</td><td>-</td><td>status=not_called_optional</td></tr><tr><td>🟡</td><td>R3 明细 · moneyflow (<code>research:R3:moneyflow</code>)</td><td>-</td><td>-</td><td>status=industry_and_concept_live_checks_only_not_individual_stock_verification</td></tr><tr><td>🟡</td><td>R4 消费口径 (<code>research:R4</code>)</td><td>12</td><td>2026-10-29T06:23:34+08:00</td><td>status=partial conf=0.64</td></tr><tr><td>🟡</td><td>R4 明细 · news_cls (<code>research:R4:news_cls</code>)</td><td>2984</td><td>2026-10-29T06:03:11+08:00</td><td>status=stale · 快讯不满72h且不含cls；major正文为空/窗口受限；公众号为昨日文章 · status=stale</td></tr><tr><td>🟡</td><td>R4 明细 · news_major (<code>research:R4:news_major</code>)</td><td>800</td><td>2026-10-29T06:03:11+08:00</td><td>status=stale · 快讯不满72h且不含cls；major正文为空/窗口受限；公众号为昨日文章 · status=stale</td></tr><tr><td>🟡</td><td>R4 明细 · wechat_official_20 (<code>research:R4:wechat_official_20</code>)</td><td>95</td><td>-</td><td>status=stale · 快讯不满72h且不含cls；major正文为空/窗口受限；公众号为昨日文章 · status=stale</td></tr><tr><td>✅</td><td>R4 明细 · wechat_cli_5groups (<code>research:R4:wechat_cli_5groups</code>)</td><td>614</td><td>-</td><td>status=ok</td></tr><tr><td>✅</td><td>R4 明细 · anns_window (<code>research:R4:anns_window</code>)</td><td>8598</td><td>2026-10-29T06:03:11+08:00</td><td>status=ok</td></tr><tr><td>🟡</td><td>R4 明细 · eastmoney_earnings_predict (<code>research:R4:eastmoney_earnings_predict</code>)</td><td>500</td><td>2026-10-29T06:03:11+08:00</td><td>status=stale · 报告期2026Q3；最新公告10月24日，不是29日预告全集 · status=stale</td></tr><tr><td>✅</td><td>R4 明细 · official_primary_live (<code>research:R4:official_primary_live</code>)</td><td>8</td><td>2026-10-29T06:19:42+08:00</td><td>status=ok</td></tr><tr><td>🔴</td><td>R4 明细 · hithink_business_query (<code>research:R4:hithink_business_query</code>)</td><td>4</td><td>2026-10-29T06:14:50.889503+08:00</td><td>status=ok · 主营期别未返回；相关性比例评分未编造 · status=ok</td></tr><tr><td>🔴</td><td>R4 明细 · hithink_market_query (<code>research:R4:hithink_market_query</code>)</td><td>3</td><td>2026-10-29T06:14:50.691602+08:00</td><td>status=ok · 概念与主营仅用于研究对象，不当龙头认定 · status=ok</td></tr><tr><td>✅</td><td>R4 明细 · announcement_search (<code>research:R4:announcement_search</code>)</td><td>-</td><td>2026-10-29T06:14:49.834225+08:00</td><td>status=ok</td></tr><tr><td>🔴</td><td>R4 明细 · MCP_cross_verification (<code>research:R4:MCP_cross_verification</code>)</td><td>-</td><td>-</td><td>status=error · 本profile主控禁止直接MCP且本会话无delegation工具；未执行，已用官方原文及问财OpenAPI替代但不宣称等价完成 · status=error</td></tr><tr><td>🔴</td><td>R4 明细 · R3_R7_same_day (<code>research:R4:R3_R7_same_day</code>)</td><td>0</td><td>-</td><td>status=error · 检查时R1-R7尚未落盘；不反向依赖等待，KOL独立核验及资金确认未完成 · status=error</td></tr><tr><td>🟡</td><td>R5 消费口径 (<code>research:R5</code>)</td><td>-</td><td>2026-10-29T06:56:30+08:00</td><td>status=partial conf=0.2625</td></tr><tr><td>🔴</td><td>R5 明细 · R1 (<code>research:R5:R1</code>)</td><td>1</td><td>2026-10-29T06:23:54.965292+08:00</td><td>status=error · 上游自身降级；本轮已消费，不代表读取失败</td></tr><tr><td>🔴</td><td>R5 明细 · R2 (<code>research:R5:R2</code>)</td><td>1</td><td>2026-10-29T06:40:10+08:00</td><td>status=error · 上游自身降级；本轮已消费，不代表读取失败</td></tr><tr><td>🔴</td><td>R5 明细 · R3 (<code>research:R5:R3</code>)</td><td>1</td><td>2026-10-29T06:31:38+08:00</td><td>status=error · 上游自身降级；本轮已消费，不代表读取失败</td></tr><tr><td>🔴</td><td>R5 明细 · R4 (<code>research:R5:R4</code>)</td><td>1</td><td>2026-10-29T06:23:34+08:00</td><td>status=error · 上游自身降级；本轮已消费，不代表读取失败</td></tr><tr><td>🔴</td><td>R5 明细 · R7 (<code>research:R5:R7</code>)</td><td>1</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=error · 上游自身降级；本轮已消费，不代表读取失败</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/adj_factor (<code>research:R5:002708.SZ/adj_factor</code>)</td><td>80</td><td>2026-10-29T06:46:53.018817+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/moneyflow (<code>research:R5:002708.SZ/moneyflow</code>)</td><td>10</td><td>2026-10-29T06:46:53.019545+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/daily (<code>research:R5:002708.SZ/daily</code>)</td><td>80</td><td>2026-10-29T06:46:53.018638+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/block_trade (<code>research:R5:002708.SZ/block_trade</code>)</td><td>0</td><td>2026-10-29T06:46:53.019227+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/margin_detail (<code>research:R5:002708.SZ/margin_detail</code>)</td><td>0</td><td>2026-10-29T06:46:53.019370+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/moneyflow_dc (<code>research:R5:002708.SZ/moneyflow_dc</code>)</td><td>10</td><td>2026-10-29T06:46:53.145340+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/report_rc (<code>research:R5:002708.SZ/report_rc</code>)</td><td>12</td><td>2026-10-29T06:46:53.148275+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/fina_indicator (<code>research:R5:002708.SZ/fina_indicator</code>)</td><td>4</td><td>2026-10-29T06:46:53.146353+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/daily_basic (<code>research:R5:002708.SZ/daily_basic</code>)</td><td>717</td><td>2026-10-29T06:46:53.019073+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/limit_list_d (<code>research:R5:002708.SZ/limit_list_d</code>)</td><td>3</td><td>2026-10-29T06:46:53.188046+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/forecast (<code>research:R5:002708.SZ/forecast</code>)</td><td>0</td><td>2026-10-29T06:46:53.255862+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/anns_d (<code>research:R5:002708.SZ/anns_d</code>)</td><td>2</td><td>2026-10-29T06:46:53.149036+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/stk_surv (<code>research:R5:002708.SZ/stk_surv</code>)</td><td>0</td><td>2026-10-29T06:46:53.269433+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/pledge_stat (<code>research:R5:002708.SZ/pledge_stat</code>)</td><td>0</td><td>2026-10-29T06:46:53.281053+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002708.SZ/stk_holdernumber (<code>research:R5:002708.SZ/stk_holdernumber</code>)</td><td>3</td><td>2026-10-29T06:46:53.274435+08:00</td><td>status=ok</td></tr><tr><td>🔴</td><td>R5 明细 · 002708.SZ/top_list (<code>research:R5:002708.SZ/top_list</code>)</td><td>0</td><td>2026-10-29T06:46:53.293854+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>🔴</td><td>R5 明细 · 002708.SZ/top_inst (<code>research:R5:002708.SZ/top_inst</code>)</td><td>0</td><td>2026-10-29T06:46:53.363694+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/block_trade (<code>research:R5:002636.SZ/block_trade</code>)</td><td>0</td><td>2026-10-29T06:46:53.398754+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/adj_factor (<code>research:R5:002636.SZ/adj_factor</code>)</td><td>80</td><td>2026-10-29T06:46:53.382146+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/daily (<code>research:R5:002636.SZ/daily</code>)</td><td>80</td><td>2026-10-29T06:46:53.372819+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/daily_basic (<code>research:R5:002636.SZ/daily_basic</code>)</td><td>726</td><td>2026-10-29T06:46:53.395649+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/moneyflow (<code>research:R5:002636.SZ/moneyflow</code>)</td><td>10</td><td>2026-10-29T06:46:53.573479+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/margin_detail (<code>research:R5:002636.SZ/margin_detail</code>)</td><td>25</td><td>2026-10-29T06:46:53.569928+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/moneyflow_dc (<code>research:R5:002636.SZ/moneyflow_dc</code>)</td><td>10</td><td>2026-10-29T06:46:53.581234+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/fina_indicator (<code>research:R5:002636.SZ/fina_indicator</code>)</td><td>5</td><td>2026-10-29T06:46:53.654657+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/report_rc (<code>research:R5:002636.SZ/report_rc</code>)</td><td>0</td><td>2026-10-29T06:46:53.698191+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/limit_list_d (<code>research:R5:002636.SZ/limit_list_d</code>)</td><td>4</td><td>2026-10-29T06:46:53.715375+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/forecast (<code>research:R5:002636.SZ/forecast</code>)</td><td>0</td><td>2026-10-29T06:46:53.765986+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/anns_d (<code>research:R5:002636.SZ/anns_d</code>)</td><td>2</td><td>2026-10-29T06:46:53.699925+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/stk_holdernumber (<code>research:R5:002636.SZ/stk_holdernumber</code>)</td><td>4</td><td>2026-10-29T06:46:53.846108+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/stk_surv (<code>research:R5:002636.SZ/stk_surv</code>)</td><td>0</td><td>2026-10-29T06:46:53.832728+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 002636.SZ/pledge_stat (<code>research:R5:002636.SZ/pledge_stat</code>)</td><td>0</td><td>2026-10-29T06:46:53.875420+08:00</td><td>status=ok</td></tr><tr><td>🔴</td><td>R5 明细 · 002636.SZ/top_inst (<code>research:R5:002636.SZ/top_inst</code>)</td><td>0</td><td>2026-10-29T06:46:53.949674+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>🔴</td><td>R5 明细 · 002636.SZ/top_list (<code>research:R5:002636.SZ/top_list</code>)</td><td>0</td><td>2026-10-29T06:46:53.931630+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/adj_factor (<code>research:R5:600601.SH/adj_factor</code>)</td><td>80</td><td>2026-10-29T06:46:53.981520+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/daily (<code>research:R5:600601.SH/daily</code>)</td><td>80</td><td>2026-10-29T06:46:53.952958+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/block_trade (<code>research:R5:600601.SH/block_trade</code>)</td><td>0</td><td>2026-10-29T06:46:54.151455+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/daily_basic (<code>research:R5:600601.SH/daily_basic</code>)</td><td>726</td><td>2026-10-29T06:46:54.148188+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/margin_detail (<code>research:R5:600601.SH/margin_detail</code>)</td><td>25</td><td>2026-10-29T06:46:54.264822+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/moneyflow (<code>research:R5:600601.SH/moneyflow</code>)</td><td>10</td><td>2026-10-29T06:46:54.348899+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/moneyflow_dc (<code>research:R5:600601.SH/moneyflow_dc</code>)</td><td>10</td><td>2026-10-29T06:46:54.389143+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/report_rc (<code>research:R5:600601.SH/report_rc</code>)</td><td>0</td><td>2026-10-29T06:46:54.501872+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/anns_d (<code>research:R5:600601.SH/anns_d</code>)</td><td>14</td><td>2026-10-29T06:46:54.672959+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/limit_list_d (<code>research:R5:600601.SH/limit_list_d</code>)</td><td>1</td><td>2026-10-29T06:46:54.868250+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/fina_indicator (<code>research:R5:600601.SH/fina_indicator</code>)</td><td>6</td><td>2026-10-29T06:46:54.467089+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/forecast (<code>research:R5:600601.SH/forecast</code>)</td><td>0</td><td>2026-10-29T06:46:55.013852+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/stk_surv (<code>research:R5:600601.SH/stk_surv</code>)</td><td>0</td><td>2026-10-29T06:46:55.181629+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/stk_holdernumber (<code>research:R5:600601.SH/stk_holdernumber</code>)</td><td>7</td><td>2026-10-29T06:46:55.197900+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 600601.SH/pledge_stat (<code>research:R5:600601.SH/pledge_stat</code>)</td><td>0</td><td>2026-10-29T06:46:55.312082+08:00</td><td>status=ok</td></tr><tr><td>🔴</td><td>R5 明细 · 600601.SH/top_list (<code>research:R5:600601.SH/top_list</code>)</td><td>0</td><td>2026-10-29T06:46:55.316741+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>🔴</td><td>R5 明细 · 600601.SH/top_inst (<code>research:R5:600601.SH/top_inst</code>)</td><td>0</td><td>2026-10-29T06:46:55.491583+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/daily (<code>research:R5:300308.SZ/daily</code>)</td><td>80</td><td>2026-10-29T06:47:00.201547+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/adj_factor (<code>research:R5:300308.SZ/adj_factor</code>)</td><td>80</td><td>2026-10-29T06:47:00.396372+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/block_trade (<code>research:R5:300308.SZ/block_trade</code>)</td><td>27</td><td>2026-10-29T06:47:00.512836+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/margin_detail (<code>research:R5:300308.SZ/margin_detail</code>)</td><td>25</td><td>2026-10-29T06:47:00.596183+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/moneyflow (<code>research:R5:300308.SZ/moneyflow</code>)</td><td>10</td><td>2026-10-29T06:47:00.641431+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/daily_basic (<code>research:R5:300308.SZ/daily_basic</code>)</td><td>726</td><td>2026-10-29T06:47:00.488514+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/fina_indicator (<code>research:R5:300308.SZ/fina_indicator</code>)</td><td>3</td><td>2026-10-29T06:47:00.790576+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/report_rc (<code>research:R5:300308.SZ/report_rc</code>)</td><td>59</td><td>2026-10-29T06:47:00.796635+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/moneyflow_dc (<code>research:R5:300308.SZ/moneyflow_dc</code>)</td><td>10</td><td>2026-10-29T06:47:00.788744+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/forecast (<code>research:R5:300308.SZ/forecast</code>)</td><td>0</td><td>2026-10-29T06:47:01.021795+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/limit_list_d (<code>research:R5:300308.SZ/limit_list_d</code>)</td><td>0</td><td>2026-10-29T06:47:01.014815+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/stk_surv (<code>research:R5:300308.SZ/stk_surv</code>)</td><td>0</td><td>2026-10-29T06:47:01.024412+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/anns_d (<code>research:R5:300308.SZ/anns_d</code>)</td><td>4</td><td>2026-10-29T06:47:00.813014+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/stk_holdernumber (<code>research:R5:300308.SZ/stk_holdernumber</code>)</td><td>4</td><td>2026-10-29T06:47:01.180630+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 300308.SZ/pledge_stat (<code>research:R5:300308.SZ/pledge_stat</code>)</td><td>0</td><td>2026-10-29T06:47:01.182123+08:00</td><td>status=ok</td></tr><tr><td>🔴</td><td>R5 明细 · 300308.SZ/top_inst (<code>research:R5:300308.SZ/top_inst</code>)</td><td>0</td><td>2026-10-29T06:47:01.183446+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>🔴</td><td>R5 明细 · 300308.SZ/top_list (<code>research:R5:300308.SZ/top_list</code>)</td><td>0</td><td>2026-10-29T06:47:01.182730+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/adj_factor (<code>research:R5:000670.SZ/adj_factor</code>)</td><td>80</td><td>2026-10-29T06:47:01.314700+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/daily (<code>research:R5:000670.SZ/daily</code>)</td><td>80</td><td>2026-10-29T06:47:01.293209+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/block_trade (<code>research:R5:000670.SZ/block_trade</code>)</td><td>0</td><td>2026-10-29T06:47:01.501486+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/daily_basic (<code>research:R5:000670.SZ/daily_basic</code>)</td><td>706</td><td>2026-10-29T06:47:01.493333+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/margin_detail (<code>research:R5:000670.SZ/margin_detail</code>)</td><td>0</td><td>2026-10-29T06:47:01.702583+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/moneyflow (<code>research:R5:000670.SZ/moneyflow</code>)</td><td>10</td><td>2026-10-29T06:47:01.710204+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/fina_indicator (<code>research:R5:000670.SZ/fina_indicator</code>)</td><td>6</td><td>2026-10-29T06:47:01.904269+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/moneyflow_dc (<code>research:R5:000670.SZ/moneyflow_dc</code>)</td><td>10</td><td>2026-10-29T06:47:01.902804+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/report_rc (<code>research:R5:000670.SZ/report_rc</code>)</td><td>0</td><td>2026-10-29T06:47:02.071508+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/limit_list_d (<code>research:R5:000670.SZ/limit_list_d</code>)</td><td>1</td><td>2026-10-29T06:47:02.154798+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/anns_d (<code>research:R5:000670.SZ/anns_d</code>)</td><td>17</td><td>2026-10-29T06:47:02.083502+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/forecast (<code>research:R5:000670.SZ/forecast</code>)</td><td>0</td><td>2026-10-29T06:47:02.200774+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/stk_surv (<code>research:R5:000670.SZ/stk_surv</code>)</td><td>0</td><td>2026-10-29T06:47:02.278871+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/stk_holdernumber (<code>research:R5:000670.SZ/stk_holdernumber</code>)</td><td>5</td><td>2026-10-29T06:47:02.285872+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 000670.SZ/pledge_stat (<code>research:R5:000670.SZ/pledge_stat</code>)</td><td>0</td><td>2026-10-29T06:47:02.318138+08:00</td><td>status=ok</td></tr><tr><td>🔴</td><td>R5 明细 · 000670.SZ/top_list (<code>research:R5:000670.SZ/top_list</code>)</td><td>0</td><td>2026-10-29T06:47:02.338843+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>🔴</td><td>R5 明细 · 000670.SZ/top_inst (<code>research:R5:000670.SZ/top_inst</code>)</td><td>0</td><td>2026-10-29T06:47:02.387200+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/daily (<code>research:R5:603986.SH/daily</code>)</td><td>80</td><td>2026-10-29T06:47:02.501759+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/adj_factor (<code>research:R5:603986.SH/adj_factor</code>)</td><td>80</td><td>2026-10-29T06:47:02.515103+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/block_trade (<code>research:R5:603986.SH/block_trade</code>)</td><td>0</td><td>2026-10-29T06:47:02.635713+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/daily_basic (<code>research:R5:603986.SH/daily_basic</code>)</td><td>726</td><td>2026-10-29T06:47:02.633118+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/margin_detail (<code>research:R5:603986.SH/margin_detail</code>)</td><td>25</td><td>2026-10-29T06:47:02.750236+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/moneyflow (<code>research:R5:603986.SH/moneyflow</code>)</td><td>10</td><td>2026-10-29T06:47:02.857005+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/moneyflow_dc (<code>research:R5:603986.SH/moneyflow_dc</code>)</td><td>10</td><td>2026-10-29T06:47:02.900966+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/fina_indicator (<code>research:R5:603986.SH/fina_indicator</code>)</td><td>4</td><td>2026-10-29T06:47:03.066468+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/report_rc (<code>research:R5:603986.SH/report_rc</code>)</td><td>33</td><td>2026-10-29T06:47:03.100219+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/limit_list_d (<code>research:R5:603986.SH/limit_list_d</code>)</td><td>0</td><td>2026-10-29T06:47:03.219183+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/anns_d (<code>research:R5:603986.SH/anns_d</code>)</td><td>21</td><td>2026-10-29T06:47:03.198321+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/forecast (<code>research:R5:603986.SH/forecast</code>)</td><td>0</td><td>2026-10-29T06:47:03.322787+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/stk_surv (<code>research:R5:603986.SH/stk_surv</code>)</td><td>0</td><td>2026-10-29T06:47:03.382876+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/stk_holdernumber (<code>research:R5:603986.SH/stk_holdernumber</code>)</td><td>4</td><td>2026-10-29T06:47:03.432392+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · 603986.SH/pledge_stat (<code>research:R5:603986.SH/pledge_stat</code>)</td><td>0</td><td>2026-10-29T06:47:03.594702+08:00</td><td>status=ok</td></tr><tr><td>🔴</td><td>R5 明细 · 603986.SH/top_list (<code>research:R5:603986.SH/top_list</code>)</td><td>0</td><td>2026-10-29T06:47:03.597602+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>🔴</td><td>R5 明细 · 603986.SH/top_inst (<code>research:R5:603986.SH/top_inst</code>)</td><td>0</td><td>2026-10-29T06:47:03.731383+08:00</td><td>status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复</td></tr><tr><td>✅</td><td>R5 明细 · top_list_daily_recovery (<code>research:R5:top_list_daily_recovery</code>)</td><td>6</td><td>2026-10-29T06:47:46.669605+08:00</td><td>status=ok · 30自然日实际17个行情日逐日配对，过滤为6只候选；未扩池</td></tr><tr><td>✅</td><td>R5 明细 · top_inst_daily_recovery (<code>research:R5:top_inst_daily_recovery</code>)</td><td>60</td><td>2026-10-29T06:47:46.669605+08:00</td><td>status=ok · 30自然日实际17个行情日逐日配对，过滤为6只候选；未扩池</td></tr><tr><td>🔴</td><td>R5 明细 · manifest (<code>research:R5:manifest</code>)</td><td>1</td><td>2026-10-29T06:00:42</td><td>status=error · global_severity=2；微信分析/海外通道降级，非停止研究依据</td></tr><tr><td>✅</td><td>R5 明细 · preferences (<code>research:R5:preferences</code>)</td><td>1</td><td>2026-10-29T06:56:30+08:00</td><td>status=ok</td></tr><tr><td>✅</td><td>R5 明细 · human_thesis (<code>research:R5:human_thesis</code>)</td><td>0</td><td>2026-10-29T06:56:30+08:00</td><td>status=ok · 只读检索仅schema.md，无活跃论点文件</td></tr><tr><td>✅</td><td>R5 明细 · chart_snapshot (<code>research:R5:chart_snapshot</code>)</td><td>1</td><td>2026-10-29T06:41:42</td><td>status=ok · date一致，6票仅兆易命中；其他快照对象不纳入研究池</td></tr><tr><td>✅</td><td>R5 明细 · charts_live_data_only (<code>research:R5:charts_live_data_only</code>)</td><td>5</td><td>2026-10-29T06:56:30+08:00</td><td>status=ok · 5票调用成功但不具多模态图像；价格建议未采纳，300308涨停错误已纠正</td></tr><tr><td>🟡</td><td>R5 明细 · multimodal_scratch (<code>research:R5:multimodal_scratch</code>)</td><td>0</td><td>2026-10-29T06:48:05.368220+08:00</td><td>status=error · 主动未调用（非接口调用失败）；覆盖/验证缺口保留 · VISION/OPENAI环境未配置；scratch图已生成但未完成识图。full MCP默认写output/charts故未调用</td></tr><tr><td>🔴</td><td>R5 明细 · persistent_PNG (<code>research:R5:persistent_PNG</code>)</td><td>0</td><td>2026-10-29T06:56:30+08:00</td><td>status=error · 3主线Top1持久PNG缺口；未伪造路径</td></tr><tr><td>🟡</td><td>R6 消费口径 (<code>research:R6</code>)</td><td>6</td><td>2026-10-29T07:03:25.677737+08:00</td><td>status=degraded conf=0.12</td></tr><tr><td>🟡</td><td>R7 消费口径 (<code>research:R7</code>)</td><td>-</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=partial conf=0.26249999999999996</td></tr><tr><td>✅</td><td>R7 明细 · tushare.moneyflow_dc (<code>research:R7:tushare.moneyflow_dc</code>)</td><td>6030</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=ok · 全市场按主力净流入降序前十，万元；已对照5576只实时上市列表全覆盖</td></tr><tr><td>✅</td><td>R7 明细 · tushare.moneyflow_ind_dc (<code>research:R7:tushare.moneyflow_ind_dc</code>)</td><td>9920</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=ok · 元；20交易日×496板块；5000行截断已补抓；父子行业重叠不可加总</td></tr><tr><td>✅</td><td>R7 明细 · tushare.top_inst/top_list/hm_detail (<code>research:R7:tushare.top_inst/top_list/hm_detail</code>)</td><td>4310</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=ok · 五交易日榜单；机构/游资去重；日榜与三日榜分开；股通席位不进入资金置信度</td></tr><tr><td>✅</td><td>R7 明细 · xtick.hot_money (<code>research:R7:xtick.hot_money</code>)</td><td>200</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=ok · 10票×20交易日真实返回；产物保留每票最新大额桶原字段；招商银行与DC方向不同</td></tr><tr><td>✅</td><td>R7 明细 · vibe.fund_flow/block_trades/margin/dragon_tiger (<code>research:R7:vibe.fund_flow/block_trades/margin/dragon_tiger</code>)</td><td>200</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=ok · 10票资金20日；逐票大宗30自然日/两融15交易日；全市场龙虎榜78条上榜事件，不等于78只股票</td></tr><tr><td>🔴</td><td>R7 明细 · vibe.margin_15d (<code>research:R7:vibe.margin_15d</code>)</td><td>150</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=stale · 按最新已披露日期单列；业务披露滞后一日，非接口失败</td></tr><tr><td>🔴</td><td>R7 明细 · DataPro (<code>research:R7:DataPro</code>)</td><td>0</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=error · 4013 Agent Plan订阅失效或未分配席位 · 健康探针与业务查询相冲突，以实际错误为准</td></tr><tr><td>🔴</td><td>R7 明细 · vibe.iwencai (<code>research:R7:vibe.iwencai</code>)</td><td>0</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=error · iWenCai access key not configured · ETF净申购查询失败，未补造数值</td></tr><tr><td>✅</td><td>R7 明细 · vibe.ETF secondary flow / IF2611 / CSI300 (<code>research:R7:vibe.ETF secondary flow / IF2611 / CSI300</code>)</td><td>44</td><td>2026-10-29T06:23:13.324973+08:00</td><td>status=ok · ETF20日二级资金×2；IF2611两日行情；沪深300腾讯回退两日行情</td></tr><tr><td>🟡</td><td>R7 明细 · overseas_snapshot (<code>research:R7:overseas_snapshot</code>)</td><td>5</td><td>2026-10-29T06:03:06+08:00</td><td>status=stale · 实际观察日不是生成日；美股缺20261028；不重新贴日期</td></tr><tr><td>✅</td><td>R7 明细 · manifest/mcp_health (<code>research:R7:manifest/mcp_health</code>)</td><td>-</td><td>2026-10-29T06:00:42</td><td>status=ok · global_severity=2，置信度上限0.5；不以健康探针替代业务证据</td></tr><tr><td>✅</td><td>R7 明细 · user_preferences/human_thesis (<code>research:R7:user_preferences/human_thesis</code>)</td><td>0</td><td>-</td><td>status=ok · 只读；active目录存在且无文件；无活跃人工thesis可消费</td></tr></tbody></table></div>
+<h3 id="l4-调度层25-正常---1-降级---0-失败---2-待产出--️-0-跳过">L4 调度层（2/5 正常 · 🟡 1 降级 · 🔴 0 失败 · ⏳ 2 待产出 · ⏸️ 0 跳过）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#l4-调度层25-正常---1-降级---0-失败---2-待产出--️-0-跳过" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>状态</th><th>源 / job / 产物（稳定 key）</th><th>条数</th><th>观测时间</th><th>备注</th></tr></thead><tbody><tr><td>✅</td><td>canghai-fetch · 盘前全源抓取 (06:00) (<code>cron:6433ef538744</code>)</td><td>-</td><td>2026-10-29T06:00:42.233018+08:00</td><td>DB 执行记录 1 次 · wrapper=completed; business=not_recorded</td></tr><tr><td>🟡</td><td>R1-R7+D1 全量流水线 (<code>cron:24f4119fab82</code>)</td><td>0</td><td>2026-10-29T06:23:54.965292+08:00</td><td>DB 执行记录 1 次 · wrapper=completed; business=not_recorded · business=completed missing_count=0;  · business artifact R1: status=degraded ·  · business artifact R2: status=partial ·  · business artifact R3: status=degraded ·  · business artifact R4: status=partial ·  · business artifact R5: status=partial ·  · business artifact R6: status=degraded ·  · business artifact R7: status=partial ·  · business artifact D1: status=degraded ·  · business artifact summary: status=partial ·</td></tr><tr><td>✅</td><td>canghai-small-cap-miner (<code>cron:a9b5eb63af43</code>)</td><td>-</td><td>2026-10-29T06:30:42.155654+08:00</td><td>DB 执行记录 1 次 · wrapper=completed; business=not_recorded</td></tr><tr><td>⏳</td><td>chzl-kg · 笔记站同步 (08:30) (<code>cron:579231d3963a</code>)</td><td>-</td><td>2026-10-29T08:30:42.280406+08:00</td><td>DB 执行记录 1 次 · wrapper=running; business=not_recorded</td></tr><tr><td>⏳</td><td>canghai-fetch · 盘前人气榜补采 (08:30 周一/节后首日) (<code>cron:6124ebf7f3dd</code>)</td><td>-</td><td>2026-10-29T08:30:42.364467+08:00</td><td>DB 执行记录 1 次 · wrapper=running; business=not_recorded</td></tr></tbody></table></div>
+<h3 id="l5-执行层07-正常---2-降级---0-失败---5-待产出--️-0-跳过">L5 执行层（0/7 正常 · 🟡 2 降级 · 🔴 0 失败 · ⏳ 5 待产出 · ⏸️ 0 跳过）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#l5-执行层07-正常---2-降级---0-失败---5-待产出--️-0-跳过" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>状态</th><th>源 / job / 产物（稳定 key）</th><th>条数</th><th>观测时间</th><th>备注</th></tr></thead><tbody><tr><td>⏳</td><td>竞价快照 (<code>artifact:data/raw/20261029/auction_snapshot.json</code>)</td><td>-</td><td>-</td><td>待产出（预期 09:30，当前 08:30）</td></tr><tr><td>⏳</td><td>P1 竞价校准 (<code>artifact:data/plans/20261029/auction_amendment.json</code>)</td><td>-</td><td>-</td><td>待产出（预期 09:32，当前 08:30）</td></tr><tr><td>🟡</td><td>D1 盘前预案 JSON (<code>artifact:data/runtime/watchlist_plan_20261029.json</code>)</td><td>-</td><td>2026-10-29T07:11:10+08:00</td><td>产物可读；status=degraded</td></tr><tr><td>🟡</td><td>观察池 watchlist_plan (<code>artifact:data/plans/20261029/watchlist_plan.json</code>)</td><td>-</td><td>2026-10-29T07:11:10+08:00</td><td>产物可读；status=degraded</td></tr><tr><td>⏳</td><td>午盘快照 (<code>artifact:data/raw/20261029/midday_snapshot.json</code>)</td><td>-</td><td>-</td><td>待产出（预期 11:50，当前 08:30）</td></tr><tr><td>⏳</td><td>P2 午盘修订 (<code>artifact:data/plans/20261029/midday_amendment.json</code>)</td><td>-</td><td>-</td><td>待产出（预期 12:10，当前 08:30）</td></tr><tr><td>⏳</td><td>E1 复盘数据 (<code>artifact:data/runtime/E1_data.json</code>)</td><td>-</td><td>-</td><td>待产出（预期 18:30，当前 08:30）；保留前日复盘，不作当日输入 · 旧文件：trade_date mismatch: 20261028 != 20261029</td></tr></tbody></table></div>
+<h2 id="三为什么失败--为什么不可信归因--怎么修">三、为什么失败 / 为什么不可信（归因 + 怎么修）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三为什么失败--为什么不可信归因--怎么修" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-外盘快照-美股亚太fx-overseas_snapshot">🟡 外盘快照 (美股/亚太/FX) (<code>overseas_snapshot</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-外盘快照-美股亚太fx-overseas_snapshot" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：源还活着，但少了一块 —— 拿到的数据比平时粗</li>
+<li><strong>原始错误 / 上下文</strong>：status=degraded</li>
+</ul>
+<h3 id="-r1-消费口径-researchr1">🟡 R1 消费口径 (<code>research:R1</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r1-消费口径-researchr1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：源还活着，但少了一块 —— 拿到的数据比平时粗</li>
+<li><strong>原始错误 / 上下文</strong>：status=degraded conf=0.392</li>
+</ul>
+<h3 id="-r2-消费口径-researchr2">🟡 R2 消费口径 (<code>research:R2</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r2-消费口径-researchr2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=partial conf=0.392</li>
+</ul>
+<h3 id="-r2-明细--r1-researchr2r1">🔴 R2 明细 · R1 (<code>research:R2:R1</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r2-明细--r1-researchr2r1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：上游降级或partial；已解析当前版本，不是工具抓取成功声明</li>
+</ul>
+<h3 id="-r2-明细--r3-researchr2r3">🔴 R2 明细 · R3 (<code>research:R2:R3</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r2-明细--r3-researchr2r3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：上游降级或partial；已解析当前版本，不是工具抓取成功声明</li>
+</ul>
+<h3 id="-r2-明细--r4-researchr2r4">🔴 R2 明细 · R4 (<code>research:R2:R4</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r2-明细--r4-researchr2r4" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：上游降级或partial；已解析当前版本，不是工具抓取成功声明</li>
+</ul>
+<h3 id="-r2-明细--r7-researchr2r7">🔴 R2 明细 · R7 (<code>research:R2:R7</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r2-明细--r7-researchr2r7" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：上游降级或partial；已解析当前版本，不是工具抓取成功声明</li>
+</ul>
+<h3 id="-r3-消费口径-researchr3">🟡 R3 消费口径 (<code>research:R3</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-消费口径-researchr3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：源还活着，但少了一块 —— 拿到的数据比平时粗</li>
+<li><strong>原始错误 / 上下文</strong>：status=degraded conf=0.364</li>
+</ul>
+<h3 id="-r3-明细--wechat_cli_by_group群01-researchr3wechat_cli_by_group群01">🟡 R3 明细 · wechat_cli_by_group.群01 (<code>research:R3:wechat_cli_by_group.群01</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--wechat_cli_by_group群01-researchr3wechat_cli_by_group群01" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=partial_readability</li>
+</ul>
+<h3 id="-r3-明细--wechat_cli_by_group群02-researchr3wechat_cli_by_group群02">🟡 R3 明细 · wechat_cli_by_group.群02 (<code>research:R3:wechat_cli_by_group.群02</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--wechat_cli_by_group群02-researchr3wechat_cli_by_group群02" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=partial_readability</li>
+</ul>
+<h3 id="-r3-明细--wechat_cli_by_group群03-researchr3wechat_cli_by_group群03">🟡 R3 明细 · wechat_cli_by_group.群03 (<code>research:R3:wechat_cli_by_group.群03</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--wechat_cli_by_group群03-researchr3wechat_cli_by_group群03" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=partial_readability</li>
+</ul>
+<h3 id="-r3-明细--wechat_cli_by_group群04-researchr3wechat_cli_by_group群04">🟡 R3 明细 · wechat_cli_by_group.群04 (<code>research:R3:wechat_cli_by_group.群04</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--wechat_cli_by_group群04-researchr3wechat_cli_by_group群04" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=partial_readability</li>
+</ul>
+<h3 id="-r3-明细--wechat_cli_by_group群05-researchr3wechat_cli_by_group群05">🟡 R3 明细 · wechat_cli_by_group.群05 (<code>research:R3:wechat_cli_by_group.群05</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--wechat_cli_by_group群05-researchr3wechat_cli_by_group群05" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=partial_readability</li>
+</ul>
+<h3 id="-r3-明细--hotlistths-researchr3hotlistths">🟡 R3 明细 · hotlist.ths (<code>research:R3:hotlist.ths</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--hotlistths-researchr3hotlistths" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=ok_latest_completed_session</li>
+</ul>
+<h3 id="-r3-明细--hotlisteastmoney-researchr3hotlisteastmoney">🟡 R3 明细 · hotlist.eastmoney (<code>research:R3:hotlist.eastmoney</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--hotlisteastmoney-researchr3hotlisteastmoney" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=ok_latest_completed_session</li>
+</ul>
+<h3 id="-r3-明细--hotlist20261029-researchr3hotlist20261029">🟡 R3 明细 · hotlist.20261029 (<code>research:R3:hotlist.20261029</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--hotlist20261029-researchr3hotlist20261029" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=empty_premarket_not_zero_interest</li>
+</ul>
+<h3 id="-r3-明细--xtick-researchr3xtick">🟡 R3 明细 · xtick (<code>research:R3:xtick</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--xtick-researchr3xtick" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=http_fallback</li>
+</ul>
+<h3 id="-r3-明细--attention_signals-researchr3attention_signals">🟡 R3 明细 · attention_signals (<code>research:R3:attention_signals</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--attention_signals-researchr3attention_signals" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=rebuilt_live_2day_partial_history</li>
+</ul>
+<h3 id="-r3-明细--official_rss-researchr3official_rss">🟡 R3 明细 · official_rss (<code>research:R3:official_rss</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--official_rss-researchr3official_rss" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=ok_supplement_only</li>
+</ul>
+<h3 id="-r3-明细--manifest-researchr3manifest">🟡 R3 明细 · manifest (<code>research:R3:manifest</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--manifest-researchr3manifest" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=severity_2</li>
+</ul>
+<h3 id="-r3-明细--mcp_health-researchr3mcp_health">🟡 R3 明细 · mcp_health (<code>research:R3:mcp_health</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--mcp_health-researchr3mcp_health" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=fetch_health_not_a_current_probe</li>
+</ul>
+<h3 id="-r3-明细--hithink-researchr3hithink">🟡 R3 明细 · hithink (<code>research:R3:hithink</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--hithink-researchr3hithink" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：没说不用，但也没用 —— 声明与执行不一致</li>
+<li><strong>原始错误 / 上下文</strong>：status=not_called_optional</li>
+</ul>
+<h3 id="-r3-明细--moneyflow-researchr3moneyflow">🟡 R3 明细 · moneyflow (<code>research:R3:moneyflow</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r3-明细--moneyflow-researchr3moneyflow" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=industry_and_concept_live_checks_only_not_individual_stock_verification</li>
+</ul>
+<h3 id="-r4-消费口径-researchr4">🟡 R4 消费口径 (<code>research:R4</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r4-消费口径-researchr4" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=partial conf=0.64</li>
+</ul>
+<h3 id="-r4-明细--news_cls-researchr4news_cls">🟡 R4 明细 · news_cls (<code>research:R4:news_cls</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r4-明细--news_cls-researchr4news_cls" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：原始标记为 stale；须分别核观测日期、应有时点和版本，尚不能判定过期原因</li>
+<li><strong>原始错误 / 上下文</strong>：快讯不满72h且不含cls；major正文为空/窗口受限；公众号为昨日文章</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🟡 2026-10-29T06:03:11+08:00 · 快讯不满72h且不含cls；major正文为空/窗口受限；公众号为昨日文章</li>
+<li>🟡 - · status=stale</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r4-明细--news_major-researchr4news_major">🟡 R4 明细 · news_major (<code>research:R4:news_major</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r4-明细--news_major-researchr4news_major" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：原始标记为 stale；须分别核观测日期、应有时点和版本，尚不能判定过期原因</li>
+<li><strong>原始错误 / 上下文</strong>：快讯不满72h且不含cls；major正文为空/窗口受限；公众号为昨日文章</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🟡 2026-10-29T06:03:11+08:00 · 快讯不满72h且不含cls；major正文为空/窗口受限；公众号为昨日文章</li>
+<li>🟡 - · status=stale</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r4-明细--wechat_official_20-researchr4wechat_official_20">🟡 R4 明细 · wechat_official_20 (<code>research:R4:wechat_official_20</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r4-明细--wechat_official_20-researchr4wechat_official_20" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：原始标记为 stale；须分别核观测日期、应有时点和版本，尚不能判定过期原因</li>
+<li><strong>原始错误 / 上下文</strong>：快讯不满72h且不含cls；major正文为空/窗口受限；公众号为昨日文章</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🟡 - · 快讯不满72h且不含cls；major正文为空/窗口受限；公众号为昨日文章</li>
+<li>🟡 - · status=stale</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r4-明细--eastmoney_earnings_predict-researchr4eastmoney_earnings_predict">🟡 R4 明细 · eastmoney_earnings_predict (<code>research:R4:eastmoney_earnings_predict</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r4-明细--eastmoney_earnings_predict-researchr4eastmoney_earnings_predict" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：原始标记为 stale；须分别核观测日期、应有时点和版本，尚不能判定过期原因</li>
+<li><strong>原始错误 / 上下文</strong>：报告期2026Q3；最新公告10月24日，不是29日预告全集</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🟡 2026-10-29T06:03:11+08:00 · 报告期2026Q3；最新公告10月24日，不是29日预告全集</li>
+<li>🟡 - · status=stale</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r4-明细--hithink_business_query-researchr4hithink_business_query">🔴 R4 明细 · hithink_business_query (<code>research:R4:hithink_business_query</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r4-明细--hithink_business_query-researchr4hithink_business_query" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：主营期别未返回；相关性比例评分未编造</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🔴 2026-10-29T06:14:50.889503+08:00 · 主营期别未返回；相关性比例评分未编造</li>
+<li>✅ - · status=ok</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r4-明细--hithink_market_query-researchr4hithink_market_query">🔴 R4 明细 · hithink_market_query (<code>research:R4:hithink_market_query</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r4-明细--hithink_market_query-researchr4hithink_market_query" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：概念与主营仅用于研究对象，不当龙头认定</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🔴 2026-10-29T06:14:50.691602+08:00 · 概念与主营仅用于研究对象，不当龙头认定</li>
+<li>✅ - · status=ok</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r4-明细--mcp_cross_verification-researchr4mcp_cross_verification">🔴 R4 明细 · MCP_cross_verification (<code>research:R4:MCP_cross_verification</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r4-明细--mcp_cross_verification-researchr4mcp_cross_verification" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：本profile主控禁止直接MCP且本会话无delegation工具；未执行，已用官方原文及问财OpenAPI替代但不宣称等价完成</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🔴 - · 本profile主控禁止直接MCP且本会话无delegation工具；未执行，已用官方原文及问财OpenAPI替代但不宣称等价完成</li>
+<li>🔴 - · status=error</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r4-明细--r3_r7_same_day-researchr4r3_r7_same_day">🔴 R4 明细 · R3_R7_same_day (<code>research:R4:R3_R7_same_day</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r4-明细--r3_r7_same_day-researchr4r3_r7_same_day" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：检查时R1-R7尚未落盘；不反向依赖等待，KOL独立核验及资金确认未完成</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🔴 - · 检查时R1-R7尚未落盘；不反向依赖等待，KOL独立核验及资金确认未完成</li>
+<li>🔴 - · status=error</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r5-消费口径-researchr5">🟡 R5 消费口径 (<code>research:R5</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-消费口径-researchr5" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=partial conf=0.2625</li>
+</ul>
+<h3 id="-r5-明细--r1-researchr5r1">🔴 R5 明细 · R1 (<code>research:R5:R1</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--r1-researchr5r1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：上游自身降级；本轮已消费，不代表读取失败</li>
+</ul>
+<h3 id="-r5-明细--r2-researchr5r2">🔴 R5 明细 · R2 (<code>research:R5:R2</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--r2-researchr5r2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：上游自身降级；本轮已消费，不代表读取失败</li>
+</ul>
+<h3 id="-r5-明细--r3-researchr5r3">🔴 R5 明细 · R3 (<code>research:R5:R3</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--r3-researchr5r3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：上游自身降级；本轮已消费，不代表读取失败</li>
+</ul>
+<h3 id="-r5-明细--r4-researchr5r4">🔴 R5 明细 · R4 (<code>research:R5:R4</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--r4-researchr5r4" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：上游自身降级；本轮已消费，不代表读取失败</li>
+</ul>
+<h3 id="-r5-明细--r7-researchr5r7">🔴 R5 明细 · R7 (<code>research:R5:R7</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--r7-researchr5r7" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：上游自身降级；本轮已消费，不代表读取失败</li>
+</ul>
+<h3 id="-r5-明细--002708sztop_list-researchr5002708sztop_list">🔴 R5 明细 · 002708.SZ/top_list (<code>research:R5:002708.SZ/top_list</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--002708sztop_list-researchr5002708sztop_list" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--002708sztop_inst-researchr5002708sztop_inst">🔴 R5 明细 · 002708.SZ/top_inst (<code>research:R5:002708.SZ/top_inst</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--002708sztop_inst-researchr5002708sztop_inst" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--002636sztop_inst-researchr5002636sztop_inst">🔴 R5 明细 · 002636.SZ/top_inst (<code>research:R5:002636.SZ/top_inst</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--002636sztop_inst-researchr5002636sztop_inst" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--002636sztop_list-researchr5002636sztop_list">🔴 R5 明细 · 002636.SZ/top_list (<code>research:R5:002636.SZ/top_list</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--002636sztop_list-researchr5002636sztop_list" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--600601shtop_list-researchr5600601shtop_list">🔴 R5 明细 · 600601.SH/top_list (<code>research:R5:600601.SH/top_list</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--600601shtop_list-researchr5600601shtop_list" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--600601shtop_inst-researchr5600601shtop_inst">🔴 R5 明细 · 600601.SH/top_inst (<code>research:R5:600601.SH/top_inst</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--600601shtop_inst-researchr5600601shtop_inst" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--300308sztop_inst-researchr5300308sztop_inst">🔴 R5 明细 · 300308.SZ/top_inst (<code>research:R5:300308.SZ/top_inst</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--300308sztop_inst-researchr5300308sztop_inst" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--300308sztop_list-researchr5300308sztop_list">🔴 R5 明细 · 300308.SZ/top_list (<code>research:R5:300308.SZ/top_list</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--300308sztop_list-researchr5300308sztop_list" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--000670sztop_list-researchr5000670sztop_list">🔴 R5 明细 · 000670.SZ/top_list (<code>research:R5:000670.SZ/top_list</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--000670sztop_list-researchr5000670sztop_list" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--000670sztop_inst-researchr5000670sztop_inst">🔴 R5 明细 · 000670.SZ/top_inst (<code>research:R5:000670.SZ/top_inst</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--000670sztop_inst-researchr5000670sztop_inst" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--603986shtop_list-researchr5603986shtop_list">🔴 R5 明细 · 603986.SH/top_list (<code>research:R5:603986.SH/top_list</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--603986shtop_list-researchr5603986shtop_list" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--603986shtop_inst-researchr5603986shtop_inst">🔴 R5 明细 · 603986.SH/top_inst (<code>research:R5:603986.SH/top_inst</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--603986shtop_inst-researchr5603986shtop_inst" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：Exception: 必填参数, trade_date</li>
+</ul>
+<h3 id="-r5-明细--manifest-researchr5manifest">🔴 R5 明细 · manifest (<code>research:R5:manifest</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--manifest-researchr5manifest" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：global_severity=2；微信分析/海外通道降级，非停止研究依据</li>
+</ul>
+<h3 id="-r5-明细--multimodal_scratch-researchr5multimodal_scratch">🟡 R5 明细 · multimodal_scratch (<code>research:R5:multimodal_scratch</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--multimodal_scratch-researchr5multimodal_scratch" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一源没有被调用；覆盖/消费缺口仍在，不能据此判供应商故障</li>
+<li><strong>原始错误 / 上下文</strong>：VISION/OPENAI环境未配置；scratch图已生成但未完成识图。full MCP默认写output/charts故未调用</li>
+</ul>
+<h3 id="-r5-明细--persistent_png-researchr5persistent_png">🔴 R5 明细 · persistent_PNG (<code>research:R5:persistent_PNG</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r5-明细--persistent_png-researchr5persistent_png" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：3主线Top1持久PNG缺口；未伪造路径</li>
+</ul>
+<h3 id="-r6-消费口径-researchr6">🟡 R6 消费口径 (<code>research:R6</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r6-消费口径-researchr6" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：源还活着，但少了一块 —— 拿到的数据比平时粗</li>
+<li><strong>原始错误 / 上下文</strong>：status=degraded conf=0.12</li>
+</ul>
+<h3 id="-r7-消费口径-researchr7">🟡 R7 消费口径 (<code>research:R7</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r7-消费口径-researchr7" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：status=partial conf=0.26249999999999996</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🟡 2026-10-29T06:23:13.324973+08:00 · status=partial conf=0.26249999999999996</li>
+<li>🟡 2026-10-29T06:23:13.324973+08:00 · status=partial conf=0.26249999999999996</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r7-明细--vibemargin_15d-researchr7vibemargin_15d">🔴 R7 明细 · vibe.margin_15d (<code>research:R7:vibe.margin_15d</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r7-明细--vibemargin_15d-researchr7vibemargin_15d" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：按最新已披露日期单列；业务披露滞后一日，非接口失败</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🔴 2026-10-29T06:23:13.324973+08:00 · 按最新已披露日期单列；业务披露滞后一日，非接口失败</li>
+<li>🔴 2026-10-29T06:23:13.324973+08:00 · 按最新已披露日期单列；业务披露滞后一日，非接口失败</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r7-明细--datapro-researchr7datapro">🔴 R7 明细 · DataPro (<code>research:R7:DataPro</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r7-明细--datapro-researchr7datapro" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：这一步调这个源时状态不对 —— 具体原因要回到该 agent 的原始 artifact 里看</li>
+<li><strong>原始错误 / 上下文</strong>：4013 Agent Plan订阅失效或未分配席位</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🔴 2026-10-29T06:23:13.324973+08:00 · 4013 Agent Plan订阅失效或未分配席位</li>
+<li>🔴 2026-10-29T06:23:13.324973+08:00 · 4013 Agent Plan订阅失效或未分配席位</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r7-明细--vibeiwencai-researchr7vibeiwencai">🔴 R7 明细 · vibe.iwencai (<code>research:R7:vibe.iwencai</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r7-明细--vibeiwencai-researchr7vibeiwencai" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：真失败</li>
+<li><strong>归因提示（非实测定论）</strong>：key 没配到这个 profile 上，工具被静默禁用</li>
+<li><strong>原始错误 / 上下文</strong>：iWenCai access key not configured</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🔴 2026-10-29T06:23:13.324973+08:00 · iWenCai access key not configured</li>
+<li>🔴 2026-10-29T06:23:13.324973+08:00 · iWenCai access key not configured</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r7-明细--overseas_snapshot-researchr7overseas_snapshot">🟡 R7 明细 · overseas_snapshot (<code>research:R7:overseas_snapshot</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r7-明细--overseas_snapshot-researchr7overseas_snapshot" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：原始标记为 stale；须分别核观测日期、应有时点和版本，尚不能判定过期原因</li>
+<li><strong>原始错误 / 上下文</strong>：实际观察日不是生成日；美股缺20261028；不重新贴日期</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>🟡 2026-10-29T06:03:06+08:00 · 实际观察日不是生成日；美股缺20261028；不重新贴日期</li>
+<li>🟡 2026-10-29T06:03:06+08:00 · 实际观察日不是生成日；美股缺20261028；不重新贴日期</li>
+</ul>
+</li>
+</ul>
+<h3 id="-r1-r7d1-全量流水线-cron24f4119fab82">🟡 R1-R7+D1 全量流水线 (<code>cron:24f4119fab82</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-r1-r7d1-全量流水线-cron24f4119fab82" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：源还活着，但少了一块 —— 拿到的数据比平时粗</li>
+<li><strong>原始错误 / 上下文</strong>：wrapper=completed; business=not_recorded · business=completed missing_count=0;  · business artifact R1: status=degraded ·  · business artifact R2: status=partial ·  · business artifact R3: status=degraded ·  · business artifact R4: status=partial ·  · business artifact R5: status=partial ·  · business artifact R6: status=degraded ·  · business artifact R7: status=partial ·  · business artifact D1: status=degraded ·  · business artifact summary: status=partial ·</li>
+<li><strong>保留的观测</strong>：
+<ul>
+<li>✅ 2026-10-29T06:10:42.139286+08:00 · wrapper=completed; business=not_recorded</li>
+<li>✅ 2026-10-29T07:12:16.431771+08:00 · business=completed missing_count=0;</li>
+<li>🟡 2026-10-29T06:23:54.965292+08:00 · business artifact R1: status=degraded ·</li>
+<li>🟡 2026-10-29T06:40:10+08:00 · business artifact R2: status=partial ·</li>
+<li>🟡 2026-10-29T06:31:38+08:00 · business artifact R3: status=degraded ·</li>
+<li>🟡 2026-10-29T06:23:34+08:00 · business artifact R4: status=partial ·</li>
+<li>🟡 2026-10-29T06:56:30+08:00 · business artifact R5: status=partial ·</li>
+<li>🟡 2026-10-29T07:03:25.677737+08:00 · business artifact R6: status=degraded ·</li>
+<li>🟡 2026-10-29T06:23:13.324973+08:00 · business artifact R7: status=partial ·</li>
+<li>🟡 2026-10-29T06:23:13.324973+08:00 · business artifact R7: status=partial ·</li>
+<li>🟡 2026-10-29T07:11:10+08:00 · business artifact D1: status=degraded ·</li>
+<li>🟡 2026-10-29T07:03:47+08:00 · business artifact summary: status=partial ·</li>
+</ul>
+</li>
+</ul>
+<h3 id="-d1-盘前预案-json-artifactdataruntimewatchlist_plan_20261029json">🟡 D1 盘前预案 JSON (<code>artifact:data/runtime/watchlist_plan_20261029.json</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-d1-盘前预案-json-artifactdataruntimewatchlist_plan_20261029json" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：源还活着，但少了一块 —— 拿到的数据比平时粗</li>
+<li><strong>原始错误 / 上下文</strong>：产物可读；status=degraded</li>
+</ul>
+<h3 id="-观察池-watchlist_plan-artifactdataplans20261029watchlist_planjson">🟡 观察池 watchlist_plan (<code>artifact:data/plans/20261029/watchlist_plan.json</code>)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-观察池-watchlist_plan-artifactdataplans20261029watchlist_planjson" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>类别</strong>：质量降级（不等于整步失败）</li>
+<li><strong>归因提示（非实测定论）</strong>：源还活着，但少了一块 —— 拿到的数据比平时粗</li>
+<li><strong>原始错误 / 上下文</strong>：产物可读；status=degraded</li>
+</ul>
+<h2 id="四cron-job-provider--端点一览">四、cron job provider / 端点一览<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四cron-job-provider--端点一览" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>空 base_url 跟随 provider；401 只证明鉴权被拒绝，不能单独证明端点错配。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>状态</th><th>job / key</th><th>provider</th><th>base_url（尾部）</th><th>model</th></tr></thead><tbody><tr><td>✅</td><td>canghai-fetch · 盘前全源抓取 (06:00) (<code>cron:6433ef538744</code>)</td><td>volcengine-coding-plan</td><td>ing.volces.com/api/coding/v3</td><td>ark-code-latest</td></tr><tr><td>🟡</td><td>R1-R7+D1 全量流水线 (<code>cron:24f4119fab82</code>)</td><td>volcengine-coding-plan</td><td>ing.volces.com/api/coding/v3</td><td>ark-code-latest</td></tr><tr><td>✅</td><td>canghai-small-cap-miner (<code>cron:a9b5eb63af43</code>)</td><td>openai-codex</td><td>(跟随 provider)</td><td>gpt-6.1-sol</td></tr><tr><td>⏳</td><td>chzl-kg · 笔记站同步 (08:30) (<code>cron:579231d3963a</code>)</td><td>-</td><td>(跟随 provider)</td><td>-</td></tr><tr><td>⏳</td><td>canghai-fetch · 盘前人气榜补采 (08:30 周一/节后首日) (<code>cron:6124ebf7f3dd</code>)</td><td>-</td><td>(跟随 provider)</td><td>-</td></tr></tbody></table></div>
+<h2 id="五今日修正建议按优先级">五、今日修正建议（按优先级）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五今日修正建议按优先级" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>优先级</th><th>动作</th><th>解决的问题</th><th>需签核</th></tr></thead><tbody><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R2 明细 · R1（research:R2:R1，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R2 明细 · R3（research:R2:R3，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R2 明细 · R4（research:R2:R4，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R2 明细 · R7（research:R2:R7，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R4 明细 · hithink_business_query（research:R4:hithink_business_query，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R4 明细 · hithink_market_query（research:R4:hithink_market_query，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R4 明细 · MCP_cross_verification（research:R4:MCP_cross_verification，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R4 明细 · R3_R7_same_day（research:R4:R3_R7_same_day，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · R1（research:R5:R1，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · R2（research:R5:R2，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · R3（research:R5:R3，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · R4（research:R5:R4，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · R7（research:R5:R7，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 002708.SZ/top_list（research:R5:002708.SZ/top_list，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 002708.SZ/top_inst（research:R5:002708.SZ/top_inst，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 002636.SZ/top_inst（research:R5:002636.SZ/top_inst，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 002636.SZ/top_list（research:R5:002636.SZ/top_list，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 600601.SH/top_list（research:R5:600601.SH/top_list，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 600601.SH/top_inst（research:R5:600601.SH/top_inst，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 300308.SZ/top_inst（research:R5:300308.SZ/top_inst，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 300308.SZ/top_list（research:R5:300308.SZ/top_list，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 000670.SZ/top_list（research:R5:000670.SZ/top_list，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 000670.SZ/top_inst（research:R5:000670.SZ/top_inst，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 603986.SH/top_list（research:R5:603986.SH/top_list，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · 603986.SH/top_inst（research:R5:603986.SH/top_inst，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · manifest（research:R5:manifest，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · persistent_PNG（research:R5:persistent_PNG，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R7 明细 · vibe.margin_15d（research:R7:vibe.margin_15d，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R7 明细 · DataPro（research:R7:DataPro，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>🟡 本周</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R7 明细 · vibe.iwencai（research:R7:vibe.iwencai，失败）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>外盘快照 (美股/亚太/FX)（overseas_snapshot，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R1 消费口径（research:R1，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R2 消费口径（research:R2，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 消费口径（research:R3，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · wechat_cli_by_group.群01（research:R3:wechat_cli_by_group.群01，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · wechat_cli_by_group.群02（research:R3:wechat_cli_by_group.群02，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · wechat_cli_by_group.群03（research:R3:wechat_cli_by_group.群03，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · wechat_cli_by_group.群04（research:R3:wechat_cli_by_group.群04，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · wechat_cli_by_group.群05（research:R3:wechat_cli_by_group.群05，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · hotlist.ths（research:R3:hotlist.ths，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · hotlist.eastmoney（research:R3:hotlist.eastmoney，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · hotlist.20261029（research:R3:hotlist.20261029，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · xtick（research:R3:xtick，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · attention_signals（research:R3:attention_signals，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · official_rss（research:R3:official_rss，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · manifest（research:R3:manifest，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · mcp_health（research:R3:mcp_health，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · hithink（research:R3:hithink，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R3 明细 · moneyflow（research:R3:moneyflow，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R4 消费口径（research:R4，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R4 明细 · news_cls（research:R4:news_cls，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R4 明细 · news_major（research:R4:news_major，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R4 明细 · wechat_official_20（research:R4:wechat_official_20，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R4 明细 · eastmoney_earnings_predict（research:R4:eastmoney_earnings_predict，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 消费口径（research:R5，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R5 明细 · multimodal_scratch（research:R5:multimodal_scratch，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R6 消费口径（research:R6，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R7 消费口径（research:R7，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>R7 明细 · overseas_snapshot（research:R7:overseas_snapshot，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>按该次流水线 missing_json/missing_md/stages 和日志核对未交付项；后续恢复另记，不回写早晨成功。</td><td>R1-R7+D1 全量流水线（cron:24f4119fab82，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>D1 盘前预案 JSON（artifact:data/runtime/watchlist_plan_20261029.json，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr><tr><td>⚪ 观察</td><td>暂无已验证自动修正规则；保留原始错误与上下文，核对对应 artifact/执行日志后再决定修复。</td><td>观察池 watchlist_plan（artifact:data/plans/20261029/watchlist_plan.json，质量降级）</td><td>仅诊断；配置/交易规则变更需另行授权</td></tr></tbody></table></div>
+<hr/>
+<h3 id="图例">图例<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#图例" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>符号</th><th>含义</th></tr></thead><tbody><tr><td>✅</td><td>正常</td></tr><tr><td>🟡</td><td>部分可用 / 质量降级 / 未核实时点，不计真失败</td></tr><tr><td>🔴</td><td>真失败 / 缺失 / 无效 JSON</td></tr><tr><td>⏳</td><td>未到产出时间 / 正在运行</td></tr><tr><td>⏸️</td><td>已知停用 / 有依据的合法跳过，不计正常成功率</td></tr></tbody></table></div></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-533" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#数据源台账--2026-10-29" data-for="数据源台账--2026-10-29">数据源台账 · 2026-10-29</a></li><li class="depth-1"><a href="#一结论速览" data-for="一结论速览">一、结论速览</a></li><li class="depth-1"><a href="#二分层明细" data-for="二分层明细">二、分层明细</a></li><li class="depth-2"><a href="#l1-抓取层36-正常---1-降级---0-失败---0-待产出--️-2-跳过" data-for="l1-抓取层36-正常---1-降级---0-失败---0-待产出--️-2-跳过">L1 抓取层（3/6 正常 · 🟡 1 降级 · 🔴 0 失败 · ⏳ 0 待产出 · ⏸️ 2 跳过）</a></li><li class="depth-2"><a href="#l2-mcpapi1218-正常---0-降级---0-失败---0-待产出--️-6-跳过" data-for="l2-mcpapi1218-正常---0-降级---0-失败---0-待产出--️-6-跳过">L2 MCP/API（12/18 正常 · 🟡 0 降级 · 🔴 0 失败 · ⏳ 0 待产出 · ⏸️ 6 跳过）</a></li><li class="depth-2"><a href="#l3-研究层108167-正常---28-降级---30-失败---0-待产出--️-1-跳过" data-for="l3-研究层108167-正常---28-降级---30-失败---0-待产出--️-1-跳过">L3 研究层（108/167 正常 · 🟡 28 降级 · 🔴 30 失败 · ⏳ 0 待产出 · ⏸️ 1 跳过）</a></li><li class="depth-2"><a href="#l4-调度层25-正常---1-降级---0-失败---2-待产出--️-0-跳过" data-for="l4-调度层25-正常---1-降级---0-失败---2-待产出--️-0-跳过">L4 调度层（2/5 正常 · 🟡 1 降级 · 🔴 0 失败 · ⏳ 2 待产出 · ⏸️ 0 跳过）</a></li><li class="depth-2"><a href="#l5-执行层07-正常---2-降级---0-失败---5-待产出--️-0-跳过" data-for="l5-执行层07-正常---2-降级---0-失败---5-待产出--️-0-跳过">L5 执行层（0/7 正常 · 🟡 2 降级 · 🔴 0 失败 · ⏳ 5 待产出 · ⏸️ 0 跳过）</a></li><li class="depth-1"><a href="#三为什么失败--为什么不可信归因--怎么修" data-for="三为什么失败--为什么不可信归因--怎么修">三、为什么失败 / 为什么不可信（归因 + 怎么修）</a></li><li class="depth-2"><a href="#-外盘快照-美股亚太fx-overseas_snapshot" data-for="-外盘快照-美股亚太fx-overseas_snapshot">🟡 外盘快照 (美股/亚太/FX) (overseas_snapshot)</a></li><li class="depth-2"><a href="#-r1-消费口径-researchr1" data-for="-r1-消费口径-researchr1">🟡 R1 消费口径 (research:R1)</a></li><li class="depth-2"><a href="#-r2-消费口径-researchr2" data-for="-r2-消费口径-researchr2">🟡 R2 消费口径 (research:R2)</a></li><li class="depth-2"><a href="#-r2-明细--r1-researchr2r1" data-for="-r2-明细--r1-researchr2r1">🔴 R2 明细 · R1 (research:R2:R1)</a></li><li class="depth-2"><a href="#-r2-明细--r3-researchr2r3" data-for="-r2-明细--r3-researchr2r3">🔴 R2 明细 · R3 (research:R2:R3)</a></li><li class="depth-2"><a href="#-r2-明细--r4-researchr2r4" data-for="-r2-明细--r4-researchr2r4">🔴 R2 明细 · R4 (research:R2:R4)</a></li><li class="depth-2"><a href="#-r2-明细--r7-researchr2r7" data-for="-r2-明细--r7-researchr2r7">🔴 R2 明细 · R7 (research:R2:R7)</a></li><li class="depth-2"><a href="#-r3-消费口径-researchr3" data-for="-r3-消费口径-researchr3">🟡 R3 消费口径 (research:R3)</a></li><li class="depth-2"><a href="#-r3-明细--wechat_cli_by_group群01-researchr3wechat_cli_by_group群01" data-for="-r3-明细--wechat_cli_by_group群01-researchr3wechat_cli_by_group群01">🟡 R3 明细 · wechat_cli_by_group.群01 (research:R3:wechat_cli_by_group.群01)</a></li><li class="depth-2"><a href="#-r3-明细--wechat_cli_by_group群02-researchr3wechat_cli_by_group群02" data-for="-r3-明细--wechat_cli_by_group群02-researchr3wechat_cli_by_group群02">🟡 R3 明细 · wechat_cli_by_group.群02 (research:R3:wechat_cli_by_group.群02)</a></li><li class="depth-2"><a href="#-r3-明细--wechat_cli_by_group群03-researchr3wechat_cli_by_group群03" data-for="-r3-明细--wechat_cli_by_group群03-researchr3wechat_cli_by_group群03">🟡 R3 明细 · wechat_cli_by_group.群03 (research:R3:wechat_cli_by_group.群03)</a></li><li class="depth-2"><a href="#-r3-明细--wechat_cli_by_group群04-researchr3wechat_cli_by_group群04" data-for="-r3-明细--wechat_cli_by_group群04-researchr3wechat_cli_by_group群04">🟡 R3 明细 · wechat_cli_by_group.群04 (research:R3:wechat_cli_by_group.群04)</a></li><li class="depth-2"><a href="#-r3-明细--wechat_cli_by_group群05-researchr3wechat_cli_by_group群05" data-for="-r3-明细--wechat_cli_by_group群05-researchr3wechat_cli_by_group群05">🟡 R3 明细 · wechat_cli_by_group.群05 (research:R3:wechat_cli_by_group.群05)</a></li><li class="depth-2"><a href="#-r3-明细--hotlistths-researchr3hotlistths" data-for="-r3-明细--hotlistths-researchr3hotlistths">🟡 R3 明细 · hotlist.ths (research:R3:hotlist.ths)</a></li><li class="depth-2"><a href="#-r3-明细--hotlisteastmoney-researchr3hotlisteastmoney" data-for="-r3-明细--hotlisteastmoney-researchr3hotlisteastmoney">🟡 R3 明细 · hotlist.eastmoney (research:R3:hotlist.eastmoney)</a></li><li class="depth-2"><a href="#-r3-明细--hotlist20261029-researchr3hotlist20261029" data-for="-r3-明细--hotlist20261029-researchr3hotlist20261029">🟡 R3 明细 · hotlist.20261029 (research:R3:hotlist.20261029)</a></li><li class="depth-2"><a href="#-r3-明细--xtick-researchr3xtick" data-for="-r3-明细--xtick-researchr3xtick">🟡 R3 明细 · xtick (research:R3:xtick)</a></li><li class="depth-2"><a href="#-r3-明细--attention_signals-researchr3attention_signals" data-for="-r3-明细--attention_signals-researchr3attention_signals">🟡 R3 明细 · attention_signals (research:R3:attention_signals)</a></li><li class="depth-2"><a href="#-r3-明细--official_rss-researchr3official_rss" data-for="-r3-明细--official_rss-researchr3official_rss">🟡 R3 明细 · official_rss (research:R3:official_rss)</a></li><li class="depth-2"><a href="#-r3-明细--manifest-researchr3manifest" data-for="-r3-明细--manifest-researchr3manifest">🟡 R3 明细 · manifest (research:R3:manifest)</a></li><li class="depth-2"><a href="#-r3-明细--mcp_health-researchr3mcp_health" data-for="-r3-明细--mcp_health-researchr3mcp_health">🟡 R3 明细 · mcp_health (research:R3:mcp_health)</a></li><li class="depth-2"><a href="#-r3-明细--hithink-researchr3hithink" data-for="-r3-明细--hithink-researchr3hithink">🟡 R3 明细 · hithink (research:R3:hithink)</a></li><li class="depth-2"><a href="#-r3-明细--moneyflow-researchr3moneyflow" data-for="-r3-明细--moneyflow-researchr3moneyflow">🟡 R3 明细 · moneyflow (research:R3:moneyflow)</a></li><li class="depth-2"><a href="#-r4-消费口径-researchr4" data-for="-r4-消费口径-researchr4">🟡 R4 消费口径 (research:R4)</a></li><li class="depth-2"><a href="#-r4-明细--news_cls-researchr4news_cls" data-for="-r4-明细--news_cls-researchr4news_cls">🟡 R4 明细 · news_cls (research:R4:news_cls)</a></li><li class="depth-2"><a href="#-r4-明细--news_major-researchr4news_major" data-for="-r4-明细--news_major-researchr4news_major">🟡 R4 明细 · news_major (research:R4:news_major)</a></li><li class="depth-2"><a href="#-r4-明细--wechat_official_20-researchr4wechat_official_20" data-for="-r4-明细--wechat_official_20-researchr4wechat_official_20">🟡 R4 明细 · wechat_official_20 (research:R4:wechat_official_20)</a></li><li class="depth-2"><a href="#-r4-明细--eastmoney_earnings_predict-researchr4eastmoney_earnings_predict" data-for="-r4-明细--eastmoney_earnings_predict-researchr4eastmoney_earnings_predict">🟡 R4 明细 · eastmoney_earnings_predict (research:R4:eastmoney_earnings_predict)</a></li><li class="depth-2"><a href="#-r4-明细--hithink_business_query-researchr4hithink_business_query" data-for="-r4-明细--hithink_business_query-researchr4hithink_business_query">🔴 R4 明细 · hithink_business_query (research:R4:hithink_business_query)</a></li><li class="depth-2"><a href="#-r4-明细--hithink_market_query-researchr4hithink_market_query" data-for="-r4-明细--hithink_market_query-researchr4hithink_market_query">🔴 R4 明细 · hithink_market_query (research:R4:hithink_market_query)</a></li><li class="depth-2"><a href="#-r4-明细--mcp_cross_verification-researchr4mcp_cross_verification" data-for="-r4-明细--mcp_cross_verification-researchr4mcp_cross_verification">🔴 R4 明细 · MCP_cross_verification (research:R4:MCP_cross_verification)</a></li><li class="depth-2"><a href="#-r4-明细--r3_r7_same_day-researchr4r3_r7_same_day" data-for="-r4-明细--r3_r7_same_day-researchr4r3_r7_same_day">🔴 R4 明细 · R3_R7_same_day (research:R4:R3_R7_same_day)</a></li><li class="depth-2"><a href="#-r5-消费口径-researchr5" data-for="-r5-消费口径-researchr5">🟡 R5 消费口径 (research:R5)</a></li><li class="depth-2"><a href="#-r5-明细--r1-researchr5r1" data-for="-r5-明细--r1-researchr5r1">🔴 R5 明细 · R1 (research:R5:R1)</a></li><li class="depth-2"><a href="#-r5-明细--r2-researchr5r2" data-for="-r5-明细--r2-researchr5r2">🔴 R5 明细 · R2 (research:R5:R2)</a></li><li class="depth-2"><a href="#-r5-明细--r3-researchr5r3" data-for="-r5-明细--r3-researchr5r3">🔴 R5 明细 · R3 (research:R5:R3)</a></li><li class="depth-2"><a href="#-r5-明细--r4-researchr5r4" data-for="-r5-明细--r4-researchr5r4">🔴 R5 明细 · R4 (research:R5:R4)</a></li><li class="depth-2"><a href="#-r5-明细--r7-researchr5r7" data-for="-r5-明细--r7-researchr5r7">🔴 R5 明细 · R7 (research:R5:R7)</a></li><li class="depth-2"><a href="#-r5-明细--002708sztop_list-researchr5002708sztop_list" data-for="-r5-明细--002708sztop_list-researchr5002708sztop_list">🔴 R5 明细 · 002708.SZ/top_list (research:R5:002708.SZ/top_list)</a></li><li class="depth-2"><a href="#-r5-明细--002708sztop_inst-researchr5002708sztop_inst" data-for="-r5-明细--002708sztop_inst-researchr5002708sztop_inst">🔴 R5 明细 · 002708.SZ/top_inst (research:R5:002708.SZ/top_inst)</a></li><li class="depth-2"><a href="#-r5-明细--002636sztop_inst-researchr5002636sztop_inst" data-for="-r5-明细--002636sztop_inst-researchr5002636sztop_inst">🔴 R5 明细 · 002636.SZ/top_inst (research:R5:002636.SZ/top_inst)</a></li><li class="depth-2"><a href="#-r5-明细--002636sztop_list-researchr5002636sztop_list" data-for="-r5-明细--002636sztop_list-researchr5002636sztop_list">🔴 R5 明细 · 002636.SZ/top_list (research:R5:002636.SZ/top_list)</a></li><li class="depth-2"><a href="#-r5-明细--600601shtop_list-researchr5600601shtop_list" data-for="-r5-明细--600601shtop_list-researchr5600601shtop_list">🔴 R5 明细 · 600601.SH/top_list (research:R5:600601.SH/top_list)</a></li><li class="depth-2"><a href="#-r5-明细--600601shtop_inst-researchr5600601shtop_inst" data-for="-r5-明细--600601shtop_inst-researchr5600601shtop_inst">🔴 R5 明细 · 600601.SH/top_inst (research:R5:600601.SH/top_inst)</a></li><li class="depth-2"><a href="#-r5-明细--300308sztop_inst-researchr5300308sztop_inst" data-for="-r5-明细--300308sztop_inst-researchr5300308sztop_inst">🔴 R5 明细 · 300308.SZ/top_inst (research:R5:300308.SZ/top_inst)</a></li><li class="depth-2"><a href="#-r5-明细--300308sztop_list-researchr5300308sztop_list" data-for="-r5-明细--300308sztop_list-researchr5300308sztop_list">🔴 R5 明细 · 300308.SZ/top_list (research:R5:300308.SZ/top_list)</a></li><li class="depth-2"><a href="#-r5-明细--000670sztop_list-researchr5000670sztop_list" data-for="-r5-明细--000670sztop_list-researchr5000670sztop_list">🔴 R5 明细 · 000670.SZ/top_list (research:R5:000670.SZ/top_list)</a></li><li class="depth-2"><a href="#-r5-明细--000670sztop_inst-researchr5000670sztop_inst" data-for="-r5-明细--000670sztop_inst-researchr5000670sztop_inst">🔴 R5 明细 · 000670.SZ/top_inst (research:R5:000670.SZ/top_inst)</a></li><li class="depth-2"><a href="#-r5-明细--603986shtop_list-researchr5603986shtop_list" data-for="-r5-明细--603986shtop_list-researchr5603986shtop_list">🔴 R5 明细 · 603986.SH/top_list (research:R5:603986.SH/top_list)</a></li><li class="depth-2"><a href="#-r5-明细--603986shtop_inst-researchr5603986shtop_inst" data-for="-r5-明细--603986shtop_inst-researchr5603986shtop_inst">🔴 R5 明细 · 603986.SH/top_inst (research:R5:603986.SH/top_inst)</a></li><li class="depth-2"><a href="#-r5-明细--manifest-researchr5manifest" data-for="-r5-明细--manifest-researchr5manifest">🔴 R5 明细 · manifest (research:R5:manifest)</a></li><li class="depth-2"><a href="#-r5-明细--multimodal_scratch-researchr5multimodal_scratch" data-for="-r5-明细--multimodal_scratch-researchr5multimodal_scratch">🟡 R5 明细 · multimodal_scratch (research:R5:multimodal_scratch)</a></li><li class="depth-2"><a href="#-r5-明细--persistent_png-researchr5persistent_png" data-for="-r5-明细--persistent_png-researchr5persistent_png">🔴 R5 明细 · persistent_PNG (research:R5:persistent_PNG)</a></li><li class="depth-2"><a href="#-r6-消费口径-researchr6" data-for="-r6-消费口径-researchr6">🟡 R6 消费口径 (research:R6)</a></li><li class="depth-2"><a href="#-r7-消费口径-researchr7" data-for="-r7-消费口径-researchr7">🟡 R7 消费口径 (research:R7)</a></li><li class="depth-2"><a href="#-r7-明细--vibemargin_15d-researchr7vibemargin_15d" data-for="-r7-明细--vibemargin_15d-researchr7vibemargin_15d">🔴 R7 明细 · vibe.margin_15d (research:R7:vibe.margin_15d)</a></li><li class="depth-2"><a href="#-r7-明细--datapro-researchr7datapro" data-for="-r7-明细--datapro-researchr7datapro">🔴 R7 明细 · DataPro (research:R7:DataPro)</a></li><li class="depth-2"><a href="#-r7-明细--vibeiwencai-researchr7vibeiwencai" data-for="-r7-明细--vibeiwencai-researchr7vibeiwencai">🔴 R7 明细 · vibe.iwencai (research:R7:vibe.iwencai)</a></li><li class="depth-2"><a href="#-r7-明细--overseas_snapshot-researchr7overseas_snapshot" data-for="-r7-明细--overseas_snapshot-researchr7overseas_snapshot">🟡 R7 明细 · overseas_snapshot (research:R7:overseas_snapshot)</a></li><li class="depth-2"><a href="#-r1-r7d1-全量流水线-cron24f4119fab82" data-for="-r1-r7d1-全量流水线-cron24f4119fab82">🟡 R1-R7+D1 全量流水线 (cron:24f4119fab82)</a></li><li class="depth-2"><a href="#-d1-盘前预案-json-artifactdataruntimewatchlist_plan_20261029json" data-for="-d1-盘前预案-json-artifactdataruntimewatchlist_plan_20261029json">🟡 D1 盘前预案 JSON (artifact:data/runtime/watchlist_plan_20261029.json)</a></li><li class="depth-2"><a href="#-观察池-watchlist_plan-artifactdataplans20261029watchlist_planjson" data-for="-观察池-watchlist_plan-artifactdataplans20261029watchlist_planjson">🟡 观察池 watchlist_plan (artifact:data/plans/20261029/watchlist_plan.json)</a></li><li class="depth-1"><a href="#四cron-job-provider--端点一览" data-for="四cron-job-provider--端点一览">四、cron job provider / 端点一览</a></li><li class="depth-1"><a href="#五今日修正建议按优先级" data-for="五今日修正建议按优先级">五、今日修正建议（按优先级）</a></li><li class="depth-2"><a href="#图例" data-for="图例">图例</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

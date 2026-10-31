@@ -1,0 +1,6 @@
+{
+  "scripts/research/build_research_summary.py": "eb464f22c5199b12a556fc2db8540e3c680d909f24366d16d6b7efcd3f1e61a3",
+  "tests/pipeline/test_signed_input_review_contract.py": "4860492fa25fa427d7f8cf1bd64ed593fc6c7afd94d4cd83c4ddf9722223a1de",
+  "scripts/research/run_research_shell.sh": "e946bdd4a5ebe4a380c18f54d7477b3467815a906ede085752059024c56ded82",
+  "scripts/plan/ensure_watchlist_plan.py": "9f27bb28fbc60dba3b76e1d67395f380af47dcced217a6afb6b94cd96ac95d33"
+}

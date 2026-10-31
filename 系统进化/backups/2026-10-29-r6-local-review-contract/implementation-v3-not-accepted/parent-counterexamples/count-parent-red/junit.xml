@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.206" timestamp="2026-10-29T14:49:58.228025+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname=".hermes.cache.scratch.r6-parent-review-20261029.parent_cases" name="test_partial_review_updates_explicit_zero_evaluated_count" time="0.059"><failure message="assert 0 == 1">../../../.hermes/cache/scratch/r6-parent-review-20261029/parent_cases.py:65: in test_partial_review_updates_explicit_zero_evaluated_count
+    assert revised['candidates_evaluated'] == 1
+E   assert 0 == 1</failure></testcase></testsuite></testsuites>

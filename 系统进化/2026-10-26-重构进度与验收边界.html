@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-10-26 重构进度与验收边界</title><meta charset="utf-8"/><link rel="preload" href="../index-5a23ce28.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-10-26 重构进度与验收边界"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-10-26 重构进度与验收边界"/><meta name="twitter:description" content="重构进度与验收边界 · 2026-10-26 结论：两批限定工程修复已有隔离回归证据，生产闭环尚未验收；V1.00 未发布，实盘未放行。 本文是 2026-10-26 的新日期版本，保留旧 07-重构进度表.md 原文。不再使用跨研究、执行、部署混算的“总完成率 85%”。本轮完成的是文档/源码/任务库核对，没有重跑历史测试或生产业务。 1."/><meta property="og:description" content="重构进度与验收边界 · 2026-10-26 结论：两批限定工程修复已有隔离回归证据，生产闭环尚未验收；V1.00 未发布，实盘未放行。 本文是 2026-10-26 的新日期版本，保留旧 07-重构进度表.md 原文。不再使用跨研究、执行、部署混算的“总完成率 85%”。本轮完成的是文档/源码/任务库核对，没有重跑历史测试或生产业务。 1."/><meta property="og:image:alt" content="重构进度与验收边界 · 2026-10-26 结论：两批限定工程修复已有隔离回归证据，生产闭环尚未验收；V1.00 未发布，实盘未放行。 本文是 2026-10-26 的新日期版本，保留旧 07-重构进度表.md 原文。不再使用跨研究、执行、部署混算的“总完成率 85%”。本轮完成的是文档/源码/任务库核对，没有重跑历史测试或生产业务。 1."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-26-重构进度与验收边界"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-26-重构进度与验收边界"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="重构进度与验收边界 · 2026-10-26 结论：两批限定工程修复已有隔离回归证据，生产闭环尚未验收；V1.00 未发布，实盘未放行。 本文是 2026-10-26 的新日期版本，保留旧 07-重构进度表.md 原文。不再使用跨研究、执行、部署混算的“总完成率 85%”。本轮完成的是文档/源码/任务库核对，没有重跑历史测试或生产业务。 1."/><meta name="generator" content="Quartz"/><link href="../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/2026-10-26-重构进度与验收边界" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-994" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-994" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-10-26 重构进度与验收边界</a></div></nav><h1 class="article-title">2026-10-26 重构进度与验收边界</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-26T10:00:22.000Z">2026年10月26日</time><span>21分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="重构进度与验收边界--2026-10-26">重构进度与验收边界 · 2026-10-26<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#重构进度与验收边界--2026-10-26" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><strong>结论：两批限定工程修复已有隔离回归证据，生产闭环尚未验收；V1.00 未发布，实盘未放行。</strong></p>
+<p>本文是 2026-10-26 的新日期版本，保留旧 <a href="../系统进化/07-重构进度表" class="internal internal-link alias" data-slug="系统进化/07-重构进度表">07-重构进度表.md</a> 原文。不再使用跨研究、执行、部署混算的“总完成率 85%”。本轮完成的是文档/源码/任务库核对，<strong>没有重跑历史测试或生产业务</strong>。</p>
+</blockquote>
+<h2 id="1-授权与本轮变更范围">1. 授权与本轮变更范围<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-授权与本轮变更范围" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>用户要求：先梳理当前许多定时任务的<strong>数据流、决策路径</strong>，更新系统进化中的进度表、架构审阅图、系统全景；旧文档不丢，可以另写新版本。</p>
+<p>本轮落实：</p>
+<ul>
+<li>新写三篇日期版文档和目录导航；仅补现有阅读入口链接。</li>
+<li>核对本机 <code>.hermes</code> 的任务库与 wrapper，不套用克隆部署 <code>.hermes-canghai</code> 的运行记录。</li>
+<li>保留旧四份架构档案原字节；保留来源摘要、任务清单、证据时点和文档自检结果。</li>
+<li><strong>Agent Plan 主用、Coding Plan 备选</strong>；没有迁移通道、挪任务时刻、减轮数、改技能/SOUL/凭据/代码/输出路径，亦未补跑任何交易或研究。</li>
+</ul>
+<p>配套：<a href="../系统进化/2026-10-26-系统架构全景与定时任务数据流" class="internal internal-link alias" data-slug="系统进化/2026-10-26-系统架构全景与定时任务数据流">系统全景与完整任务清单</a> · <a href="../系统进化/2026-10-26-架构审阅图与决策路径" class="internal internal-link alias" data-slug="系统进化/2026-10-26-架构审阅图与决策路径">架构审阅图与决策路径</a>。</p>
+<h2 id="2-先把六类验收拆开">2. 先把六类验收拆开<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-先把六类验收拆开" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>先看图：<strong>当前停在“有限工程证据已取得，但生产/消费/安全还有待验”的位置，不是已经走到发布终点。</strong> 下图是验收层级示意，不是自动发布程序，也不是下一步已获执行授权。</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;stateDiagram-v2\n    state \&quot;限定工程已有原报告证据\&quot; as E\n    state \&quot;自然调度与双轨交付待验\&quot; as N\n    state \&quot;模型实际读取与裁决待验\&quot; as C\n    state \&quot;执行安全残余待关闭\&quot; as S\n    state J &lt;&lt;join>>\n    state \&quot;独立发布审查与交易许可\&quot; as A\n    [*] --> E\n    E --> N: 工程绿测不等于准时交付\n    E --> C: 传递清单不等于模型已读\n    E --> S: 大测试数不掩盖低层失败\n    N --> J: 后续取得有效证据\n    C --> J: 后续取得有效证据\n    S --> J: 后续关闭原反例并验收\n    J --> A: 仍需独立审查和授权&quot;">stateDiagram-v2
+    state &quot;限定工程已有原报告证据&quot; as E
+    state &quot;自然调度与双轨交付待验&quot; as N
+    state &quot;模型实际读取与裁决待验&quot; as C
+    state &quot;执行安全残余待关闭&quot; as S
+    state J &lt;&lt;join>>
+    state &quot;独立发布审查与交易许可&quot; as A
+    [*] --> E
+    E --> N: 工程绿测不等于准时交付
+    E --> C: 传递清单不等于模型已读
+    E --> S: 大测试数不掩盖低层失败
+    N --> J: 后续取得有效证据
+    C --> J: 后续取得有效证据
+    S --> J: 后续关闭原反例并验收
+    J --> A: 仍需独立审查和授权
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p>下面的表只作查细节，不再把不同维度压成一个完成百分比。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>维度</th><th>当前能负责任地说什么</th><th>不能说什么</th></tr></thead><tbody><tr><td>工程回归</td><td>按 10/24、10/26 原验收报告，限定冻结源码闭包通过对应隔离测试</td><td>不能当成本轮重跑、全仓绿测、生产进程已加载</td></tr><tr><td>自然调度</td><td>本次登记到 37 个启用任务；已核任务库、wrapper 与具体时点</td><td>启用、started/completed/ok 不等于准时完整交付；未认证持续稳定</td></tr><tr><td>机器/人读交付</td><td>本次版本校验与 JSON/MD 分账实现已补强；当日仍有主决策失败与降级文件</td><td>不能因有 JSON、schema 过关就称研究和人读报告全齐</td></tr><tr><td>模型实际消费</td><td>主输入传递/版本检查已有；辅助来源待授权</td><td>manifest、路径引用、采纳自报不证明真实工具读取、理解或正确采用</td></tr><tr><td>执行安全</td><td>多层共同权限/预算/扫描/报价边界已有限定工程证据</td><td>两个低层卖出残余及跨进程/券商对账未认证边界不能被大测试数掩盖</td></tr><tr><td>交易许可</td><td>最新验收档案没有发布 V1.00 或开放实盘</td><td>文档更新、入池、最小模型调用或“研究就绪”不自动放行</td></tr></tbody></table></div>
+<h2 id="3-重构进度表按能力和剩余缺口不按故事阶段打勾">3. 重构进度表：按能力和剩余缺口，不按故事阶段打勾<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-重构进度表按能力和剩余缺口不按故事阶段打勾" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>“已完成”只覆盖行内限定工程范围；“未验收”不等于从未实现；“待授权”不能借本轮文档工作实施。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>工作项</th><th>状态</th><th>已完成/已有证据</th><th>剩余收口标准</th></tr></thead><tbody><tr><td>计划与账户共同授权、零预算不升权</td><td>已完成：限定工程</td><td>首批修复；账户仅收紧，CLI live 不补权限，最终下单再验</td><td>生产加载与真实提交/对账另验，不把工程证据变实盘许可</td></tr><tr><td>加载准备与分派分离</td><td>已完成：限定工程</td><td><code>dispatch=False</code> 仅准备，每轮分派一次的隔离场景通过</td><td>保留真实调用路径验证与合法存量退出</td></tr><tr><td>独立模拟比例退出与低层买入停机</td><td>已完成：限定工程</td><td>固定整数退出目标、保护退出优先、重启/事务与旧单兼容</td><td>自然模拟订单/成交闭环未因绿测自动完成</td></tr><tr><td>扫描、突破、本票定量、可卖量/卖价</td><td>已完成：限定工程</td><td>异日/缺扫描拒买，实际本票限价定量，未知可卖量拒绝</td><td>真实行情时效、交易时段和账户提交仍需独立验</td></tr><tr><td>低层卖出精确触发和数量</td><td><strong>部分，P0 未关闭</strong></td><td>原额外边界 86 项中 84 过、2 失败；正常 wrapper 有保护</td><td>关闭同类型规则绕过触发、比例规则放大量两个原反例，保留原断言</td></tr><tr><td>跨进程预算/提交原子性与券商对账</td><td><strong>未验收</strong></td><td>已列已知边界，非本次研究修复范围</td><td>在途/成交/撤单、未知提交结果恢复、身份与报价时效分别取证</td></tr><tr><td>本轮 run/attempt/文件版本识别</td><td>已完成：限定工程</td><td>第二批 RD-01，旧同日文件不充本次交付</td><td>自然运行对每单元记录业务终态及精确版本</td></tr><tr><td>JSON 与人读 MD 分账</td><td>已完成：限定工程</td><td>RD-02，缺 MD 不抹有效 JSON，但不假报全部交付</td><td>按单元/频率核应交分母；五行鲜度检查不代表报告内容质量通过</td></tr><tr><td>R7 规范同日别名</td><td>已完成：限定工程</td><td>RD-03，精确允许同目录、单跳、同日；拒绝越界/异日/链式</td><td>不扩成全局软链接放行；午盘消费者兼容另核</td></tr><tr><td>汇总→主决策主输入版本绑定</td><td>已完成：限定工程</td><td>RD-04/05，主链每次 D1 前校验，候选结构错误局部暴露</td><td>自然主决策真实读取/采用留证；安全网尚未统一同强度预检</td></tr><tr><td>旧规则/备用读取器绕过版本检查</td><td><strong>最新档案已关闭：限定工程</strong></td><td>RD-06 保留原反例；被拒绝不等于缺失，只有汇总本身真缺失才启原降级</td><td>旧无 manifest 格式仍有兼容；不追造历史版本收据</td></tr><tr><td>预检后并发改稿窗口</td><td>部分：保留边界</td><td>当前前后版本检查可暴露变化</td><td>没有跨文件事务不可变快照，不宣称竞争窗口消失</td></tr><tr><td>核心研究、汇总、预案准时齐交</td><td><strong>部分，自然效果未验收</strong></td><td>交付识别已修；10/26 仍见主链失败、08:50 降级产物</td><td>按真实截止/run/版本/终态取自然轮次证据，恢复版不倒算准时</td></tr><tr><td>实际候选图表覆盖</td><td>部分</td><td>R2 后预渲染；汇总按真实 R2/R5 集合核覆盖，未知不填 0</td><td>每轮核候选版本交集，不以快照存在或固定票数充覆盖</td></tr><tr><td>七类辅助输入窄来源接线</td><td><strong>待授权，未部署</strong></td><td>已有明确来源政策和差异草案</td><td>近期错题/股性/锚/宏观/预测/情绪/热度须精确签核；不扩目录读权</td></tr><tr><td>真实模型读取/裁决与错题闭环</td><td><strong>未验收</strong></td><td>传递清单显式 <code>not_independently_verified</code>；历史有采纳声明也有漏读</td><td>成功读取事件与精确输入版本；采用/拒绝/延后/未读理由分账</td></tr><tr><td>角色默认主模型迁移</td><td>已完成：原最小验收范围</td><td>10/26 原报告记录六角色默认值回读及新会话模型/工具最小测试</td><td>只认证默认与最小调用，不认证全链时限/容量/质量或旧会话热更</td></tr><tr><td>任务级固定模型同步</td><td><strong>本轮不改，另核授权</strong></td><td>默认迁移报告明确未同步 15 项固定任务</td><td>不能把“角色已切”写成“所有 cron 已切”；Agent Plan 主用，Coding Plan备选</td></tr><tr><td>竞价/午盘修订与执行应用</td><td><strong>部分</strong></td><td>P1/P2 有契约与任务，竞价有人读 renderer</td><td>当前未找到执行合并应用路径；时窗/原计划版本/授权复核未完成闭环</td></tr><tr><td>午盘真实数据与 R7 增量版本</td><td><strong>部分</strong></td><td>有 live/stub 实现，计划池与分块分时口径可追溯</td><td>确认实际 live 参数、R7 producer 和早午版本；不冒充全市场完整资金流</td></tr><tr><td>周度进化消费当周有效复盘</td><td><strong>部分</strong></td><td>周五 17:00 E2、18:00 E1 已登记；E2 只出提案</td><td>最后一个交易日 E1 可能缺席；时序调整须另签，不在本轮挪任务</td></tr><tr><td>知识库保守整理</td><td>已完成：原限定清单；本轮新增导航文档</td><td>四份历史归档保留；私人材料/Wiki 源快照不作垃圾</td><td>不扩成整库去重、公开上传或私密材料清理</td></tr><tr><td>网站退役与 data 体量治理</td><td>待精确授权/验收</td><td>产品方向收敛，不再为旧 SPA 扩功能</td><td>无头出图和共享业务依赖要保留，不整删 web/API 或按日期删数据</td></tr><tr><td>回测不污染正式研究</td><td>未验收，路径变更另签</td><td>原收敛清单有隔离设计</td><td>同输入回放与正式业务写路径隔离；本轮不启动回放补成功</td></tr><tr><td>V1.00 发布/实盘</td><td><strong>未发布 / 未放行</strong></td><td>两批验收均保留部署与交易边界</td><td>安全残余、自然交付、真实消费、部署加载和授权执行逐项达标</td></tr></tbody></table></div>
+<p>实现/验收依据：下方 S1/S2/SM/SP；具体接线新增发现的源码出处见配套架构审阅图。这里的“剩余标准”是后续验收要求，不是新增实现授权。</p>
+<h2 id="4-原测试证据怎么读">4. 原测试证据怎么读<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-原测试证据怎么读" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>原时点（CST）</th><th>原档案中的结果</th><th>正确解释</th></tr></thead><tbody><tr><td>2026-10-24 22:39</td><td>711 项：698 通过、13 失败，退出 1</td><td>中间失败历史保留，不用最终结果倒改</td></tr><tr><td>2026-10-24 22:53</td><td>核心 790 个唯一 case 通过；模拟 65 子测试另列</td><td>限定工程闭包；额外低层安全边界 86 项中仍有 2 个失败</td></tr><tr><td>2026-10-25 23:24—23:28</td><td>既修复核 42 项中 41 通过、1 失败；辅助输入草案另有 31 项通过</td><td>草案未部署；旧读取器的 1 个失败随后在第二批关闭</td></tr><tr><td>2026-10-26 00:18</td><td>前版本 1,054 项：1,053 通过、1 失败，退出 1</td><td>原反例未删除</td></tr><tr><td><strong>2026-10-26 00:41:15—00:43:28</strong></td><td><strong>1,114 个唯一原生测试通过</strong>，已包含首批 790；模拟 65、启动 16 子测试分列</td><td>不把 790+1,114 相加，不把子测试混进原生数；不掩盖额外两个低层失败</td></tr><tr><td>2026-10-26 00:11:57 前</td><td>六角色默认模型新会话与最小工具验证通过</td><td>不是自然生产研究验收，不代表任务固定项迁移</td></tr></tbody></table></div>
+<p><strong>本轮没有执行以上测试。</strong> 只核原报告、证据包位置及源码接线，报告数字的效力停在原冻结源码与原验收时点。完整工作树后续可能变化，不能把旧绿测贴到所有当前文件上。</p>
+<h2 id="5-本轮当日运行切片没有全绿">5. 本轮当日运行切片没有“全绿”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-本轮当日运行切片没有全绿" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>2026-10-26 下午只读头部结果：</p>
+<ul>
+<li>06:10 主链业务状态 <code>failed</code>，D1 第三次尝试于 <strong>07:14:18</strong> 结束失败。</li>
+<li><strong>06:55:19</strong> 的研究汇总状态为 <code>partial</code>，不能因契约布尔值为 true 就称齐交。</li>
+<li>正式计划 <strong>08:50:56</strong> 标为 <code>python_fallback / mode=fallback</code>；不是成功的大模型主决策。</li>
+<li>检查时未见同日 runtime 计划副本及正式 P1/P2 修订文件。仅记录该路径缺口，不借机重生成覆盖。</li>
+<li><strong>15:49:55</strong> 任务库显示 37/37 启用，最近状态 27 ok、8 error、2 未记。外层主链 cron 可为 ok，但业务状态仍 failed，正好证明两层不是一回事。</li>
+</ul>
+<p>这些观察只认证有限元信息，不认证整个 scheduler 服务存活、故障根因已尽查、执行账户状态或成交。当前值/盘后补跑也不能恢复历史竞价窗口。</p>
+<h2 id="6-旧表旧图与现在最重要的区别">6. 旧表/旧图与现在最重要的区别<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-旧表旧图与现在最重要的区别" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>旧表/旧图的印象</th><th>新日期版写法</th></tr></thead><tbody><tr><td>T1 约 85%，T2/T3 未开始</td><td>按能力/验收维度列状态，不把已有执行和复盘实现重新归零，也不假报全系统完成</td></tr><tr><td>只有两条 active cron，或 24 条任务</td><td>当前本机 37 条；时点为 10/26 15:49:55，不借用克隆的 37 条状态</td></tr><tr><td>R1→…→R7，或 R2/R5 并行</td><td>R1/R4/R7 并行 → R3 → R2 → 图表 → R5 → R6 → 汇总 → D1</td></tr><tr><td>所有任务都必须 Agent；summary 必须模型生成</td><td>确定性脚本做编排/版本/汇总，大模型做研究与独立取舍，两者不矛盾</td></tr><tr><td>08:00 另有独立 D1 必然交付</td><td>当前主决策在 06:10 全量任务内部，08:50 有条件安全网；真实成功另验</td></tr><tr><td>09:23/09:25 竞价；15:10 日复盘</td><td>当前登记 09:27/09:28、11:35/11:40、18:00；周五 E2 17:00 早于 E1</td></tr><tr><td>五个同名 profile 等于五个进程/角色</td><td>职责、实际身份、任务所属库、脚本进程分表；execute 可由确定性进程承担</td></tr><tr><td>文件生成等于已读；错题声明等于闭环</td><td>交付、传递、读取、裁决四张收据分开；辅助读取仍待签</td></tr><tr><td>P1/P2 生成就会自动 reload</td><td>尚无已证交易应用器；默认观察，不变更买权</td></tr><tr><td>runtime 可补拷正式源</td><td>当前受控交接是正式→runtime 单向；旧反拷建议不执行</td></tr><tr><td>WeFlow 核心必需源、周报自动改偏好</td><td>退役源不擅自恢复；周报仅提案，规则/技能变更仍需签核</td></tr><tr><td>老文档写“唯一权威”即可代表今天</td><td>文档日期、已批准规则、实际部署证据分别核对，不靠标题裁决</td></tr></tbody></table></div>
+<h2 id="7-建议先收口哪件事">7. 建议先收口哪件事<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-建议先收口哪件事" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>先关闭已知 P0 执行残余并保留不放行状态，其次核自然任务的真实交付和消费；不要先换套餐、拆五小时窗口或继续扩功能。</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>顺序</th><th>后续项</th><th>节省/价值</th><th>风险及授权边界</th></tr></thead><tbody><tr><td>P0</td><td>低层卖出原反例及提交/对账边界</td><td>防“上层绿测掩盖低层绕过”</td><td>实现修复与真实账户运行分授权；文档完成不自动许可</td></tr><tr><td>P1</td><td>真实自然轮次交付与消费证据</td><td>定位哪个生产者/消费者断了，避免整链盲重跑</td><td>不补造过去时点，不靠规则文件充主路完成</td></tr><tr><td>P1</td><td>主链/安全网一致性与辅助输入窄来源政策</td><td>减少同日旧文件、漏读、重复分析风险</td><td>辅助政策仍未批准，不反复催签、不自动应用</td></tr><tr><td>P1</td><td>修订应用与午盘版本/口径</td><td>避免“报告已改、机器没改”或数据范围夸大</td><td>是否自动应用先决定；不得因 promote 直接扩买权</td></tr><tr><td>P2</td><td>调度文字/重复能力/周度时序</td><td>降维护噪声与无效重复</td><td>先给精确差异；时刻/轮数/配置变更另签</td></tr></tbody></table></div>
+<h2 id="8-来源索引与时间效力">8. 来源索引与时间效力<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#8-来源索引与时间效力" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>编号</th><th>原报告</th><th>引用重点</th></tr></thead><tbody><tr><td>S0</td><td><a href="../系统进化/2026-10-24-v1.00收敛实施清单" class="internal internal-link alias" data-slug="系统进化/2026-10-24-v1.00收敛实施清单">2026-10-24 V1.00 收敛实施清单</a></td><td>原范围、历史固定样本、网站与回测隔离待办；不是部署通过</td></tr><tr><td>S1</td><td><a href="../2026-10-24-首批安全修复与联合验收" class="internal internal-link alias" data-slug="2026-10-24-首批安全修复与联合验收">2026-10-24 首批安全修复与联合验收</a></td><td>31—36 行限定验收；191—200 行低层失败与未认证边界；211 行不放行</td></tr><tr><td>SP</td><td><a href="../系统进化/2026-10-25-辅助研究输入接线待签说明" class="internal internal-link alias" data-slug="系统进化/2026-10-25-辅助研究输入接线待签说明">2026-10-25 辅助研究输入接线待签说明</a></td><td>3、13—35、62—78 行：未批准、来源政策、精确差异与边界；旧读取器残余随后已由 S2 关闭</td></tr><tr><td>SM</td><td><a href="../系统进化/2026-10-26-全部角色主模型切换与校验" class="internal internal-link alias" data-slug="系统进化/2026-10-26-全部角色主模型切换与校验">2026-10-26 全部角色主模型切换与校验</a></td><td>默认值与最小调用；34—40 行任务固定项未改</td></tr><tr><td>S2</td><td><a href="../系统进化/2026-10-26-第二批研究交付修复与主控验收" class="internal internal-link alias" data-slug="系统进化/2026-10-26-第二批研究交付修复与主控验收">2026-10-26 第二批研究交付修复与主控验收</a></td><td>3、19—27、35—48、50—75、111—115、139—148 行，限定闭包与未完成项</td></tr></tbody></table></div>
+<p>当前任务、输入输出、来源摘要和旧四文档原始摘要见<a href="../系统进化/backups/2026-10-26-architecture-doc-evidence.json" class="internal internal-link alias" data-slug="系统进化/backups/2026-10-26-architecture-doc-evidence.json">本次证据快照</a>。本轮文档自检见<a href="../系统进化/backups/2026-10-26-architecture-doc-validation.json" class="internal internal-link alias" data-slug="系统进化/backups/2026-10-26-architecture-doc-validation.json">检查结果</a>。旧文档不删除、不迁移、不回改历史测试或日期；没有 Git 提交、推送或新同步运行。</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-963" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#重构进度与验收边界--2026-10-26" data-for="重构进度与验收边界--2026-10-26">重构进度与验收边界 · 2026-10-26</a></li><li class="depth-1"><a href="#1-授权与本轮变更范围" data-for="1-授权与本轮变更范围">1. 授权与本轮变更范围</a></li><li class="depth-1"><a href="#2-先把六类验收拆开" data-for="2-先把六类验收拆开">2. 先把六类验收拆开</a></li><li class="depth-1"><a href="#3-重构进度表按能力和剩余缺口不按故事阶段打勾" data-for="3-重构进度表按能力和剩余缺口不按故事阶段打勾">3. 重构进度表：按能力和剩余缺口，不按故事阶段打勾</a></li><li class="depth-1"><a href="#4-原测试证据怎么读" data-for="4-原测试证据怎么读">4. 原测试证据怎么读</a></li><li class="depth-1"><a href="#5-本轮当日运行切片没有全绿" data-for="5-本轮当日运行切片没有全绿">5. 本轮当日运行切片没有“全绿”</a></li><li class="depth-1"><a href="#6-旧表旧图与现在最重要的区别" data-for="6-旧表旧图与现在最重要的区别">6. 旧表/旧图与现在最重要的区别</a></li><li class="depth-1"><a href="#7-建议先收口哪件事" data-for="7-建议先收口哪件事">7. 建议先收口哪件事</a></li><li class="depth-1"><a href="#8-来源索引与时间效力" data-for="8-来源索引与时间效力">8. 来源索引与时间效力</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../readme" class="internal">README</a></li><li><a href="../系统进化/2026-10-26-市场反馈驱动的认知闭环与分期施工方案" class="internal">2026-10-26 市场反馈驱动的认知闭环与分期施工方案</a></li><li><a href="../系统进化/2026-10-26-架构审阅图与决策路径" class="internal">2026-10-26 架构审阅图与决策路径</a></li><li><a href="../系统进化/2026-10-26-系统架构全景与定时任务数据流" class="internal">2026-10-26 系统架构全景与定时任务数据流</a></li><li><a href="../系统进化/2026-10-28-升级总体验收报告" class="internal">2026-10-28 升级总体验收报告</a></li><li><a href="../系统进化/readme" class="internal">README</a></li><li><a href="../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

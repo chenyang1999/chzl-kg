@@ -1,0 +1,12 @@
+--- a/scripts/research/run_research_shell.sh
++++ b/scripts/research/run_research_shell.sh
+@@ -83,6 +83,9 @@
+     local skill="$2"
+     local out_json="$3"
+     local prompt="$4"
++    # The shell already owns launch/wait/delivery; do not spend a second model
++    # session on the same stage. This is a prompt contract, not a process sandbox.
++    prompt="$prompt 当前会话就是本阶段唯一研究/决策执行者。直接完成本技能；不得再次启动 Hermes CLI、delegate_task 或其他模型会话来执行同一阶段/同一技能。启动、等待与交付校验已由外部普通程序负责，不重复做模型包装。允许既有数据工具、确定性辅助脚本及既有图像证据通道；不得把本限制扩大为减少候选来源、风险或反证。"
+     if [[ -n "$PIPELINE_POLICY_CONTEXT" ]]; then
+         prompt="$prompt 本次流水线政策与真实启动时点：${PIPELINE_POLICY_CONTEXT}。5000万token仅连续任务努力目标，非硬限或每日新额度；08:30仅正常盘前交付目标，不强杀、不撤单、不清池、不冒充成功。run_context.mode只表示实际时钟与交付目标的关系，不能据迟交或业务日倒推资料来源。实际回放须另明示冻结输入、知识截止与真实生成时间，不冒充事前预测。usage未计量不当0，不保证低于目标。不改变有效零交易预算、不交易决定或既有交易授权与保护。"
+     fi

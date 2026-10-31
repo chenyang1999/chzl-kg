@@ -1,0 +1,28 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____ test_real_normal_shell_delivery_can_later_use_selective_reassessment _____
+tests/pipeline/test_d1_selective_reassessment.py:364: in test_real_normal_shell_delivery_can_later_use_selective_reassessment
+    assert result.returncode==0, result.stdout+result.stderr
+E   AssertionError:   [17:22:17] launching D1 (skill=main_decision_v1)
+E     Traceback (most recent call last):
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_state.py", line 799, in <module>
+E         raise SystemExit(main())
+E                          ^^^^^^
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_state.py", line 769, in main
+E         attempt_result(args.root, args.date, args.run_id, args.stage, args.attempt, args.rc)
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_state.py", line 94, in attempt_result
+E         update(root, date, run_id, apply)
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_state.py", line 167, in update
+E         fn(state)
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_state.py", line 88, in apply
+E         record = state["resource_observation"]["attempts"][attempt_key(run_id, unit, attempt)]
+E                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+E     KeyError: 'resource_observation'
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['/bin/bash', '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red/cas...attempt_key(run_id, unit, attempt)]\n             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: \'resource_observation\'\n').returncode
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_real_normal_shell_delivery_can_later_use_selective_reassessment
+1 failed in 0.61s

@@ -1,0 +1,101 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260924",
+  "next_day": "20260928",
+  "generated_at": "2026-10-17T18:55:33+08:00",
+  "n_total": 52,
+  "n_candidates": 6,
+  "candidates": [
+    {
+      "ts_code": "001234.SZ",
+      "name": "泰慕士",
+      "industry": "服装家纺",
+      "limit_times": 4,
+      "fd_amount_yi": 3.61,
+      "pct_chg": 10.01,
+      "prob_yizi": 32.0,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=3.6亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600825.SH",
+      "name": "新华传媒",
+      "industry": "出版",
+      "limit_times": 4,
+      "fd_amount_yi": 17.61,
+      "pct_chg": 10.06,
+      "prob_yizi": 32.0,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=17.6亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002238.SZ",
+      "name": "天威视讯",
+      "industry": "电视广播",
+      "limit_times": 3,
+      "fd_amount_yi": 0.13,
+      "pct_chg": 10.05,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.1亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002614.SZ",
+      "name": "奥佳华",
+      "industry": "其他家电",
+      "limit_times": 4,
+      "fd_amount_yi": 1.04,
+      "pct_chg": 10.04,
+      "prob_yizi": 21.7,
+      "prob_up": 38.1,
+      "rank": "关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.0亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "601811.SH",
+      "name": "新华文轩",
+      "industry": "出版",
+      "limit_times": 5,
+      "fd_amount_yi": 1.36,
+      "pct_chg": 10.0,
+      "prob_yizi": 20.0,
+      "prob_up": 42.0,
+      "rank": "关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=1.4亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "000592.SZ",
+      "name": "平潭发展",
+      "industry": "林业Ⅱ",
+      "limit_times": 1,
+      "fd_amount_yi": 3.57,
+      "pct_chg": 10.03,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.6亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停52只，筛出 6 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

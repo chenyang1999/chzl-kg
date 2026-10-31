@@ -1,0 +1,2929 @@
+{
+  "schema_version": "architecture_document_evidence_v1",
+  "documentation_date": "2026-10-26",
+  "purpose": "Local documentation snapshot. No business jobs, model probes, trading, configuration or policy changes.",
+  "scope": {
+    "hermes_home": "/Users/chenyang/.hermes",
+    "repository": "/Users/chenyang/Downloads/demo/沧海巨浪",
+    "stores_glob": [
+      "/Users/chenyang/.hermes/cron/jobs.json",
+      "/Users/chenyang/.hermes/profiles/*/cron/jobs.json"
+    ],
+    "excluded": "未读~/.hermes-canghai克隆；未盘点macOS launchd或系统crontab；未把历史executions中已删除job当当前任务；本报告是当前Hermes真实任务库全量清单，不证明scheduler服务此刻存活。"
+  },
+  "captured_from": "2026-10-26T15:49:55.583080+08:00",
+  "captured_to": "2026-10-26T15:49:55.684966+08:00",
+  "parent_independent_verification": {
+    "verified_at": "2026-10-26T15:51:25+08:00",
+    "current_stored_jobs": 37,
+    "current_unique_ids": 37,
+    "ids_equal": true,
+    "compared_fields": [
+      "enabled",
+      "state",
+      "no_agent",
+      "script",
+      "skills",
+      "skill",
+      "scope",
+      "schedule"
+    ],
+    "configuration_differences": [],
+    "business_success_inferred": false
+  },
+  "inventory_summary": {
+    "stores_discovered": 5,
+    "nonempty_stores": 4,
+    "stored_job_count": 37,
+    "enumerated_job_count": 37,
+    "unique_job_id_count": 37,
+    "duplicate_ids": {},
+    "enabled_count": 37,
+    "paused_count": 0,
+    "by_scope": {
+      "default": 34,
+      "canghai-fetch": 1,
+      "canghai-plan": 1,
+      "canghai-review": 1
+    },
+    "by_entry_kind": {
+      "script_only_scheduler": 22,
+      "direct_agent": 14,
+      "script_then_agent": 1
+    },
+    "by_last_status": {
+      "ok": 27,
+      "error": 8,
+      "None": 2
+    },
+    "by_category": {
+      "执行模拟/真实": 2,
+      "核心全量研究主决策": 1,
+      "健康/推送/同步": 10,
+      "核心数据抓取": 4,
+      "复盘进化": 3,
+      "辅助研究": 9,
+      "竞价午盘修订": 4,
+      "安全网": 1,
+      "扫描": 3
+    },
+    "nested_model_no_agent_jobs": [
+      "24f4119fab82",
+      "af5014f46307"
+    ],
+    "all_wrapper_paths_exist": true,
+    "concurrent_source_changes": [],
+    "count_verified": true
+  },
+  "stores": [
+    {
+      "path": "/Users/chenyang/.hermes/cron/jobs.json",
+      "resolved_path": "/Users/chenyang/.hermes/cron/jobs.json",
+      "scope": "default",
+      "stored_count": 34,
+      "sha256": "61807218b8646a76fd4f873b37deaf16acea089d2aeb58b6aa0875dbb780015c",
+      "updated_at": "2026-10-26T15:40:19.294561+08:00",
+      "is_symlink": false
+    },
+    {
+      "path": "/Users/chenyang/.hermes/profiles/canghai-fetch/cron/jobs.json",
+      "resolved_path": "/Users/chenyang/.hermes/profiles/canghai-fetch/cron/jobs.json",
+      "scope": "canghai-fetch",
+      "stored_count": 1,
+      "sha256": "30ebc840c64bc57a8bd094deaf82037a9ca6a03cbb13124e8b4db3f377f637f9",
+      "updated_at": "2026-10-26T11:35:25.077499+08:00",
+      "is_symlink": false
+    },
+    {
+      "path": "/Users/chenyang/.hermes/profiles/canghai-plan/cron/jobs.json",
+      "resolved_path": "/Users/chenyang/.hermes/profiles/canghai-plan/cron/jobs.json",
+      "scope": "canghai-plan",
+      "stored_count": 1,
+      "sha256": "5e8b0c1450b329ac4c482a3485438856ea963e5c379da9deb99980932713fc40",
+      "updated_at": "2026-10-26T11:40:24.310940+08:00",
+      "is_symlink": false
+    },
+    {
+      "path": "/Users/chenyang/.hermes/profiles/canghai-research/cron/jobs.json",
+      "resolved_path": "/Users/chenyang/.hermes/profiles/canghai-research/cron/jobs.json",
+      "scope": "canghai-research",
+      "stored_count": 0,
+      "sha256": "b98f2b357e7d5de367b62778937065a3e3b76f49cff5428e4a699fda8f7cf9d2",
+      "updated_at": "2026-09-30T16:14:53.430700+08:00",
+      "is_symlink": false
+    },
+    {
+      "path": "/Users/chenyang/.hermes/profiles/canghai-review/cron/jobs.json",
+      "resolved_path": "/Users/chenyang/.hermes/profiles/canghai-review/cron/jobs.json",
+      "scope": "canghai-review",
+      "stored_count": 1,
+      "sha256": "13a27b74a6a2ba7df1434d6c0675d5ed347cfcda6c723a4b4729aaa08f6ff2aa",
+      "updated_at": "2026-10-23T17:10:33.878354+08:00",
+      "is_symlink": false
+    }
+  ],
+  "jobs": [
+    {
+      "id": "dc312e1c10d3",
+      "name": "canghai-execute · watcher start (09:15)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 9 * * 1-5",
+        "display": "15 9 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_execute_watcher_start.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T09:15:48.267267+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "09:15 按 PID/进程检查幂等启动 dry_run watcher；不是正式预案生成器。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "data/plans/{date}/watchlist_plan.json",
+        "data/runtime/watchlist_plan_{date}.json",
+        "data/execution/KILL_SWITCH"
+      ],
+      "intended_outputs": [
+        "data/execution/watcher_daemon.pid",
+        "data/execution/watcher_daemon.log",
+        "data/execution/{date}/watcher_daemon.jsonl",
+        "data/runtime/dry_run_decisions_{date}.jsonl"
+      ],
+      "notes": [
+        "任务本次定义 enabled=true，wrapper 中“2026-08-31 已暂停”的历史注释不代表当前暂停。",
+        "只确认该 cron 启动参数为 dry_run；不据此推断用户其他入口不存在实盘。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 3,
+        "line_end": 49
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_execute_watcher_start.sh",
+          "line_start": 6,
+          "line_end": 30,
+          "explanation": "nohup python scripts/watcher.py --mode dry_run；后台启动后即返回"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/watcher.py",
+          "line_start": 26,
+          "line_end": 32,
+          "explanation": "薄入口委托 watcher_daemon.main"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/execute/watcher_daemon.py",
+          "line_start": 98,
+          "line_end": 180,
+          "explanation": "按 mode 运行加载/盘中一次；dispatch=False；snapshot_live 默认 False"
+        }
+      ]
+    },
+    {
+      "id": "51e960a61f9e",
+      "name": "canghai-execute · watcher keepalive (10m)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/10 9-15 * * 1-5",
+        "display": "*/10 9-15 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_execute_watcher_keepalive.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T15:40:19.287436+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "每10分钟检查同一个 watcher；09:30–15:00 内缺失时重用 start wrapper。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "data/execution/watcher_daemon.pid",
+        "scripts/watcher.py 进程存在性"
+      ],
+      "intended_outputs": [
+        "同 dc312e1c10d3，仅缺失时重启"
+      ],
+      "notes": [
+        "与 start 是启动/保活两条独立调度，不是两套独立交易 daemon。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 50,
+        "line_end": 96
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_execute_watcher_keepalive.sh",
+          "line_start": 12,
+          "line_end": 35,
+          "explanation": "时间门控、PID/pgrep 检查，缺失时 exec start wrapper"
+        },
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_execute_watcher_start.sh",
+          "line_start": 28,
+          "line_end": 30,
+          "explanation": "固定 dry_run"
+        }
+      ]
+    },
+    {
+      "id": "24f4119fab82",
+      "name": "canghai-research · 每日 R1-R7+D1 全量流水线 (06:10)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "10 6 * * 1-5",
+        "display": "10 6 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_research_daily.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T06:10:48.318170+08:00",
+      "formal_plan_role": "primary_llm_canonical_plan",
+      "prompt_business_summary": "全量研究主入口；R1/R4/R7 并行→R3→R2→图像快照→R5→R6→research_summary→D1→runtime交接。",
+      "model_invocation": "nested_cli",
+      "child_profiles": [
+        "canghai-research",
+        "canghai-plan"
+      ],
+      "inputs": [
+        "data/raw/{date}/manifest.json",
+        "data/raw/{date}/ 源快照",
+        "本轮 R1–R7 主产物及版本绑定"
+      ],
+      "intended_outputs": [
+        "data/research/{date}/R1_style.json",
+        "data/research/{date}/R2_main_sectors.json",
+        "data/research/{date}/R3_sentiment.json",
+        "data/research/{date}/R4_news.json",
+        "data/research/{date}/R5_stock_profiles.json",
+        "data/research/{date}/R6_devil_advocate.json",
+        "data/research/{date}/R7_capital_flow.json（或合法同日带日期主产物）",
+        "data/research/{date}/research_summary.json",
+        "data/plans/{date}/watchlist_plan.json",
+        "chzl_kg/投研交易/盘前预案/{date}.md",
+        "data/runtime/watchlist_plan_{date}.json（校验后交接副本）",
+        "data/health/research_pipeline_{date}.json",
+        "data/logs/research_shell/{date}/"
+      ],
+      "notes": [
+        "外层 no_agent=true 但内部显式启动8个研究/决策单元的模型会话；图像快照也可能调用模型。",
+        "R1–R7 和 D1 是一条真实 cron 内的步骤，不是另有8条独立 cron。",
+        "D1 明确只写 plans 核心JSON与KG主MD，不写 runtime；交接由实现侧承担。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 97,
+        "line_end": 143
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_research_daily.sh",
+          "line_start": 4,
+          "line_end": 6,
+          "explanation": "桥接项目 cron wrapper"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell_cron_wrapper.sh",
+          "line_start": 15,
+          "line_end": 28,
+          "explanation": "记录 run_id，detach --worker；退出0只表示接收/启动"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell_cron_wrapper.sh",
+          "line_start": 38,
+          "line_end": 71,
+          "explanation": "交易日守卫→等待 manifest，超时显式降级→exec 主流水线"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell.sh",
+          "line_start": 76,
+          "line_end": 133,
+          "explanation": "R 默认 canghai-research，显式 -p profile chat -s skill；产物检查"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell.sh",
+          "line_start": 163,
+          "line_end": 253,
+          "explanation": "实际研究顺序和 D1 提示/显式 canghai-plan"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell.sh",
+          "line_start": 253,
+          "line_end": 278,
+          "explanation": "canonical D1→state handoff→离线状态核对"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/pipeline_state.py",
+          "line_start": 1,
+          "line_end": 6,
+          "explanation": "业务状态独立于调度/进程返回值"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/pipeline_artifacts.py",
+          "line_start": 14,
+          "line_end": 25,
+          "explanation": "R1–R7 JSON、KG目录和必需字段映射"
+        }
+      ]
+    },
+    {
+      "id": "cac075214e6f",
+      "name": "canghai-sise · 全市场日线+四色四量增量 (17:00)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * 1-5",
+        "display": "0 17 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_sise_daily_sync.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-23T17:00:47.413552+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "全市场日线增量、四色四量、tech快照更新；后台运行，不生成D1。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "Tushare股票列表/日线",
+        "src.kb.database.Database（DB_PATH）"
+      ],
+      "intended_outputs": [
+        "kb/research.db（market_stock_basic / market_daily_bars / sise_daily_state / stock_tech_daily）",
+        "data/logs/sise_sync/{timestamp}_main.log"
+      ],
+      "notes": [
+        "wrapper原有日志轮转会删除14天前日志；审计没有执行。",
+        "调度ok不等于后台数据同步完成。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 144,
+        "line_end": 190
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_sise_daily_sync.sh",
+          "line_start": 19,
+          "line_end": 26,
+          "explanation": "nohup sync_sise_market.py --daily 后立即 exit0"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_sise_market.py",
+          "line_start": 17,
+          "line_end": 65,
+          "explanation": "数据库/采集器→增量日线→四色四量→tech计算"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/settings.py",
+          "line_start": 11,
+          "line_end": 12,
+          "explanation": "KB_DIR/DB_PATH静态默认指向kb/research.db"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/kb/database.py",
+          "line_start": 194,
+          "line_end": 240,
+          "explanation": "市场基础/日线/四色状态数据库表"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/kb/database.py",
+          "line_start": 344,
+          "line_end": 346,
+          "explanation": "技术日线表"
+        }
+      ]
+    },
+    {
+      "id": "354c580574e3",
+      "name": "沧海巨浪-收盘落盘提醒",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "5 15 * * 1-5",
+        "display": "5 15 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/chzl_kg_close_reminder.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T15:05:31.043070+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "收盘持仓模板与macOS弹窗提醒；不抓取真实账户持仓，不自动下单。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "本地日期",
+        "~/chzl_kg/positions/{YYYY-MM-DD}.md 是否存在"
+      ],
+      "intended_outputs": [
+        "~/chzl_kg/positions/{YYYY-MM-DD}.md（缺失时模板）",
+        "macOS通知"
+      ],
+      "notes": [
+        "账户尾号和用户通信标识不进入证据摘录。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 191,
+        "line_end": 237
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/chzl_kg_close_reminder.sh",
+          "line_start": 6,
+          "line_end": 43,
+          "explanation": "周末门控、模板写入与 osascript 通知"
+        }
+      ]
+    },
+    {
+      "id": "6433ef538744",
+      "name": "canghai-fetch · 盘前全源抓取 (06:00)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * 1-5",
+        "display": "0 6 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_fetch_all_sources.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T06:03:27.499465+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "06:00全源抓取：群聊、公众号RSS、健康、外盘、新闻、公告窗口、情绪周期、人气榜；为研究供数。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "信息源/MCP/API",
+        "data/health/fetch_window_state.json"
+      ],
+      "intended_outputs": [
+        "data/raw/{date}/manifest.json",
+        "data/raw/manifest.json（latest指针）",
+        "data/raw/{date}/wechat_official_rss.jsonl",
+        "data/raw/{date}/wechat_official_20.jsonl（兼容位，须以manifest状态判断）",
+        "data/raw/{date}/wechat_cli_5groups.jsonl",
+        "data/raw/{date}/mcp_health.json",
+        "data/raw/{date}/overseas_snapshot.json",
+        "data/raw/{date}/news_cls.jsonl",
+        "data/raw/{date}/news_major.jsonl",
+        "data/raw/{date}/anns_window.jsonl",
+        "chzl_kg/投研交易/事件追踪/{date}_premarket.md",
+        "data/research/{date}/emotion_cycle.json",
+        "data/research/{resolved_date}/attention_signals.json",
+        "data/health/fetch_window_state.json"
+      ],
+      "notes": [
+        "wrapper的07:15注释已过时，真实 schedule 为06:00。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 238,
+        "line_end": 284
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_fetch_all_sources.sh",
+          "line_start": 4,
+          "line_end": 8,
+          "explanation": "项目venv运行 fetch_all_sources.py"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/fetch_all_sources.py",
+          "line_start": 130,
+          "line_end": 341,
+          "explanation": "源抓取与manifest、情绪周期、人气榜写入"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/fetch_all_sources.py",
+          "line_start": 31,
+          "line_end": 38,
+          "explanation": "RSS subprocess入口；保留旧兼容导入不等于仍使用旧源"
+        }
+      ]
+    },
+    {
+      "id": "bbfa5007d424",
+      "name": "canghai-review · 每日复盘 E1 (18:00)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 1-5",
+        "display": "0 18 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "daily_review_v1"
+      ],
+      "skill": "daily_review_v1",
+      "last_status": "ok",
+      "last_run_at": "2026-10-23T18:25:39.947153+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "直接Agent按 daily_review_v1执行 E1：双重复盘、观察池、missed alpha、错题本。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "当日D1/R1–R7/P1/P2",
+        "data/execution/{date}/（若有）",
+        "行情/新闻/龙虎榜",
+        "前日观察池追踪"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/复盘记录/{date}.md",
+        "data/runtime/E1_data.json（job prompt要求）",
+        "data/reports/{date}/E1_daily_review.md",
+        "data/reports/{date}/E1_data.json",
+        "data/reports/{date}/observation_tracking.json",
+        "data/reports/{date}/intraday_news.json",
+        "data/reports/{date}/dragon_tiger.json",
+        "data/corrections/{ISO_week}/error_case_*.md（有错时）"
+      ],
+      "notes": [
+        "名称canghai-review不是此任务的执行身份；该job在default库。",
+        "prompt强调runtime/E1_data.json，skill完整契约还要求reports目录各产物；本次未验证实际交付。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 285,
+        "line_end": 340
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/daily_review_v1/SKILL.md",
+          "line_start": 93,
+          "line_end": 133,
+          "explanation": "skill输入与完整输出契约"
+        }
+      ]
+    },
+    {
+      "id": "6364b9c63227",
+      "name": "canghai-event-tracker",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 19 * * *",
+        "display": "0 19 * * *"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "公司事件驱动分析"
+      ],
+      "skill": "公司事件驱动分析",
+      "last_status": "ok",
+      "last_run_at": "2026-10-25T19:05:56.265399+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "每天19:00事件追踪：公告分类、强度、标的映射、持仓影响；19:00快照不是全天全量。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "Tushare anns_d/repurchase/stk_holdertrade"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/事件追踪/{date}.md"
+      ],
+      "notes": [
+        "19:00后公告由次日盘前公告窗口补齐（job明确口径）。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 341,
+        "line_end": 396
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/cron/jobs.json",
+          "line_start": 344,
+          "line_end": 344,
+          "explanation": "直接Agent的业务输入、输出和工具要求来自此job prompt；不执行prompt"
+        }
+      ]
+    },
+    {
+      "id": "e9f209e44863",
+      "name": "canghai-insider-tracker",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 19 * * 5",
+        "display": "30 19 * * 5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "监管内幕交易追踪"
+      ],
+      "skill": "监管内幕交易追踪",
+      "last_status": "ok",
+      "last_run_at": "2026-10-23T19:48:17.441520+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "周五董监高/重要股东增减持信号与TOP10报告。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "Tushare stk_holdertrade"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/席位与资金/{date}.md"
+      ],
+      "notes": [],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 397,
+        "line_end": 448
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/cron/jobs.json",
+          "line_start": 400,
+          "line_end": 400,
+          "explanation": "直接Agent的业务输入、输出和工具要求来自此job prompt；不执行prompt"
+        }
+      ]
+    },
+    {
+      "id": "8588cd3d9943",
+      "name": "canghai-catalyst-calendar",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 7 * * 1",
+        "display": "30 7 * * 1"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "催化剂日历"
+      ],
+      "skill": "催化剂日历",
+      "last_status": "error",
+      "last_run_at": "2026-10-26T07:30:51.411280+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "周一生成未来4周A股催化剂日历；不是正式预案。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "催化事件信息/催化剂日历skill"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/催化剂/{date}.md"
+      ],
+      "notes": [],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 449,
+        "line_end": 504
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/cron/jobs.json",
+          "line_start": 452,
+          "line_end": 452,
+          "explanation": "直接Agent的业务输入、输出和工具要求来自此job prompt；不执行prompt"
+        }
+      ]
+    },
+    {
+      "id": "a9b5eb63af43",
+      "name": "canghai-small-cap-miner",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 6 * * 1-5",
+        "display": "30 6 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "小盘成长股挖掘"
+      ],
+      "skill": "小盘成长股挖掘",
+      "last_status": "error",
+      "last_run_at": "2026-10-26T06:31:05.739326+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "工作日小盘成长/专精特新扩池，精选TOP5候选报告。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "Tushare daily_basic等基本面数据"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/扩池/{date}.md"
+      ],
+      "notes": [],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 505,
+        "line_end": 560
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/cron/jobs.json",
+          "line_start": 508,
+          "line_end": 508,
+          "explanation": "直接Agent的业务输入、输出和工具要求来自此job prompt；不执行prompt"
+        }
+      ]
+    },
+    {
+      "id": "d49fb5310923",
+      "name": "canghai-dividend-picker",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 6 1 * *",
+        "display": "30 6 1 * *"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "高分红股挑选"
+      ],
+      "skill": "高分红股挑选",
+      "last_status": "ok",
+      "last_run_at": "2026-10-01T07:30:09.103088+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "每月1日筛选高分红TOP20并生成红利池报告。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "Tushare dividend等分红与估值数据"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/红利池/{YYYYMM}.md"
+      ],
+      "notes": [],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 561,
+        "line_end": 609
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/cron/jobs.json",
+          "line_start": 564,
+          "line_end": 564,
+          "explanation": "直接Agent的业务输入、输出和工具要求来自此job prompt；不执行prompt"
+        }
+      ]
+    },
+    {
+      "id": "f49220d13788",
+      "name": "canghai-health · 每日产出健康检查 (20:30)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 20 * * *",
+        "display": "30 20 * * *"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_daily_health_check.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-25T20:30:48.156726+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "20:30检查应有产物和cron失败/未pin项；异常打印告警，脚本最终exit0。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "项目产物路径",
+        "当前job库与运行状态"
+      ],
+      "intended_outputs": [
+        "stdout告警（无异常可静默）"
+      ],
+      "notes": [
+        "健康任务自身ok不能证明被检查业务健康。",
+        "检查器存在旧午盘MD/WeFlow等路径口径，不能用检查器注释替代当前真实调度。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 610,
+        "line_end": 659
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_daily_health_check.sh",
+          "line_start": 9,
+          "line_end": 28,
+          "explanation": "依次运行check_cron_outputs.py和check_cron_failures.py；exit RC=0"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/health/check_cron_outputs.py",
+          "line_start": 157,
+          "line_end": 210,
+          "explanation": "文件/目录存在和尺寸等启发式；含历史路径"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/health/check_cron_failures.py",
+          "line_start": 40,
+          "line_end": 75,
+          "explanation": "当前cron库读取及失败巡检"
+        }
+      ]
+    },
+    {
+      "id": "d372940a8886",
+      "name": "canghai-fetch · 竞价快照 (09:27)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "27 9 * * 1-5",
+        "display": "27 9 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "fetch_auction_snapshot_v1"
+      ],
+      "skill": "fetch_auction_snapshot_v1",
+      "last_status": "error",
+      "last_run_at": "2026-10-26T09:27:50.189197+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "09:27直接Agent调用竞价快照脚本，只供P1，不修改plan。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "data/plans/{date}/watchlist_plan.json",
+        "data/runtime/sentiment_basket_{date}.json",
+        "Tushare stk_auction / XTick"
+      ],
+      "intended_outputs": [
+        "data/raw/{date}/auction_snapshot.json"
+      ],
+      "notes": [
+        "job prompt只描述XTick，源码已是双源；默认stub/live门控仍以实现和执行参数为准。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 660,
+        "line_end": 720
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_auction_snapshot.sh",
+          "line_start": 4,
+          "line_end": 11,
+          "explanation": "薄shell转Python"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_auction_snapshot.py",
+          "line_start": 28,
+          "line_end": 29,
+          "explanation": "正式plan输入与raw快照输出"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_auction_snapshot.py",
+          "line_start": 497,
+          "line_end": 534,
+          "explanation": "当前实现Tushare优先，XTick备用；失败写stub"
+        }
+      ]
+    },
+    {
+      "id": "d5cd79c48615",
+      "name": "canghai-plan · P1 竞价校准 (09:28)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "28 9 * * 1-5",
+        "display": "28 9 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "auction_amendment_v1"
+      ],
+      "skill": "auction_amendment_v1",
+      "last_status": "error",
+      "last_run_at": "2026-10-26T09:28:50.258530+08:00",
+      "formal_plan_role": "amendment_only",
+      "prompt_business_summary": "P1对照既有D1与竞价快照生成池内修订，observe-only，不新建完整D1。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "data/plans/{date}/watchlist_plan.json",
+        "data/raw/{date}/auction_snapshot.json",
+        "data/research/{date}/research_summary.json"
+      ],
+      "intended_outputs": [
+        "data/plans/{date}/auction_amendment.json",
+        "chzl_kg/投研交易/竞价判断/{date}.md（skill步骤要求）"
+      ],
+      "notes": [
+        "job在default库而非canghai-plan库；名称不改变身份。",
+        "09:29前落盘是prompt/skill时限；未实测本轮能否满足。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 721,
+        "line_end": 781
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md",
+          "line_start": 76,
+          "line_end": 143,
+          "explanation": "修订JSON与竞价判断MD，标observe-only"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/plan_resolver.py",
+          "line_start": 24,
+          "line_end": 39,
+          "explanation": "canonical只读校验，runtime不得反写"
+        }
+      ]
+    },
+    {
+      "id": "d741b25076a6",
+      "name": "canghai-phone · 早盘简报 (09:10)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "10 9 * * 1-5",
+        "display": "10 9 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [],
+      "skill": null,
+      "last_status": "error",
+      "last_run_at": "2026-10-26T09:10:50.318924+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "09:10压缩R1/R2/R3/R4/R7、D1和预案MD为手机简报；仅消费/发送，不生成正式预案。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "data/research/{date}/R1_style.json",
+        "data/research/{date}/R2_main_sectors.json",
+        "data/research/{date}/R3_sentiment.json",
+        "data/research/{date}/R4_news.json",
+        "data/research/{date}/R7_capital_flow.json",
+        "data/plans/{date}/watchlist_plan.json",
+        "chzl_kg/投研交易/盘前预案/{date}.md"
+      ],
+      "intended_outputs": [
+        "/tmp/chzl_morning_{date}.txt（job原始临时路径，审计未创建）",
+        "用户微信消息（目标标识已省略）"
+      ],
+      "notes": [
+        "job仍要求系统/tmp；与当前scratch纪律存在静态不一致，本次仅记录不修。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 782,
+        "line_end": 839
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/cron/jobs.json",
+          "line_start": 785,
+          "line_end": 785,
+          "explanation": "直接Agent的业务输入、输出和工具要求来自此job prompt；不执行prompt"
+        }
+      ]
+    },
+    {
+      "id": "5fbc386914cd",
+      "name": "canghai-phone · 复盘推送 (18:30)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 18 * * 1-5",
+        "display": "30 18 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-23T18:31:50.906749+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "18:30压缩E1复盘为手机摘要；今日缺失时可发送最近复盘并注明。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "chzl_kg/投研交易/复盘记录/{date}.md",
+        "data/runtime/E1_data.json"
+      ],
+      "intended_outputs": [
+        "/tmp/chzl_review_{date}.txt（job原始临时路径，审计未创建）",
+        "用户微信消息（目标标识已省略）"
+      ],
+      "notes": [
+        "仅消费/推送；“最近复盘”不能当今日E1已产出。",
+        "job仍要求系统/tmp；本次未修改。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 840,
+        "line_end": 896
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/cron/jobs.json",
+          "line_start": 843,
+          "line_end": 843,
+          "explanation": "直接Agent的业务输入、输出和工具要求来自此job prompt；不执行prompt"
+        }
+      ]
+    },
+    {
+      "id": "5871f5ca82e4",
+      "name": "chzl-kg · 笔记站同步 (09:30)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 9 * * *",
+        "display": "30 9 * * *"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_chzl_kg_site_sync.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T09:32:05.337249+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "同步KG到Quartz站并Git推送/构建/发布；同一wrapper在4个时点调度。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "chzl_kg/（含排除清单）"
+      ],
+      "intended_outputs": [
+        "/Users/chenyang/Downloads/demo/chzl-kg-web/content/",
+        "Quartz public/及远端站点",
+        "data/logs/cron/chzl_kg_site_sync_{date}.log"
+      ],
+      "notes": [
+        "这是4个不同时间的真实调度，非重复ID、非另一个profile。",
+        "同步实现有源侧unlink、目标侧删除、Git push等副作用；本次绝未执行。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 897,
+        "line_end": 947
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_chzl_kg_site_sync.sh",
+          "line_start": 3,
+          "line_end": 4,
+          "explanation": "桥接项目同步发布脚本"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_chzl_kg_site.sh",
+          "line_start": 26,
+          "line_end": 47,
+          "explanation": "同步→content提交push→Quartz build→发布gh-pages"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_chzl_kg_to_quartz.sh",
+          "line_start": 9,
+          "line_end": 36,
+          "explanation": "源侧自指链接清理→rsync --delete和排除私人目录"
+        }
+      ]
+    },
+    {
+      "id": "99ec8bce24ad",
+      "name": "chzl-kg · 笔记站同步 (18:00)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * *",
+        "display": "0 18 * * *"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_chzl_kg_site_sync.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-25T18:01:53.841698+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "同步KG到Quartz站并Git推送/构建/发布；同一wrapper在4个时点调度。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "chzl_kg/（含排除清单）"
+      ],
+      "intended_outputs": [
+        "/Users/chenyang/Downloads/demo/chzl-kg-web/content/",
+        "Quartz public/及远端站点",
+        "data/logs/cron/chzl_kg_site_sync_{date}.log"
+      ],
+      "notes": [
+        "这是4个不同时间的真实调度，非重复ID、非另一个profile。",
+        "同步实现有源侧unlink、目标侧删除、Git push等副作用；本次绝未执行。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 948,
+        "line_end": 998
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_chzl_kg_site_sync.sh",
+          "line_start": 3,
+          "line_end": 4,
+          "explanation": "桥接项目同步发布脚本"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_chzl_kg_site.sh",
+          "line_start": 26,
+          "line_end": 47,
+          "explanation": "同步→content提交push→Quartz build→发布gh-pages"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_chzl_kg_to_quartz.sh",
+          "line_start": 9,
+          "line_end": 36,
+          "explanation": "源侧自指链接清理→rsync --delete和排除私人目录"
+        }
+      ]
+    },
+    {
+      "id": "af5014f46307",
+      "name": "canghai-plan · D1 预案安全网 (08:50)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "50 8 * * 1-5",
+        "display": "50 8 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_d1_safety_net.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T08:51:03.052378+08:00",
+      "formal_plan_role": "conditional_llm_retry_then_explicit_rule_fallback",
+      "prompt_business_summary": "08:50 D1安全网：有效LLM预案则校验/交接后静默；输入就绪才重试canghai-plan；失败才允许显式规则兜底。",
+      "model_invocation": "nested_cli",
+      "child_profiles": [
+        "canghai-plan"
+      ],
+      "inputs": [
+        "正式D1 JSON+KG MD",
+        "当轮研究主产物/summary与版本",
+        "data/health/research_pipeline_{date}.json"
+      ],
+      "intended_outputs": [
+        "data/plans/{date}/watchlist_plan.json（缺失/需重评时）",
+        "chzl_kg/投研交易/盘前预案/{date}.md",
+        "data/runtime/watchlist_plan_{date}.json（交接）",
+        "data/logs/research_shell/{date}/D1_llm_retry.log"
+      ],
+      "notes": [
+        "no_agent=true不表示无模型。wrapper头注“缺失则python补齐”已不完整，需以Python当前实现为准。",
+        "与06:10主流水线共享D1生成能力，但职责是幂等条件安全网，不是第二套全量研究调度。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 999,
+        "line_end": 1049
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_d1_safety_net.sh",
+          "line_start": 6,
+          "line_end": 11,
+          "explanation": "wrapper未传--no-llm，默认会尝试模型"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/ensure_watchlist_plan.py",
+          "line_start": 58,
+          "line_end": 70,
+          "explanation": "固定canghai-plan/main_decision_v1与核心输出"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/ensure_watchlist_plan.py",
+          "line_start": 260,
+          "line_end": 300,
+          "explanation": "显式hermes -p canghai-plan；检查本轮JSON/MD并交接"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/ensure_watchlist_plan.py",
+          "line_start": 324,
+          "line_end": 380,
+          "explanation": "完整LLM不覆盖；上游缺失拒绝；重试后有条件规则fallback"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/execute/fallback.py",
+          "line_start": 68,
+          "line_end": 75,
+          "explanation": "规则备用转src.plan.main_decision.run_main_decision(fallback=True)"
+        }
+      ]
+    },
+    {
+      "id": "cffc5928d382",
+      "name": "canghai-fetch · 美股晚间重抓 (22:30)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 22 * * 1-5",
+        "display": "30 22 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_overseas_redump.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-23T22:30:50.792270+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "22:30重抓外盘快照，供次晨研究读取；不直接生成预案。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "外盘行情源"
+      ],
+      "intended_outputs": [
+        "data/raw/{date}/overseas_snapshot.json"
+      ],
+      "notes": [],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1050,
+        "line_end": 1100
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_overseas_redump.sh",
+          "line_start": 11,
+          "line_end": 18,
+          "explanation": "内联Python调用run_overseas_snapshot.run(date)"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_overseas_snapshot.py",
+          "line_start": 291,
+          "line_end": 295,
+          "explanation": "同日期raw外盘快照写入"
+        }
+      ]
+    },
+    {
+      "id": "163b0753e1d8",
+      "name": "canghai-fetch · 竞价情绪篮子构建 (08:50)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1-5",
+        "display": "0 9 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_build_sentiment_basket.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T09:01:15.222379+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "09:00缓存竞价情绪篮子，再调用只读canonical resolver；不是plan生成/覆盖入口。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "昨涨停/高标/核心票/ETF及30日日线",
+        "data/plans/{date}/watchlist_plan.json"
+      ],
+      "intended_outputs": [
+        "data/runtime/sentiment_basket_{date}.json"
+      ],
+      "notes": [
+        "任务名含08:50，真实表达式0 9 * * 1-5（09:00）。",
+        "wrapper注释和输出“plan synced”已经过时；resolver当前明确只读，runtime不能反向恢复正式预案。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1101,
+        "line_end": 1151
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_build_sentiment_basket.sh",
+          "line_start": 12,
+          "line_end": 22,
+          "explanation": "构建篮子并调用resolve_authoritative_plan(sync=True)"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/build_sentiment_basket.py",
+          "line_start": 19,
+          "line_end": 33,
+          "explanation": "篮子构建写runtime缓存"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/plan_resolver.py",
+          "line_start": 24,
+          "line_end": 39,
+          "explanation": "sync参数是兼容no-op，不写plan"
+        }
+      ]
+    },
+    {
+      "id": "e6517ca3c755",
+      "name": "canghai-research · 退潮次日翻多检测 (10:00-11:40)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/20 10-11 * * 1-5",
+        "display": "*/20 10-11 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_retreat_reversal.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T11:40:50.019228+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "10:00–11:40每20分钟检测退潮次日翻多，非退潮次日写not_applicable；仅市场参考。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "交易日历",
+        "data/plans/{date}/watchlist_plan.json",
+        "当日市场广度/昨涨停表现"
+      ],
+      "intended_outputs": [
+        "data/research/{date}/retreat_reversal.json",
+        "chzl_kg/投研交易/翻多检测/{date}.md（适用或强制时）"
+      ],
+      "notes": [
+        "检测器不授予交易权限，不修改D1预算/no_trade。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1152,
+        "line_end": 1202
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_retreat_reversal.sh",
+          "line_start": 12,
+          "line_end": 26,
+          "explanation": "交易日门控后run_retreat_reversal.py"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/run_retreat_reversal.py",
+          "line_start": 82,
+          "line_end": 101,
+          "explanation": "plan预算上下文→detect→JSON和条件MD"
+        }
+      ]
+    },
+    {
+      "id": "637f04b538f5",
+      "name": "canghai-review · 持仓生命周期滚动复盘 (18:00)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 1-5",
+        "display": "0 18 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_position_lifecycle.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-23T18:00:51.282280+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "18:00对前5交易日开仓候选滚动复盘，跟踪止盈止损与可成交性；不是交易执行。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "历史盘前预案MD（优先）",
+        "data/plans/*/watchlist_plan.json",
+        "行情与交易日历"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/持仓复盘/rolling/{date}.md",
+        "chzl_kg/投研交易/持仓复盘/rolling/{date}.json"
+      ],
+      "notes": [
+        "与E1互补；E1 skill也引用此能力，静态存在功能重合，但不是相同job。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1203,
+        "line_end": 1251
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_position_lifecycle.sh",
+          "line_start": 10,
+          "line_end": 25,
+          "explanation": "交易日门控，--rolling --lookback 5"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/review/run_position_lifecycle_review.py",
+          "line_start": 854,
+          "line_end": 877,
+          "explanation": "rolling结果写rolling目录"
+        }
+      ]
+    },
+    {
+      "id": "579231d3963a",
+      "name": "chzl-kg · 笔记站同步 (08:30)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 8 * * *",
+        "display": "30 8 * * *"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_chzl_kg_site_sync.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T08:31:54.452769+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "同步KG到Quartz站并Git推送/构建/发布；同一wrapper在4个时点调度。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "chzl_kg/（含排除清单）"
+      ],
+      "intended_outputs": [
+        "/Users/chenyang/Downloads/demo/chzl-kg-web/content/",
+        "Quartz public/及远端站点",
+        "data/logs/cron/chzl_kg_site_sync_{date}.log"
+      ],
+      "notes": [
+        "这是4个不同时间的真实调度，非重复ID、非另一个profile。",
+        "同步实现有源侧unlink、目标侧删除、Git push等副作用；本次绝未执行。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1252,
+        "line_end": 1300
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_chzl_kg_site_sync.sh",
+          "line_start": 3,
+          "line_end": 4,
+          "explanation": "桥接项目同步发布脚本"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_chzl_kg_site.sh",
+          "line_start": 26,
+          "line_end": 47,
+          "explanation": "同步→content提交push→Quartz build→发布gh-pages"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_chzl_kg_to_quartz.sh",
+          "line_start": 9,
+          "line_end": 36,
+          "explanation": "源侧自指链接清理→rsync --delete和排除私人目录"
+        }
+      ]
+    },
+    {
+      "id": "da49853a1d07",
+      "name": "chzl-kg · 笔记站同步 (12:00)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *",
+        "display": "0 12 * * *"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_chzl_kg_site_sync.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T12:01:54.957758+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "同步KG到Quartz站并Git推送/构建/发布；同一wrapper在4个时点调度。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "chzl_kg/（含排除清单）"
+      ],
+      "intended_outputs": [
+        "/Users/chenyang/Downloads/demo/chzl-kg-web/content/",
+        "Quartz public/及远端站点",
+        "data/logs/cron/chzl_kg_site_sync_{date}.log"
+      ],
+      "notes": [
+        "这是4个不同时间的真实调度，非重复ID、非另一个profile。",
+        "同步实现有源侧unlink、目标侧删除、Git push等副作用；本次绝未执行。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1301,
+        "line_end": 1349
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_chzl_kg_site_sync.sh",
+          "line_start": 3,
+          "line_end": 4,
+          "explanation": "桥接项目同步发布脚本"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_chzl_kg_site.sh",
+          "line_start": 26,
+          "line_end": 47,
+          "explanation": "同步→content提交push→Quartz build→发布gh-pages"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_chzl_kg_to_quartz.sh",
+          "line_start": 9,
+          "line_end": 36,
+          "explanation": "源侧自指链接清理→rsync --delete和排除私人目录"
+        }
+      ]
+    },
+    {
+      "id": "bb105fc74549",
+      "name": "canghai-health · 盘前数据源台账 (08:30)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 8 * * 1-5",
+        "display": "30 8 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_premarket_datasource_ledger.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T08:30:48.476341+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "08:30生成数据源台账并只在critical时输出告警，exit0；只读审计业务输入。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "data/raw/{date}/manifest.json / mcp_health.json",
+        "R1–R7/summary/业务状态",
+        "当前各cron库与executions.db",
+        "关键计划/竞价/午盘/E1产物"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/数据源台账/{date}.md",
+        "data/health/datasource_ledger_{date}.json",
+        "stdout critical告警（条件）"
+      ],
+      "notes": [
+        "wrapper始终exit0；last_status=ok只证明wrapper返回，不代表无critical。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1350,
+        "line_end": 1399
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_premarket_datasource_ledger.sh",
+          "line_start": 9,
+          "line_end": 24,
+          "explanation": "运行datasource_ledger.py并条件打印"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/health/datasource_ledger.py",
+          "line_start": 1231,
+          "line_end": 1246,
+          "explanation": "只读SQLite执行元信息"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/health/datasource_ledger.py",
+          "line_start": 1736,
+          "line_end": 1744,
+          "explanation": "机读/人读台账输出"
+        }
+      ]
+    },
+    {
+      "id": "8b9ff2eb44f2",
+      "name": "canghai-intraday · 盘中每10分钟截面快照 (#6)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/10 9-15 * * 1-5",
+        "display": "*/10 9-15 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_intraday_snapshot.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T15:40:19.294051+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "每10分钟抓市场/预案池截面并规则追加MD；09:30–15:05门控，不含午休排除。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "实时行情",
+        "data/plans/{date}/watchlist_plan.json"
+      ],
+      "intended_outputs": [
+        "data/raw/{date}/intraday_snapshot_{HHMM}.json",
+        "chzl_kg/投研交易/盘中分析/{date}.md"
+      ],
+      "notes": [
+        "cron表达式9–15整点小时范围；wrapper在15:10等时点跳过。",
+        "规则MD追加与每小时LLM总结共享MD，不是同一任务重复调度。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1400,
+        "line_end": 1448
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_intraday_snapshot.sh",
+          "line_start": 10,
+          "line_end": 32,
+          "explanation": "时间门控→run_intraday_snapshot.py→append_intraday_md.py"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/intraday/run_intraday_snapshot.py",
+          "line_start": 180,
+          "line_end": 223,
+          "explanation": "预案上下文与快照JSON"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/intraday/append_intraday_md.py",
+          "line_start": 40,
+          "line_end": 65,
+          "explanation": "规则摘要，无LLM"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/intraday/append_intraday_md.py",
+          "line_start": 76,
+          "line_end": 112,
+          "explanation": "同一日MD追加写入"
+        }
+      ]
+    },
+    {
+      "id": "cae686ec450a",
+      "name": "canghai-intraday · 每小时 LLM 盘中总结 (#6)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "5 10-14 * * 1-5",
+        "display": "5 10-14 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "market_scanner_v1"
+      ],
+      "skill": "market_scanner_v1",
+      "last_status": "error",
+      "last_run_at": "2026-10-26T10:05:50.051189+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "10:05–14:05每小时直接Agent读最新截面+plan，追加3–5行盘中总结。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "data/raw/{date}/intraday_snapshot_{HHMM}.json",
+        "data/plans/{date}/watchlist_plan.json"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/盘中分析/{date}.md（仅追加总结）"
+      ],
+      "notes": [
+        "skill=market_scanner_v1但本job prompt只要求读盘后写总结；不能凭skill名推断独立5分钟全市场scanner cron已部署。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1449,
+        "line_end": 1507
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/cron/jobs.json",
+          "line_start": 1452,
+          "line_end": 1452,
+          "explanation": "直接Agent的业务输入、输出和工具要求来自此job prompt；不执行prompt"
+        }
+      ]
+    },
+    {
+      "id": "a48bfe35bbb9",
+      "name": "canghai-yizi · 次日一字板预判 (#7)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * 1-5",
+        "display": "0 22 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_yizi_predict.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-23T22:00:49.314729+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "22:00规则生成次日一字板候选，供人工隔夜参考；不生成D1、不下单。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "涨停/封单等行情",
+        "data/rules/theme_anchors/latest.json"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/一字板预判/{data_date}.json",
+        "chzl_kg/投研交易/一字板预判/{data_date}.md"
+      ],
+      "notes": [
+        "wrapper注释15:30，真实schedule 22:00。",
+        "wrapper未set pipefail，尾管道成功不能证明Python成功。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1508,
+        "line_end": 1556
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_yizi_predict.sh",
+          "line_start": 4,
+          "line_end": 6,
+          "explanation": "run_yizi_predict.py，尾20行输出"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/run_yizi_predict.py",
+          "line_start": 29,
+          "line_end": 31,
+          "explanation": "输出及主题锚输入"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/run_yizi_predict.py",
+          "line_start": 186,
+          "line_end": 191,
+          "explanation": "写候选JSON/MD"
+        }
+      ]
+    },
+    {
+      "id": "f102a8d022bc",
+      "name": "canghai-stock-character · 个股股性月度更新",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "40 6 1 * *",
+        "display": "40 6 1 * *"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_stock_character.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": null,
+      "last_run_at": null,
+      "formal_plan_role": "none",
+      "prompt_business_summary": "每月1日06:40重建120日/5年股性表并强制刷新D1股性缓存。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "全市场历史行情/概念标签"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/个股股性/个股股性全市场_{date}.xlsx",
+        "chzl_kg/投研交易/个股股性/个股股性全市场_5年_{date}.xlsx",
+        "data/cache/stock_character.json",
+        "data/cache/stock_character.source"
+      ],
+      "notes": [
+        "与每月18日任务共享两份股性表生成能力，但时点和后续产物不同。",
+        "本次快照last_run_at/status均null；不能声称从未运行。",
+        "wrapper未set pipefail，尾管道可能掩盖失败。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1557,
+        "line_end": 1598
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_stock_character.sh",
+          "line_start": 7,
+          "line_end": 11,
+          "explanation": "两次build_stock_character.py再build_cache(force=True)"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/stock/build_stock_character.py",
+          "line_start": 297,
+          "line_end": 314,
+          "explanation": "Excel写入"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/research/stock_character.py",
+          "line_start": 32,
+          "line_end": 66,
+          "explanation": "最新xlsx→JSON/source缓存"
+        }
+      ]
+    },
+    {
+      "id": "4db0fe22a72d",
+      "name": "canghai-weekend · 周末情报包 (周六/周日 18:00)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 6,0",
+        "display": "0 18 * * 6,0"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "script_then_agent",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_fetch_weekend.sh",
+      "skills": [
+        "analyze_news_impact_v1",
+        "analyze_sentiment_resonance_v1"
+      ],
+      "skill": "analyze_news_impact_v1",
+      "last_status": "ok",
+      "last_run_at": "2026-10-25T18:18:16.328222+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "周末混合任务：先--intel-only脚本采集，再由Agent输出周末轻量消息面/群聊情绪，不给交易点位。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "data/health/fetch_window_state.json",
+        "信息源",
+        "data/raw/{date}/manifest.json及各jsonl（job prompt）"
+      ],
+      "intended_outputs": [
+        "data/raw/{date}/manifest.json（若已存在则manifest_intel.json）",
+        "data/raw/{date}/ 信息源jsonl",
+        "data/research/{resolved_date}/attention_signals.json",
+        "data/research/{date}/attention_weekend.json",
+        "chzl_kg/投研交易/群聊情绪/{date}.md",
+        "chzl_kg/投研交易/消息面/{date}.md"
+      ],
+      "notes": [
+        "no_agent=false且script非空：一条混合任务，不应拆计两条cron。",
+        "脚本注释称intel-only跳过人气榜，但当前实现417–454仍刷新两类attention；以源码为准。",
+        "重复运行时manifest_intel.json可能与prompt固定manifest.json读取不一致；静态潜在错位，未执行验证。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1599,
+        "line_end": 1661
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_fetch_weekend.sh",
+          "line_start": 13,
+          "line_end": 18,
+          "explanation": "预运行fetch_all_sources.py --intel-only"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/fetch_all_sources.py",
+          "line_start": 350,
+          "line_end": 415,
+          "explanation": "自适应窗口RSS/群聊/新闻/公告"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/fetch_all_sources.py",
+          "line_start": 417,
+          "line_end": 461,
+          "explanation": "当前实现仍刷新attention与weekend榜；manifest已存在则写manifest_intel"
+        },
+        {
+          "path": "/Users/chenyang/.hermes/hermes-agent/cron/scheduler_prompt.py",
+          "line_start": 308,
+          "line_end": 324,
+          "explanation": "script输出成功且非空才进入Agent；stdout注入上下文"
+        }
+      ]
+    },
+    {
+      "id": "6124ebf7f3dd",
+      "name": "canghai-fetch · 盘前人气榜补采 (08:30 周一/节后首日)",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 8 * * 1-5",
+        "display": "30 8 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_attention_refresh.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": "ok",
+      "last_run_at": "2026-10-26T08:31:02.172579+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "08:30工作日调度，脚本自门控仅周一/节后首个交易日真正补采人气榜。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "本地交易日历",
+        "人气榜历史/自然日榜"
+      ],
+      "intended_outputs": [
+        "data/research/{resolved_date}/attention_signals.json",
+        "data/research/{date}/attention_weekend.json",
+        "data/health/attention_refresh_{date}.json"
+      ],
+      "notes": [
+        "resolved_trade_date可能回退已收盘交易日，不能把定时08:30等同当日新榜已可得。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1662,
+        "line_end": 1718
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_attention_refresh.sh",
+          "line_start": 8,
+          "line_end": 12,
+          "explanation": "refresh_premarket_attention.py"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/refresh_premarket_attention.py",
+          "line_start": 40,
+          "line_end": 57,
+          "explanation": "交易日+周一/节后首日门控"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/refresh_premarket_attention.py",
+          "line_start": 61,
+          "line_end": 102,
+          "explanation": "attention + weekend榜 + health摘要"
+        }
+      ]
+    },
+    {
+      "id": "aa63ac34cdb9",
+      "name": "股性表月度更新+心智锚重建",
+      "scope": "default",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 18 18 * *",
+        "display": "30 18 18 * *"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": true,
+      "entry_kind": "script_only_scheduler",
+      "script_resolved": "/Users/chenyang/.hermes/scripts/canghai_stock_character_monthly.sh",
+      "skills": [],
+      "skill": null,
+      "last_status": null,
+      "last_run_at": null,
+      "formal_plan_role": "none",
+      "prompt_business_summary": "每月18日18:30重建120日/5年股性表和题材心智锚；不显式重建D1股性JSON缓存。",
+      "model_invocation": "none_in_traced_script_path",
+      "child_profiles": [],
+      "inputs": [
+        "全市场历史行情/概念成分",
+        "本次5年股性xlsx"
+      ],
+      "intended_outputs": [
+        "chzl_kg/投研交易/个股股性/个股股性全市场_{date}.xlsx",
+        "chzl_kg/投研交易/个股股性/个股股性全市场_5年_{date}.xlsx",
+        "data/rules/theme_anchors/latest.json",
+        "data/rules/theme_anchors/{date}.json",
+        "chzl_kg/投研交易/题材心智锚/{date}.md",
+        "data/raw/{date}/ths_concept_members.jsonl"
+      ],
+      "notes": [
+        "与每月1日任务是重叠能力的两条真实调度，不是同一时间同一ID副本。",
+        "本次快照last_run_at/status均null；不能声称从未运行。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/cron/jobs.json",
+        "line_start": 1719,
+        "line_end": 1769
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/.hermes/scripts/canghai_stock_character_monthly.sh",
+          "line_start": 10,
+          "line_end": 18,
+          "explanation": "两份股性表→build_theme_anchors.py"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/build_theme_anchors.py",
+          "line_start": 98,
+          "line_end": 125,
+          "explanation": "概念成分缓存"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/build_theme_anchors.py",
+          "line_start": 300,
+          "line_end": 311,
+          "explanation": "锚latest/日期JSON及KG MD"
+        }
+      ]
+    },
+    {
+      "id": "a314bd2ac6bb",
+      "name": "canghai-fetch · 午盘快照(midday-fetch)",
+      "scope": "canghai-fetch",
+      "schedule": {
+        "kind": "cron",
+        "expr": "35 11 * * 1-5",
+        "display": "35 11 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "fetch_midday_snapshot_v1"
+      ],
+      "skill": "fetch_midday_snapshot_v1",
+      "last_status": "error",
+      "last_run_at": "2026-10-26T11:35:25.075371+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "canghai-fetch库11:35直接Agent调用午盘快照脚本供P2消费。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "data/plans/{date}/watchlist_plan.json",
+        "行情/分时（live时）"
+      ],
+      "intended_outputs": [
+        "data/raw/{date}/midday_snapshot.json"
+      ],
+      "notes": [
+        "job prompt没有显式--live；skill列live/stub两路。实际每次参数本次未读运行正文，不能断言本轮一定live或stub。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/profiles/canghai-fetch/cron/jobs.json",
+        "line_start": 3,
+        "line_end": 60
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_midday_snapshot_v1/SKILL.md",
+          "line_start": 41,
+          "line_end": 71,
+          "explanation": "脚本入口与--live/stub说明"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_midday_snapshot.py",
+          "line_start": 24,
+          "line_end": 36,
+          "explanation": "裸Python默认force_stub=True，必须--live才live"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_midday_snapshot.sh",
+          "line_start": 10,
+          "line_end": 15,
+          "explanation": "shell可通过CHZL_MIDDAY_LIVE=1/第二参数--live启用"
+        }
+      ]
+    },
+    {
+      "id": "75bf632522ce",
+      "name": "canghai-plan · 午盘修订(P2)",
+      "scope": "canghai-plan",
+      "schedule": {
+        "kind": "cron",
+        "expr": "40 11 * * 1-5",
+        "display": "40 11 * * 1-5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "midday_amendment_v1"
+      ],
+      "skill": "midday_amendment_v1",
+      "last_status": "error",
+      "last_run_at": "2026-10-26T11:40:24.309528+08:00",
+      "formal_plan_role": "amendment_only",
+      "prompt_business_summary": "canghai-plan库11:40直接Agent执行P2上午假设复核，产出午盘修订和briefing；observe-only。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "data/raw/{date}/midday_snapshot.json",
+        "data/research/{date}/R7_capital_flow.json.midday_increment",
+        "data/plans/{date}/watchlist_plan.json",
+        "data/plans/{date}/auction_amendment.json（若有）"
+      ],
+      "intended_outputs": [
+        "data/plans/{date}/midday_amendment.json",
+        "chzl_kg/投研交易/午盘briefing/{date}.md"
+      ],
+      "notes": [
+        "当前任务库无独立11:35 R7模型增量cron；P2依赖的midday_increment生产是否有其他机制，本次只确认调度中未见单独入口。",
+        "skill仍有runtime→plans补拷历史指令，与canonical只读resolver现行约束不一致；仅记录，未执行。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/profiles/canghai-plan/cron/jobs.json",
+        "line_start": 3,
+        "line_end": 60
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/midday_amendment_v1/SKILL.md",
+          "line_start": 45,
+          "line_end": 63,
+          "explanation": "snapshot、R7增量及plan输入"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/midday_amendment_v1/SKILL.md",
+          "line_start": 98,
+          "line_end": 121,
+          "explanation": "修订JSON和briefing输出，observe-only"
+        },
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/midday_amendment_v1/SKILL.md",
+          "line_start": 239,
+          "line_end": 250,
+          "explanation": "数据缺失降级与sign-off后reload消费者"
+        }
+      ]
+    },
+    {
+      "id": "87d4d030b72b",
+      "name": "canghai-review · 周度进化(E2)",
+      "scope": "canghai-review",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * 5",
+        "display": "0 17 * * 5"
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused": false,
+      "no_agent": false,
+      "entry_kind": "direct_agent",
+      "script_resolved": null,
+      "skills": [
+        "weekly_evolution_v1"
+      ],
+      "skill": "weekly_evolution_v1",
+      "last_status": "ok",
+      "last_run_at": "2026-10-23T17:10:33.877507+08:00",
+      "formal_plan_role": "none",
+      "prompt_business_summary": "canghai-review库周五17:00汇总E1提出skill/preferences/thesis建议；必须用户sign-off，不自动应用。",
+      "model_invocation": "scheduler_agent",
+      "child_profiles": [],
+      "inputs": [
+        "data/reports/*/E1_data.json",
+        "data/reports/*/observation_tracking.json",
+        "本周错题本/用户复盘"
+      ],
+      "intended_outputs": [
+        "data/evolution/{ISO_week}/skill_patches.md",
+        "data/evolution/{ISO_week}/preferences_patches.md",
+        "data/evolution/{ISO_week}/thesis_reviews.md",
+        "data/evolution/{ISO_week}/sign_off_log.md",
+        "chzl_kg/系统进化/{ISO_week}.md"
+      ],
+      "notes": [
+        "schedule为周五17:00，先于当日18:00 E1；当周五E1可能尚不可用，不能在新文档声称必含本周五完整E1。"
+      ],
+      "record_evidence": {
+        "path": "/Users/chenyang/.hermes/profiles/canghai-review/cron/jobs.json",
+        "line_start": 3,
+        "line_end": 55
+      },
+      "trace": [
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/weekly_evolution_v1/SKILL.md",
+          "line_start": 73,
+          "line_end": 91,
+          "explanation": "输入与建议类输出契约"
+        }
+      ]
+    }
+  ],
+  "source_fingerprints": [
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_execute_watcher_start.sh",
+      "sha256": "8572513a36aab9ddfcd9b69d7e49433c1af15a7582515b9f2708f382e5f2c035",
+      "line_count": 30
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/watcher.py",
+      "sha256": "dcd0d67bcfef976e27044b3bd43f0efbf042b6bab9a3a07aebadece2aedfed52",
+      "line_count": 32
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/execute/watcher_daemon.py",
+      "sha256": "c304050e486a893d55de8821f36f54d66dc5265f024921066e2d3071e7caae9f",
+      "line_count": 265
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_execute_watcher_keepalive.sh",
+      "sha256": "ba308256d5b48836c4b321bffec28f46176a1c499bfcfa2fa29f851b56355c7c",
+      "line_count": 35
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_research_daily.sh",
+      "sha256": "6c3198b2115516d6cc1368c88b489cbac88c528b623dd2536b2dfc9849242f29",
+      "line_count": 6
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell_cron_wrapper.sh",
+      "sha256": "2a72fc27482bcc4d1a78d19c99923e9f104297c05ab88e64e2111e090a077da6",
+      "line_count": 71
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell.sh",
+      "sha256": "640e5be6c835fc2d2e7b2ef6bad6117e2d5d2f5af44b19a91ecfce055949d23b",
+      "line_count": 283
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/pipeline_state.py",
+      "sha256": "a7af72c44443336c9dd99db88282b9de57bb4f26cebd07838016d04e046a035f",
+      "line_count": 365
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/pipeline_artifacts.py",
+      "sha256": "caa56fc2ff0415742a1a50892976aac649b7395f47788b4e9f1828823ce843da",
+      "line_count": 342
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_sise_daily_sync.sh",
+      "sha256": "23fa6d68289f37750a90cace661650b5f268189aaaa26b751cbc5e9c8046fc09",
+      "line_count": 28
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_sise_market.py",
+      "sha256": "f55ea67a02caff414bfe89abe68ad5ffce55eafad2258a123fb941e4e83f994b",
+      "line_count": 76
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/settings.py",
+      "sha256": "3623d5301039df52b789a020772755141ac358f02129b97a81c003695fae2d8f",
+      "line_count": 53
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/kb/database.py",
+      "sha256": "fd3aa786a8f83b77e735e73a6042c1d8ccf28192a67843dd99fdfceb1fada999",
+      "line_count": 1921
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/chzl_kg_close_reminder.sh",
+      "sha256": "0cd872ed62f3f43bf239a1a3837b1532b5f453c0efc30007d9512b88dc5f68ac",
+      "line_count": 46
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_fetch_all_sources.sh",
+      "sha256": "b90b446920936e5473cf9b7263ee5158eabb118aeb020ab108bc69e9f0f779e5",
+      "line_count": 8
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/fetch_all_sources.py",
+      "sha256": "fe9ae48e67afdaf8c13bf735b1c49586468e103d33a128570d78614ff89dd6af",
+      "line_count": 507
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/daily_review_v1/SKILL.md",
+      "sha256": "ce8fa9a1328a2a3e2e3d2ea638bfc92ea7b00cdb7fc087b6f0eab8c772b6bb42",
+      "line_count": 543
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_daily_health_check.sh",
+      "sha256": "cb3bf6cae96daab323e578b45e70c6d04abd20e926fca70c18ae9e0fba5b437d",
+      "line_count": 28
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/health/check_cron_outputs.py",
+      "sha256": "12724deb24ae364a5a24475a765614c4db61f5462c72fe0e2059820282952d01",
+      "line_count": 245
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/health/check_cron_failures.py",
+      "sha256": "2a14729894a3f1e1aa5aac94adf11084c0ca29cef32108e63597a56c1193475d",
+      "line_count": 121
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_auction_snapshot.sh",
+      "sha256": "81fb7eaaa63172d5b2d53825bbafa8efb85e589d8fe00ed69a98410e919cf32b",
+      "line_count": 11
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_auction_snapshot.py",
+      "sha256": "342cf22e403ffb46cd6cf45f11909d5458d763885447d4ca95f5c20de7cda2aa",
+      "line_count": 576
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md",
+      "sha256": "d1a6ac6d276774946e4e450017cdcd526895dd626776c0a61809496242b20a6c",
+      "line_count": 238
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/plan_resolver.py",
+      "sha256": "3c987fc2e5afd66d85b81dc50029ba4da571ffa4de57dc18203a906159beb8c9",
+      "line_count": 39
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_chzl_kg_site_sync.sh",
+      "sha256": "aae11b12ab08349ed24aedea047bb6998d19d6238c25e057cca947ec9c63dd9a",
+      "line_count": 4
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_chzl_kg_site.sh",
+      "sha256": "f46f2d17fa715de56d42b628e938e9e2240399a87d4276236d85f6ebde105e46",
+      "line_count": 49
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/sync_chzl_kg_to_quartz.sh",
+      "sha256": "e9afdae1993a06c8659f4ee3025d821023bfc65d1612cd8881640cdb516c8409",
+      "line_count": 152
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_d1_safety_net.sh",
+      "sha256": "9dc91540a5b3997c9fc0bb2003969766eae3b04bea0de9477bf280610542b4b9",
+      "line_count": 11
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/ensure_watchlist_plan.py",
+      "sha256": "ebaded51b65f9abbdd8af46289af9c00f78a4676bda42c491f59b415d6f5c4c6",
+      "line_count": 385
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/execute/fallback.py",
+      "sha256": "4efff5249a03b5e9a8667d4abb6115bc8d6e0026135749c18e27b0f8a309f7f1",
+      "line_count": 75
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_overseas_redump.sh",
+      "sha256": "686b87fd574d77cd17b41da17de2cc3b0e03e6b86e43c51b65ec4dedae3079dd",
+      "line_count": 18
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_overseas_snapshot.py",
+      "sha256": "b52188108cf8ca12b6f22e2d7f5a7104810f119614371f63aa021f9440ab40b5",
+      "line_count": 310
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_build_sentiment_basket.sh",
+      "sha256": "5d7d5014b13390070c74539f2fa92e059e0a00985c68e9582697e6fd26039fec",
+      "line_count": 23
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/build_sentiment_basket.py",
+      "sha256": "0fbb7ee4a7133b184729e3fc5ae9b158afbaa3e506bb89410a2d6825016ce8cf",
+      "line_count": 38
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_retreat_reversal.sh",
+      "sha256": "f950ebd4664c048848111f91e1223e0c93bbc851258588f7badfef754fe477d5",
+      "line_count": 26
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/run_retreat_reversal.py",
+      "sha256": "09901c3ac02546c57e5864649f167bd66da259ae87ecb356abed79668898e9c5",
+      "line_count": 115
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_position_lifecycle.sh",
+      "sha256": "2341c723e6d8a9451797f7cb868b60485df1a3a7f8177ca5b2fcd93868f04a02",
+      "line_count": 25
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/review/run_position_lifecycle_review.py",
+      "sha256": "0f31458f824ea5140de8284dbdd81390feb8446e5c4948c7bd7eab92debd084d",
+      "line_count": 1031
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_premarket_datasource_ledger.sh",
+      "sha256": "5471342e29b49dc505c032ce39487bfb1f01f0e1a926b2ceaa8ab32296a2d8aa",
+      "line_count": 24
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/health/datasource_ledger.py",
+      "sha256": "b902deb531d5de3a6607d34421d69b3425ddd2aefc4778523e1aceb6829d701a",
+      "line_count": 1750
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_intraday_snapshot.sh",
+      "sha256": "7bd4672db62e1d5f1ee37cd8000be9adfd01e6339d7429fb3ec3a766563f0ea1",
+      "line_count": 32
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/intraday/run_intraday_snapshot.py",
+      "sha256": "6babde1487185e9ba436526f9f2b09f9a2119384d34e0573e6b23e5478255573",
+      "line_count": 239
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/intraday/append_intraday_md.py",
+      "sha256": "6516894f3ad2869f6fd0d0ba0b102cffabfa2637dbb15c1b249603116eaf3692",
+      "line_count": 123
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_yizi_predict.sh",
+      "sha256": "e6160b591548734267eaa01203ca5cf91727a0ac7969341c6f1a8e1138dedefc",
+      "line_count": 6
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/run_yizi_predict.py",
+      "sha256": "35e3fb23d62517a75f6472d69f9b646afa0e95c0e913d8211bc538c4e2341c4b",
+      "line_count": 248
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_stock_character.sh",
+      "sha256": "d63c42fae30ab7c51284c063b2f8a55f2f0bd3544fdacc78a356f18e7c0dcb34",
+      "line_count": 11
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/stock/build_stock_character.py",
+      "sha256": "5edecc817ec0af7cbe1c55715deec9def8cbc2643ebbe76611969adadd2c9722",
+      "line_count": 326
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/research/stock_character.py",
+      "sha256": "7f0a95742071cbb6f81eb9f7558b958dc00b390f863051481999730b1d1e3d7a",
+      "line_count": 132
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_fetch_weekend.sh",
+      "sha256": "43757a08920ff0e124631349597749e275e6420cdfa06b1dc44ee0734e9ae76d",
+      "line_count": 18
+    },
+    {
+      "path": "/Users/chenyang/.hermes/hermes-agent/cron/scheduler_prompt.py",
+      "sha256": "6abdca325b7e56d093efb1dc950a15203f0b2fac5611f9a200700a1427424ab5",
+      "line_count": 450
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_attention_refresh.sh",
+      "sha256": "97ded22e84fcf19ee00b87b473820c5e7ccae454e5d0427671bc36ea07e96566",
+      "line_count": 12
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/refresh_premarket_attention.py",
+      "sha256": "f20345a37db8916a00b611a395cc287dca4407255df4ec09f950bd31a0e94ad7",
+      "line_count": 113
+    },
+    {
+      "path": "/Users/chenyang/.hermes/scripts/canghai_stock_character_monthly.sh",
+      "sha256": "424cff99426bf69ab34ce673e241c9c56d5cb7161cdefb6297ce6cada49d99e8",
+      "line_count": 18
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/build_theme_anchors.py",
+      "sha256": "f87763d3478f6d39d5adb8585a61cbd94af1684c04d008a2f75b577fa7824767",
+      "line_count": 318
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_midday_snapshot_v1/SKILL.md",
+      "sha256": "5b56c88ae9347c9bc333e8c6ecae33cf3cc3e0b2170533fb617e3dbc524122ee",
+      "line_count": 144
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_midday_snapshot.py",
+      "sha256": "05523e96c47cc55089008afdc0bf572425fefd0cd6452f370097fe4e832cc89e",
+      "line_count": 66
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/fetch/run_midday_snapshot.sh",
+      "sha256": "6f5160aa89efbe391a0afa7955dcb0445701e3f8c4a89cd0284ec1046b74d401",
+      "line_count": 15
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/midday_amendment_v1/SKILL.md",
+      "sha256": "30e8c6096a21f408a772f3d0d42260bfed6fa48e45bf92cc3c09cead418145dc",
+      "line_count": 267
+    },
+    {
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/skills/weekly_evolution_v1/SKILL.md",
+      "sha256": "0004c7559f6571e9fce5a39c27e7dd79044df8234ddcce6f8ca7076e443c943d",
+      "line_count": 211
+    },
+    {
+      "path": "/Users/chenyang/.hermes/hermes-agent/cron/jobs.py",
+      "sha256": "81c8ee2fde2e351c3d5d9ac02cbc8f0eab2b2bb626ee7524f3754d9e9f5e3848",
+      "line_count": 3484
+    },
+    {
+      "path": "/Users/chenyang/.hermes/hermes-agent/cron/scheduler_provider.py",
+      "sha256": "c2fa4f437fb5bb5ee3067e02ce0745d9e332d3073022f103c3298c3570b0e3c5",
+      "line_count": 674
+    },
+    {
+      "path": "/Users/chenyang/.hermes/hermes-agent/cron/scheduler_script.py",
+      "sha256": "232e3f8b09ebdfa23ac0f853a8cd4179683458f6e34af1f638867e6130d170d8",
+      "line_count": 599
+    },
+    {
+      "path": "/Users/chenyang/.hermes/hermes-agent/cron/scheduler.py",
+      "sha256": "ec5823fffdeb18f4417eb97cbd37a03739c2fc20bb4e44c333d2dd5e07d86dd4",
+      "line_count": 4432
+    }
+  ],
+  "cron_findings": [
+    {
+      "id": "F01",
+      "title": "真实任务总数与库归属",
+      "detail": "程序按default和每个profiles/*/cron/jobs.json逐对象计数；空研究库保留。名称前缀不作为profile。",
+      "job_ids": [
+        "dc312e1c10d3",
+        "51e960a61f9e",
+        "24f4119fab82",
+        "cac075214e6f",
+        "354c580574e3",
+        "6433ef538744",
+        "bbfa5007d424",
+        "6364b9c63227",
+        "e9f209e44863",
+        "8588cd3d9943",
+        "a9b5eb63af43",
+        "d49fb5310923",
+        "f49220d13788",
+        "d372940a8886",
+        "d5cd79c48615",
+        "d741b25076a6",
+        "5fbc386914cd",
+        "5871f5ca82e4",
+        "99ec8bce24ad",
+        "af5014f46307",
+        "cffc5928d382",
+        "163b0753e1d8",
+        "e6517ca3c755",
+        "637f04b538f5",
+        "579231d3963a",
+        "da49853a1d07",
+        "bb105fc74549",
+        "8b9ff2eb44f2",
+        "cae686ec450a",
+        "a48bfe35bbb9",
+        "f102a8d022bc",
+        "4db0fe22a72d",
+        "6124ebf7f3dd",
+        "aa63ac34cdb9",
+        "a314bd2ac6bb",
+        "75bf632522ce",
+        "87d4d030b72b"
+      ],
+      "evidence": [
+        {
+          "path": "/Users/chenyang/.hermes/hermes-agent/cron/jobs.py",
+          "line_start": 78,
+          "line_end": 84,
+          "claim": "cron库按profile home隔离，名称不决定身份"
+        },
+        {
+          "path": "/Users/chenyang/.hermes/hermes-agent/cron/jobs.py",
+          "line_start": 527,
+          "line_end": 535,
+          "claim": "可运行标志由enabled且无pause marker决定"
+        },
+        {
+          "path": "/Users/chenyang/.hermes/hermes-agent/cron/scheduler_provider.py",
+          "line_start": 119,
+          "line_end": 133,
+          "claim": "多profile fire绑定各自home与cron store"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "title": "正式预案只有全量主路径与条件安全网两类调度入口",
+      "detail": "24f4119fab82内部D1是主路径；af5014f46307可条件重试D1并有显式规则兜底。P1/P2为修订；手机/一字板/催化日历/扩池/股性表均非完整D1生成器。",
+      "job_ids": [
+        "24f4119fab82",
+        "af5014f46307",
+        "d5cd79c48615",
+        "75bf632522ce"
+      ]
+    },
+    {
+      "id": "F03",
+      "title": "no_agent≠无模型",
+      "detail": "全量流水线和安全网两条no_agent任务都显式hermes -p；外层模型pin不决定内部profile默认模型。未读取配置或额度。",
+      "job_ids": [
+        "24f4119fab82",
+        "af5014f46307"
+      ]
+    },
+    {
+      "id": "F04",
+      "title": "canonical→runtime单向，篮子任务不是同步正式plan",
+      "detail": "当前plan_resolver.sync为no-op；只读data/plans正式源。篮子wrapper的“plan synced/runtime主路径”注释与代码现状不符，不能用其证明同步发生。",
+      "job_ids": [
+        "163b0753e1d8"
+      ],
+      "evidence": [
+        {
+          "path": "/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/plan_resolver.py",
+          "line_start": 24,
+          "line_end": 39,
+          "explanation": "正式源只读"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "title": "名称/注释与实际时点不一致",
+      "detail": "情绪篮子名08:50实际09:00；抓取wrapper注07:15实际06:00；一字板wrapper注15:30实际22:00；E2 skill注15:30实际周五17:00。采用jobs表达式而非说明文字。",
+      "job_ids": [
+        "163b0753e1d8",
+        "6433ef538744",
+        "a48bfe35bbb9",
+        "87d4d030b72b"
+      ]
+    },
+    {
+      "id": "F06",
+      "title": "重复能力不是重复ID/重复同一时点调度",
+      "detail": "KG同步4时点同wrapper；watcher启动+保活；D1主路径+安全网；盘中规则摘要+小时LLM；股性每月1日+18日。股性两条确有前两步能力重合，但后续缓存/心智锚不同，不自动删并。",
+      "job_ids": [
+        "5871f5ca82e4",
+        "99ec8bce24ad",
+        "579231d3963a",
+        "da49853a1d07",
+        "dc312e1c10d3",
+        "51e960a61f9e",
+        "f102a8d022bc",
+        "aa63ac34cdb9"
+      ]
+    },
+    {
+      "id": "F07",
+      "title": "执行侧当前cron只显式启动dry_run",
+      "detail": "watcher start固定--mode dry_run，keepalive复用它；没有独立live下单cron定义。此结论仅限本次枚举任务，未调查其他手工/服务入口。",
+      "job_ids": [
+        "dc312e1c10d3",
+        "51e960a61f9e"
+      ]
+    },
+    {
+      "id": "F08",
+      "title": "调度ok/completed不等于业务交付",
+      "detail": "全量与sise detach即返回；健康wrapper异常也exit0。DB仅取id/status/source/timestamps，不取错误正文/凭据，未复核当日产物内容。",
+      "job_ids": [
+        "24f4119fab82",
+        "cac075214e6f",
+        "bb105fc74549",
+        "f49220d13788"
+      ]
+    },
+    {
+      "id": "F09",
+      "title": "午盘live与R7增量存在静态契约缺口",
+      "detail": "午盘Python不传--live默认stub；job未写参数，skill有live/stub两路，真实运行参数本次未知。P2需要R7.midday_increment，但枚举中无独立R7午盘更新cron；不据此断言无其他生产机制。",
+      "job_ids": [
+        "a314bd2ac6bb",
+        "75bf632522ce"
+      ]
+    },
+    {
+      "id": "F10",
+      "title": "周末是一条script+agent混合任务，注释已落后",
+      "detail": "--intel-only当前实现仍刷新attention和weekend榜；已存在manifest时写manifest_intel，但prompt固定读manifest.json。重跑错位为静态风险，未经业务执行验证。",
+      "job_ids": [
+        "4db0fe22a72d"
+      ]
+    },
+    {
+      "id": "F11",
+      "title": "周度进化早于周五E1",
+      "detail": "E2周五17:00、E1周五18:00；同日E1不能保证进入该次E2。E2只出建议、用户签核后才应用。",
+      "job_ids": [
+        "87d4d030b72b",
+        "bbfa5007d424"
+      ]
+    },
+    {
+      "id": "F12",
+      "title": "旧skill/runtime补拷与现行正式源约束不一致",
+      "detail": "midday相关skill仍写runtime→plans补拷，但resolver当前禁止runtime反写；E1 prompt偏runtime而skill完整输出在reports。仅记录文档/提示契约分歧，未执行旧指令。",
+      "job_ids": [
+        "a314bd2ac6bb",
+        "75bf632522ce",
+        "bbfa5007d424"
+      ]
+    },
+    {
+      "id": "F13",
+      "title": "同步是写操作，不是纯读镜像",
+      "detail": "已有同步脚本源侧自动unlink自指链接、目标侧rsync --delete、Git push和发布gh-pages；新架构文档应写清边界，本次审计未运行。",
+      "job_ids": [
+        "5871f5ca82e4",
+        "99ec8bce24ad",
+        "579231d3963a",
+        "da49853a1d07"
+      ]
+    }
+  ],
+  "historical_documents_preserved": {
+    "00-CANONICAL-ARCHITECTURE-v1.md": {
+      "sha256": "42c29da92be522b1c044a9bf59b0a7b9daf19064f7ef535a764399119596a12b",
+      "bytes": 87237
+    },
+    "07-重构进度表.md": {
+      "sha256": "bca67718eaf486bc3462272956f3b2d6a1badc5e9075f700e08f1fc532669399",
+      "bytes": 30035
+    },
+    "09-架构审阅图-T1prime.md": {
+      "sha256": "fd4e547831db182ca763302aa815b90e14c125d97525c7ceff0422c8169b1493",
+      "bytes": 29864
+    },
+    "10-系统架构全景-v1.md": {
+      "sha256": "275817a4e1dc07599a4c9773c3f4bf247ca960652ebf7616d86d85519f1377d8",
+      "bytes": 15603
+    }
+  },
+  "limited_runtime_headers": {
+    "data/health/research_pipeline_20261026.json": {
+      "status": "failed",
+      "run_id": "20261026T061048-3542-1392",
+      "D1_status": "failed",
+      "D1_attempt": 3,
+      "finished_at": "2026-10-26T07:14:18.591397+08:00"
+    },
+    "data/research/20261026/research_summary.json": {
+      "generated_at": "2026-10-26T06:55:19+08:00",
+      "orchestrator_status": "partial",
+      "contract_checks_passed": true
+    },
+    "data/plans/20261026/watchlist_plan.json": {
+      "generated_at": "2026-10-26T08:50:56+08:00",
+      "decision_source": "python_fallback",
+      "mode": "fallback",
+      "contract_checks_passed": true
+    },
+    "data/runtime/watchlist_plan_20261026.json": {
+      "exists": false
+    },
+    "data/plans/20261026/auction_amendment.json": {
+      "exists": false
+    },
+    "data/plans/20261026/midday_amendment.json": {
+      "exists": false
+    }
+  },
+  "model_policy_from_user": "Agent Plan primary; Coding Plan backup. No configuration changes authorized by this documentation task.",
+  "historical_test_evidence": [
+    {
+      "source": "chzl_kg/系统进化/2026-10-24 首批安全修复与联合验收.md",
+      "scope": "Frozen isolated engineering regression only; separately documented low-level sell counterexamples still failing"
+    },
+    {
+      "source": "chzl_kg/系统进化/2026-10-26 第二批研究交付修复与主控验收.md",
+      "as_of": "2026-10-26 00:41:15–00:43:28 CST",
+      "unique_native_tests": 1114,
+      "includes_previous_790": true,
+      "rerun_during_documentation_task": false,
+      "proves_production_or_live_authorization": false
+    }
+  ],
+  "limitations": [
+    "行号对应本次读取时文件版本；sha256用于关联版本，任务库随调度tick可能随后变动。",
+    "静态输入/输出是生产者意图/契约，不表示本次文件确实存在或已成功交付。",
+    "skills字段按job原值保留；SKILL.md证据是项目现有契约，未读取profile配置，因此不保证每个cron运行时有效skill搜索路径选中了该文件。",
+    "DB查询仅最新保留记录；无记录不等于未运行。",
+    "不做模型/网络探针、不读取凭据、不调查消耗；Agent Plan主用/Coding Plan备用的用户意图未改变，也未用外层pin推断内部配置。",
+    "Static source paths do not prove LLM actual reads, decision adoption, natural delivery or fills.",
+    "Auxiliary inputs pending approval; P1/P2 execution application not found in inspected execution entry points.",
+    "Current scope excludes the separately recalled .hermes-canghai clone.",
+    "No credentials, full prompts, holdings details, account or message recipient identifiers included."
+  ]
+}

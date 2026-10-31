@@ -1,0 +1,16 @@
+{
+  "document": "2026-10-26 市场反馈驱动的认知闭环与分期施工方案.md",
+  "date": "2026-10-26",
+  "renderer": "mermaid@11, browser, securityLevel=strict",
+  "count": 4,
+  "passed": 4,
+  "blocks": [
+    {"index": 0, "sha256": "a654da15830219951757a638df29a0222630e99e4cf4b32955add54132b60ba9", "svg_length": 18130},
+    {"index": 1, "sha256": "f1eda3997992bd5fd54c8a8a4f04bb763bf8926291de9baf8780cd5d2700053c", "svg_length": 16849},
+    {"index": 2, "sha256": "8c9aaac426c31bf5231827ad6ee985184707ac32623760428b6cea8b7175b9a1", "svg_length": 17290},
+    {"index": 3, "sha256": "444708a93d7731812da2144963a559897c9a64ae9e45ac7c80034bc49820daed", "svg_length": 33984}
+  ],
+  "visual_check": "主图改为纵向，在540px内容宽度下截图核对可读；每图实际生成SVG。",
+  "probe_notes": "初次注入HTML引号错误已修正；异步渲染返回超过浏览器5秒IPC等待，随后读取实际finalRenderResults证实完成，未把超时当通过。",
+  "scope": "仅文档图表，不是业务回归或生产验收"
+}

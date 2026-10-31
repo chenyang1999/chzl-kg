@@ -1,0 +1,23 @@
+[
+  {
+    "nodeid": "tests/test_canghai_rr_scope_20261023.py::test_actual_common_buy_blocks_only_bad_stock_and_sell_still_runs",
+    "locals": {
+      "result": "ExecutionResult(status='skipped', rule_type='trend_pullback_buy', ts_code='000001.SZ', side=None, quantity=0, limit_price=None, reasons=['trend_pullback_buy price predicates: last=100.0, ask=100.0, met=True', 'scan_action=buy_pullback'], skip_reason='zero_buy_qty', meta={})",
+      "ctx": "<test_canghai_rr_scope_20261023.FixtureContext object at 0x107598910>"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_rr_scope_20261023.py::test_actual_dispatch_mixed_rr_has_no_global_contagion",
+    "locals": {
+      "report": "DispatchReport(entry_results=[{'status': 'skipped', 'rule_type': 'trend_pullback_buy', 'ts_code': '000001.SZ', 'side': None, 'quantity': 0, 'limit_price': None, 'reasons': ['trend_pullback_buy price predicates: last=100.0, ask=100.0, met=True', 'scan_action=buy_pullback'], 'skip_reason': 'zero_buy_qty', 'meta': {}}, {'status': 'skipped', 'rule_type': 'trend_pullback_buy', 'ts_code': '000002.SZ', 'side': None, 'quantity': 0, 'limit_price': None, 'reasons': ['RR_FAIL'], 'skip_reason': 'stock_buy_eligibility', 'meta': {'buy_eligibility': {'source': 'price_levels_engine', 'scope': 'stock_buy_only', 'ts_code': '000002.SZ', 'status': 'blocked', 'reasons': ['RR_FAIL'], 'rr_min': 1.8, 'risk_reward_ratio': 1.0, 'buy_price': 100.0, 'stop_loss': 90.0, 'take_profit': 110.0, 'price_source': 'D1', 'review_required': False, 'review_reasons': []}}}], exit_results=[], watch_started=[], skipped=[])",
+      "ctx": "<test_canghai_rr_scope_20261023.FixtureContext object at 0x107545e50>"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_rr_scope_20261023.py::test_scoped_dispatch_keeps_good_buy_bad_sell_and_watch",
+    "locals": {
+      "report": "DispatchReport(entry_results=[{'status': 'skipped', 'rule_type': 'trend_pullback_buy', 'ts_code': '000001.SZ', 'side': None, 'quantity': 0, 'limit_price': None, 'reasons': ['trend_pullback_buy price predicates: last=100.0, ask=100.0, met=True', 'scan_action=buy_pullback'], 'skip_reason': 'zero_buy_qty', 'meta': {}}], exit_results=[{'status': 'fixture_order_intent', 'rule_type': 'exit_at_open', 'ts_code': '000002.SZ', 'side': 'sell', 'quantity': 200, 'limit_price': 99.9, 'reasons': ['simulate exit_at_open'], 'skip_reason': None, 'meta': {}}], watch_started=['000003.SZ'], skipped=[{'ts_code': '000002.SZ', 'reason': 'stock_buy_gate', 'reasons': ['ACTIVE_STOCK_NO_TRADE_CONDITION']}])",
+      "ctx": "<test_canghai_rr_scope_20261023.FixtureContext object at 0x1078d7c10>"
+    }
+  }
+]

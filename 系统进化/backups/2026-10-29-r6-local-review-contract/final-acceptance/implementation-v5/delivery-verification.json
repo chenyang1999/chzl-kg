@@ -1,0 +1,92 @@
+{
+  "junit_total": 94,
+  "junit_groups": {
+    "tests.pipeline.test_r6_local_revision": 57,
+    "tests.pipeline.test_bound_auxiliary_inputs": 28,
+    "tests.pipeline.test_native_usage_observation": 9
+  },
+  "original_v3_identities": 87,
+  "missing_v3_identities": [],
+  "added_identities": [
+    "tests.pipeline.test_r6_local_revision::test_new_finding_contract_types_and_legacy_preservation",
+    "tests.pipeline.test_r6_local_revision::test_new_hard_reject_without_original_contract_evidence_is_rejected",
+    "tests.pipeline.test_r6_local_revision::test_new_valid_evidence_can_replace_old_incomplete_null_reference",
+    "tests.pipeline.test_r6_local_revision::test_partial_review_updates_explicit_zero_evaluated_count",
+    "tests.pipeline.test_r6_local_revision::test_second_distinct_incomplete_target_can_be_reviewed_without_restarting_base",
+    "tests.pipeline.test_r6_local_revision::test_successive_modes_retry_preserves_previous_acceptance_and_six_sources",
+    "tests.pipeline.test_r6_local_revision::test_unknown_legacy_evaluated_count_not_summed_or_coerced"
+  ],
+  "original_assertions_decorators_signatures_preserved": true,
+  "parent_original_functions_ast_equal": [
+    "test_new_hard_reject_without_original_contract_evidence_is_rejected",
+    "test_new_valid_evidence_can_replace_old_incomplete_null_reference",
+    "test_partial_review_updates_explicit_zero_evaluated_count",
+    "test_second_distinct_incomplete_target_can_be_reviewed_without_restarting_base"
+  ],
+  "source_current_unchanged": true,
+  "changed_since_v3": [
+    "scripts/research/pipeline_state.py",
+    "scripts/research/pipeline_artifacts.py",
+    "tests/pipeline/test_r6_local_revision.py"
+  ],
+  "source_sha256": {
+    "scripts/research/run_research_shell.sh": "b146e3923ceef93e6dc9953532c6afe69fa0319c7f040fdc34c29b80a8e3759b",
+    "scripts/research/native_usage.py": "a1dd43f16d814ee9c75387103be2f07c4cd708d7aac8fe7df01eb3aaa7e7c1c0",
+    "scripts/research/pipeline_state.py": "7390067f5298fe69ebc97e3770a5b503101db5067de260dcf6e7f6f84bcf83ee",
+    "scripts/research/pipeline_artifacts.py": "b7e1c4913ad564f96c2556da9fa180d121c7f8f71b7affc76ce28e9fd9f12384",
+    "scripts/research/build_research_summary.py": "afd5a5b4ea09ed12f3ad4c3ad3fe456ae3312f01759c911d1e782d0669c67c44",
+    "tests/pipeline/test_r6_local_revision.py": "bfafcb87a13bee6722e3c89b69aa50df18d09edb688f0003384327e7c1199b3a",
+    "tests/pipeline/test_bound_auxiliary_inputs.py": "166ffe44ccc8cda58e65b3a1254bdb0fbcd207dd98d28645ea749ad7058ab25c",
+    "tests/pipeline/test_native_usage_observation.py": "879ed23123da10b2f132f4eb66f20a210fe0a39c672714ecd1f3f929d500175b",
+    "skills/analyze_devil_advocate_v1/SKILL.md": "b6ab02eaf3f7b7b6ebb775d3a5b5f38cb4009e715494e14236b4ca00019e1d25",
+    "docs/10-契约-研究汇总.md": "3d73fb06585f629bc206c4ad4dcbb1c787982a101d91544af3455e56ce605bb9"
+  },
+  "history_sha256": {
+    "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v3/result.json": "f331c5d2e4c7b76424026ee2628bc5f4f893472226028d2fab52f06898376bad",
+    "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v3/junit.xml": "ea307fd3a81351fda088439eaaf86fd73266d9d2c94e31dac0a91b5dc125bd40",
+    "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v3/source-after.json": "6901a34a8fc79902fbaf90710e7246eada73c5b3901cd259d41f6b59c00d2dd7",
+    "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v3/repair-only.patch": "1b1742aa422fe4b62d37d01919bbda02fe6afe0f34839ca84856c3d6e364471a",
+    "/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/parent_cases.py": "15f2471d63b827ad58f187f3f0c5af64dc11f985fde2f50b0aa8005937c8e666",
+    "/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/first-parent-red/junit.xml": "7261409e7fd1244458f832da09a635469dfdc3888d278b4a365b7f5539d15660",
+    "/Users/chenyang/.hermes/cache/scratch/r6-parent-review-20261029/count-parent-red/junit.xml": "a099b2f73fd3872468a7722a2e904ef09767a71e2214eb53e82496a7026ef23c",
+    "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v4/result.json": "8778614e70c429a88d33fdcf84df39a08d467047d73fdec29a0abb42acace847",
+    "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v4/junit.xml": "7ddfe8b67ca8dfb02b702fc1427bd1c76ee1547cb35e9acdc2f6975f99344a60"
+  },
+  "cumulative_patch_sha256": "a4b7f0bafcd90119ab673a0cc775a6eabcdebd8133dda091ac9e28abb1d019cd",
+  "v3_delta_patch_sha256": "a3eb4b4f31c37c36a4874a701f198953bce7543ca0aae6e13eca67186c571425",
+  "guard_bootstrap_exact_v3": true,
+  "index_sha256": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143",
+  "patch_replay": [
+    {
+      "argv": [
+        "/usr/bin/git",
+        "apply",
+        "--check",
+        "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/repair-only.patch"
+      ],
+      "cwd": "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/patch-replay",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/git",
+        "apply",
+        "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/repair-only.patch"
+      ],
+      "cwd": "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/patch-replay",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/repair-only.patch:1401: new blank line at EOF.\n+\nwarning: 1 line adds whitespace errors.\n"
+    }
+  ],
+  "replayed_sha256": {
+    "scripts/research/run_research_shell.sh": "b146e3923ceef93e6dc9953532c6afe69fa0319c7f040fdc34c29b80a8e3759b",
+    "scripts/research/native_usage.py": "a1dd43f16d814ee9c75387103be2f07c4cd708d7aac8fe7df01eb3aaa7e7c1c0",
+    "scripts/research/pipeline_state.py": "7390067f5298fe69ebc97e3770a5b503101db5067de260dcf6e7f6f84bcf83ee",
+    "scripts/research/pipeline_artifacts.py": "b7e1c4913ad564f96c2556da9fa180d121c7f8f71b7affc76ce28e9fd9f12384",
+    "scripts/research/build_research_summary.py": "afd5a5b4ea09ed12f3ad4c3ad3fe456ae3312f01759c911d1e782d0669c67c44",
+    "tests/pipeline/test_r6_local_revision.py": "bfafcb87a13bee6722e3c89b69aa50df18d09edb688f0003384327e7c1199b3a"
+  }
+}

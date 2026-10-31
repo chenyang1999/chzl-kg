@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-10-26 系统架构全景与定时任务数据流</title><meta charset="utf-8"/><link rel="preload" href="../index-5a23ce28.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-10-26 系统架构全景与定时任务数据流"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-10-26 系统架构全景与定时任务数据流"/><meta name="twitter:description" content="系统架构全景与定时任务数据流 · 2026-10-26 部署快照，不是新宪法或交易授权。 本文根据本机源码、Hermes 任务库及当日有限产物头部核对；任务清单取证于 2026-10-26 15:49:55 CST，主控于 15:51 CST 独立复核任务数量及关键配置一致。本轮未运行生产流水线、模型探针、模拟交易或真实交易。 范围：本项目与 /Users/chenyang/.hermes。召回材料中的 .hermes-canghai 是另一部署，不能挪用其“全部跑通”结论。旧文档保留，本文补充当前接线，不更改机器 schema、交易规则、输出路径或任务配置。 0."/><meta property="og:description" content="系统架构全景与定时任务数据流 · 2026-10-26 部署快照，不是新宪法或交易授权。 本文根据本机源码、Hermes 任务库及当日有限产物头部核对；任务清单取证于 2026-10-26 15:49:55 CST，主控于 15:51 CST 独立复核任务数量及关键配置一致。本轮未运行生产流水线、模型探针、模拟交易或真实交易。 范围：本项目与 /Users/chenyang/.hermes。召回材料中的 .hermes-canghai 是另一部署，不能挪用其“全部跑通”结论。旧文档保留，本文补充当前接线，不更改机器 schema、交易规则、输出路径或任务配置。 0."/><meta property="og:image:alt" content="系统架构全景与定时任务数据流 · 2026-10-26 部署快照，不是新宪法或交易授权。 本文根据本机源码、Hermes 任务库及当日有限产物头部核对；任务清单取证于 2026-10-26 15:49:55 CST，主控于 15:51 CST 独立复核任务数量及关键配置一致。本轮未运行生产流水线、模型探针、模拟交易或真实交易。 范围：本项目与 /Users/chenyang/.hermes。召回材料中的 .hermes-canghai 是另一部署，不能挪用其“全部跑通”结论。旧文档保留，本文补充当前接线，不更改机器 schema、交易规则、输出路径或任务配置。 0."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-26-系统架构全景与定时任务数据流"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-26-系统架构全景与定时任务数据流"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="系统架构全景与定时任务数据流 · 2026-10-26 部署快照，不是新宪法或交易授权。 本文根据本机源码、Hermes 任务库及当日有限产物头部核对；任务清单取证于 2026-10-26 15:49:55 CST，主控于 15:51 CST 独立复核任务数量及关键配置一致。本轮未运行生产流水线、模型探针、模拟交易或真实交易。 范围：本项目与 /Users/chenyang/.hermes。召回材料中的 .hermes-canghai 是另一部署，不能挪用其“全部跑通”结论。旧文档保留，本文补充当前接线，不更改机器 schema、交易规则、输出路径或任务配置。 0."/><meta name="generator" content="Quartz"/><link href="../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/2026-10-26-系统架构全景与定时任务数据流" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-992" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-992" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-10-26 系统架构全景与定时任务数据流</a></div></nav><h1 class="article-title">2026-10-26 系统架构全景与定时任务数据流</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-26T10:00:22.000Z">2026年10月26日</time><span>32分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="系统架构全景与定时任务数据流--2026-10-26">系统架构全景与定时任务数据流 · 2026-10-26<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#系统架构全景与定时任务数据流--2026-10-26" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><strong>部署快照，不是新宪法或交易授权。</strong> 本文根据本机源码、Hermes 任务库及当日有限产物头部核对；任务清单取证于 <strong>2026-10-26 15:49:55 CST</strong>，主控于 <strong>15:51 CST</strong> 独立复核任务数量及关键配置一致。本轮未运行生产流水线、模型探针、模拟交易或真实交易。</p>
+<p>范围：本项目与 <code>/Users/chenyang/.hermes</code>。召回材料中的 <code>.hermes-canghai</code> 是另一部署，不能挪用其“全部跑通”结论。旧文档保留，本文补充当前接线，不更改机器 schema、交易规则、输出路径或任务配置。</p>
+</blockquote>
+<h2 id="0-先用图理解一条决策主干几条专题旁支">0. 先用图理解：一条决策主干，几条专题旁支<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#0-先用图理解一条决策主干几条专题旁支" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>最容易混淆的是：同在“投研交易”目录，不代表每份报告都在自动互相读取。</strong> 当前是有依赖的主干，加上尚未全部接入的专题旁支，不是所有报告两两影响。</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    STYLE[\&quot;风格：市场环境\&quot;] --> SENT[\&quot;情绪：关注共识\&quot;]\n    STYLE --> SECTOR[\&quot;主线：选方向与候选\&quot;]\n    NEWS[\&quot;消息：事件催化\&quot;] --> SECTOR\n    MONEY[\&quot;资金：流向与持续性\&quot;] --> SECTOR\n    SENT --> SECTOR\n    SECTOR --> STOCK[\&quot;个股研判：逐票深挖\&quot;]\n    STOCK --> DEVIL[\&quot;反证：核全部研究\&quot;]\n    DEVIL --> PLAN[\&quot;盘前预案：汇总后独立取舍\&quot;]\n    PLAN --> AUCTION[\&quot;竞价判断\&quot;]\n    PLAN --> NOON[\&quot;午盘修订\&quot;]\n    AUCTION --> REVIEW[\&quot;日复盘\&quot;]\n    NOON --> REVIEW\n    DIV[\&quot;月度红利池等专题\&quot;] -.未见自动接线.-> PLAN&quot;">flowchart TD
+    STYLE[&quot;风格：市场环境&quot;] --> SENT[&quot;情绪：关注共识&quot;]
+    STYLE --> SECTOR[&quot;主线：选方向与候选&quot;]
+    NEWS[&quot;消息：事件催化&quot;] --> SECTOR
+    MONEY[&quot;资金：流向与持续性&quot;] --> SECTOR
+    SENT --> SECTOR
+    SECTOR --> STOCK[&quot;个股研判：逐票深挖&quot;]
+    STOCK --> DEVIL[&quot;反证：核全部研究&quot;]
+    DEVIL --> PLAN[&quot;盘前预案：汇总后独立取舍&quot;]
+    PLAN --> AUCTION[&quot;竞价判断&quot;]
+    PLAN --> NOON[&quot;午盘修订&quot;]
+    AUCTION --> REVIEW[&quot;日复盘&quot;]
+    NOON --> REVIEW
+    DIV[&quot;月度红利池等专题&quot;] -.未见自动接线.-> PLAN
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>读图只记四句话：</strong></p>
+<ul>
+<li>风格定背景，消息找催化，资金做验证，情绪看共识；它们在主线研判处汇合。</li>
+<li>主线先给候选，个股研判再深挖，独立反证找漏洞，盘前预案最后做取舍。</li>
+<li>竞价和午盘是对已有计划的分时点复核，不是重新生成全市场主线研究。</li>
+<li>红利池等专题目前不能说已经自动喂给盘前决策。虚线就是缺乏已接通证据，<strong>不是已经生效的影响</strong>。</li>
+</ul>
+<p>此图表达已配置的生产路径及技能输入义务，不代表每次模型实际读完。为避免线团，反证输入只画代表线；R6 的完整范围仍是 R1—R5 加 R7。这里“个股研判”指主链 R5 个股画像，不能把知识库中任意一篇个股专题自动当成它的输入。</p>
+<h2 id="1-先回答为什么看起来有很多预案任务">1. 先回答：为什么看起来有很多预案任务<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-先回答为什么看起来有很多预案任务" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>有很多报告任务，但正式盘前预案只有一条全量主路径和一条条件安全网。</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>层次</th><th>实际入口</th><th>做什么</th><th>不是做什么</th></tr></thead><tbody><tr><td>全量主路径</td><td>工作日 06:10，<code>24f4119fab82</code></td><td>七类研究 → 汇总 → 独立大模型主决策 → 正式预案</td><td>不是七八条各自独立注册的研究 cron</td></tr><tr><td>条件安全网</td><td>工作日 08:50，<code>af5014f46307</code></td><td>检查已有交付，必要时重试主决策；满足前置条件才可显式规则降级</td><td>不是每天无条件再跑一遍研究；不能覆盖合法大模型不交易结论</td></tr><tr><td>竞价校准</td><td>09:27 抓快照、09:28 判断</td><td>对照盘前预期，生成池内修订建议</td><td>不是另一份完整盘前预案，也没有已证自动应用到交易端的路径</td></tr><tr><td>午盘修订</td><td>11:35 抓快照、11:40 判断</td><td>上午表现复核、退出收紧/提示/观察晋级建议及简报</td><td>不等于执行端已自动改仓或取得新买权限</td></tr><tr><td>辅助研究</td><td>事件、催化剂、小盘、高分红、股性、题材锚、一字板等</td><td>提供专题材料、候选或缓存</td><td>文件生成不等于已接入主决策，更不等于可直接下单</td></tr><tr><td>展示/复盘/健康</td><td>手机摘要、日复盘、周度提案、台账、知识库同步</td><td>展示、追踪、诊断或分发</td><td>不是新的买入决策者</td></tr></tbody></table></div>
+<p>主入口证据：<code>scripts/research/run_research_shell.sh:158-278</code>；安全网：<code>scripts/plan/ensure_watchlist_plan.py:324-381</code>；修订边界：<code>skills/auction_amendment_v1/SKILL.md:90-146</code>、<code>skills/midday_amendment_v1/SKILL.md:114-218</code>。</p>
+<h2 id="2-系统按职责分层而不是按任务名称数-agent">2. 系统按职责分层，而不是按任务名称数 Agent<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-系统按职责分层而不是按任务名称数-agent" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>职责</th><th>当前实际承载方式</th><th>主要读写边界</th></tr></thead><tbody><tr><td>主控对话</td><td>当前对话；审阅、调度与签核</td><td>不代替研究选票，不越权代写各角色业务产物</td></tr><tr><td>数据采集</td><td>确定性脚本为主；部分任务直接由 Agent 执行</td><td>源快照、manifest、来源状态；也有计算指标写入研究目录，不能只按目录推断角色</td></tr><tr><td>研究</td><td>全量 shell 中显式 <code>hermes -p canghai-research chat</code></td><td>R1—R7 各自 JSON 与约定人读报告</td></tr><tr><td>盘前决策</td><td>shell/安全网显式 <code>hermes -p canghai-plan chat</code></td><td>正式计划 JSON 与知识库主 MD；运行副本由交接代码写</td></tr><tr><td>盘中修订</td><td>直接 Agent 定时任务</td><td>P1/P2 修订与简报；默认仅观察</td></tr><tr><td>执行</td><td>Python loader / watcher / executor；独立 paper 为另一条路径</td><td>权限、预算、行情确认、订单状态；当前 watcher cron 明确以 <code>dry_run</code> 启动</td></tr><tr><td>复盘与进化</td><td>日复盘任务位于 default 库；周度进化位于 review 库</td><td>日报告、观察追踪、错题与待签提案；周度提案不能自动改规则</td></tr></tbody></table></div>
+<p><strong>任务名中的 <code>canghai-review</code>、<code>canghai-phone</code> 不代表它就在同名角色下运行。</strong> 任务所属库、外层 Agent 身份、脚本内部的 <code>-p</code> 是三件事。<code>no_agent=true</code> 只表示调度器外层不调用模型；全量流水线和安全网内部仍会启动模型。</p>
+<p>本机任务库：default <strong>34</strong> 条；fetch、plan、review 各 <strong>1</strong> 条；research 库 <strong>0</strong> 条。合计 <strong>37 个任务、37 个独立 ID</strong>，全部启用、无暂停。入口类型为 <strong>22 条外层脚本、14 条直接 Agent、1 条脚本后接 Agent</strong>。这些是任务定义，不证明调度服务此刻存活或每条业务产出成功。</p>
+<h2 id="3-一天的数据流先看真正的生产者和消费者">3. 一天的数据流：先看真正的生产者和消费者<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-一天的数据流先看真正的生产者和消费者" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="30-先后顺序时钟决定启动依赖决定下一步">3.0 先后顺序：时钟决定启动，依赖决定下一步<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#30-先后顺序时钟决定启动依赖决定下一步" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;timeline\n    title 当前主链的生成顺序（不是每步耗时保证）\n    06时00分 : 抓取源数据和来源清单\n    06时10分启动第一批 : 风格研判 : 消息面研究 : 资金面研究 : 三者并行\n    第一批结束后 : 情绪热度\n    再之后 : 主线与核心候选\n    候选产生后 : 图表预渲染 : 个股画像\n    画像结束后 : 独立反证 : 研究汇总与版本检查 : 独立主决策 : 正式盘前预案\n    08时50分 : 条件安全网检查 : 已有效则保留 : 必要时重试主决策\n    09时27分至29分 : 竞价快照 : 竞价判断\n    11时35分至40分 : 午盘快照 : 午盘修订\n    18时00分 : 日复盘 : 生命周期滚动复盘&quot;">timeline
+    title 当前主链的生成顺序（不是每步耗时保证）
+    06时00分 : 抓取源数据和来源清单
+    06时10分启动第一批 : 风格研判 : 消息面研究 : 资金面研究 : 三者并行
+    第一批结束后 : 情绪热度
+    再之后 : 主线与核心候选
+    候选产生后 : 图表预渲染 : 个股画像
+    画像结束后 : 独立反证 : 研究汇总与版本检查 : 独立主决策 : 正式盘前预案
+    08时50分 : 条件安全网检查 : 已有效则保留 : 必要时重试主决策
+    09时27分至29分 : 竞价快照 : 竞价判断
+    11时35分至40分 : 午盘快照 : 午盘修订
+    18时00分 : 日复盘 : 生命周期滚动复盘
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>这里没有“主线固定几点几分完成”的承诺。</strong> 只有采集、主链入口、安全网及盘中任务的登记时刻；研究步骤的完成时间随上游耗时变化。主决策在全量任务内部，不是到旧文档的 08:00 就必然另起一次。</p>
+<p>红利池不在这条日内串行链里：它登记为<strong>每月 1 日 06:30</strong>独立研究。小盘扩池工作日 06:30、催化剂日历周一 07:30，也不因时钟上早于或晚于 D1，就自动成为 D1 的输入。</p>
+<h3 id="31-盘前主链">3.1 盘前主链<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-盘前主链" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    F[06:00 源采集与 manifest] --> W[06:10 研究 worker\n交易日守卫与等待源清单]\n    W --> B[并行 R1 风格 / R4 消息 / R7 资金]\n    B --> R3[R3 情绪与热度\n使用当日 R1 基线]\n    R3 --> R2[R2 主线与核心候选\n消费 R3 与 R4]\n    R2 --> C[候选图表预渲染\n同步等待、失败可降级]\n    C --> R5[R5 个股画像]\n    R5 --> R6[R6 独立反证\n只读 R1-R5 与 R7]\n    R6 --> S[研究汇总与主输入版本清单]\n    S --> V[每次主决策前校验输入版本]\n    V --> D[独立 D1 大模型裁决]\n    D --> P[正式预案 JSON 与人读 MD]\n    P --> H[交付检查与单向交接]\n    H --> RT[运行副本与执行端校验]\n    SN[08:50 条件安全网] -.检查 / 必要时重试.-> D&quot;">flowchart TD
+    F[06:00 源采集与 manifest] --> W[06:10 研究 worker
+交易日守卫与等待源清单]
+    W --> B[并行 R1 风格 / R4 消息 / R7 资金]
+    B --> R3[R3 情绪与热度
+使用当日 R1 基线]
+    R3 --> R2[R2 主线与核心候选
+消费 R3 与 R4]
+    R2 --> C[候选图表预渲染
+同步等待、失败可降级]
+    C --> R5[R5 个股画像]
+    R5 --> R6[R6 独立反证
+只读 R1-R5 与 R7]
+    R6 --> S[研究汇总与主输入版本清单]
+    S --> V[每次主决策前校验输入版本]
+    V --> D[独立 D1 大模型裁决]
+    D --> P[正式预案 JSON 与人读 MD]
+    P --> H[交付检查与单向交接]
+    H --> RT[运行副本与执行端校验]
+    SN[08:50 条件安全网] -.检查 / 必要时重试.-> D
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p>图中研究与决策节点表示实际启动路径及任务义务，<strong>不表示本轮模型已被证明读完所有文件</strong>。R1/R4/R7 之后是批次屏障；不是旧图中的 R2/R5 并行，更不是 R1→R2→…→R7 的纯串行。图表步骤的“non-blocking”日志实际表示失败不阻断，命令仍同步等待。</p>
+<p><code>research_summary.json</code> 由确定性汇总脚本生成，不负责选股；R 研究和 D1 取舍仍由独立大模型会话完成。不能为了“全是 Agent”而再让模型做文件存在性、版本和清单汇总。</p>
+<h3 id="32-盘中到盘后">3.2 盘中到盘后<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-盘中到盘后" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>时点（CST）</th><th>上游 → 生产者 → 产物</th><th>下游及限制</th></tr></thead><tbody><tr><td>08:30</td><td>来源/调度记录 → 数据源台账</td><td>人工诊断；不能把尚未到期的竞价/复盘报成缺失</td></tr><tr><td>08:30 工作日触发</td><td>周一/节后首日人气补采，脚本再做日期门控</td><td>热度材料；晚于 06:10 主链开始，不能默认已进入早班决策</td></tr><tr><td>09:00</td><td>情绪篮子构建</td><td>竞价快照可并入篮子；任务名称仍写 08:50，以 schedule 为准</td></tr><tr><td>09:10</td><td>正式计划及研究 → 手机简报</td><td>内容压缩与分发，不重新授权买入</td></tr><tr><td>09:27 → 09:28</td><td>正式计划、情绪篮子 → 竞价快照 → P1 修订</td><td>09:29 前时窗；人读竞价判断与后续复盘；自动交易应用未接通证据不足</td></tr><tr><td>盘中每 10 分钟 / 每小时</td><td>市场截面 → 快照/规则摘要 → 小时大模型总结</td><td>观察与报告，不自动改正式计划</td></tr><tr><td>10:00—11:40 每 20 分钟</td><td>市场截面 → 退潮后翻多检测</td><td>转强证据与提示，不自动解除计划/账户禁买</td></tr><tr><td>11:35 → 11:40</td><td>计划池行情、午盘快照、R7 增量上下文 → P2</td><td>默认只观察；午盘 CLI 默认 stub，须显式 live；本次没有验证实际运行参数</td></tr><tr><td>17:00</td><td>全市场日线 → 四色四量/技术指标同步</td><td>更新数据库；后台已受理不等于已完成</td></tr><tr><td>18:00</td><td>D1、修订、市场与执行证据 → 日复盘</td><td>结构化报告、观察追踪、错题；不能用场景收益冒充账户成交绩效</td></tr><tr><td>18:00</td><td>历史预案与行情 → 生命周期滚动复盘</td><td>最近五交易日窗口、退出与可卖性推演；与独立模拟账本分开</td></tr><tr><td>周五 17:00</td><td>已有日复盘 → 周度进化提案</td><td><strong>早于周五 18:00 日复盘</strong>，不能保证覆盖本周最后一天；未改时刻</td></tr><tr><td>19:00 每日</td><td>公告/事件 → 事件追踪</td><td>截至生成时刻的快照；次日盘前窗口补晚间新增</td></tr><tr><td>20:30</td><td>任务及产物状态 → 健康检查</td><td>报告故障，不是成功交付的替代证据</td></tr><tr><td>22:00 / 22:30</td><td>次日一字板候选 / 海外数据晚间重抓</td><td>分别是候选预判和次日输入；不等于晚间再生成完整 D1</td></tr></tbody></table></div>
+<h3 id="33-辅助研究为什么要单独画">3.3 辅助研究为什么要单独画<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#33-辅助研究为什么要单独画" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>七类辅助候选是：<strong>近期错题、股性、题材心智锚、宏观、节点预测、情绪周期、热度</strong>。当前汇总里的默认状态仍是 <code>pending_approval</code>，主链 D1 prompt 只允许本次 <code>artifacts</code> 指向的主研究输入。</p>
+<p>因此存在“专题任务已经生成报告，但未获准自动成为 D1 输入”的情况。R 单元自行引用某材料，也不能证明 D1 直接读了同一份材料。来源清单、模型实际读文件、采用/拒绝理由三层必须分别留证。</p>
+<p>证据：<code>scripts/research/build_research_summary.py:30-38,85-112,357-364</code>；<a href="../系统进化/2026-10-25-辅助研究输入接线待签说明" class="internal internal-link alias" data-slug="系统进化/2026-10-25-辅助研究输入接线待签说明">辅助输入待签说明</a>。本次不代签、不应用其补丁。</p>
+<h3 id="34-人读报告是另一个-agent-凭空写的吗不是">3.4 人读报告是另一个 Agent 凭空写的吗？不是<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#34-人读报告是另一个-agent-凭空写的吗不是" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>主链的正常设计是：一个研究单元在同一次任务中分析输入，交付机器 JSON 和人读 MD 两种表达。下一个单元主要接机器产物继续判断，不是必须先读上一篇人读文章。</strong> D1 同样在独立决策任务中综合主研究，交正式计划 JSON 与人读预案。</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;sequenceDiagram\n    autonumber\n    participant RAW as 源快照与外部工具\n    participant R as 本次研究Agent\n    participant J as 研究JSON\n    participant MD as 人读研究MD\n    participant S as 汇总与版本检查\n    participant D as 独立主决策Agent\n    participant P as 计划JSON与人读预案\n    RAW-->>R: 当日可用证据和来源时点\n    R->>RAW: 必要时追加核验（如财务、公告、K线）\n    RAW-->>R: 新取得的事实；不改写其他来源\n    R->>J: 写本单元结构化结论\n    R->>MD: 写人读解释与依据\n    S->>J: 验本轮可用性和精确版本\n    S->>MD: 独立检查承诺的人读交付\n    S-->>D: 交付获准主输入清单\n    D->>J: 按获准清单读取并综合（实际读取须另留事件）\n    D->>P: 同次决策交计划JSON与人读预案\n    Note over J,MD: 两件交付分别核验；不因一个存在就断言另一个齐全或内容一致&quot;">sequenceDiagram
+    autonumber
+    participant RAW as 源快照与外部工具
+    participant R as 本次研究Agent
+    participant J as 研究JSON
+    participant MD as 人读研究MD
+    participant S as 汇总与版本检查
+    participant D as 独立主决策Agent
+    participant P as 计划JSON与人读预案
+    RAW-->>R: 当日可用证据和来源时点
+    R->>RAW: 必要时追加核验（如财务、公告、K线）
+    RAW-->>R: 新取得的事实；不改写其他来源
+    R->>J: 写本单元结构化结论
+    R->>MD: 写人读解释与依据
+    S->>J: 验本轮可用性和精确版本
+    S->>MD: 独立检查承诺的人读交付
+    S-->>D: 交付获准主输入清单
+    D->>J: 按获准清单读取并综合（实际读取须另留事件）
+    D->>P: 同次决策交计划JSON与人读预案
+    Note over J,MD: 两件交付分别核验；不因一个存在就断言另一个齐全或内容一致
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p>所以不是“每篇文章各写各的”，也不是“一律把 JSON 机械翻译成文章”。生产提示词要求 Agent 写两件交付；部分竞价判断、点位表或恢复工具则确实采用<strong>读取既有机器产物再渲染</strong>的方式。不同栏目要看实际 producer，不能统一归成一种生成方式。</p>
+<p><strong>例外要单列</strong>：生命周期滚动复盘确实会解析人读历史预案，因此人读文件也有机器消费者；不能概括成“MD 永远只给人看”。依据：<code>scripts/review/run_position_lifecycle_review.py:85-99</code>。</p>
+<h3 id="35-相互影响发生在哪一层在研究结论与候选层不是数据源互改">3.5 “相互影响”发生在哪一层？在研究结论与候选层，不是数据源互改<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#35-相互影响发生在哪一层在研究结论与候选层不是数据源互改" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n    N[\&quot;新闻公告：发现某方向的催化\&quot;] --> R4[\&quot;消息研究：事件、受益方向与反面风险\&quot;]\n    Q[\&quot;行情和资金：看到强弱与资金持续性\&quot;] --> R1[\&quot;风格与资金研究：环境、约束、验证\&quot;]\n    R4 --> R2[\&quot;主线研究：该方向是否值得纳入？核心是谁？\&quot;]\n    R1 --> R2\n    R2 --> R5[\&quot;个股画像：只对这些真实候选追加核验\&quot;]\n    FIN[\&quot;财务 / 研报 / K线 / 股东与业务数据\&quot;] --> R5\n    R5 --> R6[\&quot;独立反证：证据是否互相矛盾？\&quot;]\n    R4 --> R6\n    R6 --> D1[\&quot;主决策：采用、拒绝、仅观察或等待确认\&quot;]\n    R2 --> D1&quot;">flowchart LR
+    N[&quot;新闻公告：发现某方向的催化&quot;] --> R4[&quot;消息研究：事件、受益方向与反面风险&quot;]
+    Q[&quot;行情和资金：看到强弱与资金持续性&quot;] --> R1[&quot;风格与资金研究：环境、约束、验证&quot;]
+    R4 --> R2[&quot;主线研究：该方向是否值得纳入？核心是谁？&quot;]
+    R1 --> R2
+    R2 --> R5[&quot;个股画像：只对这些真实候选追加核验&quot;]
+    FIN[&quot;财务 / 研报 / K线 / 股东与业务数据&quot;] --> R5
+    R5 --> R6[&quot;独立反证：证据是否互相矛盾？&quot;]
+    R4 --> R6
+    R6 --> D1[&quot;主决策：采用、拒绝、仅观察或等待确认&quot;]
+    R2 --> D1
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p>这是<strong>逻辑示例，不是当天行情结论</strong>：消息面发现催化，风格/资金告诉我们市场是否奖励这个方向，主线研究据此选候选，个股研判再检验“真受益还是蹭概念”，反证揭示矛盾，最后才决定是否进计划。</p>
+<ul>
+<li>消息面不会把行情源中的价格“改成更强”；风格研判也不会修改公司的财报。</li>
+<li>上游结论会改变下游的<strong>注意力、候选范围、核验问题、置信度和风险约束</strong>。这才是相互促进。</li>
+<li>R5 可以对候选再调工具取数；因此不是“06:00 一次抓完以后所有人只读同一个包”。但追加取数也须保留真实时点，不许把后取得的数伪装成更早已知。</li>
+<li>R4 技能允许 R3 已存在时做可选交叉，但当前 R4 与第一批并行、早于当日 R3；<strong>不能画成当日 R3→R4 的必经前置循环</strong>。</li>
+</ul>
+<p>上游关系依据：<code>skills/analyze_main_sectors_v1/SKILL.md:55-66,108-113</code>、<code>skills/analyze_stock_profile_v1/SKILL.md:29-56</code>；可选交叉依据：<code>skills/analyze_news_impact_v1/SKILL.md:188-190</code>。</p>
+<h3 id="36-红利池等专题同一资料库不等于已经进入日内决策闭环">3.6 红利池等专题：同一资料库，不等于已经进入日内决策闭环<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#36-红利池等专题同一资料库不等于已经进入日内决策闭环" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    DATA[\&quot;共用金融数据和研究工具\&quot;] --> DIV[\&quot;月度红利研究Agent\&quot;]\n    DIV --> REPORT[\&quot;红利池人读专题&lt;br/>投研交易/红利池/YYYYMM.md\&quot;]\n    REPORT --> USER[\&quot;人工阅读 / 长期方向参考\&quot;]\n    DATA --> DAILY[\&quot;每日主链研究&lt;br/>风格、消息、资金、主线、画像、反证\&quot;]\n    DAILY --> D1[\&quot;盘前主决策\&quot;]\n    REPORT -.当前未见自动读取接线.-> D1\n    REPORT -.不能因目录相邻就认定已纳入.-> DAILY&quot;">flowchart TD
+    DATA[&quot;共用金融数据和研究工具&quot;] --> DIV[&quot;月度红利研究Agent&quot;]
+    DIV --> REPORT[&quot;红利池人读专题&lt;br/>投研交易/红利池/YYYYMM.md&quot;]
+    REPORT --> USER[&quot;人工阅读 / 长期方向参考&quot;]
+    DATA --> DAILY[&quot;每日主链研究&lt;br/>风格、消息、资金、主线、画像、反证&quot;]
+    DAILY --> D1[&quot;盘前主决策&quot;]
+    REPORT -.当前未见自动读取接线.-> D1
+    REPORT -.不能因目录相邻就认定已纳入.-> DAILY
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p>这条虚线尤其重要：<strong>红利池当前更像平行研究服务，不是已接通的 D1 上游。</strong> 其月度任务定义输出的是专题 MD；本轮在主链 prompt、R2/R5 输入、汇总主清单及活动源码中未找到它被自动读入的证据。小盘扩池、催化剂日历也不能仅凭有报告就宣称“每天帮助主决策选票”。这不是否定专题研究的价值，而是把“人可参考”与“程序自动消费”分开。</p>
+<p>事件追踪也有类似细节：R4 技能要求可选读取前晚的结构化事件文件及当日盘前公告窗口，但夜间任务只声明输出人读事件报告，<strong>不能据此认定夜间文章已自动变成 R4 结构化输入</strong>。当日公告窗口的 <code>anns_window.jsonl</code> 有直接输入契约，这条腿与夜间文章要分开画。</p>
+<p>如果以后要让这些专题促进主线，应先明确来源频率、有效期、候选映射、消费者和采用/拒绝记录，再按权限接线；本轮不以画图代替实施。</p>
+<h2 id="4-文件流向哪份是正式源哪份只是副本">4. 文件流向：哪份是正式源，哪份只是副本<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-文件流向哪份是正式源哪份只是副本" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>文件/目录</th><th>生产者</th><th>消费者</th><th>权威与时点</th></tr></thead><tbody><tr><td><code>data/raw/YYYYMMDD/manifest.json</code> 与源快照</td><td>采集脚本</td><td>研究 worker / R 单元</td><td>抓取清单不是行情观察时间；分别保留源数据日期与抓取时刻</td></tr><tr><td><code>data/research/YYYYMMDD/R*.json</code></td><td>各研究单元</td><td>后续研究、汇总、获准的 D1 主输入</td><td>同日旧文件不等于本次尝试已交付；R7 有限定同日别名</td></tr><tr><td><code>data/research/YYYYMMDD/research_summary.json</code></td><td>汇总脚本</td><td>D1 主路径与相关读取器</td><td>带 run/attempt/文件摘要绑定；不是把全部研究全文塞成一份大报告</td></tr><tr><td><code>data/plans/YYYYMMDD/watchlist_plan.json</code></td><td>D1；条件安全网可显式降级</td><td>竞价/午盘/执行/复盘</td><td><strong>正式源</strong>；必须区分 <code>llm</code> 和 <code>python_fallback</code></td></tr><tr><td><code>chzl_kg/投研交易/盘前预案/YYYYMMDD.md</code></td><td>决策角色</td><td>人工阅读、部分历史复盘</td><td>人读产物；不是执行端机器授权</td></tr><tr><td><code>data/runtime/watchlist_plan_YYYYMMDD.json</code></td><td>受控交接代码</td><td>交易 loader 等</td><td>正式源校验后单向发布；不能反写覆盖正式计划</td></tr><tr><td>同日 <code>.loaded.json</code> 等加载产物</td><td>交易 loader</td><td>watcher / executor</td><td>叠加账户约束的工作副本，不是新的研究决策源</td></tr><tr><td><code>data/plans/YYYYMMDD/auction_amendment.json</code> / <code>midday_amendment.json</code></td><td>P1 / P2</td><td>人读/复盘义务与部分检查器</td><td>未找到交易端自动合并应用；禁止画成已生效交易命令</td></tr><tr><td><code>data/reports/YYYYMMDD/</code></td><td>日复盘角色</td><td>周度进化、人工回看</td><td>与旧 prompt 的 <code>data/runtime/E1_data.json</code> 要求存在差异，需分账核交付</td></tr><tr><td><code>data/corrections/YYYY-Www/</code> / <code>data/evolution/YYYY-Www/</code></td><td>日复盘/周度进化</td><td>获准消费者与用户签核</td><td>错题及提案不是自动改规则许可</td></tr></tbody></table></div>
+<p>两类读取策略不要混写：<code>src/plan/plan_resolver.py:24-39</code> 只读正式源，<code>sync</code> 是兼容空操作；<code>trading/load_plan.py:62-67</code> 在正式源<strong>缺失</strong>时仍保留 runtime-only 历史兼容。正式源已存在但坏掉时，不允许以旧运行副本冒充恢复。</p>
+<h2 id="5-不应把这些关系误认成重复跑预案">5. 不应把这些关系误认成重复跑预案<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-不应把这些关系误认成重复跑预案" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>表面重复</th><th>实际关系</th><th>当前待核问题</th></tr></thead><tbody><tr><td>06:10 主链 + 08:50 安全网</td><td>主路与有条件救援</td><td>安全网前置校验弱于主链，不能宣称完全一致</td></tr><tr><td>盘前预案 + 竞价判断 + 午盘修订</td><td>不同时点的计划与差分建议</td><td>修订尚无已证执行应用器</td></tr><tr><td>watcher 启动 + 保活</td><td>同一进程的启动与缺失重启</td><td>不能按两条任务数成两套执行系统</td></tr><tr><td>规则盘中摘要 + 小时大模型总结</td><td>截面生产与解释</td><td>是否都被实际阅读须另留消费证据</td></tr><tr><td>四个笔记站同步时点</td><td>同一 wrapper 多次发布</td><td>这是分发，不是新研究；脚本有写入/发布副作用，审计未运行</td></tr><tr><td>每月 1 日股性 + 每月 18 日股性与题材锚</td><td>前段能力重合，后段缓存/锚不同</td><td>列冗余候选，不能未经批准删除任一任务</td></tr></tbody></table></div>
+<h2 id="6-当前真实运行切片有文件不等于主路成功">6. 当前真实运行切片：有文件不等于主路成功<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-当前真实运行切片有文件不等于主路成功" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>以下只读<strong>2026-10-26 下午</strong>检查到的头部/存在性，不读取或公开持仓细节，也不代表整个生产系统已全面诊断：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>目标</th><th>观察结果</th><th>不能宣称</th></tr></thead><tbody><tr><td><code>data/health/research_pipeline_20261026.json</code></td><td><code>run_id=20261026T061048-3542-1392</code>，终态 <code>failed</code>；D1 第三次尝试于 07:14:18 失败</td><td>外层 cron 的 ok 等于整链成功</td></tr><tr><td>当日 <code>research_summary.json</code></td><td>06:55:19 生成；<code>orchestrator_status=partial</code>，契约检查字段为 true</td><td>契约字段 true 等于所有研究及人读报告已齐</td></tr><tr><td>当日正式 <code>watchlist_plan.json</code></td><td>08:50:56；<code>decision_source=python_fallback</code>、<code>mode=fallback</code></td><td>当天大模型盘前主决策已完整交付</td></tr><tr><td>同日 runtime 计划副本</td><td>检查时未见</td><td>正式文件存在即可视作已交接执行</td></tr><tr><td>同日 P1 / P2 修订</td><td>检查时均未见正式文件</td><td>已按竞价/午盘建议自动调整交易</td></tr></tbody></table></div>
+<p>此处 <code>mode=fallback</code> 是已见降级文件头部；<strong>不属于交易交接接受的 <code>live/dry_run</code> 模式</strong>。其 <code>contract_checks_passed=true</code> 不能跨过交易 loader 的模式/权限校验。证据：<code>trading/load_plan.py:83-111</code>。</p>
+<h2 id="7-全量任务清单3737">7. 全量任务清单（37/37）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-全量任务清单3737" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>全部启用；下表“最近状态”是 15:49:55 任务库记录，不等于业务交付。</strong> 表达式按本机 CST 解释；工作日表达式本身不感知节假日，是否有交易日守卫须按 wrapper 单独核对。精确输入输出与源码出处保存在本目录的<a href="../系统进化/backups/2026-10-26-architecture-doc-evidence.json" class="internal internal-link alias" data-slug="系统进化/backups/2026-10-26-architecture-doc-evidence.json">证据快照</a>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:right;">#</th><th>ID</th><th>任务</th><th>所属库</th><th>表达式</th><th>入口</th><th>最近状态</th><th>正式预案角色</th></tr></thead><tbody><tr><td style="text-align:right;">1</td><td><code>dc312e1c10d3</code></td><td>canghai-execute · watcher start (09:15)</td><td>default</td><td><code>15 9 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">2</td><td><code>51e960a61f9e</code></td><td>canghai-execute · watcher keepalive (10m)</td><td>default</td><td><code>*/10 9-15 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">3</td><td><code>24f4119fab82</code></td><td>canghai-research · 每日 R1-R7+D1 全量流水线 (06:10)</td><td>default</td><td><code>10 6 * * 1-5</code></td><td>脚本</td><td>ok</td><td>主路径</td></tr><tr><td style="text-align:right;">4</td><td><code>cac075214e6f</code></td><td>canghai-sise · 全市场日线+四色四量增量 (17:00)</td><td>default</td><td><code>0 17 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">5</td><td><code>354c580574e3</code></td><td>沧海巨浪-收盘落盘提醒</td><td>default</td><td><code>5 15 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">6</td><td><code>6433ef538744</code></td><td>canghai-fetch · 盘前全源抓取 (06:00)</td><td>default</td><td><code>0 6 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">7</td><td><code>bbfa5007d424</code></td><td>canghai-review · 每日复盘 E1 (18:00)</td><td>default</td><td><code>0 18 * * 1-5</code></td><td>Agent</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">8</td><td><code>6364b9c63227</code></td><td>canghai-event-tracker</td><td>default</td><td><code>0 19 * * *</code></td><td>Agent</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">9</td><td><code>e9f209e44863</code></td><td>canghai-insider-tracker</td><td>default</td><td><code>30 19 * * 5</code></td><td>Agent</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">10</td><td><code>8588cd3d9943</code></td><td>canghai-catalyst-calendar</td><td>default</td><td><code>30 7 * * 1</code></td><td>Agent</td><td>error</td><td>—</td></tr><tr><td style="text-align:right;">11</td><td><code>a9b5eb63af43</code></td><td>canghai-small-cap-miner</td><td>default</td><td><code>30 6 * * 1-5</code></td><td>Agent</td><td>error</td><td>—</td></tr><tr><td style="text-align:right;">12</td><td><code>d49fb5310923</code></td><td>canghai-dividend-picker</td><td>default</td><td><code>30 6 1 * *</code></td><td>Agent</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">13</td><td><code>f49220d13788</code></td><td>canghai-health · 每日产出健康检查 (20:30)</td><td>default</td><td><code>30 20 * * *</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">14</td><td><code>d372940a8886</code></td><td>canghai-fetch · 竞价快照 (09:27)</td><td>default</td><td><code>27 9 * * 1-5</code></td><td>Agent</td><td>error</td><td>—</td></tr><tr><td style="text-align:right;">15</td><td><code>d5cd79c48615</code></td><td>canghai-plan · P1 竞价校准 (09:28)</td><td>default</td><td><code>28 9 * * 1-5</code></td><td>Agent</td><td>error</td><td>修订</td></tr><tr><td style="text-align:right;">16</td><td><code>d741b25076a6</code></td><td>canghai-phone · 早盘简报 (09:10)</td><td>default</td><td><code>10 9 * * 1-5</code></td><td>Agent</td><td>error</td><td>—</td></tr><tr><td style="text-align:right;">17</td><td><code>5fbc386914cd</code></td><td>canghai-phone · 复盘推送 (18:30)</td><td>default</td><td><code>30 18 * * 1-5</code></td><td>Agent</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">18</td><td><code>5871f5ca82e4</code></td><td>chzl-kg · 笔记站同步 (09:30)</td><td>default</td><td><code>30 9 * * *</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">19</td><td><code>99ec8bce24ad</code></td><td>chzl-kg · 笔记站同步 (18:00)</td><td>default</td><td><code>0 18 * * *</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">20</td><td><code>af5014f46307</code></td><td>canghai-plan · D1 预案安全网 (08:50)</td><td>default</td><td><code>50 8 * * 1-5</code></td><td>脚本</td><td>ok</td><td>条件安全网</td></tr><tr><td style="text-align:right;">21</td><td><code>cffc5928d382</code></td><td>canghai-fetch · 美股晚间重抓 (22:30)</td><td>default</td><td><code>30 22 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">22</td><td><code>163b0753e1d8</code></td><td>canghai-fetch · 竞价情绪篮子构建 (08:50)</td><td>default</td><td><code>0 9 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">23</td><td><code>e6517ca3c755</code></td><td>canghai-research · 退潮次日翻多检测 (10:00-11:40)</td><td>default</td><td><code>*/20 10-11 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">24</td><td><code>637f04b538f5</code></td><td>canghai-review · 持仓生命周期滚动复盘 (18:00)</td><td>default</td><td><code>0 18 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">25</td><td><code>579231d3963a</code></td><td>chzl-kg · 笔记站同步 (08:30)</td><td>default</td><td><code>30 8 * * *</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">26</td><td><code>da49853a1d07</code></td><td>chzl-kg · 笔记站同步 (12:00)</td><td>default</td><td><code>0 12 * * *</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">27</td><td><code>bb105fc74549</code></td><td>canghai-health · 盘前数据源台账 (08:30)</td><td>default</td><td><code>30 8 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">28</td><td><code>8b9ff2eb44f2</code></td><td>canghai-intraday · 盘中每10分钟截面快照 (#6)</td><td>default</td><td><code>*/10 9-15 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">29</td><td><code>cae686ec450a</code></td><td>canghai-intraday · 每小时 LLM 盘中总结 (#6)</td><td>default</td><td><code>5 10-14 * * 1-5</code></td><td>Agent</td><td>error</td><td>—</td></tr><tr><td style="text-align:right;">30</td><td><code>a48bfe35bbb9</code></td><td>canghai-yizi · 次日一字板预判 (#7)</td><td>default</td><td><code>0 22 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">31</td><td><code>f102a8d022bc</code></td><td>canghai-stock-character · 个股股性月度更新</td><td>default</td><td><code>40 6 1 * *</code></td><td>脚本</td><td>未记</td><td>—</td></tr><tr><td style="text-align:right;">32</td><td><code>4db0fe22a72d</code></td><td>canghai-weekend · 周末情报包 (周六/周日 18:00)</td><td>default</td><td><code>0 18 * * 6,0</code></td><td>脚本→Agent</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">33</td><td><code>6124ebf7f3dd</code></td><td>canghai-fetch · 盘前人气榜补采 (08:30 周一/节后首日)</td><td>default</td><td><code>30 8 * * 1-5</code></td><td>脚本</td><td>ok</td><td>—</td></tr><tr><td style="text-align:right;">34</td><td><code>aa63ac34cdb9</code></td><td>股性表月度更新+心智锚重建</td><td>default</td><td><code>30 18 18 * *</code></td><td>脚本</td><td>未记</td><td>—</td></tr><tr><td style="text-align:right;">35</td><td><code>a314bd2ac6bb</code></td><td>canghai-fetch · 午盘快照(midday-fetch)</td><td>canghai-fetch</td><td><code>35 11 * * 1-5</code></td><td>Agent</td><td>error</td><td>—</td></tr><tr><td style="text-align:right;">36</td><td><code>75bf632522ce</code></td><td>canghai-plan · 午盘修订(P2)</td><td>canghai-plan</td><td><code>40 11 * * 1-5</code></td><td>Agent</td><td>error</td><td>修订</td></tr><tr><td style="text-align:right;">37</td><td><code>87d4d030b72b</code></td><td>canghai-review · 周度进化(E2)</td><td>canghai-review</td><td><code>0 17 * * 5</code></td><td>Agent</td><td>ok</td><td>—</td></tr></tbody></table></div>
+<h2 id="8-已知接线缺口与不变项">8. 已知接线缺口与不变项<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#8-已知接线缺口与不变项" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>P0：执行安全残余</strong>仍按原报告保留阻断；不以本文或工程绿测放行实盘。</li>
+<li><strong>P1：辅助输入、主链/安全网校验差异、P1/P2 自动应用、午盘数据口径与 R7 版本覆盖、周五 E2 早于 E1</strong>，详见<a href="../系统进化/2026-10-26-架构审阅图与决策路径" class="internal internal-link alias" data-slug="系统进化/2026-10-26-架构审阅图与决策路径">架构审阅图</a>。这次只记录，未修实现或调度。</li>
+<li>当前用户确定的通道口径：<strong>Agent Plan 主用、Coding Plan 仅备选</strong>。不是因为本次梳理就要切套餐、拆五小时窗口或缩减轮数；任务固定模型与角色默认模型另账，本次均不改。</li>
+<li>前文曾把“减少最大轮数、挪定时任务”列为“不改配置”的做法，分类不准确；它们改变运行参数/调度，应另行授权，不能夹在文档工作里实施。</li>
+<li>具体完成度、工程证据时点及哪些仍未验收，见<a href="../系统进化/2026-10-26-重构进度与验收边界" class="internal internal-link alias" data-slug="系统进化/2026-10-26-重构进度与验收边界">重构进度与验收边界</a>。</li>
+</ul>
+<h2 id="9-证据与历史版本">9. 证据与历史版本<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#9-证据与历史版本" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>源码主链：<code>scripts/research/run_research_shell_cron_wrapper.sh:18-71</code>、<code>scripts/research/run_research_shell.sh:76-149,158-278</code>。</li>
+<li>研究交付：<code>scripts/research/pipeline_state.py:97-180,263-307</code>、<code>scripts/research/pipeline_artifacts.py:147-245,318-334</code>。</li>
+<li>汇总传递：<code>scripts/research/build_research_summary.py:248-291,294-369</code>。</li>
+<li>执行边界：<code>trading/load_plan.py:62-183,344-421</code>、<code>trading/execution_authorization.py:15-105</code>。</li>
+<li>调度来源：本机五份任务库及 wrapper；精确路径、任务记录行号、来源文件摘要见<a href="../系统进化/backups/2026-10-26-architecture-doc-evidence.json" class="internal internal-link alias" data-slug="系统进化/backups/2026-10-26-architecture-doc-evidence.json">证据快照</a>。</li>
+<li><a href="../系统进化/07-重构进度表" class="internal internal-link alias" data-slug="系统进化/07-重构进度表">旧重构进度表</a>、<a href="../系统进化/09-架构审阅图-t1prime" class="internal internal-link alias" data-slug="系统进化/09-架构审阅图-t1prime">旧架构审阅图</a>、<a href="../系统进化/10-系统架构全景-v1" class="internal internal-link alias" data-slug="系统进化/10-系统架构全景-v1">旧系统架构全景</a>、<a href="../系统进化/00-canonical-architecture-v1" class="internal internal-link alias" data-slug="系统进化/00-canonical-architecture-v1">历史 CANONICAL</a> 全部保留原文。旧时刻、旧角色数量及“唯一权威”自述不能脱离原日期当今天事实。</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-961" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#系统架构全景与定时任务数据流--2026-10-26" data-for="系统架构全景与定时任务数据流--2026-10-26">系统架构全景与定时任务数据流 · 2026-10-26</a></li><li class="depth-1"><a href="#0-先用图理解一条决策主干几条专题旁支" data-for="0-先用图理解一条决策主干几条专题旁支">0. 先用图理解：一条决策主干，几条专题旁支</a></li><li class="depth-1"><a href="#1-先回答为什么看起来有很多预案任务" data-for="1-先回答为什么看起来有很多预案任务">1. 先回答：为什么看起来有很多预案任务</a></li><li class="depth-1"><a href="#2-系统按职责分层而不是按任务名称数-agent" data-for="2-系统按职责分层而不是按任务名称数-agent">2. 系统按职责分层，而不是按任务名称数 Agent</a></li><li class="depth-1"><a href="#3-一天的数据流先看真正的生产者和消费者" data-for="3-一天的数据流先看真正的生产者和消费者">3. 一天的数据流：先看真正的生产者和消费者</a></li><li class="depth-2"><a href="#30-先后顺序时钟决定启动依赖决定下一步" data-for="30-先后顺序时钟决定启动依赖决定下一步">3.0 先后顺序：时钟决定启动，依赖决定下一步</a></li><li class="depth-2"><a href="#31-盘前主链" data-for="31-盘前主链">3.1 盘前主链</a></li><li class="depth-2"><a href="#32-盘中到盘后" data-for="32-盘中到盘后">3.2 盘中到盘后</a></li><li class="depth-2"><a href="#33-辅助研究为什么要单独画" data-for="33-辅助研究为什么要单独画">3.3 辅助研究为什么要单独画</a></li><li class="depth-2"><a href="#34-人读报告是另一个-agent-凭空写的吗不是" data-for="34-人读报告是另一个-agent-凭空写的吗不是">3.4 人读报告是另一个 Agent 凭空写的吗？不是</a></li><li class="depth-2"><a href="#35-相互影响发生在哪一层在研究结论与候选层不是数据源互改" data-for="35-相互影响发生在哪一层在研究结论与候选层不是数据源互改">3.5 “相互影响”发生在哪一层？在研究结论与候选层，不是数据源互改</a></li><li class="depth-2"><a href="#36-红利池等专题同一资料库不等于已经进入日内决策闭环" data-for="36-红利池等专题同一资料库不等于已经进入日内决策闭环">3.6 红利池等专题：同一资料库，不等于已经进入日内决策闭环</a></li><li class="depth-1"><a href="#4-文件流向哪份是正式源哪份只是副本" data-for="4-文件流向哪份是正式源哪份只是副本">4. 文件流向：哪份是正式源，哪份只是副本</a></li><li class="depth-1"><a href="#5-不应把这些关系误认成重复跑预案" data-for="5-不应把这些关系误认成重复跑预案">5. 不应把这些关系误认成重复跑预案</a></li><li class="depth-1"><a href="#6-当前真实运行切片有文件不等于主路成功" data-for="6-当前真实运行切片有文件不等于主路成功">6. 当前真实运行切片：有文件不等于主路成功</a></li><li class="depth-1"><a href="#7-全量任务清单3737" data-for="7-全量任务清单3737">7. 全量任务清单（37/37）</a></li><li class="depth-1"><a href="#8-已知接线缺口与不变项" data-for="8-已知接线缺口与不变项">8. 已知接线缺口与不变项</a></li><li class="depth-1"><a href="#9-证据与历史版本" data-for="9-证据与历史版本">9. 证据与历史版本</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../readme" class="internal">README</a></li><li><a href="../系统进化/2026-10-26-市场反馈驱动的认知闭环与分期施工方案" class="internal">2026-10-26 市场反馈驱动的认知闭环与分期施工方案</a></li><li><a href="../系统进化/2026-10-26-架构审阅图与决策路径" class="internal">2026-10-26 架构审阅图与决策路径</a></li><li><a href="../系统进化/2026-10-26-重构进度与验收边界" class="internal">2026-10-26 重构进度与验收边界</a></li><li><a href="../系统进化/readme" class="internal">README</a></li><li><a href="../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

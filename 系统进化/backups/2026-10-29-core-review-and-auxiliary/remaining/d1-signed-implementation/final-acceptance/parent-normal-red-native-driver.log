@@ -1,0 +1,58 @@
+{
+  "exit_code": 1,
+  "source_unchanged": true,
+  "index_unchanged": true,
+  "guard_violations": [],
+  "guard_pids": [
+    17316,
+    17527,
+    17529,
+    17530,
+    17531,
+    17533,
+    17534,
+    17535,
+    17536,
+    17537
+  ],
+  "native_child_pids": [
+    17531
+  ],
+  "unguarded_native_children": []
+}
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____ test_real_normal_shell_delivery_can_later_use_selective_reassessment _____
+tests/pipeline/test_d1_selective_reassessment.py:366: in test_real_normal_shell_delivery_can_later_use_selective_reassessment
+    assert result.returncode==0, result.stdout+result.stderr
+E   AssertionError:   [17:26:14] launching D1 (skill=main_decision_v1)
+E     Traceback (most recent call last):
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_state.py", line 799, in <module>
+E         raise SystemExit(main())
+E                          ^^^^^^
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_state.py", line 773, in main
+E         return 0 if check(args.root, args.date, args.run_id, args.stage, args.since) else 1
+E                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_state.py", line 234, in check
+E         path, payload, version = inspect_delivery(root, date, unit, kind, since_ns=since_ns)
+E                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_artifacts.py", line 260, in inspect_delivery
+E         path, _ = inspect()
+E                   ^^^^^^^^^
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_artifacts.py", line 258, in inspect
+E         return (plan_artifact(root, date, since_ns=since_ns) if unit == "D1" else
+E                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/cases/test_real_normal_shell_deliver0/app/scripts/research/pipeline_artifacts.py", line 234, in plan_artifact
+E         from trading.load_plan import validate_plan_for_date
+E       File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/cases/test_real_normal_shell_deliver0/app/trading/load_plan.py", line 16, in <module>
+E         from trading.executors.registry import all_entry_types, all_exit_types
+E     ModuleNotFoundError: No module named 'trading.executors'
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['/bin/bash', '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-nat...ecutors.registry import all_entry_types, all_exit_types\nModuleNotFoundError: No module named \'trading.executors\'\n').returncode
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_real_normal_shell_delivery_can_later_use_selective_reassessment
+1 failed in 1.03s
+

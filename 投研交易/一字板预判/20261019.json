@@ -1,0 +1,71 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261019",
+  "next_day": "20261020",
+  "generated_at": "2026-10-20T15:30:58+08:00",
+  "n_total": 46,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "003029.SZ",
+      "name": "吉大正元",
+      "industry": "软件开发",
+      "limit_times": 3,
+      "fd_amount_yi": 2.01,
+      "pct_chg": 10.0,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.0亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002889.SZ",
+      "name": "东方嘉盛",
+      "industry": "物流",
+      "limit_times": 3,
+      "fd_amount_yi": 0.33,
+      "pct_chg": 9.99,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.3亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "603197.SH",
+      "name": "保隆科技",
+      "industry": "汽车零部件",
+      "limit_times": 2,
+      "fd_amount_yi": 3.32,
+      "pct_chg": 10.0,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=3.3亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600487.SH",
+      "name": "亨通光电",
+      "industry": "通信设备",
+      "limit_times": 1,
+      "fd_amount_yi": 3.99,
+      "pct_chg": 10.0,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.0亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停46只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

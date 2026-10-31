@@ -1,0 +1,86 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261012",
+  "next_day": "20261013",
+  "generated_at": "2026-10-17T18:55:35+08:00",
+  "n_total": 46,
+  "n_candidates": 5,
+  "candidates": [
+    {
+      "ts_code": "600825.SH",
+      "name": "新华传媒",
+      "industry": "出版",
+      "limit_times": 10,
+      "fd_amount_yi": 10.17,
+      "pct_chg": 9.98,
+      "prob_yizi": 31.0,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=10 (一字率20%)",
+        "封单=10.2亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600812.SH",
+      "name": "华北制药",
+      "industry": "化学制药",
+      "limit_times": 3,
+      "fd_amount_yi": 1.44,
+      "pct_chg": 9.95,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.4亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "605287.SH",
+      "name": "德才股份",
+      "industry": "装修装饰",
+      "limit_times": 2,
+      "fd_amount_yi": 2.39,
+      "pct_chg": 10.0,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.4亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "600693.SH",
+      "name": "东百集团",
+      "industry": "一般零售",
+      "limit_times": 1,
+      "fd_amount_yi": 3.21,
+      "pct_chg": 10.04,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.2亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "601127.SH",
+      "name": "赛力斯",
+      "industry": "乘用车",
+      "limit_times": 1,
+      "fd_amount_yi": 3.1,
+      "pct_chg": 10.0,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.1亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停46只，筛出 5 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

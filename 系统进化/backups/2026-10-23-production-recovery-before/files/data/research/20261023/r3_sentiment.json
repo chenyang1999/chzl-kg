@@ -1,0 +1,1847 @@
+{
+  "schema_version": "research_unit_v1",
+  "agent": "R3",
+  "trade_date": "20261023",
+  "generated_at": "2026-10-23T06:31:47+08:00",
+  "status": "degraded",
+  "degraded": true,
+  "confidence": 0.364,
+  "confidence_breakdown": {
+    "base_confidence": 0.65,
+    "freshness_factor": 0.7,
+    "source_agreement_factor": 0.8,
+    "formula": "0.65 × 0.7 × 0.8 = 0.364; clamp [0.05,0.95]",
+    "input_freshness": "partial",
+    "independent_source_count": 2,
+    "note": "L1聚合平台与L2观点两层；RSS不计分，转载不重复算源。此为研究质量自评，非胜率。"
+  },
+  "fetch_global_severity": 2,
+  "resolved_trade_date": "20261022",
+  "comparison_trade_date": "20261021",
+  "input_freshness": "partial",
+  "production_timing": {
+    "actual_stage": "early_premarket",
+    "production_ready": false,
+    "requires_refresh_at": "2026-10-23T07:30:00+08:00",
+    "note": "即时任务提前完成，不冒充07:30生产窗口版。"
+  },
+  "research_action": "观察",
+  "emotion": "主跌",
+  "emotion_cycle_phase": "main_down",
+  "new_position_allowed": false,
+  "execution_candidates": [],
+  "candidate_count": 0,
+  "candidate_reduction": {
+    "break_rate": 0.4107142857142857,
+    "rule": "炸板率>=35%候选减半；主跌更严格为零候选",
+    "before": 0,
+    "after": 0
+  },
+  "sentiment_score": 56,
+  "sentiment_score_basis": {
+    "r1_baseline": 46,
+    "r1_path": "data/research/20261023/R1_style.json",
+    "r1_trade_date": "20261023",
+    "r1_status": "degraded",
+    "r1_generated_at": "2026-10-23T06:19:59+08:00",
+    "r1_baseline_override": "按用户显式要求消费当日R1；保留降级标记，不因非complete退化50，不读前日R1。",
+    "resonance_adjustment": 10,
+    "partial_resonance_theme_count": 5,
+    "full_resonance_theme_count": 0,
+    "formula": "min(100, max(0, 46 + min(15, 2*5))) = 56",
+    "meaning": "共振讨论浓度，不是看多评分；主跌阶段与禁止新仓不变。",
+    "score_5d": null,
+    "r3_vs_5d_gap": null,
+    "crosscheck_status": "not_computable",
+    "crosscheck_missing": [
+      "杠杆外资维度",
+      "统一口径的涨停强度/跌停压制/连板结构归一化规则"
+    ],
+    "reason": "不填中性杠杆数据、不虚构五维分或分差。"
+  },
+  "resonance_top_themes_count": 5,
+  "resonance_top_themes": [
+    {
+      "rank": 1,
+      "rank_semantics": "共振证据展示序号，不是板块交易排序",
+      "theme_name": "人形机器人",
+      "resonance_level": "L1+L2",
+      "sources_hit": {
+        "weflow": [],
+        "kol_text": [
+          "群组B：机器人电关节扩产被解读为规模化进展，仍需核验订单及爬坡。",
+          "群组B：具身数据采集叙事扩散至触觉材料、IMU、动作捕捉和数据平台；万亿空间只是转发测算。",
+          "群组B：字节招聘与产业协作被解读为工业具身数据需求增量，不等于已确认收入。",
+          "群组E：卖方电话会转发把物理AI数采解释为订单增量，金额仍需公告核验。"
+        ],
+        "kol_evidence_ids": [
+          "K128",
+          "K186",
+          "K195",
+          "K364"
+        ],
+        "hotlist": {
+          "concept_rank_from": 4,
+          "concept_rank_to": 1,
+          "concept_pct_change": -1.79,
+          "robotics_concept_rank_from": 13,
+          "robotics_concept_rank_to": 3,
+          "stock_examples": [
+            {
+              "name": "大业股份",
+              "ts_code": "603278.SH",
+              "rank_from": 23,
+              "rank_to": 11,
+              "pct_change": 10.01
+            },
+            {
+              "name": "宁波东力",
+              "ts_code": "002164.SZ",
+              "rank_from": 74,
+              "rank_to": 29,
+              "pct_change": 6.55
+            }
+          ]
+        }
+      },
+      "suggested_sectors": [
+        "人形机器人"
+      ],
+      "suggested_stocks": [],
+      "early_or_late": "middle",
+      "research_action": "观察",
+      "execution_eligible": false,
+      "big_money_intent": "可能是主跌中的题材局部回流；热榜不能证明机构增仓，资金意图待R7验证。",
+      "why_strong": "数采与执行器两条叙事相接；个别热股逆势上涨，但概念整体仍下跌，不能称板块全面走强。",
+      "logic_hardness": "两层证据成立；数采时长和万亿空间来自转发，多个群不等于独立原始源。机器人与数据要素合并，避免双计。",
+      "official_voices": [
+        {
+          "account": "财联社早知道",
+          "date": "2026-10-22",
+          "title": "【明日主题前瞻】英伟达升级Isaac机器人平台，推出人形机器人参考框架与仿真工具",
+          "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:1"
+        },
+        {
+          "account": "证券时报",
+          "date": "2026-10-22",
+          "title": "宇树科技王兴兴：物理AI已有被击穿的苗头！",
+          "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:30"
+        },
+        {
+          "account": "上海证券报",
+          "date": "2026-10-22",
+          "title": "王兴兴、王坚、曾文军，谈物理AI",
+          "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:45"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "rank_semantics": "共振证据展示序号，不是板块交易排序",
+      "theme_name": "基础油",
+      "resonance_level": "L1+L2",
+      "sources_hit": {
+        "weflow": [],
+        "kol_text": [
+          "群组C：基础油供给收缩被用于对比博汇与炼化一体化企业；总基础油产能不能偷换为III类。",
+          "群组C：署名研究转发称海外III类基础油供给受扰、博汇升级装置；保留为观点，不认证产能利润。"
+        ],
+        "kol_evidence_ids": [
+          "K225",
+          "K284"
+        ],
+        "hotlist": {
+          "stock_examples": [
+            {
+              "name": "博汇股份",
+              "ts_code": "300839.SZ",
+              "dc_rank": 57,
+              "pct_change": 20.0
+            }
+          ],
+          "scope": "以东财人气股锚定III类基础油叙事；无独立板块热榜名次，不虚构概念排行"
+        }
+      },
+      "suggested_sectors": [
+        "基础油"
+      ],
+      "suggested_stocks": [],
+      "early_or_late": "middle",
+      "research_action": "观察",
+      "execution_eligible": false,
+      "big_money_intent": "可能交易供给扰动的价格弹性，不等于已确认利润兑现。",
+      "why_strong": "博汇涨幅与人气记录印证题材已交易；海外供给收缩是群内解释，未独立认证。",
+      "logic_hardness": "群内将90万吨总基础油产能等同III类及年化利润的说法不可靠；不同文案重复转发不能扩增源数。",
+      "official_voices": [
+        {
+          "account": "证券时报",
+          "date": "2026-10-22",
+          "title": "原油，突然暴涨！中东，传来大消息！",
+          "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:19"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "rank_semantics": "共振证据展示序号，不是板块交易排序",
+      "theme_name": "网络安全",
+      "resonance_level": "L1+L2",
+      "sources_hit": {
+        "weflow": [],
+        "kol_text": [
+          "群组B：PHP漏洞、可信身份与数字人民币升级被合并为安全载体需求叙事；政策细节待R4核验。",
+          "群组C：可信身份、AI权限与数据确权被合并为安全底座叙事，监管时点需核验。"
+        ],
+        "kol_evidence_ids": [
+          "K115",
+          "K266"
+        ],
+        "hotlist": {
+          "concept_rank_to": 16,
+          "concept_pct_change": -3.5,
+          "concept_rank_from": null,
+          "previous_scope": "前日概念榜top20未见，非全市场从无到有"
+        }
+      },
+      "suggested_sectors": [
+        "网络安全"
+      ],
+      "suggested_stocks": [],
+      "early_or_late": "middle",
+      "research_action": "观察",
+      "execution_eligible": false,
+      "big_money_intent": "可能进行事件预期交易，未取得净买入证据，不写成资金已进入。",
+      "why_strong": "漏洞与可信身份叙事相接，但概念跌3.50%，这里是讨论共振而非赚钱效应。",
+      "logic_hardness": "漏洞、数币与监管日历需R4核验；不把营销式三重催化当三个独立量化源。",
+      "official_voices": [
+        {
+          "account": "财联社早知道",
+          "date": "2026-10-22",
+          "title": "【明日主题前瞻】英伟达升级Isaac机器人平台，推出人形机器人参考框架与仿真工具",
+          "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:1"
+        },
+        {
+          "account": "证券时报",
+          "date": "2026-10-22",
+          "title": "数字人民币，重大升级！",
+          "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:32"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "rank_semantics": "共振证据展示序号，不是板块交易排序",
+      "theme_name": "军工",
+      "resonance_level": "L1+L2",
+      "sources_hit": {
+        "weflow": [],
+        "kol_text": [
+          "群组C：军事活动转发映射装备需求与题材热度，事件真实性及订单传导尚未核验。"
+        ],
+        "kol_evidence_ids": [
+          "K242"
+        ],
+        "hotlist": {
+          "concept_rank_from": 12,
+          "concept_rank_to": 6,
+          "concept_pct_change": -2.44,
+          "stock_examples": [
+            {
+              "name": "长城军工",
+              "ts_code": "601606.SH",
+              "rank_from": 45,
+              "rank_to": 23,
+              "pct_change": 2.25
+            }
+          ]
+        }
+      },
+      "suggested_sectors": [
+        "军工"
+      ],
+      "suggested_stocks": [],
+      "early_or_late": "middle",
+      "research_action": "观察",
+      "execution_eligible": false,
+      "big_money_intent": "事件避险/题材轮动是假设，不能由群转发直接推断机构配置。",
+      "why_strong": "装备事件叙事与个股人气改善同时出现，但概念仍跌2.44%，只确认讨论热度。",
+      "logic_hardness": "仅一个群文观点加热榜；军事活动消息及订单映射均未核验，低于多群数采证据强度。",
+      "official_voices": []
+    },
+    {
+      "rank": 5,
+      "rank_semantics": "共振证据展示序号，不是板块交易排序",
+      "theme_name": "AI应用",
+      "resonance_level": "L1+L2",
+      "sources_hit": {
+        "weflow": [],
+        "kol_text": [
+          "群组B：群内以Meta应用下载和广告效率叙事推导AI营销需求，下载与盈利数据未独立核验。",
+          "群组E：群内将AI制药由分子设计转向虚拟细胞，明确产业化与数据成熟度风险。",
+          "群组E：AI代理购物被推导为零售履约机会，国内订单映射尚未证实。"
+        ],
+        "kol_evidence_ids": [
+          "K177",
+          "K329",
+          "K374"
+        ],
+        "hotlist": {
+          "concept_rank_from": 6,
+          "concept_rank_to": 9,
+          "concept_pct_change": -3.61
+        }
+      },
+      "suggested_sectors": [
+        "AI应用"
+      ],
+      "suggested_stocks": [],
+      "early_or_late": "middle",
+      "research_action": "观察",
+      "execution_eligible": false,
+      "big_money_intent": "可能尝试从硬件扩散到应用的叙事切换；目前无独立资金支持。",
+      "why_strong": "AI营销、虚拟细胞与代理购物都在讨论应用兑现，但概念排名回落且跌3.61%，没有整体转强。",
+      "logic_hardness": "宽主题仅计一次；下载量、购物入口与具体公司收入不是同一件事，公众号不参与量化加分。",
+      "official_voices": [
+        {
+          "account": "上海证券报",
+          "date": "2026-10-22",
+          "title": "AI玩具，瞄准互动陪伴",
+          "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:62"
+        },
+        {
+          "account": "远川研究所",
+          "date": "2026-10-22",
+          "title": "大厂抢滩AI短剧",
+          "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:86"
+        }
+      ]
+    }
+  ],
+  "kol_summary": [
+    {
+      "id": "K85",
+      "source": "群组A",
+      "time": "2026-10-22 19:11",
+      "view": "AI供需及业绩叙事不等于股价安全，文本警告重仓杠杆损失；爆仓说法未核验。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "人工智能"
+      ],
+      "direction": "negative",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:85",
+      "evidence_excerpt": "AI太具迷惑性，产品供不应求，市场足够大，业绩加速增长，无论今年还是明年，有黄仁勋、马斯克天天出来站台吹捧，所以很多人深信不疑重仓满仓加杠杆，舍不得下车，最后的惨剧十分悲壮，很多人爆仓离场。",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K98",
+      "source": "群组A",
+      "time": "2026-10-22 22:11",
+      "view": "成员提出10月23日多周期拐头后再试的条件性反弹判断；未确认拐头，R3不做技术验证。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [],
+      "direction": "conditional",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:98",
+      "evidence_excerpt": "明天10.23周五可能是动手的较佳时机，因上证指数日线、120分钟、90分钟、60分钟全部出现“低”，如果都向上拐头形成“背”，就是多周期共振，表示短、中期的周期向上，成功率理论上相对比单一周期形成低位背离要高一些。仅供参考，以市场为准。10.22",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K115",
+      "source": "群组B",
+      "time": "2026-10-22 08:57",
+      "view": "PHP漏洞、可信身份与数字人民币升级被合并为安全载体需求叙事；政策细节待R4核验。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "网络安全",
+        "数字货币"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:115",
+      "evidence_excerpt": "[红包] 多重催化共振来袭！PHP 高危 RCE 漏洞引爆全球网络安全风险，昨夜美股加密货币板块大幅走高，叠加数字人民币重磅升级、三代社保卡加速替换落地，多主线齐聚，预期差标的值得重点留意🔥\n✅ 恒宝股份（002104）流通市值 52.63 亿\n①【数字人民币重磅升级】2026 ",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K128",
+      "source": "群组B",
+      "time": "2026-10-22 09:45",
+      "view": "机器人电关节扩产被解读为规模化进展，仍需核验订单及爬坡。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "人形机器人"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:128",
+      "evidence_excerpt": "[福]富临精工（300432）[福]：10月20日公告，子公司四川班巧智能拟与绵阳市涪城区政府签订投资协议，总投资 5 亿元、分两期建设机器人智能电关节项目；一期投资 2.5 亿元（含研发投入约 5000 万元），规划年产能 200 万套，二期 2.5 亿元视需求动态调整。\n[福",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K177",
+      "source": "群组B",
+      "time": "2026-10-22 14:10",
+      "view": "群内以Meta应用下载和广告效率叙事推导AI营销需求，下载与盈利数据未独立核验。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "AI应用"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:177",
+      "evidence_excerpt": "[红包]#Meta MUSE 40天破千万下载。\n\nMUSE  上线40天美国下载量突破1000万，ChatGPT 上线前 40 天在美国的下载量为 370 万次，而 Grok 和 Claude 同期美国下载量分别只有 50 万次与 20 万次。当前主要靠免费层（较小模型）撑规模",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K186",
+      "source": "群组B",
+      "time": "2026-10-22 20:31",
+      "view": "具身数据采集叙事扩散至触觉材料、IMU、动作捕捉和数据平台；万亿空间只是转发测算。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "人形机器人",
+        "数据要素"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:186",
+      "evidence_excerpt": "【具身智能数据采集】：4年#2万倍 数据增量。\n\nGPT-6 Astra显著增强具身智能泛化训练能力，近似于23年初代GPT之于AI。\n\n当前全球可用具身智能数据约50万小时，但目标是2030年采集#100亿小时， 按单价100元/小时估算市场空间达#万亿级。\n\n【相关标的】：\n",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K195",
+      "source": "群组B",
+      "time": "2026-10-22 22:22",
+      "view": "字节招聘与产业协作被解读为工业具身数据需求增量，不等于已确认收入。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "人形机器人"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:195",
+      "evidence_excerpt": "【今晚突发】\n🔥 #天奇股份（002009）：字节加码具身智能，工业数采价值有望加速释放。\n\n☎️ 据10月22日报道，#字节Seed扩充数采与机器人本体人才，部分具身数据岗位月薪5.5万元起，招聘覆盖数据采集、算法、机器人结构及仿真，体现具身智能布局向全栈延伸。\n\n❗️ #大模",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K225",
+      "source": "群组C",
+      "time": "2026-10-22 09:47",
+      "view": "基础油供给收缩被用于对比博汇与炼化一体化企业；总基础油产能不能偷换为III类。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "基础油"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:225",
+      "evidence_excerpt": "华锦股份（000059）：炼化一体化基础油平台，对标博汇股份深度受益Ⅲ类基础油紧缺周期\n \n博汇股份依托加氢装置改造切入Ⅲ类VHVI基础油赛道，产能释放与海外订单驱动业绩弹性，成为本轮高端基础油行情核心标的 。华锦股份作为北方大型炼化一体化企业，具备石蜡基+环烷基双路线基础油产能",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K242",
+      "source": "群组C",
+      "time": "2026-10-22 10:44",
+      "view": "军事活动转发映射装备需求与题材热度，事件真实性及订单传导尚未核验。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "军工"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:242",
+      "evidence_excerpt": "#解放军台海开展军事行动上微博热搜榜第一！渤海莱州湾军事活动\n\n🔥10CM——长城军工601606：\n    国内国防装备龙头之一，公司已逐步实现由传统弹药向高效毁伤、远程压制、精确打击弹药的跨越，单一弹药系统向武器系统的跨越，陆军弹药装备向海、空、火箭军诸军兵种弹药装备的跨越\n",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K266",
+      "source": "群组C",
+      "time": "2026-10-22 13:40",
+      "view": "可信身份、AI权限与数据确权被合并为安全底座叙事，监管时点需核验。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "网络安全"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:266",
+      "evidence_excerpt": "🔥🔥数字认证【300579】物理Ai安全的护身符。最大的预期差——物理 AI 数据采集与安全防护！\n\n[太阳]我们坚定认为，数字认证的逻辑不是简单蹭热点，而是同一套国产密码与信任底座，在物理AI数据、AI安全、数字人民币三条主线上的复用延伸。\n\n👉1、在物理AI数据领域，具身智能",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K284",
+      "source": "群组C",
+      "time": "2026-10-22 20:01",
+      "view": "署名研究转发称海外III类基础油供给受扰、博汇升级装置；保留为观点，不认证产能利润。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "基础油"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:284",
+      "evidence_excerpt": "【华创化工】中东冲突导致全球约35%III类基础油产能停产，基础油价格有望维持高位\n\n全球约1/3产能基础油产能停产，III类基础油年内累计上涨216%。1）据隆众资讯，10月21日III类4亚洲FOB价报3686美元/吨，今年以来累计上涨216%。2）据卡塔尔能源，3月18日拉",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K305",
+      "source": "群组D",
+      "time": "2026-10-22 20:23",
+      "view": "卖方转发认为AI算力长单与现金流改善，但这是单家公司观点，不外推板块盈利。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "算力租赁"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:305",
+      "evidence_excerpt": "[太阳]【国金计算机&科技】东阳光：AI业务高质&高量爆发中\n\n#单Q3收入同比高增38%_AI业务收入规模达11亿\n——公司2026年前三季度实现营收146.72亿元，同比+33.74%，其中Q3单季度营收52.97亿元，同比+37.70%，收入增速进一步加快，主要受益于AI新",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K329",
+      "source": "群组E",
+      "time": "2026-10-22 09:43",
+      "view": "群内将AI制药由分子设计转向虚拟细胞，明确产业化与数据成熟度风险。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "AI应用",
+        "创新药"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:329",
+      "evidence_excerpt": "[庆祝]AI虚拟细胞：AI制药第二阶段主线\n\n核心观点：AI制药叙事正从AIDD（分子设计）切换至AIVC（虚拟细胞）。AIDD解决“能否造出分子”，AIVC解决“分子能否成药”，范式跃迁开启第二阶段行情。\n\n产业逻辑：\n\n[玫瑰]AIDD触顶：AI设计的分子进入真实细胞后，药效",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K364",
+      "source": "群组E",
+      "time": "2026-10-22 11:03",
+      "view": "卖方电话会转发把物理AI数采解释为订单增量，金额仍需公告核验。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "人形机器人",
+        "数据要素"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:364",
+      "evidence_excerpt": "【东吴计算机】<海天瑞声>电话会议重点信息：前瞻布局物理AI，订单有望过亿\n\n电话会要点：\n物理AI数采主流三种技术路线：1）EGO；2）UMI；3）真机遥操，EGO占比较大，公司已积累上万小时高质量遥操数据。\n\n市场空间：目前单小时数采成本几百元，头部具身大厂26年数采目标千万",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    },
+    {
+      "id": "K374",
+      "source": "群组E",
+      "time": "2026-10-22 11:13",
+      "view": "AI代理购物被推导为零售履约机会，国内订单映射尚未证实。",
+      "valid_period": "1-3天",
+      "sectors_semantic": [
+        "AI应用"
+      ],
+      "direction": "positive",
+      "author_verified": false,
+      "evidence_citation": "data/raw/20261023/wechat_cli_5groups.jsonl:374",
+      "evidence_excerpt": "🔥 #三江购物（601116）：三三得九，AI开始替人下单。\n\n☎️ #沃尔玛推出Agent Gateway，支持AI代理购物；Meta电话会披露，Muse用户突破千万，购物成为最常见用途，预计未来一年成本效率提升超10倍。AI购物正从产品演示走向真实交易。\n\n❗️ #购物入口变",
+      "attribution": "群内转发或成员观点，不等于指定KOL本人结论"
+    }
+  ],
+  "next_day_signal": {
+    "status": "conditional_member_view_not_verified_named_kol",
+    "source": "群组A",
+    "evidence_id": "K98",
+    "view": "成员提出拐头后试反弹；不作为已确认修复，阶段仍主跌。",
+    "action": "观察"
+  },
+  "hotlist_signals": {
+    "rank_momentum_up": [
+      {
+        "name": "中际旭创",
+        "ts_code": "300308.SZ",
+        "rank_from": 25,
+        "rank_to": 5,
+        "rank_delta": -20,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "新易盛",
+        "ts_code": "300502.SZ",
+        "rank_from": 54,
+        "rank_to": 7,
+        "rank_delta": -47,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "大业股份",
+        "ts_code": "603278.SH",
+        "rank_from": 23,
+        "rank_to": 11,
+        "rank_delta": -12,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "长城军工",
+        "ts_code": "601606.SH",
+        "rank_from": 45,
+        "rank_to": 23,
+        "rank_delta": -22,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "宁波东力",
+        "ts_code": "002164.SZ",
+        "rank_from": 74,
+        "rank_to": 29,
+        "rank_delta": -45,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "华天科技",
+        "ts_code": "002185.SZ",
+        "rank_from": 80,
+        "rank_to": 69,
+        "rank_delta": -11,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "澳弘电子",
+        "ts_code": "605058.SH",
+        "rank_from": 36,
+        "rank_to": 20,
+        "rank_delta": -16,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "百洋股份",
+        "ts_code": null,
+        "rank_from": 16,
+        "rank_to": 6,
+        "rank_delta": -10,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      }
+    ],
+    "new_in_top": [
+      {
+        "name": "中际旭创",
+        "ts_code": "300308.SZ",
+        "rank_from": 25,
+        "rank_to": 5,
+        "rank_delta": -20,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ],
+        "reason": "前次不在top20，本次进入top20；不是新进完整榜单"
+      },
+      {
+        "name": "新易盛",
+        "ts_code": "300502.SZ",
+        "rank_from": 54,
+        "rank_to": 7,
+        "rank_delta": -47,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ],
+        "reason": "前次不在top20，本次进入top20；不是新进完整榜单"
+      },
+      {
+        "name": "大业股份",
+        "ts_code": "603278.SH",
+        "rank_from": 23,
+        "rank_to": 11,
+        "rank_delta": -12,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ],
+        "reason": "前次不在top20，本次进入top20；不是新进完整榜单"
+      },
+      {
+        "name": "澳弘电子",
+        "ts_code": "605058.SH",
+        "rank_from": 36,
+        "rank_to": 20,
+        "rank_delta": -16,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ],
+        "reason": "前次不在top20，本次进入top20；不是新进完整榜单"
+      },
+      {
+        "name": "长鑫科技",
+        "ts_code": null,
+        "rank_from": 22,
+        "rank_to": 19,
+        "rank_delta": -3,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ],
+        "reason": "前次不在top20，本次进入top20；不是新进完整榜单"
+      }
+    ],
+    "distribution_alert": [
+      {
+        "name": "宁德时代",
+        "ts_code": "300750.SZ",
+        "source": "tushare.ths_hot",
+        "rank_from": 1,
+        "rank_to": 1,
+        "reason": "连续两日同花顺热股top1，依R3红线标霸榜出货警报代理；不是已证实出货。",
+        "positive_resonance_allowed": false,
+        "hard_reject": false,
+        "confirmed_distribution": false,
+        "fund_flow_crosscheck": {
+          "ths_net_amount": 276714.87,
+          "dc_net_amount": -171691.7,
+          "dc_net_amount_rate": -8.42,
+          "units": "万元；不同资金分类不能相加或判为一致",
+          "status": "conflicting"
+        },
+        "full_L4_status": "incomplete：成交激增/长上影/龙虎榜未核验；R6独占hard_reject权"
+      }
+    ],
+    "scope": "同花顺两日各100只在线快照已检索；本JSON精确diff仅透传人工核对的21只子集，不声明完整全榜信号。东财两日各100只用于交叉证据，不混合平台排名求差。",
+    "diff_subset_count": 21,
+    "rank_snapshot_subset": [
+      {
+        "name": "宁德时代",
+        "ts_code": "300750.SZ",
+        "rank_from": 1,
+        "rank_to": 1,
+        "rank_delta": 0,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "冰山冷热",
+        "ts_code": "000530.SZ",
+        "rank_from": 3,
+        "rank_to": 2,
+        "rank_delta": -1,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "新华传媒",
+        "ts_code": null,
+        "rank_from": 4,
+        "rank_to": 4,
+        "rank_delta": 0,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "中际旭创",
+        "ts_code": "300308.SZ",
+        "rank_from": 25,
+        "rank_to": 5,
+        "rank_delta": -20,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "新易盛",
+        "ts_code": "300502.SZ",
+        "rank_from": 54,
+        "rank_to": 7,
+        "rank_delta": -47,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "大业股份",
+        "ts_code": "603278.SH",
+        "rank_from": 23,
+        "rank_to": 11,
+        "rank_delta": -12,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "长城军工",
+        "ts_code": "601606.SH",
+        "rank_from": 45,
+        "rank_to": 23,
+        "rank_delta": -22,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "宁波东力",
+        "ts_code": "002164.SZ",
+        "rank_from": 74,
+        "rank_to": 29,
+        "rank_delta": -45,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "华天科技",
+        "ts_code": "002185.SZ",
+        "rank_from": 80,
+        "rank_to": 69,
+        "rank_delta": -11,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "澳弘电子",
+        "ts_code": "605058.SH",
+        "rank_from": 36,
+        "rank_to": 20,
+        "rank_delta": -16,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "九阳股份",
+        "ts_code": null,
+        "rank_from": 2,
+        "rank_to": 3,
+        "rank_delta": 1,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "百洋股份",
+        "ts_code": null,
+        "rank_from": 16,
+        "rank_to": 6,
+        "rank_delta": -10,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "雪人集团",
+        "ts_code": null,
+        "rank_from": 5,
+        "rank_to": 8,
+        "rank_delta": 3,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "华瓷股份",
+        "ts_code": null,
+        "rank_from": 13,
+        "rank_to": 9,
+        "rank_delta": -4,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "海洋王",
+        "ts_code": null,
+        "rank_from": 17,
+        "rank_to": 10,
+        "rank_delta": -7,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "吉大正元",
+        "ts_code": null,
+        "rank_from": 9,
+        "rank_to": 12,
+        "rank_delta": 3,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "宇树科技",
+        "ts_code": null,
+        "rank_from": 15,
+        "rank_to": 13,
+        "rank_delta": -2,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "东安动力",
+        "ts_code": null,
+        "rank_from": 19,
+        "rank_to": 14,
+        "rank_delta": -5,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "亨通光电",
+        "ts_code": null,
+        "rank_from": 12,
+        "rank_to": 15,
+        "rank_delta": 3,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "金健米业",
+        "ts_code": null,
+        "rank_from": 8,
+        "rank_to": 18,
+        "rank_delta": 10,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      },
+      {
+        "name": "长鑫科技",
+        "ts_code": null,
+        "rank_from": 22,
+        "rank_to": 19,
+        "rank_delta": -3,
+        "source": "tushare.ths_hot",
+        "observation_dates": [
+          "20261021",
+          "20261022"
+        ]
+      }
+    ],
+    "new_in_top_definition": "前日>20且本日<=20；前日top100未见则只可说前日不在可见榜，不能推定新股/新题材。",
+    "negative_attention": [
+      {
+        "theme_name": "共封装光学(CPO)",
+        "concept_rank_from": 9,
+        "concept_rank_to": 4,
+        "concept_pct_change": -4.23,
+        "examples": [
+          {
+            "name": "中际旭创",
+            "rank_from": 25,
+            "rank_to": 5,
+            "pct_change": -8.76
+          },
+          {
+            "name": "新易盛",
+            "rank_from": 54,
+            "rank_to": 7,
+            "pct_change": -12.28
+          }
+        ],
+        "action": "不进",
+        "reason": "跌中热度上升不能当正向资金；缺独立具体CPO长文，不强行把泛AI风险观点映射为CPO双源主题。"
+      }
+    ]
+  },
+  "official_account_opinions": [
+    {
+      "account": "财联社早知道",
+      "time": "2026-10-22 19:02",
+      "title": "【明日主题前瞻】英伟达升级Isaac机器人平台，推出人形机器人参考框架与仿真工具",
+      "digest": "①英伟达升级Isaac机器人平台，推出人形机器人参考框架与仿真工具；②OpenAI就PHP软件中发现的严重漏洞发表声明；③能源转型政策驱动下，海内外储能需求持续释放。",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:1",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "财联社早知道",
+      "time": "2026-10-22 19:02",
+      "title": "【VIP日报】人形机器人概念逆势活跃 栏目解读机构龙虎榜数据 提及相关公司涨停",
+      "digest": "①自研17自由度指关节内置驱动灵巧手，这家人气公司强势涨停； ②政策催化下，数据要素板块的核心变量正在从主题预期转向制度供给和运营落地，相关公司涨停。",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:2",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "盘前纪要",
+      "time": "2026-10-22 06:50",
+      "title": "10月22日盘前纪要",
+      "digest": "每天10分钟阅读，开阔看盘思路，节约复盘时间",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:3",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 23:15",
+      "title": "西藏那曲发生7.0级地震",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:4",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 22:50",
+      "title": "提前锁定退市！688121，或成科创板首家市值退市公司",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:5",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 22:50",
+      "title": "什么情况？美股巨头，绩后大跌！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:6",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 21:55",
+      "title": "美伊局势，突传重磅！伊朗，最新发声！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:7",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 21:38",
+      "title": "生产经营正常有序！“易中天”、东山精密，最新发声！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:8",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 21:05",
+      "title": "000333，已回购1.38亿股，将全部注销！多家A股龙头也出手！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:9",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 20:34",
+      "title": "600988，控制权变更！紫金矿业入主！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:10",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 20:34",
+      "title": "集体公告！五大公募，出手自购！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:11",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 20:23",
+      "title": "“AI正在推动就业市场发生结构性变革”！专访国际劳工组织首席宏观经济学家埃克哈德·恩斯特",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:12",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 20:23",
+      "title": "首个三四线城市跟进！这一城出台“8·28”地产新政细则",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:13",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 19:35",
+      "title": "不实！AI龙头股未出现网传连锁强平现象",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:14",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 19:24",
+      "title": "利好！A股分红大户，拟10派60元！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:15",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 18:58",
+      "title": "300767，筹划重大资产重组！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:16",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 18:01",
+      "title": "国家发改委，最新发布！12月1日起施行",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:17",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 17:24",
+      "title": "大增超4000%！603186，业绩大爆发",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:18",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 16:53",
+      "title": "原油，突然暴涨！中东，传来大消息！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:19",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 16:27",
+      "title": "商务部：消费是经济增长名副其实的第一拉动力",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:20",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 16:05",
+      "title": "603370，临近收盘涨停！这一板块，逆市走强",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:21",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 15:36",
+      "title": "习近平出席纪念中国工农红军长征胜利90周年大会并发表重要讲话",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:22",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 15:09",
+      "title": "尾盘异动！002185，直线涨停！封单超200万手",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:23",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 15:09",
+      "title": "高价转债，批量回调",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:24",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 14:40",
+      "title": "习近平：在纪念中国工农红军长征胜利90周年大会上的讲话",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:25",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 14:28",
+      "title": "A股“市值一哥”，再创新高！千元股，“-1”",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:26",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 12:39",
+      "title": "“易中天”大跌！三季报“报喜”股成亮点",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:27",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 12:39",
+      "title": "市场监管总局：坚决防止汽车产业追热点、少验证的激进式创新",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:28",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 12:23",
+      "title": "上市涨幅归“0”！MINIMAX，自高点大跌88%",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:29",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 12:23",
+      "title": "宇树科技王兴兴：物理AI已有被击穿的苗头！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:30",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 10:46",
+      "title": "300486，实控人“增持”8亿元股份，只花200万元！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:31",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 10:46",
+      "title": "数字人民币，重大升级！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:32",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 10:31",
+      "title": "纪念长征胜利90周年大会隆重举行",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:33",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 09:34",
+      "title": "重要收购！002388将切入特种气体赛道，复牌强势涨停",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:34",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 09:34",
+      "title": "AI巨额投资会否成为“灰犀牛”？全球金融家最新研判→",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:35",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 08:46",
+      "title": "日韩股市，大幅震荡！存储双雄，低位拉升！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:36",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 08:46",
+      "title": "超话车｜“会飞”的特斯拉：创新从来没有唯一解",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:37",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 08:46",
+      "title": "深度丨从“有法可依”到“有尺可量”，违规减持精准执法再进阶",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:38",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 07:52",
+      "title": "美芯片股大涨！超威半导体升涨3.36%，阿斯麦、ARM均涨超2%",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:39",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 07:52",
+      "title": "利好！300107，净利大增超1500%",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:40",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "证券时报",
+      "time": "2026-10-22 07:18",
+      "title": "中东，再传大消息！以军模拟打击伊朗",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:41",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-23 00:17",
+      "title": "深夜突发！一国降息100基点",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:42",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-23 00:17",
+      "title": "多家公司，三季度净利环比增超50%",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:43",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 23:40",
+      "title": "300767，筹划重大资产重组",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:44",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 23:40",
+      "title": "王兴兴、王坚、曾文军，谈物理AI",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:45",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 23:16",
+      "title": "西藏那曲发生7.0级地震",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:46",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 23:02",
+      "title": "宁德时代董秘被打？回应来了",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:47",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 23:02",
+      "title": "规模大增，资金热捧这类产品",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:48",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 21:52",
+      "title": "10月，回购增持“接力”",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:49",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 21:52",
+      "title": "又一例！港股上市公司，借钱给创始人",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:50",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 20:47",
+      "title": "一港股单日跌近90%！独董提前7天已减持",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:51",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 20:47",
+      "title": "跨境基金，密集提示溢价风险",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:52",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 19:58",
+      "title": "DeepSeek，千亿融资新消息",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:53",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 19:58",
+      "title": "后浪奔涌，逐梦前行——2026“上证杯”总决赛12强名单揭晓",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:54",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 18:52",
+      "title": "贺兰山下的回信 金融共书“山海情”——交通银行闽宁协作30年纪实",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:55",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 18:52",
+      "title": "又现“公奔私”！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:56",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 17:43",
+      "title": "《对外投资管理办法》发布 自12月1日起施行",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:57",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 17:23",
+      "title": "一上市公司实控人，因公途中遭遇意外去世",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:58",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 16:23",
+      "title": "北京市副市长夏林茂被查",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:59",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 15:53",
+      "title": "最后15分钟，加速进场！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:60",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 14:30",
+      "title": "长鑫科技，午后反转",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:61",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 14:30",
+      "title": "AI玩具，瞄准互动陪伴",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:62",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 14:19",
+      "title": "习近平：在纪念中国工农红军长征胜利90周年大会上的讲话",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:63",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 13:52",
+      "title": "午后异动！603528快速涨停",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:64",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 13:52",
+      "title": "特斯拉财报，透露中国业务新进展",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:65",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 12:53",
+      "title": "300308，成交额A股第一",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:66",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 12:53",
+      "title": "王兴兴：全世界对AI的重视程度都不够，包括我自己",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:67",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 12:27",
+      "title": "临近午盘，资金进场！",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:68",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 12:27",
+      "title": "MINIMAX-W，首次破发",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:69",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 11:22",
+      "title": "开盘5分钟，002388上演“天地板”",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:70",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 11:22",
+      "title": "芜湖国资，拟增持002361",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:71",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 10:36",
+      "title": "“易中天”，大跌",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:72",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 10:26",
+      "title": "纪念长征胜利90周年大会隆重举行",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:73",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 10:00",
+      "title": "603278，秒涨停，五连板",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:74",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 10:00",
+      "title": "现金流转负，Meta仍坚持加码AI",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:75",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 08:30",
+      "title": "特斯拉，盘后跌超3%",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:76",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 08:30",
+      "title": "控股股东被判付超10.8亿元，深华发A控股权或被拍卖",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:77",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 06:54",
+      "title": "上证早知道｜600110，第三季度净利润同比增超775%；300006，机构净买入9272.56万元；688836，举办具身智能生态大会",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:78",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "上海证券报",
+      "time": "2026-10-22 06:54",
+      "title": "雷军、李斌、何小鹏，最新发声",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:79",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "股痴流沙河",
+      "time": "2026-10-22 22:06",
+      "title": "冰冰",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:80",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "猫笔刀",
+      "time": "2026-10-22 22:22",
+      "title": "整个世界都绿了",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:81",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "安静拆主线",
+      "time": "2026-10-22 16:19",
+      "title": "被干哭了",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:82",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "安静拆主线",
+      "time": "2026-10-22 16:19",
+      "title": "10月22日 涨停板复盘",
+      "digest": "风险提示：这个模块罗列的个股仅作为一段时间内的强弱观察， 仅为复盘用提示：文章不构成任何投资建议或意见，投资者",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:83",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "安静拆主线",
+      "time": "2026-10-22 16:19",
+      "title": "10月22日 强势联动板块复盘",
+      "digest": "风险提示：这个模块罗列的个股仅作为一段时间内的强弱观察， 仅为复盘用提示：文章不构成任何投资建议或意见，投资者",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:84",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "盘口逻辑拆解",
+      "time": "2026-10-22 22:00",
+      "title": "挺难绷的",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:85",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "远川研究所",
+      "time": "2026-10-22 21:11",
+      "title": "大厂抢滩AI短剧",
+      "digest": "不止一个绿泡泡",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:86",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "傅里叶的猫",
+      "time": "2026-10-22 23:44",
+      "title": "美股AI链暴跌背后的Capex陷阱",
+      "digest": "Meta扩大投入、Tesla削减支出，为什么市场都不买账？",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:87",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "傅里叶的猫",
+      "time": "2026-10-22 23:44",
+      "title": "全球顶尖科学家“组团”赴约！2026顶科论坛阵容与亮点抢先看",
+      "digest": "10月22日，2026世界顶尖科学家论坛新闻发布会在上海临港举行。",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:88",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "金渐成",
+      "time": "2026-10-22 23:15",
+      "title": "新的策略~",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:89",
+      "counts_for_resonance": false
+    },
+    {
+      "account": "贩财局",
+      "time": "2026-10-22 07:50",
+      "title": "a股一开盘……\n\n1）美股和科技股盘后跳水。期货齐跌，特斯拉因资本支出下调盘后跌超3%，英伟达等科技股多数走低，周四标普期货吐回昨日涨幅，黄金也小跌。\n\n2）中东撤离。美国撤离驻海湾使馆部分人员及家属、称仅限沙特，NBC称还撤部分兵力和外交人员，沙特阿美一处油田遭无人机袭击致两人死亡。市场认为撤离预示局势恶化，更紧张。\n\n3）油价拉升，黄金等方向。WTI破98、布伦特冲破111，关键看布伦特105—110；高位横盘说明风险溢价还在。黄金窄幅波动，也在等方向。\n\n4）财报和美债没出事，但没给足安全感：Meta收入创新高，但上调资本开支下限、自由现金流转负。美债拍卖一般，10年期收益率围绕5.10%。\n\n风险已从“AI融资担忧”转向“AI融资压力和中东升级并存”，晚间美盘才是决定时刻。\n\n最后：\n\n两个月，大a科技股遭到大幅抛售，很多跌了60%—70%。最近白马股又一批批被抛售，宁德时代、福耀玻璃、中国移动、格力电器、山西汾酒、东鹏饮料等集体大跌。\n\n大家这才意识到大a天天高开低走，跟外围没啥关系，主要是流动性出问题，现在基金面临巨大的赎回压力，只能抛售流动性最好的大盘股来换取现金，不惜代价出逃。\n\n怎么说呢，市场所有的顶部都是基金抢筹抢出来的，所有的底部都是基金割肉割出来的。A股自基金成规模以来，这个规律就没变过。\n\n现在也只能慢慢等待市场自己走出来。",
+      "digest": "",
+      "evidence_citation": "data/raw/20261023/wechat_official_rss.jsonl:90",
+      "counts_for_resonance": false
+    }
+  ],
+  "official_account_opinions_meta": {
+    "articles_total": 90,
+    "accounts_with_articles": 12,
+    "scoring_weight": 0,
+    "note": "仅标题摘要；不假称阅读全文。宏观情绪标题保留，不等于已证实资金赎回或强平。"
+  },
+  "weflow_degraded": true,
+  "weflow": [],
+  "unmapped_weflow_terms": [],
+  "sources_status": {
+    "weflow": "retired_permanently_not_called",
+    "wechat_cli_by_group": {
+      "群组A": {
+        "status": "ok",
+        "record_count": 104
+      },
+      "群组B": {
+        "status": "ok",
+        "record_count": 93
+      },
+      "群组C": {
+        "status": "ok",
+        "record_count": 105
+      },
+      "群组D": {
+        "status": "ok",
+        "record_count": 3
+      },
+      "群组E": {
+        "status": "ok",
+        "record_count": 131
+      }
+    },
+    "official_rss": {
+      "status": "ok",
+      "record_count": 90,
+      "accounts_with_articles": 12
+    },
+    "hotlist": {
+      "ths": "live_query_ok_Tminus1",
+      "dc": "live_query_ok_Tminus1",
+      "today_20261023_ths": "queried_empty_preopen",
+      "ths_concept": "two_days_live_query_ok"
+    },
+    "attention_signals": "missing_required_input_live_hotlists_partial_replacement",
+    "attention_weekend": "not_applicable_friday_missing",
+    "hotlist_signals_file": "missing_inline_partial_diff",
+    "xtick": "live_query_ok_20261022",
+    "moneyflow_ths": "live_query_ok_one_stock_only",
+    "moneyflow_dc": "live_query_ok_one_stock_only",
+    "xtick_money": "live_query_ok_one_stock_only"
+  },
+  "xtick_audit": {
+    "query_date": "2026-10-22",
+    "first_attempt": "compact date rejected; retried ISO date successfully",
+    "embedded_time": 1792598400000,
+    "embedded_date": "2026-10-22T00:00:00+08:00",
+    "limit_up_count": 33,
+    "limit_down_count": 55,
+    "broken_count": 22,
+    "max_ladder": 5,
+    "zbl_raw": 8.0,
+    "used_for_scoring": false,
+    "note": "工具转换确认响应time为2026-10-22，日期匹配；跌停55和炸板22与R1的48和23口径不一致，保留为交叉，不合并且不使用zbl=8替代统一炸板率。"
+  },
+  "market_context": {
+    "source": "data/research/20261023/R1_style.json",
+    "metrics_date": "20261022",
+    "limit_up_count": 33,
+    "limit_down_count": 48,
+    "broken_count": 23,
+    "break_rate": 0.4107142857142857,
+    "max_ladder": 5,
+    "stage": "主跌"
+  },
+  "discipline_self_check": {
+    "market_pays_for": "局部机器人和基础油人气，不是整体盈利；资金净流向不足以确认新主线。",
+    "phase": "主跌",
+    "position_status": "R3不认定龙头；热榜地位不等于总龙/补涨龙。",
+    "plan": "只输出主题证据与风险；不选股、不输出交易候选。",
+    "mainline": "未确认，交R2",
+    "continuity_days": null,
+    "seal_rate_pct": null,
+    "next_day_expectation": "分歧",
+    "missing_metrics_note": "持续性和板块封板率未核验，禁止填N日和N%；R3不越权认定主线。"
+  },
+  "degraded_reasons": [
+    "必读attention_signals.json缺失；在线双平台榜单仅部分替代，缺persistent/surge全管道。",
+    "当日R1为degraded且早于生产窗口；按要求保留46分本日基线。",
+    "XTick与R1跌停及炸板口径不同，不混合计算；单票资金跨供应商方向冲突。",
+    "热榜diff仅21只显式核对子集；完整L4条件未覆盖。",
+    "群聊转发非作者认证；同源转发不构成独立信源。",
+    "五维情绪交叉检验所需杠杆外资与归一化定义不足。"
+  ],
+  "method": "llm_v1_dual_layer_semantic_with_live_hotlist_crosscheck",
+  "validation": {
+    "pydantic_status": "passed_before_write",
+    "model_origin": "本次内联Pydantic research_unit_v1/R3约束；仓库未找到R3生产Pydantic类，不假称导入已有模型。",
+    "schema_definition_gap": true
+  }
+}

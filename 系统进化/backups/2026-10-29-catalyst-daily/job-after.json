@@ -1,0 +1,56 @@
+{
+  "id": "8588cd3d9943",
+  "name": "canghai-catalyst-calendar",
+  "prompt": "你是催化剂日历 Agent。按 skills/催化剂日历/SKILL.md 的覆盖范围、催化搜集、日历视图、重点分析和维护方法，执行本次日报更新。每天07:30启动，按自然日运行，包含周末和节假日；不要创建或修改定时任务。\n\n目标：保留原催化剂模块的分析深度，每天维护未来四周A股关键事件，而不是只写新闻摘要或换日期复制旧文。由你结合实际证据分析，不新增Python判断引擎，不委派工程子Agent，不运行交易。\n\n1. 用系统实际日期与Asia/Shanghai时区确定本次report_date。读取 chzl_kg/投研交易/催化剂/ 中日期最近且不晚于本次日期的已发布报告，核对仍有效事件，保留事件脉络和分析价值。已有市场研究可作背景，但必须标出真实数据日期；当日研究未完成不阻塞催化日历，不把旧市场判断冒充今天结论。\n2. 使用现有可用新闻、公告、官方日程及数据接口更新宏观政策、公司财报、行业会议、产品发布、监管决定、解禁等事件。临近事件优先核对官方或可靠原始来源，列出来源与发布日期、事件日期/时区及确认状态（已定档、暂定、待核实）。未证实的日期、财务数字、概率和事件结果如实标缺口，不能沿抄旧文中的自报“已核实”。\n3. 日报首先写今日变化：新增事件、日期修订/延期/取消、未来几天重点、已兑现或证伪事件及原假设的改变。随后保留未来四周完整日历、本周重点、下周预览和远期展望；对重要催化说明作用路径、相关板块及有依据的核心标的、预期差、验证点和失效条件。已有有效事件可以复用，不做无意义重复搜索；无新增也要交付当天核对状态与完整有效日历，不能仅回复SILENT而不写文件。\n4. 只交付 chzl_kg/投研交易/催化剂/{report_date:YYYYMMDD}.md。保留历史报告，正文标真实生成时间、覆盖窗口、数据时点与未核实项；夜间补更标夜间更新，不冒充盘前预测。不创建额外JSON/Excel/缓存或临时业务脚本，不读账户，不写成本、股数、条件单或个人持仓映射，不改变预算、预案或交易权限。\n5. 写入后读回该文件，确认日期、未来四周日历、今日变化、重点事件分析和来源说明存在且内容非空。最终回复简要列实际文件路径、主要变化与真实缺口；未写成文件不能声称完成。保持当前Codex模型，不因历史额度错误自行降级、切模型或缩减已批准分析范围；实际调用失败则如实报告，不编造成功。",
+  "skills": [
+    "催化剂日历"
+  ],
+  "skill": "催化剂日历",
+  "model": "gpt-6.1-sol",
+  "provider": "openai-codex",
+  "provider_snapshot": null,
+  "model_snapshot": null,
+  "base_url": null,
+  "script": null,
+  "no_agent": false,
+  "context_from": null,
+  "schedule": {
+    "kind": "cron",
+    "expr": "30 7 * * *",
+    "display": "30 7 * * *"
+  },
+  "schedule_display": "30 7 * * *",
+  "repeat": {
+    "times": null,
+    "completed": 12
+  },
+  "enabled": true,
+  "state": "scheduled",
+  "paused_at": null,
+  "paused_reason": null,
+  "created_at": "2026-08-07T02:56:57.713041+08:00",
+  "next_run_at": "2026-10-30T07:30:00+08:00",
+  "last_run_at": "2026-10-26T07:30:51.411280+08:00",
+  "last_status": "error",
+  "last_error": "RuntimeError: Codex provider quota exhausted (429); retry after 542532s. Credentials are still valid.",
+  "last_delivery_error": null,
+  "deliver": "local",
+  "origin": null,
+  "enabled_toolsets": null,
+  "workdir": "/Users/chenyang/Downloads/demo/沧海巨浪",
+  "fire_claim": null,
+  "failure_streak": 1,
+  "last_dispatch": {
+    "scheduled_at": "2026-10-26T07:30:00+08:00",
+    "dispatched_at": "2026-10-26T07:30:48.057932+08:00",
+    "lateness_seconds": 48.1,
+    "kind": "on_time"
+  },
+  "canonical_completions": [
+    "78816692543c47c393b2f2b301274e8b"
+  ],
+  "last_failure": {
+    "at": "2026-10-26T07:30:51.411280+08:00",
+    "detail": "RuntimeError: Codex provider quota exhausted (429); retry after 542532s. Credentials are still valid."
+  }
+}

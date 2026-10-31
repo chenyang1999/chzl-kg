@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-10-24 首批安全修复与联合验收</title><meta charset="utf-8"/><link rel="preload" href="../index-5a23ce28.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-10-24 首批安全修复与联合验收"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-10-24 首批安全修复与联合验收"/><meta name="twitter:description" content="2026-10-24 首批安全修复与联合验收 结论：本批限定修复的核心回归通过，完整生产安全与 V1.00 发布未完成。 主控在 2026-10-24 22:53（北京时间）从当前源码重新冻结并实际运行：14 组、790 个不同 case 全部通过，另 65 个子测试通过，失败/错误/跳过均为 0。另一次独立安全边界复跑为 86 项中的 84 通过、2 失败；这两个既有低层卖出缺口没有解决，必须与核心通过结果一起披露。 1."/><meta property="og:description" content="2026-10-24 首批安全修复与联合验收 结论：本批限定修复的核心回归通过，完整生产安全与 V1.00 发布未完成。 主控在 2026-10-24 22:53（北京时间）从当前源码重新冻结并实际运行：14 组、790 个不同 case 全部通过，另 65 个子测试通过，失败/错误/跳过均为 0。另一次独立安全边界复跑为 86 项中的 84 通过、2 失败；这两个既有低层卖出缺口没有解决，必须与核心通过结果一起披露。 1."/><meta property="og:image:alt" content="2026-10-24 首批安全修复与联合验收 结论：本批限定修复的核心回归通过，完整生产安全与 V1.00 发布未完成。 主控在 2026-10-24 22:53（北京时间）从当前源码重新冻结并实际运行：14 组、790 个不同 case 全部通过，另 65 个子测试通过，失败/错误/跳过均为 0。另一次独立安全边界复跑为 86 项中的 84 通过、2 失败；这两个既有低层卖出缺口没有解决，必须与核心通过结果一起披露。 1."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-24-首批安全修复与联合验收"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/2026-10-24-首批安全修复与联合验收"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="2026-10-24 首批安全修复与联合验收 结论：本批限定修复的核心回归通过，完整生产安全与 V1.00 发布未完成。 主控在 2026-10-24 22:53（北京时间）从当前源码重新冻结并实际运行：14 组、790 个不同 case 全部通过，另 65 个子测试通过，失败/错误/跳过均为 0。另一次独立安全边界复跑为 86 项中的 84 通过、2 失败；这两个既有低层卖出缺口没有解决，必须与核心通过结果一起披露。 1."/><meta name="generator" content="Quartz"/><link href="../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/2026-10-24-首批安全修复与联合验收" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-985" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-985" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-10-24 首批安全修复与联合验收</a></div></nav><h1 class="article-title">2026-10-24 首批安全修复与联合验收</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-25T00:30:50.000Z">2026年10月25日</time><span>22分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="2026-10-24-首批安全修复与联合验收">2026-10-24 首批安全修复与联合验收<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-10-24-首批安全修复与联合验收" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>结论：本批限定修复的核心回归通过，完整生产安全与 V1.00 发布未完成。</p>
+<p>主控在 2026-10-24 22:53（北京时间）从当前源码重新冻结并实际运行：14 组、790 个不同 case 全部通过，另 65 个子测试通过，失败/错误/跳过均为 0。另一次独立安全边界复跑为 86 项中的 84 通过、2 失败；这两个既有低层卖出缺口没有解决，必须与核心通过结果一起披露。</p>
+</blockquote>
+<h2 id="1-授权与要求">1. 授权与要求<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-授权与要求" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>用户要求：先保守清理无用的零散/临时文件，修复前 Git 提交一版，再分多个 Agent 实施修复。</p>
+<p>本次按三个互斥文件组实施，再增加最终权限接线、独立审查、同一源码联合验收及有限收尾。所有者交接后才允许下一写者修改共享文件，不并行覆盖生产源码。收尾涉及测试契约迁移，均保留旧失败、改前原件与裁决，不能靠放松生产门禁获得通过。</p>
+<p>不在本次授权内：改模型、永久定时任务、SOUL、技能语义、账户配置、风险阈值、生产输出路径；整删网站或历史数据；重跑生产；恢复实盘。</p>
+<h3 id="本次判定标准">本次判定标准<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#本次判定标准" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>权限只能收紧，不能由命令行参数、账户默认值、已有持仓或缺字段补授。</li>
+<li>正式零预算必须保持零；买入门禁不应无故阻断已有明确规则的合法退出。</li>
+<li>缺扫描、未突破、无有效盘口、未知可卖量不能下单。</li>
+<li>比例止盈不能占住剩余仓位，导致后续保护退出失效。</li>
+<li>装载与执行分离，每轮只分派一次。</li>
+<li>同一份最新源码上验证正常买入、合法退出、拒绝、重启及重复输入，不以各组历史通过数相加。</li>
+</ul>
+<h2 id="2-结论速览">2. 结论速览<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-结论速览" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>项目</th><th>结果</th><th>边界</th></tr></thead><tbody><tr><td>修前清理</td><td>551 项、8,234,729 逻辑字节；先归档逐哈希核验再删除</td><td>仅显然可重建缓存及四份无源码引用的根目录提取输入；未清业务数据</td></tr><tr><td>修前 Git 检查点</td><td><code>0a8ebd597b7bce16ce7dd1d9db8497e5363bcd25</code></td><td>本地 <code>checkpoint/v1-before-repair-20261024</code>，未推送；不是完整运行环境备份</td></tr><tr><td>本批实现</td><td>12 份实现文件、11 份测试文件，共 23 份新增或修改</td><td>相对于各写者保存的修前原件，而不是把整仓既有改动混进来</td></tr><tr><td>核心联合复验</td><td>790 不同 case 通过；另 65 子测试通过；0 失败/错误/跳过</td><td>当前源码复制闭包、固定 14 组；不是全仓 pytest 或生产运行</td></tr><tr><td>额外安全边界复验</td><td>84 通过、2 失败；0 错误/跳过</td><td>两项低层卖出精确授权残余保留，未以 xfail 或删例掩盖</td></tr><tr><td>副作用守卫</td><td>核心及额外边界复验均 0 违规</td><td>网络、真实券商、生产路径、凭据与非夹具数据库受阻</td></tr><tr><td>源码一致性</td><td>冻结 61 份源码/测试，其中 47 份生产源码；组间副本及运行结束当前源码无漂移</td><td>受测对象为当前工作树，不冒充干净发布树</td></tr><tr><td>原工作保全</td><td>原 index 字节和 NUL 记录一致，32 项原暂存保留，main/HEAD 未变</td><td>本轮修后未新建 Git 提交，未消化原暂存或推远端</td></tr><tr><td>生产状态</td><td>未重载、未接真实账户、未运行生产模拟或实盘交易</td><td>不能从源码通过推断常驻进程已加载或自然调度已稳定</td></tr></tbody></table></div>
+<h2 id="3-逐项修复与证据">3. 逐项修复与证据<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-逐项修复与证据" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="31-账户风险配置不能扩大正式计划">3.1 账户风险配置不能扩大正式计划<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-账户风险配置不能扩大正式计划" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>四个既有买入上限取明确值的交集；计划预算缺失不由账户正值补齐，正式零预算不被扩大。</li>
+<li>禁区取并集，风险警示限制不被账户覆盖；未知风险字段、异常类型或冲突的停机路径显式拒绝。</li>
+<li>单票预算缺失不再被模型的正数默认值解释成花钱许可。</li>
+<li>入口与最终买入边界均验证预算；正数预算使用现有字段及模式隔离日志进行保守占用检查，不另选阈值。</li>
+</ul>
+<p>位置：<code>trading/execution_authorization.py:22</code>、<code>:51</code>、<code>:80</code>；<code>trading/load_plan.py</code>；<code>trading/order/qmt_context.py:234</code>、<code>:310</code>。</p>
+<h3 id="32-live-参数不等于授权">3.2 live 参数不等于授权<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-live-参数不等于授权" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>计划、账户与逐票许可分别核对；运行参数只能请求执行模式，不能补自主交易或绕过人工确认。</li>
+<li>已有持仓不再自动打开该票的买入许可。</li>
+<li>装载和 watcher 把计划/账户快照绑定到最终订单上下文；最终边界重验日期、模式、预算、执行池、逐票权限、选定规则、拟限价盈亏比及扫描证据。</li>
+<li>未绑定或无效上下文在订单客户端调用前拒绝。</li>
+<li>持仓观察票仅在有明确退出规则时投影为只退出，不升级买入资格。</li>
+</ul>
+<p>位置：<code>trading/execution_authorization.py:86</code>、<code>:109</code>；<code>trading/load_plan.py:344</code>；<code>trading/watcher/run_once.py</code>；<code>trading/order/qmt_context.py:234</code>。</p>
+<p><strong>声明限定</strong>：这里证明的是共同许可、名单、买入条件和额度检查，不能把退出 type 名单说成完整的精确卖出意图授权，见第 7 节。</p>
+<h3 id="33-每轮只执行一次">3.3 每轮只执行一次<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#33-每轮只执行一次" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><code>run_load_plan(dispatch=False)</code> 仅准备，不构造交易上下文、不读持仓、不重置状态、不分派。</li>
+<li>默认装载执行 API 保留一次分派兼容；后台循环采用准备后 watcher 唯一分派。</li>
+<li>同日装载保留做 T 状态，不再每轮清零。</li>
+<li>真实隔离后台循环两轮由修前 4 次分派变为修后 2 次；不是只统计 mock 调用。</li>
+</ul>
+<p>位置：<code>trading/load_plan.py:344</code>；<code>trading/watcher/run_once.py</code>；<code>src/execute/watcher_daemon.py</code>。</p>
+<h3 id="34-比例止盈不阻断保护退出">3.4 比例止盈不阻断保护退出<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#34-比例止盈不阻断保护退出" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>比例档首次确定整数目标量并持久化；订单是否完成与剩余持仓分开，不对余仓重复乘比例。</li>
+<li>档位依真实成交历史的持仓生命周期及数值规则识别，不因新观察、日期、计划哈希或说明文字重置。</li>
+<li>每轮先评估高优先级保护退出；旧止盈 pending/partial 不再整票占位。</li>
+<li>接管旧低优先级单与现金、批次、成交、流动性消耗处于同一事务；失败回滚。</li>
+<li>重启、跨日续单、同档不重复卖、旧实现真实写出的历史订单兼容均有隔离实证；缺历史规则证据时拒绝比例重试，不凭空改账。</li>
+</ul>
+<p>位置：<code>trading/paper/ledger.py:568</code> 起的生命周期/目标恢复，<code>:678</code> 的执行边界；<code>scripts/execute/run_paper_plan_once.py</code>。</p>
+<h3 id="35-模拟账本低层复查停机文件">3.5 模拟账本低层复查停机文件<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#35-模拟账本低层复查停机文件" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>低层账本执行自行核对既有默认停机文件及批准路径，不信计划自填 false。</li>
+<li>只检查文件存在性，不读取内容；路径不明、符号链接或未知状态拒绝新买。</li>
+<li>合法存量退出与买入预算、研究资格及买入停机门禁分离。</li>
+</ul>
+<p>位置：<code>trading/paper/safety.py:10</code>；<code>trading/paper/ledger.py:678</code>。</p>
+<h3 id="36-扫描突破定量与盘口">3.6 扫描、突破、定量与盘口<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#36-扫描突破定量与盘口" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>缺扫描、抓取失败、扫描异常、重复/冲突信号拒买；重算时替换旧证据，不能沿用旧成功。</li>
+<li>独立审查发现原扫描日期只保存未消费，默认 loader API 可复用异日成功扫描；已补为计划/context/scan 日期一致，缺日期同样拒买，不补“今天”，不暗设报价年龄阈值。</li>
+<li>突破必须达到有效 trigger 及显式确认/收复价，ask 满足已有上限；复杂未实现谓词明确不支持。</li>
+<li>数量按目标股票与拟提交限价计算，并受现金和单票剩余预算约束；买不起一手返回零，不再强行至少买一手。</li>
+<li>可卖量未知/非法不回退总持仓；零保持零。持仓 last 不再被伪造成 bid/ask。</li>
+<li>最终卖出限价绑定已有有效 bid，不能由低层调用随意改价。</li>
+</ul>
+<p>位置：<code>trading/entry_selector.py</code>；<code>trading/watcher/session_context.py:62</code>；<code>trading/executors/base.py:154</code>；<code>trading/executors/_buy_common.py</code>；<code>trading/order/qmt_context.py:376</code>。</p>
+<h2 id="4-修前修后与测试契约迁移">4. 修前、修后与测试契约迁移<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-修前修后与测试契约迁移" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>问题</th><th>修前行为</th><th>最终限定行为</th></tr></thead><tbody><tr><td>零预算合并</td><td>可被账户正值覆盖</td><td>保持零；账户只收紧</td></tr><tr><td>模式与许可</td><td>live 参数/已有持仓可补许可</td><td>计划、账户、逐票共同核验</td></tr><tr><td>后台两轮</td><td>4 次分派</td><td>2 次分派；准备阶段无执行</td></tr><tr><td>比例止盈后硬止损</td><td>旧 partial 占票阻止继续评估</td><td>固定目标；保护退出先评估</td></tr><tr><td>默认停机</td><td>低层可能信上层 false</td><td>低层自行复查存在性</td></tr><tr><td>缺扫描/旧扫描</td><td>缺证可放行，异日可复用</td><td>缺证及异日/缺日拒买</td></tr><tr><td>突破</td><td>未到触发价可通过</td><td>达价且满足已有显式条件</td></tr><tr><td>买量</td><td>邻票报价参与、预算不足仍最少一手</td><td>按本票拟价，整手向下取整</td></tr><tr><td>可卖量/卖价</td><td>未知可卖量回退总持仓，低层可任意卖价</td><td>缺量拒绝；有效 bid 绑定</td></tr></tbody></table></div>
+<h3 id="没有抹掉中间失败">没有抹掉中间失败<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#没有抹掉中间失败" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>主控 22:39 的首次统一复跑是 711 项中 698 通过、13 失败，真实退出 1；独立审查还补出了扫描日期漏洞。这些输出均原样保存。</p>
+<p>13 项旧失败最终经独立裁决迁移，而非让生产代码放松保护：</p>
+<ol>
+<li><strong>坏盘口 10 项</strong>：原用未知 <code>synthetic_only</code> 规则，新授权门禁理应先拒规则。改为已授权真实规则，保留五坏盘口 × 买卖的拒绝；增加零客户端、真实 JSONL 复读。买侧先拒触发、卖侧拒盘口，分别断言真实原因。另新增 24 项确保未知规则仍拒绝。</li>
+<li><strong>盈亏比正向 3 项</strong>：原合成资产 100000、比例 5%、限价 100，只够 50 股，正确整手买量为零。仅这三个盈亏比隔离正例显式使用 200000 合成资产，报价、5% 比例、既有 1.8 门槛及原盈亏比/卖出/观察断言不变；另保留原 100000 输入的 3 项零买量负例。不是提高生产预算。</li>
+<li>之前两项旧合同亦已独立重现并裁决：止盈目标已完成应返回完成原因，而非“不支持重试”；后台旧 mock 不分派不能再依赖 loader 执行。原不重复卖、余仓、计划刷新断言保留并增强。</li>
+<li>扫描日补修后，装载正例补一行明确测试日期；故意缺日期反例仍拒绝。未静默把所有扫描日期填成当前日。</li>
+</ol>
+<p>原 711 个 case 身份和 65 个子测试身份全部保留；最终增加到 790，不以新增例抵扣旧失败、不删例、不 skip/xfail。</p>
+<h3 id="主控最终原生分组">主控最终原生分组<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#主控最终原生分组" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>组别</th><th style="text-align:right;">不同 case</th><th style="text-align:right;">通过</th><th style="text-align:right;">失败</th></tr></thead><tbody><tr><td>权限/预算/唯一分派</td><td style="text-align:right;">93</td><td style="text-align:right;">93</td><td style="text-align:right;">0</td></tr><tr><td>实际整链最终边界</td><td style="text-align:right;">71</td><td style="text-align:right;">71</td><td style="text-align:right;">0</td></tr><tr><td>模拟账本三组既有回归</td><td style="text-align:right;">156</td><td style="text-align:right;">156</td><td style="text-align:right;">0</td></tr><tr><td>原两项模拟安全诊断</td><td style="text-align:right;">2</td><td style="text-align:right;">2</td><td style="text-align:right;">0</td></tr><tr><td>模拟退出/停机新增</td><td style="text-align:right;">34</td><td style="text-align:right;">34</td><td style="text-align:right;">0</td></tr><tr><td>独立旧合同/兼容审查</td><td style="text-align:right;">12</td><td style="text-align:right;">12</td><td style="text-align:right;">0</td></tr><tr><td>正式计划交接/后台回归</td><td style="text-align:right;">57</td><td style="text-align:right;">57</td><td style="text-align:right;">0</td></tr><tr><td>扫描/突破/本票数量/可卖量</td><td style="text-align:right;">129</td><td style="text-align:right;">129</td><td style="text-align:right;">0</td></tr><tr><td>原四项局部诊断及缺扫描</td><td style="text-align:right;">5</td><td style="text-align:right;">5</td><td style="text-align:right;">0</td></tr><tr><td>既有盈亏比父审</td><td style="text-align:right;">32</td><td style="text-align:right;">32</td><td style="text-align:right;">0</td></tr><tr><td>既有盈亏比隔离回归</td><td style="text-align:right;">109</td><td style="text-align:right;">109</td><td style="text-align:right;">0</td></tr><tr><td>联合正向及坏盘口补充</td><td style="text-align:right;">11</td><td style="text-align:right;">11</td><td style="text-align:right;">0</td></tr><tr><td>测试合同收尾负向覆盖</td><td style="text-align:right;">32</td><td style="text-align:right;">32</td><td style="text-align:right;">0</td></tr><tr><td>扫描日绑定与卖价保护</td><td style="text-align:right;">47</td><td style="text-align:right;">47</td><td style="text-align:right;">0</td></tr><tr><td><strong>核心合计</strong></td><td style="text-align:right;"><strong>790</strong></td><td style="text-align:right;"><strong>790</strong></td><td style="text-align:right;"><strong>0</strong></td></tr></tbody></table></div>
+<p>另 65 个子测试全部通过，不并入 790。正常买入及合法退出的链路经过真实模型序列化、正式交接、loader/watcher、分派器、执行器、最终上下文及真实 scratch JSONL 复读；只替换市场输入与券商末端。合成 transport 返回的 submitted 不是券商订单或成交。</p>
+<p><strong>额外独立边界探针：86 项，84 通过、2 失败，实际退出 1。</strong> 此口径没有并入核心全过的宣传，详见第 7 节。</p>
+<h2 id="5-根因">5. 根因<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-根因" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong>授权散落且默认值有执行含义</strong>：模型默认、账户合并、模式参数、持仓回填各自可能扩大许可，入口检查也不能替代最终订单边界。</li>
+<li><strong>装载隐含执行副作用</strong>：后台以为只是刷新计划，却已分派一遍，随后 watcher 再执行；同日状态也被反复初始化。</li>
+<li><strong>订单目标与持仓混淆</strong>：比例卖单按剩余持仓判未完成，旧订单占票，保护退出不能独立重新评估。</li>
+<li><strong>证据缺失被当作兼容条件</strong>：无扫描默认放行、跨日证据不核、未知可卖量猜总仓、报价缺失从 last 回填；看似“可用”，实则失去证据约束。</li>
+<li><strong>测试夹具停留在旧合同</strong>：未知规则、无日期、无现金/扫描、强制至少一手曾可通过；安全修正后必须独立裁决迁移，不能把所有失败都算新生产 bug，也不能改期待掩盖真漏洞。</li>
+</ol>
+<h2 id="6-后续建议与优先级">6. 后续建议与优先级<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-后续建议与优先级" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>推荐下一批优先做研究按时交付及汇聚，而不是恢复旧交易网站。</strong> 用户最直接的问题是“每天该有的研究是否生成、是否进入预案”；这一批安全修复不能替代该闭环。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>优先级</th><th>事项</th><th>价值/风险</th><th>授权边界</th></tr></thead><tbody><tr><td>P0（恢复真实执行前）</td><td>精确卖出意图授权、跨进程额度/提交原子性、券商身份及在途/成交/撤单对账</td><td>防止绕过 wrapper、重复提交或错认可用额度</td><td>独立实现与验收，不因本次代码通过自动开启实盘</td></tr><tr><td>P1（下一实施批）</td><td>研究主产物与允许的辅助输入清单、来源版本和消费收据；分开生成/传递/读取/采纳</td><td>直接解释研究缺失和预案漏读，减少手工补跑</td><td>遇角色权限、技能或输出路径变化先给差异签核</td></tr><tr><td>P1</td><td>回测不写正式研究、自然调度按时交付验收</td><td>防止历史/生产污染，避免把进程完成误当业务完成</td><td>新落盘路径及生产回放另签，不重写既有历史</td></tr><tr><td>P2</td><td>活动说明与真实实现对齐</td><td>减少旧时刻/旧入口误导</td><td>不改主 SOUL；技能语义先差异签核</td></tr><tr><td>P2</td><td>按消费者退役旧网站、分类治理 data</td><td>降低维护与检索噪声，避免误删共享无头出图或账本</td><td>精确删除/迁移清单另签；无自动保留期限</td></tr></tbody></table></div>
+<p>LLM Wiki 轻量只读发布与旧交易网站退役是两件事；本次没有创建公开仓库、上传知识库或部署 Pages。</p>
+<h2 id="7-文件恢复点与未尽事项">7. 文件、恢复点与未尽事项<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-文件恢复点与未尽事项" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="实现文件12">实现文件（12）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#实现文件12" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><code>trading/load_plan.py</code></li>
+<li><code>trading/watcher/run_once.py</code></li>
+<li><code>src/execute/watcher_daemon.py</code></li>
+<li><code>trading/execution_authorization.py</code>（新增）</li>
+<li><code>scripts/execute/run_paper_plan_once.py</code></li>
+<li><code>trading/paper/ledger.py</code></li>
+<li><code>trading/paper/safety.py</code>（新增）</li>
+<li><code>trading/entry_selector.py</code></li>
+<li><code>trading/watcher/session_context.py</code></li>
+<li><code>trading/executors/base.py</code></li>
+<li><code>trading/executors/_buy_common.py</code></li>
+<li><code>trading/order/qmt_context.py</code></li>
+</ul>
+<p>测试文件 11 份详见证据包 <code>changes/manifest.json</code>。<code>trading/watcher/dispatch.py</code> 等既有用户改动只是依赖，不混入本批增量；整个 Git 工作树不因此变成干净状态。</p>
+<h3 id="两项保留失败不能说成订单低层全部安全">两项保留失败：不能说成“订单低层全部安全”<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#两项保留失败不能说成订单低层全部安全" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>主控亲自用当前源码复跑独立反例，仍有：</p>
+<ol>
+<li>直接低层调用卖出时，仅有同类型退出规则即可请求卖出，不独立重验该规则是否已经触发。</li>
+<li>直接低层调用可以把 10% 退出规则扩大到可卖量上限，没有绑定 wrapper 核验过的精确规则数量。</li>
+</ol>
+<p>它们是本次接线前已有的残余，不是已证新引入的正常 watcher 误卖。当前生产调用点的正常卖出 wrapper 有触发与定量逻辑，独立实测未触发止损时跳过且零末端订单；但不能因此把低层直调也称作安全。此次只落实共同许可、退出名单、kill、有效 bid 及价格绑定、真实可卖量；没有另造八种退出策略或声称精确意图闭环。</p>
+<p>此外未认证：跨线程/进程原子性；券商账户身份、在途/成交/撤单对账；提交未知结果恢复；墙钟当前交易日与交易时段；真实报价时效。授权绑定目前是计划/context/扫描同日，不等于交易日历认证。保守买入预留也可能与刷新后的持仓重复占用，不能称精确券商额度。</p>
+<h3 id="恢复与交付">恢复与交付<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#恢复与交付" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>修前本地 Git：<code>checkpoint/v1-before-repair-20261024</code>，提交 <code>0a8ebd597b7bce16ce7dd1d9db8497e5363bcd25</code>。一个疑似含令牌字面量的源码整文件排除，未展示或使用其值；检查点不是全量系统备份。</li>
+<li>清理私有恢复包：<code>backups/2026-10-24-pre-repair-cleanup.tar.gz</code>，0600 本机私有，不作为公开附件。</li>
+<li>修后增量、改前/后原件、原生 JUnit、日志、失败历史、源码清单及复验器：<code>backups/2026-10-24-v1-first-batch-evidence/</code> 与同名 <code>.zip</code>。</li>
+<li>增量 patch 在独立 scratch 目录真实检查、应用，并对 23 份结果逐哈希回环；不应在混合工作树上直接盲目反向应用。</li>
+<li>原 index SHA-256：<code>3f2f0150a437b8b7e8ef55a73bc0f9091dee854dbf8a4734428813a997d13c0e</code>，最终与修前完全一致；原 32 项暂存、main HEAD <code>03c1d25caf94e8c8576765442b55cbf4538559f1</code> 保留。没有修后新提交或远端推送。</li>
+<li>技能差异仍为建议，未自动应用；模型、配置、永久任务、SOUL 与账户风险数值不变。</li>
+</ul>
+<p><strong>最终状态：本批限定实现修复已完成、核心隔离验收通过；两项独立低层残余和生产运行缺口明确保留。未重载生产、未开放实盘、未宣称整个 V1.00 已发布。</strong></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-954" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#2026-10-24-首批安全修复与联合验收" data-for="2026-10-24-首批安全修复与联合验收">2026-10-24 首批安全修复与联合验收</a></li><li class="depth-1"><a href="#1-授权与要求" data-for="1-授权与要求">1. 授权与要求</a></li><li class="depth-2"><a href="#本次判定标准" data-for="本次判定标准">本次判定标准</a></li><li class="depth-1"><a href="#2-结论速览" data-for="2-结论速览">2. 结论速览</a></li><li class="depth-1"><a href="#3-逐项修复与证据" data-for="3-逐项修复与证据">3. 逐项修复与证据</a></li><li class="depth-2"><a href="#31-账户风险配置不能扩大正式计划" data-for="31-账户风险配置不能扩大正式计划">3.1 账户风险配置不能扩大正式计划</a></li><li class="depth-2"><a href="#32-live-参数不等于授权" data-for="32-live-参数不等于授权">3.2 live 参数不等于授权</a></li><li class="depth-2"><a href="#33-每轮只执行一次" data-for="33-每轮只执行一次">3.3 每轮只执行一次</a></li><li class="depth-2"><a href="#34-比例止盈不阻断保护退出" data-for="34-比例止盈不阻断保护退出">3.4 比例止盈不阻断保护退出</a></li><li class="depth-2"><a href="#35-模拟账本低层复查停机文件" data-for="35-模拟账本低层复查停机文件">3.5 模拟账本低层复查停机文件</a></li><li class="depth-2"><a href="#36-扫描突破定量与盘口" data-for="36-扫描突破定量与盘口">3.6 扫描、突破、定量与盘口</a></li><li class="depth-1"><a href="#4-修前修后与测试契约迁移" data-for="4-修前修后与测试契约迁移">4. 修前、修后与测试契约迁移</a></li><li class="depth-2"><a href="#没有抹掉中间失败" data-for="没有抹掉中间失败">没有抹掉中间失败</a></li><li class="depth-2"><a href="#主控最终原生分组" data-for="主控最终原生分组">主控最终原生分组</a></li><li class="depth-1"><a href="#5-根因" data-for="5-根因">5. 根因</a></li><li class="depth-1"><a href="#6-后续建议与优先级" data-for="6-后续建议与优先级">6. 后续建议与优先级</a></li><li class="depth-1"><a href="#7-文件恢复点与未尽事项" data-for="7-文件恢复点与未尽事项">7. 文件、恢复点与未尽事项</a></li><li class="depth-2"><a href="#实现文件12" data-for="实现文件12">实现文件（12）</a></li><li class="depth-2"><a href="#两项保留失败不能说成订单低层全部安全" data-for="两项保留失败不能说成订单低层全部安全">两项保留失败：不能说成“订单低层全部安全”</a></li><li class="depth-2"><a href="#恢复与交付" data-for="恢复与交付">恢复与交付</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../readme" class="internal">README</a></li><li><a href="../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

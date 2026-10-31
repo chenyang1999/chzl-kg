@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-10-23-frontgate-policy-proposals</title><meta charset="utf-8"/><link rel="preload" href="../../index-5a23ce28.css" as="style"/><link rel="preload" href="../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="2026-10-23-frontgate-policy-proposals"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-10-23-frontgate-policy-proposals"/><meta name="twitter:description" content="沧海巨浪规则/契约修复签核提案（2026-10-23） 状态：尚未应用。 仅在 scratch 生成本文件及配套 .patch；没有写生产源码、SOUL、skill、配置、cron、数据库、账户或正式产物，没有补跑研究，没有 git 写操作。主 SOUL 只读，不在任一包内。 本提案基于当前真实文件逐字生成，不以审计时行号代替现文件；基线核验时点 2026-10-23 12:06 CST。A 为“已修实现的契约同步”；B 为“会改变研究资格/业务门禁语义的规则提案”。A 不包含 B 的清观察解禁；B 不解除任何真实禁新仓。北向、窗口、RR 均没有代用户选择。 1."/><meta property="og:description" content="沧海巨浪规则/契约修复签核提案（2026-10-23） 状态：尚未应用。 仅在 scratch 生成本文件及配套 .patch；没有写生产源码、SOUL、skill、配置、cron、数据库、账户或正式产物，没有补跑研究，没有 git 写操作。主 SOUL 只读，不在任一包内。 本提案基于当前真实文件逐字生成，不以审计时行号代替现文件；基线核验时点 2026-10-23 12:06 CST。A 为“已修实现的契约同步”；B 为“会改变研究资格/业务门禁语义的规则提案”。A 不包含 B 的清观察解禁；B 不解除任何真实禁新仓。北向、窗口、RR 均没有代用户选择。 1."/><meta property="og:image:alt" content="沧海巨浪规则/契约修复签核提案（2026-10-23） 状态：尚未应用。 仅在 scratch 生成本文件及配套 .patch；没有写生产源码、SOUL、skill、配置、cron、数据库、账户或正式产物，没有补跑研究，没有 git 写操作。主 SOUL 只读，不在任一包内。 本提案基于当前真实文件逐字生成，不以审计时行号代替现文件；基线核验时点 2026-10-23 12:06 CST。A 为“已修实现的契约同步”；B 为“会改变研究资格/业务门禁语义的规则提案”。A 不包含 B 的清观察解禁；B 不解除任何真实禁新仓。北向、窗口、RR 均没有代用户选择。 1."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/backups/2026-10-23-frontgate-policy-proposals"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/系统进化/backups/2026-10-23-frontgate-policy-proposals"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="沧海巨浪规则/契约修复签核提案（2026-10-23） 状态：尚未应用。 仅在 scratch 生成本文件及配套 .patch；没有写生产源码、SOUL、skill、配置、cron、数据库、账户或正式产物，没有补跑研究，没有 git 写操作。主 SOUL 只读，不在任一包内。 本提案基于当前真实文件逐字生成，不以审计时行号代替现文件；基线核验时点 2026-10-23 12:06 CST。A 为“已修实现的契约同步”；B 为“会改变研究资格/业务门禁语义的规则提案”。A 不包含 B 的清观察解禁；B 不解除任何真实禁新仓。北向、窗口、RR 均没有代用户选择。 1."/><meta name="generator" content="Quartz"/><link href="../../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="系统进化/backups/2026-10-23-frontgate-policy-proposals" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1023" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1023" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../系统进化/">系统进化</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../系统进化/backups/">backups</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-10-23-frontgate-policy-proposals</a></div></nav><h1 class="article-title">2026-10-23-frontgate-policy-proposals</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-23T08:34:25.000Z">2026年10月23日</time><span>97分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="沧海巨浪规则契约修复签核提案2026-10-23">沧海巨浪规则/契约修复签核提案（2026-10-23）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#沧海巨浪规则契约修复签核提案2026-10-23" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><strong>状态：尚未应用。</strong> 仅在 scratch 生成本文件及配套 <code>.patch</code>；没有写生产源码、SOUL、skill、配置、cron、数据库、账户或正式产物，没有补跑研究，没有 git 写操作。主 SOUL 只读，不在任一包内。</p>
+<p>本提案基于当前真实文件逐字生成，不以审计时行号代替现文件；基线核验时点 2026-10-23 12:06 CST。A 为“已修实现的契约同步”；B 为“会改变研究资格/业务门禁语义的规则提案”。<strong>A 不包含 B 的清观察解禁；B 不解除任何真实禁新仓。北向、窗口、RR 均没有代用户选择。</strong></p>
+</blockquote>
+<h2 id="1-用户最少需要确认什么">1. 用户最少需要确认什么<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-用户最少需要确认什么" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="本轮可签的两个包签核文件修改不等于交易授权">本轮可签的两个包（签核文件修改，不等于交易授权）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#本轮可签的两个包签核文件修改不等于交易授权" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong>A：实现契约同步</strong>——未就绪 LLM 版保留重评义务；交付/研究就绪/可交易分开；null 与真实零分开；合法 mode 与 no_trade 分开；竞价无价/partial/禁令优先展示；正式→runtime 单向权威。A 中的 R6 条款仅强调原 complete-only 和无对象非通过，不改依赖接受范围。</li>
+<li><strong>B：研究连续性与现行用户原则落文</strong>——禁止新仓不等于停止研究/清研究观察；真实候选画像继续、无对象允许空；研究观察不自动获得买点/开仓权限；阶段只定温度、通道动态选择；20/50 亿按用户已明确边界；不为候选数量绕否决。涉及两个子 profile SOUL，须逐文件签核并在批准应用后启动其新会话。<strong>主 SOUL 不改。</strong></li>
+</ol>
+<h3 id="真正仍缺裁决的三类政策未给可应用-diff">真正仍缺裁决的三类政策（未给可应用 diff）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#真正仍缺裁决的三类政策未给可应用-diff" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>北向缺失政策</strong>：选择本文件 NB-1 / NB-2 / NB-3 或另定；确认北向是“研究完整性要求”还是“新仓必要条件”，并明确整体 confidence 与最终交易门禁的独立语义。未选前保留现禁令，不按“partial”字样自动放行。</li>
+<li><strong>生产窗口与刷新 owner</strong>：06:10 是正式批还是提前研究？是否另有 07:30 复核？研究刷新由谁触发/验收、D1 谁重评、最迟交付何时？本轮不改 cron、不将承诺改成过去式来掩盖未刷新。</li>
+<li><strong>RR 唯一裁决</strong>：1 / 1.8 / 2 分别是底线、仓位分档还是统一开仓门槛？对执行/观察/B计划适用范围如何？单票 RR_FAIL 是否应全局禁新？数值边界、取价、舍入口径需明确。<strong>没有拟选任一数字。</strong></li>
+</ul>
+<p>推荐签核顺序：先 A，再 B 中解除停研究/清观察的闭环；北向交易门禁、窗口和 RR 另裁决。A/B 都不保证产生可交易股票，也不保证今日可重评。</p>
+<h2 id="2-不可突破的验收边界">2. 不可突破的验收边界<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-不可突破的验收边界" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>有效零预算保持零，研究就绪不自动变 live，研究观察不构成开仓许可；现有全局禁令、R6 hard_reject、逐票资格、买点、账户授权仍独立生效。</li>
+<li><strong>R6 保持 <code>status == complete</code> 的输入可用性定义</strong>；partial/degraded 研究可供观察，不等于正式反证完成。R2 无逐票对象仍不能硬凑，<code>candidates_evaluated=0</code> 和空 hard_rejects 不等于“全部通过”。不把已存在硬否决降级成建议，不为凑票递补。</li>
+<li>不改模型/provider、并发、cron、输出布局、write whitelist、用户偏好或账户。本提案没有重新授权已有或新增交易。</li>
+<li>未就绪 LLM 版的现有安全网仅接受全 R1–R7 与 summary 的更新批次；需要部分刷新+复用旧单元的血缘规则，必须另提签核，不能偷偷放宽。</li>
+<li>本提案不裁定 R6 模式六“唯一硬否决”与模式七/九并列硬否决的遗留权限冲突；保留所有现有真实否决，绝不以澄清文案自动通过。</li>
+</ul>
+<h2 id="3-真实基线变更范围与会话生效">3. 真实基线、变更范围与会话生效<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-真实基线变更范围与会话生效" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>仓库根：<code>/Users/chenyang/Downloads/demo/沧海巨浪</code>。原 32 项暂存未写，全部 index records SHA256：<code>c24736dd938685a85db19301280d8b9fdafdf6fb2bab56a056068dc026df152b</code>。</p>
+<p>相同目标出现在两包时，<strong>B 的前置内容是 A 的拟议结果</strong>。文件原 hash 永远指真实磁盘；B 另列前置 hash，不能直接拿 B 套原文件。配套 patch 用包标记分隔，只供审阅，不应整体直接 <code>git apply</code>，更不应用于包含绝对 profile 路径的无范围操作。任何实际应用前都须重新核对当前 hash、签核范围与依赖。</p>
+<h3 id="a--userschenyangdownloadsdemo沧海巨浪docs10-契约-研究汇总md">A · <code>/Users/chenyang/Downloads/demo/沧海巨浪/docs/10-契约-研究汇总.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a--userschenyangdownloadsdemo沧海巨浪docs10-契约-研究汇总md" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>99d6d74d8c0abb7d04cd8d74e81035e4eee567588dc29c206509e1ab273cdefb</code></li>
+<li>本包精确前置 SHA256：<code>99d6d74d8c0abb7d04cd8d74e81035e4eee567588dc29c206509e1ab273cdefb</code></li>
+<li>拟议结果 SHA256：<code>14e57f6ed5e6292aed312973fbfe37cd2fa34efebdc0a914fbb4b9a4e58229e9</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：对齐真实summary nullable接口。；精确说明输入清洗与消费者语义，不发明置信阈值。；骨架示例改为未评价。</li>
+<li>是否需新会话：文档无运行效力；下次读取采用，不能替代实现与产物重评。</li>
+</ul>
+<h3 id="a--userschenyangdownloadsdemo沧海巨浪docs11-契约-盘前预案md">A · <code>/Users/chenyang/Downloads/demo/沧海巨浪/docs/11-契约-盘前预案.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a--userschenyangdownloadsdemo沧海巨浪docs11-契约-盘前预案md" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>c785655b63a9be5027bbf829f1023b3f3d7b8709819c133d47ea533c4de30652</code></li>
+<li>本包精确前置 SHA256：<code>c785655b63a9be5027bbf829f1023b3f3d7b8709819c133d47ea533c4de30652</code></li>
+<li>拟议结果 SHA256：<code>bee1b1fce3a336afac195c3b6a7362054a9ec01c7193781f2d3babfe02d7f9e2</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：同步单向权威读取，不扩大任何profile写目录。；执行环境与交易决定分字段。；补分层状态与观察非授权，不改资格。</li>
+<li>是否需新会话：文档无运行效力；下次读取采用，不能替代实现与产物重评。</li>
+</ul>
+<h3 id="a--userschenyangdownloadsdemo沧海巨浪skillsanalyze_devil_advocate_v1skillmd">A · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a--userschenyangdownloadsdemo沧海巨浪skillsanalyze_devil_advocate_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>d9721b4145d3ef9c9832a55ad96f56ce83bc5b173c406d49e424d6714cdd1188</code></li>
+<li>本包精确前置 SHA256：<code>d9721b4145d3ef9c9832a55ad96f56ce83bc5b173c406d49e424d6714cdd1188</code></li>
+<li>拟议结果 SHA256：<code>8b863ebba7d026becb4538a08606296f4c4c3c854b63521661995fd63bae583b</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：保护R6完整性，不将修研究观察偷换自动通过。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="a--userschenyangdownloadsdemo沧海巨浪skillsauction_amendment_v1skillmd">A · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a--userschenyangdownloadsdemo沧海巨浪skillsauction_amendment_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>bbff34144e521172d78b38d28f4c4abf555906348d291ba6a4d2719a0114e878</code></li>
+<li>本包精确前置 SHA256：<code>bbff34144e521172d78b38d28f4c4abf555906348d291ba6a4d2719a0114e878</code></li>
+<li>拟议结果 SHA256：<code>d1a6ac6d276774946e4e450017cdcd526895dd626776c0a61809496242b20a6c</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：同步竞价禁令优先与partial展示，不改硬窗口或reload。；删除旧runtime反写修法。；移除人工补表/超时按档执行的旧规避建议。；超时历史陷阱不再教人补成执行建议。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="a--userschenyangdownloadsdemo沧海巨浪skillsfetch_auction_snapshot_v1skillmd">A · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_auction_snapshot_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a--userschenyangdownloadsdemo沧海巨浪skillsfetch_auction_snapshot_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>dff225e2c70b77302ac64fe862ac0b3eb937ba7122376ad679494115a71bc478</code></li>
+<li>本包精确前置 SHA256：<code>dff225e2c70b77302ac64fe862ac0b3eb937ba7122376ad679494115a71bc478</code></li>
+<li>拟议结果 SHA256：<code>013e8c9d8eb351fdd8695119df5ff26fbe2f4dff52b5e8a8d8bf397802940965</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：真实partial枚举。；同步真实主备来源。；partial不等于全死，ok不等于授权。；仅空值示例，真实数值0保留。；同步C组缺失、量纲与统计契约。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="a--userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd">A · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a--userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d</code></li>
+<li>本包精确前置 SHA256：<code>0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d</code></li>
+<li>拟议结果 SHA256：<code>8927d05eaea4ea5850af77af24d7228599e6ce9aff5cc5ccfd546b02be79d2d2</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：与A组已实现安全网重评边界同步，不扩大刷新权限。；仅修mode枚举，A包不暗改观察资格；B包单独解除清观察。；消除“不可发半成品”与合法安全临时版混淆；校验失败仍拒绝。；阶段表中的禁交易也使用独立no_trade字段，不新增mode枚举。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="a--userschenyangdownloadsdemo沧海巨浪skillsresearch_orchestrator_v1skillmd">A · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/research_orchestrator_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a--userschenyangdownloadsdemo沧海巨浪skillsresearch_orchestrator_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>3171c4bc9b7515a30ec6d461799fb7c63eedf97b7e9ef68a9778216e4aed94e3</code></li>
+<li>本包精确前置 SHA256：<code>3171c4bc9b7515a30ec6d461799fb7c63eedf97b7e9ef68a9778216e4aed94e3</code></li>
+<li>拟议结果 SHA256：<code>bb6a99cf16c0d55d511e42e75659cf44684090d7d79441679e6b66e428bbe200</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：统一null与真实零，历史参考不冒充本次评价。；示例不再用0占位未评价。；移除第二处超时固定零。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="a--userschenyangdownloadsdemo沧海巨浪testscheckscheck_md_namespacepy">A · <code>/Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_md_namespace.py</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a--userschenyangdownloadsdemo沧海巨浪testscheckscheck_md_namespacepy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>7cc99ec0423c303785bbcd0dcc02e7186d5b9f39a1e06fd22e3454ae367d8040</code></li>
+<li>本包精确前置 SHA256：<code>7cc99ec0423c303785bbcd0dcc02e7186d5b9f39a1e06fd22e3454ae367d8040</code></li>
+<li>拟议结果 SHA256：<code>ea1651ee12a058355071d6b943f38b65a6f0687c764942eb03dde5e5f1140634</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：null呈现契约兼容；仅为拟议代码，未应用。</li>
+<li>是否需新会话：下次检查进程读取；无SOUL会话重启要求。</li>
+</ul>
+<h3 id="b--userschenyanghermesprofilescanghai-plansoulmd">B · <code>/Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b--userschenyanghermesprofilescanghai-plansoulmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>5c6c6c28e72a7b1970a852b3d16f2b033b06d5c0bc10c955cc16bb51ae13e3a2</code></li>
+<li>本包精确前置 SHA256：<code>5c6c6c28e72a7b1970a852b3d16f2b033b06d5c0bc10c955cc16bb51ae13e3a2</code></li>
+<li>拟议结果 SHA256：<code>2a1497baba4db228927ac7376b32453044d0126c4378e149c7152fc8b64364b1</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：计划身份层取消固定阶段资格；不动RR条款或预算阈值。</li>
+<li>是否需新会话：必须：批准应用后仅该profile新会话生效。</li>
+</ul>
+<h3 id="b--userschenyanghermesprofilescanghai-researchsoulmd">B · <code>/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b--userschenyanghermesprofilescanghai-researchsoulmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>9dd5bf534052fa41b2762fa999899a87d3f58b65afe76234b10e4d3fa185fb31</code></li>
+<li>本包精确前置 SHA256：<code>9dd5bf534052fa41b2762fa999899a87d3f58b65afe76234b10e4d3fa185fb31</code></li>
+<li>拟议结果 SHA256：<code>f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：解除身份层停研究级联；不改主SOUL、不新增写权限。</li>
+<li>是否需新会话：必须：批准应用后仅该profile新会话生效。</li>
+</ul>
+<h3 id="b--userschenyangdownloadsdemo沧海巨浪skills_archivefilter_leader_v1skillmd">B · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/_archive/filter_leader_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b--userschenyangdownloadsdemo沧海巨浪skills_archivefilter_leader_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>794e312b5bec04787b93b3c6e262b1e6f0fd8dda2a56d2e534b2ea89c3744f03</code></li>
+<li>本包精确前置 SHA256：<code>794e312b5bec04787b93b3c6e262b1e6f0fd8dda2a56d2e534b2ea89c3744f03</code></li>
+<li>拟议结果 SHA256：<code>f14c371ab1727af7d1649c60c4da00b54ff6d1b2c60a0f6b125553cd145f845b</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：仍被加载的归档skill删除替补例外，其他过滤阈值原封不动。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_devil_advocate_v1skillmd">B · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_devil_advocate_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>d9721b4145d3ef9c9832a55ad96f56ce83bc5b173c406d49e424d6714cdd1188</code></li>
+<li>本包精确前置 SHA256：<code>8b863ebba7d026becb4538a08606296f4c4c3c854b63521661995fd63bae583b</code></li>
+<li>拟议结果 SHA256：<code>aeee4559edbb1d095759202b03c33e50dd9fc3a5c6581a254d5d8124b67d0e0d</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：硬否决不再含“保留执行池”等买点歧义；不裁定模式七权限。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_main_sectors_v1skillmd">B · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_main_sectors_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_main_sectors_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>f8326ea438d7da792a072ee91aef9d4450c87b0b3789c91dba90278389b674c7</code></li>
+<li>本包精确前置 SHA256：<code>f8326ea438d7da792a072ee91aef9d4450c87b0b3789c91dba90278389b674c7</code></li>
+<li>拟议结果 SHA256：<code>e327944d4a9a51989b6a6582a1d25a5521e61261170adf14cd996a265dd8aea0</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：研究方向不被当日交易主线数一刀切。；同步用户20/50现行边界，明确这是资格语义变更，放B。；明确execution_eligible前置筛选不是最终权限。；删除生命周期直接进执行池。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_stock_profile_v1skillmd">B · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_stock_profile_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_stock_profile_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>a180541fe70ce174e48e181a9e4bc62ea99c63e87f05386b107a290af926d92a</code></li>
+<li>本包精确前置 SHA256：<code>a180541fe70ce174e48e181a9e4bc62ea99c63e87f05386b107a290af926d92a</code></li>
+<li>拟议结果 SHA256：<code>3a69092fc6950939f6c9e563031c1df4ca53088b0ffaf5d51240d8e5482da614</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：禁交易不再触发R5研究跳过。；删除至少5只assert；保留原扩池来源与上限目标，不授予新仓。；不再鼓励为数量绕风控；不冒称旧检查器存在。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_style_v1skillmd">B · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_style_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>6097bb83402d836101de3348446129d71e6d3ff337b20dc6b9304455e07c6311</code></li>
+<li>本包精确前置 SHA256：<code>6097bb83402d836101de3348446129d71e6d3ff337b20dc6b9304455e07c6311</code></li>
+<li>拟议结果 SHA256：<code>40ef3105c0495223b52c510302ee4fa452e5bf43b675830c373da44f326faff6</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：R1不再以action字段注入固定打法。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="b--userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd">B · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b--userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d</code></li>
+<li>本包精确前置 SHA256：<code>8927d05eaea4ea5850af77af24d7228599e6ce9aff5cc5ccfd546b02be79d2d2</code></li>
+<li>拟议结果 SHA256：<code>b3e8d6d49e42b84a80613e4e63f7f5a578b95a6c1ab009e606cc2eacc6627876</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：从A安全mode补丁再改观察资格；B依赖A，禁止P1绕禁。；观察数量不得反向驱动凑数。；移除第二个最低15硬配额，不另定数量。；消除被否后自动递补旧例外。；撤销固定阶段打法/主升任何位置；保留全部原cap常数和≤2约束。；不换规则引擎、不改通道代码，清楚标明后续实现依赖。；避免旧表继续呈现硬白名单。；删除按阶段最低3%强制参与，B显式改变业务参与下限而非暗放行。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="b--userschenyangdownloadsdemo沧海巨浪skillsshort_line_thinking_v1skillmd">B · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/short_line_thinking_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b--userschenyangdownloadsdemo沧海巨浪skillsshort_line_thinking_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>dad7f28dad6779ee40b16ed1cfcdd39348435c5407f63968dfb711e306c49c54</code></li>
+<li>本包精确前置 SHA256：<code>dad7f28dad6779ee40b16ed1cfcdd39348435c5407f63968dfb711e306c49c54</code></li>
+<li>拟议结果 SHA256：<code>aab4dd21f870e1cc13c9920ca8d10731e9ec627966874f0c5cffc353a2a94994</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：移除所有低吸按阶段禁用，不解除真实禁令。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h3 id="b--userschenyangdownloadsdemo沧海巨浪skillstrade_discipline_v1skillmd">B · <code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b--userschenyangdownloadsdemo沧海巨浪skillstrade_discipline_v1skillmd" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>原文件 SHA256：<code>076853d910830a033ed05f94830c63debbeb4dea2f972a34094113e4e35e6edf</code></li>
+<li>本包精确前置 SHA256：<code>076853d910830a033ed05f94830c63debbeb4dea2f972a34094113e4e35e6edf</code></li>
+<li>拟议结果 SHA256：<code>6ee0609a07e3fd93e11ba3162f47455906641ad4d5ce93238de27ab4fb9ba6e1</code>（<strong>仅内存结果，不是磁盘已变更</strong>）</li>
+<li>变更范围：最小限定旧表效力，不顺手改仓位参数和禁止清单。</li>
+<li>是否需新会话：skill须fresh context重新加载；当前会话不追溯生效。</li>
+</ul>
+<h2 id="4-a-包实现契约同步的精确最小差异">4. A 包：实现契约同步的精确最小差异<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-a-包实现契约同步的精确最小差异" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>下列上下文、删除与新增均为当前文件逐字差异（每个 hunk 保留三行上下文）。A 包对 no_trade 暂保留原清观察限制，防止“mode兼容修复”偷带业务资格变更；清观察只在 B 包改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="diff" data-theme="github-light github-dark"><code data-language="diff" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="punctuation">--- /Users/chenyang/Downloads/demo/沧海巨浪/docs/10-契约-研究汇总.md</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="punctuation">+++ /Users/chenyang/Downloads/demo/沧海巨浪/docs/10-契约-研究汇总.md</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -25,7 +25,7 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `fetch_manifest` | string | ✅ | 上游 fetch 产物路径，如 `data/raw/20260704/manifest.json` |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `fetch_global_severity` | integer | ✅ | 启动 research 时 manifest 的 `global_severity`（0-3） |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `artifacts` | object | ✅ | R1-R7 各单元 JSON 路径，见 §3 |</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-| `confidence` | object | ✅ | 各单元置信度 0.0-1.0，skeleton/降级时为 0 |</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+| `confidence` | object | ✅ | 每单元为有限数 0.0–1.0 或 null；null=本次未评价/未知，0.0=真实评价为零，不按状态自动互换 |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `hard_rejects` | array | ✅ | R6 硬否决清单，可为空；元素见 §4 |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `timeouts` | array | ✅ | 超时或未完成的单元 ID，如 `[&quot;R5&quot;]` |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `completed_by` | string | ✅ | 计划完成时点 `&quot;08:00&quot;`（盘前批次） |</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -98,7 +98,10 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> |------|------|</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | 正常完成 | 0.5-1.0，由子 Agent 自评 |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | 降级（单源失联） | 0.3-0.5 |</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-| skeleton / 昨日 fallback / 超时 | 0 |</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+| 本次未评价（含 skeleton / 超时 / 昨日历史参考） | null；另列状态、日期与缺口，不以 0 冒充评价 |</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+| 真实评价为零 | 0.0，原样保留 |</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+汇总只接受有限、非 bool、在 [0,1] 内的数值；缺失、非法、非有限值记 null 并保留原始质量说明。消费者先区分 null 与数值，禁止 `or 0` 或用 null 触发数值零的降级/默认仓位；null 不构成完成或通过证明。JSON/MD 交付、研究就绪和交易授权是独立事实。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ---</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -145,7 +148,7 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &quot;R7&quot;: &quot;data/research/20260704/R7_capital_flow.json&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   &quot;confidence&quot;: {</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-    &quot;R1&quot;: 0, &quot;R2&quot;: 0, &quot;R3&quot;: 0, &quot;R4&quot;: 0, &quot;R5&quot;: 0, &quot;R6&quot;: 0, &quot;R7&quot;: 0</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+    &quot;R1&quot;: null, &quot;R2&quot;: null, &quot;R3&quot;: null, &quot;R4&quot;: null, &quot;R5&quot;: null, &quot;R6&quot;: null, &quot;R7&quot;: null</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   &quot;hard_rejects&quot;: [],</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   &quot;timeouts&quot;: [],</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="punctuation">--- /Users/chenyang/Downloads/demo/沧海巨浪/docs/11-契约-盘前预案.md</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="punctuation">+++ /Users/chenyang/Downloads/demo/沧海巨浪/docs/11-契约-盘前预案.md</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -1,6 +1,6 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> # watchlist_plan.json 标准Schema说明</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-> 路径：`data/runtime/watchlist_plan_YYYYMMDD.json`</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+> 正式产物：`data/plans/YYYYMMDD/watchlist_plan.json`；执行运行副本：`data/runtime/watchlist_plan_YYYYMMDD.json`。由现有校验交接单向正式→runtime，不能用副本反写、补缺或替换正式源；本条不改变任何输出目录或 owner。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> > 交易Agent网页和执行Agent都依赖这份结构化数据，**必须严格遵守字段名和枚举值**</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ---</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -10,7 +10,7 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | 字段 | 类型 | 必填 | 说明 |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> |------|------|------|------|</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `trade_date` | string | ✅ | 交易日，格式 `YYYYMMDD` 如 `&quot;20260629&quot;` |</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-| `mode` | string | ✅ | `&quot;live&quot;` 实盘 / `&quot;dry_run&quot;` 回测 |</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+| `mode` | string | ✅ | 仅 `&quot;live&quot;` / `&quot;dry_run&quot;`；执行环境不是交易决定，禁新仓另写 `no_trade: true`，不得新增 mode 枚举或丢弃禁令 |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `agent_name` | string | ✅ 固定 | `&quot;盘前预案 Agent / Stock Selection &amp; Setup Agent / Alpha-Setup Agent&quot;` |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `generated_at` | string | ✅ | ISO格式时间 `&quot;2026-06-29T08:30:00+08:00&quot;` |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `trading_style` | string | ✅ 固定 | `&quot;mainline_right_side_with_trend_pullback&quot;`（主线进攻+右侧低吸） |</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -25,6 +25,8 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `watch_pool` | array | ✅ | 观察池（备选，不在今日计划买入但跟踪），每个元素是 **StockEntry** |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `rejected` | array | ✅ | 否决标的（可以为空） |</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> | `research_anchor_only` | array | ✅ | 仅研究不交易（可以为空） |</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+`production_ready` / `research_completion_passed` / `reassessment_required` 显式显示研究是否仍待重评；安全发布和交付 completed 不代表研究完成。未就绪版保持 dry_run、关闭自动交易、要求用户确认；就绪 true 也不自动放行。观察池或研究锚不构成开仓权限，须独立通过当日全局禁令、R6、逐票资格、预算、买点与用户授权。缺失 confidence 保留 null，不填 0。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ---</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="punctuation">--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="punctuation">+++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -152,6 +152,8 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 构建 `upstream_usable: {R1..R7: bool}`（`status == complete`）。  </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> R2 不可用 → 直接产出降级 JSON（spec §6），`counter_arguments: []`。</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+**不改变 complete-only**：研究观察有对象或上游 partial/degraded，不等于可直接通过正式反证；所需完整输入不足时继续标未完成及缺口。无逐票对象时如实 `candidates_evaluated: 0`，空 `hard_rejects` 只代表未形成否决，不代表全票审核通过；不凑对象、不用空反证解除禁新仓，也不把 skipped/degraded 自动改 complete。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ### Step 2 · 逐模式扫描</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="punctuation">--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="punctuation">+++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -97,6 +97,8 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 4. 记录 `observe_only: true`（T3 首周默认）写入 `notes`</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ### Step 1 — 逐票检查 execution_pool（对照 auction_expectation 三档）</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+先独立展示原预案禁新仓/零预算/未就绪与 P1 修订状态：任一禁令、权威预案校验失败、超时/未完成时，不凭快照、档位、briefing 或 promote 文本新增授权，表内动作只能作观察参考。partial 保留有效报价并逐项列缺口；无有效竞价价或昨收时不填0、不推断符合预期。空 items 只代表未列修订，不代表逐票通过；研究观察不自动升级开仓权限。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 对每只 `execution_pool` 票，读其 `entry_rules.auction_expectation`（2026-09-17 起每票必填），用 snapshot 竞价价机械对照：</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -215,14 +217,14 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ## Pitfalls（2026-09-22 实战）</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 1. **三档表真实位置是票顶层，不是 `entry_rules[0].auction_expectation`**：D1 主路径输出里每只 execution 票顶层就有 `auction_expectation`（base_close/expected_open_band/bands）。消费侧（P1 / render_auction_judgment）必须先读票顶层，entry_rules 内嵌只作回退。只查 entry_rules 会误判 `auction_expectation_missing`。</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-2. **D1 主路径完整 json 常落在 `data/runtime/watchlist_plan_YYYYMMDD.json`，漏拷契约路径 `data/plans/YYYYMMDD/watchlist_plan.json`**；而 08:30 安全网 fallback 已在契约路径落了空池规则版（`meta.python_fallback: true` / agent_name 含 &quot;rule v1&quot;）。09:27 快照、09:28 P1、渲染器只认契约路径 → 全读到空池 → &quot;无执行池&quot;。修法：统一走 `src/plan/plan_resolver.resolve_authoritative_plan(date)`——契约路径是 fallback 且 runtime 有更新的非 fallback json 时自动同步；快照 `_read_plan` 已接入（09:27 是 P1 前的同步窗口）。</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+2. **权威源与副本单向交接**：统一调用 `src/plan/plan_resolver.resolve_authoritative_plan(date)`，只读经交易日与现有 schema/安全旗标校验的正式 `data/plans/YYYYMMDD/watchlist_plan.json`。缺失/非法时如实拒绝；runtime 不反写、不补缺、不替换正式源，`sync` 参数只兼容、不恢复旧同步行为。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 3. **user_briefing 为 null 是常态**（只有大面积异常才填）；渲染器不得在 null 时吐“竞价与预案对照完毕，按三档执行”这种空话，要基于 execution_pool 生成有信息量的结论（无执行池＝明写“无买点，空仓”）。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 4. **pitfall #2 仍会复发（2026-09-23 实测）**：09:27 快照仍读了契约路径 fallback 版（pool_auction 只有 fallback 的 9 只 watch 票，不含 runtime 主路径 execution_pool 4 票）。P1 不能假设快照覆盖执行池——逐票对照前先比对 snapshot.pool_auction 的 ts_code 集合与权威 plan execution_pool；缺口票直接用 XTick `xtick_auction_detail(code, tradeDate)` 取 09:25 结算竞价补齐（单票一次调用，4 票可并行）。</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-5b. **渲染脚本也读契约路径 → 空池误导（2026-09-24 实测）**：pitfall#2 复发时 render_auction_judgment.py 同样读契约路径 fallback，md 显示&quot;（无执行池）&quot;，即使权威 plan 有执行池。P1 落盘后必须检查渲染出的 md：执行池段为空而权威 plan 非空 → 用 patch 补入逐票判定表（竞价价/昨收/溢价/档位/动作），否则用户开盘看到空话。渲染器长期修法=接入 plan_resolver.resolve_authoritative_plan。</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-5d. **renderer 在 timeout 修订下逐票写&quot;无修订（符合预期或未触发）&quot;=误导（2026-09-28 实测）**：amendment items=[] 时 render_auction_judgment.py 对每只执行池票默认写&quot;P1 判定: 无修订（符合预期或未触发）&quot;，读者会误以为竞价落在预期档。实际是竞价价缺失、P1 超时。timeout 落盘后必须 patch 掉这 3 行（改&quot;⚠️ P1 超时未产出，竞价价缺失，开盘后按真实开盘价对照三档表执行&quot;），否则用户开盘看到假判定。</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+5b. **人读与机读使用同一权威预案**：渲染器也走只读 resolver；拒绝后不得裸读或从 runtime 恢复。实际缺交付记缺交付，不手工拼造与正式源不一致的执行表。</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+5d. **超时/缺价不得假判通过**：顶部与逐票显示无有效修订、报价缺失和无新仓授权；已有三档仅供观察，不写“符合预期/按档执行”。空 items 不作通过证明，不事后补写有效修订。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 7. **后缀不匹配=拿着答案误判未覆盖（2026-09-28 timeout 真根因）**：快照 pool_auction 实际含执行池3票且竞价价齐全，但快照 ts_code 无后缀（000592）、plan 带 .SZ 后缀（000592.SZ），P1 字符串比对失败误判&quot;未覆盖&quot;，逐票 XTick 补数拖到09:29:22超硬窗口。P1 覆盖率比对必须统一 bare code（去后缀）再比较集合；fetch 已改为保留后缀输出、code=all 单次抓全（0.8s），正常情况下无需补数。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 5c. **cron 环境 execute_code 被禁（2026-09-24 实测）**：`execute_code` 在 cron 模式直接 BLOCKED（&quot;Cron jobs run without a user present to approve it&quot;），浪费窗口内一轮调用。P1 全流程禁用 execute_code，JSON 提取一律用 terminal 单行 `python3 -c` + read_file。今天因此超时 12s → timeout_no_amendment。</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="error">-5e. **cron 安全扫描器连嵌套 `python3 -c` 也拦（2026-10-13 实测，整窗报废）**：cron 模式不仅禁 execute_code，`terminal` 里带引号嵌套的 `python3 -c &quot;import json; ...&quot;` 也被 Tirith 安全扫描 BLOCKED（&quot;Nested executable body could not be resolved&quot;），连续两次拦截直接烧掉 09:28-09:29 硬窗口 → timeout_no_amendment。P1 在 cron 下**唯一安全姿势=先 write_file 写脚本再 terminal 执行**（普通 `python3 xxx.py` 不拦）；所有 JSON 提取/落盘都走脚本文件，禁止任何内联 python。若已过 09:29：立即落 timeout_no_amendment（含 notes 记录已核事实），渲染 md 后人工补事实判定行（如&quot;竞价 2.78 落符合预期档→按预案回踩 2.72&quot;），勿再等数据。</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="string">+5e. **cron 安全扫描器连嵌套 `python3 -c` 也拦（2026-10-13 实测，整窗报废）**：cron 模式不仅禁 execute_code，`terminal` 里带引号嵌套的 `python3 -c &quot;import json; ...&quot;` 也被 Tirith 安全扫描 BLOCKED（&quot;Nested executable body could not be resolved&quot;），连续两次拦截直接烧掉 09:28-09:29 硬窗口 → timeout_no_amendment。P1 在 cron 下**唯一安全姿势=先 write_file 写脚本再 terminal 执行**（普通 `python3 xxx.py` 不拦）；所有 JSON 提取/落盘都走脚本文件，禁止任何内联 python。若已过 09:29：立即落 timeout_no_amendment（含 notes 记录已核事实），渲染 md 仅补已核实竞价事实与缺口，并标“超时、无有效修订、仅供观察”；不得事后补成有效落档或买入动作，勿再等数据。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 5f. **read_file 读大 JSON 也烧窗口（2026-10-15 实测）**：plan(753行)+snapshot(1481行)+昨日schema+渲染脚本轮番 read_file 共 4-5 轮，把 09:28-09:29 窗口烧到 09:30 才落盘 → timeout。P1 的提取必须一个脚本搞定：write_file 写 `extract_p1.py`（只打印所需字段：执行池 ts_code/name/top层 auction_expectation base_close/expected_open_band/bands action、snapshot 对票竞价价/premium/base_close 一致性、orchestrator_status），一次 terminal 执行打印全部，再根据输出决定判定。禁止用 read_file 顺序读多个大 JSON。需要参照 schema 时读历史 amendment 用 read_file（小文件可）。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 5g. **date+发现性 ls 必须并入提取脚本，写 status 前先看钟（2026-10-16 实测，超窗 2.5min）**：cron 09:28:55 启动，首轮 ls/find 发现 + 提取脚本 + 先写 complete 再核钟改 timeout 双写，落盘 09:31:32。教训：①提取脚本第一步就打印 `date` 与各输入文件存在性，禁止先 ls 再写脚本；②`head -n` 截断会砍掉脚本尾部关键字段（orchestrator_status 被 head -120 截掉→被迫多一轮 read_file）——关键字段放输出最前面，或干脆不 head；③落盘前先看 date，已过 09:29 直接写 timeout_no_amendment，别先写 complete 再重写（每次 write_file 都是 ~2s+ 排队）。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 6. **plan base_close 可能过期（2026-09-23 实测）**：D1 规则版对 300324（base 17.24→实际昨收 4.14）、601811（14.14→16.82）用了过期参考价，整张 auction_expectation 三档表失效。P1 逐票先拿 XTick detail 的 `close` 字段与 plan `auction_expectation.base_close` 比对，不一致时以 XTick/Tushare 为准重判档位，并在 notes 标注 `base_close_stale`（E1 计 D1 参考价合规率）。渲染器会把过期 base_close 写进 md 表头——P1 判定行必须自带真实价纠正。</span></span>
+<span data-line><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;" data-token-type="punctuation">--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_auction_snapshot_v1/SKILL.md</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="punctuation">+++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_auction_snapshot_v1/SKILL.md</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#B392F0;--shiki-dark-font-weight:bold;" data-token-type="punctuation">@@ -74,9 +74,9 @@</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span></code></pre></figure>
+<p>【fetch_auction_snapshot_v1 · YYYYMMDD】<br/>
+-status: {ok|stub|skipped}<br/>
++status: {ok|partial|stub|skipped}<br/>
+severity: {0-3}<br/>
+-source: {xtick|stub|none}<br/>
++source: {tushare_stk_auction|xtick|stub|none}<br/>
+pool_count: {N}<br/>
+captured_at: {ISO8601}</p>
+<p>@@ -92,7 +92,8 @@</p>
+<pre><code>
+**severity 解读**:
+-- `0` + `status=ok` → P1 正常读取
++- `0` + `status=ok` → 可读取；只证明快照质量，不证明逐票可交易
++- `1` + `status=partial` → 保留有效行/字段，逐项展示质量缺口；不是全源不可用。报价及情绪均缺失才按现有实现 stub/severity=2；不得以缺失填0洗成ok。
+- `2` + `status=stub` → P1 可尝试 XTick MCP 补一次；仍失败则无 amendment
+- plan 缺失 `skipped` → P1 仍运行但无 pool 名单（由 P1 降级）
+
+@@ -125,9 +126,9 @@
+  &quot;schema_version&quot;: &quot;auction_snapshot_v1&quot;,
+  &quot;trade_date&quot;: &quot;YYYYMMDD&quot;,
+  &quot;captured_at&quot;: &quot;ISO8601+08:00&quot;,
+-  &quot;market_sentiment&quot;: {&quot;limit_up_count&quot;: 0, &quot;limit_down_count&quot;: 0, &quot;up_down_ratio&quot;: 0},
++  &quot;market_sentiment&quot;: {&quot;limit_up_count&quot;: null, &quot;limit_down_count&quot;: null, &quot;up_down_ratio&quot;: null},
+  &quot;pool_auction&quot;: [
+-    {&quot;ts_code&quot;: &quot;&quot;, &quot;auction_price&quot;: 0, &quot;prev_close&quot;: 0, &quot;premium_pct&quot;: 0, &quot;auction_volume&quot;: 0, &quot;auction_amount&quot;: 0}
++    {&quot;ts_code&quot;: &quot;&quot;, &quot;auction_price&quot;: null, &quot;prev_close&quot;: null, &quot;premium_pct&quot;: null, &quot;auction_volume&quot;: null, &quot;auction_amount&quot;: null}
+  ],
+  &quot;severity&quot;: 0,
+  &quot;status&quot;: &quot;ok&quot;,
+@@ -136,6 +137,10 @@
+</code></pre>
+<h2 id="rules--constraints">Rules &amp; Constraints<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rules--constraints" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li></li>
+</ul>
+<p>+- 无价/无昨收/非有限数 → 对应字段 null 并记缺失原因，不用0占位；有效正报价与昨收才算溢价，真实0收益有效。严格 JSON 禁 NaN/Infinity。<br/>
++- 篮子按唯一标的分别展示 <code>requested_count</code> / <code>valid_count</code> / <code>missing_count</code> / <code>coverage_ratio</code>，均溢价仅用有效样本；兼容字段 <code>n</code> 表示有效数，不拿请求数冒充有效数。<br/>
++- XTick <code>jjl</code> 仅作成功率，不当成交亿元；独立情绪成交额字段及单位未确认时 <code>auction_volume_yi=null</code>。XTick 原始 <code>jje</code> 保留但不猜单位；Tushare 已确认 amount 以元标 CNY。</p>
+<ul>
+<li>必须在 <strong>09:28:00</strong> 前完成落盘（P1 09:28 启动即读取；竞价数据 09:27 才到，勿早跑）</li>
+<li>纯 Python subprocess；Agent 只 report<br/>
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md<br/>
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md<br/>
+@@ -30,7 +30,7 @@<br/>
+|------|---------|<br/>
+| 08:00（盘前批次） | 同日 <code>data/research/YYYYMMDD/research_summary.json</code> 已存在且 <code>orchestrator_status</code> ≠ <code>failed</code> |</li>
+</ul>
+<p>-若 research 主控未完成，<strong>拒绝出 plan</strong>，告警用户，不写半成品 JSON。<br/>
++若 research 主控未完成，告警并保留未完成事实；缺少必需输入/校验失败仍拒绝写 plan，不拼造半成品。若现有安全校验允许发布未就绪 LLM 临时版，必须完整符合安全发布字段与重评契约（见 Step 3.5.8），只能 dry_run/禁新仓，不视为研究完成或最终裁决。</p>
+<hr/>
+<p>@@ -129,7 +129,7 @@<br/>
+|------|---------|----------------|------|<br/>
+| <code>main_up</code> 主升 | 猛干龙头，任何位置进都对 | 龙头/龙二满配 | 按 R1 cap 上限执行 |<br/>
+| <code>high_chop</code> 高位震荡 | 落袋为安，控仓；只做龙头分歧低吸或低位补涨 | 减半，只留最强主线 | cap × 0.75 |<br/>
+-| <code>main_down</code> 主跌 | 空仓/切换新题材一日游；连跌2天尾盘试错 | <strong>≤2 只</strong>或空 | cap × 0.4，或 mode=no_trade |<br/>
++| <code>main_down</code> 主跌 | 空仓/切换新题材一日游；连跌2天尾盘试错 | <strong>≤2 只</strong>或空 | cap × 0.4，或 mode=dry_run 且 no_trade=true |<br/>
+| <code>low_test</code> 低位试错 | 打首板/低位补涨，轻仓试错 | 小仓试错 | cap × 0.5 |</p>
+<pre><code>- **优先级**: 本四阶段 > Step 0.5 的 7 阶段（7 阶段偏描述性，四阶段直接给操作）。两者冲突时以四阶段为准
+</code></pre>
+<p>@@ -332,7 +332,9 @@<br/>
+09:20 再跑也不重建 → 全链一整天读陈旧空池。</p>
+<p><strong>规则</strong>：安全网判幂等时，除”文件存在”外还必须校验<strong>兜底 plan 是否早于<br/>
+-关键上游（R5/R6）落盘</strong>；若是则用完整上游重建。LLM 主路径产物一律不覆盖。<br/>
++关键上游（R5/R6）落盘**；若是则用完整上游重建。完整、已评估的合法 LLM 决策（含 no_trade/空执行池）不得被兜底覆盖，<code>--force</code> 也不例外。<br/>
++<br/>
++<strong>交付完成 ≠ 研究就绪 ≠ 可交易</strong>：未就绪 LLM 版可按现有校验安全发布，但须显式 <code>production_ready: false</code>、<code>research_completion_passed: false</code>、<code>reassessment_required: true</code>，保持 <code>mode: dry_run</code>、<code>autonomous_trading_enabled: false</code>、<code>requires_user_confirmation: true</code>；不能因文件存在、LLM 来源、交付 completed 或执行池为空而免除重评。研究刷新归研究 owner，D1 重评归计划 owner；安全网不代跑 R1–R7、不切模型、不抬有效零预算。现有重评实现只在 R1–R7 与 summary 均晚于未就绪预案、日期/路径/已有 run_id 一致且显式未就绪标记已解除后重试 D1；缺新批次或重评仍未完成时保留未完成状态并非零返回，不以 Python 规则覆盖。<code>production_ready=true</code> 也不构成 live/开仓授权。生产窗口和刷新触发待用户另签。</p>
+<h3 id="step-36--战术层短线信号2026-09-04-新增--硬闸门--v17">Step 3.6 — 战术层短线信号(2026-09-04 新增 · 硬闸门 · v1.7)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-36--战术层短线信号2026-09-04-新增--硬闸门--v17" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>@@ -1206,7 +1208,7 @@</p>
+<p><strong>硬约束</strong>:</p>
+<ul>
+<li><code>no_trade_conditions</code> 必须存在(即使全部 <code>active: false</code>)<br/>
+— 任一 <code>active: true</code> → D1 输出 <code>mode: &quot;no_trade&quot;</code>,<code>autonomous_trading_enabled: false</code>,<code>execution_pool: []</code>,<code>watch_pool: []</code>(全空)<br/>
++- 任一 <code>active: true</code> → D1 输出 <code>mode: &quot;dry_run&quot;</code>、独立 <code>no_trade: true</code>、<code>autonomous_trading_enabled: false</code>、<code>requires_user_confirmation: true</code>、<code>execution_pool: []</code>、<code>watch_pool: []</code>（本行暂保留原清观察限制；是否保留研究观察由 B 包单独签核）。<code>mode</code> 只表示执行环境，不新增 <code>no_trade</code> 枚举；不得删除禁令来通过 schema。</li>
+<li>plan.md <strong>必须</strong>在顶部展示”不交易条件清单 + 当前 active 项”(便于用户 review)</li>
+</ul>
+<p><strong>降级</strong>:<br/>
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/research_orchestrator_v1/SKILL.md<br/>
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/research_orchestrator_v1/SKILL.md<br/>
+@@ -148,7 +148,7 @@</p>
+<p><strong>R6 特殊</strong>: 从 <code>R6_devil_advocate.json</code> 提取 <code>severity: hard_reject</code> 条目 → 填入 <code>hard_rejects[]</code>（schema 见 <code>docs/10-契约-研究汇总.md</code> §4）。</p>
+<p>-<strong>Fallback（T1’ 软降级）</strong>: 某 R* 失败时可读 <strong>昨日</strong> 同路径 artifact 作替代，<code>confidence=0</code>，<code>timeouts</code> 标注 — <strong>不</strong>调用 Python <code>src/research/r*.py</code>。<br/>
++<strong>Fallback（T1’ 软降级）</strong>: 昨日 artifact 仅可显式作为历史参考，不冒充本次研究完成；本次未评价的 <code>confidence=null</code>，真实评价为零时保留 <code>0.0</code>，并标注原日期、缺口与 <code>timeouts</code> — <strong>不</strong>调用 Python <code>src/research/r*.py</code>。交付 completed 与研究就绪分别核验；未就绪版保留研究 owner 的刷新义务，不能由安全网自行代跑研究。</p>
+<h3 id="step-5--写-research_summaryjson">Step 5 · 写 research_summary.json<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-5--写-research_summaryjson" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>@@ -173,7 +173,7 @@<br/>
+“R6”: “data/research/YYYYMMDD/R6_devil_advocate.json”,<br/>
+“R7”: “data/research/YYYYMMDD/R7_capital_flow.json”<br/>
+},</p>
+<ul>
+<li>“confidence”: {“R1”: 0.0, “R2”: 0.0, “R3”: 0.0, “R4”: 0.0, “R5”: 0.0, “R6”: 0.0, “R7”: 0.0},</li>
+</ul>
+<ul>
+<li>
+<p>“confidence”: {“R1”: null, “R2”: null, “R3”: null, “R4”: null, “R5”: null, “R6”: null, “R7”: null},<br/>
+“hard_rejects”: [],<br/>
+“timeouts”: [],<br/>
+“completed_by”: “08:00”<br/>
+@@ -281,7 +281,7 @@<br/>
+| 场景 | 行为 |<br/>
+|------|------|<br/>
+| manifest 缺失 | <code>orchestrator_status=failed</code>，不写 summary，告警 |<br/>
+-| 单 R* 超时 | 昨日 artifact + <code>confidence=0</code> + <code>timeouts</code> |<br/>
++| 单 R* 超时 | 昨日 artifact 仅标历史参考；本次未评价 <code>confidence=null</code>，保留 <code>timeouts</code> 与原日期；不冒充本次完成 |<br/>
+| R6 超时 | D1 视为「无反证」保守处理；<strong>不可</strong>自行放宽 R6 约束 |<br/>
+| Hermes delegation 全失败 | 告警 + 空池；<strong>不</strong>跑 Python orchestrator（T1’ 冻结） |<br/>
+| <strong>LLM quota 超限</strong> | 保留已验证研究并明确失败单元、实际错误与可恢复状态；D1 交由计划端及已授权安全网处理，研究端不写计划/触发价，不自动切换模型 |<br/>
+--- /Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_md_namespace.py<br/>
++++ /Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_md_namespace.py<br/>
+@@ -96,6 +96,9 @@<br/>
+if not m:<br/>
+return []  # 没有 confidence 字段也不报错（不是所有 md 都有）<br/>
+conf_str = m.group(1)</p>
+</li>
+<li></li>
+<li>
+<p>if isinstance(conf_str, str) and conf_str.strip().lower() in {“null”, ”~”}:</p>
+</li>
+<li>
+<pre><code>   return []  # 未评价，不按数值零校验；不代表研究或交易门禁通过
+</code></pre>
+<p>try:<br/>
+confidence = float(conf_str)</p>
+</li>
+</ul>
+<pre><code>
+## 5. B 包：需单独签核的研究资格/业务门禁语义差异
+
+这不是“保证给票”：允许真空池、允许保持 no_trade；只是避免禁交易变成无法继续研究和重评。保留原仓位常数，不新增固定打法映射。取消“阶段自动给至少3%参与”的保底额度是显式的业务语义收紧，非暗调仓位阈值。R2 20/50 亿按当前用户原则提案，不把旧50亿硬门槛藏在实现同步包。
+
+```diff
+--- /Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md
++++ /Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md
+@@ -32,8 +32,8 @@
+ D1 出盘前预案是整套系统的**决断点**。心法不是参考,是**思考顺序**。
+ 
+ ### D1 必走的 5 步决策(纪律 §9 强制)
+-1. **情绪阶段 → 仓位上限**:调 `@emotion_cycle_v1` 取 phase→position_cap(主升满配 / 震荡压半 / 主跌仅试仓)
+-2. **主线候选 → 总龙 → 补涨**:调 `@mainline_lifecycle_v1` 取 stage→可选 stage(启动/主升早中/高潮/退潮),不在主升段的不进 execution
++1. **阶段只定温度**:读 `@emotion_cycle_v1` 与已批准仓位上限，不预设“阶段→打法/通道”；阶段不自动授权或停止研究，既有禁新仓与有效零预算优先。
++2. **主线研究候选 → 核心身位 → 资金确认**:读 `@mainline_lifecycle_v1` 作为风险背景，按当日赚钱效应动态选择通道；研究就绪不等于可交易，非主升阶段不自动清研究观察池。主跌转修复只研究新题材首板/二板、不接高位老龙，所有开仓仍须独立通过原门禁。
+ 3. **每只 execution 票 → Step 3.6 四闸门**(2026-09-04 新):
+    - 关1 核心判定(`@core_judge_v1`) → 共振/逆势抱团 → leader/core/laggard/watch 四档
+    - 关2 盈亏比(`@risk_reward_v1`) → RR&lt;1 拒绝,1-2 试仓,2-3 正常,≥3 主仓
+--- /Users/chenyang/.hermes/profiles/canghai-research/SOUL.md
++++ /Users/chenyang/.hermes/profiles/canghai-research/SOUL.md
+@@ -51,8 +51,8 @@
+ 4. **今天计划做什么、不做什么？** 计划外不出手。
+ 
+ ### 思考顺序铁律（每次 R* 输出前必走一遍，违反即重写）
+-1. **先认市场，再认个股** — 没有主线 / 风格 / 赚钱效应，不准进 R2/R5 选股环节。
+-2. **段位决定能做什么** — 主跌期降维（只输出观察，不输出候选），高位震荡压仓（中位股剔除）。
++1. **先认市场，再认个股** — 没有已确认可交易主线 / 风格 / 赚钱效应时，不授予开仓资格；R2/R4 仍须按已有证据筛选研究观察对象，R5 对真实研究候选画像，不因禁新仓停止研究。无合格对象允许为空，必须列覆盖、剔除与缺口，不为数量造票。
++2. **阶段只定温度，不预设固定打法** — 按当日赚钱效应与资金确认动态选择通道，主跌转修复聚焦新题材首板/二板、不接高位老龙；低吸是强势票相对涨停价仍低，不是抄底。研究候选与可交易候选分层记录；研究观察不构成开仓权限，现有预算、否决与逐票门禁仍独立生效。
+ 3. **只有龙头或低位，躲中位和杂毛** — R2 输出必须显式标 `rank ∈ {龙头, 龙二, 龙三}` + `rank=杂毛` 的剔除理由。
+ 4. **盈亏比优先于胜率** — 候选票如果止损距 &lt; 5% 或 RR &lt; 2，必须降级 watch，不能进 execution。
+ 5. **计划外不出手** — R4/R5 输出的&quot;机会&quot;必须回答：它是今日核心 / 主线补涨 / 计划内试错 中的哪一种。都不是，剔除。
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/_archive/filter_leader_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/_archive/filter_leader_v1/SKILL.md
+@@ -56,7 +56,7 @@
+ ### 龙三及以下
+ 
+ - `leader_rank: filtered_out`  
+-- **不进 execution_pool**（除非后续 R6 对龙一 `hard_reject` 需替补 — 本 skill **只标注** `backup_eligible: true`，**不**决定 D1 是否启用）
++- **不进 execution_pool**；后续 R6 对龙一 `hard_reject` 也不自动产生替补资格，不为候选数量把龙三/杂毛升位。可保留研究观察及否决理由，不能以 `backup_eligible` 绕过原否决
+ 
+ ### 杂毛过滤 `filter_out_rules`
+ 
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md
+@@ -107,7 +107,7 @@
+ 仅命中 (1) 未确认 (2) → 降级为 **`strong_suggest`**（D1 须显式处理，可覆盖）。
+ 
+ **否决后的出口(v1.2 · 2026-10-19 用户钦定, 取代&quot;红线3保护&quot;)**:
+-- 龙一被 hard/strong 否决后,合法出口只有两个: ①execution_pool 为空(附理由) ②保留龙一并标注&quot;等分歧买点&quot;
++- 龙一被 hard_reject 后只能从 execution_pool 剔除，可留研究观察并记录禁令/空池理由；不得以“等分歧买点”保留执行资格。strong_suggest 仍按原有显式处理/覆盖契约，不自动视为通过；不为数量递补杂毛
+ - ❌ **禁止用龙二/弹性核心/低位补涨票降级替补**——杂毛失去板块β时风险>龙头,补涨票不得因龙头被否而升位
+ - 已删除旧规则&quot;候选&lt;3只时hard_reject自动降级为strong_suggest&quot;——该规则逼系统凑数,是辨识度问题的制度根源
+ - 否决&quot;高位/一致&quot;龙一必须同时给出具体证据(霸榜出货/资金净流出/身位崩塌),不得只因位置高就否决
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_main_sectors_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_main_sectors_v1/SKILL.md
+@@ -107,7 +107,7 @@
+ 
+ ### Step 1 · 读上游 + 定主线数量上限
+ 
+-- 读 R1：`main_lines_count` 与 `style` 约束今日主线条数（防御/退潮风格 → 倾向 0–1 条或只做最强一条）
++- 读 R1：`main_lines_count` 与 `style` 作为市场温度和交易约束输入；不能据此停止研究或预先清空研究观察对象。分别记录已确认可交易主线与待资金确认的研究方向；真实无合格对象允许空，不用研究方向冒充已确认主线。
+ - 读 R3：`resonance_top_themes` 中 `L1+L2+L3` / `L1+L2` 主题优先
+ - 读 R4：`sectors_catalyzed` 中 `strength=high` 板块加权
+ - 读 R7：资金净流入前十板块
+@@ -163,14 +163,14 @@
+ 2. `@hithink-market-query` / Tushare moneyflow：主力资金流入 top5  
+ 3. 近 5 日龙虎榜频次（`top_list`）  
+ 4. 连板高度（`limit_step`）  
+-5. 流通市值 ≥ 50 亿；排除 ST/退市/风险警示  
+-6. `@iwencai-query` 可选验证：「{板块名} 涨停 连板高度 市值大于50亿」  
++5. 流通市值 &lt;20 亿不看；20–50 亿警惕但不刻意回避，逐票注明风险与依据；排除 ST/退市/风险警示，缺市值不伪造合格  
++6. `@iwencai-query` 可选验证：「{板块名} 涨停 连板高度 流通市值不低于20亿」；返回字段及单位须核验  
+ 
+ **板块前缀规则（2026-08-16 更新）**：300（创业板）/ 688（科创板）与主板**同权参与**龙一/龙二/中军竞争，**不得**因前缀自动降级为候补或加&quot;需过滤&quot;标注。仅 920（北交所）因流动性问题不进执行池推荐。20cm 票可按弹性角色（如&quot;弹性龙二&quot;）标注，但前缀本身不构成扣分项。
+ 
+ 输出 `leaders[]`：`role` = 龙一/龙二/候补，`ts_code`, `name`, `pct_chg`, `limit_times`, `selection_basis`。
+ 
+-**本步产出的是候选池**；最终 execution 资格由 `filter_leader_v1` 裁定。
++**本步产出的是研究候选池**；`filter_leader_v1` 仅标龙头层级与执行前置资格，不是最终交易许可。禁新仓/零预算时保留有证据的研究观察对象并标仅研究；R5 仍可画像，R6 完整性门槛不变。最终开仓须由 D1 与执行侧逐票通过既有门禁及授权，无对象不凑数。
+ 
+ ### Step 4.4 · 主线生命周期判定（2026-09-04 新增 · `@mainline_lifecycle_v1`）
+ 
+@@ -188,7 +188,7 @@
+ 写入每条主线的 `stage` / `stage_name` / `stage_action` 字段（`formation`/`early_up`/`mid_up`/`climax`/`fade`）。
+ 
+ **联动规则（治&quot;一日游&quot;）**：
+-- `early_up`（主升早期）→ 最高优先级主线，龙头/龙二进 execution_pool
++- `early_up`（主升早期）→ 优先研究龙头/龙二；进入 execution_pool 仍须 D1 独立核验全部交易门禁，阶段不能自动授权
+ - `mid_up` → 可做，龙头分歧低吸或后排补涨，控仓
+ - `climax`（高潮分歧）→ **只做龙头或空仓等分歧**，禁追高缩量一字
+ - `fade`（退潮反抽）→ **降级次线**，不进主线主推；除非情绪周期=主升（超跌反弹博反抽）
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_stock_profile_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_stock_profile_v1/SKILL.md
+@@ -229,7 +229,7 @@
+ 
+ ## 降级
+ 
+-- R2 无候选 → `status: skipped`, `profiles: []`  
++- R2 经核验确无研究候选 → `status: skipped`, `profiles: []`，说明覆盖与空池原因；禁新仓/零预算本身不是“无研究候选”。存在真实研究观察对象时继续画像，但不因此取得 execution 资格  
+ - 单票 MCP 失败 → 该票 `partial: true`, 不阻塞其余票
+ - 档位确实无法判定 → 显式写 `&quot;B&quot;` 并在 `flags` 标注 `grade_defaulted`，
+   **不得留空**（留空会触发 D1 侧降级路径，掩盖真实风险）
+@@ -364,11 +364,12 @@
+     seen = {c[&quot;ts_code&quot;] for c in candidates}
+     supplement = [s for s in supplement if s[&quot;ts_code&quot;] not in seen]
+     supplement.sort(key=lambda x: x[&quot;r2_score&quot;], reverse=True)
+-    need = 5 - len(candidates)  # 至少保证 candidates >= 5
++    # 仅补有研究价值且未命中硬否决的真实对象；5只是扩池目标，不是最低配额
++    need = max(0, 5 - len(candidates))
+     candidates.extend(supplement[:need])
+ 
+-# 终态:candidates >= 5(若仍不够,记录 r2_expand_shortfall 到 JSON,告警)
+-assert len(candidates) >= 5, f&quot;R5 candidate pool short: {len(candidates)} &lt; 5&quot;
++# 不足目标如实记录覆盖/剔除/缺口；真实空池允许 skipped，不绕否决、不凑数
++# 研究扩池不产生开仓权限；后续R6完整性和D1逐票门禁保持不变
+</code></pre>
+<p><strong>消费契约</strong>:<br/>
+@@ -380,7 +381,7 @@</p>
+<ul>
+<li><code>R2_main_sectors.json</code> 缺失 <code>all_scored_boards_top10</code> 字段 → 视为 R2 schema 降级,本次跳过扩池,记录 <code>r2_schema_missing_top10=true</code> 到 R5 JSON 顶层,供 E1 复盘统计</li>
+</ul>
+<p><strong>验收</strong>:<br/>
+— 盘后脚本 <code>tests/check_r5_candidate_pool.py</code> 必须通过(本 skill 在 §Rules 增加红线 11: R5 候选池 &lt; 5 → <code>status: partial</code>)<br/>
++- 验收按实际研究候选覆盖与缺口，不将未凑够5只本身判画像失败；真实空池须有 R2 证据，非空候选仍核数量/降级标记。不得为通过数量检查解除否决；对应检查器需先确认是否存在及与当前 contract_checks 一致，未验不得自报通过</p>
+<hr/>
+<p>--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md<br/>
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md<br/>
+@@ -99,7 +99,7 @@<br/>
+- 若 <code>data/research/YYYYMMDD/emotion_cycle.json</code> 已存在（由 <code>compute_cycle_metrics.py</code> 预计算），直接消费<br/>
+2. 把阶段写入 R1 产出新字段：<br/>
+- <code>emotion_cycle_phase</code>: <code>low_test</code> / <code>main_up</code> / <code>high_chop</code> / <code>main_down</code></p>
+<ul>
+<li>
+<ul>
+<li><code>emotion_cycle_action</code>: 该阶段该做什么（主升猛干龙头 / 震荡控仓做补涨 / 主跌空仓）</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<ul>
+<li><code>emotion_cycle_action</code>: 仅说明市场温度、原仓位约束与待验证风险；不得写固定“阶段→打法/通道”或要求停止研究。通道由 D1 按当日赚钱效应与资金确认动态选择，禁新仓不等于清研究观察</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><strong>联动规则</strong>（与 3.1 风格分类互相校验）：
+<ul>
+<li>风格=崩溃退潮型 且 阶段=主跌 → 双确认，仓位下限压到最低</li>
+<li>风格=连板情绪型 但 阶段=高位震荡（炸板率>25% 未反映在风格表里）→ <strong>以情绪周期阶段为准</strong>，下调仓位上限（风格表只看涨停/高度，会漏掉炸板率>40%的分歧）<br/>
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md<br/>
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md<br/>
+@@ -123,16 +123,16 @@<br/>
+2.5. <strong>情绪周期四阶段定位（硬接入 · v1.7 · 2026-09-04 新增 · <code>@emotion_cycle_v1</code>）</strong>：</li>
+<li>读 <code>data/research/YYYYMMDD/emotion_cycle.json</code>（由 <code>compute_cycle_metrics.py</code> 预计算）或调 <code>@emotion_cycle_v1</code> 现场算</li>
+<li>四阶段：<code>low_test</code> 低位试错 / <code>main_up</code> 主升 / <code>high_chop</code> 高位震荡 / <code>main_down</code> 主跌</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<ul>
+<li><strong>阶段 → 该做什么（硬规则，写入 plan）</strong>：</li>
+</ul>
+</li>
+<li></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>-</th><th>阶段</th><th>该做什么</th><th>execution_pool</th><th>仓位</th></tr></thead><tbody><tr><td>-</td><td><code>main_up</code> 主升</td><td>猛干龙头，任何位置进都对</td><td>龙头/龙二满配</td><td>按 R1 cap 上限执行</td></tr><tr><td>-</td><td><code>high_chop</code> 高位震荡</td><td>落袋为安，控仓；只做龙头分歧低吸或低位补涨</td><td>减半，只留最强主线</td><td>cap × 0.75</td></tr><tr><td>-</td><td><code>main_down</code> 主跌</td><td>空仓/切换新题材一日游；连跌2天尾盘试错</td><td><strong>≤2 只</strong>或空</td><td>cap × 0.4，或 mode=dry_run 且 no_trade=true</td></tr><tr><td>-</td><td><code>low_test</code> 低位试错</td><td>打首板/低位补涨，轻仓试错</td><td>小仓试错</td><td>cap × 0.5</td></tr></tbody></table></div>
+<ul>
+<li></li>
+<li>
+<ul>
+<li><strong>优先级</strong>: 本四阶段 > Step 0.5 的 7 阶段（7 阶段偏描述性，四阶段直接给操作）。两者冲突时以四阶段为准</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<ul>
+<li><strong>阶段只定温度，不预设打法</strong>：按真实赚钱效应、龙头身位与资金确认动态选择通道；不因阶段自动停止研究或自动授权交易。以下保留原仓位约束数字，仅列温度，不构成开仓许可：</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<p>+| 阶段 | 温度 / 研究要求 | execution_pool | 原仓位约束（不因本提案上调） |<br/>
++|------|------------------|----------------|---------------------------|<br/>
++| <code>main_up</code> 主升 | 研究当前最强核心，不能认为任何位置都可买 | 逐票通过门禁才可入 | 按 R1 cap 上限 |<br/>
++| <code>high_chop</code> 高位震荡 | 核对分歧与承接，不静态锁定打法 | 保留原减量约束 | cap × 0.75 |<br/>
++| <code>main_down</code> 主跌 | 继续研究新题材首板/二板，不能接高位老龙或抄底 | 原 ≤2 只或空；禁新时空 | cap × 0.4；禁新决定另写 no_trade |<br/>
++| <code>low_test</code> 低位试错 | 准备右侧确认剧本，不凭阶段给代码授权 | 小仓仍须独立资格 | cap × 0.5 |<br/>
++</p>
+<ul>
+<li>
+<ul>
+<li><strong>优先级</strong>：阶段用于温度与已有仓位约束，不覆盖全局禁令、R6、逐票资格或用户授权；不把描述性的阶段标签当通道白名单。</li>
+<li>写入 <code>meta.emotion_cycle_phase</code> + <code>meta.emotion_cycle_action</code></li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><strong>跨资产→板块映射</strong>（<code>@大宗商品分析</code> commodity→sector）：<br/>
+@@ -252,7 +252,7 @@
+<ul>
+<li>「基本面亏损 / 资金面弱 / 估值高」→ 只压仓位（如 ≤3%），<strong>禁止</strong>直接把主线龙头降为「只观察不参与」</li>
+<li>唯一硬例外：R6 <code>hard_reject</code>（模式六霸榜出货等）仍不可覆盖</li>
+</ul>
+</li>
+<li><strong>主线龙一/龙二必须至少进 execution_pool（轻仓）或 watch_pool 最高观察级</strong>：</li>
+</ol>
+<ul>
+<li>
+<ul>
+<li>主线 <code>stage=early</code> 且涨停潮启动 → 龙一给最小仓位（≥3%）参与，龙二观察</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<ul>
+<li>主线 <code>stage=early</code> 且涨停潮启动 → 优先完成龙一研究；仅在当日允许新仓且逐票通过全部门禁后由 D1 定仓，无保底参与额度；否则只观察并保留禁令</li>
+<li>龙一一字锁仓买不进 → 顺势切龙二/候补的参与机会，<strong>而不是放弃整条线</strong></li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>本原则写入 <code>meta.mainline_participation_applied</code>，供 E1 复盘核对是否被执行</li>
+</ol>
+<p>@@ -271,7 +271,7 @@<br/>
+- 每板块仅龙一、龙二可进 execution_pool<br/>
+- 龙一：板块涨停家数 top1 <strong>或</strong> 主力 5 日累计 top1 <strong>或</strong> 连板高度 top1<br/>
+- 龙二：板块综合评分 top2</p>
+<ul>
+<li>
+<ul>
+<li>龙三及以下 → watch_pool（除非龙一被 R6 hard_reject，龙二递补）</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<ul>
+<li>龙三及以下 → watch_pool；龙一被 R6 hard_reject 后不得为数量或低位偏好启用龙二/杂毛递补，保留真实否决与空池理由</li>
+<li><strong>杂毛过滤</strong>（满足 ≥2 项即剔除 execution）：主力排名 top3 外、龙虎榜 30 日无机构席位、连板高度 &lt; 龙头-2、换手率 &lt; 板块 median 50%</li>
+</ul>
+</li>
+</ul>
+<ol start="5">
+<li><strong>风险等级</strong>（R5 <code>alpha_grade</code> / <code>risk_grade</code> × position_cap）：
+<ul>
+<li><code>position_cap ≤ 0.4</code>：仅 <code>alpha_grade=A</code> 且 <code>risk_grade≤B</code><br/>
+@@ -293,9 +293,9 @@<br/>
+这与用户三通道体系（打板/强势低吸/跟单）直接冲突：打板是其数据中 64% 胜率的正 α 通道，<br/>
+却在前瞻层被结构性排除。</li>
+</ul>
+</li>
+</ol>
+<h2 id="-规则入口通道由-r1-风格-regime-决定d1_algorithmstep_regime_channels">-<strong>规则</strong>：入口通道由 R1 风格 regime 决定（<code>d1_algorithm.step_regime_channels</code>）：<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-规则入口通道由-r1-风格-regime-决定d1_algorithmstep_regime_channels" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>-| R1 style | 可用通道 | ignition |<br/>
++<strong>规则</strong>：入口通道由当日赚钱效应、龙头结构和资金确认动态选择，不由 R1 阶段或风格机械开关。下表仅保留历史规则实现映射供核对，不再作为 LLM 主路径资格白名单；规则版 <code>d1_algorithm.step_regime_channels</code> 尚未在本提案改动，不能据此宣称实现已统一。所有通道仍受当日禁令、预算、买点与授权约束：<br/>
++<br/>
++| R1 style（历史映射，非许可） | 历史通道示例 | 历史 ignition |<br/>
+|---|---|---|<br/>
+| 连板情绪型 / 主升 | <code>trend_pullback_buy</code> + <code>leader_breakout</code> | ✅ |<br/>
+| 主线扩散型 | <code>trend_pullback_buy</code> + <code>leader_breakout</code> | ❌ |<br/>
+@@ -411,7 +411,7 @@<br/>
+4. 昨日 <code>observation_tracking</code> 中未成交观察票 + 长期主线未启动票（<code>sector_off_line</code>）</p>
+<p>每只须含合法 <code>role</code>（<code>watch</code> / <code>watch_elastic</code>）与 <code>plan_status</code>（<code>watch_pool_only</code> / <code>watch_pool_wait_for_entry</code>）。<br/>
+-<strong>观察池宁多勿漏</strong>：上限 40 只，用于盘中扫描与次日回看，不进 execution、不参与自动交易。<br/>
++<strong>观察池宁多勿漏但不凑数</strong>：原数量范围是覆盖目标，不是硬配额；上限 40 只不变。用于盘中扫描与次日回看，不进 execution、不参与自动交易；有效对象不足时列覆盖、淘汰与数据缺口，允许为空。禁交易时观察及重评义务仍保留。</p>
+<h3 id="step-45--买点推演--t1-博弈2026-09-04-用户方法论--硬要求">Step 4.5 — 买点推演 + T+1 博弈（2026-09-04 用户方法论 · 硬要求）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-45--买点推演--t1-博弈2026-09-04-用户方法论--硬要求" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>@@ -898,7 +898,7 @@<br/>
+| 2 | <strong>禁止 override</strong> R6 <code>hard_reject</code> |<br/>
+| 3 | <code>execution_pool</code> ≤ 5（<code>max_positions</code> 铁律） |<br/>
+| 4 | 单票 <code>max_position_pct</code> ≤ 0.15；单板块 ≤ 0.40；总仓 ≤ position_cap |<br/>
+-| 5 | <code>watch_pool</code> 15–25 只（低于 15 观察对照失效） |<br/>
++| 5 | 观察数量按 Step 4 的真实覆盖记录，原范围是目标不是最低资格；不足或空池必须有覆盖/淘汰/缺口证据，不为凑数绕否决 |<br/>
+| 6 | 每只 execution 须有完整 <code>entry_rules</code> + <code>exit_rules</code>（至少 1 条 <code>stop_loss_break</code>） |<br/>
+| 7 | R6 <code>strong_suggest</code> 覆盖须写 <code>meta.r6_devil_advocate.strong_suggests_overridden[].reason</code> |<br/>
+| 8 | <code>mode</code> 默认 <code>dry_run</code>；用户显式 flip 后才改 <code>live</code> |<br/>
+@@ -1208,7 +1208,7 @@</p>
+<p><strong>硬约束</strong>:</p>
+<ul>
+<li><code>no_trade_conditions</code> 必须存在(即使全部 <code>active: false</code>)<br/>
+— 任一 <code>active: true</code> → D1 输出 <code>mode: &quot;dry_run&quot;</code>、独立 <code>no_trade: true</code>、<code>autonomous_trading_enabled: false</code>、<code>requires_user_confirmation: true</code>、<code>execution_pool: []</code>、<code>watch_pool: []</code>（本行暂保留原清观察限制；是否保留研究观察由 B 包单独签核）。<code>mode</code> 只表示执行环境，不新增 <code>no_trade</code> 枚举；不得删除禁令来通过 schema。<br/>
++- 任一 <code>active: true</code> → D1 输出 <code>mode: &quot;dry_run&quot;</code>、独立 <code>no_trade: true</code>、<code>autonomous_trading_enabled: false</code>、<code>requires_user_confirmation: true</code>、<code>execution_pool: []</code>；不再因禁交易清空研究观察。有真实证据的对象留 <code>watch_pool</code>/<code>research_anchor_only</code>，逐票标仅研究、<code>auto_trade_enabled: false</code>、<code>entry_rules: []</code>，同时列全局禁令与待验证条件；无对象仍可空。<code>mode</code> 只表示执行环境，不新增 <code>no_trade</code> 枚举；不得删除禁令来通过 schema。P1/P2 不得凭观察身份或 promote 自动解禁，须由有权限 owner 独立重评全部原门禁。</li>
+<li>plan.md <strong>必须</strong>在顶部展示”不交易条件清单 + 当前 active 项”(便于用户 review)</li>
+</ul>
+<p><strong>降级</strong>:<br/>
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/short_line_thinking_v1/SKILL.md<br/>
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/short_line_thinking_v1/SKILL.md<br/>
+@@ -203,7 +203,7 @@<br/>
+agent 输出任何”低吸/埋伏/捡便宜/跌出机会”类建议前,必须过 3 问,任一不满足 = 不许给代码,改归类为”抄底”并按负 α 处理:</p>
+<ol>
+<li>这只票今天/明天有没有涨停预期?它是不是主线总龙/补涨龙/低位前排?<br/>
+-2. 当前情绪周期允许开仓吗?(退潮/主跌期:禁止一切低吸,空仓)<br/>
++2. 当前温度、当日禁令与逐票资格允许开仓吗？不按退潮/主跌标签静态禁用强势低吸；低吸≠抄底，须有强势延续、资金确认与涨停预期。禁新仓/零预算仍禁止开仓，只保留研究观察。</li>
+<li>我推荐它的理由是”强势延续”还是”跌多了该反弹”?后者 = 均值回归幻觉,直接否。</li>
+</ol>
+<p><strong>特别警惕时点</strong>:尾盘 14:00 后问”埋伏进去等明天有没有收益”——这是禁止清单 #9 <code>late_speculation</code> + #11 <code>overnight_bad_streak</code> 的组合形态,默认回答是”不买”,除非次日有已核实的硬事件催化 + 竞价确认路径已写明。--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md<br/>
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md<br/>
+@@ -69,7 +69,9 @@<br/>
+15. <code>cover_after_blast</code> — 炸板或买入失败后补仓（必须承认错误离场）<br/>
+16. <code>regulatory_confrontation</code> — 监管信号明确（“给区间”/点名/停牌）后仍博弈相关方向</p>
+<p>-## 四、情绪周期强制切换表（每阶段允许/禁止）<br/>
++## 四、情绪周期温度参考（不作为固定打法/通道许可）<br/>
++<br/>
++阶段只定温度；下表打法为历史示例，不作为静态允许/禁止清单。实际通道由当日赚钱效应、身位与资金确认动态选择；本提案不改表内既有仓位数字或禁止清单，任何全局禁新仓、R6、逐票资格和授权仍优先，研究观察不因此停止。</p>
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>阶段</th><th>允许</th><th>禁止</th><th>仓位档</th></tr></thead></table></div>
+<pre><code>
+## 6. 北向一维缺失：准确原句与可选政策（没有选择、没有放行 diff）
+
+### 6.1 本日事实与矛盾
+
+当前 `data/research/20261023/R7_capital_flow.json` 生成于 `2026-10-23T06:29:07+08:00`，`status=partial`，`staleness_status=unavailable`，`confidence=0.0`；breakdown 保留 `raw_formula_confidence=0.2625`，但 `override=&quot;northbound_unavailable_requires_zero&quot;`。`northbound.status=unavailable`、`net_flow_today=null`，理由是无可信净额语义，不是把净额测成0。主力、龙虎榜/游资、ETF 仍有内容（审计 RULE03/C01），不能称“四源全死”。不将 龙虎榜股通席位代理/持股快照/成交额 偷换成全市场净流入。
+
+当前正式计划 `2026-10-23T06:51:36+08:00` 将 `R7_STALE` 激活，原描述：`R7 staleness_status=unavailable，可靠北向净额缺失，整体资金资格未通过`。另外 MAIN_DOWN、RESEARCH_NOT_PRODUCTION_READY、NO_ELIGIBLE_CANDIDATES 也 active；**即使将来只改北向政策，也不能据此解除其他禁令。**
+
+### `/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_capital_flow_v1/SKILL.md` · L223–L273
+
+原 SHA256：`e82f07cc276651cacaac808faa786ac37a76dc7394b0c94f3b530c378e76ec77`。本节只读引用，未拟改。
+
+```text
+223|
+224|## v1.2 新增 · R7 stale 数据贴今天标签问题修复（P0-2 修复）
+225|
+226|**问题根因**: 2026-08-06 复盘发现 `R7_capital_flow.json` 的 `generated_at = &quot;2026-08-06T07:30:00+08:00&quot;` 但内部 `resolved_trade_date = &quot;20260805&quot;`(T-1 实际交易日),文件名也是 `R7_capital_flow.json`(不带日期)被重生成覆盖。三处时间字段不一致,导致下游 D1/R6 误以为 R7 是 T+0 fresh 数据,实际是 stale 24h 旧数据。
+227|
+228|**v1.2 staleness 契约**(硬约束,新增到 §输出契约 之前):
+229|
+230|```yaml
+231|# R7 落盘前必填的三时间字段
+232|generated_at: &quot;ISO8601+08:00&quot;        # 本次落盘时刻(机器时)
+233|resolved_trade_date: &quot;YYYYMMDD&quot;      # 实际数据归属交易日(可能 = T-1)
+234|staleness_status: ok | partial | stale | unavailable
+235|stale_threshold_hours: 24             # 硬阈值
+236|unavailable_reason: &quot;&quot;                # 当 status=unavailable 时必填
+237|```
+238|
+239|**staleness 计算与状态机**(由 R7 LLM 在写盘前自动算):
+240|
+241|```
+242|# 主口径: 交易日缺口(trading_gap)—— 小时数会误伤周一/长假(64h 的周五数据其实是最新 T-1)
+243|trading_gap = trade_date 与 resolved_trade_date 之间的「交易日」间隔
+244|             (0 = T-1 或当日 → 数据就是最新可得; 1 = T-2 缺一档; 2 = T-3 缺两档; ...)
+245|# 用 tushare trade_cal(或 manifest 可见的最早交易日)数交易日, 不算自然日/周末
+246|
+247|if trading_gap &lt;= 0:     status = &quot;ok&quot;        # 周一盘前用上周五数据 = 正常, 绝非 stale
+248|elif trading_gap == 1:   status = &quot;partial&quot;   # T-2, 真降级一档
+249|elif trading_gap == 2:   status = &quot;stale&quot;     # T-3, 衰减 0.7
+250|else:                    status = &quot;unavailable&quot;
+251|  → unavailable_reason = &quot;northbound_data_lag_{gap}days&quot;
+252|  → 整体 confidence = 0 (消费者应走降级)
+253|
+254|# 副口径(仅写 note, 不进状态机): hours_since_data = (generated_at - resolved_trade_date 当日 15:00) 小时
+255|# 周一盘前它天然是 ~64h(周末), 不代表数据旧 —— 不要用小时数直接定 status
+256|```
+257|
+258|**硬约束(新增强制项)**:
+259|1. 当 `generated_at.date &lt; trade_date + 06:00` 视为**严重错位**,直接 `status=unavailable`,写 `unavailable_reason=&quot;generated_at_before_trade_date_06am&quot;`,**不得**让下游(D1/R6)按 ok 消费
+260|2. 文件名必须带 trade_date 后缀:`R7_capital_flow_{trade_date}.json`(老路径 `R7_capital_flow.json` 保留作 soft link 指向当日)
+261|3. `resolved_trade_date ∈ {trade_date, T-1}` 为**正常**(尤其周一 T-1=上周五);仅当 resolved 早于 T-1 才写 `cross_date_mismatch=true`。**禁止**把正常的 T-1 误判为 mismatch
+262|4. `staleness_status` 字段**不得为 null**,**不得省略**
+263|
+264|**消费契约**(供 D1 / R6 消费):
+265|- D1 在 §Step 0 读 R7 时,先看 `staleness_status`:
+266|  - `ok` → 正常消费
+267|  - `partial` → 消费但 `risk_limits.position_cap_pct` 衰减 ×0.95
+268|  - `stale` → 消费但 `position_cap_pct` 衰减 ×0.85,且在 `meta.position_cap_source` 追加 `r7_stale_override`
+269|  - `unavailable` → 跳过 R7 资金维度,`risk_limits.target_total_position_pct` 走 R1 默认 0.50
+270|
+271|**降级**:
+272|- 北向数据完全拉空(Tushare `moneyflow_hsgt` 错)→ `staleness_status=unavailable`,但仍写盘(填空数组),让 E1 复盘能感知
+273|- 硬约束 1 触发时,`degraded=true` 必须写入 JSON 顶层
+</code></pre>
+<h3 id="userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l1183l1187"><code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md</code> · L1183–L1187<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l1183l1187" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>1183|    {</span></span>
+<span data-line><span>1184|      &quot;code&quot;: &quot;R7_STALE&quot;,</span></span>
+<span data-line><span>1185|      &quot;description&quot;: &quot;R7 staleness_status = unavailable → 不开仓(资金维度失效)&quot;,</span></span>
+<span data-line><span>1186|      &quot;active&quot;: true                       // 命中时, plan.md 顶部必须显式标 &quot;⚠️ R7 数据失效,今日 no_trade&quot;</span></span>
+<span data-line><span>1187|    },</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l1207l1215"><code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md</code> · L1207–L1215<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l1207l1215" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>1207|**硬约束**:</span></span>
+<span data-line><span>1208|- `no_trade_conditions` 必须存在(即使全部 `active: false`)</span></span>
+<span data-line><span>1209|- 任一 `active: true` → D1 输出 `mode: &quot;no_trade&quot;`,`autonomous_trading_enabled: false`,`execution_pool: []`,`watch_pool: []`(全空)</span></span>
+<span data-line><span>1210|- plan.md **必须**在顶部展示&quot;不交易条件清单 + 当前 active 项&quot;(便于用户 review)</span></span>
+<span data-line><span>1211|</span></span>
+<span data-line><span>1212|**降级**:</span></span>
+<span data-line><span>1213|- R1 缺 → `R1_FAIL` 自动 `active: true`</span></span>
+<span data-line><span>1214|- R7 缺 → `R7_STALE` 自动 `active: true`</span></span>
+<span data-line><span>1215|- 全部不交易条件自动激活,plan 报 `no_trade_mode` 状态</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪docsagentsr7-资金面agentmd--l129l147"><code>/Users/chenyang/Downloads/demo/沧海巨浪/docs/agents/R7-资金面Agent.md</code> · L129–L147<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪docsagentsr7-资金面agentmd--l129l147" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>438bcb7e15ca1d12373b19d81a161d801347635ad3276f1c861c939c9cf6b63f</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>129|## 6. 降级路径</span></span>
+<span data-line><span>130|</span></span>
+<span data-line><span>131|| 数据源死了 | 应对 |</span></span>
+<span data-line><span>132||-----------|------|</span></span>
+<span data-line><span>133|| DataPro 死 | 降级为 Tushare + XTick，`data_health: degraded` |</span></span>
+<span data-line><span>134|| XTick 死 | 07:30 仍可用 Tushare+DataPro；11:35 增量整批跳过 |</span></span>
+<span data-line><span>135|| Tushare 死 | 仅 DataPro 口径，标注 severity |</span></span>
+<span data-line><span>136|| 07:30 全失败 | 出 skeleton JSON，`confidence: 0`，不阻塞 R2（R2 自有 MCP） |</span></span>
+<span data-line><span>137|| 11:35 增量失败 | 跳过增量，P2 走无 amendment 保守路径 |</span></span>
+<span data-line><span>138|</span></span>
+<span data-line><span>139|---</span></span>
+<span data-line><span>140|</span></span>
+<span data-line><span>141|## 7. 红线</span></span>
+<span data-line><span>142|</span></span>
+<span data-line><span>143|1. ❌ 不输出买卖时点（D1 / execute 处理）</span></span>
+<span data-line><span>144|2. ❌ 不硬否决个股（交给 R6 模式六）</span></span>
+<span data-line><span>145|3. ❌ 11:35 批次不重算 07:30 全量历史（避免 P2 超时）</span></span>
+<span data-line><span>146|4. ✅ 每条 sector/stock 资金结论须标注数据源与时间窗口</span></span>
+<span data-line><span>147|5. ✅ `confidence` 与 manifest severity 联动：global_severity≥2 时 confidence 上限 0.5</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪srcresearchcontract_checkspy--l122l158"><code>/Users/chenyang/Downloads/demo/沧海巨浪/src/research/contract_checks.py</code> · L122–L158<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪srcresearchcontract_checkspy--l122l158" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>2c64dbc88c07506e28bc4e8f6be798d311a29ae38fa680b9685c9e68136e99f7</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>122|def check_r7_staleness(r7_data: dict[str, Any], trade_date: str) -> list[str]:</span></span>
+<span data-line><span>123|    &quot;&quot;&quot;P0-2: staleness 状态机 + resolved_trade_date + unavailable_reason。&quot;&quot;&quot;</span></span>
+<span data-line><span>124|    errors: list[str] = []</span></span>
+<span data-line><span>125|</span></span>
+<span data-line><span>126|    status = r7_data.get(&quot;staleness_status&quot;)</span></span>
+<span data-line><span>127|    valid = {&quot;ok&quot;, &quot;partial&quot;, &quot;stale&quot;, &quot;unavailable&quot;}</span></span>
+<span data-line><span>128|</span></span>
+<span data-line><span>129|    if status is None:</span></span>
+<span data-line><span>130|        errors.append(&quot;staleness_status 字段缺失&quot;)</span></span>
+<span data-line><span>131|    elif status not in valid:</span></span>
+<span data-line><span>132|        errors.append(f&quot;staleness_status 非法值: {status}&quot;)</span></span>
+<span data-line><span>133|</span></span>
+<span data-line><span>134|    resolved = r7_data.get(&quot;resolved_trade_date&quot;)</span></span>
+<span data-line><span>135|    if not resolved:</span></span>
+<span data-line><span>136|        errors.append(&quot;resolved_trade_date 字段缺失&quot;)</span></span>
+<span data-line><span>137|</span></span>
+<span data-line><span>138|    gen_at_str = r7_data.get(&quot;generated_at&quot;, &quot;&quot;)</span></span>
+<span data-line><span>139|    if gen_at_str and status is not None:</span></span>
+<span data-line><span>140|        gen_at = _parse_gen_at(gen_at_str)</span></span>
+<span data-line><span>141|        if gen_at:</span></span>
+<span data-line><span>142|            try:</span></span>
+<span data-line><span>143|                td = datetime.strptime(trade_date, &quot;%Y%m%d&quot;)</span></span>
+<span data-line><span>144|                td_06am = td.replace(hour=6, minute=0)</span></span>
+<span data-line><span>145|                if gen_at &lt; td_06am and status != &quot;unavailable&quot;:</span></span>
+<span data-line><span>146|                    errors.append(</span></span>
+<span data-line><span>147|                        f&quot;generated_at({gen_at_str}) &lt; trade_date 06:00 &quot;</span></span>
+<span data-line><span>148|                        f&quot;但 staleness_status={status}(应为 unavailable)&quot;</span></span>
+<span data-line><span>149|                    )</span></span>
+<span data-line><span>150|            except ValueError:</span></span>
+<span data-line><span>151|                pass</span></span>
+<span data-line><span>152|</span></span>
+<span data-line><span>153|    if status == &quot;unavailable&quot;:</span></span>
+<span data-line><span>154|        reason = r7_data.get(&quot;unavailable_reason&quot;, &quot;&quot;)</span></span>
+<span data-line><span>155|        if not reason:</span></span>
+<span data-line><span>156|            errors.append(&quot;status=unavailable 但 unavailable_reason 为空&quot;)</span></span>
+<span data-line><span>157|</span></span>
+<span data-line><span>158|    return errors</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪testscheckscheck_r7_stalenesspy--l67l108"><code>/Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_r7_staleness.py</code> · L67–L108<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪testscheckscheck_r7_stalenesspy--l67l108" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>327b622c6b668658b01b969cbd0053e54cef1fd8b06b722e99c9744403f1621b</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>67|        failures.append(f&quot;staleness_status 非法值: {status}&quot;)</span></span>
+<span data-line><span>68|        print(f&quot;  ❌ staleness_status: {status} (不在 {VALID_STATUSES})&quot;)</span></span>
+<span data-line><span>69|    else:</span></span>
+<span data-line><span>70|        print(f&quot;  ✅ staleness_status: {status}&quot;)</span></span>
+<span data-line><span>71|</span></span>
+<span data-line><span>72|    # 规则 4: resolved_trade_date 存在</span></span>
+<span data-line><span>73|    resolved = data.get(&quot;resolved_trade_date&quot;)</span></span>
+<span data-line><span>74|    if resolved:</span></span>
+<span data-line><span>75|        print(f&quot;  ✅ resolved_trade_date: {resolved}&quot;)</span></span>
+<span data-line><span>76|    else:</span></span>
+<span data-line><span>77|        failures.append(&quot;resolved_trade_date 字段缺失&quot;)</span></span>
+<span data-line><span>78|        print(f&quot;  ❌ resolved_trade_date: 缺失&quot;)</span></span>
+<span data-line><span>79|</span></span>
+<span data-line><span>80|    # 规则 1: generated_at 检查</span></span>
+<span data-line><span>81|    gen_at_str = data.get(&quot;generated_at&quot;, &quot;&quot;)</span></span>
+<span data-line><span>82|    if not gen_at_str:</span></span>
+<span data-line><span>83|        failures.append(&quot;generated_at 字段缺失&quot;)</span></span>
+<span data-line><span>84|        print(f&quot;  ❌ generated_at: 缺失&quot;)</span></span>
+<span data-line><span>85|    else:</span></span>
+<span data-line><span>86|        try:</span></span>
+<span data-line><span>87|            gen_at = parse_gen_at(gen_at_str)</span></span>
+<span data-line><span>88|            # trade_date 当日 06:00</span></span>
+<span data-line><span>89|            td_date = datetime.strptime(trade_date, &quot;%Y%m%d&quot;)</span></span>
+<span data-line><span>90|            td_06am = td_date.replace(hour=6, minute=0)</span></span>
+<span data-line><span>91|            if gen_at &lt; td_06am:</span></span>
+<span data-line><span>92|                # 严重错位 → status 应为 unavailable</span></span>
+<span data-line><span>93|                if status != &quot;unavailable&quot;:</span></span>
+<span data-line><span>94|                    failures.append(</span></span>
+<span data-line><span>95|                        f&quot;generated_at({gen_at_str}) &lt; trade_date 06:00 &quot;</span></span>
+<span data-line><span>96|                        f&quot;但 staleness_status={status}(应为 unavailable)&quot;</span></span>
+<span data-line><span>97|                    )</span></span>
+<span data-line><span>98|                    print(f&quot;  ❌ 生成时间早于 06:00 但 status 不是 unavailable&quot;)</span></span>
+<span data-line><span>99|                else:</span></span>
+<span data-line><span>100|                    print(f&quot;  ⚠️  generated_at &lt; 06:00, status=unavailable (合规降级)&quot;)</span></span>
+<span data-line><span>101|            else:</span></span>
+<span data-line><span>102|                print(f&quot;  ✅ generated_at: {gen_at_str} (>= 06:00)&quot;)</span></span>
+<span data-line><span>103|        except ValueError as e:</span></span>
+<span data-line><span>104|            failures.append(f&quot;generated_at 解析失败: {e}&quot;)</span></span>
+<span data-line><span>105|            print(f&quot;  ❌ generated_at 解析失败: {e}&quot;)</span></span>
+<span data-line><span>106|</span></span>
+<span data-line><span>107|    # 规则 3: unavailable 时必须有 reason</span></span>
+<span data-line><span>108|    if status == &quot;unavailable&quot;:</span></span></code></pre></figure>
+<h3 id="62-三种可选政策与准确影响范围">6.2 三种可选政策与准确影响范围<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#62-三种可选政策与准确影响范围" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>选项</th><th>研究事实/整体状态</th><th>最终新仓门禁</th><th>需要用户定义</th><th>准确涉及源文件/原句</th></tr></thead><tbody><tr><td>NB-1 严格四维必要条件</td><td>保留缺一维整体 unavailable；北向原值仍 null。若整体置信度因门禁覆盖成0，必须标“政策覆盖为零”，不能写全部测量无效</td><td>北向缺可信净额继续禁新，不停止研究</td><td>是否确认北向就是不可替代必要条件；何种同口径、日期与单位证据能恢复；不得用代理冒充</td><td>R7 skill L247–252/L272 保留严格含义；<strong>必须改其 L269 “走R1默认0.50”与 D1 禁新冲突的消费者句</strong>；D1 skill L1184–1186/L1214 保留禁新；R7 spec §6需说清单维缺失不等于全源死；contract_checks/check_r7_staleness对应状态理由验证须同步</td></tr><tr><td>NB-2 分维事实 + 独立保守资格</td><td>北向单维 unavailable；其余维度各保留时间、覆盖、信心，整体研究可 partial；整体置信度另定、未评估为null，不再一律被北向清0</td><td><strong>仍要求北向齐全才允许新仓</strong>，显式独立“不满足必要资金条件”的禁令；不能因整体partial而解除</td><td>confidence汇总公式/分母、研究状态与交易资格分字段，以及原R7_STALE如何指向明确必要条件</td><td><strong>替换</strong> R7 skill L250–252/L272 的单维→整体升级与零覆盖，L265–269消费整段；<strong>同步改</strong> D1 L1184–1186/L1214避免只测整体 unavailable；R7 spec §6、contract_checks/check_r7_staleness新增维度与资格校验。原D1模式和清观察句只走A/B，不借本选项放行</td></tr><tr><td>NB-3 分维降级 + 有条件交易评估</td><td>同 NB-2，缺北向不自动归整体失效；不假造缺失维分数</td><td>仅在用户确认的必要剩余维、逐票资金/价格确认及完整R6满足后，D1才可重新评估；不是自动开放</td><td>哪些维是必要、哪些可选，冲突如何处理，覆盖/时效门槛、置信汇总、预算是否/如何收紧。所有数值与例外均待签</td><td>同NB-2全部文件；D1 L1184–1186/L1214须明确何时激活禁令，R7 L267–269的0.95/0.85/默认0.50不能机械沿用或默认上抬；schema/校验/执行消费者若新增字段须完整落地测试，未完成前保留原限制</td></tr></tbody></table></div>
+<p>本节是政策菜单，不是补丁。北向 skill 没有出现在 A/B 拟改文件中；不能把 NB-2/NB-3 的名字当已选政策，也不默认采用原 R7 “0.50 回退”。<code>contract_checks.py</code> 目前只检查顶层状态枚举、日期与 unavailable_reason，<strong>没有实现“北向缺失自动整体0置信”的代码公式</strong>；关键升级来自 LLM skill/本日产物，不能只改校验器就声称解决门禁。</p>
+<h2 id="7-0610--0730只列决定不改-cron">7. 06:10 / 07:30：只列决定，不改 cron<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-0610--0730只列决定不改-cron" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>当前真实 job：<code>/Users/chenyang/.hermes/cron/jobs.json</code> 中 <code>24f4119fab82</code>，name=<code>canghai-research · 每日 R1-R7+D1 全量流水线 (06:10)</code>，<code>enabled=true</code>，schedule=<code>10 6 * * 1-5</code>，script=<code>canghai_research_daily.sh</code>。</li>
+<li>桥接 <code>/Users/chenyang/.hermes/scripts/canghai_research_daily.sh</code> L3/L6 → 仓库 <code>scripts/research/run_research_shell_cron_wrapper.sh</code> → research shell；不是凭文件名猜入口。</li>
+<li>当前业务状态 <code>data/health/research_pipeline_20261023.json.started_at=2026-10-23T06:10:47.340363+08:00</code>、<code>status=completed</code>；这是交付，不是承诺的生产窗口复核已完成。</li>
+<li>原研究 SOUL L5：<code>盘前 07:30-07:55 完成 R1-R7 分析</code>；L74：<code>07:55 前所有 R* 必须完成</code>。R1 skill L15 仍写 <code>07:30（与 R3、R4、R7 并行）</code>；R7 skill L15 仍写 <code>07:30 全量</code>。shell L13–18仍保留旧时刻注释，与实际依赖批次也有差别。</li>
+<li>必须由用户选择：①06:10起跑即承担正式生产就绪，还是②06:10为提前研究、07:30另有正式刷新，还是③另定可实现窗口。<strong>此处不选任何方案，不建议仅改时间文字。</strong></li>
+<li>无论选哪项都需点名：研究批次刷新 owner/触发器、依赖等待与完成截止；计划端 D1 重评 owner；安全网仅消费新批次、不代跑研究。未签 trigger 前，“保留重评义务”不等于已有定时重评任务，不能宣称明天会自动恢复。</li>
+</ul>
+<h3 id="userschenyangdownloadsdemo沧海巨浪scriptsresearchrun_research_shellsh--l13l18"><code>/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell.sh</code> · L13–L18<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪scriptsresearchrun_research_shellsh--l13l18" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>dcab3c1d0cc3291c361cbcfca9ac6d2dc9e0da9563b47bfe2aadaee2cb9ac4e6</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>13|# 时序：</span></span>
+<span data-line><span>14|#   07:15 fetch (前置，独立 skill)</span></span>
+<span data-line><span>15|#   07:30 R1 / R3 / R4 / R7 并行（&amp; + wait）</span></span>
+<span data-line><span>16|#   07:45 R2 / R5 并行</span></span>
+<span data-line><span>17|#   07:55 R6（依赖 R1-R5/R7）</span></span>
+<span data-line><span>18|#   08:00 D1（依赖 R1-R7）</span></span></code></pre></figure>
+<h3 id="userschenyanghermesprofilescanghai-researchsoulmd--l3l5"><code>/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md</code> · L3–L5<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyanghermesprofilescanghai-researchsoulmd--l3l5" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>9dd5bf534052fa41b2762fa999899a87d3f58b65afe76234b10e4d3fa185fb31</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>3|## Purpose</span></span>
+<span data-line><span>4|</span></span>
+<span data-line><span>5|盘前 07:30-07:55 完成 R1-R7 分析,输出 `research_summary.json` 供 D1(canghai-plan)消费。主控本身不做分析,只做 delegation 调度 + artifact 路径收集(见 `research_orchestrator_v1`)。11:35 R7 额外做一次盘中增量。</span></span></code></pre></figure>
+<h3 id="userschenyanghermesprofilescanghai-researchsoulmd--l69l75"><code>/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md</code> · L69–L75<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyanghermesprofilescanghai-researchsoulmd--l69l75" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>9dd5bf534052fa41b2762fa999899a87d3f58b65afe76234b10e4d3fa185fb31</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>69|## Constraints</span></span>
+<span data-line><span>70|</span></span>
+<span data-line><span>71|- **主控禁止直接调用 MCP**（必须通过 delegation），避免主控 context 被数据污染</span></span>
+<span data-line><span>72|- **主控禁止修改 `data/user_preferences.yaml` / `data/human_thesis/`**（只读，传递给 sub-agent 作为 context）</span></span>
+<span data-line><span>73|- research 输出必须 pydantic schema 校验通过才写盘</span></span>
+<span data-line><span>74|- 07:55 前所有 R* 必须完成，超时的 R* 走 fallback（基于昨日 artifact）</span></span>
+<span data-line><span>75|- R6 反证是唯一硬否决权来源，主控不得干预或过滤 R6 的 `hard_reject` 结论</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪skillsanalyze_style_v1skillmd--l13l17"><code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md</code> · L13–L17<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪skillsanalyze_style_v1skillmd--l13l17" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>6097bb83402d836101de3348446129d71e6d3ff337b20dc6b9304455e07c6311</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>13|# analyze_style_v1 · R1 风格 Agent</span></span>
+<span data-line><span>14|</span></span>
+<span data-line><span>15|**跑动时点**: 07:30（与 R3、R4、R7 并行）  </span></span>
+<span data-line><span>16|**权威规格**: `docs/agents/R1-风格Agent.md`  </span></span>
+<span data-line><span>17|**产出路径**: `data/research/YYYYMMDD/R1_style.json`</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪skillsanalyze_capital_flow_v1skillmd--l13l17"><code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_capital_flow_v1/SKILL.md</code> · L13–L17<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪skillsanalyze_capital_flow_v1skillmd--l13l17" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>e82f07cc276651cacaac808faa786ac37a76dc7394b0c94f3b530c378e76ec77</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>13|# analyze_capital_flow_v1 · R7 资金面 Agent</span></span>
+<span data-line><span>14|</span></span>
+<span data-line><span>15|**跑动时点**: 07:30 全量（与 R1/R3/R4 并行）· 11:35 盘中增量（P2 阶段）  </span></span>
+<span data-line><span>16|**权威规格**: `docs/agents/R7-资金面Agent.md`  </span></span>
+<span data-line><span>17|**产出路径**: `data/research/YYYYMMDD/R7_capital_flow.json` · 可选 `chzl_kg/投研交易/资金面/YYYYMMDD.md`</span></span></code></pre></figure>
+<h2 id="8-rr1--18--2当前完整决策链出处数值不拟改">8. RR=1 / 1.8 / 2：当前完整决策链出处，数值不拟改<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#8-rr1--18--2当前完整决策链出处数值不拟改" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>本节“完整”限定为本次盘前研究→D1→价位引擎的现行规则/实现链，不把全历史报告中的示例数字当政策，也不声称已穷尽仓库每个历史归档。三套口径确有不同角色：1是 risk_reward 试仓分支最低线；2既是 research身份的资格底线又是仓位分档；1.8是价位引擎默认门槛。另有止盈目标2R，<strong>它不是门槛2的同一概念</strong>。</p>
+<h3 id="userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l384l388"><code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md</code> · L384–L388<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l384l388" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>384|**关2 · 盈亏比判断**（`@risk_reward` · `src/plan/risk_reward.py`）：</span></span>
+<span data-line><span>385|- 输入：买点（`buy_price`）+ 止盈（`take_price`）+ 止损（`stop_price`）+ 情绪阶段 + 是否核心</span></span>
+<span data-line><span>386|- 输出 `risk_reward_ratio` + `position_suggestion_pct` + `grade_check`</span></span>
+<span data-line><span>387|- **硬规则**：`risk_reward_ratio &lt; 1` → 拒绝开仓（纪律铁律6: 盈亏比优先于胜率）</span></span>
+<span data-line><span>388|- 仓位按 `position_suggestion_pct` 写（主升核心可 15%，主跌只试仓）</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪skillstrade_discipline_v1skillmd--l29l33"><code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md</code> · L29–L33<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪skillstrade_discipline_v1skillmd--l29l33" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>076853d910830a033ed05f94830c63debbeb4dea2f972a34094113e4e35e6edf</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>29|| 3 | 周期不对就减维 | `discipline.r3_cycle_reduce` | 退潮→空仓/极小试仓 |</span></span>
+<span data-line><span>30|| 4 | 模式外的钱永远不赚 | `discipline.r4_style_only` | 模式外拉黑 |</span></span>
+<span data-line><span>31|| 5 | 进出理由必须一致 | `discipline.r5_reason_consistency` | 逻辑死→切 |</span></span>
+<span data-line><span>32|| 6 | 盈亏比优先于胜率 | `discipline.r6_rr_first` | RR&lt;1 拒开（risk_reward.py） |</span></span>
+<span data-line><span>33|| 7 | 合力来自全市场 | `discipline.r7_market_consensus` | 逆势抱团降级（core_judge） |</span></span></code></pre></figure>
+<h3 id="userschenyanghermesprofilescanghai-plansoulmd--l37l42"><code>/Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md</code> · L37–L42<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyanghermesprofilescanghai-plansoulmd--l37l42" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>5c6c6c28e72a7b1970a852b3d16f2b033b06d5c0bc10c955cc16bb51ae13e3a2</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>37|3. **每只 execution 票 → Step 3.6 四闸门**(2026-09-04 新):</span></span>
+<span data-line><span>38|   - 关1 核心判定(`@core_judge_v1`) → 共振/逆势抱团 → leader/core/laggard/watch 四档</span></span>
+<span data-line><span>39|   - 关2 盈亏比(`@risk_reward_v1`) → RR&lt;1 拒绝,1-2 试仓,2-3 正常,≥3 主仓</span></span>
+<span data-line><span>40|   - 关3 纪律自检(`@trade_discipline_v1`) → 十条铁律 + 7 项开仓资格 + 14 项禁止</span></span>
+<span data-line><span>41|   - 关4 战术信号(`@tactical_signal_v1`) → 板型/弱转强/总龙开关/禁止清单</span></span>
+<span data-line><span>42|4. **每只票 entry_rules 必须含**:买点类型(打板/半路/低吸)+ 触发价 + 止损(距买入价-5~-10%)+ 止盈 + 失败标准</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪srcplanrisk_rewardpy--l41l48"><code>/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/risk_reward.py</code> · L41–L48<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪srcplanrisk_rewardpy--l41l48" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>0534c00839c6f4a1b600062e71c2825a2f46850cd4b9fefd0f8aa5db69696612</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>41|# 盈亏比与仓位映射（按纪律文档: 盈亏比优先于胜率）</span></span>
+<span data-line><span>42|# RR >= 3  核心主仓(主升期可 20-33%)</span></span>
+<span data-line><span>43|# RR 2-3  正常仓(10-20%)</span></span>
+<span data-line><span>44|# RR 1-2  试错仓(5-10%)</span></span>
+<span data-line><span>45|# RR &lt; 1  不做</span></span>
+<span data-line><span>46|MIN_RR_MAIN = 3.0</span></span>
+<span data-line><span>47|MIN_RR_NORMAL = 2.0</span></span>
+<span data-line><span>48|MIN_RR_TRIAL = 1.0</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪srcplanrisk_rewardpy--l88l116"><code>/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/risk_reward.py</code> · L88–L116<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪srcplanrisk_rewardpy--l88l116" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>0534c00839c6f4a1b600062e71c2825a2f46850cd4b9fefd0f8aa5db69696612</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>88|    profit_pct = (take_price / buy_price - 1.0) * 100</span></span>
+<span data-line><span>89|    loss_pct = (1.0 - stop_price / buy_price) * 100</span></span>
+<span data-line><span>90|    rr = (take_price - buy_price) / (buy_price - stop_price)</span></span>
+<span data-line><span>91|    evidence.append(f&quot;盈亏比 = ({take_price}-{buy_price})/({buy_price}-{stop_price}) = {rr:.2f}&quot;)</span></span>
+<span data-line><span>92|</span></span>
+<span data-line><span>93|    # ── 仓位判定 ──</span></span>
+<span data-line><span>94|    # 阶段系数</span></span>
+<span data-line><span>95|    phase_mult = {&quot;main_up&quot;: 1.0, &quot;high_chop&quot;: 0.75, &quot;low_test&quot;: 0.5, &quot;main_down&quot;: 0.3}.get(emotion_phase, 0.5)</span></span>
+<span data-line><span>96|    core_bonus = 1.0 if is_core else 0.5</span></span>
+<span data-line><span>97|</span></span>
+<span data-line><span>98|    if rr >= MIN_RR_MAIN:</span></span>
+<span data-line><span>99|        base = 0.15</span></span>
+<span data-line><span>100|        tier = &quot;core_main&quot;</span></span>
+<span data-line><span>101|        evidence.append(f&quot;盈亏比 {rr:.2f} ≥ 3 → 核心主仓&quot;)</span></span>
+<span data-line><span>102|    elif rr >= MIN_RR_NORMAL:</span></span>
+<span data-line><span>103|        base = 0.10</span></span>
+<span data-line><span>104|        tier = &quot;core&quot;</span></span>
+<span data-line><span>105|        evidence.append(f&quot;盈亏比 {rr:.2f} ≥ 2 → 正常仓&quot;)</span></span>
+<span data-line><span>106|    elif rr >= MIN_RR_TRIAL:</span></span>
+<span data-line><span>107|        base = 0.05</span></span>
+<span data-line><span>108|        tier = &quot;trial&quot;</span></span>
+<span data-line><span>109|        evidence.append(f&quot;盈亏比 {rr:.2f} ≥ 1 → 仅试错仓&quot;)</span></span>
+<span data-line><span>110|    else:</span></span>
+<span data-line><span>111|        return RiskRewardResult(</span></span>
+<span data-line><span>112|            trade_date, ts_code, name, buy_price, take_price, stop_price,</span></span>
+<span data-line><span>113|            round(rr, 2), round(profit_pct, 1), round(loss_pct, 1),</span></span>
+<span data-line><span>114|            0.0, &quot;none&quot;, &quot;拒绝&quot;,</span></span>
+<span data-line><span>115|            [f&quot;盈亏比 {rr:.2f} &lt; 1 → 风险大于收益，拒绝开仓&quot;],</span></span>
+<span data-line><span>116|            datetime.now().astimezone().isoformat(timespec=&quot;seconds&quot;),</span></span></code></pre></figure>
+<h3 id="userschenyanghermesprofilescanghai-researchsoulmd--l53l58"><code>/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md</code> · L53–L58<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyanghermesprofilescanghai-researchsoulmd--l53l58" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>9dd5bf534052fa41b2762fa999899a87d3f58b65afe76234b10e4d3fa185fb31</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>53|### 思考顺序铁律（每次 R* 输出前必走一遍，违反即重写）</span></span>
+<span data-line><span>54|1. **先认市场，再认个股** — 没有主线 / 风格 / 赚钱效应，不准进 R2/R5 选股环节。</span></span>
+<span data-line><span>55|2. **段位决定能做什么** — 主跌期降维（只输出观察，不输出候选），高位震荡压仓（中位股剔除）。</span></span>
+<span data-line><span>56|3. **只有龙头或低位，躲中位和杂毛** — R2 输出必须显式标 `rank ∈ {龙头, 龙二, 龙三}` + `rank=杂毛` 的剔除理由。</span></span>
+<span data-line><span>57|4. **盈亏比优先于胜率** — 候选票如果止损距 &lt; 5% 或 RR &lt; 2，必须降级 watch，不能进 execution。</span></span>
+<span data-line><span>58|5. **计划外不出手** — R4/R5 输出的&quot;机会&quot;必须回答：它是今日核心 / 主线补涨 / 计划内试错 中的哪一种。都不是，剔除。</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l487l510"><code>/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md</code> · L487–L510<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l487l510" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>0f0af85c59761520b8616678a53b001c9851fd0737004a719f78ce240c2baf8d</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>487|```bash</span></span>
+<span data-line><span>488|.venv/bin/python scripts/plan/apply_price_levels.py --date YYYYMMDD --write-json</span></span>
+<span data-line><span>489|```</span></span>
+<span data-line><span>490|</span></span>
+<span data-line><span>491|引擎口径（可复算）:</span></span>
+<span data-line><span>492|- **买区**: ①均线回踩 `[min(MA50,牛线)×0.99, MA50×1.01]`,区间>7%收窄至基准±1.5% ②分歧回踩(强势票,现价距MA10>8%) `[昨收×0.92, 昨收×0.97]` ③突破/打板 `pivot=max(昨收,20日高)`,买区 `[pivot×0.995, pivot×(1+1.5~3%)]`</span></span>
+<span data-line><span>493|- **止损**: 以**买入价(买区上沿)**为基准, `买价×(1-5%主板/8%20cm)` 与 `熊线×0.99`、`MA10×0.99` 取最高,且必须低于买区下沿</span></span>
+<span data-line><span>494|- **止盈**: 2R = 买价 + 2×(买价−止损);若20日高点在 2R 之下且高于买价5% → 取前高</span></span>
+<span data-line><span>495|- **RR** &lt; 1.8 → `RR_FAIL`,不参与</span></span>
+<span data-line><span>496|</span></span>
+<span data-line><span>497|**LLM 的义务**: 在引擎值上做事件/情绪/身位微调,但:</span></span>
+<span data-line><span>498|- 偏离引擎买区 >10% 必须在 `derivation_reason` 写明依据(如事件未落地后移买点)</span></span>
+<span data-line><span>499|- 不得无依据地凭空写数——引擎算不出的情况(一字板/无价格数据)必须显式说明</span></span>
+<span data-line><span>500|</span></span>
+<span data-line><span>501|**每只票(execution_pool/watch_pool/seesaw_plan 候选)必须带数字价位,禁止只写条件**:</span></span>
+<span data-line><span>502|- buy_zone(可买区间两个数字)、trigger_price、stop_loss、take_profit</span></span>
+<span data-line><span>503|- &quot;高开≤3%+竞价放量+板块≥3家涨停&quot;只能作为确认条件,不能替代买区——用户无法据此判断具体多少钱买</span></span>
+<span data-line><span>504|- 纯观察票若确无买区(如温度计/禁买锚),必须显式标注原因,不能留空字段让人误以为漏了</span></span>
+<span data-line><span>505|- 昨收缺失的票从 kb/research.db market_daily_bars 补,但买区必须在本步骤写好,不靠渲染阶段反推</span></span>
+<span data-line><span>506|</span></span>
+<span data-line><span>507|**价位推导交付物**: `chzl_kg/投研交易/盘前预案/YYYYMMDD_价位推导.md`——每票一行价位表 + 逐票公式(止损/买区/止盈/RR/技术位),用户要看到&quot;为什么是这个价&quot;。</span></span>
+<span data-line><span>508|</span></span>
+<span data-line><span>509|**引擎会自动做的事**(不用 LLM 手工处理):</span></span>
+<span data-line><span>510|- `RR&lt;1.8` 的票自动写入 `no_trade_conditions.RR_FAIL` 并标记 active → 当日不可开仓</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l86l96"><code>/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/price_levels.py</code> · L86–L96<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l86l96" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>db4e876468c7e4805d0af020115cd4f860a5426eeb5f50eebc31058229156d27</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>86|    trade_date: str,</span></span>
+<span data-line><span>87|    *,</span></span>
+<span data-line><span>88|    name: str = &quot;&quot;,</span></span>
+<span data-line><span>89|    ref_close: float | None = None,</span></span>
+<span data-line><span>90|    channel: str = &quot;trend_pullback_buy&quot;,</span></span>
+<span data-line><span>91|    ignition: bool = False,</span></span>
+<span data-line><span>92|    one_word: bool = False,</span></span>
+<span data-line><span>93|    rr_min: float = 1.8,</span></span>
+<span data-line><span>94|) -> dict[str, Any]:</span></span>
+<span data-line><span>95|    &quot;&quot;&quot;返回一只票的完整价位推导 + 公式明细（每条都写清怎么算的）。&quot;&quot;&quot;</span></span>
+<span data-line><span>96|    tech = load_tech(ts_code, trade_date)</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l175l189"><code>/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/price_levels.py</code> · L175–L189<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l175l189" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>db4e876468c7e4805d0af020115cd4f860a5426eeb5f50eebc31058229156d27</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>175|    stop_label, stop_loss = max(cands, key=lambda x: x[1])</span></span>
+<span data-line><span>176|    if stop_loss >= low_edge:  # 兜底: 止损必须低于买区下沿</span></span>
+<span data-line><span>177|        stop_label, stop_loss = cands[0]</span></span>
+<span data-line><span>178|    stop_loss = round(stop_loss, 2)</span></span>
+<span data-line><span>179|</span></span>
+<span data-line><span>180|    # ── 3) 止盈 &amp; RR ──</span></span>
+<span data-line><span>181|    risk = round(buy_ref - stop_loss, 2)</span></span>
+<span data-line><span>182|    take_2r = round(buy_ref + 2 * risk, 2)</span></span>
+<span data-line><span>183|    take = take_2r</span></span>
+<span data-line><span>184|    take_formula = f&quot;2R目标 = 买{buy_ref:.2f} + 2×(买入价-止损{risk:.2f}) = {take_2r:.2f}&quot;</span></span>
+<span data-line><span>185|    if hi20 and buy_ref * 1.05 &lt; float(hi20) &lt; take_2r:</span></span>
+<span data-line><span>186|        take = round(float(hi20), 2)</span></span>
+<span data-line><span>187|        take_formula = (f&quot;20日高点{float(hi20):.2f} 低于2R目标{take_2r:.2f} 且高于买价5%以上 &quot;</span></span>
+<span data-line><span>188|                        f&quot;→ 取前高作第一压力位&quot;)</span></span>
+<span data-line><span>189|    rr = round((take - buy_ref) / risk, 2) if risk > 0 else None</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l213l217"><code>/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/price_levels.py</code> · L213–L217<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l213l217" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>db4e876468c7e4805d0af020115cd4f860a5426eeb5f50eebc31058229156d27</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>213|        &quot;max_acceptable_ask&quot;: max_ask,</span></span>
+<span data-line><span>214|        &quot;stop_loss&quot;: stop_loss,</span></span>
+<span data-line><span>215|        &quot;take_profit&quot;: take,</span></span>
+<span data-line><span>216|        &quot;risk_reward_ratio&quot;: rr,</span></span>
+<span data-line><span>217|        &quot;rr_grade&quot;: (&quot;pass&quot; if rr and rr >= rr_min else &quot;RR_FAIL&quot;),</span></span></code></pre></figure>
+<h3 id="userschenyangdownloadsdemo沧海巨浪scriptsplanapply_price_levelspy--l129l142"><code>/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/apply_price_levels.py</code> · L129–L142<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#userschenyangdownloadsdemo沧海巨浪scriptsplanapply_price_levelspy--l129l142" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原 SHA256：<code>c7420b7b609b306885351cc6353737599b893da90064538c6b679986e19d8170</code>。本节只读引用，未拟改。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>129|    # ── RR_FAIL 处置: 不参与开仓, 写进 no_trade_conditions ──</span></span>
+<span data-line><span>130|    rr_fail = [r for r in rows if r.get(&quot;ok&quot;) and r[&quot;rr_grade&quot;] == &quot;RR_FAIL&quot;]</span></span>
+<span data-line><span>131|    if rr_fail:</span></span>
+<span data-line><span>132|        names = &quot;、&quot;.join(f&quot;{r['name']}(RR{r['risk_reward_ratio']})&quot; for r in rr_fail)</span></span>
+<span data-line><span>133|        plan.setdefault(&quot;no_trade_conditions&quot;, [])</span></span>
+<span data-line><span>134|        code = &quot;RR_FAIL&quot;</span></span>
+<span data-line><span>135|        if not any(c.get(&quot;code&quot;) == code for c in plan[&quot;no_trade_conditions&quot;]):</span></span>
+<span data-line><span>136|            plan[&quot;no_trade_conditions&quot;].append({</span></span>
+<span data-line><span>137|                &quot;code&quot;: code,</span></span>
+<span data-line><span>138|                &quot;description&quot;: (f&quot;引擎 RR&lt;1.8 的票不参与开仓（盈亏比不达标）：{names}。&quot;</span></span>
+<span data-line><span>139|                                f&quot;要么等更好的买区（回撤更深）使 RR 回到 1.8 以上，要么放弃。&quot;),</span></span>
+<span data-line><span>140|                &quot;active&quot;: True,</span></span>
+<span data-line><span>141|                &quot;source&quot;: &quot;price_levels_engine&quot;,</span></span>
+<span data-line><span>142|            })</span></span></code></pre></figure>
+<h3 id="rr-必须回答的待决问题">RR 必须回答的待决问题<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rr-必须回答的待决问题" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>最终开仓底线是哪一个？是否区分 trial 与正常仓，是否区分通道/持有周期？三个值不默取 min、max 或最新日期，也不凭“用户钦定”历史文字推定本轮裁决。</li>
+<li>research身份“RR&lt;2或止损距&lt;5%降观察”是在研究层剔除还是只禁止交易？研究观察是否仍应保留？止损距条件与主板/20cm止损引擎如何一致？</li>
+<li>以实际触发价、买区上沿还是引擎参考价计算 RR？先四舍五入再比还是原始数值比？边界等于门槛时如何处理？不在本提案拟数。</li>
+<li><code>apply_price_levels.py</code> 把 rows 中 RR_FAIL 汇总成<strong>顶层 active no_trade_conditions</strong>，D1 skill又规定任一 active 禁新。是只禁止对应个股，还是任何观察/B计划票 RR_FAIL 都禁整池？须明确作用域与执行消费者；不能借“RR同步”偷偷把全局门禁改成局部。</li>
+<li>缺价/一字无有效买点是“无法评价”而非“RR=0”，应等待/不交易并披露原因，不能为了算出RR编价；选定政策后须让上述全部出处、引擎、渲染和校验测试一次一致。</li>
+</ol>
+<p>本轮 A/B 的所有数字差异中没有 RR 阈值替换；对应 code/SOUL 只读原句保留。R6 hard_reject 权限范围也未在这里代裁决。</p>
+<h2 id="9-与四组实现验收的对应与未纳入项">9. 与四组实现验收的对应与未纳入项<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#9-与四组实现验收的对应与未纳入项" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>A组：完整读取 <code>scratch/canghai_repair_A_result_20261023.md</code>。本提案同步其 BUG01/02/03/11 的交付-就绪-授权、有效零、null、单向交接建议；重评不补跑研究、不放宽“全R1–R7新批次”边界。A组指出的 Markdown null检查器，本提案给出最小候选guard并做纯函数合成验证，尚未应用。</li>
+<li>B组：读取 <code>scratch/canghai_repair_B_20261023/manifest.json</code>，并核对本提案相关的当前源码；当前 scratch 未找到该组独立 Markdown建议报告，不能声称全文读过不存在的报告。其翻多参考仓位不构成授权，研究观察回路属于本B包；广度/价格制度的实现授权不授权另改阈值。</li>
+<li>C组：完整读取 <code>scratch/canghai_repair_C_20261023/REPORT.md</code>。同步无价、真实0、partial、单位未核实留null、禁令优先、resolver拒绝不裸读。海外freshness/collection分层、KOSPI/FX unverified、ETF真实覆盖缺口仍如实保留；不扩provider、不给接口猜单位。</li>
+<li>D组：读取 <code>scratch/canghai_D_repair_acceptance_20261023.json</code>，其中为验收证据而非独立规则建议报告。本轮不追写公告或台账策略；“未调用/可选缺失/停用/不适用/真实失败”继续分开，不能因文案统一把真错误洗绿。</li>
+<li>范围外未闭环：规则版 <code>src/research/r2_main_sectors.py</code> L42/L122 仍是50亿硬过滤；其主路径非LLM规则对照，<strong>本提案没改该代码，不宣称全系统市值实现已统一</strong>。归档filter skill L71 的300/688/920旧前缀与R2现行同权口径仍待单独确权；本B包仅删除替补例外，不用这次研究连续性签核夹带解禁。其他情绪/主线横切skill及旧记忆存在历史映射，按现行用户指令优先，若要全量清理须另列精确范围；主SOUL不改。</li>
+<li>R4 当前skill并没有“主跌停止消息研究”的原句；该行为来自身份层与当天产物，不编造不存在的R4删除行。B包研究身份层要求R2/R4研究继续，R5/R6按真实对象与完整性履责。</li>
+</ul>
+<h2 id="10-本提案实际验证与应用后仍需验证">10. 本提案实际验证与应用后仍需验证<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#10-本提案实际验证与应用后仍需验证" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>已做（仅离线内存/只读）</strong>：</p>
+<ul>
+<li>每个拟改目标全文读取并核字节 SHA256；全部 hunk 用三行上下文从真实文本生成，内存逐行重放 A、再重放 B，拟议内容完全一致。</li>
+<li>唯一拟议 Python 片段 <code>check_md_namespace.py</code> 经 AST解析，只执行两个纯函数定义与合成 FakeFile；<code>null</code>、<code>~</code>、<code>0.0</code>、<code>0.75</code>接受，<code>nonsense</code>、<code>false</code>仍拒绝。未导入生产模块、未跑全仓测试、未访问真实报告/数据库/网络/账户。</li>
+<li>保留 R6 <code>_is_usable</code> 原 complete-only，不给它任何代码 hunk；北向文件、cron/配置和所有RR数值没有patch。</li>
+<li>最终只读核对：源文件 hash 无漂移、主 SOUL hash 不变、原32暂存 index hash不变；两份交付由 write_file 写入scratch并确认。此处是提案完整性验证，不冒称生产规则已验收或已生效。</li>
+</ul>
+<p><strong>签核并实际应用后另验（未执行）</strong>：</p>
+<ol>
+<li>新研究/计划profile会话实际加载已签版本；禁止新仓场景仍输出真实研究观察，R5不因交易空池跳过；无对象依然skipped且不凑数。</li>
+<li>R6输入partial仍不自动complete，零对象不变成“全票通过”；真实hard_reject留存、不凑票绕否决。</li>
+<li>未就绪安全版保留no_trade与重评责任；只有新研究批次满足当前血缘边界时由计划owner重评，完整合法LLM no_trade即使force也不覆盖。</li>
+<li>观察票不能被P1/P2或执行侧仅凭存在、报价或promote升级；null不能被统计成0或当通过；竞价partial保留有效事实、禁令先展示。</li>
+<li>北向/窗口/RR未签即原门禁继续；若用户另选政策，先生成新增精确diff再测，不在此次patch中补默认选项。</li>
+</ol>
+<p><strong>尚未应用。没有生产补跑，也没有修写今天的报告来伪装已按时研究完成。</strong></p>
+<h2 id="11-主控补充报价年龄政策仍未设定">11. 主控补充：报价年龄政策仍未设定<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-主控补充报价年龄政策仍未设定" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>第二轮实现复核已消除隐含零秒门槛。仅校验同业务日、有效常规时段、非未来及采集过程元数据，另保存实际quote_age、<code>source_age_limit_seconds=null</code>、<code>freshness_status=age_limit_not_configured</code>。这不等于已验证满足某个新鲜度SLA，也不授予交易权限。若需设最大报价年龄或跨源跨度，必须另给精确阈值差异并签核；不能默设0秒、数秒或数分钟。本补充没有修改原两包补丁。</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-992" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#沧海巨浪规则契约修复签核提案2026-10-23" data-for="沧海巨浪规则契约修复签核提案2026-10-23">沧海巨浪规则/契约修复签核提案（2026-10-23）</a></li><li class="depth-1"><a href="#1-用户最少需要确认什么" data-for="1-用户最少需要确认什么">1. 用户最少需要确认什么</a></li><li class="depth-2"><a href="#本轮可签的两个包签核文件修改不等于交易授权" data-for="本轮可签的两个包签核文件修改不等于交易授权">本轮可签的两个包（签核文件修改，不等于交易授权）</a></li><li class="depth-2"><a href="#真正仍缺裁决的三类政策未给可应用-diff" data-for="真正仍缺裁决的三类政策未给可应用-diff">真正仍缺裁决的三类政策（未给可应用 diff）</a></li><li class="depth-1"><a href="#2-不可突破的验收边界" data-for="2-不可突破的验收边界">2. 不可突破的验收边界</a></li><li class="depth-1"><a href="#3-真实基线变更范围与会话生效" data-for="3-真实基线变更范围与会话生效">3. 真实基线、变更范围与会话生效</a></li><li class="depth-2"><a href="#a--userschenyangdownloadsdemo沧海巨浪docs10-契约-研究汇总md" data-for="a--userschenyangdownloadsdemo沧海巨浪docs10-契约-研究汇总md">A · /Users/chenyang/Downloads/demo/沧海巨浪/docs/10-契约-研究汇总.md</a></li><li class="depth-2"><a href="#a--userschenyangdownloadsdemo沧海巨浪docs11-契约-盘前预案md" data-for="a--userschenyangdownloadsdemo沧海巨浪docs11-契约-盘前预案md">A · /Users/chenyang/Downloads/demo/沧海巨浪/docs/11-契约-盘前预案.md</a></li><li class="depth-2"><a href="#a--userschenyangdownloadsdemo沧海巨浪skillsanalyze_devil_advocate_v1skillmd" data-for="a--userschenyangdownloadsdemo沧海巨浪skillsanalyze_devil_advocate_v1skillmd">A · /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md</a></li><li class="depth-2"><a href="#a--userschenyangdownloadsdemo沧海巨浪skillsauction_amendment_v1skillmd" data-for="a--userschenyangdownloadsdemo沧海巨浪skillsauction_amendment_v1skillmd">A · /Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md</a></li><li class="depth-2"><a href="#a--userschenyangdownloadsdemo沧海巨浪skillsfetch_auction_snapshot_v1skillmd" data-for="a--userschenyangdownloadsdemo沧海巨浪skillsfetch_auction_snapshot_v1skillmd">A · /Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_auction_snapshot_v1/SKILL.md</a></li><li class="depth-2"><a href="#a--userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd" data-for="a--userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd">A · /Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md</a></li><li class="depth-2"><a href="#a--userschenyangdownloadsdemo沧海巨浪skillsresearch_orchestrator_v1skillmd" data-for="a--userschenyangdownloadsdemo沧海巨浪skillsresearch_orchestrator_v1skillmd">A · /Users/chenyang/Downloads/demo/沧海巨浪/skills/research_orchestrator_v1/SKILL.md</a></li><li class="depth-2"><a href="#a--userschenyangdownloadsdemo沧海巨浪testscheckscheck_md_namespacepy" data-for="a--userschenyangdownloadsdemo沧海巨浪testscheckscheck_md_namespacepy">A · /Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_md_namespace.py</a></li><li class="depth-2"><a href="#b--userschenyanghermesprofilescanghai-plansoulmd" data-for="b--userschenyanghermesprofilescanghai-plansoulmd">B · /Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md</a></li><li class="depth-2"><a href="#b--userschenyanghermesprofilescanghai-researchsoulmd" data-for="b--userschenyanghermesprofilescanghai-researchsoulmd">B · /Users/chenyang/.hermes/profiles/canghai-research/SOUL.md</a></li><li class="depth-2"><a href="#b--userschenyangdownloadsdemo沧海巨浪skills_archivefilter_leader_v1skillmd" data-for="b--userschenyangdownloadsdemo沧海巨浪skills_archivefilter_leader_v1skillmd">B · /Users/chenyang/Downloads/demo/沧海巨浪/skills/_archive/filter_leader_v1/SKILL.md</a></li><li class="depth-2"><a href="#b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_devil_advocate_v1skillmd" data-for="b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_devil_advocate_v1skillmd">B · /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md</a></li><li class="depth-2"><a href="#b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_main_sectors_v1skillmd" data-for="b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_main_sectors_v1skillmd">B · /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_main_sectors_v1/SKILL.md</a></li><li class="depth-2"><a href="#b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_stock_profile_v1skillmd" data-for="b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_stock_profile_v1skillmd">B · /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_stock_profile_v1/SKILL.md</a></li><li class="depth-2"><a href="#b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_style_v1skillmd" data-for="b--userschenyangdownloadsdemo沧海巨浪skillsanalyze_style_v1skillmd">B · /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md</a></li><li class="depth-2"><a href="#b--userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd" data-for="b--userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd">B · /Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md</a></li><li class="depth-2"><a href="#b--userschenyangdownloadsdemo沧海巨浪skillsshort_line_thinking_v1skillmd" data-for="b--userschenyangdownloadsdemo沧海巨浪skillsshort_line_thinking_v1skillmd">B · /Users/chenyang/Downloads/demo/沧海巨浪/skills/short_line_thinking_v1/SKILL.md</a></li><li class="depth-2"><a href="#b--userschenyangdownloadsdemo沧海巨浪skillstrade_discipline_v1skillmd" data-for="b--userschenyangdownloadsdemo沧海巨浪skillstrade_discipline_v1skillmd">B · /Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md</a></li><li class="depth-1"><a href="#4-a-包实现契约同步的精确最小差异" data-for="4-a-包实现契约同步的精确最小差异">4. A 包：实现契约同步的精确最小差异</a></li><li class="depth-1"><a href="#rules--constraints" data-for="rules--constraints">Rules &amp; Constraints</a></li><li class="depth-2"><a href="#step-36--战术层短线信号2026-09-04-新增--硬闸门--v17" data-for="step-36--战术层短线信号2026-09-04-新增--硬闸门--v17">Step 3.6 — 战术层短线信号(2026-09-04 新增 · 硬闸门 · v1.7)</a></li><li class="depth-2"><a href="#step-5--写-research_summaryjson" data-for="step-5--写-research_summaryjson">Step 5 · 写 research_summary.json</a></li><li class="depth-1"><a href="#-规则入口通道由-r1-风格-regime-决定d1_algorithmstep_regime_channels" data-for="-规则入口通道由-r1-风格-regime-决定d1_algorithmstep_regime_channels">-规则：入口通道由 R1 风格 regime 决定（d1_algorithm.step_regime_channels）：</a></li><li class="depth-2"><a href="#step-45--买点推演--t1-博弈2026-09-04-用户方法论--硬要求" data-for="step-45--买点推演--t1-博弈2026-09-04-用户方法论--硬要求">Step 4.5 — 买点推演 + T+1 博弈（2026-09-04 用户方法论 · 硬要求）</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l1183l1187" data-for="userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l1183l1187">/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md · L1183–L1187</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l1207l1215" data-for="userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l1207l1215">/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md · L1207–L1215</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪docsagentsr7-资金面agentmd--l129l147" data-for="userschenyangdownloadsdemo沧海巨浪docsagentsr7-资金面agentmd--l129l147">/Users/chenyang/Downloads/demo/沧海巨浪/docs/agents/R7-资金面Agent.md · L129–L147</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪srcresearchcontract_checkspy--l122l158" data-for="userschenyangdownloadsdemo沧海巨浪srcresearchcontract_checkspy--l122l158">/Users/chenyang/Downloads/demo/沧海巨浪/src/research/contract_checks.py · L122–L158</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪testscheckscheck_r7_stalenesspy--l67l108" data-for="userschenyangdownloadsdemo沧海巨浪testscheckscheck_r7_stalenesspy--l67l108">/Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_r7_staleness.py · L67–L108</a></li><li class="depth-2"><a href="#62-三种可选政策与准确影响范围" data-for="62-三种可选政策与准确影响范围">6.2 三种可选政策与准确影响范围</a></li><li class="depth-1"><a href="#7-0610--0730只列决定不改-cron" data-for="7-0610--0730只列决定不改-cron">7. 06:10 / 07:30：只列决定，不改 cron</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪scriptsresearchrun_research_shellsh--l13l18" data-for="userschenyangdownloadsdemo沧海巨浪scriptsresearchrun_research_shellsh--l13l18">/Users/chenyang/Downloads/demo/沧海巨浪/scripts/research/run_research_shell.sh · L13–L18</a></li><li class="depth-2"><a href="#userschenyanghermesprofilescanghai-researchsoulmd--l3l5" data-for="userschenyanghermesprofilescanghai-researchsoulmd--l3l5">/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md · L3–L5</a></li><li class="depth-2"><a href="#userschenyanghermesprofilescanghai-researchsoulmd--l69l75" data-for="userschenyanghermesprofilescanghai-researchsoulmd--l69l75">/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md · L69–L75</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪skillsanalyze_style_v1skillmd--l13l17" data-for="userschenyangdownloadsdemo沧海巨浪skillsanalyze_style_v1skillmd--l13l17">/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md · L13–L17</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪skillsanalyze_capital_flow_v1skillmd--l13l17" data-for="userschenyangdownloadsdemo沧海巨浪skillsanalyze_capital_flow_v1skillmd--l13l17">/Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_capital_flow_v1/SKILL.md · L13–L17</a></li><li class="depth-1"><a href="#8-rr1--18--2当前完整决策链出处数值不拟改" data-for="8-rr1--18--2当前完整决策链出处数值不拟改">8. RR=1 / 1.8 / 2：当前完整决策链出处，数值不拟改</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l384l388" data-for="userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l384l388">/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md · L384–L388</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪skillstrade_discipline_v1skillmd--l29l33" data-for="userschenyangdownloadsdemo沧海巨浪skillstrade_discipline_v1skillmd--l29l33">/Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md · L29–L33</a></li><li class="depth-2"><a href="#userschenyanghermesprofilescanghai-plansoulmd--l37l42" data-for="userschenyanghermesprofilescanghai-plansoulmd--l37l42">/Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md · L37–L42</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪srcplanrisk_rewardpy--l41l48" data-for="userschenyangdownloadsdemo沧海巨浪srcplanrisk_rewardpy--l41l48">/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/risk_reward.py · L41–L48</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪srcplanrisk_rewardpy--l88l116" data-for="userschenyangdownloadsdemo沧海巨浪srcplanrisk_rewardpy--l88l116">/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/risk_reward.py · L88–L116</a></li><li class="depth-2"><a href="#userschenyanghermesprofilescanghai-researchsoulmd--l53l58" data-for="userschenyanghermesprofilescanghai-researchsoulmd--l53l58">/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md · L53–L58</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l487l510" data-for="userschenyangdownloadsdemo沧海巨浪skillsmain_decision_v1skillmd--l487l510">/Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md · L487–L510</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l86l96" data-for="userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l86l96">/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/price_levels.py · L86–L96</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l175l189" data-for="userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l175l189">/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/price_levels.py · L175–L189</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l213l217" data-for="userschenyangdownloadsdemo沧海巨浪srcplanprice_levelspy--l213l217">/Users/chenyang/Downloads/demo/沧海巨浪/src/plan/price_levels.py · L213–L217</a></li><li class="depth-2"><a href="#userschenyangdownloadsdemo沧海巨浪scriptsplanapply_price_levelspy--l129l142" data-for="userschenyangdownloadsdemo沧海巨浪scriptsplanapply_price_levelspy--l129l142">/Users/chenyang/Downloads/demo/沧海巨浪/scripts/plan/apply_price_levels.py · L129–L142</a></li><li class="depth-2"><a href="#rr-必须回答的待决问题" data-for="rr-必须回答的待决问题">RR 必须回答的待决问题</a></li><li class="depth-1"><a href="#9-与四组实现验收的对应与未纳入项" data-for="9-与四组实现验收的对应与未纳入项">9. 与四组实现验收的对应与未纳入项</a></li><li class="depth-1"><a href="#10-本提案实际验证与应用后仍需验证" data-for="10-本提案实际验证与应用后仍需验证">10. 本提案实际验证与应用后仍需验证</a></li><li class="depth-1"><a href="#11-主控补充报价年龄政策仍未设定" data-for="11-主控补充报价年龄政策仍未设定">11. 主控补充：报价年龄政策仍未设定</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

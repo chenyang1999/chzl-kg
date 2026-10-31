@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-29T14:32:34.478307+08:00",
+  "source_matches_tested": true,
+  "index_sha256": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143",
+  "junit_cases": 87,
+  "handoff_sha256": "ef36e865b1429c539e45d87f3f8b0cae77b4a34b87b7361eec1f5500f0d45503",
+  "repair_patch_sha256": "1b1742aa422fe4b62d37d01919bbda02fe6afe0f34839ca84856c3d6e364471a",
+  "manifest_file_count": 68
+}

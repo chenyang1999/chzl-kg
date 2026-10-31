@@ -1,0 +1,27 @@
+{
+  "user_confirmations": [
+    "允许接入这两类快照并绑定版本",
+    "采用必要风险必审、辅助项目可降级"
+  ],
+  "auxiliary_scope": [
+    "data/research/{trade_date}/attention_signals.json",
+    "data/research/{trade_date}/emotion_cycle.json"
+  ],
+  "core_review_scope": [
+    "资金与消息交叉",
+    "风格一致性",
+    "出货风险",
+    "财务合规"
+  ],
+  "auxiliary_review_missing_does_not_block_core": true,
+  "height_alone_does_not_hard_reject": true,
+  "real_distribution_and_financial_compliance_prohibitions_preserved": true,
+  "production_rerun_authorized": false,
+  "before_sha256": {
+    "skills/analyze_devil_advocate_v1/SKILL.md": "dd0bcbcc27795f620f714224f49c5078958fca1d82c935294564713d4fc2cadf",
+    "docs/agents/R6-反证Agent.md": "5838b2223b7e2dc5250913ef7f916843203a67148354323479656777a4aaa6df",
+    "docs/06-专题-反证机制.md": "b9d99d295a04a08f560aad882cfa35fb9731e3c7d70d5a52cc1f47824f71fb7c",
+    "tests/pipeline/test_signed_input_review_contract.py": "4860492fa25fa427d7f8cf1bd64ed593fc6c7afd94d4cd83c4ddf9722223a1de"
+  },
+  "index_sha256": "c24736dd938685a85db19301280d8b9fdafdf6fb2bab56a056068dc026df152b"
+}
