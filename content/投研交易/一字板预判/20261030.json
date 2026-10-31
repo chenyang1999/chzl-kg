@@ -1,0 +1,87 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261030",
+  "next_day": "20261102",
+  "generated_at": "2026-10-30T22:00:44+08:00",
+  "n_total": 47,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "603131.SH",
+      "name": "上海沪工",
+      "industry": "通用设备",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 2.58,
+      "pct_chg": 10.03,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 59.1,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.6亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002172.SZ",
+      "name": "澳洋健康",
+      "industry": "医疗服务",
+      "theme": "高压氧舱、银发经济、脑机接口",
+      "limit_times": 3,
+      "fd_amount_yi": 0.6,
+      "pct_chg": 10.06,
+      "first_time": "102539",
+      "open_times": 2,
+      "float_mv_yi": 45.2,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.6亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600261.SH",
+      "name": "阳光照明",
+      "industry": "照明设备",
+      "theme": "",
+      "limit_times": 2,
+      "fd_amount_yi": 6.1,
+      "pct_chg": 9.95,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 54.6,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=6.1亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "603703.SH",
+      "name": "盛洋科技",
+      "industry": "光学光电",
+      "theme": "",
+      "limit_times": 2,
+      "fd_amount_yi": 2.43,
+      "pct_chg": 10.04,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 49.6,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.4亿 (一字率26%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停47只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}
