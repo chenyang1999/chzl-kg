@@ -1,0 +1,5 @@
+{
+  "scripts/plan/ensure_watchlist_plan.py": "ccaef81a65a774336bcfa6ab20d6cc404a7786c899d077c38ab5bb3ed334d650",
+  "scripts/research/run_research_shell.sh": "b146e3923ceef93e6dc9953532c6afe69fa0319c7f040fdc34c29b80a8e3759b",
+  "tests/pipeline/test_d1_selective_reassessment.py": "1cb441b7c45b11796245b1fe62e531888959c56cc2b2a187313bfa14aa338a64"
+}

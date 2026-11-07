@@ -1,0 +1,206 @@
+{
+  "schema_version": "research_pipeline_v2",
+  "pipeline": "research_shell",
+  "trade_date": "20261023",
+  "run_id": "20261023T061047-60743-14677",
+  "started_at": "2026-10-23T06:10:47.340363+08:00",
+  "started_ns": 1792707047340550000,
+  "finished_at": "2026-10-23T06:54:34.398710+08:00",
+  "missing_json": [],
+  "missing_md": [],
+  "missing_count": 0,
+  "total_expected": 15,
+  "stages": {
+    "trading_day_guard": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:10:47.438906+08:00",
+      "finished_at": "2026-10-23T06:10:47.502399+08:00"
+    },
+    "fetch_wait": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:10:47.535542+08:00",
+      "finished_at": "2026-10-23T06:10:47.570482+08:00"
+    },
+    "R4": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:10:47.660079+08:00",
+      "attempt": 1,
+      "attempt_started_ns": 1792707047660256000,
+      "finished_at": "2026-10-23T06:18:31.933336+08:00"
+    },
+    "R1": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:10:47.661472+08:00",
+      "attempt": 1,
+      "attempt_started_ns": 1792707047661634000,
+      "finished_at": "2026-10-23T06:24:45.402969+08:00"
+    },
+    "R7": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:10:47.663954+08:00",
+      "attempt": 1,
+      "attempt_started_ns": 1792707047664268000,
+      "finished_at": "2026-10-23T06:29:50.701576+08:00"
+    },
+    "R3": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:29:50.746613+08:00",
+      "attempt": 1,
+      "attempt_started_ns": 1792708190746764000,
+      "finished_at": "2026-10-23T06:35:28.041075+08:00"
+    },
+    "R2": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:35:28.140939+08:00",
+      "attempt": 1,
+      "attempt_started_ns": 1792708528141108000,
+      "finished_at": "2026-10-23T06:42:53.733223+08:00"
+    },
+    "R5": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:43:50.242055+08:00",
+      "attempt": 1,
+      "attempt_started_ns": 1792709030242265000,
+      "finished_at": "2026-10-23T06:45:49.944284+08:00"
+    },
+    "R6": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:45:49.991351+08:00",
+      "attempt": 1,
+      "attempt_started_ns": 1792709149991515000,
+      "finished_at": "2026-10-23T06:49:11.100474+08:00"
+    },
+    "summary": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:49:11.144678+08:00",
+      "finished_at": "2026-10-23T06:49:11.249065+08:00"
+    },
+    "D1": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:49:11.291770+08:00",
+      "attempt": 1,
+      "attempt_started_ns": 1792709351291989000,
+      "finished_at": "2026-10-23T06:54:33.941673+08:00"
+    },
+    "runtime_handoff": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:54:33.973247+08:00",
+      "finished_at": "2026-10-23T06:54:34.219628+08:00"
+    },
+    "reconciliation": {
+      "status": "completed",
+      "error": null,
+      "started_at": "2026-10-23T06:54:34.253464+08:00",
+      "finished_at": "2026-10-23T06:54:34.348168+08:00"
+    }
+  },
+  "contract_results": {
+    "R4": {
+      "json": {
+        "passed": true,
+        "path": "data/research/20261023/R4_news.json"
+      },
+      "md": {
+        "passed": true,
+        "path": "chzl_kg/投研交易/消息面/20261023.md"
+      }
+    },
+    "R1": {
+      "json": {
+        "passed": true,
+        "path": "data/research/20261023/R1_style.json"
+      },
+      "md": {
+        "passed": true,
+        "path": "chzl_kg/投研交易/风格研判/20261023.md"
+      }
+    },
+    "R7": {
+      "json": {
+        "passed": true,
+        "path": "data/research/20261023/R7_capital_flow.json"
+      },
+      "md": {
+        "passed": true,
+        "path": "chzl_kg/投研交易/资金面/20261023.md"
+      }
+    },
+    "R3": {
+      "json": {
+        "passed": true,
+        "path": "data/research/20261023/R3_sentiment.json"
+      },
+      "md": {
+        "passed": true,
+        "path": "chzl_kg/投研交易/群聊情绪/20261023.md"
+      }
+    },
+    "R2": {
+      "json": {
+        "passed": true,
+        "path": "data/research/20261023/R2_main_sectors.json"
+      },
+      "md": {
+        "passed": true,
+        "path": "chzl_kg/投研交易/主线研判/20261023.md"
+      }
+    },
+    "R5": {
+      "json": {
+        "passed": true,
+        "path": "data/research/20261023/R5_stock_profiles.json"
+      },
+      "md": {
+        "passed": true,
+        "path": "chzl_kg/投研交易/个股画像/20261023.md"
+      }
+    },
+    "R6": {
+      "json": {
+        "passed": true,
+        "path": "data/research/20261023/R6_devil_advocate.json"
+      },
+      "md": {
+        "passed": true,
+        "path": "chzl_kg/投研交易/反证/20261023.md"
+      }
+    },
+    "D1": {
+      "json": {
+        "passed": true,
+        "path": "data/plans/20261023/watchlist_plan.json"
+      },
+      "md": {
+        "passed": true,
+        "path": "chzl_kg/投研交易/盘前预案/20261023.md"
+      }
+    },
+    "D1_json": {
+      "passed": true
+    },
+    "summary": {
+      "passed": true
+    },
+    "runtime_handoff": {
+      "passed": true
+    }
+  },
+  "error": null,
+  "status": "completed",
+  "pid": 60749,
+  "updated_at": "2026-10-23T06:54:34.398894+08:00",
+  "process_exit_code": 0,
+  "exit_code": 0
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260831",
+  "next_day": "20260901",
+  "generated_at": "2026-10-17T18:55:27+08:00",
+  "n_total": 88,
+  "n_candidates": 11,
+  "candidates": [
+    {
+      "ts_code": "002396.SZ",
+      "name": "星网锐捷",
+      "industry": "通信设备",
+      "limit_times": 3,
+      "fd_amount_yi": 2.45,
+      "pct_chg": 10.0,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.4亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "600540.SH",
+      "name": "新赛股份",
+      "industry": "种植业",
+      "limit_times": 3,
+      "fd_amount_yi": 2.47,
+      "pct_chg": 10.1,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.5亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002084.SZ",
+      "name": "海鸥住工",
+      "industry": "家居用品",
+      "limit_times": 6,
+      "fd_amount_yi": 3.31,
+      "pct_chg": 10.0,
+      "prob_yizi": 31.0,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=6 (一字率20%)",
+        "封单=3.3亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002886.SZ",
+      "name": "沃特股份",
+      "industry": "塑料",
+      "limit_times": 3,
+      "fd_amount_yi": 0.39,
+      "pct_chg": 10.0,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.4亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "603269.SH",
+      "name": "海鸥股份",
+      "industry": "通用设备",
+      "limit_times": 3,
+      "fd_amount_yi": 0.29,
+      "pct_chg": 10.01,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.3亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600371.SH",
+      "name": "万向德农",
+      "industry": "种植业",
+      "limit_times": 5,
+      "fd_amount_yi": 1.42,
+      "pct_chg": 9.97,
+      "prob_yizi": 20.0,
+      "prob_up": 42.0,
+      "rank": "关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=1.4亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "000560.SZ",
+      "name": "我爱我家",
+      "industry": "房地产服务",
+      "limit_times": 2,
+      "fd_amount_yi": 4.59,
+      "pct_chg": 9.85,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=4.6亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002679.SZ",
+      "name": "福建金森",
+      "industry": "林业Ⅱ",
+      "limit_times": 2,
+      "fd_amount_yi": 3.54,
+      "pct_chg": 10.03,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=3.5亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "000977.SZ",
+      "name": "浪潮信息",
+      "industry": "计算机设",
+      "limit_times": 1,
+      "fd_amount_yi": 4.08,
+      "pct_chg": 9.99,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.1亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "300364.SZ",
+      "name": "中文在线",
+      "industry": "数字媒体",
+      "limit_times": 1,
+      "fd_amount_yi": 3.66,
+      "pct_chg": 20.02,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.7亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "300413.SZ",
+      "name": "芒果超媒",
+      "industry": "数字媒体",
+      "limit_times": 1,
+      "fd_amount_yi": 3.88,
+      "pct_chg": 20.0,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.9亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停88只，筛出 11 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

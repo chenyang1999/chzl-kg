@@ -1,0 +1,29 @@
+{
+  "user_instruction": "签核，继续修改",
+  "approval_scope": [
+    "INPUT-01 presented diff",
+    "REVIEW-02 presented diff"
+  ],
+  "approved_patch_sha256": "c243e6719014cbd9e9413ac92bb2b4dc71d6b53cb4088795ac598f401b9976fb",
+  "target_paths": [
+    "scripts/research/run_research_shell.sh",
+    "scripts/plan/ensure_watchlist_plan.py",
+    "skills/main_decision_v1/SKILL.md",
+    "skills/analyze_devil_advocate_v1/SKILL.md"
+  ],
+  "before_sha256": {
+    "scripts/research/run_research_shell.sh": "8121571523ce898a92ae557f6a7a1b9b9c1970569c32d6aa66aeb49df5fafa7b",
+    "scripts/plan/ensure_watchlist_plan.py": "50b82b6c77a864e617c9ba51f8f68339752fdcb690ada95f310cc1db75c4d837",
+    "skills/main_decision_v1/SKILL.md": "1f37c754dd2bac3ff0e5d366b36d7afdb10b7d893a31802120f8d705eaaeee4c",
+    "skills/analyze_devil_advocate_v1/SKILL.md": "aeee4559edbb1d095759202b03c33e50dd9fc3a5c6581a254d5d8124b67d0e0d"
+  },
+  "expected_sha256": {
+    "scripts/research/run_research_shell.sh": "e946bdd4a5ebe4a380c18f54d7477b3467815a906ede085752059024c56ded82",
+    "scripts/plan/ensure_watchlist_plan.py": "fc6d1d59d559133d73b809dd9224ef482b3aab8b17f1d87249b5f12d4b0e4cea",
+    "skills/main_decision_v1/SKILL.md": "4a0524ebcd9a2113baa7f3862b5c889c290e1b65e4877a752e410c7ff09e4dec",
+    "skills/analyze_devil_advocate_v1/SKILL.md": "dd0bcbcc27795f620f714224f49c5078958fca1d82c935294564713d4fc2cadf"
+  },
+  "index_sha256": "c24736dd938685a85db19301280d8b9fdafdf6fb2bab56a056068dc026df152b",
+  "no_new_numeric_policy": true,
+  "production_rerun_authorized": false
+}

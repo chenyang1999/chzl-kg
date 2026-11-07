@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a/.venv/bin/python",
+    "-B",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+    "closeout"
+  ],
+  "pytest_argv": [
+    "tests/test_v1_regression_contract_closeout_20261024.py",
+    "-q",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/closeout/fixtures/pytest",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/closeout/junit.xml"
+  ],
+  "exit_code": 0,
+  "violations": [],
+  "synthetic_only": true,
+  "rr_adapt": false,
+  "subtest_count": 0,
+  "collected_count": 32,
+  "collection_only": false
+}

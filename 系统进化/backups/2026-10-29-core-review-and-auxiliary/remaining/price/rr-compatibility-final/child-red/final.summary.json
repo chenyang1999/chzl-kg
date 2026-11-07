@@ -1,0 +1,21 @@
+{
+  "exit": 1,
+  "case_count": 109,
+  "unique_case_count": 109,
+  "failures": [
+    "test_scope_and_research_membership_survive_enrichment",
+    "test_d1_watch_trigger_only_and_b_prices_are_not_overwritten",
+    "test_all_registered_buy_entries_use_same_stock_gate[t_add_pullback]"
+  ],
+  "errors": [],
+  "skipped": [],
+  "drift": [],
+  "original_test_contract_preserved": true,
+  "native_cases_preserved": true,
+  "changed_since_baseline": [
+    "tests/test_canghai_rr_scope_20261023.py"
+  ],
+  "target_sha256_before": "844df1facee1ae8b5881fbe31b4285b1e66dfa425cc870100f7ae83fb6adf3d4",
+  "target_sha256_after": "6df94c0b0d8c5ac6272f14c3eb3a0258e0c0a7c0bdc011baa14004728d284a48",
+  "price_sha256": "c547df87ecbf58f9e5f8ef9562e8d416c559d1681125f99d8cc11a8a97115380"
+}

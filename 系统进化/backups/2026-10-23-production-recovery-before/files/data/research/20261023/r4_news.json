@@ -1,0 +1,2921 @@
+{
+  "schema_version": "research_unit_v1",
+  "agent": "R4",
+  "trade_date": "20261023",
+  "generated_at": "2026-10-23T06:18:09+08:00",
+  "status": "partial",
+  "confidence": 0.62,
+  "degraded": true,
+  "method": "llm_v1_live_news_crosscheck",
+  "top_events_count": 8,
+  "top_events": [
+    {
+      "event_id": "E20261023_001",
+      "parent_event_id": "AI_REPRICING",
+      "time": "2026-10-23 04:00:52",
+      "date": "2026-10-23",
+      "event_type": "sentiment",
+      "title": "海外AI硬件遭抛售与资本开支回报担忧",
+      "summary": "海外AI硬件普跌放大算力链风险偏好压力",
+      "score": -0.92,
+      "raw_score": -0.92,
+      "weighted_score": -0.92,
+      "days_since": 0,
+      "decayed": false,
+      "source": "新浪行情快讯",
+      "sources": [
+        "新浪行情快讯",
+        "证券时报原报道",
+        "IT之家引路透"
+      ],
+      "independent_source_count": 3,
+      "single_source": false,
+      "official_source": false,
+      "strength": "high",
+      "polarity": "负面",
+      "entity_map": {
+        "sectors": [
+          "光模块",
+          "CPO",
+          "半导体",
+          "存储",
+          "AI算力"
+        ],
+        "stocks": [],
+        "concepts": []
+      },
+      "sectors_impact": [
+        {
+          "name": "光模块",
+          "polarity": "负面",
+          "strength": "high",
+          "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+        },
+        {
+          "name": "CPO",
+          "polarity": "负面",
+          "strength": "high",
+          "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+        },
+        {
+          "name": "半导体",
+          "polarity": "负面",
+          "strength": "high",
+          "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+        },
+        {
+          "name": "存储",
+          "polarity": "负面",
+          "strength": "high",
+          "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+        },
+        {
+          "name": "AI算力",
+          "polarity": "负面",
+          "strength": "high",
+          "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+        }
+      ],
+      "stocks_impact": [],
+      "valid_period": "1-3日；以事实更新为准",
+      "bearish_scope": "行业级",
+      "bearish_impact_sectors": [
+        "光模块",
+        "CPO",
+        "半导体",
+        "存储",
+        "AI算力"
+      ],
+      "evidence": [
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 51,
+          "published_at": "2026-10-23 04:00:52",
+          "origin": "新浪行情快讯",
+          "text": "费城半导体指数下跌6.7%，创6月以来最大跌幅。",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 335,
+          "published_at": "2026-10-22 22:54:41",
+          "origin": "新浪行情快讯",
+          "text": "【美股科技硬件股遭遇抛售 费城半导体指数重挫5.7%】美股半导体板块集体走低，费城半导体指数下跌5.67%，创7月29日以来新低。成分股中，AMD跌7.21%，英特尔跌6.57%，应用材料跌6.57%，Arm跌6.75%，希捷科技跌7.81%，西部数据跌6.95%；美光科技跌4.29%，英伟达跌3.93%，台积电跌3.97%，博通跌3.79%，阿斯麦跌4.83%。存储及半导体设备、芯片设计等多个细分方向同步承压。此外，泛林集团跌9.78%，Lumentum跌9.24%，Coherent跌11.81%，三倍做多半导体ETF跌17.09%。",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/wechat_official_20.jsonl",
+          "line": 6,
+          "published_at": "2026-10-22 22:50",
+          "origin": "证券时报原报道",
+          "text": "什么情况？美股巨头，绩后大跌！ 10月22日，美国三大股指开盘走低 。 AI交易担忧重燃， 费城半导体指数大跌 4%， 光通信、存储股重挫，应用光电、 Coherent、迈威尔科技、Lumentum、ARM、英特尔 等 跌幅均超 5%。 个股方面， 特斯拉 和 SpaceX盘中均跌超3%，特斯拉下调资本开支指引，同时马斯克推动两公司合并引发不确定性担忧。不过，截至发稿，特斯拉股价直线拉升至翻红。 发布超预期业绩的 Meta大跌6%， 诺基亚 同样在发布业绩 后 下跌 7%。 英伟达力挺新云 在英伟达柏林 GTC大会 上 ，英伟达首席执行官黄仁勋接受 媒体 采访时表示，专注 AI算力的新云（Neocloud）服务商需求火爆异常，但行业正面临资金短缺的难题。 新云厂商主打 GPU算力租赁，服务AI训练与推理业务，代表企业包括 CoreWeave、Nebius等。尽管算力需求强劲，市场却对该赛道的资本开支、债务压力以及拉长的投资回报周期充满担忧。 黄仁勋本月在欧洲密集发声，英伟达正加码欧洲 AI生态布局，承诺投入近10亿美元，扶持当地企业、高校与科研机构。此前在伦敦之行中，英伟达宣布出资超10亿美元投资 多家 英国 和 法国科创公司。 黄仁勋称，英伟达希望助力欧洲激活 AI经济。欧洲具备扎实的工业积累、科研基础与技术储备，具备发展AI产业的良好条件。英伟达持续押注欧洲，一方面配合新云算力扩张，另一方面完善全球AI供应链布局。 行业当前呈现矛盾格局： AI算力刚需持续走高，但融资环境收紧，高资本投入模式考验企业现金流。需求与资金供给的错配，或将加速新云行业洗牌。 周四 ， 新云板块集体走弱， Nebius 和 CoreWeave均出现明显下跌。投资者重点警惕CoreWeave依靠举债建设数据中心带来的财务风险。 Meta业绩大超预期 Meta公布2026财年第三季度财报， 营收 646亿美元，同比增长26%，高于市场预期的633.7亿美元，每股收益3.83美元，同时给出强于预期的第四季度业绩指引。 本季度最大亮点为 9月上线的 Muse系列AI智能体。美加地区一个半月内已有超1000万用户开通 Muse个人智能体，日活渗透率约25%，购物是首要使用场景，超过四分之一使用者产生消费，平均单笔消费超200美元。Meta 已经 推出分级订阅方案，同时开源 Muse Spark Open吸引开发者。但 有分析认为 ， Muse短期难以贡献可观营收，属于长期布局。 此外， Meta 还披露 ，公司已承诺未来在各类租赁及合同上支出约 8250亿美元，其中很大一部分与人工智能所需的算力及基础设施有关。 挪威主权财富基金亏损 全球规模最大主权财富基金 挪威主权财富基金 （ NBIM）公布第三季度投资业绩，当期录得约300亿美元亏损，核心诱因是利率上行冲击债券资产表现。该基金总规模约2.3万亿美元，1998年设立，用于管理挪威油气出口收入，在全球众多头部企业持股，对全球投资风向与公司股东投票具备显著影响力。 从资产表现来看，本季度股票整体回报接近零，板块分化明显。受益于美伊冲突推动油价走高，能源板块领涨，基金持有埃克森美孚、壳牌、雪佛龙等能源巨头股份；公用事业、房地产这类利率敏感板块则出现下跌。其他另类资产方面，房地产回报率 0.4%，可再生能源基础设施回报7.5%。 三季度业绩 与上半年形成强烈对比。 基金 今年上半年回报率 12.95%，斩获近 1850亿美元创纪录利润。基金首席执行官尼古拉・坦根此前已提示市场，不要期待高收益持续。 责编：彭勃 校对：姚远 证券时报各平台所有原创内容，未经书面授权，任何单位及个人不得转载。我社保留追 究相关 行 为主体法律责任的权利。 转载与合作可联系证券时报小助理，微信ID：SecuritiesTimes",
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5NDEzMTAwMA==&mid=2652700521&idx=2&sn=8228d88d88f49e4aad4bad0206efc9b0&chksm=bc3ec6b419edfd7842730d71592cc48b6a1e65497496896235c7c6ef802404d04cbad97e5ed3",
+          "retrieval": "same_day_fetch"
+        }
+      ],
+      "web_hits": [
+        {
+          "title": "费城半导体指数日内跌5%",
+          "url": "https://finance.sina.cn/7x24/2026-10-22/detail-iniwchph8281441.d.html",
+          "publish_date": "2026-10-22 22:30:23",
+          "summary": "费城半导体指数日内跌5.01%，现报10929.55点。英伟达跌3.21%，博通跌3.29%，美光跌2.99%，英特尔跌5.88%，AMD跌6.47%，高通跌0.58%，台积电跌3.67%，阿斯麦跌4.49%。",
+          "extra": {
+            "seq": "",
+            "publish_source": "新浪财经",
+            "real_publish_source": "",
+            "host_name": "finance.sina.cn",
+            "de_groupid": "e1e8c5c6856cd3f",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "费城半导体 指数 10月22日"
+        },
+        {
+          "title": "费城半导体指数跌幅扩大至5%",
+          "url": "https://finance.stockstar.com/IG2026102200043330.shtml",
+          "publish_date": "2026-10-22 22:45:00",
+          "summary": "（原标题：费城半导体指数跌幅扩大至5%）观点网讯：费城半导体指数日内跌5.01%，现报10929.55点。成分股普遍下挫。AMD跌6.47%，英特尔跌5.88%，阿斯麦跌4.49%。台积电跌3.67%，博通跌3.29%，英伟达跌3.21%，美光跌2.99%，高通跌0.58%。免责声明：本文内容与数据由观点根据公开信息整理，不构成投资建议，使用前请核实。",
+          "extra": {
+            "seq": "",
+            "publish_source": "证券之星",
+            "real_publish_source": "观点",
+            "host_name": "finance.stockstar.com",
+            "de_groupid": "1f0e895d68d5cd7d",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "费城半导体 指数 10月22日"
+        },
+        {
+          "title": "Meta广告量价双升 AI变现初现 高资本开支换长期主导权",
+          "url": "https://industry.cfi.cn/p20261022000339.html",
+          "publish_date": "2026-10-22 13:11:31",
+          "summary": "时间：2026年10月22日 13:11:31&nbsp中财网 CFi.CN讯：数据显示，Meta三季度收入646亿美元、同比增26%，广告收入631亿美元、占比97.6%，展示量+10%、单价+14%，量价协同驱动增长。日活达36.4亿、稳中有升，AI排序与生成式创意工具提升广告转化率，单价上行成为新引擎。剔除98.9亿美元和解费用后，经营利润229亿美元、利润率35.4%，每股收益7.40美元远超预期。  近期机构研报指出，Meta正从“广告平台”向“AI基础设施+订阅服务”双轨演进，Muse与MuseWonder模型已覆盖推荐、生成、智能体全场景，商业消息、AI订阅等其他收入连续两季增速超50%。研报认为，高资本开支(全年指引1350–1450亿美元)并非盲目投入，而是为吉瓦级数据中心与模型生态抢夺算力主权，未来订阅与API变现将稀释广告周期依赖。  研报指出，Reality Labs亏损收窄，资源持续向AI主线倾斜；自由现金流短期承压属战略投入期常态，经营现金流仍高达328亿美元，足以支撑当前扩张节奏。AI能力在核心广告业务率先兑现回报，构成再投资的坚实基础。 中财网",
+          "extra": {
+            "seq": "",
+            "publish_source": "中财网",
+            "real_publish_source": "31&nbsp中财网",
+            "host_name": "industry.cfi.cn",
+            "de_groupid": "4a2850c5e9d9d9da",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "AI 资本开支"
+        },
+        {
+          "title": "特斯拉 AI 转型亮红灯？三季度资本支出罕见“大缩水”",
+          "url": "https://news.qq.com/rain/a/20261022A03O8Q00",
+          "publish_date": "2026-10-22 09:50:09",
+          "summary": "IT之家 10 月 22 日消息，路透社昨日（10 月 21 日）发布博文，报道称基于特斯拉第 3 季度财报数据，公司资本支出为 47.3 亿美元（IT之家注：现汇率约合 316.41 亿元人民币），虽较去年同期增长逾一倍，却远低于市场预期的约 77 亿至 79.5 亿美元（现汇率约合 515.08 亿至 531.8 亿元人民币）。财报数据显示，特斯拉第三季度资本支出为 47.3 亿美元（现汇率约合 316.41 亿元人民币），较去年同期翻倍以上，但较第二季度减少约 10 亿美元（现汇率约合 6\n......当中省略430字正文内容......\n意味着项目延期、产能爬坡放缓或技术攻关滞后，市场对特斯拉未来估值核心的信心就可能受到冲击。马斯克在电话会上承认，Optimus 仍面临供应链、训练数据和机械手设计等挑战，预计相关问题可能要到 2027 年底才能解决，随后还需约一年才能向客户交付。IT之家查询特斯拉股价信息，10 月 21 日收盘价格为 386.47 美元（现汇率约合 2,585 元人民币），当前市值为 1.53 万亿美元（现汇率约合 10.23 万亿元人民币）；盘后价格为 373.71 美元（现汇率约合 2,500 元人民币）。",
+          "extra": {
+            "seq": "",
+            "publish_source": "腾讯网",
+            "real_publish_source": "IT之家",
+            "host_name": "new.qq.com",
+            "de_groupid": "fb8650c3b97b63d2",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "AI 资本开支"
+        },
+        {
+          "title": "Meta Q3资本支出349亿美元超越经营现金流：AI基建投入穿越临界点",
+          "url": "https://www.ai-club.cn/news-article/47113",
+          "publish_date": "2026-10-22 14:23:00",
+          "summary": "2026年10月21日，Meta公布第三季度财报：营收646亿美元，同比增长26%，超出市场一致预期的634亿美元。当季资本支出349亿美元首次超过同期经营现金流328亿美元，导致自由现金流转负约21亿美元，上年同期为正约106亿美元。\nMeta将全年资本支出指引上调并收窄至1350亿至1450亿美元，董事会批准设立无投票权C类普通股，计划于2027年1月生效。扎克伯格在财报公告中表示，本季度是“迈向为所有人提供个人超级智能的重大里程碑”，并将Muse和Muse Wonder定位为Meta“首个\n......当中省略1329字正文内容......\n、亚马逊在早期AWS建设周期中，都曾经历过类似的资本支出超越自由现金流的阶段。Meta同期的广告业务仍然健康，且AI在广告侧的量化回报已经显现。\n前瞻：两个关键验证信号\nMeta正在执行一场有意为之的“预支自由现金流”的战略押注，前提假设是AI广告增益（JEM 9.6%、广告均价+14%）已证明基础设施资本回报真实可量化。\n接下来有两个具体信号：第一，Muse的付费订阅转化能否在未来两个季度形成可披露的独立收入贡献；第二，Q4自由现金流能否在730至760亿美元营收指引下收窄亏损幅度或重新转正。",
+          "extra": {
+            "seq": "",
+            "publish_source": "www.ai-club.cn",
+            "real_publish_source": "雷锋网",
+            "host_name": "www.ai-club.cn",
+            "de_groupid": "caacd8ede8d358d1",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "AI 资本开支"
+        }
+      ],
+      "raw_url_verified": false,
+      "primary_source_text": null,
+      "reasoning": {
+        "capital_intent_hypothesis": "可验证的是海外硬件下跌；去杠杆与估值重估是解释假设，不能等同国内主力净流出。",
+        "why_sector_may_strengthen": "不是走强事件。资本开支能否产生现金回报受到质疑，海外可比估值下修对A股硬件形成压力。",
+        "evidence_hardness": "行情与多家媒体记录相互印证，风险传导成立；不能从跌幅反推出国内订单已被取消。",
+        "invalidation": "海外硬件止跌且国内核心重获承接只能缓释风险；恢复执行资格仍须R1/R2/R5/R6。"
+      },
+      "action": "观察",
+      "opportunity_category": null,
+      "execution_eligible": false,
+      "notes": "R4只做事件映射；主跌期不提供交易首推，不生成虚构止损价。板块影响是因果假设而非资金面证实。"
+    },
+    {
+      "event_id": "E20261023_002",
+      "parent_event_id": "ISAAC",
+      "time": "2026-10-21 18:28:00",
+      "date": "2026-10-22",
+      "event_type": "technical_break",
+      "title": "英伟达扩展Isaac机器人开发平台",
+      "summary": "Isaac平台扩展强化机器人训练仿真工具链催化",
+      "score": 0.74,
+      "raw_score": 0.74,
+      "weighted_score": 0.636924,
+      "days_since": 1,
+      "decayed": false,
+      "source": "财联社主题前瞻",
+      "sources": [
+        "财联社主题前瞻",
+        "界面经每经转载",
+        "财闻原报道"
+      ],
+      "independent_source_count": 3,
+      "single_source": false,
+      "official_source": false,
+      "strength": "high",
+      "polarity": "正面",
+      "entity_map": {
+        "sectors": [
+          "人形机器人",
+          "工业软件"
+        ],
+        "stocks": [
+          {
+            "code": "688507",
+            "name": "索辰科技"
+          },
+          {
+            "code": "301550",
+            "name": "斯菱智驱"
+          }
+        ],
+        "concepts": []
+      },
+      "sectors_impact": [
+        {
+          "name": "人形机器人",
+          "polarity": "正面",
+          "strength": "high",
+          "mechanism": "训练与仿真工具降低开发门槛"
+        },
+        {
+          "name": "工业软件",
+          "polarity": "正面",
+          "strength": "medium",
+          "mechanism": "设计仿真工具链需求映射"
+        }
+      ],
+      "stocks_impact": [
+        {
+          "code": "688507",
+          "ts_code": "688507.SH",
+          "name": "索辰科技",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "公众号匿名A原文点名机器人设计软件",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "当日公告/预告标识核对"
+        },
+        {
+          "code": "301550",
+          "ts_code": "301550.SZ",
+          "name": "斯菱智驱",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "公众号匿名A原文点名谐波减速器",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "live hithink-market-query代码核对；is_cache=0",
+          "symbol_lookup_query": "斯菱智驱 股票代码"
+        }
+      ],
+      "valid_period": "1-3日；以事实更新为准",
+      "bearish_scope": null,
+      "bearish_impact_sectors": [],
+      "evidence": [
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 2353,
+          "published_at": "2026-10-21 18:28",
+          "origin": "同花顺新闻",
+          "text": "英伟达宣布升级Isaac通用机器人开发平台，推出新的人形机器人参考框架、仿真工作流及数据工具，旨在加速通用机器人开发。相关更新覆盖机器人训练、仿真验证和部署流程，帮助开发者利用合成数据和仿真环境训练机器人，并在实际部署前验证机器人行...",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/wechat_official_20.jsonl",
+          "line": 1,
+          "published_at": "2026-10-22 19:02",
+          "origin": "财联社主题前瞻",
+          "text": "【明日主题前瞻】英伟达升级Isaac机器人平台，推出人形机器人参考框架与仿真工具 【热点导读】 >英伟达升级Isaac机器人平台，推出人形机器人参考框架与仿真工具 >OpenAI就PHP软件中发现的严重漏洞发表声明 >能源转型政策驱动下，海内外储能需求持续释放 >英伟达计划未来三年将基板产能提升至目前的2.5倍 >灵巧手赛道成为人形机器人产业链竞争最激烈的细分战场之一 【主题详情】 英伟达升级Isaac机器人平台，推出人形机器人参考框架与仿真工具 据媒体报道，英伟达宣布升级Isaac通用机器人开发平台，推出新的人形机器人参考框架、仿真工作流及数据工具，旨在加速通用机器人开发。相关更新覆盖机器人训练、仿真验证和部署流程，帮助开发者利用合成数据和仿真环境训练机器人，并在实际部署前验证机器人行为。 TrendForce集邦咨询预估，2026年中国人形机器人市场规模将达150亿元。湘财证券称，机器人产业趋势向上，T链和国产链共振，关注技术升级弹性与量产确定性兼具的标的。建议关注T链和国产链核心标的以及丝杠、减速器、结构件、电机等核心赛道个股。 公司方面， 索辰科技 的机器人设计软件将涵盖并联机器人（包括人形机器人）本体的完整研发过程，从功能设计、构型综合、性能分析到结构设计优化。 斯菱智驱 主要聚焦于谐波减速器的研发和量产，该产品适用于工业机器人、协作机器人、人形机器人等多个应用场景。 OpenAI就PHP软件中发现的严重漏洞发表声明 据媒体报道，OpenAI就PHP软件中发现的严重漏洞发表声明，指出鉴于漏洞的严重性和PHP的广泛使用，这是近期影响最大的漏洞之一。OpenAI承诺通过其“Daybreak for Frontline Defenders”计划，提供价值10亿美元的补贴访问额度，以支持防御者。 随着大模型与智能体等AI应用在政务、金融、工业、医疗及企业内部管理等场景加速落地，AI带来安全风险随之向业务核心环节渗透，也衍生出了提示词注入、模型投毒、多智能体协同欺骗等全新系统性风险。开源证券认为，AI时代，网络安全进入“AI对抗AI”的阶段，行业也迎来新发展机遇。Gartner预计，2027年全球AI安全市场规模将较2026年增长69%，达到47.83亿美元，并在2028年进一步升至约77亿美元。AI安全市场高速增长主要源于企业急需保护人工智能系统、解决新兴漏洞并加强对复杂网络威胁的防御能力。 上市公司中， 启明星辰 深度融合AI技术，推动防护能力向智能认知跃迁。在检测引擎侧，构建“语义分析+AI模型”多层检测体系，显著提升了对免杀WebShell、高对抗Web攻击等高隐蔽威胁的识别精度和效率，并针对AIAgent攻击研发异常行为检测技术，实现检测范式向攻击意图识别的跨越。 亚信安全 围绕智能体身份安全、AI资产治理和智能体可信运行持续推进产品和技术建设，发布智能体身份安全体系，推出业界首款智能体信任框架——ATF（AgentTrustFramework），以“智能体意图对齐+人机共治”的新范式，重构人机协同的信任根基，构建智能体可信运行的安全基础。 能源转型政策驱动下，海内外储能需求持续释放 据媒体报道，近日“浙里共赢”储能产业链国际采购暨“十链百场万企”对接会专场活动在杭州举办。来自欧盟、东南亚等地的49位海外机构、采购商代表赴杭州对接，意向采购金额约4.5亿美元。 根据寻熵研究院、储能与电力市场的数据统计，2026年，我国储能项目的招投标数据延续高增长，整体表现亮眼。2026年9月，我国储能招标规模为22.0GW，同比增长83.03%。储能招投标规模是装机规模前置指标，在强制配储取消后，招投标规模保持高增长，显示装机需求韧性，有望支撑未来储能装机规模增长。华西证券认为，在能源转型政策驱动下，北美、欧洲及国内大储需求持续释放，其中风光配套储能主要用于平抑新能源出力波动、参与电网需求响应；而数据中心配储作为新兴场景，核心用于缓解局部电网拥堵，保障高算力负荷稳定供电，开辟储能新增需求。海外大储需求韧性突出，国内储能产业链企业依托成熟产品与海外渠道优势，有望持续斩获海外项目订单。 上市公司中， 许继电气 在新型储能方面有储能变流器等相关产品及解决方案。公司构网储能变流器2024年通过中国电工技术协会鉴定，已在国内多个项目中应用，覆盖大规",
+          "url": "https://mp.weixin.qq.com/s?__biz=Mzg2NzE4MjUwNw==&mid=2247533749&idx=1&sn=699235154d949ad75914b0a24d54fcaa&chksm=cff34ab8c55760ddfb65c8c03d99aeafc48c4e27f8791689d25ee81c2bba846e19c1b235585d",
+          "retrieval": "same_day_fetch"
+        }
+      ],
+      "web_hits": [
+        {
+          "title": "英伟达扩展Isaac机器人开发平台",
+          "url": "http://www.nbd.com.cn/articles/2026-10-21/4611526.html",
+          "publish_date": "2026-10-21 18:36:09",
+          "summary": "每经AI快讯，10月21日，英伟达宣布扩展Isaac开放机器人开发平台，新增人形机器人参考平台、数据集、运行时框架及机器人学习工具，旨在打通数据生成、模型训练、仿真验证到实际部署的流程，加快通用机器人研发。英伟达还推出开源运行时框架Isaac OS，正式发布机器人学习框架Isaac Lab 3.0，并开放包含2000多种仿真就绪机器人及工厂资产的SimReady Central Library。此外，公司发布三套基于DGX Station的开源参考工作流，支持机器人强化学习、灵巧操作训练及利用ChatGPT Astra进行Cosmos世界模型后训练和合成数据生成。（界面）",
+          "extra": {
+            "seq": "",
+            "publish_source": "每经网",
+            "real_publish_source": "",
+            "host_name": "www.nbd.com.cn",
+            "de_groupid": "d8b27b11f008037b",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "英伟达 Isaac 机器人"
+        },
+        {
+          "title": "扩展Isaac平台 英伟达加速卡位人形机器人生态位",
+          "url": "https://news.10jqka.com.cn/20261022/c680971250.shtml",
+          "publish_date": "2026-10-22 14:36:41",
+          "summary": "日前，英伟达（NVDA）(NVDA.US)在GTC柏林大会上宣布扩展Isaac开放机器人开发平台，新增参考平台、运行框架、仿真资产、数据集，以及机器人学习工具，打通数据生成、模型训练、真机部署等流程。\n财闻注意到，此次新增的参考平台为Agile ONE SN，由德国机器人企业Agile Robots发布。该平台搭载Jetson Thor计算平台，并预配置英伟达（NVDA）Isaac GR00T，通过整合仿真、训练和部署工具，可将相关环境的前期配置时间从数周缩短至数天。\n英伟达（NVDA）表示，此\n......当中省略378字正文内容......\n直接调用平台内置数据集、仿真环境提前完成机器人行为验证，大幅降低的研发试错成本，加速原型产品落地。\n据TrendForce集邦咨询预计，2026年中国市场规模有望达到150亿元，随量产规模扩大、应用场景增加，2027年增速至少维持60%以上。从这个角度看，英伟达（NVDA）扩展Isaac平台，本质是在做产业的“基础设施供应商”，也就是用参考平台、仿真资产和训练框架降低开发门槛，用Jetson Thor和GR00T把算力、模型与真机部署串起来，减少开发者试错成本的同时，在行业放量前提前锁定生态位。",
+          "extra": {
+            "seq": "",
+            "publish_source": "nc.moc.akqj01.swen",
+            "real_publish_source": "财闻",
+            "host_name": "nc.moc.akqj01.swen",
+            "de_groupid": "c3b3591ab0181329",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "英伟达 Isaac 机器人"
+        }
+      ],
+      "raw_url_verified": false,
+      "primary_source_text": null,
+      "reasoning": {
+        "capital_intent_hypothesis": "潜在交易叙事是从高估值算力硬件向具身应用寻找增量，是否已发生资金切换未验证。",
+        "why_sector_may_strengthen": "新增参考平台与学习工具缩短研发流程；产业催化不等于A股次日有接力资金。",
+        "evidence_hardness": "平台更新有当日检索与不同媒体印证，但并未给出A股公司新增订单金额，不能当业绩兑现。",
+        "invalidation": "若只有孤立高开而无板块效应，右侧确认假设失败；主跌阶段仍不出交易候选。"
+      },
+      "action": "观察",
+      "opportunity_category": null,
+      "execution_eligible": false,
+      "notes": "R4只做事件映射；主跌期不提供交易首推，不生成虚构止损价。板块影响是因果假设而非资金面证实。"
+    },
+    {
+      "event_id": "E20261023_003",
+      "parent_event_id": "PHP",
+      "time": "2026-10-22 17:09:57",
+      "date": "2026-10-23",
+      "event_type": "technical_break",
+      "title": "PHP高危漏洞触发紧急修复与安全防护需求",
+      "summary": "PHP漏洞推动应急排查需求但免费服务不等于新增收入",
+      "score": 0.78,
+      "raw_score": 0.78,
+      "weighted_score": 0.78,
+      "days_since": 0,
+      "decayed": false,
+      "source": "PHP官方",
+      "sources": [
+        "PHP官方",
+        "国家网络安全通报中心",
+        "CNVD",
+        "新浪科技"
+      ],
+      "independent_source_count": 4,
+      "single_source": false,
+      "official_source": true,
+      "strength": "high",
+      "polarity": "正面",
+      "entity_map": {
+        "sectors": [
+          "网络安全",
+          "AI安全"
+        ],
+        "stocks": [
+          {
+            "code": "002439",
+            "name": "启明星辰"
+          },
+          {
+            "code": "688225",
+            "name": "亚信安全"
+          },
+          {
+            "code": "601360",
+            "name": "三六零"
+          }
+        ],
+        "concepts": []
+      },
+      "sectors_impact": [
+        {
+          "name": "网络安全",
+          "polarity": "正面",
+          "strength": "high",
+          "mechanism": "漏洞排查与应急响应需求增加"
+        },
+        {
+          "name": "AI安全",
+          "polarity": "正面",
+          "strength": "medium",
+          "mechanism": "自动发现漏洞与机器速度攻防需求"
+        }
+      ],
+      "stocks_impact": [
+        {
+          "code": "002439",
+          "ts_code": "002439.SZ",
+          "name": "启明星辰",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "公众号匿名A点名AI检测引擎与攻击识别",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "live hithink-market-query代码核对；is_cache=0",
+          "symbol_lookup_query": "启明星辰 股票代码"
+        },
+        {
+          "code": "688225",
+          "ts_code": "688225.SH",
+          "name": "亚信安全",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "公众号匿名A点名智能体身份安全",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "live hithink-market-query代码核对；is_cache=0",
+          "symbol_lookup_query": "亚信安全 股票代码"
+        },
+        {
+          "code": "601360",
+          "ts_code": "601360.SH",
+          "name": "三六零",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "新浪科技原文报道开放PHP安全体检服务",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "live hithink-market-query代码核对；is_cache=0",
+          "symbol_lookup_query": "三六零 股票代码"
+        }
+      ],
+      "valid_period": "1-3日；以事实更新为准",
+      "bearish_scope": null,
+      "bearish_impact_sectors": [],
+      "evidence": [
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 1228,
+          "published_at": "2026-10-22 17:09:57",
+          "origin": "国家网络安全通报中心",
+          "text": "【国家网络安全通报中心发布PHP远程代码执行高危漏洞预警】据国家网络安全通报中心，近日，PHP曝出两个严重安全漏洞（代号“php2shell”），漏洞编号为CVE-2026-109618、CVE-2026-109619。该漏洞可导致未经身份验证的远程攻击者通过发送特制POST请求，触发内存破坏并最终实现远程代码执行，从而获取服务器控制权限。漏洞影响PHP 8.5.x＜8.5.12、PHP 8.4.x＜8.4.27、PHP 8.3.x＜8.3.36、PHP 8.2.x＜8.2.35以及8.1以前版本。由于漏洞危害严重，已导致多国网站大规模紧急下线。PHP作为一种开源编程语言，广泛应用于WordPress、Drupal、Joomla和Magento等网站平台开发。目前，PHP官方已发布最新版本（8.5.12、8.4.27、8.3.36、8.2.35）修复该漏洞，详见（https://www.php.net/archive/2026.php#2026-10-21-5），建议受影响用户及时更新至安全版本，消除安全隐患，严防发生网络攻击事件。",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 1401,
+          "published_at": "2026-10-22 16:23:04",
+          "origin": "CNVD",
+          "text": "【国家信息安全漏洞共享平台：对PHP远程代码执行漏洞的综合评级为“高危”】据国家信息安全漏洞共享平台消息，2026年10月21日，国家信息安全漏洞共享平台（CNVD）收录了PHP远程代码执行漏洞（CNVD-2026-41674、CNVD-2026-41675，对应CVE-2026-109618、CVE-2026-109619）。未经身份验证的远程攻击者可构造恶意HTTP请求触发内存错误，在特定条件下实现对目标服务器的拒绝服务攻击、敏感数据窃取、远程代码执行。目前，漏洞技术细节与PoC已广泛传播，CNVD建议受影响用户立即升级至最新版本。CNVD对该漏洞的综合评级为“高危”。",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 993,
+          "published_at": "2026-10-22 18:30:02",
+          "origin": "新浪科技",
+          "text": "【PHP高危漏洞曝光：360免费开放图龙锋安全体检服务，主动排查漏洞风险】全球广泛使用的服务器端编程语言PHP被曝出两个高危安全漏洞（CVE-2026-109618、CVE-2026-109619），统称\"PHP2Shell\"。在特定条件下，攻击者无需身份认证即可利用相关漏洞实现远程代码执行，可能导致网站被篡改、敏感信息泄露甚至服务器失陷。360第一时间完成漏洞复现与攻击路径验证，并给出修复建议。同时，360宣布面向企业用户免费开放图龙锋安全体检服务，协助企业排查相关风险。（新浪科技）",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/wechat_official_20.jsonl",
+          "line": 1,
+          "published_at": "2026-10-22 19:02",
+          "origin": "财联社主题前瞻",
+          "text": "【明日主题前瞻】英伟达升级Isaac机器人平台，推出人形机器人参考框架与仿真工具 【热点导读】 >英伟达升级Isaac机器人平台，推出人形机器人参考框架与仿真工具 >OpenAI就PHP软件中发现的严重漏洞发表声明 >能源转型政策驱动下，海内外储能需求持续释放 >英伟达计划未来三年将基板产能提升至目前的2.5倍 >灵巧手赛道成为人形机器人产业链竞争最激烈的细分战场之一 【主题详情】 英伟达升级Isaac机器人平台，推出人形机器人参考框架与仿真工具 据媒体报道，英伟达宣布升级Isaac通用机器人开发平台，推出新的人形机器人参考框架、仿真工作流及数据工具，旨在加速通用机器人开发。相关更新覆盖机器人训练、仿真验证和部署流程，帮助开发者利用合成数据和仿真环境训练机器人，并在实际部署前验证机器人行为。 TrendForce集邦咨询预估，2026年中国人形机器人市场规模将达150亿元。湘财证券称，机器人产业趋势向上，T链和国产链共振，关注技术升级弹性与量产确定性兼具的标的。建议关注T链和国产链核心标的以及丝杠、减速器、结构件、电机等核心赛道个股。 公司方面， 索辰科技 的机器人设计软件将涵盖并联机器人（包括人形机器人）本体的完整研发过程，从功能设计、构型综合、性能分析到结构设计优化。 斯菱智驱 主要聚焦于谐波减速器的研发和量产，该产品适用于工业机器人、协作机器人、人形机器人等多个应用场景。 OpenAI就PHP软件中发现的严重漏洞发表声明 据媒体报道，OpenAI就PHP软件中发现的严重漏洞发表声明，指出鉴于漏洞的严重性和PHP的广泛使用，这是近期影响最大的漏洞之一。OpenAI承诺通过其“Daybreak for Frontline Defenders”计划，提供价值10亿美元的补贴访问额度，以支持防御者。 随着大模型与智能体等AI应用在政务、金融、工业、医疗及企业内部管理等场景加速落地，AI带来安全风险随之向业务核心环节渗透，也衍生出了提示词注入、模型投毒、多智能体协同欺骗等全新系统性风险。开源证券认为，AI时代，网络安全进入“AI对抗AI”的阶段，行业也迎来新发展机遇。Gartner预计，2027年全球AI安全市场规模将较2026年增长69%，达到47.83亿美元，并在2028年进一步升至约77亿美元。AI安全市场高速增长主要源于企业急需保护人工智能系统、解决新兴漏洞并加强对复杂网络威胁的防御能力。 上市公司中， 启明星辰 深度融合AI技术，推动防护能力向智能认知跃迁。在检测引擎侧，构建“语义分析+AI模型”多层检测体系，显著提升了对免杀WebShell、高对抗Web攻击等高隐蔽威胁的识别精度和效率，并针对AIAgent攻击研发异常行为检测技术，实现检测范式向攻击意图识别的跨越。 亚信安全 围绕智能体身份安全、AI资产治理和智能体可信运行持续推进产品和技术建设，发布智能体身份安全体系，推出业界首款智能体信任框架——ATF（AgentTrustFramework），以“智能体意图对齐+人机共治”的新范式，重构人机协同的信任根基，构建智能体可信运行的安全基础。 能源转型政策驱动下，海内外储能需求持续释放 据媒体报道，近日“浙里共赢”储能产业链国际采购暨“十链百场万企”对接会专场活动在杭州举办。来自欧盟、东南亚等地的49位海外机构、采购商代表赴杭州对接，意向采购金额约4.5亿美元。 根据寻熵研究院、储能与电力市场的数据统计，2026年，我国储能项目的招投标数据延续高增长，整体表现亮眼。2026年9月，我国储能招标规模为22.0GW，同比增长83.03%。储能招投标规模是装机规模前置指标，在强制配储取消后，招投标规模保持高增长，显示装机需求韧性，有望支撑未来储能装机规模增长。华西证券认为，在能源转型政策驱动下，北美、欧洲及国内大储需求持续释放，其中风光配套储能主要用于平抑新能源出力波动、参与电网需求响应；而数据中心配储作为新兴场景，核心用于缓解局部电网拥堵，保障高算力负荷稳定供电，开辟储能新增需求。海外大储需求韧性突出，国内储能产业链企业依托成熟产品与海外渠道优势，有望持续斩获海外项目订单。 上市公司中， 许继电气 在新型储能方面有储能变流器等相关产品及解决方案。公司构网储能变流器2024年通过中国电工技术协会鉴定，已在国内多个项目中应用，覆盖大规",
+          "url": "https://mp.weixin.qq.com/s?__biz=Mzg2NzE4MjUwNw==&mid=2247533749&idx=1&sn=699235154d949ad75914b0a24d54fcaa&chksm=cff34ab8c55760ddfb65c8c03d99aeafc48c4e27f8791689d25ee81c2bba846e19c1b235585d",
+          "retrieval": "same_day_fetch"
+        }
+      ],
+      "web_hits": [
+        {
+          "title": "腾讯云、谷歌紧急预警，PHP高危漏洞波及全球互联网",
+          "url": "https://k.sina.com.cn/article_1887344341_707e96d502001wz3y.html",
+          "publish_date": "2026-10-22 13:47:27",
+          "summary": "PHP官方披露，其中一项漏洞涉及内存不足时的异常处理：程序内部数据尚未完成初始化，后续清理过程却可能将其当作正常数据处理。另一项漏洞则可能导致服务器错误使用已经释放的失效内存，使攻击者有机会读取敏感数据。PHP官方指出，使用Apachemod_php的部署环境风险尤其高，攻击者可能在网站业务代码开始运行前触发攻击。其他PHP运行环境也需排查，不能仅凭网站设置了登录验证，就认定其不会受到影响。值得注意的是，PHP基金会在10月21日发布的事件复盘中披露，其中一类内存管理风险早在2024年就已被发现。当时，PHP接受了一次外部安全审计，核心开发人员在修复审计发现的问题时，注意到内存不足处理机制可能存在缺陷，但没有找到足以证明其能够被用于远程代码执行的具体攻击路径。事件复盘PHP基金会 由于修复方案可能影响旧程序的兼容性、性能及第三方扩展，维护团队未能及时就解决方案达成一致，修复工作因此数次停滞、重启。据《华尔街日报》，今年8月，美国安全公司Calif的研究员Ryan Austin在审计PHP源代码时，借助OpenAI的GPT-5.6 Sol发现了关键缺陷，进一步研究如何将其转化为实际攻击\n......以上仅为正文内容节选\n",
+          "extra": {
+            "publish_source": "新浪网",
+            "real_publish_source": "观察者网",
+            "host_name": "k.sina.com.cn",
+            "de_groupid": "fc0519961869cdb",
+            "site_tags": []
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "PHP 漏洞"
+        },
+        {
+          "title": "PHP存在两个远程代码执行超危漏洞，工信部NVDB发风险提示",
+          "url": "http://news.10jqka.com.cn/19700122/c680971067.shtml",
+          "publish_date": "2026-10-22 14:26:55",
+          "summary": "PHP存在两个远程代码执行超危漏洞，工信部NVDB发风险提示10月22日，工业和信息化部网络安全威胁和漏洞信息共享平台(NVDB)近日监测发现，PHP存在两个远程代码执行超危漏洞，危害严重。 PHP是一款广泛用于Web开发的开源服务器端脚本语言。由于其存在两个超危远程代码执行漏洞，未经身份验证的攻击者可利用其远程执行任意代码，造成服务器受控、敏感信息泄露、业务中断等危害。受影响的PHP范围包括：8.5系列＜8.5.12、8.4系列＜8.4.27、8.3系列＜8.3.36、8.2系列＜8.2.35、8.1系列及更早版本。 目前，PHP安全团队已修复漏洞并发布安全公告。建议相关单位和用户立即开展全面排查，及时升级至最新安全版本，或采取临时下线、关闭会话上传进度功能、网络隔离、网络访问限制等临时防护措施；加强网络安全监测和管理，及时修改账号、口令和密钥等凭证，防范网络攻击风险。",
+          "extra": {
+            "publish_source": "同花顺财经",
+            "real_publish_source": "财闻",
+            "host_name": "news.10jqka.com.cn",
+            "de_groupid": "a7c073bbf0869c13",
+            "site_tags": [],
+            "is_forbidden_source": false
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "PHP 漏洞"
+        },
+        {
+          "title": "国家信息安全漏洞共享平台：对PHP远程代码执行漏洞的综合评级为“高危”",
+          "url": "http://news.10jqka.com.cn/19700122/c680978021.shtml",
+          "publish_date": "2026-10-22 16:20:19",
+          "summary": "未经身份验证的远程攻击者，可构造恶意HTTP请求触发内存错误，并在特定条件下实现对目标服务器的拒绝服务攻击、敏感数据窃取、远程代码执行。CNVD对该漏洞的综合评级为“高危”。二、漏洞影响范围目前，已知受漏洞影响的PHP产品版本包括：1、8.2.35版本之前的8.2.x版本；2、8.3.36版本之前的8.3.x版本；3、8.4.27版本之前的8.4.x版本；4、8.5.12版本之前的8.5.x版本。厂商发布的修复版本为PHP8.5.12、8.4.27、8.3.36、8.2.35。此外，该漏洞还影响Magento、WordPress、Drupal、Joomla、MediaWiki、Roundcube、phpMyAdmin、Nextcloud、Laravel、Symfony、WHMCS、OpenCart等基于PHP环境的主流CMS和框架。三、漏洞处置建议目前，PHP安全团队已修复漏洞并发布安全公告，建议PHP用户及时开展自查，关注官方信息，通过官方渠道及时更新升级至最新版本(https://www.php.net/archive/2026.php#2026-10-21-5)\n......以上仅为正文内容节选\n",
+          "extra": {
+            "publish_source": "同花顺财经",
+            "real_publish_source": "界面",
+            "host_name": "news.10jqka.com.cn",
+            "de_groupid": "3fc2339e68425e1b",
+            "site_tags": [],
+            "is_forbidden_source": true
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "PHP 漏洞"
+        }
+      ],
+      "raw_url_verified": true,
+      "primary_source_text": "PHP官网已发布Critical remote code execution vulnerabilities安全公告。",
+      "reasoning": {
+        "capital_intent_hypothesis": "潜在防守型科技交易寻找刚需安全支出，未取得实际资金流数据，不认定主力已经买入。",
+        "why_sector_may_strengthen": "高危漏洞影响网站运行，催化来自必须修复的真实需求而非泛AI概念。",
+        "evidence_hardness": "PHP官网已读取安全公告，国内预警与新闻吻合；商业合同及付费转化仍未证实。",
+        "invalidation": "补丁快速完成且未形成收费订单，则催化持续性缩短。负面业务中断另列X001。"
+      },
+      "action": "观察",
+      "opportunity_category": null,
+      "execution_eligible": false,
+      "notes": "R4只做事件映射；主跌期不提供交易首推，不生成虚构止损价。板块影响是因果假设而非资金面证实。"
+    },
+    {
+      "event_id": "E20261023_004",
+      "parent_event_id": "CPO_CLARIFICATION",
+      "time": "2026-10-22 21:38:00",
+      "date": "2026-10-23",
+      "event_type": "sentiment",
+      "title": "天孚通信披露CPO提产节奏未变与物料改善",
+      "summary": "CPO经营澄清缓释订单担忧但不抵销海外重估压力",
+      "score": 0.5,
+      "raw_score": 0.5,
+      "weighted_score": 0.5,
+      "days_since": 0,
+      "decayed": false,
+      "source": "天孚通信披露",
+      "sources": [
+        "天孚通信披露",
+        "中际旭创互动平台",
+        "证券时报原报道"
+      ],
+      "independent_source_count": 3,
+      "single_source": false,
+      "official_source": false,
+      "strength": "high",
+      "polarity": "正面",
+      "entity_map": {
+        "sectors": [
+          "光模块",
+          "CPO"
+        ],
+        "stocks": [
+          {
+            "code": "300394",
+            "name": "天孚通信"
+          },
+          {
+            "code": "300308",
+            "name": "中际旭创"
+          }
+        ],
+        "concepts": []
+      },
+      "sectors_impact": [
+        {
+          "name": "光模块",
+          "polarity": "正面",
+          "strength": "medium",
+          "mechanism": "经营与交付正常提供事实澄清"
+        },
+        {
+          "name": "CPO",
+          "polarity": "正面",
+          "strength": "medium",
+          "mechanism": "FAU及ELS配套与提产节奏未明显变化"
+        }
+      ],
+      "stocks_impact": [
+        {
+          "code": "300394",
+          "ts_code": "300394.SZ",
+          "name": "天孚通信",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "已实时读取投资者关系活动记录表：FAU及ELS配套；NPO仍在样品阶段",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "当日公告/预告标识核对"
+        },
+        {
+          "code": "300308",
+          "ts_code": "300308.SZ",
+          "name": "中际旭创",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "互动平台称供应链稳定与产能利用率充足",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "live hithink-market-query代码核对；is_cache=0",
+          "symbol_lookup_query": "中际旭创 股票代码"
+        }
+      ],
+      "valid_period": "1-3日；以事实更新为准",
+      "bearish_scope": null,
+      "bearish_impact_sectors": [],
+      "evidence": [
+        {
+          "path": "data/raw/20261023/anns_window.jsonl",
+          "line": 801,
+          "published_at": "20261022",
+          "origin": "天孚通信公告",
+          "text": "2026年10月22日天孚通信投资者关系活动记录表",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-10-22/1225617545.PDF",
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 806,
+          "published_at": "2026-10-22 19:29:26",
+          "origin": "中际旭创互动平台",
+          "text": "【中际旭创：产能利用率充足 供应链稳定】中际旭创在互动平台表示，公司目前生产经营一切正常，供应链稳定，产能利用率充足，能够正常获取订单并保质保量交付。",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/wechat_official_20.jsonl",
+          "line": 8,
+          "published_at": "2026-10-22 21:38",
+          "origin": "证券时报",
+          "text": "生产经营正常有序！“易中天”、东山精密，最新发声！ 10 月 22 日， 针对市场关注，新易盛、中际旭创、天孚通信和东山精密等深市光通信及算力硬件公司相继回应市场关切，均表示当前生产经营活动正常有序，订单交付工作正常开展。 四家公司齐发声：生产经营正常，订单交付有序 新易盛方面， 公司相关负责人告诉记者 ，目前生产经营活动正常有序，订单交付工作正常开展。在 9 月投资者交流中，公司表示在手订单充足， 1.6T 光模块已进入持续放量阶段，预计出货节奏将持续加快， 800G 和 1.6T 是今年交付的主力产品，订单交付及产能扩充正按业务需求推进。 中际旭创在互动平台表示，公司目前生产经营一切正常，供应链稳定，产能利用率充足，能够正常获取订单并保质保量交付。 东山精密 同样 表示，目前公司生产经营一切正常，产品交付也在有序推进中。 天孚通信发布 的 投资者关系活动记录表 显示 ，公司为 CPO 技术路。线配套的 FAU 、 ELS 等产品在性能、良率及交付保障方面已具备较好基础，会根据客户需求持续提产。 NPO 相关配套产品目前处于样品阶段。 CPO/NPO 的提产节奏近期未出现明显变化。有源光器件关键瓶颈物料供给情况较上半年有所改善，从物料到货到成品出货交付需要一定周期，预计相关供应改善对公司经营业绩的积极影响将在第三季度、第四季度逐步释放。 高速光模块迭代提供增长支撑 从行业发展趋势及多家光模块上市公司公开信息来看，全球 AI 算力基础设施建设仍在持续推进，行业基本面未发生根本变化，市场预期维持高位。 据公开报道，高盛近期报告大幅上调全球光模块市场预测，预计 2026 年至 2028 年市场规模将分别达到 677 亿美元、 1314 亿美元和 1485 亿美元，较此前预测上调 33% 、 81% 和 115% ；同期出货量预计分别为 5.48 亿、 6.91 亿和 7.29 亿只。 高盛认为， AI 服务器网络架构升级以及单颗 GPU 、 ASIC 对应光模块数量增加，将推动 800G 、 1.6T 和 3.2T 高速产品快速放量，其中 3.2T 光模块市场规模预计 2028 年达到 813 亿美元，占全球光模块市场约 55% 。同时，全球 AI 整机柜出货量预计从 2025 年的 1.9 万柜增至 2028 年的 16.3 万柜，进一步拉动高速光互连需求。 从产品技术演进看， AI 数据中心正持续推动网络从 400G 向 800G 、 1.6T 升级，高速率产品仍处于渗透率提升阶段。 新易盛持续推进 800G 、 1.6T 及硅光产品布局，硅光产品份额稳步提升， LPO 等产品与客户合作持续推进，并已开展 NPO 、 CPO 等相关产品研发及客户合作， NPO 预计自 2027 年逐步出现订单交付需求。 中际旭创 800G 产品组合持续完善， 1.6T DR8 OSFP224 产品已实现出货，同时推进 1.6T 、 3.2T 及更高速率产品研发，并布局 NPO 、 XPO 、 CPO 、 OCS 等下一代光互连技术。天孚通信则围绕 CPO/NPO 配套产品持续积累， FAU 、 ELS 等产品已实现稳定量产交付。 产能布局方面，新易盛持续推进成都、泰国生产基地产能建设，天孚通信已形成以中国江西高安和泰国春武里两大生产基地为核心的全球生产体系，中际旭创亦持续推进全球制造布局，并通过长期协议、预付款和拓展供应商等方式保障物料供应。 短期波动不改产业长期趋势 市场人士认为，当前光通信板块短期股价波动更多受市场情绪与估值因素影响，行业需求升级与产品技术迭代等驱动因素仍在延续。从新易盛、中际旭创、天孚通信及东山精密已披露的业绩、订单及产品进展来看，相关公司生产经营与交付保持正常，今明两年的业务发展都有相应的需求和产能作为保障。 光大证券资产配置首席分析师王开表示，科技产业的中长期趋势依然清晰，当前市场阶段性波动更多反映估值消化、外部流动性预期及情绪变化。以人工智能为代表的新技术正带动算力、数据、算法和多场景协同发展，数字经济与先进制造深度融合，产业链有望持续扩容。 东吴证券宏观首席经济学家芦哲也认为，科技产业长期向好趋势并未改变，短期市场扰动更多是情绪与资金层面的波动。从基本面看，人工智能、人形机器人等核心赛道仍处于技术突破与商业化落地的上行周",
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5NDEzMTAwMA==&mid=2652700503&idx=1&sn=ba64df26d16ecd7da133beab8aa48a94&chksm=bc34b4653ce0906e6b592c527ac10915c7c0d14f28421038b9e0398649c665a24b0ecf0022a1",
+          "retrieval": "same_day_fetch"
+        }
+      ],
+      "web_hits": [
+        {
+          "title": "光模块龙头中际旭创跌超8%！公司称供应链稳定，产能利用率充足",
+          "url": "https://m.sohu.com/a/1091329769_260616",
+          "publish_date": "2026-10-22 20:46:00",
+          "summary": "光模块龙头中际旭创称公司目前生产经营一切正常。\n10月22日，有投资者向中际旭创股份有限公司（中际旭创，300308)提问称，“请介绍下公司目前产能利用率情况。”中际旭创回应表示，公司目前生产经营一切正常，供应链稳定，产能利用率充足，能够正常获取订单并保质保量交付。\n中际旭创是一家领先的高速光互联解决方案提供商，致力于为全球客户提供高效的光模块产品。产品广泛应用于云计算数据中心、无线网络、电信传输等领域。\n中际旭创披露的2026年半年度报告显示，报告期内，公司实现营业收入417.78亿元，同比大增182.49%；归属于上市公司股东的净利润136.51亿元，同比增长241.70%；扣非净利润130.92亿元，同比增长229.32%。\n10月22日，中际旭创大跌8.76%，报590.11元/股，总市值6970亿元。距6月22日创下的1380.21元/股的历史最高收盘价已回调57.24%。",
+          "extra": {
+            "seq": "",
+            "publish_source": "手机搜狐网",
+            "real_publish_source": "澎湃新闻",
+            "host_name": "m.sohu.com",
+            "de_groupid": "7f285ea33d1f163e",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "光模块 生产经营"
+        },
+        {
+          "title": "生产经营正常有序！“易中天”、东山精密，最新发声！",
+          "url": "http://news.10jqka.com.cn/19700122/c680996759.shtml",
+          "publish_date": "2026-10-22 22:38:15",
+          "summary": " 10月22日，针对市场关注，新易盛、中际旭创、天孚通信和东山精密等深市光通信及算力硬件公司相继回应市场关切，均表示当前生产经营活动正常有序，订单交付工作正常开展。 四家公司齐发声：生产经营正常，订单交付有序 新易盛方面，公司相关负责人告诉记者，目前生产经营活动正常有序，订单交付工作正常开展。在9月投资者交流中，公司表示在手订单充足，1.6T光模块已进入持续放量阶段，预计出货节奏将持续加快，800G和1.6T是今年交付的主力产品，订单交付及产能扩充正按业务需求推进。 中际旭创在互动平台表示，公司\n......当中省略1345字正文内容......\n多是情绪与资金层面的波动。从基本面看，人工智能、人形机器人等核心赛道仍处于技术突破与商业化落地的上行周期，2026年底全球与AI相关的投资有望超过万亿美元。 总体来看，AI算力基础设施投入、高速光模块需求升级及产品技术迭代等行业驱动因素仍在延续，具备技术积累、规模化交付和全球服务能力的企业，有望在产业升级中持续受益。 证券时报各平台所有原创内容，未经书面授权，任何单位及个人不得转载。我社保留追究相关行为主体法律责任的权利。 转载与合作可联系证券时报小助理，微信ID：SecuritiesTimes",
+          "extra": {
+            "seq": "680996759",
+            "publish_source": "同花顺财经",
+            "real_publish_source": "证券时报网",
+            "host_name": "news.10jqka.com.cn",
+            "de_groupid": "fb3e54850324677a",
+            "site_tags": [],
+            "author_name": "",
+            "is_forbidden_source": false
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "光模块 生产经营"
+        }
+      ],
+      "raw_url_verified": true,
+      "primary_source_text": "CPO/NPO的提产节奏近期未出现明显变化。NPO相关配套产品目前处于样品阶段。",
+      "reasoning": {
+        "capital_intent_hypothesis": "消息试图修复经营预期与市场价格的裂口，不能推导资金已经回流。",
+        "why_sector_may_strengthen": "只解释潜在修复理由，不断言走强。提产未变与物料改善压低基本面极端恶化概率。",
+        "evidence_hardness": "公告正文明确FAU及ELS基础与NPO样品阶段，也明确难以预判利润率；不是上修利润指引。",
+        "invalidation": "只有澄清没有持续交付与订单验证，不成立趋势反转。必须同时消费E001负面。"
+      },
+      "action": "观察",
+      "opportunity_category": null,
+      "execution_eligible": false,
+      "notes": "R4只做事件映射；主跌期不提供交易首推，不生成虚构止损价。板块影响是因果假设而非资金面证实。"
+    },
+    {
+      "event_id": "E20261023_005",
+      "parent_event_id": "GOLD_PRICE",
+      "time": "2026-10-23 05:31:35",
+      "date": "2026-10-23",
+      "event_type": "macro",
+      "title": "国际黄金白银价格显著下跌",
+      "summary": "黄金跌2.71%与白银跌5.87%压制贵金属价格敞口",
+      "score": -0.86,
+      "raw_score": -0.86,
+      "weighted_score": -0.86,
+      "days_since": 0,
+      "decayed": false,
+      "source": "华尔街见闻行情报道",
+      "sources": [
+        "华尔街见闻行情报道"
+      ],
+      "independent_source_count": 1,
+      "single_source": true,
+      "official_source": false,
+      "strength": "medium",
+      "polarity": "负面",
+      "entity_map": {
+        "sectors": [
+          "黄金",
+          "白银"
+        ],
+        "stocks": [
+          {
+            "code": "600988",
+            "name": "赤峰黄金"
+          },
+          {
+            "code": "601899",
+            "name": "紫金矿业"
+          }
+        ],
+        "concepts": []
+      },
+      "sectors_impact": [
+        {
+          "name": "黄金",
+          "polarity": "负面",
+          "strength": "high",
+          "mechanism": "金价下跌压制矿企收入与风险偏好"
+        },
+        {
+          "name": "白银",
+          "polarity": "负面",
+          "strength": "high",
+          "mechanism": "银价跌幅更大形成价格压力"
+        }
+      ],
+      "stocks_impact": [
+        {
+          "code": "600988",
+          "ts_code": "600988.SH",
+          "name": "赤峰黄金",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "黄金矿企价格敞口与E006并购利好交叉",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "当日公告/预告标识核对"
+        },
+        {
+          "code": "601899",
+          "ts_code": "601899.SH",
+          "name": "紫金矿业",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "矿产黄金价格敞口与收购事件交叉",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "当日公告/预告标识核对"
+        }
+      ],
+      "valid_period": "1-3日；以事实更新为准",
+      "bearish_scope": "行业级",
+      "bearish_impact_sectors": [
+        "黄金",
+        "白银",
+        "贵金属"
+      ],
+      "evidence": [
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 6,
+          "published_at": "2026-10-23 05:31:35",
+          "origin": "华尔街见闻经新浪转载",
+          "text": "【国际金价跌2.7%，逼近4000美元整数位心理关口】周四（10月22日）纽约尾盘，现货黄金跌2.71%，报4028.58美元/盎司，整体持续下跌，交投于4145.82-4021.32美元区间。现货白银跌5.87%，报54.5746美元/盎司，交投于57.9753-54.4901美元。COMEX铜期货跌2.67%，报6.3985美元/磅。现货铂金跌3.86%，报1568.54美元/盎司；现货钯金跌3.60%，报1054.02美元/盎司。在美股时段交易的费城金银指数收跌5.53%，报333.96点，大部分时间低位窄幅震荡。",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        }
+      ],
+      "web_hits": [
+        {
+          "title": "国际金价跌2.7%",
+          "url": "http://goodsfu.10jqka.com.cn/20261023/c680997935.shtml",
+          "publish_date": "2026-10-23 05:37:26",
+          "summary": "2026-10-23 05:37:26来源：每日经济新闻分享每经AI快讯，周四(10月22日)纽约尾盘，现货黄金跌2.71%，报4028.58美元/盎司；现货白银跌5.87%，报54.5746美元/盎司。现货铂金跌3.86%，报1568.54美元/盎司；现货钯金跌3.60%，报1054.02美元/盎司。每日经济新闻免责声明：风险提示：本文内容仅供参考，不代表同花顺观点。同花顺各类信息服务基于人工智能算法，如有出入请以证监会指定上市公司信息披露平台为准。如有投资者据此操作，风险自担，同花顺对此不承担任何责任。",
+          "extra": {
+            "seq": "680997935",
+            "publish_source": "同花顺财经",
+            "real_publish_source": "每日经济新闻",
+            "host_name": "goodsfu.10jqka.com.cn",
+            "de_groupid": "1a0e5cec2cc725f6",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "黄金 4028.58"
+        },
+        {
+          "title": "国际金价跌2.7%，逼近4000美元整数位心理关口",
+          "url": "https://finance.sina.cn/7x24/2026-10-23/detail-iniwecsw8013978.d.html",
+          "publish_date": "2026-10-23 05:31:03",
+          "summary": "周四（10月22日）纽约尾盘，现货黄金跌2.71%，报4028.58美元/盎司，整体持续下跌，交投于4145.82-4021.32美元区间。现货白银跌5.87%，报54.5746美元/盎司，交投于57.9753-54.4901美元。COMEX铜期货跌2.67%，报6.3985美元/磅。现货铂金跌3.86%，报1568.54美元/盎司；现货钯金跌3.60%，报1054.02美元/盎司。在美股时段交易的费城金银指数收跌5.53%，报333.96点，大部分时间低位窄幅震荡。在全球市场全天交易的纽约证交所ARCA金矿开采商指数跌5.01%，报2350.08点，亚太盘初以来维持微幅下跌状态、交投于2460点附近，美股开盘时跳空下挫、随后持续低位震荡。在美股时段交易的原材料指数收跌0.95%，金属与矿业指数收跌6.19%。State Street金属与矿业ETF收跌4.64%，报96.59美元，逼近2025年12月1日收盘位95.81美元。",
+          "extra": {
+            "seq": "",
+            "publish_source": "新浪财经",
+            "real_publish_source": "",
+            "host_name": "finance.sina.cn",
+            "de_groupid": "6e1f04ed7cdf2c36",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "黄金 4028.58"
+        },
+        {
+          "title": "快讯 - 华尔街见闻",
+          "url": "https://wallstreetcn.com/livenews/3183987",
+          "publish_date": "2026-10-23 05:25:49",
+          "summary": "周四（10月22日）纽约尾盘，现货黄金跌2.71%，报4028.58美元/盎司，整体持续下跌，交投于4145.82-4021.32美元区间。现货白银跌5.87%，报54.5746美元/盎司，交投于57.9753-54.4901美元。",
+          "extra": {
+            "seq": "",
+            "publish_source": "华尔街见闻",
+            "real_publish_source": "",
+            "host_name": "wallstreetcn.com",
+            "de_groupid": "6a0f14645cdb4cf6",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "黄金 4028.58"
+        }
+      ],
+      "raw_url_verified": false,
+      "primary_source_text": null,
+      "reasoning": {
+        "capital_intent_hypothesis": "已知事实是金银同跌；流动性抛售只是可能解释，不把评论写成资金净流出结论。",
+        "why_sector_may_strengthen": "不是走强事件。黄金未对地缘升级作正向反应，不能机械套用避险上涨模板。",
+        "evidence_hardness": "数值与实时检索快讯一致，但多篇高度同文的行情转载按一个源簇处理，强度保守降为medium。",
+        "invalidation": "价格持续修复可缓释，但不以单次反抽判风险解除；E006并购不能净掉商品风险。"
+      },
+      "action": "观察",
+      "opportunity_category": null,
+      "execution_eligible": false,
+      "notes": "R4只做事件映射；主跌期不提供交易首推，不生成虚构止损价。板块影响是因果假设而非资金面证实。"
+    },
+    {
+      "event_id": "E20261023_006",
+      "parent_event_id": "CHIFENG_CONTROL",
+      "time": "2026-10-22 18:26:44",
+      "date": "2026-10-23",
+      "event_type": "insider",
+      "title": "紫金黄金完成取得赤峰黄金控制权",
+      "summary": "控制权交割完成带来整合预期但遭金价下跌反向约束",
+      "score": 0.66,
+      "raw_score": 0.66,
+      "weighted_score": 0.66,
+      "days_since": 0,
+      "decayed": false,
+      "source": "赤峰黄金公告",
+      "sources": [
+        "赤峰黄金公告",
+        "紫金矿业公告"
+      ],
+      "independent_source_count": 2,
+      "single_source": false,
+      "official_source": true,
+      "strength": "high",
+      "polarity": "正面",
+      "entity_map": {
+        "sectors": [
+          "黄金",
+          "并购重组"
+        ],
+        "stocks": [
+          {
+            "code": "600988",
+            "name": "赤峰黄金"
+          },
+          {
+            "code": "601899",
+            "name": "紫金矿业"
+          }
+        ],
+        "concepts": []
+      },
+      "sectors_impact": [
+        {
+          "name": "黄金",
+          "polarity": "正面",
+          "strength": "medium",
+          "mechanism": "公司层面控制权交割与资源整合"
+        },
+        {
+          "name": "并购重组",
+          "polarity": "正面",
+          "strength": "medium",
+          "mechanism": "协议转让与H股配售完成交割"
+        }
+      ],
+      "stocks_impact": [
+        {
+          "code": "600988",
+          "ts_code": "600988.SH",
+          "name": "赤峰黄金",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "公司控制权变更公告已读取；紫金体系合计持股25.85%",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "当日公告/预告标识核对"
+        },
+        {
+          "code": "601899",
+          "ts_code": "601899.SH",
+          "name": "紫金矿业",
+          "role": "事件观察映射",
+          "action": "观察",
+          "mapping_evidence": "通过全资子公司取得赤峰黄金控制权",
+          "mapping_confidence": "medium",
+          "earnings_cross_check": {
+            "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+            "report_date": "2026-09-30",
+            "matched_records": 0,
+            "result": "未命中不等于未发布预告"
+          },
+          "entry_eligibility": "not_evaluated_no_candidate",
+          "stop_loss": null,
+          "risk_reward": null,
+          "board_pattern": "未验证",
+          "leader_recognition": "未做R2龙头认定",
+          "forbidden_hits": [
+            "主跌期只观察",
+            "RR未验证",
+            "板型未验证"
+          ],
+          "symbol_verification": "当日公告/预告标识核对"
+        }
+      ],
+      "valid_period": "1-3日；以事实更新为准",
+      "bearish_scope": null,
+      "bearish_impact_sectors": [],
+      "evidence": [
+        {
+          "path": "data/raw/20261023/anns_window.jsonl",
+          "line": 1489,
+          "published_at": "20261023",
+          "origin": "赤峰黄金公告",
+          "text": "赤峰黄金关于股东协议转让公司股份完成过户登记、根据特别授权配售新增发行H股暨公司控股股东、实际控制人变更的公告",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-10-23/1225617077.PDF",
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 1009,
+          "published_at": "2026-10-22 18:26:44",
+          "origin": "紫金矿业公告",
+          "text": "【紫金矿业：紫金黄金完成赤峰黄金交割，持股25.85%】紫金矿业公告，公司全资子公司紫金黄金协议受让赤峰黄金A股并认购其定向增发H股。2026年10月22日，赤峰黄金2.42亿股A股完成过户，定向增发的3.11亿股H股完成发行及交割。截至公告日，公司通过全资子公司合计持有赤峰黄金5.72亿股，占其目前总股份数的25.85%，紫金黄金成为赤峰黄金控股股东，公司取得赤峰黄金控制权。",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/wechat_official_20.jsonl",
+          "line": 10,
+          "published_at": "2026-10-22 20:34",
+          "origin": "证券时报",
+          "text": "600988，控制权变更！紫金矿业入主！ 推进半年后，紫金矿业（ 601899）入主赤峰黄金（600988）事项，迎来新进展。 10月22日晚，赤峰黄金公告，紫金矿业全资子公司 紫金黄金 已 成为公司控股股东、上杭县财政局成为公司实际控制人。 紫金矿业也在 10月22日晚间公告， 紫金黄金 已 成为赤峰黄金的控股股东，公司取得赤峰黄金的控制权。 今年 3月22日，赤峰黄金控股股东、实际控制人李金阳及其一致行动人浙江瀚丰创业投资合伙企业（有限合伙）（以下简称“浙江瀚丰”）与紫金黄金签署了《股份转让协议》 。 李金阳及其一致行动人拟向紫金黄金转让其合计持有的 赤峰黄金 2.42亿股，约占 公司总股本的 12.73%。 另外，赤峰黄金计划 以 30.19港元/股 ， 在香港联交所向紫金黄金定向增发 3 . 1 1亿股。后续因实施分红，发行配售价调整至29.82港元/股。 10月22日， 赤峰黄金 收到中国证券登记结算有限责任公司上海分公司出具的《证券过户登记确认书》， 上述协议转让股份的交易 过户时间为 2026年10月21日。紫金黄金及其一致行动人共计持有 赤峰黄金 总股本 的 13.72%。 另外，上述 H股发行事项也于 10月22日 完成。 发行完成后，紫金黄金及其一致行动人共计持有 赤峰黄金 5 . 7 2亿股， 约占公司总发行股份的 25.85%。 赤峰黄金通过此次 H股发行所得款项总额约为92.72亿港元，所得款项净额（经扣除相关费用、成本及开支后）估计约为91.80亿港元。 赤峰黄金表示，该笔资金 将用于公司现有海外矿山业务，包括但不限于扩建及增产，加强地质勘探工作及外围地区的勘探 ， 收购合适的优质海外矿业资产；以及一般性的公司用途。 紫金矿业是国内矿业龙头企业。赤峰黄金表示，此次 交易完成后，公司将借鉴紫金矿业的全球化运营经验，依托其在地质勘查与深部找矿领域的技术优势，系统推进旗下矿山勘探工作，进一步提升资源量与储量，拓展找矿增储空间 。 同时 ，公司可 引入紫金矿业全流程矿业工程管理模式，结合各矿山实际，对生产运营和成本管控进行系统性优化，推动项目增产上产，将资源优势转化为产能与产量优势。 紫金黄金则在公告中表示， 当前优质在产金矿的稀缺性和投资价值正持续凸显，通过取得赤峰黄金控制权，公司成功获取一批成矿条件好、资源禀赋优异的在产黄金矿山； 此次 交易是公司在重要黄金成矿带上新的布局，将有效增厚公司黄金资源储备，提升公司黄金产量规模。 截至 10月22日，赤峰黄金港股收盘价为30.70港元/股，公司A股收盘价为38.51元/股。 责编：彭勃 校对： 姚远 证券时报各平台所有原创内容，未经书面授权，任何单位及个人不得转载。我社保留追 究相关 行 为主体法律责任的权利。 转载与合作可联系证券时报小助理，微信ID：SecuritiesTimes",
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5NDEzMTAwMA==&mid=2652700496&idx=1&sn=5a61e523ffa5a4fa361f2f3a0f74ee78&chksm=bcd753fa4b49484f189f1d512e89ed4a989e3dc84fa14b6016dd80e1602737aa714268cf88d8",
+          "retrieval": "same_day_fetch"
+        }
+      ],
+      "web_hits": [
+        {
+          "title": "紫金矿业完成入主赤峰黄金，持股25.85%成控股股东",
+          "url": "http://news.10jqka.com.cn/19700122/c680995580.shtml",
+          "publish_date": "2026-10-22 21:13:19",
+          "summary": "紫金矿业(02899.HK)于周四(10月22日)发布公告，公司全资子公司紫金黄金协议受让赤峰黄金(06693.HK，600988.SH)A股并认购其定向增发H股。2026年10月22日，赤峰黄金2.42亿股A股完成过户，定向增发的3.11亿股H股完成发行及交割。截至公告日，公司通过全资子公司合计持有赤峰黄金5.72亿股，占其目前总股份数的25.85%，紫金黄金成为赤峰黄金控股股东，公司取得赤峰黄金控制权。",
+          "extra": {
+            "seq": "680995580",
+            "publish_source": "同花顺财经",
+            "real_publish_source": "瑞恩资本",
+            "host_name": "news.10jqka.com.cn",
+            "de_groupid": "cc8356ad0553e31d",
+            "site_tags": [],
+            "author_name": "",
+            "is_forbidden_source": true
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "赤峰黄金 控制权"
+        },
+        {
+          "title": "紫金矿业：公司取得赤峰黄金控制权",
+          "url": "http://news.10jqka.com.cn/19700122/c680989353.shtml",
+          "publish_date": "2026-10-22 18:35:20",
+          "summary": "紫金矿业晚间公告，2026年10月22日，公司全资子公司紫金黄金(集团)有限公司(下称“紫金黄金”)收到中国证券登记结算有限责任公司出具的《证券过户登记确认书》，确认赤峰吉隆黄金矿业集团股份有限公司(下称“赤峰黄金”)原控股股东、实际控制人李金阳女士及其一致行动人浙江瀚丰创业投资合伙企业(有限合伙)合计持有的赤峰黄金241,925,746股A股股份已全部过户登记至紫金黄金名下。同日，经香港联合交易所有限公司上市委员会批准，赤峰黄金向紫金黄金定向增发的310,902,731股H股股份亦已完成发行及交割。截至本公告日，连同公司其他全资子公司在本次交易前已持有的赤峰黄金18,833,400股股份，公司通过全资子公司已合计持有赤峰黄金571,661,877股股份，占其目前总股份数的25.85%。紫金黄金成为赤峰黄金的控股股东，公司取得赤峰黄金的控制权。",
+          "extra": {
+            "seq": "680989353",
+            "publish_source": "同花顺财经",
+            "real_publish_source": "界面",
+            "host_name": "news.10jqka.com.cn",
+            "de_groupid": "d42fd6a601533379",
+            "site_tags": [],
+            "author_name": "",
+            "is_forbidden_source": true
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "赤峰黄金 控制权"
+        },
+        {
+          "title": "紫金矿业子公司完成赤峰黄金股份交割 合计持股占比达25.85%",
+          "url": "http://news.10jqka.com.cn/19700122/c680992728.shtml",
+          "publish_date": "2026-10-22 20:28:56",
+          "summary": " 10月22日，紫金矿业(601899.SH)发布公告称，公司全资子公司紫金黄金开展了协议受让赤峰黄金(600988.SH)A股、认购其定向增发H股的相关交易。2026年10月22日，赤峰黄金2.42亿股A股完成过户手续，定向增发的3.11亿股H股完成发行及交割。截至公告发布日，紫金矿业通过全资子公司合计持有赤峰黄金5.72亿股，占其当前总股份数的25.85%，紫金黄金成为赤峰黄金控股股东，紫金矿业取得赤峰黄金控制权。(央广财经)",
+          "extra": {
+            "seq": "680992728",
+            "publish_source": "同花顺财经",
+            "real_publish_source": "央广财经",
+            "host_name": "news.10jqka.com.cn",
+            "de_groupid": "c6e7568d01933371",
+            "site_tags": [],
+            "author_name": "",
+            "is_forbidden_source": false
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "赤峰黄金 控制权"
+        }
+      ],
+      "raw_url_verified": true,
+      "primary_source_text": "公告披露协议转让股份过户登记及H股配售完成。",
+      "reasoning": {
+        "capital_intent_hypothesis": "潜在定价是从交易不确定性转向整合能力；交割完成并不代表机构即时加仓。",
+        "why_sector_may_strengthen": "确权降低交易失败风险，长期矿山运营协同需后续披露证明，不等于次日抢筹。",
+        "evidence_hardness": "公告PDF与上市公司公告快讯一致，25.85%为交割后权益口径；不是新签收购意向。",
+        "invalidation": "协同兑现慢于预期或金价继续下跌，正面公司事件不足以形成短线买入理由。"
+      },
+      "action": "观察",
+      "opportunity_category": null,
+      "execution_eligible": false,
+      "notes": "R4只做事件映射；主跌期不提供交易首推，不生成虚构止损价。板块影响是因果假设而非资金面证实。"
+    },
+    {
+      "event_id": "E20261023_007",
+      "parent_event_id": "HORMUZ",
+      "time": "2026-10-22 19:13:40",
+      "date": "2026-10-23",
+      "event_type": "macro",
+      "title": "霍尔木兹船只遇袭提升油气供给风险溢价",
+      "summary": "船只遇袭强化油气供给风险溢价并非所有能源链都受益",
+      "score": 0.67,
+      "raw_score": 0.67,
+      "weighted_score": 0.67,
+      "days_since": 0,
+      "decayed": false,
+      "source": "新华社",
+      "sources": [
+        "新华社",
+        "央视"
+      ],
+      "independent_source_count": 2,
+      "single_source": false,
+      "official_source": true,
+      "strength": "high",
+      "polarity": "正面",
+      "entity_map": {
+        "sectors": [
+          "油气开采",
+          "油服"
+        ],
+        "stocks": [],
+        "concepts": []
+      },
+      "sectors_impact": [
+        {
+          "name": "油气开采",
+          "polarity": "正面",
+          "strength": "high",
+          "mechanism": "航运受阻可能抬升油气供给风险溢价"
+        },
+        {
+          "name": "油服",
+          "polarity": "正面",
+          "strength": "medium",
+          "mechanism": "高油价若持续可能改善资本开支预期"
+        }
+      ],
+      "stocks_impact": [],
+      "valid_period": "1-3日；以事实更新为准",
+      "bearish_scope": null,
+      "bearish_impact_sectors": [],
+      "evidence": [
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 850,
+          "published_at": "2026-10-22 19:13:40",
+          "origin": "新华社",
+          "text": "【伊朗称7艘“违规”船只在霍尔木兹海峡周边海域起火】伊朗伊斯兰革命卫队海军22日发布声明说，在波斯湾发现4艘“违规”船只运输石油货物，随后这4艘船被打击并起火，另有3艘“违规”船只21日晚在霍尔木兹海峡以西海域触雷起火。声明称，这4艘船穿越了霍尔木兹海峡内的“非法”航线，在波斯湾中北部进行船对船石油转运时被发现并遭到打击。声明还称，美国执意让船只通过霍尔木兹海峡“非法且布有水雷的航道”，导致海上冲突日益加剧。如果这种趋势继续下去，伊朗与美国的对抗范围将扩大到美军在该地区的基地。伊朗革命卫队海军还表示，其部队目前仍对霍尔木兹海峡实施管控。（新华社）",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/wechat_official_20.jsonl",
+          "line": 7,
+          "published_at": "2026-10-22 21:55",
+          "origin": "央视及新华社",
+          "text": "美伊局势，突传重磅！伊朗，最新发声！ 最新消息。 伊朗军方：在装备方面已为非对称战争做好准备 伊朗伊斯兰共和国军队总司令哈塔米22日称，伊朗军队在装备方面已做好应对非对称战争的准备，在无人机领域已达到“相对成熟的水平”。 哈塔米当天在视察一处作战型无人机生产中心时表示，伊军无人机旨在发挥“确保在非对称战争中保持存在感”的作用，而目前伊朗在无人机的生产、分发与维护方面“非常活跃”。包括空中无人机、无人水面艇等各类无人系统正被用于执行多种任务。 哈塔米称，无论是在数量还是质量上，伊朗军队目前在非对称战争所需装备方面都处于“有利地位”，官兵士气高昂，正积极投身于必要装备的生产中。 谈及伊军在霍尔木兹海峡以东的行动，哈塔米表示，伊军方在该区域已部署包括水雷和各类自动化控制系统在内的多种装备，并正持续密切监视局势，“敌方舰船一旦进入，将成为我们的打击目标”。 美媒：美以军方已制定美中期选举后打击伊朗的计划 据美国《纽约时报》21日报道，美国和以色列军方已制定具体计划，准备在11月美国中期选举结束后再次打击伊朗，但美国总统特朗普是否会批准实施这一计划尚不确定。 报道援引美国官员的话说，美国防部长赫格塞思本周与以色列总理内塔尼亚胡进行会晤，讨论了对伊新的打击行动。美以军方计划针对伊朗开展一场“短时间、高强度”的军事行动，打击的目标可能包括伊朗能源基础设施、核设施以及导弹和无人机武器库等。 报道称，一些美方人士认为，一场高强度军事行动将对伊朗经济造成足够大的破坏，并迫使伊朗作出让步。但报道同时指出，特朗普是否会批准新一轮军事行动仍不确定。本月，美以军方几乎已经做好发动打击的准备，但特朗普叫停了行动。一名白宫官员21日表示，政府不会评论“可能存在、也可能不存在”的军事计划。 报道说，有理由怀疑新一轮军事行动是否会取得更大成效。同时，有专家指出，以色列将于本月27日举行议会选举，其结果也可能打乱相关计划，如果内塔尼亚胡败选并转为看守总理，他将很难再发动战事。 报道还说，伊朗议长顾问迈赫迪·穆罕默迪近日在社交媒体上表示，美国希望在72小时内完成对伊新一轮打击的想法是“幻想”。伊朗已做好周密的计划，反击将“更加猛烈、更出人意料且和以往不同”。 伊朗官员：如对伊采取行动 美国将付出代价 当地时间22日，伊朗最高国家安全委员会秘书雷扎伊表示，对伊朗采取行动是有代价的。如果外交能够达成共识，伊朗更倾向于外交；但如果战争继续下去，伊朗拥有继续应对的必要手段。 雷扎伊称，目前局势持续下去将产生战略影响，其中包括未来三年能源市场的持续动荡。 雷扎伊指出，这场战争的持续改变了局势，使之对伊朗有利。他称，海湾国家正在迅速重新定义与伊朗的关系，他们开始相信，美国军队没有能力保卫自己的基地，因此也不应指望美国有能力保卫他们的国家。 来源：央视新闻客户端 新华网 责编：彭勃 校对：姚远 证券时报各平台所有原创内容，未经书面授权，任何单位及个人不得转载。我社保留追 究相关 行 为主体法律责任的权利。 转载与合作可联系证券时报小助理，微信ID：SecuritiesTimes",
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5NDEzMTAwMA==&mid=2652700507&idx=1&sn=1e087ec2345b42d48b3e531c21d5b177&chksm=bc0306f37f2fc0beeb68f82e58c985872e61b2a7d005c3507d3c7cad1d1a4c1b6aa8f9a61926",
+          "retrieval": "same_day_fetch"
+        }
+      ],
+      "web_hits": [
+        {
+          "title": "伊朗说7艘“违规”船只在波斯湾起火",
+          "url": "http://finance.sina.com.cn/roll/2026-10-22/doc-iniwarrm5162648.shtml",
+          "publish_date": "2026-10-22 13:46:00",
+          "summary": "来源：新华网\n新华社德黑兰10月22日电 伊朗伊斯兰革命卫队海军22日发布消息说，在波斯湾发现4艘“违规”船只运输石油货物，随后这4艘船同时被打击并起火。\n消息说，另有3艘“违规”船只21日晚在霍尔木兹海峡以西海域触雷起火。",
+          "extra": {
+            "seq": "",
+            "publish_source": "新浪财经",
+            "real_publish_source": "环球网",
+            "host_name": "finance.sina.com.cn",
+            "de_groupid": "e960c9c7e1a9cfba",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "伊朗 7艘 船只 起火"
+        },
+        {
+          "title": "伊朗称7艘“违规”船只在霍尔木兹海峡周边海域起火",
+          "url": "http://news.10jqka.com.cn/19700122/c680990428.shtml",
+          "publish_date": "2026-10-22 19:13:54",
+          "summary": " 伊朗伊斯兰革命卫队海军22日发布声明说，在波斯湾发现4艘“违规”船只运输石油货物，随后这4艘船被打击并起火，另有3艘“违规”船只21日晚在霍尔木兹海峡以西海域触雷起火。 声明称，这4艘船穿越了霍尔木兹海峡内的“非法”航线，在波斯湾中北部进行船对船石油转运时被发现并遭到打击。(新华社)",
+          "extra": {
+            "seq": "680990428",
+            "publish_source": "同花顺财经",
+            "real_publish_source": "同花顺7x24快讯",
+            "host_name": "news.10jqka.com.cn",
+            "de_groupid": "e9284fc6ce29cfba",
+            "site_tags": [],
+            "author_name": "",
+            "is_forbidden_source": false
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "伊朗 7艘 船只 起火"
+        }
+      ],
+      "raw_url_verified": false,
+      "primary_source_text": null,
+      "reasoning": {
+        "capital_intent_hypothesis": "潜在资金诉求是寻找受供给扰动支持的相对强方向；没有R7验证，不认定防守主线成立。",
+        "why_sector_may_strengthen": "供给与运输扰动可能影响能源价格；炼化还受采购成本与成品价差影响，不作无差别利好。",
+        "evidence_hardness": "新华社与央视报道伊方声明相互印证。已发生的是声明与报道，具体损失及通航数量仍待独立核实。",
+        "invalidation": "外交缓和、有效供给恢复或油价未维持溢价，则相对强逻辑失效；负面拆为E008。"
+      },
+      "action": "观察",
+      "opportunity_category": null,
+      "execution_eligible": false,
+      "notes": "R4只做事件映射；主跌期不提供交易首推，不生成虚构止损价。板块影响是因果假设而非资金面证实。"
+    },
+    {
+      "event_id": "E20261023_008",
+      "parent_event_id": "HORMUZ",
+      "time": "2026-10-22 19:13:40",
+      "date": "2026-10-23",
+      "event_type": "macro",
+      "title": "霍尔木兹事件增加航空与运输成本风险",
+      "summary": "同一地缘事件对航空运输与成本敏感化工形成反向冲击",
+      "score": -0.76,
+      "raw_score": -0.76,
+      "weighted_score": -0.76,
+      "days_since": 0,
+      "decayed": false,
+      "source": "新华社",
+      "sources": [
+        "新华社",
+        "央视"
+      ],
+      "independent_source_count": 2,
+      "single_source": false,
+      "official_source": true,
+      "strength": "high",
+      "polarity": "负面",
+      "entity_map": {
+        "sectors": [
+          "航空运输",
+          "航运物流",
+          "化工成本敏感链"
+        ],
+        "stocks": [],
+        "concepts": []
+      },
+      "sectors_impact": [
+        {
+          "name": "航空运输",
+          "polarity": "负面",
+          "strength": "high",
+          "mechanism": "燃油与空域扰动提高成本"
+        },
+        {
+          "name": "航运物流",
+          "polarity": "负面",
+          "strength": "medium",
+          "mechanism": "通航安全与保险成本风险；不等同所有船型运价下跌"
+        },
+        {
+          "name": "化工成本敏感链",
+          "polarity": "负面",
+          "strength": "medium",
+          "mechanism": "原料成本传导不畅可能压缩利润"
+        }
+      ],
+      "stocks_impact": [],
+      "valid_period": "1-3日；以事实更新为准",
+      "bearish_scope": "行业级",
+      "bearish_impact_sectors": [
+        "航空运输",
+        "航运物流",
+        "化工成本敏感链"
+      ],
+      "evidence": [
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 850,
+          "published_at": "2026-10-22 19:13:40",
+          "origin": "新华社",
+          "text": "【伊朗称7艘“违规”船只在霍尔木兹海峡周边海域起火】伊朗伊斯兰革命卫队海军22日发布声明说，在波斯湾发现4艘“违规”船只运输石油货物，随后这4艘船被打击并起火，另有3艘“违规”船只21日晚在霍尔木兹海峡以西海域触雷起火。声明称，这4艘船穿越了霍尔木兹海峡内的“非法”航线，在波斯湾中北部进行船对船石油转运时被发现并遭到打击。声明还称，美国执意让船只通过霍尔木兹海峡“非法且布有水雷的航道”，导致海上冲突日益加剧。如果这种趋势继续下去，伊朗与美国的对抗范围将扩大到美军在该地区的基地。伊朗革命卫队海军还表示，其部队目前仍对霍尔木兹海峡实施管控。（新华社）",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "line": 855,
+          "published_at": "2026-10-22 19:09:31",
+          "origin": "美国航空披露",
+          "text": "美国航空：2026年第三季度飞机燃料及相关税费为46亿美元，较2025年第三季度增长67.5%。",
+          "url": null,
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/wechat_official_20.jsonl",
+          "line": 7,
+          "published_at": "2026-10-22 21:55",
+          "origin": "央视及新华社",
+          "text": "美伊局势，突传重磅！伊朗，最新发声！ 最新消息。 伊朗军方：在装备方面已为非对称战争做好准备 伊朗伊斯兰共和国军队总司令哈塔米22日称，伊朗军队在装备方面已做好应对非对称战争的准备，在无人机领域已达到“相对成熟的水平”。 哈塔米当天在视察一处作战型无人机生产中心时表示，伊军无人机旨在发挥“确保在非对称战争中保持存在感”的作用，而目前伊朗在无人机的生产、分发与维护方面“非常活跃”。包括空中无人机、无人水面艇等各类无人系统正被用于执行多种任务。 哈塔米称，无论是在数量还是质量上，伊朗军队目前在非对称战争所需装备方面都处于“有利地位”，官兵士气高昂，正积极投身于必要装备的生产中。 谈及伊军在霍尔木兹海峡以东的行动，哈塔米表示，伊军方在该区域已部署包括水雷和各类自动化控制系统在内的多种装备，并正持续密切监视局势，“敌方舰船一旦进入，将成为我们的打击目标”。 美媒：美以军方已制定美中期选举后打击伊朗的计划 据美国《纽约时报》21日报道，美国和以色列军方已制定具体计划，准备在11月美国中期选举结束后再次打击伊朗，但美国总统特朗普是否会批准实施这一计划尚不确定。 报道援引美国官员的话说，美国防部长赫格塞思本周与以色列总理内塔尼亚胡进行会晤，讨论了对伊新的打击行动。美以军方计划针对伊朗开展一场“短时间、高强度”的军事行动，打击的目标可能包括伊朗能源基础设施、核设施以及导弹和无人机武器库等。 报道称，一些美方人士认为，一场高强度军事行动将对伊朗经济造成足够大的破坏，并迫使伊朗作出让步。但报道同时指出，特朗普是否会批准新一轮军事行动仍不确定。本月，美以军方几乎已经做好发动打击的准备，但特朗普叫停了行动。一名白宫官员21日表示，政府不会评论“可能存在、也可能不存在”的军事计划。 报道说，有理由怀疑新一轮军事行动是否会取得更大成效。同时，有专家指出，以色列将于本月27日举行议会选举，其结果也可能打乱相关计划，如果内塔尼亚胡败选并转为看守总理，他将很难再发动战事。 报道还说，伊朗议长顾问迈赫迪·穆罕默迪近日在社交媒体上表示，美国希望在72小时内完成对伊新一轮打击的想法是“幻想”。伊朗已做好周密的计划，反击将“更加猛烈、更出人意料且和以往不同”。 伊朗官员：如对伊采取行动 美国将付出代价 当地时间22日，伊朗最高国家安全委员会秘书雷扎伊表示，对伊朗采取行动是有代价的。如果外交能够达成共识，伊朗更倾向于外交；但如果战争继续下去，伊朗拥有继续应对的必要手段。 雷扎伊称，目前局势持续下去将产生战略影响，其中包括未来三年能源市场的持续动荡。 雷扎伊指出，这场战争的持续改变了局势，使之对伊朗有利。他称，海湾国家正在迅速重新定义与伊朗的关系，他们开始相信，美国军队没有能力保卫自己的基地，因此也不应指望美国有能力保卫他们的国家。 来源：央视新闻客户端 新华网 责编：彭勃 校对：姚远 证券时报各平台所有原创内容，未经书面授权，任何单位及个人不得转载。我社保留追 究相关 行 为主体法律责任的权利。 转载与合作可联系证券时报小助理，微信ID：SecuritiesTimes",
+          "url": "https://mp.weixin.qq.com/s?__biz=MjM5NDEzMTAwMA==&mid=2652700507&idx=1&sn=1e087ec2345b42d48b3e531c21d5b177&chksm=bc0306f37f2fc0beeb68f82e58c985872e61b2a7d005c3507d3c7cad1d1a4c1b6aa8f9a61926",
+          "retrieval": "same_day_fetch"
+        }
+      ],
+      "web_hits": [
+        {
+          "title": "伊朗说7艘“违规”船只在波斯湾起火",
+          "url": "http://finance.sina.com.cn/roll/2026-10-22/doc-iniwarrm5162648.shtml",
+          "publish_date": "2026-10-22 13:46:00",
+          "summary": "来源：新华网\n新华社德黑兰10月22日电 伊朗伊斯兰革命卫队海军22日发布消息说，在波斯湾发现4艘“违规”船只运输石油货物，随后这4艘船同时被打击并起火。\n消息说，另有3艘“违规”船只21日晚在霍尔木兹海峡以西海域触雷起火。",
+          "extra": {
+            "seq": "",
+            "publish_source": "新浪财经",
+            "real_publish_source": "环球网",
+            "host_name": "finance.sina.com.cn",
+            "de_groupid": "e960c9c7e1a9cfba",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "伊朗 7艘 船只 起火"
+        },
+        {
+          "title": "伊朗称7艘“违规”船只在霍尔木兹海峡周边海域起火",
+          "url": "http://news.10jqka.com.cn/19700122/c680990428.shtml",
+          "publish_date": "2026-10-22 19:13:54",
+          "summary": " 伊朗伊斯兰革命卫队海军22日发布声明说，在波斯湾发现4艘“违规”船只运输石油货物，随后这4艘船被打击并起火，另有3艘“违规”船只21日晚在霍尔木兹海峡以西海域触雷起火。 声明称，这4艘船穿越了霍尔木兹海峡内的“非法”航线，在波斯湾中北部进行船对船石油转运时被发现并遭到打击。(新华社)",
+          "extra": {
+            "seq": "680990428",
+            "publish_source": "同花顺财经",
+            "real_publish_source": "同花顺7x24快讯",
+            "host_name": "news.10jqka.com.cn",
+            "de_groupid": "e9284fc6ce29cfba",
+            "site_tags": [],
+            "author_name": "",
+            "is_forbidden_source": false
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "伊朗 7艘 船只 起火"
+        }
+      ],
+      "raw_url_verified": false,
+      "primary_source_text": null,
+      "reasoning": {
+        "capital_intent_hypothesis": "风险管理对象是燃油与运输成本敏感敞口，不将油气受益扩大为整个顺周期利好。",
+        "why_sector_may_strengthen": "不是走强事件。航运风险可能推升部分油轮运价却同时损害航次安全与保险成本，必须分船型。",
+        "evidence_hardness": "袭船报道有官方新闻核对；A股航空利润影响为机制推演，不能伪造量化盈利下调。",
+        "invalidation": "若航路恢复与油价回落则风险缓释。与E007共享母事件不重复计独立源及事实数量。"
+      },
+      "action": "观察",
+      "opportunity_category": null,
+      "execution_eligible": false,
+      "notes": "R4只做事件映射；主跌期不提供交易首推，不生成虚构止损价。板块影响是因果假设而非资金面证实。"
+    }
+  ],
+  "sectors_catalyzed": {
+    "光模块": {
+      "events": [
+        "E20261023_001",
+        "E20261023_004"
+      ],
+      "positive_events": [
+        "E20261023_004"
+      ],
+      "negative_events": [
+        "E20261023_001"
+      ],
+      "weighted_positive": 0.5,
+      "weighted_negative": 0.92,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": -0.42,
+      "net_polarity": "正负交织",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "CPO": {
+      "events": [
+        "E20261023_001",
+        "E20261023_004"
+      ],
+      "positive_events": [
+        "E20261023_004"
+      ],
+      "negative_events": [
+        "E20261023_001"
+      ],
+      "weighted_positive": 0.5,
+      "weighted_negative": 0.92,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": -0.42,
+      "net_polarity": "正负交织",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "半导体": {
+      "events": [
+        "E20261023_001"
+      ],
+      "positive_events": [],
+      "negative_events": [
+        "E20261023_001"
+      ],
+      "weighted_positive": 0.0,
+      "weighted_negative": 0.92,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": -0.92,
+      "net_polarity": "负面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "存储": {
+      "events": [
+        "E20261023_001"
+      ],
+      "positive_events": [],
+      "negative_events": [
+        "E20261023_001"
+      ],
+      "weighted_positive": 0.0,
+      "weighted_negative": 0.92,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": -0.92,
+      "net_polarity": "负面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "AI算力": {
+      "events": [
+        "E20261023_001"
+      ],
+      "positive_events": [],
+      "negative_events": [
+        "E20261023_001"
+      ],
+      "weighted_positive": 0.0,
+      "weighted_negative": 0.92,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": -0.92,
+      "net_polarity": "负面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "人形机器人": {
+      "events": [
+        "E20261023_002"
+      ],
+      "positive_events": [
+        "E20261023_002"
+      ],
+      "negative_events": [],
+      "weighted_positive": 0.636924,
+      "weighted_negative": 0.0,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": 0.636924,
+      "net_polarity": "正面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "工业软件": {
+      "events": [
+        "E20261023_002"
+      ],
+      "positive_events": [
+        "E20261023_002"
+      ],
+      "negative_events": [],
+      "weighted_positive": 0.636924,
+      "weighted_negative": 0.0,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": 0.636924,
+      "net_polarity": "正面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "网络安全": {
+      "events": [
+        "E20261023_003"
+      ],
+      "positive_events": [
+        "E20261023_003"
+      ],
+      "negative_events": [],
+      "weighted_positive": 0.78,
+      "weighted_negative": 0.0,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": 0.78,
+      "net_polarity": "正面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "AI安全": {
+      "events": [
+        "E20261023_003"
+      ],
+      "positive_events": [
+        "E20261023_003"
+      ],
+      "negative_events": [],
+      "weighted_positive": 0.78,
+      "weighted_negative": 0.0,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": 0.78,
+      "net_polarity": "正面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "黄金": {
+      "events": [
+        "E20261023_005",
+        "E20261023_006"
+      ],
+      "positive_events": [
+        "E20261023_006"
+      ],
+      "negative_events": [
+        "E20261023_005"
+      ],
+      "weighted_positive": 0.66,
+      "weighted_negative": 0.86,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": -0.2,
+      "net_polarity": "正负交织",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "白银": {
+      "events": [
+        "E20261023_005"
+      ],
+      "positive_events": [],
+      "negative_events": [
+        "E20261023_005"
+      ],
+      "weighted_positive": 0.0,
+      "weighted_negative": 0.86,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": -0.86,
+      "net_polarity": "负面",
+      "strength": "medium",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "并购重组": {
+      "events": [
+        "E20261023_006"
+      ],
+      "positive_events": [
+        "E20261023_006"
+      ],
+      "negative_events": [],
+      "weighted_positive": 0.66,
+      "weighted_negative": 0.0,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": 0.66,
+      "net_polarity": "正面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "油气开采": {
+      "events": [
+        "E20261023_007"
+      ],
+      "positive_events": [
+        "E20261023_007"
+      ],
+      "negative_events": [],
+      "weighted_positive": 0.67,
+      "weighted_negative": 0.0,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": 0.67,
+      "net_polarity": "正面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "油服": {
+      "events": [
+        "E20261023_007"
+      ],
+      "positive_events": [
+        "E20261023_007"
+      ],
+      "negative_events": [],
+      "weighted_positive": 0.67,
+      "weighted_negative": 0.0,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": 0.67,
+      "net_polarity": "正面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "航空运输": {
+      "events": [
+        "E20261023_008"
+      ],
+      "positive_events": [],
+      "negative_events": [
+        "E20261023_008"
+      ],
+      "weighted_positive": 0.0,
+      "weighted_negative": 0.76,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": -0.76,
+      "net_polarity": "负面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "航运物流": {
+      "events": [
+        "E20261023_008"
+      ],
+      "positive_events": [],
+      "negative_events": [
+        "E20261023_008"
+      ],
+      "weighted_positive": 0.0,
+      "weighted_negative": 0.76,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": -0.76,
+      "net_polarity": "负面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    },
+    "化工成本敏感链": {
+      "events": [
+        "E20261023_008"
+      ],
+      "positive_events": [],
+      "negative_events": [
+        "E20261023_008"
+      ],
+      "weighted_positive": 0.0,
+      "weighted_negative": 0.76,
+      "kol_confirm": "未核对R3独立验证",
+      "action": "观察",
+      "net_score": -0.76,
+      "net_polarity": "负面",
+      "strength": "high",
+      "notes": "算术净分仅用于消息检索排序；负面事件不得被净分抵消；不是交易或资金信号"
+    }
+  },
+  "stocks_catalyzed": {
+    "688507": {
+      "name": "索辰科技",
+      "ts_code": "688507.SH",
+      "events": [
+        "E20261023_002"
+      ],
+      "positive_count": 1,
+      "negative_count": 0,
+      "action": "观察",
+      "execution_eligible": false,
+      "notes": "事件点名映射而非交易首推；主跌期无候选"
+    },
+    "301550": {
+      "name": "斯菱智驱",
+      "ts_code": "301550.SZ",
+      "events": [
+        "E20261023_002"
+      ],
+      "positive_count": 1,
+      "negative_count": 0,
+      "action": "观察",
+      "execution_eligible": false,
+      "notes": "事件点名映射而非交易首推；主跌期无候选"
+    },
+    "002439": {
+      "name": "启明星辰",
+      "ts_code": "002439.SZ",
+      "events": [
+        "E20261023_003"
+      ],
+      "positive_count": 1,
+      "negative_count": 0,
+      "action": "观察",
+      "execution_eligible": false,
+      "notes": "事件点名映射而非交易首推；主跌期无候选"
+    },
+    "688225": {
+      "name": "亚信安全",
+      "ts_code": "688225.SH",
+      "events": [
+        "E20261023_003"
+      ],
+      "positive_count": 1,
+      "negative_count": 0,
+      "action": "观察",
+      "execution_eligible": false,
+      "notes": "事件点名映射而非交易首推；主跌期无候选"
+    },
+    "601360": {
+      "name": "三六零",
+      "ts_code": "601360.SH",
+      "events": [
+        "E20261023_003"
+      ],
+      "positive_count": 1,
+      "negative_count": 0,
+      "action": "观察",
+      "execution_eligible": false,
+      "notes": "事件点名映射而非交易首推；主跌期无候选"
+    },
+    "300394": {
+      "name": "天孚通信",
+      "ts_code": "300394.SZ",
+      "events": [
+        "E20261023_004"
+      ],
+      "positive_count": 1,
+      "negative_count": 0,
+      "action": "观察",
+      "execution_eligible": false,
+      "notes": "事件点名映射而非交易首推；主跌期无候选"
+    },
+    "300308": {
+      "name": "中际旭创",
+      "ts_code": "300308.SZ",
+      "events": [
+        "E20261023_004"
+      ],
+      "positive_count": 1,
+      "negative_count": 0,
+      "action": "观察",
+      "execution_eligible": false,
+      "notes": "事件点名映射而非交易首推；主跌期无候选"
+    },
+    "600988": {
+      "name": "赤峰黄金",
+      "ts_code": "600988.SH",
+      "events": [
+        "E20261023_005",
+        "E20261023_006"
+      ],
+      "positive_count": 1,
+      "negative_count": 1,
+      "action": "观察",
+      "execution_eligible": false,
+      "notes": "事件点名映射而非交易首推；主跌期无候选"
+    },
+    "601899": {
+      "name": "紫金矿业",
+      "ts_code": "601899.SH",
+      "events": [
+        "E20261023_005",
+        "E20261023_006"
+      ],
+      "positive_count": 1,
+      "negative_count": 1,
+      "action": "观察",
+      "execution_eligible": false,
+      "notes": "事件点名映射而非交易首推；主跌期无候选"
+    }
+  },
+  "sector_polarity_cross_product": {
+    "event_ids": [
+      "E20261023_001",
+      "E20261023_002",
+      "E20261023_003",
+      "E20261023_004",
+      "E20261023_005",
+      "E20261023_006",
+      "E20261023_007",
+      "E20261023_008"
+    ],
+    "sectors": [
+      "光模块",
+      "CPO",
+      "半导体",
+      "存储",
+      "AI算力",
+      "人形机器人",
+      "工业软件",
+      "网络安全",
+      "AI安全",
+      "黄金",
+      "白银",
+      "并购重组",
+      "油气开采",
+      "油服",
+      "航空运输",
+      "航运物流",
+      "化工成本敏感链"
+    ],
+    "values": [
+      [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        -1
+      ]
+    ],
+    "legend": {
+      "1": "正面机制",
+      "-1": "负面机制",
+      "0": "无直接映射"
+    },
+    "cell_count": 136,
+    "conflict_sectors": [
+      "光模块",
+      "CPO",
+      "黄金"
+    ],
+    "method": "event × sector signed incidence；不以0填充未知强度，仅0表示未映射"
+  },
+  "additional_events": [
+    {
+      "event_id": "X20261023_001",
+      "parent_event_id": "PHP",
+      "date": "2026-10-23",
+      "event_type": "technical_break",
+      "polarity": "负面",
+      "strength": "medium",
+      "bearish_scope": "板块级",
+      "bearish_impact_sectors": [
+        "线上公共服务",
+        "网络平台"
+      ],
+      "title": "PHP漏洞造成日本多类线上服务预防性暂停",
+      "summary": "安全修复需求与业务中断风险同时存在",
+      "sources": [
+        "新华社",
+        "IT之家"
+      ],
+      "web_hits": [
+        {
+          "title": "PHP 高危漏洞引发日本数字服务大规模停摆，银行、航空、铁路纷纷下线避险",
+          "url": "https://www.ithome.com/1/016/467.htm",
+          "publish_date": "2026-10-22 15:16:04",
+          "summary": "日本国内，瑞穗金融集团旗下银行与证券业务暂停相关服务，表示正在采取紧急安全加固措施。地方银行静冈银行关停官网与手机应用；三菱日联金融集团旗下多家企业暂停部分线上业务。全日空控股旗下的全日空航空关闭 Apple Wallet 电子登机牌等功能，称暂未发现被入侵迹象，但由于部分系统使用 PHP，因此采取这项预防性措施。日本航空以系统维护为由下线部分网页与服务；东日本旅客铁道暂停部分网页服务；日本 7‑11 便利店也关停了客户支持网站，相关发言人证实了上述信息。日本这次大范围应急处置，让人们看到数字基础设施里那些老旧、平时不为人留意的软件组件，一旦出问题会如何波及普通人日常生活。日本高度依赖遗留旧软件，并且大量企业外包技术服务，因此更容易受到这类漏洞冲击。PHP 如今的流行度有所下滑，Stack Overflow 开发者调查显示受访者中约 18% 仍在使用该语言。但它在日本依旧无处不在，大量网页应用、电商网站、WordPress 站点都基于 PHP 搭建，而且很多企业还在运行早已停止维护的旧版本\n......以上仅为正文内容节选\n",
+          "extra": {
+            "publish_source": "IT之家",
+            "real_publish_source": "IT之家",
+            "host_name": "www.ithome.com",
+            "de_groupid": "f93535940eb929d",
+            "site_tags": []
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "PHP 日本 网站 暂停"
+        },
+        {
+          "title": "PHP重大漏洞致日本多网站暂停服务",
+          "url": "https://it.sohu.com/a/1091344391_267106",
+          "publish_date": "2026-10-22 22:08:00",
+          "summary": "新华社东京10月22日电（记者钱铮）广泛用于网站开发的PHP脚本语言21日被曝光存在严重安全漏洞后，日本政府22日呼吁各网站运营方采取措施，日本中央和地方政府部门、铁路、金融机构的多个网站暂停服务。\nPHP是一种广泛使用的服务器端脚本语言。它在服务器上运行，用于生成网页内容、与数据库交互，也被大量集成到其他产品中。此次安全问题涉及两个漏洞，攻击者可能通过触发内存耗尽状态，造成内存损坏，并在特定条件下利用漏洞远程执行代码。21日，PHP开发团队发布紧急安全更新，漏洞已被修复。\n日本一些中央和地方政\n......当中省略63字正文内容......\n在非法访问或信息泄露等。\n日本多家大企业也暂停了部分网络服务。三菱日联银行、瑞穗银行等22日宣布对系统进行临时维护。大和证券公司、三菱日联摩根士丹利证券公司等当日也宣布暂停部分服务。不过，日本全国银行协会表示，尚未发现此次漏洞问题对银行间结算相关业务产生影响。\n铁路和航空方面，西日本旅客铁道公司22日说，集团共有约60个网站暂停服务。四国旅客铁道公司从22日上午起陆续停止官网各页面服务，无法查询列车运行信息，部分预约功能无法使用。天马航空公司已暂停受理航班退票及改签申请。（完）返回搜狐，查看更多",
+          "extra": {
+            "seq": "",
+            "publish_source": "搜狐科技",
+            "real_publish_source": "新华社",
+            "host_name": "it.sohu.com",
+            "de_groupid": "8bc051d941b3b55d",
+            "site_tags": [],
+            "author_name": ""
+          },
+          "retrieval": "live_hithink_news_search",
+          "query": "PHP 日本 网站 暂停"
+        }
+      ],
+      "sectors_impact": [
+        {
+          "name": "线上公共服务",
+          "polarity": "负面",
+          "strength": "medium",
+          "mechanism": "预防性维护导致服务短暂停止；不可推定A股已遭入侵"
+        }
+      ],
+      "stocks_impact": [],
+      "notes": "同主体反面独立列示；不是A股行业全面停摆，不给high，不挤掉八条核心传导事件；独立列于附加风险不占八条核心；不得被E003利好抵销",
+      "raw_score": -0.45,
+      "score": -0.45,
+      "weighted_score": -0.45,
+      "days_since": 0,
+      "decayed": false,
+      "source": "新华社",
+      "valid_period": "修复完成前",
+      "action": "观察",
+      "execution_eligible": false
+    },
+    {
+      "event_id": "X20261023_002",
+      "parent_event_id": "ST_RISK",
+      "date": "2026-10-23",
+      "event_type": "policy",
+      "polarity": "负面",
+      "strength": "medium",
+      "bearish_scope": "个股级",
+      "bearish_impact_sectors": [],
+      "title": "*ST卓然持续发布强制退市风险提示",
+      "sources": [
+        "公司公告"
+      ],
+      "evidence": [
+        {
+          "path": "data/raw/20261023/anns_window.jsonl",
+          "line": 1267,
+          "published_at": "20261023",
+          "origin": "公司公告",
+          "text": "关于公司股票可能存在因市值低于3亿元而终止上市的第八次风险提示暨公司股票可能被实施重大违法强制退市的风险提示公告",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-10-23/1225616702.PDF",
+          "retrieval": "same_day_fetch"
+        },
+        {
+          "path": "data/raw/20261023/anns_window.jsonl",
+          "line": 1268,
+          "published_at": "20261023",
+          "origin": "公司公告",
+          "text": "关于公司股票可能被实施重大违法强制退市的第六次风险提示公告",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-10-23/1225616704.PDF",
+          "retrieval": "same_day_fetch"
+        }
+      ],
+      "stocks_impact": [
+        {
+          "code": "688121",
+          "name": "*ST卓然",
+          "role": "风险映射",
+          "action": "不进"
+        }
+      ],
+      "notes": "风险事实非R6 hard_reject；不得把债券到期摘牌当股票退市"
+    }
+  ],
+  "negative_events": [
+    "E20261023_001",
+    "E20261023_005",
+    "E20261023_008",
+    "X20261023_001",
+    "X20261023_002"
+  ],
+  "first_board_candidates": [],
+  "execution_candidates": [],
+  "first_board_candidates_status": "disabled_main_down",
+  "market_context": {
+    "source": "data/research/20261023/emotion_cycle.json",
+    "metrics_date": "20261022",
+    "phase": "主跌",
+    "emotion": "主跌",
+    "break_rate": 0.4107,
+    "break_rate_pct": 41.07,
+    "mainline_status": "未经R1/R2确认；不将消息热度称主线",
+    "main_template": null,
+    "candidate_cap_rule": "炸板率≥35%候选减半；主跌更严格直接为0",
+    "action": "观察",
+    "today_do": "核实催化与风险并向R2/R5/R6/D1传递事件",
+    "today_do_not": "不做资金结论、不选股、不凭消息生成买入价位"
+  },
+  "event_deduplication": {
+    "scope": "selected_top_event_evidence_only；非全部原始文本事件数",
+    "raw_count": 18,
+    "merged_count": 7,
+    "directional_event_count": 8,
+    "dedup_rate": 0.611111,
+    "rule": "相同核心实体±1h合并转载；后续实质披露保留更新；同母事件正反极性分别输出；同源转载不累加",
+    "score_rule": "同极性跨源取绝对值最强一条带原符号，不累加；不以max将负面取成较弱负值"
+  },
+  "prompt_version": "r4_news_v1.6_20261016",
+  "event_sources_used": {
+    "prompt_version": "r4_news_v1.6_20261016",
+    "live_news_search_queries": [
+      "英伟达 Isaac 机器人",
+      "PHP 漏洞",
+      "AI 资本开支",
+      "光模块 生产经营",
+      "黄金 下跌",
+      "赤峰黄金 控制权",
+      "霍尔木兹",
+      "科技创新 产业创新",
+      "伊朗 7艘 船只 起火",
+      "费城半导体 指数 10月22日",
+      "黄金 4028.58",
+      "PHP 日本 网站 暂停"
+    ],
+    "drift_calibration": "未完成月度校准；未声称不存在漂移"
+  },
+  "sparse_event_day": false,
+  "raw_items_scanned": {
+    "official_articles": 90,
+    "wechat_cli_news_messages": 436,
+    "news_cls": 2987,
+    "news_major": 800,
+    "announcements": 2672,
+    "earnings_metric_records": 500,
+    "event_density": "7/6",
+    "event_density_definition": "N=已核实母事件数；M=消息与预告六类源；另列记录密度，不把消息条数当M_source",
+    "sparse_event_test_basis": "至少7个已核实母事件；无全样本事件抽取标签，不报告伪精确密度判断",
+    "record_density": 0.0010021474588403723
+  },
+  "preprocessing": {
+    "summary_comma_replaced": 0,
+    "duplicate_metric_handling": "归母净利润与净利润可比较口径每公司取最新；不将扣非或营业收入同比混入top15",
+    "wechat_anonymized": true
+  },
+  "earnings_cross_validation": {
+    "period": "2026Q3",
+    "source": "data/raw/20261023/eastmoney_earnings_predict.json",
+    "company_count": 196,
+    "top15": [
+      {
+        "ts_code": "001309.SZ",
+        "name": "德明利",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-17",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          32046.52,
+          33154.49
+        ],
+        "sector_intersection": [
+          "存储"
+        ],
+        "event_window_eligible": true,
+        "days_since_conservative_knowable_date": 4,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": true,
+        "earnings_breakdown": {
+          "cum_yoy": "32046.52%~33154.49%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "300821.SZ",
+        "name": "东岳硅材",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-08",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          19047.97,
+          19748.08
+        ],
+        "sector_intersection": [],
+        "event_window_eligible": false,
+        "days_since_conservative_knowable_date": 14,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": true,
+        "earnings_breakdown": {
+          "cum_yoy": "19047.97%~19748.08%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "000703.SZ",
+        "name": "恒逸石化",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-16",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          3318.59,
+          3405.13
+        ],
+        "sector_intersection": [
+          "油气开采(间接且成本方向不等同)"
+        ],
+        "event_window_eligible": true,
+        "days_since_conservative_knowable_date": 4,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": true,
+        "earnings_breakdown": {
+          "cum_yoy": "3318.59%~3405.13%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "002466.SZ",
+        "name": "天齐锂业",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-21",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          2734.97,
+          3235.26
+        ],
+        "sector_intersection": [],
+        "event_window_eligible": true,
+        "days_since_conservative_knowable_date": 1,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": true,
+        "earnings_breakdown": {
+          "cum_yoy": "2734.97%~3235.26%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "688825.SH",
+        "name": "长鑫科技",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-17",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          2581.06,
+          2609.47
+        ],
+        "sector_intersection": [
+          "存储"
+        ],
+        "event_window_eligible": true,
+        "days_since_conservative_knowable_date": 4,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": true,
+        "earnings_breakdown": {
+          "cum_yoy": "2581.06%~2609.47%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "002812.SZ",
+        "name": "恩捷股份",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-14",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          1884,
+          2474.8
+        ],
+        "sector_intersection": [],
+        "event_window_eligible": false,
+        "days_since_conservative_knowable_date": 8,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": false,
+        "earnings_breakdown": {
+          "cum_yoy": "1884%~2474.8%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "688808.SH",
+        "name": "联讯仪器",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-13",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          1866,
+          2072.95
+        ],
+        "sector_intersection": [
+          "光模块",
+          "CPO"
+        ],
+        "event_window_eligible": false,
+        "days_since_conservative_knowable_date": 9,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": false,
+        "earnings_breakdown": {
+          "cum_yoy": "1866%~2072.95%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "301308.SZ",
+        "name": "江波龙",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-15",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          1864.55,
+          1990.84
+        ],
+        "sector_intersection": [
+          "存储"
+        ],
+        "event_window_eligible": false,
+        "days_since_conservative_knowable_date": 7,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": true,
+        "earnings_breakdown": {
+          "cum_yoy": "1864.55%~1990.84%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "605189.SH",
+        "name": "富春染织",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-14",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          1347.69,
+          1519.01
+        ],
+        "sector_intersection": [],
+        "event_window_eligible": false,
+        "days_since_conservative_knowable_date": 8,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": false,
+        "earnings_breakdown": {
+          "cum_yoy": "1347.69%~1519.01%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "603991.SH",
+        "name": "领先股份",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-21",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          1238.57,
+          1238.57
+        ],
+        "sector_intersection": [],
+        "event_window_eligible": true,
+        "days_since_conservative_knowable_date": 1,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": false,
+        "earnings_breakdown": {
+          "cum_yoy": "1238.57%~1238.57%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "688388.SH",
+        "name": "嘉元科技",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-15",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          1196.6,
+          1318.92
+        ],
+        "sector_intersection": [],
+        "event_window_eligible": false,
+        "days_since_conservative_knowable_date": 7,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": true,
+        "earnings_breakdown": {
+          "cum_yoy": "1196.6%~1318.92%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "603026.SH",
+        "name": "石大胜华",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-15",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          968.14,
+          1032.45
+        ],
+        "sector_intersection": [],
+        "event_window_eligible": false,
+        "days_since_conservative_knowable_date": 7,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": true,
+        "earnings_breakdown": {
+          "cum_yoy": "968.14%~1032.45%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "000626.SZ",
+        "name": "远大控股",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-15",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          890,
+          1018
+        ],
+        "sector_intersection": [],
+        "event_window_eligible": false,
+        "days_since_conservative_knowable_date": 7,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": false,
+        "earnings_breakdown": {
+          "cum_yoy": "890%~1018%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "002493.SZ",
+        "name": "荣盛石化",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-15",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          777.93,
+          822.95
+        ],
+        "sector_intersection": [
+          "油气开采(间接且成本方向不等同)"
+        ],
+        "event_window_eligible": false,
+        "days_since_conservative_knowable_date": 7,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": true,
+        "earnings_breakdown": {
+          "cum_yoy": "777.93%~822.95%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      },
+      {
+        "ts_code": "301536.SZ",
+        "name": "星宸科技",
+        "metric": "归属于上市公司股东的净利润",
+        "notice_date": "2026-10-13",
+        "report_date": "2026-09-30",
+        "cum_yoy_range": [
+          663.13,
+          697.75
+        ],
+        "sector_intersection": [
+          "AI算力"
+        ],
+        "event_window_eligible": false,
+        "days_since_conservative_knowable_date": 9,
+        "polarity": "中性",
+        "notes": "仅作业绩覆盖核验；earnings_qoq_unverified；禁止累计同比直接升级正面",
+        "cyclical": false,
+        "earnings_breakdown": {
+          "cum_yoy": "663.13%~697.75%",
+          "implied_single_q": null,
+          "prev_single_q": null,
+          "implied_qoq": null,
+          "recurring_only": null,
+          "product_price_trend": "未查",
+          "expectation_gap": "未验证",
+          "verdict": "earnings_qoq_unverified；仅背景不构成正面催化"
+        }
+      }
+    ],
+    "positive_earnings_promoted": 0,
+    "notes": "预告日期非首次可知分钟；采用次交易日保守口径仅作覆盖核验，过窗不进top_events。未拆单季一律中性。"
+  },
+  "sources_status": {
+    "wechat_official_20": "ok",
+    "wechat_cli_5groups": "ok",
+    "news_cls": "ok",
+    "news_major": "ok",
+    "anns_window": "ok",
+    "eastmoney_earnings_predict": "ok",
+    "hithink_news_search": "ok",
+    "primary_documents": "ok",
+    "hithink_business_query": "error",
+    "beneficiary_pool": "error",
+    "MCP_cross_verification": "error",
+    "R3_sentiment": "error",
+    "R7_capital_flow": "error",
+    "hithink_symbol_lookup": "ok"
+  },
+  "data_sources_audit": [
+    {
+      "name": "wechat_official_20",
+      "path": "data/raw/20261023/wechat_official_20.jsonl",
+      "status": "ok",
+      "captured_at": "2026-10-23T06:00:47+08:00",
+      "record_count": 90,
+      "note": "当日fetch产物；不是本会话MCP直采"
+    },
+    {
+      "name": "wechat_cli_5groups",
+      "path": "data/raw/20261023/wechat_cli_5groups.jsonl",
+      "status": "ok",
+      "captured_at": "2026-10-23T06:00:47+08:00",
+      "record_count": 436,
+      "note": "当日fetch产物；不是本会话MCP直采"
+    },
+    {
+      "name": "news_cls",
+      "path": "data/raw/20261023/news_cls.jsonl",
+      "status": "ok",
+      "captured_at": "2026-10-23T06:03:43+08:00",
+      "record_count": 2987,
+      "note": "当日fetch产物；不是本会话MCP直采"
+    },
+    {
+      "name": "news_major",
+      "path": "data/raw/20261023/news_major.jsonl",
+      "status": "ok",
+      "captured_at": "2026-10-23T06:03:43+08:00",
+      "record_count": 800,
+      "note": "当日fetch产物；不是本会话MCP直采"
+    },
+    {
+      "name": "anns_window",
+      "path": "data/raw/20261023/anns_window.jsonl",
+      "status": "ok",
+      "captured_at": "2026-10-23T06:03:44+08:00",
+      "record_count": 2672,
+      "note": "当日fetch产物；不是本会话MCP直采"
+    },
+    {
+      "name": "eastmoney_earnings_predict",
+      "path": "data/raw/20261023/eastmoney_earnings_predict.json",
+      "status": "ok",
+      "captured_at": "2026-10-23T06:03:43+08:00",
+      "record_count": 500,
+      "note": "500条是财务指标记录；归母净利/净利润去重公司196家；并非500只票；2026Q3非中报"
+    },
+    {
+      "name": "hithink_news_search",
+      "path": "https://openapi.iwencai.com/v1/comprehensive/search",
+      "status": "ok",
+      "captured_at": "2026-10-23T06:15:02+08:00",
+      "record_count": 59,
+      "note": "本会话两批12个有效关键词查询，另一次宽泛Isaac查询被丢弃；当日及相关内容筛选结果，过期与百科命中不得用于验证"
+    },
+    {
+      "name": "primary_documents",
+      "path": "PHP官网及cninfo公告PDF",
+      "status": "ok",
+      "captured_at": "2026-10-23T06:15:02+08:00",
+      "record_count": 3,
+      "note": "已读取PHP安全归档、天孚活动记录、赤峰控制权变更PDF；每经页面正文抽取不完整不计原文核实"
+    },
+    {
+      "name": "hithink_business_query",
+      "path": "not_called",
+      "status": "error",
+      "captured_at": null,
+      "record_count": 0,
+      "error": "主跌期禁止选股；无交易首推，不推算主营重叠率"
+    },
+    {
+      "name": "beneficiary_pool",
+      "path": "hithink-market-query / announcement-search",
+      "status": "error",
+      "captured_at": null,
+      "record_count": 0,
+      "error": "受益股池及冲突公告专项核验未完成；现有个股仅原文点名映射"
+    },
+    {
+      "name": "MCP_cross_verification",
+      "path": "vibe/datapro/xtick",
+      "status": "error",
+      "captured_at": null,
+      "record_count": 0,
+      "error": "当前profile主控禁止直接MCP；delegation工具检索无匹配，未调用，不标源故障"
+    },
+    {
+      "name": "R3_sentiment",
+      "path": "data/research/20261023/R3_sentiment.json",
+      "status": "error",
+      "captured_at": null,
+      "record_count": 0,
+      "error": "运行时无文件；公众号群聊不当独立验证"
+    },
+    {
+      "name": "R7_capital_flow",
+      "path": "data/research/20261023/R7_capital_flow.json",
+      "status": "error",
+      "captured_at": null,
+      "record_count": 0,
+      "error": "运行时无文件；不伪造资金验证"
+    },
+    {
+      "name": "hithink_symbol_lookup",
+      "path": "https://openapi.iwencai.com/v1/query2data",
+      "status": "ok",
+      "captured_at": "2026-10-23T06:18:09+08:00",
+      "record_count": 5,
+      "note": "只核对原文点名代码，不作选股；附带最新价为盘前上一时段报价，未用于制定买点"
+    }
+  ],
+  "data_health_severity": 2,
+  "input_freshness": "partial",
+  "confidence_rationale": "八条核心方向有当日fetch证据与实时新闻检索；两份公司披露及PHP官网已读。并非全量MCP直采。主营、受益股池、冲突公告专项与R7均未完成，未输出首推票或交易候选。黄金同文转载按一源处理。",
+  "contract_deviations": [
+    "主跌期仅观察，高于旧skill每top_event强制首推及数值止损要求；不伪造资金、主营占比和止损",
+    "skill要求vibe/datapro/xtick交叉直调未执行，使用官方OpenAPI实时新闻与原文读取补充，非等价替代",
+    "未完成announcement-search逐票冲突核验，不可供D1直接转execution",
+    "盘前纪要当日07:00版本尚未发布；当前为06点早批结果，不能宣称覆盖07:30前全部新增消息"
+  ],
+  "downstream_contract": {
+    "R2": "仅供叙事与极性，不代表主线确认",
+    "R5": "核验主营、板型、价格、RR和财报环比后才可构建画像",
+    "R6": "完整传递E001/E005/E008及风险附件；无R4 hard_reject",
+    "D1": "全量观察；不得把消息映射直接当execution候选"
+  },
+  "validation": {
+    "pydantic": "passed; inline Artifact/Event/Impact strict essential-field model with extra fields allowed",
+    "repository_r4_contract": "passed check_r4_top_pick_logic; no 首推 roles by design",
+    "matrix": "passed 8x17=136 cells and signed incidence consistency",
+    "markdown": "passed frontmatter required fields, mermaid, eight reasoning triplets, earnings top15, mandatory source audit",
+    "production_skill_acceptance": "partial; see contract_deviations; structural pass is not full skill acceptance"
+  },
+  "symbol_lookups": [
+    {
+      "query": "斯菱智驱 股票代码",
+      "datas": [
+        {
+          "code": "301550.SZ",
+          "name": "斯菱智驱"
+        }
+      ]
+    },
+    {
+      "query": "三六零 股票代码",
+      "datas": [
+        {
+          "code": "601360.SH",
+          "name": "三六零"
+        }
+      ]
+    },
+    {
+      "query": "启明星辰 股票代码",
+      "datas": [
+        {
+          "code": "002439.SZ",
+          "name": "启明星辰"
+        }
+      ]
+    },
+    {
+      "query": "亚信安全 股票代码",
+      "datas": [
+        {
+          "code": "688225.SH",
+          "name": "亚信安全"
+        }
+      ]
+    },
+    {
+      "query": "中际旭创 股票代码",
+      "datas": [
+        {
+          "code": "300308.SZ",
+          "name": "中际旭创"
+        }
+      ]
+    }
+  ]
+}

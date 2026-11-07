@@ -1,0 +1,44 @@
+{
+  "command": [
+    "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/pipeline/test_research_single_session_prompt.py",
+    "--noconftest",
+    "-c",
+    "/dev/null",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/parent-chart-verification-7rxxiig9/prompt-base",
+    "-q",
+    "--tb=short",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/parent-chart-verification-7rxxiig9/prompt.xml"
+  ],
+  "environment": {
+    "PATH": "/bin:/usr/bin",
+    "HOME": "/Users/chenyang/.hermes/cache/scratch/parent-chart-verification-7rxxiig9",
+    "TMPDIR": "/Users/chenyang/.hermes/cache/scratch",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "LANG": "en_US.UTF-8"
+  },
+  "exit_code": 0,
+  "syntax_exit_code": 0,
+  "case_count": 16,
+  "bad_cases": [],
+  "before": {
+    "scripts/research/run_research_shell.sh": "8121571523ce898a92ae557f6a7a1b9b9c1970569c32d6aa66aeb49df5fafa7b",
+    "tests/pipeline/test_research_single_session_prompt.py": "d7f01eb571b497d49bdb01728c469ef603b2d651321c58b560b75cb55bfa8b7c"
+  },
+  "after": {
+    "scripts/research/run_research_shell.sh": "8121571523ce898a92ae557f6a7a1b9b9c1970569c32d6aa66aeb49df5fafa7b",
+    "tests/pipeline/test_research_single_session_prompt.py": "d7f01eb571b497d49bdb01728c469ef603b2d651321c58b560b75cb55bfa8b7c"
+  },
+  "source_unchanged": true,
+  "index_unchanged": true,
+  "actual_model_run": false,
+  "process_level_recursion_block": false
+}

@@ -1,0 +1,1494 @@
+--- before/src/agents/chart_vision_agent.py
++++ after/src/agents/chart_vision_agent.py
+@@ -2,13 +2,14 @@
+ from __future__ import annotations
+ 
+ import base64
++import hashlib
+ import json
+ import os
+ from typing import Any
+ 
+ from openai import OpenAI
+ 
+-from src.api.market_data import fetch_chart_bars
++DEFAULT_VISION_MODEL = "deepseek-v4.1-flash-1017"
+ 
+ 
+ def _vision_client() -> OpenAI:
+@@ -19,24 +20,30 @@
+     可切到火山引擎（ARK）豆包 vision。
+ 
+     解析顺序（先到先用）：
+-      1. VISION_API_BASE / VISION_API_KEY / VISION_MODEL   ← 显式视觉通道
+-      2. OPENAI_API_BASE / OPENAI_API_KEY / OPENAI_VISION_MODEL  ← 原行为（apiyi）
++      1. VISION_API_BASE / VISION_API_KEY   ← 显式视觉连接
++      2. OPENAI_API_BASE / OPENAI_API_KEY  ← 原行为（apiyi）
++    看图型号单独由 CHART_VISION_MODEL 覆盖；默认用户指定的DeepSeek版本。
+     默认不改变现有行为：不设 VISION_* 时完全等同改造前。
+     """
+     base = (os.environ.get("VISION_API_BASE") or os.environ.get("OPENAI_API_BASE", "")).strip()
+     key = (os.environ.get("VISION_API_KEY") or os.environ.get("OPENAI_API_KEY", "")).strip()
+     if not base or not key:
+         raise ValueError("视觉通道未配置：需要 VISION_API_BASE/VISION_API_KEY 或 OPENAI_API_BASE/OPENAI_API_KEY")
+-    return OpenAI(base_url=base, api_key=key, timeout=float(os.environ.get("VISION_TIMEOUT", "180")))
++    return OpenAI(base_url=base, api_key=key, timeout=float(os.environ.get("VISION_TIMEOUT", "180")), max_retries=0)
++
++
++def _complete(**kwargs):
++    with _vision_client() as client:
++        return client.chat.completions.create(**kwargs)
+ 
+ 
+ def _vision_model() -> str:
+-    """视觉模型名：VISION_MODEL > OPENAI_VISION_MODEL > OPENAI_MODEL > gpt-4o-mini。"""
+-    for k in ("VISION_MODEL", "OPENAI_VISION_MODEL", "OPENAI_MODEL"):
+-        v = os.environ.get(k, "").strip()
+-        if v:
+-            return v
+-    return "gpt-4o-mini"
++    """Chart-specific model; do not inherit a stale generic/other-image model."""
++    return os.environ.get("CHART_VISION_MODEL", "").strip() or DEFAULT_VISION_MODEL
++
++
++def analysis_identity() -> dict[str, str]:
++    return {"model": _vision_model(), "prompt_sha256": hashlib.sha256(VISION_PROMPT.encode()).hexdigest()}
+ 
+ 
+ def _ma(closes: list[float], period: int) -> float | None:
+@@ -46,6 +53,7 @@
+ 
+ 
+ def _build_period_context(ts_code: str, period: str, days: int, fq: int) -> dict[str, Any]:
++    from src.api.market_data import fetch_chart_bars
+     data = fetch_chart_bars(ts_code, days=days, period=period, fq=fq)
+     candles = data.get("candles") or []
+     if not candles:
+@@ -105,7 +113,8 @@
+ 
+ VISION_PROMPT = """你是 A 股技术面看盘 Agent。用户上传了一张「多周期 K 线拼图」（通常含日K/周K/60分/15分），并附上各周期量价摘要。
+ 
+-请结合图像形态与 JSON 数据，给出可执行的买卖点建议（非荐股，仅供研究）。
++请结合图像形态与同源 JSON 数据，给出关键价位、结构及验证条件，供决策Agent研究。
++你不掌握完整主线、市场情绪或账户信息，不直接制定仓位、下单或卖出指令。
+ 
+ 关注形态：突破、回踩、低吸、高抛、趋势延续、背离、放量、关键均线/牛熊线位置。
+ 
+@@ -113,10 +122,12 @@
+ {
+   "summary": "2-4句综合判断",
+   "bias": "偏多|偏空|震荡",
++  "pattern": "1-2句描述真实图形结构",
++  "volume_signal": "量能判断及依据，缺失则明确说明",
+   "confidence": 0.0-1.0,
+   "signals": [
+     {
+-      "type": "突破|低吸|高抛|观望|止损",
++      "type": "突破观察|支撑观察|压力观察|破位风险|观望",
+       "period": "日K|周K|60分|15分",
+       "confidence": 0.0-1.0,
+       "price_hint": 数字或null,
+@@ -124,11 +135,15 @@
+     }
+   ],
+   "risks": ["风险1", "风险2"],
+-  "action": "一句话操作建议",
++  "action": "一句话说明接下来验证什么条件，不是下单指令",
+   "disclaimer": "仅供参考，不构成投资建议"
+ }
+ 
+-signals 至少 1 条、至多 5 条；若无明确机会，type 用「观望」。"""
++signals 至少 1 条、至多 5 条；若无明确机会，type 用「观望」。
++这是技术研究参考，不是交易授权。以附带行情的真实日期、价格和price_anchors为依据；
++支撑/压力应注明对应日期或结构，无法定位的price_hint为null，不从图片像素编造精确价格。
++低吸指预判强势票当日冲涨停时的相对低位介入，不等于大跌接飞刀；仅靠本图不能证明该预判。
++明确跨周期矛盾、缺失周期和不确定性，不因缺某个可选指标就否决股票。"""
+ 
+ 
+ def analyze_chart_vision(
+@@ -138,6 +153,7 @@
+     name: str = "",
+     periods: list[dict[str, Any]] | None = None,
+     fq: int = 2,
++    period_context: list[dict[str, Any]] | None = None,
+ ) -> dict[str, Any]:
+     periods = periods or [
+         {"period": "1d", "days": 365, "label": "日K"},
+@@ -145,7 +161,7 @@
+         {"period": "60m", "days": 60, "label": "60分"},
+         {"period": "15m", "days": 30, "label": "15分"},
+     ]
+-    context = build_multi_period_context(ts_code, periods, fq=fq)
++    context = period_context if period_context is not None else build_multi_period_context(ts_code, periods, fq=fq)
+     model = _vision_model()
+     b64 = base64.b64encode(image_bytes).decode("ascii")
+ 
+@@ -155,8 +171,7 @@
+         f"各周期摘要：\n{json.dumps(context, ensure_ascii=False, indent=2)}"
+     )
+ 
+-    client = _vision_client()
+-    resp = client.chat.completions.create(
++    resp = _complete(
+         model=model,
+         messages=[
+             {"role": "system", "content": VISION_PROMPT},
+@@ -173,11 +188,23 @@
+     )
+     content = resp.choices[0].message.content or "{}"
+     result = json.loads(content)
++    if not isinstance(result, dict) or not isinstance(result.get("signals"), list) or not result.get("summary"):
++        raise ValueError("vision response is missing the structured technical analysis")
+     result["ts_code"] = ts_code
+     result["name"] = name
+     result["fq"] = fq
+     result["period_context"] = context
+     result["model"] = model
++    result["response_model"] = resp.model
++    result["analysis_identity"] = analysis_identity()
++    result["price_hint_role"] = "technical_reference_not_execution_authorization"
++    result["trend"] = result.get("trend") or result.get("bias", "unknown")
++    result["pattern"] = result.get("pattern") or result["summary"]
++    result["key_levels"] = result.get("key_levels") or [
++        {"period": s.get("period"), "price": s["price_hint"], "kind": s.get("type"), "reason": s.get("reason")}
++        for s in result["signals"] if isinstance(s, dict) and s.get("price_hint") is not None
++    ]
++    result["volume_signal"] = result.get("volume_signal") or "模型未单列量能结论，不能视为量能确认"
+     return result
+ 
+ 
+@@ -194,12 +221,11 @@
+     ]
+     context = build_multi_period_context(ts_code, periods, fq=fq)
+     model = _vision_model()
+-    client = _vision_client()
+     prompt = (
+         f"{VISION_PROMPT}\n\n无截图，仅根据以下数据给建议：\n"
+         f"{json.dumps({'ts_code': ts_code, 'name': name, 'periods': context}, ensure_ascii=False)}"
+     )
+-    resp = client.chat.completions.create(
++    resp = _complete(
+         model=model,
+         messages=[
+             {"role": "system", "content": "你只输出合法 JSON 对象。"},
+--- before/src/analytics/lwc_chart_renderer.py
++++ after/src/analytics/lwc_chart_renderer.py
+@@ -2,35 +2,68 @@
+ from __future__ import annotations
+ 
+ import json
++import selectors
+ import subprocess
+-import tempfile
+ import time
+-from concurrent.futures import ThreadPoolExecutor, as_completed
+ from datetime import datetime, timezone, timedelta
+ from pathlib import Path
+ from typing import Any
+ 
+-from src.api.market_data import fetch_chart_bars
+-from src.analytics.fast_chart_renderer import CHART_OUT_DIR, DEFAULT_PERIODS
++from src.analytics.chart_input import DEFAULT_PERIODS, prepare_chart_input
+ 
+ CN_TZ = timezone(timedelta(hours=8))
+ ROOT = Path(__file__).resolve().parents[2]
+ LWC_SCRIPT = ROOT / "web" / "scripts" / "headless" / "lwc_headless_render.mjs"
++CHART_OUT_DIR = ROOT / "output" / "charts"
++RENDER_VERSION = "lwc-clean-v3"
+ 
+ 
+-def _fetch_panel(ts_code: str, item: dict[str, Any], fq: int) -> dict[str, Any]:
+-    period = str(item.get("period", "1d"))
+-    days = max(int(item.get("days") or 365), 150)
+-    label = str(item.get("label") or period)
+-    data = fetch_chart_bars(ts_code, days=days, period=period, fq=fq)
+-    return {
+-        "label": label,
+-        "period": period,
+-        "source": data.get("source"),
+-        "candles": data.get("candles") or [],
+-        "volumes": data.get("volumes") or [],
+-        "max_bars": int(item.get("max_bars") or 120),
+-    }
++def render_identity(moving_averages=None, macd=False, width=1320) -> dict:
++    return {"renderer_version": RENDER_VERSION, "moving_averages": [5, 20] if moving_averages is None else list(moving_averages), "macd": bool(macd), "width": width}
++
++
++class LwcRenderSession:
++    """One render thread owns one Node process/browser, reused across symbols."""
++
++    def __init__(self):
++        self.process = subprocess.Popen(
++            ["node", str(LWC_SCRIPT), "--worker"], cwd=str(ROOT / "web"),
++            stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
++            text=True, bufsize=1,
++        )
++
++    def render(self, payload, output_path):
++        proc = self.process
++        assert proc.stdin is not None and proc.stdout is not None
++        if proc.poll() is not None:
++            raise RuntimeError("chart browser worker has exited")
++        proc.stdin.write(json.dumps({"payload": payload, "output": str(output_path)}, ensure_ascii=False) + "\n")
++        proc.stdin.flush()
++        with selectors.DefaultSelector() as selector:
++            selector.register(proc.stdout, selectors.EVENT_READ)
++            if not selector.select(timeout=120):
++                self.close()
++                raise TimeoutError("chart browser worker exceeded 120 seconds")
++        line = proc.stdout.readline()
++        if not line:
++            raise RuntimeError("chart browser worker closed without a response")
++        result = json.loads(line)
++        if result.get("error"):
++            raise RuntimeError(result["error"])
++        return result
++
++    def close(self):
++        proc = self.process
++        if proc.poll() is None:
++            if proc.stdin:
++                proc.stdin.close()
++            try:
++                proc.wait(timeout=5)
++            except subprocess.TimeoutExpired:
++                proc.kill()
++                proc.wait()
++        if proc.stdout:
++            proc.stdout.close()
+ 
+ 
+ def render_lwc_multi_period_kline(
+@@ -40,65 +73,42 @@
+     periods: list[dict[str, Any]] | None = None,
+     fq: int = 2,
+     width: int = 1320,
++    prepared: dict | None = None,
++    as_of: str | None = None,
++    moving_averages: list[int] | None = None,
++    macd: bool = False,
++    session: LwcRenderSession | None = None,
++    output_dir: Path | None = None,
+ ) -> dict[str, Any]:
+-    """四周期 LWC 拼图：成交量 + 牛熊线 + 四色四量 + MACD。"""
++    """Clean multi-period chart; share the exact input bars with vision."""
+     if not LWC_SCRIPT.is_file():
+         raise FileNotFoundError(f"缺少 LWC 脚本: {LWC_SCRIPT}")
+ 
+-    periods = periods or DEFAULT_PERIODS
+     t0 = time.time()
+-    raw_panels: list[dict[str, Any]] = []
+-    with ThreadPoolExecutor(max_workers=min(4, len(periods))) as pool:
+-        futures = {pool.submit(_fetch_panel, ts_code, item, fq): item for item in periods}
+-        for fut in as_completed(futures):
+-            raw_panels.append(fut.result())
++    prepared = prepared or prepare_chart_input(ts_code, name=name, periods=periods, fq=fq, as_of=as_of)
+     fetch_ms = int((time.time() - t0) * 1000)
+-
+-    raw_panels.sort(
+-        key=lambda p: next(
+-            (i for i, d in enumerate(periods) if str(d.get("label", d.get("period"))) == p["label"]),
+-            99,
+-        )
+-    )
+-
++    raw_panels = prepared["panels"]
++    identity = render_identity(moving_averages, macd, width)
+     payload = {
+-        "title": f"{name or ts_code} ({ts_code}) · Lightweight Charts",
++        "title": f"{name or ts_code} ({ts_code}) · 数据截止 {prepared['as_of']}",
+         "width": width,
+         "panels": raw_panels,
++        "options": identity,
+     }
+-
+-    CHART_OUT_DIR.mkdir(parents=True, exist_ok=True)
+-    stamp = datetime.now(CN_TZ).strftime("%Y%m%d_%H%M%S")
++    out_dir = output_dir or CHART_OUT_DIR
++    out_dir.mkdir(parents=True, exist_ok=True)
++    stamp = datetime.now(CN_TZ).strftime("%Y%m%d_%H%M%S_%f")
+     safe = ts_code.replace(".", "_")
+-    out_path = CHART_OUT_DIR / f"lwc_kline_{safe}_{stamp}.png"
+-
+-    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as tf:
+-        json.dump(payload, tf, ensure_ascii=False)
+-        payload_path = tf.name
+-
++    out_path = out_dir / f"lwc_kline_{safe}_{stamp}.png"
+     t1 = time.time()
++    own_session = session is None
++    session = session or LwcRenderSession()
+     try:
+-        proc = subprocess.run(
+-            ["node", str(LWC_SCRIPT), "--input", payload_path, "--output", str(out_path)],
+-            cwd=str(ROOT / "web"),
+-            capture_output=True,
+-            text=True,
+-            timeout=120,
+-            check=False,
+-        )
++        timings = session.render(payload, out_path)
+     finally:
+-        Path(payload_path).unlink(missing_ok=True)
+-
++        if own_session:
++            session.close()
+     render_ms = int((time.time() - t1) * 1000)
+-    if proc.returncode != 0:
+-        raise RuntimeError(proc.stderr.strip() or proc.stdout.strip() or "LWC 渲染失败")
+-
+-    timings: dict[str, Any] = {}
+-    try:
+-        timings = json.loads(proc.stdout.strip().splitlines()[-1])
+-    except (json.JSONDecodeError, IndexError):
+-        timings = {"raw_stdout": proc.stdout[-500:]}
+-
+     result: dict[str, Any] = {
+         "ts_code": ts_code,
+         "name": name,
+@@ -109,7 +119,11 @@
+         "render_ms": render_ms,
+         "total_ms": fetch_ms + render_ms,
+         "renderer": "lightweight_charts_playwright",
+-        "indicators": ["volume", "bull_bear", "sise", "macd"],
++        "indicators": ["volume"] + [f"ma{n}" for n in identity["moving_averages"]] + (["macd"] if macd else []),
++        "render_identity": identity,
++        "input_digest": prepared["input_digest"],
++        "as_of": prepared["as_of"],
++        "period_context": prepared["period_context"],
+         "panels": [
+             {"label": p["label"], "period": p["period"], "bars": len(p["candles"]), "source": p.get("source")}
+             for p in raw_panels
+--- before/scripts/fetch/run_chart_vision_snapshot.py
++++ after/scripts/fetch/run_chart_vision_snapshot.py
+@@ -24,8 +24,10 @@
+ import asyncio
+ import json
+ import os
++import re
+ import sys
+ import time
++import tempfile
+ import traceback
+ from concurrent.futures import ThreadPoolExecutor
+ from datetime import datetime
+@@ -38,14 +40,14 @@
+ 
+ 
+ def _pool_from_r2(date: str) -> list[tuple[str, str]]:
+-    """只从当日 R2 已声明候选推导；不可用时不补票。"""
+-    try:
+-        from src.research.candidate_pool import derive_from_file
+-
+-        pool, meta = derive_from_file(date)
++    """已声明研究候选与同日计划池的看图并集；不造票，不改变交易资格。"""
++    try:
++        from src.research.candidate_pool import chart_universe
++
++        pool, meta = chart_universe(date)
+         if pool:
+             print(
+-                f"[pool] 从 R2 推导 {len(pool)} 票 · source={meta.get('source')}",
++                f"[pool] 已声明图表对象 {len(pool)} 票 · source={meta.get('source')}",
+                 flush=True,
+             )
+             return pool
+@@ -87,6 +89,7 @@
+             ts_code=ts_code,
+             name=name,
+             fq=2,
++            period_context=render_info["period_context"],
+         )
+         analysis["chart_path"] = str(path)
+         analysis["fetch_ms"] = render_info.get("fetch_ms")
+@@ -104,22 +107,20 @@
+         }
+ 
+ 
+-async def _run_all(universe: list[tuple[str, str]], concurrency: int) -> list[dict]:
+-    loop = asyncio.get_event_loop()
+-    sem = asyncio.Semaphore(concurrency)
+-    with ThreadPoolExecutor(max_workers=concurrency) as pool:
+-        async def _bounded(ts_code: str, name: str):
+-            async with sem:
+-                print(f"[start] {ts_code} {name}", flush=True)
+-                result = await loop.run_in_executor(pool, _analyze_one, ts_code, name)
+-                status = "ok" if not result.get("error") else "FAIL"
+-                print(
+-                    f"[done]  {ts_code} {name} · {status} · {result.get('elapsed_s')}s",
+-                    flush=True,
+-                )
+-                return result
+-
+-        return await asyncio.gather(*[_bounded(c, n) for c, n in universe])
++async def _run_all(universe: list[tuple[str, str]], concurrency: int, **options) -> list[dict]:
++    from src.analytics.chart_batch import run_chart_batch
++    return await run_chart_batch(universe, concurrency, **options)
++
++
++def _atomic_json(path: Path, payload: dict) -> None:
++    path.parent.mkdir(parents=True, exist_ok=True)
++    with tempfile.NamedTemporaryFile("w", dir=path.parent, suffix=".tmp", delete=False, encoding="utf-8") as stream:
++        temp = Path(stream.name)
++        json.dump(payload, stream, ensure_ascii=False, indent=2)
++    try:
++        temp.replace(path)
++    finally:
++        temp.unlink(missing_ok=True)
+ 
+ 
+ def main() -> int:
+@@ -127,6 +128,12 @@
+     parser.add_argument("--universe", type=Path, default=None, help="JSON file: [{ts_code,name},...] or [ts_code,...]")
+     parser.add_argument("--date", type=str, default=None, help="YYYYMMDD (default=today)")
+     parser.add_argument("--concurrency", type=int, default=CONCURRENCY)
++    parser.add_argument("--render-workers", type=int, default=2)
++    parser.add_argument("--codes", nargs="+", help="Explicit ts_code list for review or ad-hoc research; no fixed stock-count cap")
++    parser.add_argument("--as-of", help="Input cutoff as ISO timestamp; historical dates never fetch past their date")
++    parser.add_argument("--no-ma", action="store_true", help="Candles and volume only, without moving-average overlays")
++    parser.add_argument("--macd", action="store_true", help="Include optional MACD pane")
++    parser.add_argument("--output-dir", type=Path, help="Isolated output directory; does not update production snapshots")
+     parser.add_argument(
+         "--force",
+         action="store_true",
+@@ -136,7 +143,20 @@
+ 
+     date = args.date or datetime.now().strftime("%Y%m%d")
+     try:
+-        universe = _load_universe(args.universe) if args.universe else _pool_from_r2(date)
++        datetime.strptime(date, "%Y%m%d")
++        if args.codes and args.universe:
++            raise ValueError("choose --codes or --universe, not both")
++        universe = list(dict.fromkeys((c, "") for c in args.codes)) if args.codes else _load_universe(args.universe) if args.universe else _pool_from_r2(date)
++        if any(not isinstance(c, str) or not re.fullmatch(r"\d{6}\.(SH|SZ|BJ)", c) for c, _ in universe):
++            raise ValueError("stock identifiers must be literal six-digit codes with .SH/.SZ/.BJ suffixes")
++        if args.concurrency < 1 or args.render_workers < 1:
++            raise ValueError("worker counts must be positive")
++        from src.analytics.chart_input import cutoff_time
++        as_of = args.as_of or (date if date < datetime.now().strftime("%Y%m%d") else None)
++        cutoff = cutoff_time(as_of)
++        if cutoff.strftime("%Y%m%d") > date or cutoff > datetime.now(cutoff.tzinfo):
++            raise ValueError("input cutoff is in the future or after the report date")
++        as_of = cutoff.isoformat()
+     except (OSError, ValueError, KeyError, TypeError) as exc:
+         print(f"[fatal] 无效票池: {exc}", file=sys.stderr)
+         return 2
+@@ -147,15 +167,14 @@
+     from src.research.candidate_pool import load_snapshot
+ 
+     cached, _ = load_snapshot(date)
++    if args.output_dir:
++        output_cache = args.output_dir / "chart_vision_snapshot.json"
++        prior = json.loads(output_cache.read_text()) if output_cache.is_file() else {}
++        cached = prior.get("results", {}) if prior.get("date") == date else {}
+     selected_count = len(universe)
+-    if not args.force:
+-        universe = [(c, n) for c, n in universe if c not in cached]
+-    print(f"[pool] selected={selected_count} · pending={len(universe)} · reused={selected_count - len(universe)}", flush=True)
+-    if not universe:
+-        print(f"[chart_vision ⏭️] {date} 全部复用当日有效快照 · 零模型调用", flush=True)
+-        return 0
+-
+-    # 只有确需外部计算时才加载凭据；空池／全缓存不触碰 .env。
++    print(f"[pool] selected={selected_count} · checking shared-input/model/render identities before reuse", flush=True)
++
++    # 空池不加载凭据；非空池用同一份真实输入核验缓存，再决定是否画图/调模型。
+     try:
+         from dotenv import load_dotenv
+         load_dotenv(ROOT / ".env")
+@@ -168,7 +187,11 @@
+     print(f"[chart_vision] date={date} · N={len(universe)} · concurrency={args.concurrency}", flush=True)
+ 
+     t0 = time.time()
+-    results = asyncio.run(_run_all(universe, args.concurrency))
++
++    results = asyncio.run(_run_all(universe, args.concurrency, render_workers=args.render_workers,
++                                  cached=cached, force=args.force, as_of=as_of,
++                                  moving_averages=[] if args.no_ma else None, macd=args.macd,
++                                  output_dir=args.output_dir / "charts" if args.output_dir else None))
+     total_s = round(time.time() - t0, 2)
+ 
+     ok = sum(1 for r in results if not r.get("error"))
+@@ -181,7 +204,7 @@
+     results_map = {r["ts_code"]: r for r in results}
+     for code, rec in cached.items():
+         results_map.setdefault(code, rec)
+-    raw_dir = ROOT / "data" / "raw" / date
++    raw_dir = args.output_dir or ROOT / "data" / "raw" / date
+     raw_path = raw_dir / "chart_vision_snapshot.json"
+     merged_from: str | None = None
+     if raw_path.exists():
+@@ -202,24 +225,27 @@
+         "generated_at": datetime.now().isoformat(timespec="seconds"),
+         "date": date,
+         "concurrency": args.concurrency,
++        "render_workers": args.render_workers,
++        "schema_version": "chart_vision_v2",
+         "total_elapsed_s": total_s,
+         "ok": all_ok,
+         "fail": all_fail,
+         "n": len(results_map),
+         "results": results_map,
+-        "run": {"requested": len(results), "recomputed": ok, "failed": fail, "merged_from": merged_from},
++        "run": {"selected": selected_count, "requested": len(results), "recomputed": sum(1 for r in results if not r.get("error") and not r.get("reused_analysis")), "reused": sum(1 for r in results if r.get("reused_analysis")), "failed": fail, "merged_from": merged_from},
+     }
+ 
+     raw_dir.mkdir(parents=True, exist_ok=True)
+-    raw_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+-
+-    cache_dir = ROOT / "data" / "cache"
+-    cache_dir.mkdir(parents=True, exist_ok=True)
+-    latest_path = cache_dir / "chart_vision_latest.json"
+-    latest_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
++    _atomic_json(raw_path, payload)
++
++    if not args.output_dir:
++        cache_dir = ROOT / "data" / "cache"
++        cache_dir.mkdir(parents=True, exist_ok=True)
++        latest_path = cache_dir / "chart_vision_latest.json"
++        _atomic_json(latest_path, payload)
+ 
+     print(
+-        f"[chart_vision ✅] {ok}/{len(results)} · {total_s}s · {raw_path.relative_to(ROOT)}",
++        f"[chart_vision ✅] {ok}/{len(results)} · {total_s}s · {raw_path}",
+         flush=True,
+     )
+     if fail:
+--- before/src/research/candidate_pool.py
++++ after/src/research/candidate_pool.py
+@@ -122,6 +122,65 @@
+     meta.update(m)
+     return pool, meta
+ 
++
++
++def chart_universe(date: str) -> tuple[list[tuple[str, str]], dict]:
++    """Uncapped chart coverage, independent of R5's research-profile quota.
++
++    Existing research and same-date published plan objects are chart requests,
++    not permission to trade. Explicit CLI lists remain a separate entry point.
++    """
++    selected, sources, issues = {}, {}, []
++
++    def add(items, source):
++        for item in items or []:
++            if not isinstance(item, dict):
++                continue
++            code = item.get("ts_code")
++            if not isinstance(code, str) or not re.fullmatch(r"\d{6}\.(SH|SZ|BJ)", code):
++                continue
++            selected.setdefault(code, item.get("name", ""))
++            sources.setdefault(code, []).append(source)
++
++    plan_path = ROOT / f"data/plans/{date}/watchlist_plan.json"
++    if not plan_path.is_file():
++        earlier = sorted(p for p in (ROOT / "data/plans").glob("*/watchlist_plan.json")
++                         if re.fullmatch(r"\d{8}", p.parent.name) and p.parent.name < date)
++        if earlier:
++            plan_path = earlier[-1]
++    plan_date = plan_path.parent.name
++    for relative, kind in ((f"data/research/{date}/R2_main_sectors.json", "research"),
++                           (str(plan_path.relative_to(ROOT)), "plan")):
++        path = ROOT / relative
++        if not path.is_file():
++            continue
++        try:
++            payload = json.loads(path.read_text(encoding="utf-8"))
++        except (OSError, ValueError) as exc:
++            issues.append(f"{relative}: {type(exc).__name__}")
++            continue
++        expected_date = date if kind == "research" else plan_date
++        if not isinstance(payload, dict) or payload.get("trade_date") != expected_date:
++            issues.append(f"{relative}: missing/mismatched trade_date")
++            continue
++        if kind == "research":
++            if payload.get("status") not in {"complete", "partial"}:
++                issues.append(f"{relative}: status={payload.get('status')}")
++                continue
++            for key in ("main_lines", "secondary_lines"):
++                for sector in payload.get(key) or []:
++                    if not isinstance(sector, dict):
++                        continue
++                    add(sector.get("leaders"), f"R2.{key}")
++                    add([{"ts_code": c, "name": n} for c, n in parse_leaders_hint(sector.get("leaders_hint", ""))], f"R2.{key}.hint")
++        else:
++            for key in ("execution_pool", "watch_pool", "b_plan"):
++                items = payload.get(key) or []
++                if isinstance(items, dict):
++                    items = items.get("stocks", [])
++                add(items, f"plan.{key}")
++    return list(selected.items()), {"source": "chart_research_and_plan_union", "count": len(selected), "provenance": sources, "issues": issues,
++                                   "plan_path": str(plan_path.relative_to(ROOT)), "plan_date": plan_date, "prior_plan_used_for_membership_only": plan_date < date}
+ 
+ 
+ def load_snapshot(date: str) -> tuple[dict[str, dict], dict]:
+--- before/src/mcp/tools.py
++++ after/src/mcp/tools.py
+@@ -843,6 +843,8 @@
+     fq: int = 2,
+     data_only: bool = False,
+     agent_id: str = "hermes",
++    macd: bool = False,
++    moving_averages: list[int] | None = None,
+ ) -> dict[str, Any]:
+     """出图 + 多模态 LLM 技术面分析（或 data_only 仅结构化数据）。"""
+     from src.agents.chart_vision_agent import analyze_chart_data_only, analyze_chart_vision
+@@ -853,7 +855,7 @@
+ 
+         from src.analytics.lwc_chart_renderer import render_lwc_multi_period_kline
+ 
+-        render_info = render_lwc_multi_period_kline(ts_code, name=name, fq=fq)
++        render_info = render_lwc_multi_period_kline(ts_code, name=name, fq=fq, macd=macd, moving_averages=moving_averages)
+         path = Path(render_info["path"])
+         image_bytes = path.read_bytes()
+         analysis = analyze_chart_vision(
+@@ -862,6 +864,7 @@
+             ts_code=ts_code,
+             name=name,
+             fq=fq,
++            period_context=render_info["period_context"],
+         )
+         analysis["chart"] = {
+             "path": str(path),
+@@ -871,6 +874,9 @@
+             "renderer": render_info.get("renderer"),
+             "indicators": render_info.get("indicators"),
+             "lwc_timings": render_info.get("lwc_timings"),
++            "input_digest": render_info.get("input_digest"),
++            "as_of": render_info.get("as_of"),
++            "render_identity": render_info.get("render_identity"),
+         }
+         return analysis
+ 
+@@ -891,8 +897,10 @@
+     name: str = "",
+     fq: int = 2,
+     agent_id: str = "hermes",
+-) -> dict[str, Any]:
+-    """Lightweight Charts 无头四周期图：成交量+牛熊线+四色四量+MACD（与网页同款）。"""
++    macd: bool = False,
++    moving_averages: list[int] | None = None,
++) -> dict[str, Any]:
++    """清晰K线、成交量和时价轴；均线与MACD可选。"""
+     from src.analytics.lwc_chart_renderer import render_lwc_multi_period_kline
+ 
+     return _wrap(
+@@ -902,6 +910,8 @@
+         ts_code=ts_code,
+         name=name,
+         fq=fq,
++        macd=macd,
++        moving_averages=moving_averages,
+     )
+ 
+ 
+--- before/web/scripts/headless/lwc_headless_render.mjs
++++ after/web/scripts/headless/lwc_headless_render.mjs
+@@ -7,8 +7,9 @@
+ import { dirname, join, resolve } from "node:path";
+ import { fileURLToPath } from "node:url";
+ import { performance } from "node:perf_hooks";
++import { createInterface } from "node:readline";
+ import { chromium } from "playwright";
+-import { calcBullBear, calcMACD, BULL_BEAR_WARMUP_BARS } from "../../src/lib/technicalIndicators.js";
++import { calcMACD } from "../../src/lib/technicalIndicators.js";
+ 
+ const __dirname = dirname(fileURLToPath(import.meta.url));
+ const LWC_JS = join(__dirname, "../../node_modules/lightweight-charts/dist/lightweight-charts.standalone.production.js");
+@@ -41,11 +42,9 @@
+   return out;
+ }
+ 
+-export function preparePanel({ label, period, candles, volumes, source, maxBars = 120 }) {
+-  const need = Math.max(maxBars, BULL_BEAR_WARMUP_BARS);
+-  const fullCandles = candles.length > need ? candles.slice(-need) : candles;
+-  const bullBear = calcBullBear(fullCandles, { maXiong: 6, maJueCe: 50 });
+-  const macd = calcMACD(fullCandles);
++export function preparePanel({ label, period, candles, volumes, source, maxBars = 120, options = {} }) {
++  const fullCandles = candles;
++  const macd = options.macd ? calcMACD(fullCandles) : null;
+   const vis = fullCandles.slice(-maxBars);
+   const timeSet = new Set(vis.map((c) => String(c.time)));
+   const visVolumes = (volumes || []).filter((v) => timeSet.has(String(v.time)));
+@@ -56,17 +55,18 @@
+     source,
+     candles: vis,
+     volumes: visVolumes,
+-    bullBear: {
+-      niu: filterByTimes(bullBear.niu, timeSet),
+-      xiong: filterByTimes(bullBear.xiong, timeSet),
+-      jueCe: filterByTimes(bullBear.jueCe, timeSet),
+-      siSeSiLiang: filterSiSe(bullBear.siSeSiLiang, vis),
+-    },
+-    macd: {
++    movingAverages: (options.moving_averages || []).map((n) => ({
++      period: n,
++      data: fullCandles.flatMap((bar, i) => i + 1 < n ? [] : [{
++        time: bar.time,
++        value: fullCandles.slice(i + 1 - n, i + 1).reduce((sum, b) => sum + b.close, 0) / n,
++      }]).filter((p) => timeSet.has(String(p.time))),
++    })),
++    macd: macd ? {
+       macdLine: filterByTimes(macd.macdLine, timeSet),
+       signalLine: filterByTimes(macd.signalLine, timeSet),
+       histogram: filterByTimes(macd.histogram, timeSet),
+-    },
++    } : null,
+   };
+ }
+ 
+@@ -87,7 +87,8 @@
+       candles: p.candles || [],
+       volumes: p.volumes || [],
+       source: p.source,
+-      maxBars: p.maxBars || payload.maxBars || 120,
++      maxBars: p.maxBars || p.max_bars || payload.maxBars || 120,
++      options: payload.options || {},
+     })
+   );
+   timings.prepare_ms = Math.round(performance.now() - t0);
+@@ -108,7 +109,7 @@
+   timings.browser_ms = Math.round(performance.now() - t1);
+ 
+   const t2 = performance.now();
+-  const page = await browser.newPage({ viewport: { width: renderPayload.width, height: 920 } });
++  const page = await browser.newPage({ viewport: { width: renderPayload.width, height: 1 } });
+   const html = buildHtml();
+   await page.setContent(html, { waitUntil: "load" });
+   await page.evaluate((data) => window.__renderCharts(data), renderPayload);
+@@ -129,6 +130,24 @@
+ }
+ 
+ async function main() {
++  if (process.argv.includes("--worker")) {
++    const browser = await chromium.launch({ headless: true });
++    try {
++      for await (const line of createInterface({ input: process.stdin, crlfDelay: Infinity })) {
++        try {
++          const request = JSON.parse(line);
++          const result = await renderPayloadToPng(request.payload, request.output, { reuseBrowser: browser });
++          result.worker_pid = process.pid;
++          console.log(JSON.stringify(result));
++        } catch (error) {
++          console.log(JSON.stringify({ error: String(error.message || error) }));
++        }
++      }
++    } finally {
++      await browser.close();
++    }
++    return;
++  }
+   const { input, output } = parseArgs(process.argv);
+   const payload = JSON.parse(readFileSync(input, "utf8"));
+   const timings = await renderPayloadToPng(payload, output);
+--- before/web/scripts/headless/chart_template.html
++++ after/web/scripts/headless/chart_template.html
+@@ -20,15 +20,16 @@
+       background: #fff;
+     }
+     .panel-title {
+-      font-size: 11px;
++      font-size: 13px;
+       padding: 6px 10px;
+       border-bottom: 1px solid #e8e8e6;
+       display: flex;
+       justify-content: space-between;
+     }
+-    .main-pane { height: 168px; }
++    .main-pane { height: 270px; }
++    .volume-pane { height: 76px; border-top: 1px solid #e8e8e6; }
+     .sise-pane { height: 44px; border-top: 1px solid #e8e8e6; }
+-    .macd-pane { height: 62px; border-top: 1px solid #e8e8e6; }
++    .macd-pane { height: 82px; border-top: 1px solid #e8e8e6; }
+   </style>
+   <!--LWC_INLINE-->
+ </head>
+@@ -39,9 +40,9 @@
+     window.__chartsReady = false;
+ 
+     const CHART_BASE = {
+-      layout: { background: { type: LightweightCharts.ColorType.Solid, color: "#FFFFFF" }, textColor: "#37352F", fontSize: 10 },
++      layout: { background: { type: LightweightCharts.ColorType.Solid, color: "#FFFFFF" }, textColor: "#37352F", fontSize: 12 },
+       grid: { vertLines: { color: "#F0F0EE" }, horzLines: { color: "#F0F0EE" } },
+-      rightPriceScale: { borderVisible: false },
++      rightPriceScale: { borderVisible: false, minimumWidth: 76, scaleMargins: { top: 0.08, bottom: 0.08 } },
+       timeScale: { borderVisible: false, timeVisible: false },
+       handleScroll: false,
+       handleScale: false,
+@@ -88,7 +89,8 @@
+     function renderPanel(root, panel, width) {
+       const wrap = document.createElement("div");
+       wrap.className = "panel";
+-      wrap.innerHTML = `<div class="panel-title"><span>${panel.label}</span><span>${panel.source || ""}</span></div>`;
++      const averages = (panel.movingAverages || []).map((m) => `MA${m.period}`).join(" / ");
++      wrap.innerHTML = `<div class="panel-title"><span>${panel.label}${averages ? ` · ${averages}` : ""}</span><span>${panel.source || ""}</span></div>`;
+       const body = document.createElement("div");
+       wrap.appendChild(body);
+ 
+@@ -97,23 +99,40 @@
+       mainEl.style.width = `${width}px`;
+       body.appendChild(mainEl);
+ 
+-      const chart = mountChart(mainEl, 168);
++      const chart = mountChart(mainEl, 270);
+       const candle = chart.addCandlestickSeries({
+-        upColor: "#26a69a",
+-        downColor: "#ef5350",
++        upColor: "#ef5350",
++        downColor: "#26a69a",
+         borderVisible: false,
+-        wickUpColor: "#26a69a",
+-        wickDownColor: "#ef5350",
+-        lastValueVisible: false,
++        wickUpColor: "#ef5350",
++        wickDownColor: "#26a69a",
++        lastValueVisible: true,
+         priceLineVisible: false,
+       });
+       candle.setData(panel.candles);
++      const dateLabel = (time, markType) => {
++        if (typeof time !== "number") return typeof time === "string" ? time.slice(2) : `${String(time.year).slice(-2)}-${String(time.month).padStart(2, "0")}-${String(time.day).padStart(2, "0")}`;
++        const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Shanghai", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date(time * 1000)).map((p) => [p.type, p.value]));
++        return markType === LightweightCharts.TickMarkType.Time || markType === LightweightCharts.TickMarkType.TimeWithSeconds ? `${parts.hour}:${parts.minute}` : `${parts.month}-${parts.day}`;
++      };
++      chart.applyOptions({ timeScale: { tickMarkFormatter: dateLabel, timeVisible: true, secondsVisible: false } });
+ 
+       if (panel.volumes?.length) {
+-        const vol = chart.addHistogramSeries({ priceFormat: { type: "volume" }, priceScaleId: "" });
+-        vol.priceScale().applyOptions({ scaleMargins: { top: 0.78, bottom: 0 } });
+-        vol.setData(panel.volumes);
++        const volEl = document.createElement("div");
++        volEl.className = "volume-pane";
++        volEl.style.width = `${width}px`;
++        body.appendChild(volEl);
++        const volChart = mountChart(volEl, 76);
++        volChart.applyOptions({ timeScale: { tickMarkFormatter: dateLabel, timeVisible: true, secondsVisible: false } });
++        const vol = volChart.addHistogramSeries({ priceFormat: { type: "volume" }, lastValueVisible: false, priceLineVisible: false });
++        const byTime = new Map(panel.candles.map((c) => [String(c.time), c]));
++        vol.setData(panel.volumes.map((v) => ({ ...v, color: (byTime.get(String(v.time))?.close >= byTime.get(String(v.time))?.open) ? "#ef5350" : "#26a69a" })));
++        volChart.timeScale().fitContent();
+       }
++
++      (panel.movingAverages || []).forEach((ma, index) => {
++        chart.addLineSeries({ color: ["#e6a800", "#2962ff", "#8e24aa"][index % 3], lineWidth: 1, lastValueVisible: false, priceLineVisible: false }).setData(ma.data);
++      });
+ 
+       const overlay = { lastValueVisible: false, priceLineVisible: false, crosshairMarkerVisible: false, lineWidth: 1 };
+       if (panel.bullBear?.niu?.length) {
+@@ -139,7 +158,8 @@
+         macdEl.className = "macd-pane";
+         macdEl.style.width = `${width}px`;
+         body.appendChild(macdEl);
+-        const macdChart = mountChart(macdEl, 62);
++        const macdChart = mountChart(macdEl, 82);
++        macdChart.applyOptions({ timeScale: { tickMarkFormatter: dateLabel, timeVisible: true, secondsVisible: false } });
+         macdChart.addHistogramSeries({ priceFormat: { type: "price", precision: 3 } }).setData(panel.macd.histogram || []);
+         macdChart.addLineSeries({ color: "#2962FF", lineWidth: 1, lastValueVisible: false, priceLineVisible: false }).setData(panel.macd.macdLine || []);
+         macdChart.addLineSeries({ color: "#FF6D00", lineWidth: 1, lastValueVisible: false, priceLineVisible: false }).setData(panel.macd.signalLine || []);
+--- before/tests/pipeline/test_chart_candidate_routing_guardrail.py
++++ after/tests/pipeline/test_chart_candidate_routing_guardrail.py
+@@ -23,6 +23,10 @@
+     "src/research/candidate_pool.py",
+     "src/research/r5_stock_profiles.py",
+     "scripts/fetch/run_chart_vision_snapshot.py",
++    "src/analytics/chart_input.py",
++    "src/analytics/chart_batch.py",
++    "src/analytics/lwc_chart_renderer.py",
++    "src/agents/chart_vision_agent.py",
+ )
+ 
+ 
+@@ -45,7 +49,7 @@
+         shutil.copyfile(REPO / rel, target)
+     names = [n for n in sys.modules if n == "src" or n.startswith("src.")]
+     saved = {n: sys.modules.pop(n) for n in names}
+-    for name, path in (("src", root / "src"), ("src.research", root / "src/research")):
++    for name, path in (("src", root / "src"), ("src.research", root / "src/research"), ("src.analytics", root / "src/analytics"), ("src.agents", root / "src/agents")):
+         package = ModuleType(name)
+         package.__file__ = "<isolated namespace>"
+         package.__path__ = [str(path)]
+@@ -146,7 +150,7 @@
+ def test_main_requests_current_partial_candidates_not_old_defaults(env, monkeypatch):
+     save_research(env, research())
+     requested = []
+-    async def synthetic_run(universe, concurrency):
++    async def synthetic_run(universe, concurrency, **options):
+         requested.extend(universe)
+         return [{"ts_code": code, "name": name, "error": None, "pattern": "fixture-only"} for code, name in universe]
+     monkeypatch.setattr(env.chart, "_run_all", synthetic_run)
+@@ -160,7 +164,7 @@
+ def test_snapshot_failure_stays_on_the_selected_symbol(env, monkeypatch):
+     save_research(env, research())
+     requested = []
+-    async def synthetic_run(universe, concurrency):
++    async def synthetic_run(universe, concurrency, **options):
+         requested.extend(universe)
+         return [{"ts_code": code, "name": name, "error": "synthetic-render-failure" if code == "000001.SZ" else None} for code, name in universe]
+     monkeypatch.setattr(env.chart, "_run_all", synthetic_run)
+@@ -186,14 +190,43 @@
+ 
+ def test_existing_snapshot_only_renders_missing_candidates(env, monkeypatch):
+     save_research(env, research())
+-    save_snapshot(env, {"000001.SZ": {"ts_code": "000001.SZ", "error": None}})
++    from src.analytics import chart_batch as batch
++    import hashlib
++    image = env.root / "existing-fixture.png"
++    image.write_bytes(b"offline-existing-image")
++    save_snapshot(env, {"000001.SZ": {
++        "ts_code": "000001.SZ", "error": None, "summary": "offline fixture", "signals": [{"type": "观望"}],
++        "input_digest": "000001.SZ", "analysis_identity": batch.analysis_identity(),
++        "render_identity": batch.render_identity(), "chart_path": str(image),
++        "image_sha256": hashlib.sha256(image.read_bytes()).hexdigest(),
++    }})
+     requested = []
+-    async def synthetic_run(universe, concurrency):
+-        requested.extend(universe)
+-        return [{"ts_code": code, "name": name, "error": None} for code, name in universe]
+-    monkeypatch.setattr(env.chart, "_run_all", synthetic_run)
++    monkeypatch.setattr(batch, "prepare_chart_input", lambda code, **kw: {"input_digest": code, "as_of": DATE, "period_context": []})
++    class Session:
++        def close(self):
++            pass
++    monkeypatch.setattr(batch, "LwcRenderSession", Session)
++    monkeypatch.setattr(batch, "render_lwc_multi_period_kline", lambda code, **kw: {"path": str(image), "render_ms": 0, "fetch_ms": 0})
++    def model(**kwargs):
++        requested.append((kwargs["ts_code"], kwargs["name"]))
++        return {"summary": "offline new analysis", "signals": [{"type": "观望"}]}
++    monkeypatch.setattr(batch, "analyze_chart_vision", model)
+     monkeypatch.setattr(sys, "argv", ["chart", "--date", DATE])
+     assert env.chart.main() == 0
+     assert requested == [("000002.SZ", "fixture-two")]
+     saved = json.loads((env.root / f"data/raw/{DATE}/chart_vision_snapshot.json").read_text())
+     assert set(saved["results"]) == {"000001.SZ", "000002.SZ"}
++
++
++def test_explicit_fifty_symbol_request_is_not_capped_and_options_reach_batch(env, monkeypatch):
++    requested, options = [], {}
++    async def run(universe, concurrency, **kwargs):
++        requested.extend(universe)
++        options.update(kwargs)
++        return [{"ts_code":code,"name":name,"error":None} for code,name in universe]
++    monkeypatch.setattr(env.chart,"_run_all",run)
++    codes = [f"{i:06d}.SZ" for i in range(1,51)]
++    monkeypatch.setattr(sys,"argv",["chart","--date",DATE,"--codes",*codes,codes[0],"--macd","--no-ma","--render-workers","3"])
++    assert env.chart.main() == 0
++    assert [c for c,n in requested] == codes
++    assert options["moving_averages"] == [] and options["macd"] and options["render_workers"] == 3
+--- before/src/mcp/charts_server.py
++++ after/src/mcp/charts_server.py
+@@ -38,17 +38,17 @@
+         )
+ 
+     @mcp.tool()
+-    def chart_vision_analyze(ts_code: str, name: str = "", fq: int = 2, data_only: bool = False) -> str:
++    def chart_vision_analyze(ts_code: str, name: str = "", fq: int = 2, data_only: bool = False, macd: bool = False, moving_averages: list[int] | None = None) -> str:
+         """出图 + 多模态 LLM 技术面分析。"""
+         return json.dumps(
+-            T.chart_vision_analyze(ts_code=ts_code, name=name, fq=fq, data_only=data_only),
++            T.chart_vision_analyze(ts_code=ts_code, name=name, fq=fq, data_only=data_only, macd=macd, moving_averages=moving_averages),
+             ensure_ascii=False,
+         )
+ 
+     @mcp.tool()
+-    def chart_lwc_render_kline(ts_code: str, name: str = "", fq: int = 2) -> str:
++    def chart_lwc_render_kline(ts_code: str, name: str = "", fq: int = 2, macd: bool = False, moving_averages: list[int] | None = None) -> str:
+         """Lightweight Charts 无头出图。"""
+-        return json.dumps(T.chart_lwc_render_kline(ts_code=ts_code, name=name, fq=fq), ensure_ascii=False)
++        return json.dumps(T.chart_lwc_render_kline(ts_code=ts_code, name=name, fq=fq, macd=macd, moving_averages=moving_averages), ensure_ascii=False)
+ 
+ else:
+     from src.mcp.stdio_jsonrpc import StdioMcpServer
+@@ -67,15 +67,15 @@
+         )
+ 
+     @mcp.tool(description="出图 + 多模态 LLM 技术面分析")
+-    def chart_vision_analyze(ts_code: str, name: str = "", fq: int = 2, data_only: bool = False) -> str:
++    def chart_vision_analyze(ts_code: str, name: str = "", fq: int = 2, data_only: bool = False, macd: bool = False, moving_averages: list[int] | None = None) -> str:
+         return json.dumps(
+-            T.chart_vision_analyze(ts_code=ts_code, name=name, fq=fq, data_only=data_only),
++            T.chart_vision_analyze(ts_code=ts_code, name=name, fq=fq, data_only=data_only, macd=macd, moving_averages=moving_averages),
+             ensure_ascii=False,
+         )
+ 
+     @mcp.tool(description="Lightweight Charts 无头出图")
+-    def chart_lwc_render_kline(ts_code: str, name: str = "", fq: int = 2) -> str:
+-        return json.dumps(T.chart_lwc_render_kline(ts_code=ts_code, name=name, fq=fq), ensure_ascii=False)
++    def chart_lwc_render_kline(ts_code: str, name: str = "", fq: int = 2, macd: bool = False, moving_averages: list[int] | None = None) -> str:
++        return json.dumps(T.chart_lwc_render_kline(ts_code=ts_code, name=name, fq=fq, macd=macd, moving_averages=moving_averages), ensure_ascii=False)
+ 
+ 
+ if __name__ == "__main__":
+--- before/web/src/components/chart/ChartVisionPanel.jsx
++++ after/web/src/components/chart/ChartVisionPanel.jsx
+@@ -10,13 +10,17 @@
+   高抛: "border-amber-300 text-amber-800",
+   观望: "border-border text-muted",
+   止损: "border-purple-300 text-purple-800",
++  突破观察: "border-red-300 text-red-700",
++  支撑观察: "border-cyan-300 text-cyan-800",
++  压力观察: "border-amber-300 text-amber-800",
++  破位风险: "border-purple-300 text-purple-800",
+ };
+ 
+ export default function ChartVisionPanel({ result, error, loading }) {
+   if (loading) {
+     return (
+       <div className="border border-border rounded-lg p-4 text-sm text-muted animate-pulse">
+-        Agent 正在结合多周期图表与量价结构生成买卖点…
++        Agent 正在结合多周期图表与同源量价数据核验关键价位…
+       </div>
+     );
+   }
+@@ -44,7 +48,7 @@
+ 
+       {signals.length > 0 && (
+         <div className="space-y-2">
+-          <div className="text-xs font-medium text-muted">买卖点建议</div>
++          <div className="text-xs font-medium text-muted">关键价位与验证条件（不直接授予交易权限）</div>
+           {signals.map((s, i) => (
+             <div
+               key={i}
+@@ -73,7 +77,7 @@
+ 
+       {result.action && (
+         <div className="text-sm border-t border-border pt-2">
+-          <span className="font-medium">操作建议：</span>
++          <span className="font-medium">后续验证：</span>
+           {result.action}
+         </div>
+       )}
+--- before/src/analytics/chart_input.py
++++ after/src/analytics/chart_input.py
+@@ -0,0 +1,96 @@
++"""Shared, time-bounded chart data; no credentials or market I/O at import."""
++from __future__ import annotations
++
++from concurrent.futures import ThreadPoolExecutor
++from datetime import datetime, timedelta, timezone
++import hashlib
++import json
++from typing import Any
++
++CN_TZ = timezone(timedelta(hours=8))
++DEFAULT_PERIODS = [
++    {"period": "1d", "days": 365, "label": "日K", "max_bars": 120},
++    {"period": "1w", "days": 520, "label": "周K", "max_bars": 80},
++    {"period": "60m", "days": 60, "label": "60分", "max_bars": 120},
++    {"period": "15m", "days": 30, "label": "15分", "max_bars": 120},
++]
++
++
++def digest(value: Any) -> str:
++    return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()).hexdigest()
++
++
++def cutoff_time(value: str | None = None) -> datetime:
++    if not value:
++        return datetime.now(CN_TZ)
++    if len(value) == 8 and value.isdigit():
++        return datetime.strptime(value, "%Y%m%d").replace(hour=23, minute=59, second=59, tzinfo=CN_TZ)
++    dt = datetime.fromisoformat(value)
++    if dt.tzinfo is None:
++        dt = dt.replace(tzinfo=CN_TZ)
++    return dt.astimezone(CN_TZ)
++
++
++def bar_time(value: Any) -> datetime:
++    if isinstance(value, (int, float)):
++        return datetime.fromtimestamp(value / 1000 if value > 1e12 else value, CN_TZ)
++    dt = datetime.fromisoformat(str(value))
++    return dt.replace(tzinfo=CN_TZ) if dt.tzinfo is None else dt.astimezone(CN_TZ)
++
++
++def context_from_panels(panels: list[dict]) -> list[dict]:
++    out = []
++    for panel in panels:
++        bars = panel.get("candles") or []
++        item = {"period": panel["period"], "label": panel["label"], "source": panel.get("source"), "count": len(bars)}
++        if not bars:
++            out.append({**item, "empty": True})
++            continue
++        closes = [float(b["close"]) for b in bars]
++        last, previous = bars[-1], bars[-2] if len(bars) > 1 else bars[-1]
++        item.update(close=closes[-1], last_date=last["time"], pct_chg=(closes[-1] / float(previous["close"]) - 1) * 100 if previous["close"] else None)
++        for n in (5, 20, 60):
++            item[f"ma{n}"] = sum(closes[-n:]) / n if len(closes) >= n else None
++        item["high20"] = max(float(b["high"]) for b in bars[-20:])
++        item["low20"] = min(float(b["low"]) for b in bars[-20:])
++        volumes = {str(v["time"]): float(v["value"]) for v in panel.get("volumes", [])}
++        item["volume_last"] = volumes.get(str(last["time"]))
++        recent_volumes = [volumes.get(str(b["time"])) for b in bars[-5:]]
++        valid_volumes = [v for v in recent_volumes if v is not None]
++        item["volume_ma5"] = sum(valid_volumes) / 5 if len(valid_volumes) == 5 else None
++        item["volume_ratio5"] = item["volume_last"] / item["volume_ma5"] if item["volume_last"] is not None and item["volume_ma5"] else None
++        item["volume_unit"] = "source_native"
++        item["trend"] = "多头排列" if item["ma20"] and item["ma60"] and closes[-1] > item["ma20"] > item["ma60"] else "空头排列" if item["ma20"] and item["ma60"] and closes[-1] < item["ma20"] < item["ma60"] else "震荡"
++        item["price_anchors"] = [{"time": b["time"], "high": b["high"], "low": b["low"], "close": b["close"]} for b in bars[-20:]]
++        out.append(item)
++    return out
++
++
++def prepare_chart_input(ts_code: str, *, name: str = "", periods: list[dict] | None = None, fq: int = 2, as_of: str | None = None, fetcher=None) -> dict:
++    """Fetch each period once; the renderer and vision consume these exact bars."""
++    if fetcher is None:
++        from src.api.market_data import fetch_chart_bars
++        fetcher = fetch_chart_bars
++    periods = periods or DEFAULT_PERIODS
++    cutoff = cutoff_time(as_of)
++    # Existing collectors interpret end_date at midnight. Fetch through the next
++    # midnight, then discard bars outside the requested instant locally.
++    end_date = (cutoff + timedelta(days=1)).strftime("%Y-%m-%d")
++
++    def fetch(item):
++        raw = fetcher(ts_code, days=int(item.get("days") or 365), period=item["period"], fq=fq, end_date=end_date)
++        bars = [dict(b) for b in raw.get("candles", []) if bar_time(b["time"]) <= cutoff]
++        bars.sort(key=lambda b: bar_time(b["time"]))
++        # Historical daily/weekly aggregates cannot prove an intraday past view.
++        if cutoff.date() < datetime.now(CN_TZ).date() and cutoff.hour < 15:
++            bars = [b for b in bars if not isinstance(b["time"], str) or bar_time(b["time"]).date() < cutoff.date()]
++        times = {str(b["time"]) for b in bars}
++        volumes = [dict(v) for v in raw.get("volumes", []) if str(v["time"]) in times]
++        return {"label": item.get("label", item["period"]), "period": item["period"], "source": raw.get("source"), "candles": bars, "volumes": volumes, "max_bars": int(item.get("max_bars") or 120)}
++
++    with ThreadPoolExecutor(max_workers=min(4, len(periods))) as pool:
++        panels = list(pool.map(fetch, periods))
++    if not any(p["candles"] for p in panels):
++        raise ValueError(f"no chart bars available for {ts_code} at requested cutoff")
++    identity = {"ts_code": ts_code, "name": name, "fq": fq, "periods": periods, "panels": panels, "period_context": context_from_panels(panels)}
++    return {**identity, "as_of": cutoff.isoformat(), "input_digest": digest(identity)}
+--- before/src/analytics/chart_batch.py
++++ after/src/analytics/chart_batch.py
+@@ -0,0 +1,102 @@
++"""Batch chart/vision stages with bounded, independent worker pools."""
++from __future__ import annotations
++
++import asyncio
++from concurrent.futures import ThreadPoolExecutor
++from datetime import datetime
++import hashlib
++from pathlib import Path
++import threading
++import time
++
++from src.analytics.chart_input import prepare_chart_input
++from src.analytics.lwc_chart_renderer import LwcRenderSession, render_identity, render_lwc_multi_period_kline
++from src.agents.chart_vision_agent import analysis_identity, analyze_chart_vision
++
++
++def reusable_analysis(record, prepared, drawing):
++    return bool(record and not record.get("error") and record.get("input_digest") == prepared["input_digest"]
++                and record.get("render_identity") == drawing and record.get("analysis_identity") == analysis_identity()
++                and record.get("summary") and isinstance(record.get("signals"), list))
++
++
++async def run_chart_batch(universe, concurrency=6, *, render_workers=2, cached=None, force=False,
++                          as_of=None, moving_averages=None, macd=False, output_dir=None, periods=None) -> list[dict]:
++    if concurrency < 1 or render_workers < 1:
++        raise ValueError("worker counts must be positive")
++    if not universe:
++        return []
++    cached = cached or {}
++    drawing = render_identity(moving_averages, macd)
++    sessions, lock, local = [], threading.Lock(), threading.local()
++    loop = asyncio.get_running_loop()
++    frozen_as_of = as_of or datetime.now().astimezone().isoformat()
++
++    def prepare(code, name):
++        start = time.monotonic()
++        try:
++            prepared = prepare_chart_input(code, name=name, periods=periods, fq=2, as_of=frozen_as_of)
++            old = cached.get(code, {})
++            same_analysis = not force and reusable_analysis(old, prepared, drawing)
++            path = Path(old.get("chart_path") or "/nonexistent-chart")
++            same_image = (not force and old.get("input_digest") == prepared["input_digest"]
++                          and old.get("render_identity") == drawing and path.is_file()
++                          and old.get("image_sha256") == hashlib.sha256(path.read_bytes()).hexdigest())
++            if same_analysis and same_image:
++                return {"cached_result": {**old, "reused_analysis": True, "requested_as_of": frozen_as_of}}
++            if same_image:
++                rendered = {"path": str(path), "render_ms": 0, "fetch_ms": 0, "render_identity": drawing}
++            else:
++                if not getattr(local, "session", None):
++                    local.session = LwcRenderSession()
++                    with lock:
++                        sessions.append(local.session)
++                rendered = render_lwc_multi_period_kline(code, name=name, prepared=prepared, moving_averages=moving_averages,
++                                                        macd=macd, session=local.session, output_dir=output_dir)
++            rendered["fetch_ms"] = int((time.monotonic() - start) * 1000) - rendered.get("render_ms", 0)
++            if same_analysis:
++                replacement = Path(rendered["path"])
++                return {"cached_result": {**old, "chart_path": str(replacement),
++                        "image_sha256": hashlib.sha256(replacement.read_bytes()).hexdigest(),
++                        "reused_analysis": True, "requested_as_of": frozen_as_of, "render_ms": rendered["render_ms"]}}
++            return {"prepared": prepared, "rendered": rendered, "started": start}
++        except Exception as exc:
++            return {"error": f"{type(exc).__name__}: {exc}", "error_stage": "input_or_render", "ts_code": code, "name": name}
++
++    def interpret(code, name, item):
++        prepared, rendered = item["prepared"], item["rendered"]
++        image = Path(rendered["path"]).read_bytes()
++        metadata = {"ts_code": code, "name": name, "chart_path": rendered["path"],
++                    "input_digest": prepared["input_digest"], "as_of": prepared["as_of"],
++                    "render_identity": drawing, "analysis_identity": analysis_identity(),
++                    "image_sha256": hashlib.sha256(image).hexdigest(), "fetch_ms": rendered["fetch_ms"],
++                    "render_ms": rendered["render_ms"], "lwc_timings": rendered.get("lwc_timings"),
++                    "reused_analysis": False}
++        t0 = time.monotonic()
++        for attempt in range(2):
++            try:
++                result = analyze_chart_vision(image_bytes=image, mime="image/png", ts_code=code, name=name,
++                                              fq=2, period_context=prepared["period_context"])
++                return {**result, **metadata, "error": None, "model_attempts": attempt + 1,
++                        "vision_s": round(time.monotonic() - t0, 3), "elapsed_s": round(time.monotonic() - item["started"], 3)}
++            except Exception as exc:
++                if attempt == 0 and getattr(exc, "status_code", None) in (408, 429, 500, 502, 503, 504):
++                    time.sleep(0.5)
++                    continue
++                return {**metadata, "error": f"{type(exc).__name__}: {exc}", "error_stage": "vision",
++                        "model_attempts": attempt + 1, "elapsed_s": round(time.monotonic() - item["started"], 3)}
++        raise RuntimeError("vision retry loop ended without a result")
++
++    try:
++        with ThreadPoolExecutor(max_workers=render_workers) as drawings, ThreadPoolExecutor(max_workers=concurrency) as models:
++            async def one(code, name) -> dict:
++                item = await loop.run_in_executor(drawings, prepare, code, name)
++                if "cached_result" in item:
++                    return item["cached_result"]
++                if item.get("error"):
++                    return item
++                return await loop.run_in_executor(models, interpret, code, name, item)
++            return await asyncio.gather(*(one(code, name) for code, name in dict(universe).items()))
++    finally:
++        for session in sessions:
++            session.close()
+--- before/tests/pipeline/test_chart_vision_upgrade.py
++++ after/tests/pipeline/test_chart_vision_upgrade.py
+@@ -0,0 +1,228 @@
++"""Isolated chart upgrade contracts: no credentials, live data or API calls."""
++from __future__ import annotations
++import asyncio
++import copy
++from datetime import datetime, timedelta
++import importlib.util
++import json
++import os
++from pathlib import Path
++import shutil
++import sys
++import threading
++import time
++from types import ModuleType, SimpleNamespace
++
++import pytest
++
++ROOT = Path(__file__).resolve().parents[2]
++FILES = ['src/analytics/chart_input.py', 'src/analytics/chart_batch.py', 'src/analytics/lwc_chart_renderer.py', 'src/agents/chart_vision_agent.py', 'src/research/candidate_pool.py']
++
++
++@pytest.fixture
++def app(tmp_path, monkeypatch):
++    assert tmp_path.resolve().is_relative_to(Path.home() / '.hermes/cache/scratch')
++    root = tmp_path / 'app'
++    for rel in FILES:
++        dst = root / rel
++        dst.parent.mkdir(parents=True, exist_ok=True)
++        shutil.copyfile(ROOT / rel, dst)
++    saved = {k: v for k, v in sys.modules.items() if k == 'src' or k.startswith('src.')}
++    for k in saved:
++        monkeypatch.delitem(sys.modules, k)
++    for name in ['src', 'src.analytics', 'src.agents', 'src.research']:
++        m = ModuleType(name)
++        m.__path__ = [str(root / name.replace('.', '/'))]
++        monkeypatch.setitem(sys.modules, name, m)
++    loaded = {}
++    for short, rel in [('inputs', FILES[0]), ('vision', FILES[3]), ('renderer', FILES[2]), ('batch', FILES[1]), ('pool', FILES[4])]:
++        name = rel[:-3].replace('/', '.')
++        spec = importlib.util.spec_from_file_location(name, root / rel)
++        assert spec is not None and spec.loader is not None
++        mod = importlib.util.module_from_spec(spec)
++        monkeypatch.setitem(sys.modules, name, mod)
++        spec.loader.exec_module(mod)
++        loaded[short] = mod
++    monkeypatch.delenv('CHART_VISION_MODEL', raising=False)
++    yield SimpleNamespace(root=root, **loaded)
++
++
++def bars():
++    first = datetime(2026, 7, 1)
++    return [{'time': (first + timedelta(days=i)).strftime('%Y-%m-%d'), 'open': 10+i/10, 'high': 11+i/10, 'low': 9+i/10, 'close': 10.5+i/10} for i in range(100)]
++
++
++def test_shared_input_fetches_each_period_once_and_clips_future(app):
++    calls = []
++    def fetch(code, **kw):
++        calls.append(kw)
++        data = bars() + [{'time': '2026-11-01', 'open': 99, 'high': 999, 'low': 98, 'close': 99}]
++        return {'candles': data, 'volumes': [{'time': b['time'], 'value': 100} for b in data], 'source': 'synthetic'}
++    p = app.inputs.prepare_chart_input('000001.SZ', as_of='20261029', fetcher=fetch)
++    assert len(calls) == len(app.inputs.DEFAULT_PERIODS)
++    assert all(c['end_date'] == '2026-10-30' for c in calls)
++    assert all(len(x['candles']) == 100 for x in p['panels'])
++    assert all(c['close'] == panel['candles'][-1]['close'] for c, panel in zip(p['period_context'], p['panels']))
++    assert all(c['high20'] < 999 for c in p['period_context'])
++
++
++def test_model_is_chart_specific_and_frozen_context_prevents_refetch(app, monkeypatch):
++    monkeypatch.setenv('VISION_MODEL', 'seed-old-legacy-setting')
++    assert app.vision._vision_model() == 'deepseek-v4.1-flash-1017'
++    def deny(*args, **kwargs):
++        pytest.fail('must not refetch the image input for its model summary')
++    monkeypatch.setattr(app.vision, 'build_multi_period_context', deny)
++    requests = []
++    def complete(**kwargs):
++        requests.append(kwargs)
++        return SimpleNamespace(model='deepseek-flash', choices=[SimpleNamespace(message=SimpleNamespace(content=json.dumps({'summary':'offline fixture', 'signals':[{'type':'观望','price_hint':None}]})))])
++    monkeypatch.setattr(app.vision, '_complete', complete)
++    context = [{'period':'1d','close':12.34}]
++    result = app.vision.analyze_chart_vision(b'fixture-image', 'image/png', '000001.SZ', period_context=context)
++    assert result['period_context'] is context
++    assert result['model'] == 'deepseek-v4.1-flash-1017' and result['response_model'] == 'deepseek-flash'
++    assert requests[0]['response_format'] == {'type':'json_object'}
++    assert requests[0]['messages'][1]['content'][1]['image_url']['url'].startswith('data:image/png;base64,')
++    assert result['price_hint_role'] == 'technical_reference_not_execution_authorization'
++
++
++def test_chart_universe_is_uncapped_union_without_changing_trade_permission(app):
++    date = '20261029'
++    research = {'trade_date':date, 'status':'partial', 'no_trade':True,
++                'main_lines':[{'leaders':[{'ts_code':f'{i:06d}.SZ','name':'synthetic'} for i in range(1,41)]}],
++                'secondary_lines':[{'leaders':[{'ts_code':f'{i:06d}.SZ'} for i in range(35,61)]}]}
++    plan = {'trade_date':date, 'no_trade':True, 'execution_pool':[], 'watch_pool':[{'ts_code':f'{i:06d}.SZ'} for i in range(50,81)]}
++    rp = app.root / f'data/research/{date}/R2_main_sectors.json'
++    pp = app.root / f'data/plans/{date}/watchlist_plan.json'
++    for p, value in [(rp,research),(pp,plan)]:
++        p.parent.mkdir(parents=True, exist_ok=True)
++        p.write_text(json.dumps(value))
++    before = (rp.read_bytes(), pp.read_bytes())
++    pool, metadata = app.pool.chart_universe(date)
++    assert len(pool) == 80 and len(dict(pool)) == 80
++    assert 'plan.watch_pool' in metadata['provenance']['000060.SZ']
++    assert (rp.read_bytes(), pp.read_bytes()) == before
++    assert plan['no_trade'] and not plan['execution_pool']
++    plan['trade_date'] = '20261028'
++    pp.write_text(json.dumps(plan))
++    assert len(app.pool.chart_universe(date)[0]) == 60
++
++
++@pytest.fixture
++def engine(app, tmp_path, monkeypatch):
++    state = SimpleNamespace(prepared=0, rendered=0, modeled=0, sessions=[], active_render=0, active_model=0, peak_render=0, peak_model=0, changed=set(), failures=set(), transient=set(), attempts={})
++    lock = threading.Lock()
++    class Session:
++        def __init__(self):
++            self.closed = False
++            state.sessions.append(self)
++        def close(self):
++            self.closed = True
++    def prepare(code, **kwargs):
++        with lock: state.prepared += 1
++        if code in state.failures:
++            raise ValueError('synthetic input failure')
++        return {'input_digest':code + ('changed' if code in state.changed else ''), 'as_of':'2026-10-29T15:00:00+08:00', 'period_context':[{'period':'1d','close':12.3}], 'panels':[]}
++    def render(code, **kwargs):
++        with lock:
++            state.rendered += 1
++            state.active_render += 1
++            state.peak_render = max(state.peak_render, state.active_render)
++        time.sleep(.004)
++        p = tmp_path / (code + '.png')
++        p.write_bytes(b'explicit-offline-render-fixture')
++        with lock: state.active_render -= 1
++        return {'path':str(p), 'render_ms':4, 'fetch_ms':1}
++    def analyze(**kwargs):
++        code = kwargs['ts_code']
++        with lock:
++            state.modeled += 1
++            state.attempts[code] = state.attempts.get(code,0) + 1
++            state.active_model += 1
++            state.peak_model = max(state.peak_model, state.active_model)
++        time.sleep(.008)
++        with lock: state.active_model -= 1
++        if code in state.transient and state.attempts[code] == 1:
++            exc = type('Synthetic503', (RuntimeError,), {'status_code':503})('synthetic transient 503')
++            raise exc
++        return {'summary':'offline fixture', 'signals':[{'type':'观望','price_hint':None}], 'model':app.vision._vision_model()}
++    monkeypatch.setattr(app.batch, 'LwcRenderSession', Session)
++    monkeypatch.setattr(app.batch, 'prepare_chart_input', prepare)
++    monkeypatch.setattr(app.batch, 'render_lwc_multi_period_kline', render)
++    monkeypatch.setattr(app.batch, 'analyze_chart_vision', analyze)
++    return state
++
++
++def test_fifty_symbols_separate_pools_and_verified_input_cache(app, engine):
++    universe = [(f'{i:06d}.SZ','synthetic') for i in range(1,51)]
++    first = asyncio.run(app.batch.run_chart_batch(universe,6,render_workers=2))
++    assert len(first) == 50 and not any(r.get('error') for r in first)
++    assert engine.rendered == engine.modeled == 50
++    assert 1 < engine.peak_render <= 2 and 1 < engine.peak_model <= 6
++    assert len(engine.sessions) <= 2 and all(x.closed for x in engine.sessions)
++    cached = {x['ts_code']:x for x in first}
++    second = asyncio.run(app.batch.run_chart_batch(universe,6,render_workers=2,cached=cached))
++    assert all(x['reused_analysis'] for x in second)
++    assert engine.rendered == engine.modeled == 50
++    assert engine.prepared == 100  # Input validation is not repeated image/model work.
++    engine.changed.add('000003.SZ')
++    third = asyncio.run(app.batch.run_chart_batch(universe,6,render_workers=2,cached=cached))
++    assert len(third) == 50 and engine.rendered == engine.modeled == 51
++    assert not third[2]['reused_analysis']
++
++
++@pytest.mark.parametrize('change', ['model','prompt','render'])
++def test_cache_segregates_model_prompt_and_renderer(app, engine, monkeypatch, change):
++    universe = [('000001.SZ','synthetic')]
++    first = asyncio.run(app.batch.run_chart_batch(universe))
++    kwargs = {}
++    if change == 'model': monkeypatch.setenv('CHART_VISION_MODEL','synthetic-other-model')
++    elif change == 'prompt': monkeypatch.setattr(app.vision,'VISION_PROMPT',app.vision.VISION_PROMPT+'\nnew fixture prompt')
++    else: kwargs['macd'] = True
++    second = asyncio.run(app.batch.run_chart_batch(universe,cached={'000001.SZ':first[0]},**kwargs))
++    assert engine.modeled == 2 and not second[0]['reused_analysis']
++    assert engine.rendered == (2 if change == 'render' else 1)
++
++
++def test_failed_object_is_not_replaced_and_transient_only_retries_model(app, engine):
++    engine.failures.add('000001.SZ')
++    engine.transient.add('000002.SZ')
++    rows = asyncio.run(app.batch.run_chart_batch([('000001.SZ','one'),('000002.SZ','two')]))
++    assert [r['ts_code'] for r in rows] == ['000001.SZ','000002.SZ']
++    assert rows[0]['error_stage'] == 'input_or_render'
++    assert rows[1]['error'] is None and rows[1]['model_attempts'] == 2
++    assert engine.rendered == 1 and engine.modeled == 2
++
++
++def test_empty_batch_never_touches_market_or_model(app, engine):
++    assert asyncio.run(app.batch.run_chart_batch([])) == []
++    assert engine.prepared == engine.rendered == engine.modeled == 0
++
++
++def test_invalid_worker_counts_are_explicit(app):
++    with pytest.raises(ValueError): asyncio.run(app.batch.run_chart_batch([('000001.SZ','')],0))
++
++
++def test_missing_png_is_regenerated_without_repeating_valid_model_analysis(app, engine):
++    universe = [('000001.SZ','synthetic')]
++    first = asyncio.run(app.batch.run_chart_batch(universe))[0]
++    Path(first['chart_path']).unlink()
++    second = asyncio.run(app.batch.run_chart_batch(universe,cached={'000001.SZ':first}))[0]
++    assert Path(second['chart_path']).is_file()
++    assert engine.rendered == 2 and engine.modeled == 1
++    assert second['reused_analysis']
++
++
++def test_previous_plan_supplies_membership_not_research_or_trade_permission(app):
++    path = app.root / 'data/plans/20261028/watchlist_plan.json'
++    path.parent.mkdir(parents=True)
++    payload = {'trade_date':'20261028','no_trade':True,'execution_pool':[], 'watch_pool':[{'ts_code':'000002.SZ','name':'prior watch'}]}
++    path.write_text(json.dumps(payload))
++    before = path.read_bytes()
++    future = app.root / 'data/plans/20261030/watchlist_plan.json'
++    future.parent.mkdir(parents=True)
++    future.write_text(json.dumps({'trade_date':'20261030','watch_pool':[{'ts_code':'000003.SZ'}]}))
++    universe, meta = app.pool.chart_universe('20261029')
++    assert universe == [('000002.SZ','prior watch')]
++    assert meta['plan_date'] == '20261028' and meta['prior_plan_used_for_membership_only']
++    assert path.read_bytes() == before and payload['no_trade'] and not payload['execution_pool']

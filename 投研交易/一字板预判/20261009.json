@@ -1,0 +1,56 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261009",
+  "next_day": "20261012",
+  "generated_at": "2026-10-17T18:55:35+08:00",
+  "n_total": 69,
+  "n_candidates": 3,
+  "candidates": [
+    {
+      "ts_code": "600825.SH",
+      "name": "新华传媒",
+      "industry": "出版",
+      "limit_times": 9,
+      "fd_amount_yi": 14.21,
+      "pct_chg": 10.01,
+      "prob_yizi": 31.0,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=9 (一字率20%)",
+        "封单=14.2亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600241.SH",
+      "name": "时代万恒",
+      "industry": "电池",
+      "limit_times": 5,
+      "fd_amount_yi": 2.29,
+      "pct_chg": 10.01,
+      "prob_yizi": 27.8,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=2.3亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "001336.SZ",
+      "name": "楚环科技",
+      "industry": "环保设备",
+      "limit_times": 2,
+      "fd_amount_yi": 3.36,
+      "pct_chg": 10.02,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=3.4亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停69只，筛出 3 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

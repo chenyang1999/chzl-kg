@@ -1,0 +1,14 @@
+[
+  "tests/test_v1_independent_contract_review_20261024.py::test_genuine_old_writer_orders_resume_or_complete_without_rewrite[100000]",
+  "tests/test_v1_independent_contract_review_20261024.py::test_genuine_old_writer_orders_resume_or_complete_without_rewrite[1000]",
+  "tests/test_v1_independent_contract_review_20261024.py::test_genuine_old_writer_orders_resume_or_complete_without_rewrite[50]",
+  "tests/test_v1_independent_contract_review_20261024.py::test_genuine_old_order_never_reserves_stock_from_priority_stop[100000]",
+  "tests/test_v1_independent_contract_review_20261024.py::test_genuine_old_order_never_reserves_stock_from_priority_stop[1000]",
+  "tests/test_v1_independent_contract_review_20261024.py::test_genuine_old_order_never_reserves_stock_from_priority_stop[50]",
+  "tests/test_v1_independent_contract_review_20261024.py::test_genuine_old_fill_without_rule_proof_fails_closed_but_independent_stop_works",
+  "tests/test_v1_independent_contract_review_20261024.py::test_completed_stage_identity_survives_description_priority_and_pool_edits",
+  "tests/test_v1_independent_contract_review_20261024.py::test_adding_stock_does_not_reset_consumed_stage_or_use_today_t1_lots",
+  "tests/test_v1_independent_contract_review_20261024.py::test_atomic_takeover_failure_restores_every_table_including_liquidity",
+  "tests/test_v1_independent_contract_review_20261024.py::test_low_boundary_active_flag_is_not_downgraded_by_absent_file",
+  "tests/test_v1_independent_contract_review_20261024.py::test_low_boundary_sell_uses_saved_rule_not_buy_readiness_or_kill_path"
+]

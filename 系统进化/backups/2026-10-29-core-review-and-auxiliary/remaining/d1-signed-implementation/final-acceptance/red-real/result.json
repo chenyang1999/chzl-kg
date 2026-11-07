@@ -1,0 +1,224 @@
+{
+  "exit_code": 1,
+  "cases": [
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_old_six_and_trusted_local_r6_actually_reach_d1",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[none]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[mtime]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[ready_summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[unbound_original]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[wrong_owner]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[forged_revision]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[R4_drift]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[receipt_drift]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[env_run]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[exit]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[empty]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[all_pass]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[budget]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[missing_budget]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[user_ban]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[pool]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[exit_rule]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[entry_rule]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[consent]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[hard_reject]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[drift]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[wrong_binding]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_pending_no_llm_never_uses_python_or_model",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_original_event_branch_ast_and_dispatch_unchanged",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    }
+  ],
+  "source_unchanged": true,
+  "index_unchanged": true,
+  "guard_violations": [],
+  "guard_pids": [
+    95109,
+    95113,
+    95115,
+    95116,
+    95126,
+    95137,
+    95159,
+    95167,
+    95184,
+    95191,
+    95194,
+    95195,
+    95197,
+    95198,
+    95199,
+    95200,
+    95205,
+    95212,
+    95213
+  ],
+  "native_child_pids": [
+    95113,
+    95115,
+    95116,
+    95126,
+    95137,
+    95159,
+    95167,
+    95184,
+    95191,
+    95194,
+    95195,
+    95197,
+    95198,
+    95199,
+    95200,
+    95205,
+    95212,
+    95213
+  ],
+  "unguarded_native_children": []
+}

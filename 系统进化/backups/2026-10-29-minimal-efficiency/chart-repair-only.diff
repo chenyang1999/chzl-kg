@@ -1,0 +1,476 @@
+--- a/scripts/fetch/run_chart_vision_snapshot.py
++++ b/scripts/fetch/run_chart_vision_snapshot.py
+@@ -10,7 +10,7 @@
+ 
+ 调用方式:
+     .venv/bin/python scripts/fetch/run_chart_vision_snapshot.py --universe <path>
+-    .venv/bin/python scripts/fetch/run_chart_vision_snapshot.py                # 用默认票池
++    .venv/bin/python scripts/fetch/run_chart_vision_snapshot.py                # 当日 R2 候选；无候选不调用
+ 
+ 产出:
+     data/raw/YYYYMMDD/chart_vision_snapshot.json         (当日归档)
+@@ -34,38 +34,11 @@
+ ROOT = Path(__file__).resolve().parents[2]
+ sys.path.insert(0, str(ROOT))
+ 
+-# 加载 .env
+-try:
+-    from dotenv import load_dotenv
+-    load_dotenv(ROOT / ".env")
+-except ImportError:
+-    pass
+-
+-# 兜底票池(仅在 R2 不可用时):历史算力/存储常客
+-# ⚠️ 2026-09-30 起票池改为从当日 R2 龙头动态推导(见 candidate_pool.py)。
+-#    此前这里是唯一来源,导致快照算的全是固定旧票池 —— 实测与 R5 实际候选
+-#    仅 1/12 重合,每天白烧 24 次 vision 调用。DEFAULT_UNIVERSE 降级为兜底。
+-DEFAULT_UNIVERSE = [
+-    # R2 主线 12 只
+-    ("000977.SZ", "浪潮信息"),
+-    ("000938.SZ", "紫光股份"),
+-    ("300017.SZ", "网宿科技"),
+-    ("002396.SZ", "星网锐捷"),
+-    ("001339.SZ", "智微智能"),
+-    ("301308.SZ", "江波龙"),
+-    ("300223.SZ", "北京君正"),
+-    ("688766.SH", "普冉股份"),
+-    ("603986.SH", "兆易创新"),
+-    ("603893.SH", "瑞芯微"),
+-    ("688018.SH", "乐鑫科技"),
+-    ("688521.SH", "芯原股份"),
+-]
+-
+ CONCURRENCY = 6  # LLM 并发上限(apiyi 侧不打限流)
+ 
+ 
+ def _pool_from_r2(date: str) -> list[tuple[str, str]]:
+-    """从当日 R2 龙头推导票池;失败则回退 DEFAULT_UNIVERSE。"""
++    """只从当日 R2 已声明候选推导；不可用时不补票。"""
+     try:
+         from src.research.candidate_pool import derive_from_file
+ 
+@@ -76,24 +49,25 @@
+                 flush=True,
+             )
+             return pool
+-        print(f"[pool] R2 无候选({meta.get('reason') or meta.get('note')}) → 回退默认票池", file=sys.stderr)
+-    except Exception as exc:  # noqa: BLE001 — 兜底必须宽
+-        print(f"[pool] R2 推导失败 {type(exc).__name__}: {exc} → 回退默认票池", file=sys.stderr)
+-    return DEFAULT_UNIVERSE
++        print(f"[pool] R2 无候选({meta.get('reason') or meta.get('note')}) → 跳过", file=sys.stderr)
++    except Exception as exc:  # noqa: BLE001 — 可选图像预渲染不阻塞研究
++        print(f"[pool] R2 推导失败 {type(exc).__name__}: {exc} → 跳过", file=sys.stderr)
++    return []
+ 
+ 
+ 
+ def _load_universe(path: Path | None) -> list[tuple[str, str]]:
+     if not path:
+-        return DEFAULT_UNIVERSE
++        return []
+     if not path.exists():
+-        print(f"[warn] universe file not found: {path} → 用默认票池", file=sys.stderr)
+-        return DEFAULT_UNIVERSE
++        raise FileNotFoundError(f"universe file not found: {path}")
+     data = json.loads(path.read_text(encoding="utf-8"))
+     if isinstance(data, list) and data and isinstance(data[0], dict):
+-        return [(item["ts_code"], item.get("name", "")) for item in data]
++        return list(dict((item["ts_code"], item.get("name", "")) for item in data).items())
+     if isinstance(data, list):
+-        return [(item, "") for item in data]
++        if not all(isinstance(item, str) and item for item in data):
++            raise ValueError("universe entries must be nonempty ts_code strings")
++        return list(dict.fromkeys((item, "") for item in data))
+     raise ValueError(f"universe format not recognized: {type(data)}")
+ 
+ 
+@@ -156,32 +130,40 @@
+     parser.add_argument(
+         "--force",
+         action="store_true",
+-        help="已有快照也重算(默认:当日快照已存在且覆盖充分则静默跳过,省 vision 调用)",
++        help="重算选中票池；默认仅补当日有效快照未覆盖的票",
+     )
+     args = parser.parse_args()
+ 
+-    if not os.environ.get("OPENAI_API_KEY"):
+-        print("[fatal] OPENAI_API_KEY 未设置 · 检查 .env", file=sys.stderr)
++    date = args.date or datetime.now().strftime("%Y%m%d")
++    try:
++        universe = _load_universe(args.universe) if args.universe else _pool_from_r2(date)
++    except (OSError, ValueError, KeyError, TypeError) as exc:
++        print(f"[fatal] 无效票池: {exc}", file=sys.stderr)
+         return 2
+-
+-    date = args.date or datetime.now().strftime("%Y%m%d")
+-    # 票池:显式 --universe > 当日 R2 龙头 > DEFAULT_UNIVERSE
+-    universe = _load_universe(args.universe) if args.universe else _pool_from_r2(date)
+-
+-    # ── 省 vision 调用:当日快照已存在且覆盖本票池 ≥50% 就跳过 ──────────────
+-    # 2026-09-30 新增。动机:15:50 档此前无条件重算,而盘前 R5 早已在 08:1x 完成,
+-    # 盘后那次无人消费;且 R5 直调 MCP 不读快照 = 纯烧。现在盘后再触发会静默跳过。
++    if not universe:
++        print(f"[chart_vision ⏭️] {date} 零候选 · 零模型调用", flush=True)
++        return 0
++
++    from src.research.candidate_pool import load_snapshot
++
++    cached, _ = load_snapshot(date)
++    selected_count = len(universe)
+     if not args.force:
+-        from src.research.candidate_pool import coverage
+-
+-        cov = coverage(date, universe)
+-        if cov["same_day"] and cov["coverage"] >= 0.5:
+-            print(
+-                f"[chart_vision ⏭️] {date} 快照已覆盖 {len(cov['covered'])}/{len(universe)} "
+-                f"({cov['coverage']:.0%}) · generated_at={cov['snapshot_generated_at']} · 跳过(加 --force 可强制重算)",
+-                flush=True,
+-            )
+-            return 0
++        universe = [(c, n) for c, n in universe if c not in cached]
++    print(f"[pool] selected={selected_count} · pending={len(universe)} · reused={selected_count - len(universe)}", flush=True)
++    if not universe:
++        print(f"[chart_vision ⏭️] {date} 全部复用当日有效快照 · 零模型调用", flush=True)
++        return 0
++
++    # 只有确需外部计算时才加载凭据；空池／全缓存不触碰 .env。
++    try:
++        from dotenv import load_dotenv
++        load_dotenv(ROOT / ".env")
++    except ImportError:
++        pass
++    if not (os.environ.get("VISION_API_KEY") or os.environ.get("OPENAI_API_KEY")):
++        print("[fatal] VISION_API_KEY / OPENAI_API_KEY 未设置", file=sys.stderr)
++        return 2
+ 
+     print(f"[chart_vision] date={date} · N={len(universe)} · concurrency={args.concurrency}", flush=True)
+ 
+@@ -197,14 +179,18 @@
+     #   把之前算好的票全丢掉（实测把 13 票快照打成 1 票）。改为按 ts_code 合并：
+     #   本次结果覆盖同码旧值，其余票保留。只对**当日**快照合并，避免跨日串味。
+     results_map = {r["ts_code"]: r for r in results}
++    for code, rec in cached.items():
++        results_map.setdefault(code, rec)
+     raw_dir = ROOT / "data" / "raw" / date
+     raw_path = raw_dir / "chart_vision_snapshot.json"
+     merged_from: str | None = None
+     if raw_path.exists():
+         try:
+             prior = json.loads(raw_path.read_text(encoding="utf-8"))
+-            if prior.get("date") == date:
+-                for code, rec in (prior.get("results") or {}).items():
++            if isinstance(prior, dict) and prior.get("date") == date and isinstance(prior.get("results"), dict):
++                for code, rec in prior["results"].items():
++                    if not isinstance(rec, dict):
++                        continue
+                     results_map.setdefault(code, rec)  # 本次没重算的票保留旧结果
+                 merged_from = prior.get("generated_at")
+         except (json.JSONDecodeError, OSError):
+--- a/src/research/candidate_pool.py
++++ b/src/research/candidate_pool.py
+@@ -112,7 +112,10 @@
+     except (json.JSONDecodeError, OSError) as exc:
+         meta["reason"] = f"R2 读取失败 {type(exc).__name__}"
+         return [], meta
+-    if r2.get("status") != "complete":
++    if not isinstance(r2, dict):
++        meta["reason"] = "R2 payload 必须是对象"
++        return [], meta
++    if r2.get("status") not in {"complete", "partial"}:
+         meta["reason"] = f"R2 status={r2.get('status')}"
+         return [], meta
+     pool, m = derive(r2)
+@@ -122,7 +125,9 @@
+ 
+ 
+ def load_snapshot(date: str) -> tuple[dict[str, dict], dict]:
+-    """读快照,返回 ({ts_code: 票画像}, meta)。优先当日归档,回退 latest 指针。"""
++    """合并有效同日记录；归档优先，latest 只补缺，不复用跨日或坏记录。"""
++    ok: dict[str, dict] = {}
++    meta: dict = {"path": None, "reason": "无有效同日快照"}
+     for rel in (f"data/raw/{date}/chart_vision_snapshot.json", "data/cache/chart_vision_latest.json"):
+         p = ROOT / rel
+         if not p.exists():
+@@ -131,16 +136,18 @@
+             payload = json.loads(p.read_text(encoding="utf-8"))
+         except (json.JSONDecodeError, OSError):
+             continue
+-        results = payload.get("results") or {}
+-        ok = {k: v for k, v in results.items() if not v.get("error")}
+-        return ok, {
+-            "path": rel,
+-            "generated_at": payload.get("generated_at"),
+-            "snapshot_date": payload.get("date"),
+-            "ok": len(ok),
+-            "n": len(results),
+-        }
+-    return {}, {"path": None, "reason": "快照不存在"}
++        if not isinstance(payload, dict) or payload.get("date") != date:
++            continue
++        results = payload.get("results")
++        if not isinstance(results, dict):
++            continue
++        if meta["path"] is None:
++            meta = {"path": rel, "generated_at": payload.get("generated_at"), "snapshot_date": date}
++        for code, rec in results.items():
++            if isinstance(rec, dict) and rec and not rec.get("error") and rec.get("ts_code", code) == code:
++                ok.setdefault(code, rec)
++    meta["ok"] = len(ok)
++    return ok, meta
+ 
+ 
+ def coverage(date: str, needed: list[tuple[str, str]]) -> dict:
+--- /dev/null
++++ b/tests/pipeline/test_chart_vision_snapshot_minimal.py
+@@ -0,0 +1,250 @@
++"""Bounded offline main/CLI regression; no credentials or production data.
++
++Run only this file with plugins/conftest disabled and scratch basetemp.
++External renderer/vision/dotenv are the only effect boundaries replaced.
++"""
++from __future__ import annotations
++
++import importlib.util
++import json
++import os
++from pathlib import Path
++import sys
++import types
++
++APP = Path(__file__).resolve().parents[2]
++SCRATCH = Path('/Users/chenyang/.hermes/cache/scratch')
++VIOLATIONS = []
++
++
++def _audit(event, args):
++    if event in {'socket.connect', 'socket.bind', 'socket.getaddrinfo', 'subprocess.Popen', 'os.system'}:
++        VIOLATIONS.append(event)
++        raise RuntimeError('offline boundary: ' + event)
++    if event == 'open' and isinstance(args[0], (str, bytes, os.PathLike)):
++        p = Path(os.fsdecode(args[0])).absolute()
++        forbidden = (p.name == '.env' or p.name.startswith('.env.')
++                     or p.is_relative_to(APP / 'data') or p.is_relative_to(APP / 'chzl_kg')
++                     or any(s in p.parts for s in ('accounts', '.ssh', '.aws')))
++        mode, flags = args[1:3]
++        writing = (isinstance(mode, str) and any(c in mode for c in 'wax+')) or (isinstance(flags, int) and flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT))
++        if forbidden or (writing and not p.is_relative_to(SCRATCH) and str(p) != '/dev/null'):
++            VIOLATIONS.append(event + ':' + str(p))
++            raise RuntimeError('offline file boundary: ' + str(p))
++
++
++# Installed before importing any application module (collection, not fixture).
++sys.addaudithook(_audit)
++settings = types.ModuleType('src.settings')
++settings.__file__ = '<offline-settings>'
++sys.modules['src.settings'] = settings
++DOTENV_CALLS = []
++dotenv = types.ModuleType('dotenv')
++dotenv.__file__ = '<offline-dotenv>'
++dotenv.load_dotenv = lambda *a, **k: DOTENV_CALLS.append(str(a[0]))
++sys.modules['dotenv'] = dotenv
++sys.path.insert(0, str(APP))
++# research.__init__ eagerly imports the unrelated full orchestrator. Keep the
++# real candidate_pool and _collect_leaders modules, bypass package bootstrap only.
++research = types.ModuleType('src.research')
++research.__path__ = [str(APP / 'src/research')]
++research.__file__ = str(APP / 'src/research/__init__.py')
++sys.modules['src.research'] = research
++from src.research import candidate_pool as cp
++spec = importlib.util.spec_from_file_location('chart_snapshot_under_test', APP / 'scripts/fetch/run_chart_vision_snapshot.py')
++chart = importlib.util.module_from_spec(spec)
++spec.loader.exec_module(chart)
++IMPORT_DOTENV_CALLS = list(DOTENV_CALLS)
++
++import pytest
++
++DATE = '20990105'
++A, B, C = '000001.SZ', '000002.SZ', '600001.SH'
++
++
++def _write(path, value):
++    path.parent.mkdir(parents=True, exist_ok=True)
++    path.write_text(json.dumps(value), encoding='utf-8')
++
++
++def _record(code, tag='cached'):
++    return {'ts_code': code, 'summary': tag, 'signals': [], 'error': None}
++
++
++@pytest.fixture
++def env(tmp_path, monkeypatch):
++    assert tmp_path.is_relative_to(SCRATCH)
++    monkeypatch.setattr(chart, 'ROOT', tmp_path)
++    monkeypatch.setattr(cp, 'ROOT', tmp_path)
++    for key in ('OPENAI_API_KEY', 'VISION_API_KEY', 'TUSHARE_TOKEN'):
++        monkeypatch.delenv(key, raising=False)
++    DOTENV_CALLS.clear()
++    calls = {'render': [], 'vision': []}
++    renderer = types.ModuleType('src.analytics.lwc_chart_renderer')
++    vision = types.ModuleType('src.agents.chart_vision_agent')
++    renderer.__file__ = vision.__file__ = '<offline-external-boundary>'
++
++    def render(code, **kwargs):
++        calls['render'].append(code)
++        path = tmp_path / (code + '.png')
++        path.write_bytes(b'synthetic image boundary, not a service result')
++        return {'path': str(path), 'fetch_ms': 0, 'render_ms': 0}
++
++    def analyze(**kwargs):
++        code = kwargs['ts_code']
++        calls['vision'].append(code)
++        return _record(code, 'synthetic boundary response')
++
++    renderer.render_lwc_multi_period_kline = render
++    vision.analyze_chart_vision = analyze
++    monkeypatch.setitem(sys.modules, renderer.__name__, renderer)
++    monkeypatch.setitem(sys.modules, vision.__name__, vision)
++
++    def run(*argv, key=False):
++        if key:
++            monkeypatch.setenv('VISION_API_KEY', 'synthetic-offline-only')
++        monkeypatch.setattr(sys, 'argv', ['run_chart_vision_snapshot.py', '--date', DATE, '--concurrency', '1', *map(str, argv)])
++        return chart.main()
++
++    yield tmp_path, calls, run
++    assert not VIOLATIONS
++
++
++def _r2(root, status='complete', codes=(A, B)):
++    _write(root / 'data/research' / DATE / 'R2_main_sectors.json', {
++        'status': status, 'main_lines': [{'name': 'synthetic', 'leaders': [{'ts_code': c, 'name': c} for c in codes]}]})
++
++
++def _snapshot(root, records, *, latest=False, date=DATE):
++    path = root / ('data/cache/chart_vision_latest.json' if latest else f'data/raw/{DATE}/chart_vision_snapshot.json')
++    _write(path, {'date': date, 'generated_at': 'synthetic', 'results': records})
++    return path
++
++
++@pytest.mark.parametrize('case', ['missing', 'partial_empty', 'complete_empty', 'malformed', 'invalid_json', 'failed', 'explicit_empty', 'force_empty'])
++def test_main_zero_candidates_zero_external_calls(env, case, capsys):
++    root, calls, run = env
++    args = []
++    if case.endswith('_empty') and case.split('_')[0] in ('partial', 'complete'):
++        _r2(root, case.split('_')[0], ())
++    elif case == 'malformed':
++        _write(root / 'data/research' / DATE / 'R2_main_sectors.json', [])
++    elif case == 'invalid_json':
++        p = root / 'data/research' / DATE / 'R2_main_sectors.json'
++        p.parent.mkdir(parents=True)
++        p.write_text('{')
++    elif case == 'failed':
++        _r2(root, 'failed')
++    elif case in ('explicit_empty', 'force_empty'):
++        _r2(root)
++        p = root / 'universe.json'
++        _write(p, [])
++        args = ['--universe', p] + (['--force'] if case == 'force_empty' else [])
++    assert run(*args) == 0
++    assert '零候选' in capsys.readouterr().out
++    assert calls == {'render': [], 'vision': []}
++    assert not DOTENV_CALLS
++    assert not (root / 'data/raw').exists()
++    assert not IMPORT_DOTENV_CALLS
++
++
++@pytest.mark.parametrize('status', ['complete', 'partial'])
++def test_main_real_r2_candidates_no_padding(env, status):
++    root, calls, run = env
++    _r2(root, status)
++    assert run(key=True) == 0
++    assert calls == {'render': [A, B], 'vision': [A, B]}
++    out = json.loads((root / f'data/raw/{DATE}/chart_vision_snapshot.json').read_text())
++    assert set(out['results']) == {A, B}
++    assert out['run']['requested'] == 2
++
++
++@pytest.mark.parametrize('latest', [False, True])
++def test_main_all_cached_skips_credentials_and_models(env, latest, capsys):
++    root, calls, run = env
++    _r2(root, 'partial')
++    path = _snapshot(root, {A: _record(A), B: _record(B)}, latest=latest)
++    before = path.read_bytes()
++    assert run() == 0
++    assert 'pending=0' in capsys.readouterr().out
++    assert path.read_bytes() == before
++    assert not calls['vision'] and not calls['render'] and not DOTENV_CALLS
++
++
++@pytest.mark.parametrize('latest', [False, True])
++def test_main_only_miss_even_at_half_coverage_and_preserves_cache(env, latest):
++    root, calls, run = env
++    _r2(root)
++    old = _record(A)
++    _snapshot(root, {A: old, C: _record(C)}, latest=latest)
++    assert run(key=True) == 0
++    assert calls == {'render': [B], 'vision': [B]}
++    out = json.loads((root / f'data/raw/{DATE}/chart_vision_snapshot.json').read_text())
++    assert out['results'][A] == old
++    assert set(out['results']) == {A, B, C}
++    assert out['run']['requested'] == 1
++
++
++@pytest.mark.parametrize('bad', [None, {}, [], 'bad', {'error': 'failed'}, {'ts_code': C, 'summary': 'wrong identity'}])
++def test_main_invalid_record_is_miss_not_cache(env, bad):
++    root, calls, run = env
++    _r2(root)
++    _snapshot(root, {A: _record(A), B: bad})
++    assert run(key=True) == 0
++    assert calls['vision'] == [B]
++
++
++@pytest.mark.parametrize('bad', [None, [], {'date': DATE, 'results': []}, {'date': '20990104', 'results': {A: _record(A), B: _record(B)}}])
++def test_main_bad_or_cross_day_snapshot_not_reused(env, bad):
++    root, calls, run = env
++    _r2(root)
++    _write(root / f'data/raw/{DATE}/chart_vision_snapshot.json', bad)
++    assert run(key=True) == 0
++    assert calls['vision'] == [A, B]
++
++
++def test_main_raw_and_latest_same_day_union(env):
++    root, calls, run = env
++    _r2(root)
++    _snapshot(root, {A: _record(A)})
++    _snapshot(root, {B: _record(B)}, latest=True)
++    assert run() == 0
++    assert not calls['vision'] and not DOTENV_CALLS
++    assert cp.coverage(DATE, [(A, ''), (B, '')])['missing'] == []
++
++
++@pytest.mark.parametrize('force', [False, True])
++def test_main_explicit_pool_overrides_r2_and_force_recomputes_only_selected(env, force):
++    root, calls, run = env
++    _r2(root, codes=(C,))
++    _snapshot(root, {A: _record(A), C: _record(C)})
++    p = root / 'universe.json'
++    _write(p, [{'ts_code': A, 'name': 'one'}, {'ts_code': B, 'name': 'two'}, {'ts_code': B, 'name': 'two'}])
++    assert run('--universe', p, *(['--force'] if force else []), key=True) == 0
++    assert calls['vision'] == ([A, B] if force else [B])
++    assert C not in calls['render']
++
++
++def test_main_missing_explicit_file_fails_without_default_or_credentials(env):
++    root, calls, run = env
++    _r2(root)
++    assert run('--universe', root / 'missing.json') == 2
++    assert not calls['vision'] and not DOTENV_CALLS
++
++
++def test_main_pending_without_key_fails_before_renderer(env):
++    root, calls, run = env
++    _r2(root)
++    assert run() == 2
++    assert not calls['vision'] and not calls['render']
++
++
++def test_main_single_external_failure_returns_one(env, monkeypatch):
++    root, calls, run = env
++    _r2(root, codes=(A,))
++    def fail(**kwargs):
++        raise RuntimeError('synthetic boundary failure')
++    monkeypatch.setattr(sys.modules['src.agents.chart_vision_agent'], 'analyze_chart_vision', fail)
++    assert run(key=True) == 1
++    out = json.loads((root / f'data/raw/{DATE}/chart_vision_snapshot.json').read_text())
++    assert out['fail'] == 1 and out['results'][A]['error']

@@ -1,0 +1,87 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261022",
+  "next_day": "20261023",
+  "generated_at": "2026-10-22T22:00:48+08:00",
+  "n_total": 33,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "600293.SH",
+      "name": "三峡新材",
+      "industry": "玻璃玻纤",
+      "theme": "光伏辅材",
+      "limit_times": 3,
+      "fd_amount_yi": 4.43,
+      "pct_chg": 10.11,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 60.7,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=4.4亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002076.SZ",
+      "name": "星光股份",
+      "industry": "照明设备",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.06,
+      "pct_chg": 10.2,
+      "first_time": "92500",
+      "open_times": 14,
+      "float_mv_yi": 28.2,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.1亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "603278.SH",
+      "name": "大业股份",
+      "industry": "通用设备",
+      "theme": "高端装备、轮胎、生物质能发电",
+      "limit_times": 5,
+      "fd_amount_yi": 2.58,
+      "pct_chg": 10.01,
+      "first_time": "93019",
+      "open_times": 0,
+      "float_mv_yi": 49.6,
+      "prob_yizi": 27.8,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=2.6亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "001360.SZ",
+      "name": "南矿集团",
+      "industry": "专用设备",
+      "theme": "",
+      "limit_times": 1,
+      "fd_amount_yi": 3.27,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 23.3,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.3亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停33只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

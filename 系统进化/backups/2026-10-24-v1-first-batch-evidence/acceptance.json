@@ -1,0 +1,33 @@
+{
+  "verified_at": "2026-10-24T22:58:00.148759+08:00",
+  "core_groups": 14,
+  "core_cases": 790,
+  "core_passed": 790,
+  "core_failed": 0,
+  "subtests": 65,
+  "known_boundary_counts": {
+    "passed": 84,
+    "failure": 2,
+    "error": 0,
+    "skipped": 0
+  },
+  "implementation_files": 12,
+  "test_files": 11,
+  "changed_files": 23,
+  "accepted_source_files": 61,
+  "implementation_closure_files": 47,
+  "core_guard_violations": 0,
+  "source_drift": [],
+  "index_bytes_unchanged": true,
+  "index_records_unchanged": true,
+  "index_sha256": "3f2f0150a437b8b7e8ef55a73bc0f9091dee854dbf8a4734428813a997d13c0e",
+  "original_staged_paths": 32,
+  "branch": "main",
+  "head": "03c1d25caf94e8c8576765442b55cbf4538559f1",
+  "checkpoint": "0a8ebd597b7bce16ce7dd1d9db8497e5363bcd25",
+  "parent_core_root": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2",
+  "parent_boundary_root": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-254d2883",
+  "production_reloaded": false,
+  "live_certified": false,
+  "full_v1_released": false
+}

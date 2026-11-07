@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a/.venv/bin/python",
+    "-B",
+    "/Users/chenyang/.hermes/cache/scratch/premarket-all-price-20261029/run_price_guarded.py",
+    "tests/pipeline/test_price_contract_alignment.py::test_distance_diagnostic_does_not_certify_exchange_price_band",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/premarket-all-parent-20261029/signed-price-distance/red-cases",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/premarket-all-parent-20261029/signed-price-distance/red.xml",
+    "-q",
+    "--tb=short"
+  ]
+}

@@ -1,0 +1,6 @@
+*** Begin Patch
+*** Update File: /Users/chenyang/.hermes/scripts/canghai_retreat_reversal.sh
+@@
+-PYTHONPATH=. python3 scripts/plan/run_retreat_reversal.py --date "$TRADE_DATE"
++PYTHONPATH=. python3 scripts/plan/run_retreat_reversal.py --date "$TRADE_DATE" --reassess
+*** End Patch

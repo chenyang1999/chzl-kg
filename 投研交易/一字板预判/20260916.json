@@ -1,0 +1,71 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260916",
+  "next_day": "20260917",
+  "generated_at": "2026-10-17T18:55:32+08:00",
+  "n_total": 89,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "688004.SH",
+      "name": "博汇科技",
+      "industry": "IT服务Ⅱ",
+      "limit_times": 3,
+      "fd_amount_yi": 0.1,
+      "pct_chg": 20.01,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.1亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002281.SZ",
+      "name": "光迅科技",
+      "industry": "通信设备",
+      "limit_times": 1,
+      "fd_amount_yi": 3.4,
+      "pct_chg": 10.0,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.4亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600105.SH",
+      "name": "永鼎股份",
+      "industry": "通信设备",
+      "limit_times": 1,
+      "fd_amount_yi": 6.42,
+      "pct_chg": 10.0,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=6.4亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600206.SH",
+      "name": "有研新材",
+      "industry": "半导体",
+      "limit_times": 1,
+      "fd_amount_yi": 3.86,
+      "pct_chg": 9.99,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.9亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停89只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

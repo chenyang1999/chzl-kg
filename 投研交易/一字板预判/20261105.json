@@ -1,0 +1,125 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261105",
+  "next_day": "20261106",
+  "generated_at": "2026-11-05T22:00:45+08:00",
+  "n_total": 84,
+  "n_candidates": 6,
+  "candidates": [
+    {
+      "ts_code": "603381.SH",
+      "name": "永臻股份",
+      "industry": "光伏设备",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 2.56,
+      "pct_chg": 9.98,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 26.8,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.6亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002578.SZ",
+      "name": "闽发铝业",
+      "industry": "工业金属",
+      "theme": "金属铝概念",
+      "limit_times": 4,
+      "fd_amount_yi": 2.15,
+      "pct_chg": 9.9,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 39.2,
+      "prob_yizi": 28.8,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=2.1亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "601599.SH",
+      "name": "浙文影业",
+      "industry": "纺织制造",
+      "theme": "",
+      "limit_times": 4,
+      "fd_amount_yi": 2.7,
+      "pct_chg": 10.0,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 53.6,
+      "prob_yizi": 28.8,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=2.7亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002088.SZ",
+      "name": "鲁阳节能",
+      "industry": "装修建材",
+      "theme": "可燃冰",
+      "limit_times": 3,
+      "fd_amount_yi": 0.24,
+      "pct_chg": 10.04,
+      "first_time": "95639",
+      "open_times": 4,
+      "float_mv_yi": 51.0,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.2亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002081.SZ",
+      "name": "金 螳 螂",
+      "industry": "装修装饰",
+      "theme": "长江存储概念、长三角一体化、装配式建筑",
+      "limit_times": 2,
+      "fd_amount_yi": 2.26,
+      "pct_chg": 10.0,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 125.5,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.3亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "600641.SH",
+      "name": "先导基电",
+      "industry": "半导体",
+      "theme": "高端装备、长江存储概念、设备更新",
+      "limit_times": 2,
+      "fd_amount_yi": 2.8,
+      "pct_chg": 10.0,
+      "first_time": "93101",
+      "open_times": 0,
+      "float_mv_yi": 288.7,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.8亿 (一字率26%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停84只，筛出 6 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

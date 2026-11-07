@@ -1,0 +1,125 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261106",
+  "next_day": "20261109",
+  "generated_at": "2026-11-06T22:00:20+08:00",
+  "n_total": 32,
+  "n_candidates": 6,
+  "candidates": [
+    {
+      "ts_code": "002388.SZ",
+      "name": "新亚制程",
+      "industry": "其他电子",
+      "theme": "锂电池材料、钠离子电池、氟化工概念",
+      "limit_times": 3,
+      "fd_amount_yi": 0.58,
+      "pct_chg": 10.07,
+      "first_time": "102724",
+      "open_times": 0,
+      "float_mv_yi": 33.8,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.6亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "301697.SZ",
+      "name": "贝特利",
+      "industry": "光伏设备",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.83,
+      "pct_chg": 20.0,
+      "first_time": "93406",
+      "open_times": 1,
+      "float_mv_yi": 16.1,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.8亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "603657.SH",
+      "name": "春光科技",
+      "industry": "家电零部",
+      "theme": "家用电器",
+      "limit_times": 3,
+      "fd_amount_yi": 0.17,
+      "pct_chg": 10.0,
+      "first_time": "93127",
+      "open_times": 1,
+      "float_mv_yi": 45.8,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.2亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002578.SZ",
+      "name": "闽发铝业",
+      "industry": "工业金属",
+      "theme": "金属铝概念",
+      "limit_times": 5,
+      "fd_amount_yi": 2.2,
+      "pct_chg": 10.11,
+      "first_time": "92500",
+      "open_times": 1,
+      "float_mv_yi": 43.1,
+      "prob_yizi": 27.8,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=2.2亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "601599.SH",
+      "name": "浙文影业",
+      "industry": "纺织制造",
+      "theme": "",
+      "limit_times": 5,
+      "fd_amount_yi": 1.69,
+      "pct_chg": 9.96,
+      "first_time": "92501",
+      "open_times": 1,
+      "float_mv_yi": 59.0,
+      "prob_yizi": 25.2,
+      "prob_up": 42.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=1.7亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "603381.SH",
+      "name": "永臻股份",
+      "industry": "光伏设备",
+      "theme": "",
+      "limit_times": 4,
+      "fd_amount_yi": 1.46,
+      "pct_chg": 10.03,
+      "first_time": "92501",
+      "open_times": 0,
+      "float_mv_yi": 29.5,
+      "prob_yizi": 21.7,
+      "prob_up": 38.1,
+      "rank": "关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.5亿 (一字率19%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停32只，筛出 6 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

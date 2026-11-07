@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-10-29T11:04:15.033225+08:00",
+  "job_id": "e6517ca3c755",
+  "job_no_agent": true,
+  "job_script": "canghai_retreat_reversal.sh",
+  "actual_script": "/Users/chenyang/.hermes/scripts/canghai_retreat_reversal.sh",
+  "project_script": "/Users/chenyang/Downloads/demo/沧海巨浪/scripts/cron/canghai_retreat_reversal.sh",
+  "actual_is_project_symlink": false,
+  "same_before_bytes": true,
+  "before_sha256": "f950ebd4664c048848111f91e1223e0c93bbc851258588f7badfef754fe477d5",
+  "expected_after_sha256": "f6052c361ff7104cfe5b9f6089c3f7aec2f36c124ec258ba89cf4e778885fb6d",
+  "schedule_changed": false,
+  "profile_or_model_changed": false,
+  "actual_entry_change_status": "pending_specific_path_approval"
+}

@@ -1,0 +1,175 @@
+{
+  "date": "20261023",
+  "generated_at": "2026-10-23T06:00:47",
+  "lookback_hours": 24,
+  "lookback_reason": "距上次成功抓取 24.0h（上次 2026-10-22 06:03）",
+  "sources": {
+    "wechat_official_rss": {
+      "status": "ok",
+      "feed_count": 15,
+      "feeds_ok": 15,
+      "feeds_with_articles": 12,
+      "articles": 90,
+      "core_ok": 8,
+      "core_total": 9,
+      "empty_feeds": [
+        "调研先知",
+        "李迅雷金融与投资",
+        "财闻私享"
+      ],
+      "failed_feeds": [],
+      "output_file": "wechat_official_rss.jsonl",
+      "r4_compat_file": "wechat_official_20.jsonl",
+      "note": "取阅 RSS(feed.zoro.build) — 替代已退场的 mptext/sanji 公众号源"
+    },
+    "wechat_official_sanji": {
+      "status": "disabled",
+      "note": "用户 2026-08-20 取消公众号三刀源; 2026-10-12 已由取阅 RSS 接替",
+      "articles": [],
+      "output_file": "wechat_official_sanji_20261023.jsonl"
+    },
+    "wechat_cli_groups": {
+      "source": "wechat_cli_groups",
+      "status": "ok",
+      "groups_total": 5,
+      "groups_ok": 5,
+      "since": "2026-10-22T06:02:17",
+      "errors": [],
+      "group_status": [
+        {
+          "chat": "金投会-颜哥震荡慢牛市投研群V",
+          "status": "ok",
+          "count": 104
+        },
+        {
+          "chat": "AA题材基本面摩天轮",
+          "status": "ok",
+          "count": 93
+        },
+        {
+          "chat": "专注核心",
+          "status": "ok",
+          "count": 105
+        },
+        {
+          "chat": "AA陆家嘴机构风向标",
+          "status": "ok",
+          "count": 3
+        },
+        {
+          "chat": "AA🚀一手盘中新闻信息",
+          "status": "ok",
+          "count": 131
+        }
+      ]
+    },
+    "mcp": {
+      "chenhailangju-research": {
+        "status": "ok",
+        "latency_ms": 3005
+      },
+      "weflow-analytics": {
+        "status": "down",
+        "latency_ms": null
+      },
+      "agentqmt_qmt": {
+        "status": "down",
+        "latency_ms": null
+      },
+      "tushareMcp": {
+        "status": "ok",
+        "latency_ms": 2365
+      },
+      "datapro": {
+        "status": "ok",
+        "latency_ms": 1359
+      },
+      "canghai-sise": {
+        "status": "ok",
+        "latency_ms": 2987
+      },
+      "canghai-charts": {
+        "status": "ok",
+        "latency_ms": 1905
+      }
+    },
+    "weflow_snapshot": {
+      "status": "error",
+      "checked_at": "2026-10-23T06:03:37+08:00",
+      "error": "HTTPStatusError: Client error '404 Not Found' for url 'https://swl888aaa.ngrok.app/mcp/sse'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    },
+    "overseas_snapshot": {
+      "status": "degraded",
+      "categories": {
+        "indices": "ok",
+        "us_stocks": "ok",
+        "fx": "ok",
+        "commodities": "skipped"
+      },
+      "fetched_at": "2026-10-23T06:03:38"
+    },
+    "news_extras": {
+      "status": "ok",
+      "cls_count": 2987,
+      "major_count": 800,
+      "earnings_predict_count": 500,
+      "fetched_at": "2026-10-23T06:03:43+08:00"
+    },
+    "anns_window": {
+      "status": "ok",
+      "total": 2672,
+      "companies": 1050,
+      "days_scanned": [
+        "20261022",
+        "20261023"
+      ],
+      "by_category": {
+        "ST/退市": 14,
+        "监管/处罚/问询": 11,
+        "并购重组/控制权": 52,
+        "增减持/权益变动": 70,
+        "业绩预告/财报": 462,
+        "回购": 79,
+        "停复牌": 2,
+        "股权激励/员工持股": 134,
+        "定增/再融资/可转债": 58,
+        "风险提示/异动": 38,
+        "其他": 1752
+      },
+      "pool_hits": 0,
+      "raw_path": "data/raw/20261023/anns_window.jsonl",
+      "md_path": "chzl_kg/投研交易/事件追踪/20261023_premarket.md"
+    }
+  },
+  "wechat_mp_auth_sync": {
+    "base_url": "http://localhost:3388",
+    "old_key_prefix": "9affe370…",
+    "source": "pinned_invalid",
+    "changed": false,
+    "register": null,
+    "ok": false,
+    "pinned": true,
+    "error": "固定 AuthKey 无效或 3388 未就绪 (key=9affe370…)。请确认 mptext 已启动且 .data/kv/cookie/<AuthKey> 会话未过期;需要换 key 时先改 .env 的 WECHAT_MP_AUTH_KEY,并关闭 WECHAT_MP_AUTH_KEY_PIN。"
+  },
+  "notes": [
+    "mptext (3388) AuthKey 同步失败 - 已忽略, 公众号源已切换到公号三刀 (sanji :39217)"
+  ],
+  "mcp_global_severity": 2,
+  "mcp_health_path": "mcp_health.json",
+  "local_severity": 0,
+  "global_severity": 2,
+  "emotion_cycle": {
+    "phase": "main_down",
+    "phase_name": "主跌",
+    "confidence": 0.88,
+    "path": "data/research/20261023/emotion_cycle.json"
+  },
+  "attention": {
+    "status": "ok",
+    "trade_date": "20261022",
+    "persistent_count": 1882,
+    "surge_count": 26,
+    "cross_platform_count": 63,
+    "path": "data/research/20261022/attention_signals.json"
+  }
+}

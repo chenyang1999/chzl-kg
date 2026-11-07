@@ -1,0 +1,12 @@
+F.                                                                       [100%]
+=================================== FAILURES ===================================
+___________ test_standalone_delivery_does_not_invent_reusable_owner ____________
+tests/pipeline/test_safety_net_input_versions.py:95: in test_standalone_delivery_does_not_invent_reusable_owner
+    assert ok, note
+E   AssertionError: LLM 重跑交付失败: D1 original input owner missing，日志 /Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/legacy-solo-owner-red/cases/test_standalone_delivery_does_0/data/logs/research_shell/20261023/D1_llm_retry.log
+E   assert False
+----------------------------- Captured stdout call -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_safety_net_input_versions.py::test_standalone_delivery_does_not_invent_reusable_owner
+1 failed, 1 passed in 0.73s

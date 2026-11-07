@@ -1,0 +1,34 @@
+{
+  "argv": [
+    "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+    "-B",
+    "/Users/chenyang/.hermes/cache/scratch/chart-pool-fix-20261029-093948/run_guarded.py",
+    "tests/pipeline/test_bound_auxiliary_inputs.py",
+    "tests/pipeline/test_signed_input_review_contract.py",
+    "tests/pipeline/test_d1_auxiliary_caller_wiring.py",
+    "-q",
+    "--noconftest",
+    "-c",
+    "/dev/null",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/Users/chenyang/.hermes/cache/scratch/input01-parent-integrated/cases2",
+    "--junitxml=/Users/chenyang/.hermes/cache/scratch/input01-parent-integrated/parent.xml",
+    "--tb=short"
+  ],
+  "exit_code": 1,
+  "source_sha256": {
+    "scripts/research/build_research_summary.py": "f66b99d0a38755c303aab79e5d98cc177aaefb478b38ea06a57e141e8dc7489a",
+    "scripts/research/pipeline_artifacts.py": "59516e95c37231441566e5311cb1e485eb62dc278f77706657fe0b4047bd9aeb",
+    "scripts/research/run_research_shell.sh": "7a72f682455d3610046530f96d3ed495a78bbe31fcc074a4f2978221a456fbf5",
+    "scripts/plan/ensure_watchlist_plan.py": "08688d64512fbda8db711195298cba5ff659fa4cce32402f91fa8208f504b5a1",
+    "skills/main_decision_v1/SKILL.md": "72bc196a0690af6d5a5a74efaa33a9f7c1e9683eeafd5efb47fbac7215d50f2b",
+    "skills/analyze_devil_advocate_v1/SKILL.md": "c5e67efb76cd622ec6cbf60806bdf3e1a9b6b19da9757d9942c077f9f4e38291",
+    "docs/agents/R6-反证Agent.md": "2215386a0065f1f0e9607b07f321e65dc840b0c142c4929a852dff1b9918487e",
+    "docs/06-专题-反证机制.md": "c6af453bd6aec812274d9a72ca0154f5f3733d89d9ad8ec34bf9e89667c520f7",
+    "tests/pipeline/test_bound_auxiliary_inputs.py": "166ffe44ccc8cda58e65b3a1254bdb0fbcd207dd98d28645ea749ad7058ab25c",
+    "tests/pipeline/test_signed_input_review_contract.py": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8",
+    "tests/pipeline/test_d1_auxiliary_caller_wiring.py": "413f31179ea865f91b76c1ab12c2dea38fb90bc05526e8f65fd70f0a15b554af"
+  },
+  "stable": true
+}

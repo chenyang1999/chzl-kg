@@ -1,0 +1,71 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260918",
+  "next_day": "20260921",
+  "generated_at": "2026-10-17T18:55:32+08:00",
+  "n_total": 78,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "002285.SZ",
+      "name": "世联行",
+      "industry": "房地产服务",
+      "limit_times": 3,
+      "fd_amount_yi": 0.41,
+      "pct_chg": 9.89,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.4亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "603230.SH",
+      "name": "内蒙新华",
+      "industry": "出版",
+      "limit_times": 3,
+      "fd_amount_yi": 0.32,
+      "pct_chg": 10.04,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.3亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002836.SZ",
+      "name": "新宏泽",
+      "industry": "包装印刷",
+      "limit_times": 2,
+      "fd_amount_yi": 2.78,
+      "pct_chg": 9.96,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.8亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002185.SZ",
+      "name": "华天科技",
+      "industry": "半导体",
+      "limit_times": 1,
+      "fd_amount_yi": 7.17,
+      "pct_chg": 10.01,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=7.2亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停78只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

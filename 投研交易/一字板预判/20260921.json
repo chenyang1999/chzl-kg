@@ -1,0 +1,131 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260921",
+  "next_day": "20260922",
+  "generated_at": "2026-10-17T18:55:32+08:00",
+  "n_total": 103,
+  "n_candidates": 8,
+  "candidates": [
+    {
+      "ts_code": "000504.SZ",
+      "name": "南华生物",
+      "industry": "医疗服务",
+      "limit_times": 3,
+      "fd_amount_yi": 1.83,
+      "pct_chg": 9.99,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.8亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002453.SZ",
+      "name": "华软科技",
+      "industry": "化学制品",
+      "limit_times": 3,
+      "fd_amount_yi": 1.1,
+      "pct_chg": 9.93,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.1亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "600127.SH",
+      "name": "金健米业",
+      "industry": "农产品加",
+      "limit_times": 3,
+      "fd_amount_yi": 1.28,
+      "pct_chg": 9.99,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.3亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "600448.SH",
+      "name": "华纺股份",
+      "industry": "纺织制造",
+      "limit_times": 3,
+      "fd_amount_yi": 0.24,
+      "pct_chg": 9.89,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.2亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600630.SH",
+      "name": "龙头股份",
+      "industry": "服装家纺",
+      "limit_times": 3,
+      "fd_amount_yi": 0.7,
+      "pct_chg": 10.01,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.7亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "001216.SZ",
+      "name": "华瓷股份",
+      "industry": "家居用品",
+      "limit_times": 5,
+      "fd_amount_yi": 2.79,
+      "pct_chg": 10.01,
+      "prob_yizi": 27.8,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=2.8亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "600664.SH",
+      "name": "哈药股份",
+      "industry": "化学制药",
+      "limit_times": 1,
+      "fd_amount_yi": 3.65,
+      "pct_chg": 10.0,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.7亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600825.SH",
+      "name": "新华传媒",
+      "industry": "出版",
+      "limit_times": 1,
+      "fd_amount_yi": 24.89,
+      "pct_chg": 9.98,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=24.9亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停103只，筛出 8 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

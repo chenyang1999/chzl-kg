@@ -1,0 +1,215 @@
+........................................................................ [ 55%]
+..................................FFFFFFFFFF.............                [100%]
+=================================== FAILURES ===================================
+___ test_final_context_refuses_missing_or_invalid_executable_book[None-buy] ____
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/fixtures/pytest/s3-code0/trading/executors/registry.py'>)
+side = 'buy', book = None
+
+    @pytest.mark.parametrize("side", ["buy", "sell"])
+    @pytest.mark.parametrize("book", [None, 0, True, float("nan"), float("inf")])
+    def test_final_context_refuses_missing_or_invalid_executable_book(code, side, book):
+        q = ctx(code, holdings={SYMBOL: {"total_qty": 1000, "available_qty": 1000}})
+        setattr(q.quotes[SYMBOL], "ask" if side == "buy" else "bid", book)
+        result = q.place_order(ts_code=SYMBOL, side=side, quantity=100, limit_price=10.,
+                               rule_type="synthetic_only", reasons=[])
+        assert result["status"] == "rejected"
+>       assert result["reason"] == "missing_or_invalid_executable_quote"
+E       AssertionError: assert 'buy_rule_not...ly_authorized' == 'missing_or_i...cutable_quote'
+E         
+E         - missing_or_invalid_executable_quote
+E         + buy_rule_not_uniquely_authorized
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/app/tests/test_v1_s3_trigger_quote_safety_20261024.py:487: AssertionError
+___ test_final_context_refuses_missing_or_invalid_executable_book[None-sell] ___
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/fixtures/pytest/s3-code0/trading/executors/registry.py'>)
+side = 'sell', book = None
+
+    @pytest.mark.parametrize("side", ["buy", "sell"])
+    @pytest.mark.parametrize("book", [None, 0, True, float("nan"), float("inf")])
+    def test_final_context_refuses_missing_or_invalid_executable_book(code, side, book):
+        q = ctx(code, holdings={SYMBOL: {"total_qty": 1000, "available_qty": 1000}})
+        setattr(q.quotes[SYMBOL], "ask" if side == "buy" else "bid", book)
+        result = q.place_order(ts_code=SYMBOL, side=side, quantity=100, limit_price=10.,
+                               rule_type="synthetic_only", reasons=[])
+        assert result["status"] == "rejected"
+>       assert result["reason"] == "missing_or_invalid_executable_quote"
+E       AssertionError: assert 'sell_rule_not_authorized' == 'missing_or_i...cutable_quote'
+E         
+E         - missing_or_invalid_executable_quote
+E         + sell_rule_not_authorized
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/app/tests/test_v1_s3_trigger_quote_safety_20261024.py:487: AssertionError
+_____ test_final_context_refuses_missing_or_invalid_executable_book[0-buy] _____
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/fixtures/pytest/s3-code0/trading/executors/registry.py'>)
+side = 'buy', book = 0
+
+    @pytest.mark.parametrize("side", ["buy", "sell"])
+    @pytest.mark.parametrize("book", [None, 0, True, float("nan"), float("inf")])
+    def test_final_context_refuses_missing_or_invalid_executable_book(code, side, book):
+        q = ctx(code, holdings={SYMBOL: {"total_qty": 1000, "available_qty": 1000}})
+        setattr(q.quotes[SYMBOL], "ask" if side == "buy" else "bid", book)
+        result = q.place_order(ts_code=SYMBOL, side=side, quantity=100, limit_price=10.,
+                               rule_type="synthetic_only", reasons=[])
+        assert result["status"] == "rejected"
+>       assert result["reason"] == "missing_or_invalid_executable_quote"
+E       AssertionError: assert 'buy_rule_not...ly_authorized' == 'missing_or_i...cutable_quote'
+E         
+E         - missing_or_invalid_executable_quote
+E         + buy_rule_not_uniquely_authorized
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/app/tests/test_v1_s3_trigger_quote_safety_20261024.py:487: AssertionError
+____ test_final_context_refuses_missing_or_invalid_executable_book[0-sell] _____
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/fixtures/pytest/s3-code0/trading/executors/registry.py'>)
+side = 'sell', book = 0
+
+    @pytest.mark.parametrize("side", ["buy", "sell"])
+    @pytest.mark.parametrize("book", [None, 0, True, float("nan"), float("inf")])
+    def test_final_context_refuses_missing_or_invalid_executable_book(code, side, book):
+        q = ctx(code, holdings={SYMBOL: {"total_qty": 1000, "available_qty": 1000}})
+        setattr(q.quotes[SYMBOL], "ask" if side == "buy" else "bid", book)
+        result = q.place_order(ts_code=SYMBOL, side=side, quantity=100, limit_price=10.,
+                               rule_type="synthetic_only", reasons=[])
+        assert result["status"] == "rejected"
+>       assert result["reason"] == "missing_or_invalid_executable_quote"
+E       AssertionError: assert 'sell_rule_not_authorized' == 'missing_or_i...cutable_quote'
+E         
+E         - missing_or_invalid_executable_quote
+E         + sell_rule_not_authorized
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/app/tests/test_v1_s3_trigger_quote_safety_20261024.py:487: AssertionError
+___ test_final_context_refuses_missing_or_invalid_executable_book[True-buy] ____
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/fixtures/pytest/s3-code0/trading/executors/registry.py'>)
+side = 'buy', book = True
+
+    @pytest.mark.parametrize("side", ["buy", "sell"])
+    @pytest.mark.parametrize("book", [None, 0, True, float("nan"), float("inf")])
+    def test_final_context_refuses_missing_or_invalid_executable_book(code, side, book):
+        q = ctx(code, holdings={SYMBOL: {"total_qty": 1000, "available_qty": 1000}})
+        setattr(q.quotes[SYMBOL], "ask" if side == "buy" else "bid", book)
+        result = q.place_order(ts_code=SYMBOL, side=side, quantity=100, limit_price=10.,
+                               rule_type="synthetic_only", reasons=[])
+        assert result["status"] == "rejected"
+>       assert result["reason"] == "missing_or_invalid_executable_quote"
+E       AssertionError: assert 'buy_rule_not...ly_authorized' == 'missing_or_i...cutable_quote'
+E         
+E         - missing_or_invalid_executable_quote
+E         + buy_rule_not_uniquely_authorized
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/app/tests/test_v1_s3_trigger_quote_safety_20261024.py:487: AssertionError
+___ test_final_context_refuses_missing_or_invalid_executable_book[True-sell] ___
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/fixtures/pytest/s3-code0/trading/executors/registry.py'>)
+side = 'sell', book = True
+
+    @pytest.mark.parametrize("side", ["buy", "sell"])
+    @pytest.mark.parametrize("book", [None, 0, True, float("nan"), float("inf")])
+    def test_final_context_refuses_missing_or_invalid_executable_book(code, side, book):
+        q = ctx(code, holdings={SYMBOL: {"total_qty": 1000, "available_qty": 1000}})
+        setattr(q.quotes[SYMBOL], "ask" if side == "buy" else "bid", book)
+        result = q.place_order(ts_code=SYMBOL, side=side, quantity=100, limit_price=10.,
+                               rule_type="synthetic_only", reasons=[])
+        assert result["status"] == "rejected"
+>       assert result["reason"] == "missing_or_invalid_executable_quote"
+E       AssertionError: assert 'sell_rule_not_authorized' == 'missing_or_i...cutable_quote'
+E         
+E         - missing_or_invalid_executable_quote
+E         + sell_rule_not_authorized
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/app/tests/test_v1_s3_trigger_quote_safety_20261024.py:487: AssertionError
+____ test_final_context_refuses_missing_or_invalid_executable_book[nan-buy] ____
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/fixtures/pytest/s3-code0/trading/executors/registry.py'>)
+side = 'buy', book = nan
+
+    @pytest.mark.parametrize("side", ["buy", "sell"])
+    @pytest.mark.parametrize("book", [None, 0, True, float("nan"), float("inf")])
+    def test_final_context_refuses_missing_or_invalid_executable_book(code, side, book):
+        q = ctx(code, holdings={SYMBOL: {"total_qty": 1000, "available_qty": 1000}})
+        setattr(q.quotes[SYMBOL], "ask" if side == "buy" else "bid", book)
+        result = q.place_order(ts_code=SYMBOL, side=side, quantity=100, limit_price=10.,
+                               rule_type="synthetic_only", reasons=[])
+        assert result["status"] == "rejected"
+>       assert result["reason"] == "missing_or_invalid_executable_quote"
+E       AssertionError: assert 'buy_rule_not...ly_authorized' == 'missing_or_i...cutable_quote'
+E         
+E         - missing_or_invalid_executable_quote
+E         + buy_rule_not_uniquely_authorized
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/app/tests/test_v1_s3_trigger_quote_safety_20261024.py:487: AssertionError
+___ test_final_context_refuses_missing_or_invalid_executable_book[nan-sell] ____
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/fixtures/pytest/s3-code0/trading/executors/registry.py'>)
+side = 'sell', book = nan
+
+    @pytest.mark.parametrize("side", ["buy", "sell"])
+    @pytest.mark.parametrize("book", [None, 0, True, float("nan"), float("inf")])
+    def test_final_context_refuses_missing_or_invalid_executable_book(code, side, book):
+        q = ctx(code, holdings={SYMBOL: {"total_qty": 1000, "available_qty": 1000}})
+        setattr(q.quotes[SYMBOL], "ask" if side == "buy" else "bid", book)
+        result = q.place_order(ts_code=SYMBOL, side=side, quantity=100, limit_price=10.,
+                               rule_type="synthetic_only", reasons=[])
+        assert result["status"] == "rejected"
+>       assert result["reason"] == "missing_or_invalid_executable_quote"
+E       AssertionError: assert 'sell_rule_not_authorized' == 'missing_or_i...cutable_quote'
+E         
+E         - missing_or_invalid_executable_quote
+E         + sell_rule_not_authorized
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/app/tests/test_v1_s3_trigger_quote_safety_20261024.py:487: AssertionError
+____ test_final_context_refuses_missing_or_invalid_executable_book[inf-buy] ____
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/fixtures/pytest/s3-code0/trading/executors/registry.py'>)
+side = 'buy', book = inf
+
+    @pytest.mark.parametrize("side", ["buy", "sell"])
+    @pytest.mark.parametrize("book", [None, 0, True, float("nan"), float("inf")])
+    def test_final_context_refuses_missing_or_invalid_executable_book(code, side, book):
+        q = ctx(code, holdings={SYMBOL: {"total_qty": 1000, "available_qty": 1000}})
+        setattr(q.quotes[SYMBOL], "ask" if side == "buy" else "bid", book)
+        result = q.place_order(ts_code=SYMBOL, side=side, quantity=100, limit_price=10.,
+                               rule_type="synthetic_only", reasons=[])
+        assert result["status"] == "rejected"
+>       assert result["reason"] == "missing_or_invalid_executable_quote"
+E       AssertionError: assert 'buy_rule_not...ly_authorized' == 'missing_or_i...cutable_quote'
+E         
+E         - missing_or_invalid_executable_quote
+E         + buy_rule_not_uniquely_authorized
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/app/tests/test_v1_s3_trigger_quote_safety_20261024.py:487: AssertionError
+___ test_final_context_refuses_missing_or_invalid_executable_book[inf-sell] ____
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-202610...024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/fixtures/pytest/s3-code0/trading/executors/registry.py'>)
+side = 'sell', book = inf
+
+    @pytest.mark.parametrize("side", ["buy", "sell"])
+    @pytest.mark.parametrize("book", [None, 0, True, float("nan"), float("inf")])
+    def test_final_context_refuses_missing_or_invalid_executable_book(code, side, book):
+        q = ctx(code, holdings={SYMBOL: {"total_qty": 1000, "available_qty": 1000}})
+        setattr(q.quotes[SYMBOL], "ask" if side == "buy" else "bid", book)
+        result = q.place_order(ts_code=SYMBOL, side=side, quantity=100, limit_price=10.,
+                               rule_type="synthetic_only", reasons=[])
+        assert result["status"] == "rejected"
+>       assert result["reason"] == "missing_or_invalid_executable_quote"
+E       AssertionError: assert 'sell_rule_not_authorized' == 'missing_or_i...cutable_quote'
+E         
+E         - missing_or_invalid_executable_quote
+E         + sell_rule_not_authorized
+
+/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/s3/app/tests/test_v1_s3_trigger_quote_safety_20261024.py:487: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[None-buy]
+FAILED tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[None-sell]
+FAILED tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[0-buy]
+FAILED tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[0-sell]
+FAILED tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[True-buy]
+FAILED tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[True-sell]
+FAILED tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[nan-buy]
+FAILED tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[nan-sell]
+FAILED tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[inf-buy]
+FAILED tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[inf-sell]
+10 failed, 119 passed in 0.31s

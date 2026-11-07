@@ -1,0 +1,13 @@
+{
+  "check_exit": 0,
+  "check_stderr": "",
+  "apply_exit": 0,
+  "match": {
+    "scripts/research/run_research_shell.sh": true,
+    "scripts/research/native_usage.py": true,
+    "scripts/research/pipeline_state.py": true,
+    "scripts/research/pipeline_artifacts.py": true,
+    "scripts/research/build_research_summary.py": true,
+    "tests/pipeline/test_r6_local_revision.py": true
+  }
+}

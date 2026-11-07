@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-10-29T18:10:24.706163+08:00",
+  "source_sha256": {
+    "tests/pipeline/test_safety_net_input_versions.py": "d64fcfa0e7f76e96a51adf52b4ad8a828b0ed30352eac9bfc34260aca84c336e",
+    "tests/pipeline/test_plan_interim_preservation.py": "1edc1e02cd4d086caa2b6fd0fd8727956b3f7aa0ecd1da6c04ad21ecb638a154",
+    "scripts/plan/ensure_watchlist_plan.py": "d3e914ffb905bb40aa6508f0cb8b3a8c7b895e3a49e7b62288450a282ca1845f",
+    "tests/test_canghai_repair_plan_contracts_20261023.py": "27e2c1d2515c2aef9da3d16278d34227f76be8fec5a301b369a43ea3f1409562",
+    ".git/index": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143"
+  },
+  "scope": "Single writer parent; compatibility repair of the known legacy 29 failures; no agents, production data, network, models, account, DB or trading"
+}

@@ -1,0 +1,25 @@
+from pathlib import Path
+import os, socket, json
+scratch=Path('/Users/chenyang/.hermes/cache/scratch/r6-guard-selftest')
+scratch.mkdir(exist_ok=True)
+p=scratch/'ok';p.write_text('ok')
+os.rename(p,scratch/'renamed')
+os.symlink('renamed',scratch/'link');assert (scratch/'link').read_text()=='ok';(scratch/'link').unlink()
+fd=os.open(scratch,os.O_RDONLY)
+f=os.open('via-dirfd',os.O_CREAT|os.O_WRONLY,0o600,dir_fd=fd);os.close(f);os.unlink('via-dirfd',dir_fd=fd);os.close(fd)
+blocked=[]
+def expect(name,func):
+    try:func()
+    except RuntimeError:blocked.append(name)
+    else:raise AssertionError('guard did not block '+name)
+repo=Path('/Users/chenyang/Downloads/demo/沧海巨浪')
+expect('dotenv',lambda:open(repo/'.env'))
+expect('production_write',lambda:open(repo/'data/probe-never-created','w'))
+expect('private_credentials',lambda:open('/Users/chenyang/.hermes/config.yaml'))
+expect('network',lambda:socket.socket().connect(('127.0.0.1',1)))
+expect('symlink_location',lambda:os.symlink('literal-target','/Users/chenyang/r6-must-not-create'))
+fd=os.open('/Users/chenyang',os.O_RDONLY)
+expect('dirfd_write',lambda:os.open('r6-must-not-create',os.O_CREAT|os.O_WRONLY,0o600,dir_fd=fd))
+os.close(fd)
+(scratch/'result.json').write_text(json.dumps({'valid_scratch_ops':True,'expected_blocked':blocked}))
+print(json.dumps({'valid_scratch_ops':True,'expected_blocked':blocked}))

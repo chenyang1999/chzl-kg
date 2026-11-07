@@ -1,0 +1,47 @@
+{
+  "scope": "PRICE-03 primary-rule reference; not a trading or whole-instrument compliance certification",
+  "reference_date": "2026-10-29",
+  "sources": [
+    {
+      "exchange": "SSE",
+      "title": "上海证券交易所交易规则（2026年修订）",
+      "retrieval_url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/10816482/files/e3a3b98e36894edca77841837936e006.docx",
+      "http_status": 200,
+      "bytes": 65302,
+      "sha256": "fc922c433438b2636cb631eab25cca405209712acbb6aaded768c45456ff8888",
+      "ordinary_a_share_tick_clause": "3.3.11",
+      "ordinary_a_share_tick_cny": "0.01",
+      "effective_on": "2026-07-06",
+      "effective_date_verified_in_downloaded_text": true,
+      "adjustment_authority_clause": "3.3.12",
+      "limitations": [
+        "General ordinary A-share rule only; exchange-specific adjustments remain possible",
+        "Does not certify every instrument, daily price band, reference price or execution permission",
+        "No claim that all ancillary/deferred-implementation notices were fully verified"
+      ]
+    },
+    {
+      "exchange": "SZSE",
+      "title": "深圳证券交易所交易规则（2026年修订）",
+      "retrieval_url": "https://docs.static.szse.cn/www/lawrules/rule/trade/current/W020260424690713155663.pdf",
+      "http_status": 200,
+      "bytes": 282084,
+      "sha256": "9b66f8b0db70f84a25ef1ccb4ee2351001724e408117552d75f6d8993483c586",
+      "ordinary_a_share_tick_clause": "3.3.11",
+      "ordinary_a_share_tick_cny": "0.01",
+      "effective_on": "2026-07-06",
+      "effective_date_verified_in_downloaded_text": true,
+      "adjustment_authority_clause": "3.3.12",
+      "limitations": [
+        "General ordinary A-share rule only; exchange-specific adjustments remain possible",
+        "Does not certify every instrument, daily price band, reference price or execution permission",
+        "No claim that all ancillary/deferred-implementation notices were fully verified"
+      ]
+    }
+  ],
+  "correction": "初稿把未核实的URL读取状态写成已核实，已撤回。旧URL404、notice超时、BSE重定向等先前表述没有对应真实工具回执，不作证据。本版仅采用本次实际HTTP下载并解析的两份官方文件；原始下载与摘要已保存。",
+  "actual_extraction_attempt": "web_extract failed because configured backend is search-only; direct public-document download and local parsing then succeeded",
+  "bse_status": "not validated, excluded from verified sources",
+  "implementation_changed": false,
+  "new_rounding_tolerance_or_risk_threshold": false
+}

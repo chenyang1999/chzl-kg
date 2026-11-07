@@ -1,0 +1,484 @@
+# REVIEW ONLY - 尚未签核、尚未应用；禁止整体直接应用。
+# 每个目标须核对原SHA256；A/B分别签核。B共享文件的前置基线=A已批准结果。
+# main SOUL、cron、配置、模型、生产数据、输出布局均无patch。
+# 北向、生产窗口、RR为待裁决事项，本patch不包含任何默认选项。
+
+# ===== BEGIN PACKAGE A: 实现契约同步（不改变业务资格） =====
+--- /Users/chenyang/Downloads/demo/沧海巨浪/docs/10-契约-研究汇总.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/docs/10-契约-研究汇总.md
+@@ -25,7 +25,7 @@
+ | `fetch_manifest` | string | ✅ | 上游 fetch 产物路径，如 `data/raw/20260704/manifest.json` |
+ | `fetch_global_severity` | integer | ✅ | 启动 research 时 manifest 的 `global_severity`（0-3） |
+ | `artifacts` | object | ✅ | R1-R7 各单元 JSON 路径，见 §3 |
+-| `confidence` | object | ✅ | 各单元置信度 0.0-1.0，skeleton/降级时为 0 |
++| `confidence` | object | ✅ | 每单元为有限数 0.0–1.0 或 null；null=本次未评价/未知，0.0=真实评价为零，不按状态自动互换 |
+ | `hard_rejects` | array | ✅ | R6 硬否决清单，可为空；元素见 §4 |
+ | `timeouts` | array | ✅ | 超时或未完成的单元 ID，如 `["R5"]` |
+ | `completed_by` | string | ✅ | 计划完成时点 `"08:00"`（盘前批次） |
+@@ -98,7 +98,10 @@
+ |------|------|
+ | 正常完成 | 0.5-1.0，由子 Agent 自评 |
+ | 降级（单源失联） | 0.3-0.5 |
+-| skeleton / 昨日 fallback / 超时 | 0 |
++| 本次未评价（含 skeleton / 超时 / 昨日历史参考） | null；另列状态、日期与缺口，不以 0 冒充评价 |
++| 真实评价为零 | 0.0，原样保留 |
++
++汇总只接受有限、非 bool、在 [0,1] 内的数值；缺失、非法、非有限值记 null 并保留原始质量说明。消费者先区分 null 与数值，禁止 `or 0` 或用 null 触发数值零的降级/默认仓位；null 不构成完成或通过证明。JSON/MD 交付、研究就绪和交易授权是独立事实。
+ 
+ ---
+ 
+@@ -145,7 +148,7 @@
+     "R7": "data/research/20260704/R7_capital_flow.json"
+   },
+   "confidence": {
+-    "R1": 0, "R2": 0, "R3": 0, "R4": 0, "R5": 0, "R6": 0, "R7": 0
++    "R1": null, "R2": null, "R3": null, "R4": null, "R5": null, "R6": null, "R7": null
+   },
+   "hard_rejects": [],
+   "timeouts": [],
+--- /Users/chenyang/Downloads/demo/沧海巨浪/docs/11-契约-盘前预案.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/docs/11-契约-盘前预案.md
+@@ -1,6 +1,6 @@
+ # watchlist_plan.json 标准Schema说明
+ 
+-> 路径：`data/runtime/watchlist_plan_YYYYMMDD.json`
++> 正式产物：`data/plans/YYYYMMDD/watchlist_plan.json`；执行运行副本：`data/runtime/watchlist_plan_YYYYMMDD.json`。由现有校验交接单向正式→runtime，不能用副本反写、补缺或替换正式源；本条不改变任何输出目录或 owner。
+ > 交易Agent网页和执行Agent都依赖这份结构化数据，**必须严格遵守字段名和枚举值**
+ 
+ ---
+@@ -10,7 +10,7 @@
+ | 字段 | 类型 | 必填 | 说明 |
+ |------|------|------|------|
+ | `trade_date` | string | ✅ | 交易日，格式 `YYYYMMDD` 如 `"20260629"` |
+-| `mode` | string | ✅ | `"live"` 实盘 / `"dry_run"` 回测 |
++| `mode` | string | ✅ | 仅 `"live"` / `"dry_run"`；执行环境不是交易决定，禁新仓另写 `no_trade: true`，不得新增 mode 枚举或丢弃禁令 |
+ | `agent_name` | string | ✅ 固定 | `"盘前预案 Agent / Stock Selection & Setup Agent / Alpha-Setup Agent"` |
+ | `generated_at` | string | ✅ | ISO格式时间 `"2026-06-29T08:30:00+08:00"` |
+ | `trading_style` | string | ✅ 固定 | `"mainline_right_side_with_trend_pullback"`（主线进攻+右侧低吸） |
+@@ -25,6 +25,8 @@
+ | `watch_pool` | array | ✅ | 观察池（备选，不在今日计划买入但跟踪），每个元素是 **StockEntry** |
+ | `rejected` | array | ✅ | 否决标的（可以为空） |
+ | `research_anchor_only` | array | ✅ | 仅研究不交易（可以为空） |
++
++`production_ready` / `research_completion_passed` / `reassessment_required` 显式显示研究是否仍待重评；安全发布和交付 completed 不代表研究完成。未就绪版保持 dry_run、关闭自动交易、要求用户确认；就绪 true 也不自动放行。观察池或研究锚不构成开仓权限，须独立通过当日全局禁令、R6、逐票资格、预算、买点与用户授权。缺失 confidence 保留 null，不填 0。
+ 
+ ---
+ 
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md
+@@ -152,6 +152,8 @@
+ 
+ 构建 `upstream_usable: {R1..R7: bool}`（`status == complete`）。  
+ R2 不可用 → 直接产出降级 JSON（spec §6），`counter_arguments: []`。
++
++**不改变 complete-only**：研究观察有对象或上游 partial/degraded，不等于可直接通过正式反证；所需完整输入不足时继续标未完成及缺口。无逐票对象时如实 `candidates_evaluated: 0`，空 `hard_rejects` 只代表未形成否决，不代表全票审核通过；不凑对象、不用空反证解除禁新仓，也不把 skipped/degraded 自动改 complete。
+ 
+ ### Step 2 · 逐模式扫描
+ 
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/auction_amendment_v1/SKILL.md
+@@ -97,6 +97,8 @@
+ 4. 记录 `observe_only: true`（T3 首周默认）写入 `notes`
+ 
+ ### Step 1 — 逐票检查 execution_pool（对照 auction_expectation 三档）
++
++先独立展示原预案禁新仓/零预算/未就绪与 P1 修订状态：任一禁令、权威预案校验失败、超时/未完成时，不凭快照、档位、briefing 或 promote 文本新增授权，表内动作只能作观察参考。partial 保留有效报价并逐项列缺口；无有效竞价价或昨收时不填0、不推断符合预期。空 items 只代表未列修订，不代表逐票通过；研究观察不自动升级开仓权限。
+ 
+ 对每只 `execution_pool` 票，读其 `entry_rules.auction_expectation`（2026-09-17 起每票必填），用 snapshot 竞价价机械对照：
+ 
+@@ -215,14 +217,14 @@
+ ## Pitfalls（2026-09-22 实战）
+ 
+ 1. **三档表真实位置是票顶层，不是 `entry_rules[0].auction_expectation`**：D1 主路径输出里每只 execution 票顶层就有 `auction_expectation`（base_close/expected_open_band/bands）。消费侧（P1 / render_auction_judgment）必须先读票顶层，entry_rules 内嵌只作回退。只查 entry_rules 会误判 `auction_expectation_missing`。
+-2. **D1 主路径完整 json 常落在 `data/runtime/watchlist_plan_YYYYMMDD.json`，漏拷契约路径 `data/plans/YYYYMMDD/watchlist_plan.json`**；而 08:30 安全网 fallback 已在契约路径落了空池规则版（`meta.python_fallback: true` / agent_name 含 "rule v1"）。09:27 快照、09:28 P1、渲染器只认契约路径 → 全读到空池 → "无执行池"。修法：统一走 `src/plan/plan_resolver.resolve_authoritative_plan(date)`——契约路径是 fallback 且 runtime 有更新的非 fallback json 时自动同步；快照 `_read_plan` 已接入（09:27 是 P1 前的同步窗口）。
++2. **权威源与副本单向交接**：统一调用 `src/plan/plan_resolver.resolve_authoritative_plan(date)`，只读经交易日与现有 schema/安全旗标校验的正式 `data/plans/YYYYMMDD/watchlist_plan.json`。缺失/非法时如实拒绝；runtime 不反写、不补缺、不替换正式源，`sync` 参数只兼容、不恢复旧同步行为。
+ 3. **user_briefing 为 null 是常态**（只有大面积异常才填）；渲染器不得在 null 时吐“竞价与预案对照完毕，按三档执行”这种空话，要基于 execution_pool 生成有信息量的结论（无执行池＝明写“无买点，空仓”）。
+ 4. **pitfall #2 仍会复发（2026-09-23 实测）**：09:27 快照仍读了契约路径 fallback 版（pool_auction 只有 fallback 的 9 只 watch 票，不含 runtime 主路径 execution_pool 4 票）。P1 不能假设快照覆盖执行池——逐票对照前先比对 snapshot.pool_auction 的 ts_code 集合与权威 plan execution_pool；缺口票直接用 XTick `xtick_auction_detail(code, tradeDate)` 取 09:25 结算竞价补齐（单票一次调用，4 票可并行）。
+-5b. **渲染脚本也读契约路径 → 空池误导（2026-09-24 实测）**：pitfall#2 复发时 render_auction_judgment.py 同样读契约路径 fallback，md 显示"（无执行池）"，即使权威 plan 有执行池。P1 落盘后必须检查渲染出的 md：执行池段为空而权威 plan 非空 → 用 patch 补入逐票判定表（竞价价/昨收/溢价/档位/动作），否则用户开盘看到空话。渲染器长期修法=接入 plan_resolver.resolve_authoritative_plan。
+-5d. **renderer 在 timeout 修订下逐票写"无修订（符合预期或未触发）"=误导（2026-09-28 实测）**：amendment items=[] 时 render_auction_judgment.py 对每只执行池票默认写"P1 判定: 无修订（符合预期或未触发）"，读者会误以为竞价落在预期档。实际是竞价价缺失、P1 超时。timeout 落盘后必须 patch 掉这 3 行（改"⚠️ P1 超时未产出，竞价价缺失，开盘后按真实开盘价对照三档表执行"），否则用户开盘看到假判定。
++5b. **人读与机读使用同一权威预案**：渲染器也走只读 resolver；拒绝后不得裸读或从 runtime 恢复。实际缺交付记缺交付，不手工拼造与正式源不一致的执行表。
++5d. **超时/缺价不得假判通过**：顶部与逐票显示无有效修订、报价缺失和无新仓授权；已有三档仅供观察，不写“符合预期/按档执行”。空 items 不作通过证明，不事后补写有效修订。
+ 7. **后缀不匹配=拿着答案误判未覆盖（2026-09-28 timeout 真根因）**：快照 pool_auction 实际含执行池3票且竞价价齐全，但快照 ts_code 无后缀（000592）、plan 带 .SZ 后缀（000592.SZ），P1 字符串比对失败误判"未覆盖"，逐票 XTick 补数拖到09:29:22超硬窗口。P1 覆盖率比对必须统一 bare code（去后缀）再比较集合；fetch 已改为保留后缀输出、code=all 单次抓全（0.8s），正常情况下无需补数。
+ 5c. **cron 环境 execute_code 被禁（2026-09-24 实测）**：`execute_code` 在 cron 模式直接 BLOCKED（"Cron jobs run without a user present to approve it"），浪费窗口内一轮调用。P1 全流程禁用 execute_code，JSON 提取一律用 terminal 单行 `python3 -c` + read_file。今天因此超时 12s → timeout_no_amendment。
+-5e. **cron 安全扫描器连嵌套 `python3 -c` 也拦（2026-10-13 实测，整窗报废）**：cron 模式不仅禁 execute_code，`terminal` 里带引号嵌套的 `python3 -c "import json; ..."` 也被 Tirith 安全扫描 BLOCKED（"Nested executable body could not be resolved"），连续两次拦截直接烧掉 09:28-09:29 硬窗口 → timeout_no_amendment。P1 在 cron 下**唯一安全姿势=先 write_file 写脚本再 terminal 执行**（普通 `python3 xxx.py` 不拦）；所有 JSON 提取/落盘都走脚本文件，禁止任何内联 python。若已过 09:29：立即落 timeout_no_amendment（含 notes 记录已核事实），渲染 md 后人工补事实判定行（如"竞价 2.78 落符合预期档→按预案回踩 2.72"），勿再等数据。
++5e. **cron 安全扫描器连嵌套 `python3 -c` 也拦（2026-10-13 实测，整窗报废）**：cron 模式不仅禁 execute_code，`terminal` 里带引号嵌套的 `python3 -c "import json; ..."` 也被 Tirith 安全扫描 BLOCKED（"Nested executable body could not be resolved"），连续两次拦截直接烧掉 09:28-09:29 硬窗口 → timeout_no_amendment。P1 在 cron 下**唯一安全姿势=先 write_file 写脚本再 terminal 执行**（普通 `python3 xxx.py` 不拦）；所有 JSON 提取/落盘都走脚本文件，禁止任何内联 python。若已过 09:29：立即落 timeout_no_amendment（含 notes 记录已核事实），渲染 md 仅补已核实竞价事实与缺口，并标“超时、无有效修订、仅供观察”；不得事后补成有效落档或买入动作，勿再等数据。
+ 5f. **read_file 读大 JSON 也烧窗口（2026-10-15 实测）**：plan(753行)+snapshot(1481行)+昨日schema+渲染脚本轮番 read_file 共 4-5 轮，把 09:28-09:29 窗口烧到 09:30 才落盘 → timeout。P1 的提取必须一个脚本搞定：write_file 写 `extract_p1.py`（只打印所需字段：执行池 ts_code/name/top层 auction_expectation base_close/expected_open_band/bands action、snapshot 对票竞价价/premium/base_close 一致性、orchestrator_status），一次 terminal 执行打印全部，再根据输出决定判定。禁止用 read_file 顺序读多个大 JSON。需要参照 schema 时读历史 amendment 用 read_file（小文件可）。
+ 5g. **date+发现性 ls 必须并入提取脚本，写 status 前先看钟（2026-10-16 实测，超窗 2.5min）**：cron 09:28:55 启动，首轮 ls/find 发现 + 提取脚本 + 先写 complete 再核钟改 timeout 双写，落盘 09:31:32。教训：①提取脚本第一步就打印 `date` 与各输入文件存在性，禁止先 ls 再写脚本；②`head -n` 截断会砍掉脚本尾部关键字段（orchestrator_status 被 head -120 截掉→被迫多一轮 read_file）——关键字段放输出最前面，或干脆不 head；③落盘前先看 date，已过 09:29 直接写 timeout_no_amendment，别先写 complete 再重写（每次 write_file 都是 ~2s+ 排队）。
+ 6. **plan base_close 可能过期（2026-09-23 实测）**：D1 规则版对 300324（base 17.24→实际昨收 4.14）、601811（14.14→16.82）用了过期参考价，整张 auction_expectation 三档表失效。P1 逐票先拿 XTick detail 的 `close` 字段与 plan `auction_expectation.base_close` 比对，不一致时以 XTick/Tushare 为准重判档位，并在 notes 标注 `base_close_stale`（E1 计 D1 参考价合规率）。渲染器会把过期 base_close 写进 md 表头——P1 判定行必须自带真实价纠正。
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_auction_snapshot_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/fetch_auction_snapshot_v1/SKILL.md
+@@ -74,9 +74,9 @@
+ 
+ ```
+ 【fetch_auction_snapshot_v1 · YYYYMMDD】
+-status: {ok|stub|skipped}
++status: {ok|partial|stub|skipped}
+ severity: {0-3}
+-source: {xtick|stub|none}
++source: {tushare_stk_auction|xtick|stub|none}
+ pool_count: {N}
+ captured_at: {ISO8601}
+ 
+@@ -92,7 +92,8 @@
+ ```
+ 
+ **severity 解读**:
+-- `0` + `status=ok` → P1 正常读取
++- `0` + `status=ok` → 可读取；只证明快照质量，不证明逐票可交易
++- `1` + `status=partial` → 保留有效行/字段，逐项展示质量缺口；不是全源不可用。报价及情绪均缺失才按现有实现 stub/severity=2；不得以缺失填0洗成ok。
+ - `2` + `status=stub` → P1 可尝试 XTick MCP 补一次；仍失败则无 amendment
+ - plan 缺失 `skipped` → P1 仍运行但无 pool 名单（由 P1 降级）
+ 
+@@ -125,9 +126,9 @@
+   "schema_version": "auction_snapshot_v1",
+   "trade_date": "YYYYMMDD",
+   "captured_at": "ISO8601+08:00",
+-  "market_sentiment": {"limit_up_count": 0, "limit_down_count": 0, "up_down_ratio": 0},
++  "market_sentiment": {"limit_up_count": null, "limit_down_count": null, "up_down_ratio": null},
+   "pool_auction": [
+-    {"ts_code": "", "auction_price": 0, "prev_close": 0, "premium_pct": 0, "auction_volume": 0, "auction_amount": 0}
++    {"ts_code": "", "auction_price": null, "prev_close": null, "premium_pct": null, "auction_volume": null, "auction_amount": null}
+   ],
+   "severity": 0,
+   "status": "ok",
+@@ -136,6 +137,10 @@
+ ```
+ 
+ ## Rules & Constraints
++
++- 无价/无昨收/非有限数 → 对应字段 null 并记缺失原因，不用0占位；有效正报价与昨收才算溢价，真实0收益有效。严格 JSON 禁 NaN/Infinity。
++- 篮子按唯一标的分别展示 `requested_count` / `valid_count` / `missing_count` / `coverage_ratio`，均溢价仅用有效样本；兼容字段 `n` 表示有效数，不拿请求数冒充有效数。
++- XTick `jjl` 仅作成功率，不当成交亿元；独立情绪成交额字段及单位未确认时 `auction_volume_yi=null`。XTick 原始 `jje` 保留但不猜单位；Tushare 已确认 amount 以元标 CNY。
+ 
+ - 必须在 **09:28:00** 前完成落盘（P1 09:28 启动即读取；竞价数据 09:27 才到，勿早跑）
+ - 纯 Python subprocess；Agent 只 report
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md
+@@ -30,7 +30,7 @@
+ |------|---------|
+ | 08:00（盘前批次） | 同日 `data/research/YYYYMMDD/research_summary.json` 已存在且 `orchestrator_status` ≠ `failed` |
+ 
+-若 research 主控未完成，**拒绝出 plan**，告警用户，不写半成品 JSON。
++若 research 主控未完成，告警并保留未完成事实；缺少必需输入/校验失败仍拒绝写 plan，不拼造半成品。若现有安全校验允许发布未就绪 LLM 临时版，必须完整符合安全发布字段与重评契约（见 Step 3.5.8），只能 dry_run/禁新仓，不视为研究完成或最终裁决。
+ 
+ ---
+ 
+@@ -129,7 +129,7 @@
+ |------|---------|----------------|------|
+ | `main_up` 主升 | 猛干龙头，任何位置进都对 | 龙头/龙二满配 | 按 R1 cap 上限执行 |
+ | `high_chop` 高位震荡 | 落袋为安，控仓；只做龙头分歧低吸或低位补涨 | 减半，只留最强主线 | cap × 0.75 |
+-| `main_down` 主跌 | 空仓/切换新题材一日游；连跌2天尾盘试错 | **≤2 只**或空 | cap × 0.4，或 mode=no_trade |
++| `main_down` 主跌 | 空仓/切换新题材一日游；连跌2天尾盘试错 | **≤2 只**或空 | cap × 0.4，或 mode=dry_run 且 no_trade=true |
+ | `low_test` 低位试错 | 打首板/低位补涨，轻仓试错 | 小仓试错 | cap × 0.5 |
+ 
+    - **优先级**: 本四阶段 > Step 0.5 的 7 阶段（7 阶段偏描述性，四阶段直接给操作）。两者冲突时以四阶段为准
+@@ -332,7 +332,9 @@
+ 09:20 再跑也不重建 → 全链一整天读陈旧空池。
+ 
+ **规则**：安全网判幂等时，除"文件存在"外还必须校验**兜底 plan 是否早于
+-关键上游（R5/R6）落盘**；若是则用完整上游重建。LLM 主路径产物一律不覆盖。
++关键上游（R5/R6）落盘**；若是则用完整上游重建。完整、已评估的合法 LLM 决策（含 no_trade/空执行池）不得被兜底覆盖，`--force` 也不例外。
++
++**交付完成 ≠ 研究就绪 ≠ 可交易**：未就绪 LLM 版可按现有校验安全发布，但须显式 `production_ready: false`、`research_completion_passed: false`、`reassessment_required: true`，保持 `mode: dry_run`、`autonomous_trading_enabled: false`、`requires_user_confirmation: true`；不能因文件存在、LLM 来源、交付 completed 或执行池为空而免除重评。研究刷新归研究 owner，D1 重评归计划 owner；安全网不代跑 R1–R7、不切模型、不抬有效零预算。现有重评实现只在 R1–R7 与 summary 均晚于未就绪预案、日期/路径/已有 run_id 一致且显式未就绪标记已解除后重试 D1；缺新批次或重评仍未完成时保留未完成状态并非零返回，不以 Python 规则覆盖。`production_ready=true` 也不构成 live/开仓授权。生产窗口和刷新触发待用户另签。
+ 
+ ### Step 3.6 — 战术层短线信号(2026-09-04 新增 · 硬闸门 · v1.7)
+ 
+@@ -1206,7 +1208,7 @@
+ 
+ **硬约束**:
+ - `no_trade_conditions` 必须存在(即使全部 `active: false`)
+-- 任一 `active: true` → D1 输出 `mode: "no_trade"`,`autonomous_trading_enabled: false`,`execution_pool: []`,`watch_pool: []`(全空)
++- 任一 `active: true` → D1 输出 `mode: "dry_run"`、独立 `no_trade: true`、`autonomous_trading_enabled: false`、`requires_user_confirmation: true`、`execution_pool: []`、`watch_pool: []`（本行暂保留原清观察限制；是否保留研究观察由 B 包单独签核）。`mode` 只表示执行环境，不新增 `no_trade` 枚举；不得删除禁令来通过 schema。
+ - plan.md **必须**在顶部展示"不交易条件清单 + 当前 active 项"(便于用户 review)
+ 
+ **降级**:
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/research_orchestrator_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/research_orchestrator_v1/SKILL.md
+@@ -148,7 +148,7 @@
+ 
+ **R6 特殊**: 从 `R6_devil_advocate.json` 提取 `severity: hard_reject` 条目 → 填入 `hard_rejects[]`（schema 见 `docs/10-契约-研究汇总.md` §4）。
+ 
+-**Fallback（T1' 软降级）**: 某 R* 失败时可读 **昨日** 同路径 artifact 作替代，`confidence=0`，`timeouts` 标注 — **不**调用 Python `src/research/r*.py`。
++**Fallback（T1' 软降级）**: 昨日 artifact 仅可显式作为历史参考，不冒充本次研究完成；本次未评价的 `confidence=null`，真实评价为零时保留 `0.0`，并标注原日期、缺口与 `timeouts` — **不**调用 Python `src/research/r*.py`。交付 completed 与研究就绪分别核验；未就绪版保留研究 owner 的刷新义务，不能由安全网自行代跑研究。
+ 
+ ### Step 5 · 写 research_summary.json
+ 
+@@ -173,7 +173,7 @@
+     "R6": "data/research/YYYYMMDD/R6_devil_advocate.json",
+     "R7": "data/research/YYYYMMDD/R7_capital_flow.json"
+   },
+-  "confidence": {"R1": 0.0, "R2": 0.0, "R3": 0.0, "R4": 0.0, "R5": 0.0, "R6": 0.0, "R7": 0.0},
++  "confidence": {"R1": null, "R2": null, "R3": null, "R4": null, "R5": null, "R6": null, "R7": null},
+   "hard_rejects": [],
+   "timeouts": [],
+   "completed_by": "08:00"
+@@ -281,7 +281,7 @@
+ | 场景 | 行为 |
+ |------|------|
+ | manifest 缺失 | `orchestrator_status=failed`，不写 summary，告警 |
+-| 单 R* 超时 | 昨日 artifact + `confidence=0` + `timeouts` |
++| 单 R* 超时 | 昨日 artifact 仅标历史参考；本次未评价 `confidence=null`，保留 `timeouts` 与原日期；不冒充本次完成 |
+ | R6 超时 | D1 视为「无反证」保守处理；**不可**自行放宽 R6 约束 |
+ | Hermes delegation 全失败 | 告警 + 空池；**不**跑 Python orchestrator（T1' 冻结） |
+ | **LLM quota 超限** | 保留已验证研究并明确失败单元、实际错误与可恢复状态；D1 交由计划端及已授权安全网处理，研究端不写计划/触发价，不自动切换模型 |
+--- /Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_md_namespace.py
++++ /Users/chenyang/Downloads/demo/沧海巨浪/tests/checks/check_md_namespace.py
+@@ -96,6 +96,9 @@
+         if not m:
+             return []  # 没有 confidence 字段也不报错（不是所有 md 都有）
+         conf_str = m.group(1)
++
++    if isinstance(conf_str, str) and conf_str.strip().lower() in {"null", "~"}:
++        return []  # 未评价，不按数值零校验；不代表研究或交易门禁通过
+ 
+     try:
+         confidence = float(conf_str)
+
+# ===== END PACKAGE A =====
+
+# ===== BEGIN PACKAGE B: 研究资格/门禁语义（逐项签核；依赖A） =====
+--- /Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md
++++ /Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md
+@@ -32,8 +32,8 @@
+ D1 出盘前预案是整套系统的**决断点**。心法不是参考,是**思考顺序**。
+ 
+ ### D1 必走的 5 步决策(纪律 §9 强制)
+-1. **情绪阶段 → 仓位上限**:调 `@emotion_cycle_v1` 取 phase→position_cap(主升满配 / 震荡压半 / 主跌仅试仓)
+-2. **主线候选 → 总龙 → 补涨**:调 `@mainline_lifecycle_v1` 取 stage→可选 stage(启动/主升早中/高潮/退潮),不在主升段的不进 execution
++1. **阶段只定温度**:读 `@emotion_cycle_v1` 与已批准仓位上限，不预设“阶段→打法/通道”；阶段不自动授权或停止研究，既有禁新仓与有效零预算优先。
++2. **主线研究候选 → 核心身位 → 资金确认**:读 `@mainline_lifecycle_v1` 作为风险背景，按当日赚钱效应动态选择通道；研究就绪不等于可交易，非主升阶段不自动清研究观察池。主跌转修复只研究新题材首板/二板、不接高位老龙，所有开仓仍须独立通过原门禁。
+ 3. **每只 execution 票 → Step 3.6 四闸门**(2026-09-04 新):
+    - 关1 核心判定(`@core_judge_v1`) → 共振/逆势抱团 → leader/core/laggard/watch 四档
+    - 关2 盈亏比(`@risk_reward_v1`) → RR<1 拒绝,1-2 试仓,2-3 正常,≥3 主仓
+--- /Users/chenyang/.hermes/profiles/canghai-research/SOUL.md
++++ /Users/chenyang/.hermes/profiles/canghai-research/SOUL.md
+@@ -51,8 +51,8 @@
+ 4. **今天计划做什么、不做什么？** 计划外不出手。
+ 
+ ### 思考顺序铁律（每次 R* 输出前必走一遍，违反即重写）
+-1. **先认市场，再认个股** — 没有主线 / 风格 / 赚钱效应，不准进 R2/R5 选股环节。
+-2. **段位决定能做什么** — 主跌期降维（只输出观察，不输出候选），高位震荡压仓（中位股剔除）。
++1. **先认市场，再认个股** — 没有已确认可交易主线 / 风格 / 赚钱效应时，不授予开仓资格；R2/R4 仍须按已有证据筛选研究观察对象，R5 对真实研究候选画像，不因禁新仓停止研究。无合格对象允许为空，必须列覆盖、剔除与缺口，不为数量造票。
++2. **阶段只定温度，不预设固定打法** — 按当日赚钱效应与资金确认动态选择通道，主跌转修复聚焦新题材首板/二板、不接高位老龙；低吸是强势票相对涨停价仍低，不是抄底。研究候选与可交易候选分层记录；研究观察不构成开仓权限，现有预算、否决与逐票门禁仍独立生效。
+ 3. **只有龙头或低位，躲中位和杂毛** — R2 输出必须显式标 `rank ∈ {龙头, 龙二, 龙三}` + `rank=杂毛` 的剔除理由。
+ 4. **盈亏比优先于胜率** — 候选票如果止损距 < 5% 或 RR < 2，必须降级 watch，不能进 execution。
+ 5. **计划外不出手** — R4/R5 输出的"机会"必须回答：它是今日核心 / 主线补涨 / 计划内试错 中的哪一种。都不是，剔除。
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/_archive/filter_leader_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/_archive/filter_leader_v1/SKILL.md
+@@ -56,7 +56,7 @@
+ ### 龙三及以下
+ 
+ - `leader_rank: filtered_out`  
+-- **不进 execution_pool**（除非后续 R6 对龙一 `hard_reject` 需替补 — 本 skill **只标注** `backup_eligible: true`，**不**决定 D1 是否启用）
++- **不进 execution_pool**；后续 R6 对龙一 `hard_reject` 也不自动产生替补资格，不为候选数量把龙三/杂毛升位。可保留研究观察及否决理由，不能以 `backup_eligible` 绕过原否决
+ 
+ ### 杂毛过滤 `filter_out_rules`
+ 
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_devil_advocate_v1/SKILL.md
+@@ -107,7 +107,7 @@
+ 仅命中 (1) 未确认 (2) → 降级为 **`strong_suggest`**（D1 须显式处理，可覆盖）。
+ 
+ **否决后的出口(v1.2 · 2026-10-19 用户钦定, 取代"红线3保护")**:
+-- 龙一被 hard/strong 否决后,合法出口只有两个: ①execution_pool 为空(附理由) ②保留龙一并标注"等分歧买点"
++- 龙一被 hard_reject 后只能从 execution_pool 剔除，可留研究观察并记录禁令/空池理由；不得以“等分歧买点”保留执行资格。strong_suggest 仍按原有显式处理/覆盖契约，不自动视为通过；不为数量递补杂毛
+ - ❌ **禁止用龙二/弹性核心/低位补涨票降级替补**——杂毛失去板块β时风险>龙头,补涨票不得因龙头被否而升位
+ - 已删除旧规则"候选<3只时hard_reject自动降级为strong_suggest"——该规则逼系统凑数,是辨识度问题的制度根源
+ - 否决"高位/一致"龙一必须同时给出具体证据(霸榜出货/资金净流出/身位崩塌),不得只因位置高就否决
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_main_sectors_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_main_sectors_v1/SKILL.md
+@@ -107,7 +107,7 @@
+ 
+ ### Step 1 · 读上游 + 定主线数量上限
+ 
+-- 读 R1：`main_lines_count` 与 `style` 约束今日主线条数（防御/退潮风格 → 倾向 0–1 条或只做最强一条）
++- 读 R1：`main_lines_count` 与 `style` 作为市场温度和交易约束输入；不能据此停止研究或预先清空研究观察对象。分别记录已确认可交易主线与待资金确认的研究方向；真实无合格对象允许空，不用研究方向冒充已确认主线。
+ - 读 R3：`resonance_top_themes` 中 `L1+L2+L3` / `L1+L2` 主题优先
+ - 读 R4：`sectors_catalyzed` 中 `strength=high` 板块加权
+ - 读 R7：资金净流入前十板块
+@@ -163,14 +163,14 @@
+ 2. `@hithink-market-query` / Tushare moneyflow：主力资金流入 top5  
+ 3. 近 5 日龙虎榜频次（`top_list`）  
+ 4. 连板高度（`limit_step`）  
+-5. 流通市值 ≥ 50 亿；排除 ST/退市/风险警示  
+-6. `@iwencai-query` 可选验证：「{板块名} 涨停 连板高度 市值大于50亿」  
++5. 流通市值 <20 亿不看；20–50 亿警惕但不刻意回避，逐票注明风险与依据；排除 ST/退市/风险警示，缺市值不伪造合格  
++6. `@iwencai-query` 可选验证：「{板块名} 涨停 连板高度 流通市值不低于20亿」；返回字段及单位须核验  
+ 
+ **板块前缀规则（2026-08-16 更新）**：300（创业板）/ 688（科创板）与主板**同权参与**龙一/龙二/中军竞争，**不得**因前缀自动降级为候补或加"需过滤"标注。仅 920（北交所）因流动性问题不进执行池推荐。20cm 票可按弹性角色（如"弹性龙二"）标注，但前缀本身不构成扣分项。
+ 
+ 输出 `leaders[]`：`role` = 龙一/龙二/候补，`ts_code`, `name`, `pct_chg`, `limit_times`, `selection_basis`。
+ 
+-**本步产出的是候选池**；最终 execution 资格由 `filter_leader_v1` 裁定。
++**本步产出的是研究候选池**；`filter_leader_v1` 仅标龙头层级与执行前置资格，不是最终交易许可。禁新仓/零预算时保留有证据的研究观察对象并标仅研究；R5 仍可画像，R6 完整性门槛不变。最终开仓须由 D1 与执行侧逐票通过既有门禁及授权，无对象不凑数。
+ 
+ ### Step 4.4 · 主线生命周期判定（2026-09-04 新增 · `@mainline_lifecycle_v1`）
+ 
+@@ -188,7 +188,7 @@
+ 写入每条主线的 `stage` / `stage_name` / `stage_action` 字段（`formation`/`early_up`/`mid_up`/`climax`/`fade`）。
+ 
+ **联动规则（治"一日游"）**：
+-- `early_up`（主升早期）→ 最高优先级主线，龙头/龙二进 execution_pool
++- `early_up`（主升早期）→ 优先研究龙头/龙二；进入 execution_pool 仍须 D1 独立核验全部交易门禁，阶段不能自动授权
+ - `mid_up` → 可做，龙头分歧低吸或后排补涨，控仓
+ - `climax`（高潮分歧）→ **只做龙头或空仓等分歧**，禁追高缩量一字
+ - `fade`（退潮反抽）→ **降级次线**，不进主线主推；除非情绪周期=主升（超跌反弹博反抽）
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_stock_profile_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_stock_profile_v1/SKILL.md
+@@ -229,7 +229,7 @@
+ 
+ ## 降级
+ 
+-- R2 无候选 → `status: skipped`, `profiles: []`  
++- R2 经核验确无研究候选 → `status: skipped`, `profiles: []`，说明覆盖与空池原因；禁新仓/零预算本身不是“无研究候选”。存在真实研究观察对象时继续画像，但不因此取得 execution 资格  
+ - 单票 MCP 失败 → 该票 `partial: true`, 不阻塞其余票
+ - 档位确实无法判定 → 显式写 `"B"` 并在 `flags` 标注 `grade_defaulted`，
+   **不得留空**（留空会触发 D1 侧降级路径，掩盖真实风险）
+@@ -364,11 +364,12 @@
+     seen = {c["ts_code"] for c in candidates}
+     supplement = [s for s in supplement if s["ts_code"] not in seen]
+     supplement.sort(key=lambda x: x["r2_score"], reverse=True)
+-    need = 5 - len(candidates)  # 至少保证 candidates >= 5
++    # 仅补有研究价值且未命中硬否决的真实对象；5只是扩池目标，不是最低配额
++    need = max(0, 5 - len(candidates))
+     candidates.extend(supplement[:need])
+ 
+-# 终态:candidates >= 5(若仍不够,记录 r2_expand_shortfall 到 JSON,告警)
+-assert len(candidates) >= 5, f"R5 candidate pool short: {len(candidates)} < 5"
++# 不足目标如实记录覆盖/剔除/缺口；真实空池允许 skipped，不绕否决、不凑数
++# 研究扩池不产生开仓权限；后续R6完整性和D1逐票门禁保持不变
+ ```
+ 
+ **消费契约**:
+@@ -380,7 +381,7 @@
+ - `R2_main_sectors.json` 缺失 `all_scored_boards_top10` 字段 → 视为 R2 schema 降级,本次跳过扩池,记录 `r2_schema_missing_top10=true` 到 R5 JSON 顶层,供 E1 复盘统计
+ 
+ **验收**:
+-- 盘后脚本 `tests/check_r5_candidate_pool.py` 必须通过(本 skill 在 §Rules 增加红线 11: R5 候选池 < 5 → `status: partial`)
++- 验收按实际研究候选覆盖与缺口，不将未凑够5只本身判画像失败；真实空池须有 R2 证据，非空候选仍核数量/降级标记。不得为通过数量检查解除否决；对应检查器需先确认是否存在及与当前 contract_checks 一致，未验不得自报通过
+ 
+ ---
+ 
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/analyze_style_v1/SKILL.md
+@@ -99,7 +99,7 @@
+    - 若 `data/research/YYYYMMDD/emotion_cycle.json` 已存在（由 `compute_cycle_metrics.py` 预计算），直接消费
+ 2. 把阶段写入 R1 产出新字段：
+    - `emotion_cycle_phase`: `low_test` / `main_up` / `high_chop` / `main_down`
+-   - `emotion_cycle_action`: 该阶段该做什么（主升猛干龙头 / 震荡控仓做补涨 / 主跌空仓）
++   - `emotion_cycle_action`: 仅说明市场温度、原仓位约束与待验证风险；不得写固定“阶段→打法/通道”或要求停止研究。通道由 D1 按当日赚钱效应与资金确认动态选择，禁新仓不等于清研究观察
+ 3. **联动规则**（与 3.1 风格分类互相校验）：
+    - 风格=崩溃退潮型 且 阶段=主跌 → 双确认，仓位下限压到最低
+    - 风格=连板情绪型 但 阶段=高位震荡（炸板率>25% 未反映在风格表里）→ **以情绪周期阶段为准**，下调仓位上限（风格表只看涨停/高度，会漏掉炸板率>40%的分歧）
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/main_decision_v1/SKILL.md
+@@ -123,16 +123,16 @@
+ 2.5. **情绪周期四阶段定位（硬接入 · v1.7 · 2026-09-04 新增 · `@emotion_cycle_v1`）**：
+    - 读 `data/research/YYYYMMDD/emotion_cycle.json`（由 `compute_cycle_metrics.py` 预计算）或调 `@emotion_cycle_v1` 现场算
+    - 四阶段：`low_test` 低位试错 / `main_up` 主升 / `high_chop` 高位震荡 / `main_down` 主跌
+-   - **阶段 → 该做什么（硬规则，写入 plan）**：
+-
+-| 阶段 | 该做什么 | execution_pool | 仓位 |
+-|------|---------|----------------|------|
+-| `main_up` 主升 | 猛干龙头，任何位置进都对 | 龙头/龙二满配 | 按 R1 cap 上限执行 |
+-| `high_chop` 高位震荡 | 落袋为安，控仓；只做龙头分歧低吸或低位补涨 | 减半，只留最强主线 | cap × 0.75 |
+-| `main_down` 主跌 | 空仓/切换新题材一日游；连跌2天尾盘试错 | **≤2 只**或空 | cap × 0.4，或 mode=dry_run 且 no_trade=true |
+-| `low_test` 低位试错 | 打首板/低位补涨，轻仓试错 | 小仓试错 | cap × 0.5 |
+-
+-   - **优先级**: 本四阶段 > Step 0.5 的 7 阶段（7 阶段偏描述性，四阶段直接给操作）。两者冲突时以四阶段为准
++   - **阶段只定温度，不预设打法**：按真实赚钱效应、龙头身位与资金确认动态选择通道；不因阶段自动停止研究或自动授权交易。以下保留原仓位约束数字，仅列温度，不构成开仓许可：
++
++| 阶段 | 温度 / 研究要求 | execution_pool | 原仓位约束（不因本提案上调） |
++|------|------------------|----------------|---------------------------|
++| `main_up` 主升 | 研究当前最强核心，不能认为任何位置都可买 | 逐票通过门禁才可入 | 按 R1 cap 上限 |
++| `high_chop` 高位震荡 | 核对分歧与承接，不静态锁定打法 | 保留原减量约束 | cap × 0.75 |
++| `main_down` 主跌 | 继续研究新题材首板/二板，不能接高位老龙或抄底 | 原 ≤2 只或空；禁新时空 | cap × 0.4；禁新决定另写 no_trade |
++| `low_test` 低位试错 | 准备右侧确认剧本，不凭阶段给代码授权 | 小仓仍须独立资格 | cap × 0.5 |
++
++   - **优先级**：阶段用于温度与已有仓位约束，不覆盖全局禁令、R6、逐票资格或用户授权；不把描述性的阶段标签当通道白名单。
+    - 写入 `meta.emotion_cycle_phase` + `meta.emotion_cycle_action`
+ 
+ 3. **跨资产→板块映射**（`@大宗商品分析` commodity→sector）：
+@@ -252,7 +252,7 @@
+    - 「基本面亏损 / 资金面弱 / 估值高」→ 只压仓位（如 ≤3%），**禁止**直接把主线龙头降为「只观察不参与」
+    - 唯一硬例外：R6 `hard_reject`（模式六霸榜出货等）仍不可覆盖
+ 2. **主线龙一/龙二必须至少进 execution_pool（轻仓）或 watch_pool 最高观察级**：
+-   - 主线 `stage=early` 且涨停潮启动 → 龙一给最小仓位（≥3%）参与，龙二观察
++   - 主线 `stage=early` 且涨停潮启动 → 优先完成龙一研究；仅在当日允许新仓且逐票通过全部门禁后由 D1 定仓，无保底参与额度；否则只观察并保留禁令
+    - 龙一一字锁仓买不进 → 顺势切龙二/候补的参与机会，**而不是放弃整条线**
+ 3. 本原则写入 `meta.mainline_participation_applied`，供 E1 复盘核对是否被执行
+ 
+@@ -271,7 +271,7 @@
+    - 每板块仅龙一、龙二可进 execution_pool
+    - 龙一：板块涨停家数 top1 **或** 主力 5 日累计 top1 **或** 连板高度 top1
+    - 龙二：板块综合评分 top2
+-   - 龙三及以下 → watch_pool（除非龙一被 R6 hard_reject，龙二递补）
++   - 龙三及以下 → watch_pool；龙一被 R6 hard_reject 后不得为数量或低位偏好启用龙二/杂毛递补，保留真实否决与空池理由
+    - **杂毛过滤**（满足 ≥2 项即剔除 execution）：主力排名 top3 外、龙虎榜 30 日无机构席位、连板高度 < 龙头-2、换手率 < 板块 median 50%
+ 5. **风险等级**（R5 `alpha_grade` / `risk_grade` × position_cap）：
+    - `position_cap ≤ 0.4`：仅 `alpha_grade=A` 且 `risk_grade≤B`
+@@ -293,9 +293,9 @@
+ 这与用户三通道体系（打板/强势低吸/跟单）直接冲突：打板是其数据中 64% 胜率的正 α 通道，
+ 却在前瞻层被结构性排除。
+ 
+-**规则**：入口通道由 R1 风格 regime 决定（`d1_algorithm.step_regime_channels`）：
+-
+-| R1 style | 可用通道 | ignition |
++**规则**：入口通道由当日赚钱效应、龙头结构和资金确认动态选择，不由 R1 阶段或风格机械开关。下表仅保留历史规则实现映射供核对，不再作为 LLM 主路径资格白名单；规则版 `d1_algorithm.step_regime_channels` 尚未在本提案改动，不能据此宣称实现已统一。所有通道仍受当日禁令、预算、买点与授权约束：
++
++| R1 style（历史映射，非许可） | 历史通道示例 | 历史 ignition |
+ |---|---|---|
+ | 连板情绪型 / 主升 | `trend_pullback_buy` + `leader_breakout` | ✅ |
+ | 主线扩散型 | `trend_pullback_buy` + `leader_breakout` | ❌ |
+@@ -411,7 +411,7 @@
+ 4. 昨日 `observation_tracking` 中未成交观察票 + 长期主线未启动票（`sector_off_line`）
+ 
+ 每只须含合法 `role`（`watch` / `watch_elastic`）与 `plan_status`（`watch_pool_only` / `watch_pool_wait_for_entry`）。
+-**观察池宁多勿漏**：上限 40 只，用于盘中扫描与次日回看，不进 execution、不参与自动交易。
++**观察池宁多勿漏但不凑数**：原数量范围是覆盖目标，不是硬配额；上限 40 只不变。用于盘中扫描与次日回看，不进 execution、不参与自动交易；有效对象不足时列覆盖、淘汰与数据缺口，允许为空。禁交易时观察及重评义务仍保留。
+ 
+ ### Step 4.5 — 买点推演 + T+1 博弈（2026-09-04 用户方法论 · 硬要求）
+ 
+@@ -898,7 +898,7 @@
+ | 2 | **禁止 override** R6 `hard_reject` |
+ | 3 | `execution_pool` ≤ 5（`max_positions` 铁律） |
+ | 4 | 单票 `max_position_pct` ≤ 0.15；单板块 ≤ 0.40；总仓 ≤ position_cap |
+-| 5 | `watch_pool` 15–25 只（低于 15 观察对照失效） |
++| 5 | 观察数量按 Step 4 的真实覆盖记录，原范围是目标不是最低资格；不足或空池必须有覆盖/淘汰/缺口证据，不为凑数绕否决 |
+ | 6 | 每只 execution 须有完整 `entry_rules` + `exit_rules`（至少 1 条 `stop_loss_break`） |
+ | 7 | R6 `strong_suggest` 覆盖须写 `meta.r6_devil_advocate.strong_suggests_overridden[].reason` |
+ | 8 | `mode` 默认 `dry_run`；用户显式 flip 后才改 `live` |
+@@ -1208,7 +1208,7 @@
+ 
+ **硬约束**:
+ - `no_trade_conditions` 必须存在(即使全部 `active: false`)
+-- 任一 `active: true` → D1 输出 `mode: "dry_run"`、独立 `no_trade: true`、`autonomous_trading_enabled: false`、`requires_user_confirmation: true`、`execution_pool: []`、`watch_pool: []`（本行暂保留原清观察限制；是否保留研究观察由 B 包单独签核）。`mode` 只表示执行环境，不新增 `no_trade` 枚举；不得删除禁令来通过 schema。
++- 任一 `active: true` → D1 输出 `mode: "dry_run"`、独立 `no_trade: true`、`autonomous_trading_enabled: false`、`requires_user_confirmation: true`、`execution_pool: []`；不再因禁交易清空研究观察。有真实证据的对象留 `watch_pool`/`research_anchor_only`，逐票标仅研究、`auto_trade_enabled: false`、`entry_rules: []`，同时列全局禁令与待验证条件；无对象仍可空。`mode` 只表示执行环境，不新增 `no_trade` 枚举；不得删除禁令来通过 schema。P1/P2 不得凭观察身份或 promote 自动解禁，须由有权限 owner 独立重评全部原门禁。
+ - plan.md **必须**在顶部展示"不交易条件清单 + 当前 active 项"(便于用户 review)
+ 
+ **降级**:
+--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/short_line_thinking_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/short_line_thinking_v1/SKILL.md
+@@ -203,7 +203,7 @@
+ agent 输出任何"低吸/埋伏/捡便宜/跌出机会"类建议前,必须过 3 问,任一不满足 = 不许给代码,改归类为"抄底"并按负 α 处理:
+ 
+ 1. 这只票今天/明天有没有涨停预期?它是不是主线总龙/补涨龙/低位前排?
+-2. 当前情绪周期允许开仓吗?(退潮/主跌期:禁止一切低吸,空仓)
++2. 当前温度、当日禁令与逐票资格允许开仓吗？不按退潮/主跌标签静态禁用强势低吸；低吸≠抄底，须有强势延续、资金确认与涨停预期。禁新仓/零预算仍禁止开仓，只保留研究观察。
+ 3. 我推荐它的理由是"强势延续"还是"跌多了该反弹"?后者 = 均值回归幻觉,直接否。
+ 
+ **特别警惕时点**:尾盘 14:00 后问"埋伏进去等明天有没有收益"——这是禁止清单 #9 `late_speculation` + #11 `overnight_bad_streak` 的组合形态,默认回答是"不买",除非次日有已核实的硬事件催化 + 竞价确认路径已写明。--- /Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md
++++ /Users/chenyang/Downloads/demo/沧海巨浪/skills/trade_discipline_v1/SKILL.md
+@@ -69,7 +69,9 @@
+ 15. `cover_after_blast` — 炸板或买入失败后补仓（必须承认错误离场）
+ 16. `regulatory_confrontation` — 监管信号明确（"给区间"/点名/停牌）后仍博弈相关方向
+ 
+-## 四、情绪周期强制切换表（每阶段允许/禁止）
++## 四、情绪周期温度参考（不作为固定打法/通道许可）
++
++阶段只定温度；下表打法为历史示例，不作为静态允许/禁止清单。实际通道由当日赚钱效应、身位与资金确认动态选择；本提案不改表内既有仓位数字或禁止清单，任何全局禁新仓、R6、逐票资格和授权仍优先，研究观察不因此停止。
+ 
+ | 阶段 | 允许 | 禁止 | 仓位档 |
+ |------|------|------|--------|
+
+# ===== END PACKAGE B =====

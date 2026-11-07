@@ -1,0 +1,263 @@
+{
+  "purpose": "before-authorized-intraday-production-recovery",
+  "trade_date": "20261023",
+  "captured_at": "2026-10-23T12:40:43.039548+08:00",
+  "head": "03c1d25caf94e8c8576765442b55cbf4538559f1",
+  "index_sha256": "c24736dd938685a85db19301280d8b9fdafdf6fb2bab56a056068dc026df152b",
+  "prior_pipeline": {
+    "status": "completed",
+    "run_id": "20261023T061047-60743-14677",
+    "pid": 60749,
+    "started_at": "2026-10-23T06:10:47.340363+08:00",
+    "finished_at": "2026-10-23T06:54:34.398710+08:00"
+  },
+  "prior_pipeline_pid_alive": false,
+  "files": [
+    {
+      "path": "chzl_kg/投研交易/个股画像/20261023.md",
+      "sha256": "f569f01b1578541c3ed1fd5a8d446013ba35bf6f3b2c21078926d7c62530f7e7",
+      "bytes": 6543,
+      "mtime_ns": 1792709128158328135,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/个股画像/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/主线研判/20261023.md",
+      "sha256": "4f43279253fde1d40c832b4c8ffc3f59dc2aeb441361bbdfdb1b5bf091e82b1f",
+      "bytes": 14863,
+      "mtime_ns": 1792708932493174934,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/主线研判/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/午盘briefing/20261023.md",
+      "sha256": "46e5689987f186160d9e2b5d6e189aaaf50e25e732cbf137b1e73b1c2ccce867",
+      "bytes": 1148,
+      "mtime_ns": 1792726927103260445,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/午盘briefing/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/反证/20261023.md",
+      "sha256": "27ae75fff26bb9cb5e5bf5e0f015a2478844324f122f79ff81ba5590e94a5dec",
+      "bytes": 11718,
+      "mtime_ns": 1792709343026837131,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/反证/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/扩池/20261023.md",
+      "sha256": "a922312d4aebcda46ec6b89ec16d09b2c6874687594283761ad745c669c08d35",
+      "bytes": 39352,
+      "mtime_ns": 1792708954688552487,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/扩池/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/数据源台账/20261023.md",
+      "sha256": "ec1fa2e32cfa854b26a0b5b304d3d6c54908f7e6986cc9f6197d704120417b3a",
+      "bytes": 59141,
+      "mtime_ns": 1792715447473426208,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/数据源台账/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/消息面/20261023.md",
+      "sha256": "74ab5e05f96e24b4802a51cc706ba293be5272b4e836670f5cf2814caa6a91ea",
+      "bytes": 29672,
+      "mtime_ns": 1792707489400778161,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/消息面/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/盘中分析/20261023.md",
+      "sha256": "78bb5415f1a88979c96e7ed76866d3e0ae847ab35ae05430ea053c245ac3b7c6",
+      "bytes": 33318,
+      "mtime_ns": 1792729850140799648,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/盘中分析/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/盘前预案/20261023.md",
+      "sha256": "857e74506f75f03c37bc2a5453c227d4e7ab72eb82831d28904f7938d535bd32",
+      "bytes": 18662,
+      "mtime_ns": 1792725187885272195,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/盘前预案/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/竞价判断/20261023.md",
+      "sha256": "fd31946c7b32dcf6984dd291e533d6f1a4ed6afcb9c28ae16fe740cd958e47f2",
+      "bytes": 3555,
+      "mtime_ns": 1792719101860636806,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/竞价判断/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/群聊情绪/20261023.md",
+      "sha256": "fa443425e6fe2de0c314b49bbcb189d6de5415d5fff83a6d078b19ce776b7a4c",
+      "bytes": 16559,
+      "mtime_ns": 1792708510008713615,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/群聊情绪/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/翻多检测/20261023.md",
+      "sha256": "6133fe8da95f8ebf108c7bdd95d16958eb9296531a1f560634eb55f0f9f226ee",
+      "bytes": 915,
+      "mtime_ns": 1792726858600762630,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/翻多检测/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/资金面/20261023.md",
+      "sha256": "39e39094db1b8e1c58434389dca922151fc230efd828d2c47bedeb5b9116824e",
+      "bytes": 33600,
+      "mtime_ns": 1792708148171134907,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/资金面/20261023.md"
+    },
+    {
+      "path": "chzl_kg/投研交易/风格研判/20261023.md",
+      "sha256": "54b3191fbbbfba149c63d426c718676b2a57091e8cde1d8fe45816033f5c142f",
+      "bytes": 9823,
+      "mtime_ns": 1792707814484072185,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/chzl_kg/投研交易/风格研判/20261023.md"
+    },
+    {
+      "path": "data/health/research_pipeline_20261023.json",
+      "sha256": "0f098fcafb31860bb38174fd56e8e0fb53599abe1c4c22c41ee52793f30a99ef",
+      "bytes": 5571,
+      "mtime_ns": 1792709674399308528,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/health/research_pipeline_20261023.json"
+    },
+    {
+      "path": "data/plans/20261023/auction_amendment.json",
+      "sha256": "9bb7f6cdf88c4d8973d9a2120c08107f25de0103794bf9195452d2094879323a",
+      "bytes": 1853,
+      "mtime_ns": 1792719101834892190,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/plans/20261023/auction_amendment.json"
+    },
+    {
+      "path": "data/plans/20261023/midday_amendment.json",
+      "sha256": "e66948ead11121b79aa33698b5be161dc2ca1ebeca55676a75c72e234821e82b",
+      "bytes": 2531,
+      "mtime_ns": 1792726927103129361,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/plans/20261023/midday_amendment.json"
+    },
+    {
+      "path": "data/plans/20261023/watchlist_plan.json",
+      "sha256": "9dde0a2d28013f3d1fb0e93573bf53ba6fa17e5c133c92aab7d68b598359586e",
+      "bytes": 57078,
+      "mtime_ns": 1792709651086783800,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/plans/20261023/watchlist_plan.json"
+    },
+    {
+      "path": "data/raw/20261023/manifest.json",
+      "sha256": "2bd01e9debe6154eeeaee3f832e10ae268b6c9296babea569c9c7157a2dd1b0b",
+      "bytes": 4932,
+      "mtime_ns": 1792706627837570208,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/raw/20261023/manifest.json"
+    },
+    {
+      "path": "data/research/20261023/R1_style.json",
+      "sha256": "f1a6a5c2ab565f6579a03d6cf38fbb31f95a8444bc949cbf3bcfa6836e402b65",
+      "bytes": 25206,
+      "mtime_ns": 1792707724034720645,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/R1_style.json"
+    },
+    {
+      "path": "data/research/20261023/R2_main_sectors.json",
+      "sha256": "745efba341f9a3f65200a8111427318e920f429fc85a3d3041998e734a3d0b23",
+      "bytes": 31540,
+      "mtime_ns": 1792708932525697084,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/R2_main_sectors.json"
+    },
+    {
+      "path": "data/research/20261023/R3_sentiment.json",
+      "sha256": "5520c9618dcdfeca4f76004901678f792a1c5579a235059444954988e20e9df6",
+      "bytes": 70099,
+      "mtime_ns": 1792708409856289242,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/R3_sentiment.json"
+    },
+    {
+      "path": "data/research/20261023/R4_news.json",
+      "sha256": "02e91dfa2a1dd5d05563f2f4d5241ea4e720e437ef87ac4fb080dbc941b222fd",
+      "bytes": 154811,
+      "mtime_ns": 1792707489392367643,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/R4_news.json"
+    },
+    {
+      "path": "data/research/20261023/R5_stock_profiles.json",
+      "sha256": "4e699d5f118dca8c7a9d5516007de983390da6a7dc4169f25867bfa96960bd70",
+      "bytes": 5197,
+      "mtime_ns": 1792709128153224817,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/R5_stock_profiles.json"
+    },
+    {
+      "path": "data/research/20261023/R6_devil_advocate.json",
+      "sha256": "e626f35c9587e54f5a1a4c6204882d28c6904d954ea71e90dcc1ea305efba025",
+      "bytes": 11073,
+      "mtime_ns": 1792709259846142326,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/R6_devil_advocate.json"
+    },
+    {
+      "path": "data/research/20261023/R7_capital_flow_20261023.json",
+      "sha256": "737ea61c637a86ec4f16e2a1f52957fff643a8f93c9342767194e15c30176187",
+      "bytes": 744302,
+      "mtime_ns": 1792708148161481791,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/R7_capital_flow_20261023.json"
+    },
+    {
+      "path": "data/research/20261023/R7_live_evidence_20261023.json",
+      "sha256": "9b6d1c3020d1f136c049a1c61396546bd86e52f9ba5276a4ebc5b71d48f8c439",
+      "bytes": 6636963,
+      "mtime_ns": 1792708148164786177,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/R7_live_evidence_20261023.json"
+    },
+    {
+      "path": "data/research/20261023/R7_validation_20261023.json",
+      "sha256": "bc7ffe2107c853009c57d190cec11f1f1a3e3b404b60b938b9239bd4dd044834",
+      "bytes": 1122,
+      "mtime_ns": 1792708148165693805,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/R7_validation_20261023.json"
+    },
+    {
+      "path": "data/research/20261023/_r1_online_inputs.json",
+      "sha256": "ca0b64bef411256b8e0d331f85845c1a0443b7ce2dff01f2d297b30903cfbf00",
+      "bytes": 4039,
+      "mtime_ns": 1792707447801779269,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/_r1_online_inputs.json"
+    },
+    {
+      "path": "data/research/20261023/emotion_cycle.json",
+      "sha256": "276bba89f8b599181d2f00de1ba2ec7d3a488803a834532fd18f150e18ae4458",
+      "bytes": 715,
+      "mtime_ns": 1792706626293200490,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/emotion_cycle.json"
+    },
+    {
+      "path": "data/research/20261023/emotion_cycle_closed.json",
+      "sha256": "2ede4819ed4008884625b7553514b9f5e04ea30e36f60d086890544870847a8d",
+      "bytes": 818,
+      "mtime_ns": 1792706626293555704,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/emotion_cycle_closed.json"
+    },
+    {
+      "path": "data/research/20261023/mainline_lifecycle.json",
+      "sha256": "eec92faa97860bc94c77865de1a9367eb30d8120b582c676cb0e30c1a23cc655",
+      "bytes": 316,
+      "mtime_ns": 1792706626293827958,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/mainline_lifecycle.json"
+    },
+    {
+      "path": "data/research/20261023/research_summary.json",
+      "sha256": "b529273d5b606d6bffc0945f4bd5196e9617d7af152390aff9eea3f509321d2c",
+      "bytes": 3255,
+      "mtime_ns": 1792709351213391005,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/research_summary.json"
+    },
+    {
+      "path": "data/research/20261023/retreat_reversal.json",
+      "sha256": "e03f58c5eacc0ee1ed3399319cd7728857e1f12d26a5fc7440cec3c53769aa69",
+      "bytes": 15892,
+      "mtime_ns": 1792726858600304958,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/research/20261023/retreat_reversal.json"
+    },
+    {
+      "path": "data/runtime/watchlist_plan_20261023.json",
+      "sha256": "9dde0a2d28013f3d1fb0e93573bf53ba6fa17e5c133c92aab7d68b598359586e",
+      "bytes": 57078,
+      "mtime_ns": 1792709674167995040,
+      "backup": "chzl_kg/系统进化/backups/2026-10-23-production-recovery-before/files/data/runtime/watchlist_plan_20261023.json"
+    }
+  ],
+  "file_count": 35
+}

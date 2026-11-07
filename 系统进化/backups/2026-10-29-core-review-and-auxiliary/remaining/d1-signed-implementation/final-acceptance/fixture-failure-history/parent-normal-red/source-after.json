@@ -1,0 +1,10 @@
+{
+  "scripts/plan/ensure_watchlist_plan.py": "ccaef81a65a774336bcfa6ab20d6cc404a7786c899d077c38ab5bb3ed334d650",
+  "tests/pipeline/test_d1_selective_reassessment.py": "c44a732a85e844021e9d3427da112e2d6f49fd418ee3a8bf19e315374cc1462f",
+  "scripts/research/pipeline_state.py": "7390067f5298fe69ebc97e3770a5b503101db5067de260dcf6e7f6f84bcf83ee",
+  "scripts/research/pipeline_artifacts.py": "b7e1c4913ad564f96c2556da9fa180d121c7f8f71b7affc76ce28e9fd9f12384",
+  "scripts/research/build_research_summary.py": "afd5a5b4ea09ed12f3ad4c3ad3fe456ae3312f01759c911d1e782d0669c67c44",
+  "scripts/research/native_usage.py": "a1dd43f16d814ee9c75387103be2f07c4cd708d7aac8fe7df01eb3aaa7e7c1c0",
+  "scripts/research/run_research_shell.sh": "b146e3923ceef93e6dc9953532c6afe69fa0319c7f040fdc34c29b80a8e3759b",
+  "tests/pipeline/test_r6_local_revision.py": "bfafcb87a13bee6722e3c89b69aa50df18d09edb688f0003384327e7c1199b3a"
+}

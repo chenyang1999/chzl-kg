@@ -1,0 +1,1845 @@
+{
+  "exit_code": 0,
+  "cases": [
+    {
+      "id": "tests.pipeline.test_r6_consumer_continuation::test_typed_single_item_completion_is_consumed_without_global_pass",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_r6_consumer_continuation::test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean[missing_mode]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_r6_consumer_continuation::test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean[bad_ref]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_r6_consumer_continuation::test_typed_matrix_cannot_fall_back_to_legacy_positive_boolean[hard_veto]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_r6_consumer_continuation::test_selective_owner_receives_actual_bound_auxiliary_payloads",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_r6_consumer_continuation::test_selective_owner_receives_unavailable_as_gaps_not_empty_success",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_r6_consumer_continuation::test_available_auxiliary_drift_still_prevents_model_transport",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_real_detector_cli_to_runtime_and_duplicate",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_cli_rejection_preserves_last_plan[exit]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_cli_rejection_preserves_last_plan[empty]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_cli_rejection_preserves_last_plan[protected]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_cli_rejection_preserves_last_plan[old]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_cli_rejection_preserves_last_plan[missing_md]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_cli_rejection_preserves_last_plan[coverage]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_cli_rejection_preserves_last_plan[all_pass]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_cli_rejection_preserves_last_plan[drift]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_direct_event_cli_refuses_bad_binding[future]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_direct_event_cli_refuses_bad_binding[wrong_day]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_direct_event_cli_refuses_bad_binding[unknown]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_direct_event_cli_refuses_bad_binding[source_drift]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_direct_event_cli_refuses_bad_binding[event_version]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_legacy_default_detector_never_launches_owner",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_validated_delivery_failure_retries_without_model",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_proposed_wrapper_overlay_uses_real_detector_entry",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_event_cli_future_weekend_is_rejected_before_lock",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_bad_plan_does_not_erase_detection[{broken]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_bad_plan_does_not_erase_detection[[]]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_bad_plan_does_not_erase_detection[summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_missing_index_is_not_a_third_core_gate",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_real_shape_partial_and_negative_evidence_prompt",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_inactive_protected_is_not_a_blocker[False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_inactive_protected_is_not_a_blocker[True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_retained_is_not_new_stock_approval",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_canonical_write_failure_preserves_previous_pair[json_io]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_canonical_write_failure_preserves_previous_pair[md_io]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_retry_rejects_tampered_result_md[published]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_retry_rejects_tampered_result_md[validated]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_failed_json_never_rolls_back_another_writer[json_io_other_md]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_failed_json_never_rolls_back_another_writer[json_io_new_json]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_all_known_market_conditions_clear_without_budget_expansion",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_real_r6_rejection_or_review_gap_cannot_clear[evidence0]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_real_r6_rejection_or_review_gap_cannot_clear[evidence1]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_event_time_quality_is_core_first_but_future_index_rejected[breadth]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_event_time_quality_is_core_first_but_future_index_rejected[yesterday_lu_quality]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_event_time_quality_is_core_first_but_future_index_rejected[index]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_r6_formal_audit_not_r5_invented_status_controls_coverage",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_intraday_event_reassessment::test_failed_raw_proposal_is_retained",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_old_six_and_trusted_local_r6_actually_reach_d1",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[none]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[mtime]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[ready_summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[unbound_original]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[wrong_owner]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[forged_revision]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[R4_drift]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[receipt_drift]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_unchanged_unbound_forged_or_drifted_never_transport[env_run]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[exit]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[empty]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[invalid_json]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[all_pass]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[budget]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[missing_budget]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[user_ban]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[pool]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[exit_rule]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[entry_rule]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[consent]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[hard_reject]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[drift]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[owner_drift]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[old_generated]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[context_ban]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_failed_or_unauthorized_candidate_preserves_last_valid_plan[wrong_binding]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_pending_no_llm_never_uses_python_or_model",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_original_identity_and_terminal_receipts_cannot_be_reinvented[missing_original_attempt]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_original_identity_and_terminal_receipts_cannot_be_reinvented[original_input_drift]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_original_identity_and_terminal_receipts_cannot_be_reinvented[reissued_terminal]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_original_identity_and_terminal_receipts_cannot_be_reinvented[reissued_mtime_only]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_selective_publication_io_failure_restores_only_own_artifacts[canonical]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_selective_publication_io_failure_restores_only_own_artifacts[human]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_selective_publication_io_failure_restores_only_own_artifacts[runtime]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_selective_timeout_kills_synthetic_child_and_retains_plan",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_original_event_branch_ast_and_dispatch_unchanged",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_multiple_trusted_r6_updates_do_not_require_d1_between_each[False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_multiple_trusted_r6_updates_do_not_require_d1_between_each[True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_intermediate_r6_reception_drift_cannot_supply_inheritance",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_real_normal_shell_delivery_can_later_use_selective_reassessment",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_normal_capture_refuses_unbound_or_changed_preflight[missing]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_normal_capture_refuses_unbound_or_changed_preflight[wrong_version]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_normal_capture_refuses_unbound_or_changed_preflight[duplicate]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_normal_capture_refuses_unbound_or_changed_preflight[wrong_owner]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_new_capture_cannot_backfill_an_old_llm_delivery",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_actual_summary_and_consumers_preserve_main_and_auxiliary_identity",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_only_reviewed_paths_read_and_default_never_promotes_adapter",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[missing]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[wrong_date]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[missing_date]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[not_object]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[bad_json]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[symlink]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[bytes]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[mtime]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[deleted]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[date]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[path]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[hash]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[size]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[schema]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[run]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[main_version]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[main_attempt]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[receipt]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[projection]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_reviewed_caller_cannot_expand_approved_scope[extra]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_reviewed_caller_cannot_expand_approved_scope[wrong_date]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_reviewed_caller_cannot_expand_approved_scope[traversal]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_reviewed_caller_cannot_expand_approved_scope[absolute]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_reviewed_caller_cannot_expand_approved_scope[wildcard]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_saved_summary_pre_and_post_delivery_rechecks_bound_versions",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_bound_auxiliary_inputs::test_cli_uses_reviewed_code_for_actual_binding_and_preflight",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_auxiliary_caller_wiring::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[valid]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_auxiliary_caller_wiring::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[missing]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_auxiliary_caller_wiring::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[old-summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_auxiliary_caller_wiring::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[drift-before]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_auxiliary_caller_wiring::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[drift-during]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_auxiliary_caller_wiring::test_real_safety_net_rechecks_approved_auxiliary_before_acceptance[rebind-during]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_auxiliary_caller_wiring::test_actual_cli_preflight_emits_same_summary_fingerprint",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_auxiliary_caller_wiring::test_prior_session_attention_window_is_preserved_not_rejected_or_relabelled",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_auxiliary_caller_wiring::test_shell_rechecks_same_input_version_before_attempt_acceptance",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_real_consumer_preserves_partial_objects_zero_and_veto",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_real_consumer_rejects_version_or_identity_drift[bytes]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_real_consumer_rejects_version_or_identity_drift[run]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_real_consumer_rejects_version_or_identity_drift[attempt]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_real_consumer_rejects_version_or_identity_drift[receipt]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_real_consumer_rejects_version_or_identity_drift[mapping]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_real_consumer_rejects_version_or_identity_drift[projection]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_auxiliary_default_does_not_read_and_opt_in_is_not_d1_permission",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_auxiliary_adapter_rejects_outside_exact_candidate_scope[../.env]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_auxiliary_adapter_rejects_outside_exact_candidate_scope[/outside/attention_signals.json]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_auxiliary_adapter_rejects_outside_exact_candidate_scope[data/unapproved.json]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_actual_launch_prompts_keep_signed_read_and_write_boundaries[normal-shell]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_actual_launch_prompts_keep_signed_read_and_write_boundaries[safety-net]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_normal_and_safety_net_use_the_same_signed_read_boundary",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_r6_signed_contract_removes_blanket_gate_but_not_final_permission",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_d1_signed_auxiliary_contract_preserves_separate_event_reassessment",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_signed_input_review_contract::test_confirmed_required_review_scope_and_auxiliary_downgrade_are_explicit",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_legacy_auxiliary_binding_is_not_self_signed[False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_legacy_auxiliary_binding_is_not_self_signed[True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_standalone_delivery_does_not_invent_reusable_owner",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_owned_delivery_cannot_skip_failed_reuse_receipt",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[missing_summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[legacy_summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[primary_same_mtime]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[missing_primary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[wrong_run]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[attempt]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[corrupt_state]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[env_run]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[old_summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_retry_rejects_same_preflight_faults_before_transport[empty_state]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_valid_versioned_partial_and_zero_budget_delivery[True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_valid_versioned_partial_and_zero_budget_delivery[False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_valid_versioned_partial_and_zero_budget_delivery[True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[primary_same_mtime]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[missing_summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[wrong_run]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[attempt]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[old_summary]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_new_valid_summary_during_llm_cannot_switch_input_batch",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_standalone_cannot_deliver_after_new_run_appears",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_preflight_failure_preserves_rejected_llm_bytes[False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_preflight_failure_preserves_rejected_llm_bytes[True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_failed_preflight_does_not_add_rule_fallback_completeness_gate[False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_failed_preflight_does_not_add_rule_fallback_completeness_gate[True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[unready_live-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[unready_live-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[unready_live-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[unready_live-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[missing_generated-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[missing_generated-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[missing_generated-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[missing_generated-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[bad_pool-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[bad_pool-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[bad_pool-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[bad_pool-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[wrong_date-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[wrong_date-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[wrong_date-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[wrong_date-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[nested_source-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[nested_source-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[nested_source-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[nested_source-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_fallback-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_fallback-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_fallback-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_fallback-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_sources-False-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_sources-False-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_sources-True-False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_llm_is_preserved_not_certified[conflicting_sources-True-True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-absent]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-rejected_llm]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-fallback]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-absent]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-rejected_llm]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-fallback]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-removed-absent]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-removed-rejected_llm]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-removed-fallback]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-absent]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-rejected_llm]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-fallback]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-absent]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-rejected_llm]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-fallback]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-removed-absent]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-removed-rejected_llm]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-removed-fallback]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_real_absence_still_allows_conspicuous_rule_placeholder[False]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_real_absence_still_allows_conspicuous_rule_placeholder[True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_rejected_old_llm_can_be_repaired_by_real_retry",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_plan_interim_preservation::test_missing_research_does_not_fabricate_or_launch",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_native_usage_observation::test_exact_shell_candidate_uses_native_channel_on_each_attempt[permanent-7]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_native_usage_observation::test_exact_shell_candidate_uses_native_channel_on_each_attempt[transient-21]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    }
+  ],
+  "source_unchanged": true,
+  "index_unchanged": true,
+  "guard_violations": [],
+  "guard_pids": [
+    48779,
+    48804,
+    48812,
+    48816,
+    48819,
+    48821,
+    49040,
+    49046,
+    49059,
+    49061,
+    49062,
+    49063,
+    49067,
+    49071,
+    49074,
+    49103,
+    49125,
+    49128,
+    49138,
+    49140,
+    49141,
+    49142,
+    49143,
+    49145,
+    49151,
+    49152,
+    49153,
+    49158,
+    49159,
+    49160,
+    49170,
+    49173,
+    49174,
+    49176,
+    49180,
+    49181,
+    49182,
+    49183,
+    49186,
+    49190,
+    49191,
+    49192,
+    49201,
+    49202,
+    49205,
+    49209,
+    49210,
+    49211,
+    49216,
+    49218,
+    49219,
+    49232,
+    49235,
+    49236,
+    49237,
+    49238,
+    49240,
+    49241,
+    49242,
+    49243,
+    49248,
+    49249,
+    49253,
+    49255,
+    49264,
+    49272,
+    49274,
+    49276,
+    49278,
+    49280,
+    49282,
+    49283,
+    49284,
+    49286,
+    49289,
+    49290,
+    49291,
+    49292,
+    49381,
+    49383,
+    49398,
+    49399,
+    49400,
+    49401,
+    49402,
+    49403,
+    49404,
+    49405,
+    49406,
+    49407,
+    49408,
+    49409,
+    49410,
+    49411,
+    49412,
+    49413,
+    49414,
+    49415,
+    49421,
+    49422,
+    49423,
+    49425,
+    49427,
+    49428,
+    49432,
+    49437,
+    49438,
+    49439,
+    49440,
+    49442,
+    49444,
+    49449,
+    49453,
+    49454,
+    49455,
+    49456,
+    49457,
+    49458,
+    49464,
+    49465,
+    49466,
+    49467,
+    49468,
+    49469,
+    49471,
+    49472,
+    49473,
+    49478,
+    49480,
+    49481,
+    49482,
+    49483,
+    49484,
+    49485,
+    49486,
+    49488,
+    49493,
+    49498,
+    49513,
+    49514,
+    49515,
+    49516,
+    49517,
+    49518,
+    49519,
+    49520,
+    49521,
+    49522,
+    49523,
+    49524,
+    49525,
+    49526,
+    49527,
+    49532,
+    49533,
+    49536,
+    49537,
+    49538,
+    49539,
+    49540,
+    49541,
+    49542,
+    49543,
+    49544,
+    49545,
+    49546,
+    49547,
+    49548,
+    49553,
+    49554,
+    49557,
+    49558,
+    49559,
+    49560,
+    49561,
+    49562,
+    49563,
+    49564,
+    49565,
+    49566,
+    49567,
+    49568,
+    49569,
+    49570,
+    49571,
+    49572,
+    49578,
+    49579,
+    49581,
+    49582,
+    49583,
+    49586,
+    49587,
+    49589,
+    49592,
+    49597,
+    49601,
+    49604,
+    49605,
+    49606,
+    49607,
+    49608,
+    49612,
+    49616,
+    49617,
+    49618,
+    49619,
+    49620,
+    49624,
+    49625,
+    49626,
+    49627,
+    49628,
+    49631,
+    49633,
+    49634,
+    49635,
+    49636,
+    49637,
+    49641,
+    49645,
+    49647,
+    49648,
+    49650,
+    49652,
+    49655,
+    49656,
+    49657,
+    49658,
+    49659,
+    49662,
+    49663,
+    49664,
+    49665,
+    49666,
+    49667,
+    49673,
+    49674,
+    49675,
+    49676,
+    49677,
+    49680,
+    49681,
+    49682,
+    49683,
+    49684,
+    49687,
+    49688,
+    49689,
+    49690,
+    49691,
+    49692,
+    49695,
+    49696,
+    49697,
+    49702,
+    49704,
+    49705,
+    49706,
+    49707,
+    49708,
+    49709,
+    49710,
+    49712
+  ],
+  "native_child_pids": [
+    48784,
+    48795,
+    48802,
+    48804,
+    48812,
+    48816,
+    48819,
+    48821,
+    48824,
+    48829,
+    48834,
+    48837,
+    48839,
+    48846,
+    48849,
+    48852,
+    48854,
+    48865,
+    48867,
+    48871,
+    48873,
+    48877,
+    48879,
+    48883,
+    48890,
+    48894,
+    48898,
+    48900,
+    48907,
+    48911,
+    48919,
+    48935,
+    48951,
+    48956,
+    48962,
+    48965,
+    48969,
+    48973,
+    48980,
+    48983,
+    48987,
+    48993,
+    49005,
+    49010,
+    49018,
+    49023,
+    49036,
+    49039,
+    49040,
+    49046,
+    49059,
+    49061,
+    49062,
+    49063,
+    49067,
+    49071,
+    49074,
+    49103,
+    49125,
+    49128,
+    49138,
+    49140,
+    49141,
+    49142,
+    49143,
+    49145,
+    49151,
+    49152,
+    49153,
+    49158,
+    49159,
+    49160,
+    49170,
+    49173,
+    49174,
+    49176,
+    49180,
+    49181,
+    49182,
+    49183,
+    49186,
+    49190,
+    49191,
+    49192,
+    49201,
+    49202,
+    49205,
+    49209,
+    49210,
+    49211,
+    49216,
+    49218,
+    49219,
+    49232,
+    49235,
+    49236,
+    49237,
+    49238,
+    49240,
+    49241,
+    49242,
+    49243,
+    49248,
+    49249,
+    49253,
+    49255,
+    49264,
+    49280,
+    49291,
+    49292,
+    49404,
+    49405,
+    49406,
+    49423,
+    49439,
+    49455,
+    49466,
+    49519,
+    49520,
+    49521,
+    49540,
+    49541,
+    49542,
+    49561,
+    49562,
+    49563,
+    49581,
+    49589,
+    49605,
+    49618,
+    49626,
+    49634,
+    49648,
+    49657,
+    49664,
+    49675,
+    49682,
+    49689
+  ],
+  "unguarded_native_children": [
+    48784,
+    48795,
+    48802,
+    48824,
+    48829,
+    48834,
+    48837,
+    48839,
+    48846,
+    48849,
+    48852,
+    48854,
+    48865,
+    48867,
+    48871,
+    48873,
+    48877,
+    48879,
+    48883,
+    48890,
+    48894,
+    48898,
+    48900,
+    48907,
+    48911,
+    48919,
+    48935,
+    48951,
+    48956,
+    48962,
+    48965,
+    48969,
+    48973,
+    48980,
+    48983,
+    48987,
+    48993,
+    49005,
+    49010,
+    49018,
+    49023,
+    49036,
+    49039
+  ]
+}

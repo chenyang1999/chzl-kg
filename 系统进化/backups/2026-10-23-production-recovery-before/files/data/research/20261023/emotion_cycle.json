@@ -1,0 +1,23 @@
+{
+  "trade_date": "20261023",
+  "phase": "main_down",
+  "phase_name": "主跌",
+  "phase_action": "空仓/切换新题材一日游；连冰后尾盘试错博反弹",
+  "confidence": 0.88,
+  "metrics": {
+    "premium": 0.0137,
+    "ladder": 5,
+    "break_rate": 0.4107,
+    "limit_up_count": 33,
+    "limit_down_count": 48,
+    "_data_complete": true,
+    "metrics_date": "20261022",
+    "intraday_fallback": true
+  },
+  "phase_scores": {},
+  "evidence": [
+    "[时序守卫] 盘前运行，按 20261022(T-1) 收盘口径判定；今日竞价后可由 P1 增量校准",
+    "跌停 48 家 ≥ 20（或 ≥12 且炸板率 41%≥35%）→ 亏钱扩散，判主跌"
+  ],
+  "generated_at": "2026-10-23T06:03:46+08:00"
+}

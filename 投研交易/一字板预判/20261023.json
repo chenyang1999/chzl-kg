@@ -1,0 +1,87 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261023",
+  "next_day": "20261026",
+  "generated_at": "2026-10-23T22:00:48+08:00",
+  "n_total": 82,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "600838.SH",
+      "name": "上海九百",
+      "industry": "一般零售",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 1.09,
+      "pct_chg": 10.0,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 44.1,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.1亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "002241.SZ",
+      "name": "歌尔股份",
+      "industry": "消费电子",
+      "theme": "",
+      "limit_times": 1,
+      "fd_amount_yi": 3.32,
+      "pct_chg": 10.0,
+      "first_time": "141312",
+      "open_times": 0,
+      "float_mv_yi": 730.9,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.3亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002354.SZ",
+      "name": "天娱数科",
+      "industry": "广告营销",
+      "theme": "黑神话悟空概念、跨境电商、词元概念",
+      "limit_times": 1,
+      "fd_amount_yi": 3.27,
+      "pct_chg": 10.0,
+      "first_time": "93712",
+      "open_times": 2,
+      "float_mv_yi": 130.6,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.3亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "688836.SH",
+      "name": "宇树科技-W",
+      "industry": "自动化设",
+      "theme": "",
+      "limit_times": 1,
+      "fd_amount_yi": 4.04,
+      "pct_chg": 20.0,
+      "first_time": "141504",
+      "open_times": 0,
+      "float_mv_yi": 187.7,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.0亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停82只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}
