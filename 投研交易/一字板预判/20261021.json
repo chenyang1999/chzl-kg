@@ -1,0 +1,106 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261021",
+  "next_day": "20261022",
+  "generated_at": "2026-10-21T22:00:49+08:00",
+  "n_total": 50,
+  "n_candidates": 5,
+  "candidates": [
+    {
+      "ts_code": "603278.SH",
+      "name": "大业股份",
+      "industry": "通用设备",
+      "theme": "高端装备、轮胎、生物质能发电",
+      "limit_times": 4,
+      "fd_amount_yi": 4.01,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 45.1,
+      "prob_yizi": 32.0,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=4.0亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002724.SZ",
+      "name": "海洋王",
+      "industry": "照明设备",
+      "theme": "",
+      "limit_times": 4,
+      "fd_amount_yi": 2.0,
+      "pct_chg": 10.04,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 57.7,
+      "prob_yizi": 28.8,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=2.0亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002929.SZ",
+      "name": "润建股份",
+      "industry": "通信服务",
+      "theme": "虚拟电厂、英伟达概念、腾讯AI概念",
+      "limit_times": 3,
+      "fd_amount_yi": 1.46,
+      "pct_chg": 9.99,
+      "first_time": "93557",
+      "open_times": 1,
+      "float_mv_yi": 121.6,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.5亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "600178.SH",
+      "name": "东安动力",
+      "industry": "汽车零部件",
+      "theme": "黑龙江自贸区、飞行汽车(eVTOL)、长安汽车概念",
+      "limit_times": 4,
+      "fd_amount_yi": 1.6,
+      "pct_chg": 9.99,
+      "first_time": "92500",
+      "open_times": 1,
+      "float_mv_yi": 63.7,
+      "prob_yizi": 26.2,
+      "prob_up": 38.1,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.6亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "600293.SH",
+      "name": "三峡新材",
+      "industry": "玻璃玻纤",
+      "theme": "光伏辅材",
+      "limit_times": 2,
+      "fd_amount_yi": 4.99,
+      "pct_chg": 9.95,
+      "first_time": "92501",
+      "open_times": 0,
+      "float_mv_yi": 55.1,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=5.0亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停50只，筛出 5 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

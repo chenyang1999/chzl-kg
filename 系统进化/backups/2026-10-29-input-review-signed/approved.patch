@@ -1,0 +1,81 @@
+--- a/scripts/research/run_research_shell.sh
++++ b/scripts/research/run_research_shell.sh
+@@ -297,7 +297,7 @@
+ 
+ echo "[$(date '+%H:%M:%S')] Batch 5: D1"
+ 
+-D1_PROMPT="按 main_decision_v1 skill 综合 R1-R7 全部产出 + 四象限叉乘 + 数据源审计。消费 R6 hard_rejects 从 execution_pool 剔除。trade_date=${TRADE_DATE}。仅使用本次 research_summary.json artifacts 列出的主产物；失败或缺研究不视为通过，不读同日旧文件冒充本次研究。decision_source 明确标注 llm。产出 data/plans/${TRADE_DATE}/watchlist_plan.json + chzl_kg/投研交易/盘前预案/${TRADE_DATE}.md 散文体。输出范围仅以上核心 JSON 与 KG 主 MD；不写 runtime 副本或其他附加 MD，若 skill 输出要求超出 profile 白名单则报告该项阻塞，勿越权。完成后退出。"
++D1_PROMPT="按 main_decision_v1 skill 综合 R1-R7 全部产出 + 四象限叉乘 + 数据源审计。消费 R6 hard_rejects 从 execution_pool 剔除。trade_date=${TRADE_DATE}。主研究仅使用本次 research_summary.json artifacts 列出的主产物，并沿用 input_manifest 的当前 run/attempt/receipt/hash 校验；失败或缺研究不视为通过，不读同日旧文件冒充本次研究。data/user_preferences.yaml 仅作既有只读政策输入，不是另一批研究。辅助材料仅可读取经用户另签、由受审调用方显式给出的精确路径与版本；当前 auxiliary_candidates 的 pending_approval 或 approved_adapter_only 均不构成 D1 读取授权。未提供已签授权与版本绑定时，不展开错题/观察通配符，不直接读 attention/emotion/calendar 等旁路，也不调用工具补抓；记录相应 skill 输入义务受阻并交回 owner，不把未读当无风险。读取许可不扩大写入范围或交易权限。decision_source 明确标注 llm。产出 data/plans/${TRADE_DATE}/watchlist_plan.json + chzl_kg/投研交易/盘前预案/${TRADE_DATE}.md 散文体。输出范围仅以上核心 JSON 与 KG 主 MD；不写 runtime 副本或其他附加 MD，若 skill 输出要求超出 profile 白名单则报告该项阻塞，勿越权。完成后退出。"
+ 
+ if run_agent "D1" "main_decision_v1" "$ROOT/data/plans/${TRADE_DATE}/watchlist_plan.json" "$D1_PROMPT" "canghai-plan"; then
+     if [[ "$DRY_RUN" != "dry-run" ]]; then
+--- a/scripts/plan/ensure_watchlist_plan.py
++++ b/scripts/plan/ensure_watchlist_plan.py
+@@ -67,7 +67,7 @@
+ _LLM_PROMPT = (
+     "按 main_decision_v1 skill 综合 R1-R7 全部产出 + 四象限叉乘 + 数据源审计。"
+     "消费 R6 hard_rejects 从 execution_pool 剔除。trade_date={date}。"
+-    "仅使用本次 research_summary.json artifacts 列出的主产物；失败或缺研究不视为通过，不读同日旧文件冒充本次研究。"
++    "主研究仅使用本次 research_summary.json artifacts 列出的主产物，并沿用 input_manifest 的当前 run/attempt/receipt/hash 校验；失败或缺研究不视为通过，不读同日旧文件冒充本次研究。data/user_preferences.yaml 仅作既有只读政策输入，不是另一批研究。辅助材料仅可读取经用户另签、由受审调用方显式给出的精确路径与版本；当前 auxiliary_candidates 的 pending_approval 或 approved_adapter_only 均不构成 D1 读取授权。未提供已签授权与版本绑定时，不展开错题/观察通配符，不直接读 attention/emotion/calendar 等旁路，也不调用工具补抓；记录相应 skill 输入义务受阻并交回 owner，不把未读当无风险。读取许可不扩大写入范围或交易权限。"
+     "产出 data/plans/{date}/watchlist_plan.json + chzl_kg/投研交易/盘前预案/{date}.md 散文体。"
+     "decision_source 明确标注 llm；输出范围仅以上核心 JSON 与 KG 主 MD；不写 runtime 副本或其他附加 MD，超出 profile 白名单的输出须报告阻塞，不越权。完成后退出。"
+ )
+--- a/skills/main_decision_v1/SKILL.md
++++ b/skills/main_decision_v1/SKILL.md
+@@ -35,6 +35,15 @@
+ ---
+ 
+ ## Inputs（全部 pull-based，只读）
++
++### 本轮版本与辅助读取边界（优先于下文路径示例及历史必读条款）
++
++- 主研究版本由实际当前研究 owner 的 run_id、summary 交付回执及其 input_manifest 共同定位；复用 `verify_saved_inputs` / `consume_authorized_inputs` 的原校验，核对 artifacts、run/attempt、receipt 和内容摘要。启动前与交付后必须同版；目录同日、mtime 更新、正文自报“本批”均不能替代绑定。辅助输入不得覆盖主研究版本或混入 artifacts.R1–R7。
++- `data/user_preferences.yaml` 是既有只读政策输入，须保留实际读取版本，不借本条改值。技能/契约读取与业务辅助材料读取分开；下列历史路径、工具示例和“必读”义务本身不是本轮授权。
++- 错题、人气、事件日历、观察材料等，仅消费用户已明确签核、由受审调用方提供的精确路径、版本摘要及适用时点集合；启动/结束都核同一集合。复用现有辅助适配器不等于已接通生产：`auxiliary_candidates` 的 `pending_approval` / `approved_adapter_only` 不授予 D1 权限，模型或报告中的 authorized=true 也不能自签。
++- 未获许可或无版本绑定：不展开 corrections/observation 等通配符，不现场抓数/算新研究，不调用交易账户；在本轮原文和既有 meta 文本留具体缺项及 owner，不能把未读解释成“无错题/无人气/无大事件”。其中必要门禁未完成时保留未就绪、禁新与重评义务；不以新增默认结论填空。
++- 事件日历尚无此轮已批准的规范输入路径，不假定新建 calendar 文件或任选历史报告。辅助输入的 owner、精确路径集合、时点与失效规则需另签；未签继续受阻。只读许可与核心 JSON/KG 主 MD 的写许可分开，所有原交易门禁不变。
++
+ 
+ ### 必填
+ 
+--- a/skills/analyze_devil_advocate_v1/SKILL.md
++++ b/skills/analyze_devil_advocate_v1/SKILL.md
+@@ -150,10 +150,25 @@
+ 
+ ### Step 1 · 加载 upstream + 可用性矩阵
+ 
+-构建 `upstream_usable: {R1..R7: bool}`（`status == complete`）。  
+-R2 不可用 → 直接产出降级 JSON（spec §6），`counter_arguments: []`。
+-
+-**不改变 complete-only**：研究观察有对象或上游 partial/degraded，不等于可直接通过正式反证；所需完整输入不足时继续标未完成及缺口。无逐票对象时如实 `candidates_evaluated: 0`，空 `hard_rejects` 只代表未形成否决，不代表全票审核通过；不凑对象、不用空反证解除禁新仓，也不把 skipped/degraded 自动改 complete。
++先核本批输入的日期、run/attempt、交付回执与内容版本，再按模式、对象、证据项判可用；不得仅因整份报告 partial/degraded 就抹掉已核证据，也不得仅因字段存在或整份 complete 就判证据有效。failed/skeleton、错批或无法追溯的材料不能作为正式证据。
++
++R2 中本批真实且结构合法的对象可进入审查，包括 partial 中已有对象；对象的主线/角色/适用窗口与缺口原样保留，不推定 execution_eligible。无对象时产出降级 JSON，`candidates_evaluated: 0`，并区分合法空对象与入口缺失。`upstream_usable` 保留为兼容摘要，不再承担逐模式“已通过”的含义。
++
++| 模式 | 最小必要证据（逐项核版本、对象、观察窗口和语义） | 缺失的局部结果与回送 owner |
++|---|---|---|
++| 1 数据源冲突 | R2 实际主张；分别核 R3 共振、R4 消息、R7 适用资金的对应证据 | 缺哪个交哪个 R；其余分支照审。未提供确认不能写为已证明不确认，冲突须有可比的实际证据 |
++| 2 一致性 | R1 风格判断与 R2 同窗口主线/风险主张 | 缺 R1→R1，缺对象/归属→R2；不能用 R5 缺口跳过此模式 |
++| 3 估值×主线 | R2 原角色/主线及 R5 对应估值事实和原陷阱检出依据 | 缺 R2→R2，缺估值→R5；不补默认估值、不新增阈值 |
++| 4 历史类比 | 已许可历史材料、真实样本与当前可比条件 | 无库/无读取许可继续 degraded，不编造；owner 为研究主控协调既有历史材料归属 |
++| 5 昨日预期兑现 | 已许可、具原时点的昨日 R6 条目与 E1 兑现证据，以及今日相似结构 | 缺昨日反证→R6，缺兑现→E1，缺今日结构→R2；没有 E1 不影响模式二已核事实 |
++| 6 霸榜出货 | R2 精确对象/板块关联；R3 显式 alert 证据；需要资金确认时核 R5 同票近5日主力净额与有效窗口 | alert 与净流出同时证实才按原规则 hard_reject；alert 已证实而资金未确认，仍按原条款 strong_suggest 并保留资金缺口；alert 未提供不是 false，更不是通过。缺 alert→R3，缺筹码资金→R5；R7 不默认替代 R5 口径 |
++| 7–10 既有扩展模式 | 分别为 R5 财务红旗检出事实；有效封板量/历史套牢区与市场统计；高度及晋级事实；对应商品与候选走势 | 对应 R5、R1/R2（市场事实）、R4/R7（原有跨资产材料），由研究主控核实际生产归属，不扩读/补抓。证据不够局部 degraded；原有 severity 冲突保留待用户决定，不借本表新授或删除硬否决权 |
++
++沿用 `patterns_status` 逐模式记录已核对象/证据定位、未完成项及 owner；个股结论沿用 `counter_arguments`。这是审计明细，不是新的交易许可字段。模式 executed 只表示该范围实际执行，不等于候选通过；部分结果保留，未完成仍 partial/degraded，不把整份标 complete。
++
++`candidates_evaluated` 只计确已对至少一个适用模式完成有据审查的去重对象数，同时在 `patterns_status` 分列每模式覆盖；研究对象数、已审对象数、必需审核完成数和硬否决数不能混用。空 `hard_rejects` 只代表尚未形成否决，不代表全票审核通过；无对象/零评估不得写“全绿”。逐票正式审核须覆盖经用户确认的全部必需模式；未签清单时不得以局部已审替代现有完整审核门禁。
++
++本变更只拆审查范围，不自动解除 no_trade、零预算或执行门禁；已形成的有效 hard_reject 仍必须保留并交 D1，不因其他模式降级而删除。R6 不给正向买入结论、不抓新数据、不扩读取范围。
+ 
+ ### Step 2 · 逐模式扫描
+ 
+@@ -174,7 +189,7 @@
+ ### Step 3 · 数量与质量
+ 
+ - 目标 **≥5 条** `counter_arguments`；不足则 `overall_conclusion: "今日反面证据不足(N条<5)，不硬凑"`  
+-- **即使全绿**也须产出：`overall_conclusion: "今日无重大反面证据"`  
++- 只有声明的审查范围及全部必需证据确已完成时，才可在该范围写“未发现重大反面证据”；否则明确“局部已审/仍有未完成”，不写全票通过。  
+ - 模式 4 无历史库、模式 5 无 E1 → 在 `patterns_status` 标注 `degraded`，**不编造**
+ 
+ ### Step 4 · 汇总 hard_rejects

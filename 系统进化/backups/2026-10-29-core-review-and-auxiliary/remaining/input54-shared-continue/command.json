@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a/.venv/bin/python",
+    "-B",
+    "/Users/chenyang/.hermes/cache/scratch/premarket-all-price-20261029/run_price_guarded.py",
+    "tests/pipeline/test_bound_auxiliary_inputs.py",
+    "tests/pipeline/test_signed_input_review_contract.py",
+    "tests/pipeline/test_d1_auxiliary_caller_wiring.py",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/premarket-all-parent-20261029/input54-shared-continue/cases",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/premarket-all-parent-20261029/input54-shared-continue/junit.xml",
+    "-q",
+    "--tb=short"
+  ],
+  "explicit_env": {
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PRICE_RUN_LABEL": "input54-shared-continue",
+    "TMPDIR": "/Users/chenyang/.hermes/cache/scratch"
+  }
+}

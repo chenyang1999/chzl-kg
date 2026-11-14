@@ -1,0 +1,106 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261103",
+  "next_day": "20261104",
+  "generated_at": "2026-11-03T22:00:38+08:00",
+  "n_total": 48,
+  "n_candidates": 5,
+  "candidates": [
+    {
+      "ts_code": "002086.SZ",
+      "name": "东方海洋",
+      "industry": "农产品加",
+      "theme": "食品安全、猴痘概念、海洋经济",
+      "limit_times": 4,
+      "fd_amount_yi": 2.16,
+      "pct_chg": 9.97,
+      "first_time": "92500",
+      "open_times": 3,
+      "float_mv_yi": 54.1,
+      "prob_yizi": 28.8,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=2.2亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "000995.SZ",
+      "name": "皇台酒业",
+      "industry": "白酒Ⅱ",
+      "theme": "白酒概念",
+      "limit_times": 3,
+      "fd_amount_yi": 1.38,
+      "pct_chg": 10.0,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 30.4,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.4亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "600261.SH",
+      "name": "阳光照明",
+      "industry": "照明设备",
+      "theme": "",
+      "limit_times": 4,
+      "fd_amount_yi": 1.99,
+      "pct_chg": 10.0,
+      "first_time": "92502",
+      "open_times": 5,
+      "float_mv_yi": 66.1,
+      "prob_yizi": 26.2,
+      "prob_up": 38.1,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=2.0亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002827.SZ",
+      "name": "高争民爆",
+      "industry": "化学制品",
+      "theme": "雅下水电概念、西藏水电概念、民爆概念",
+      "limit_times": 2,
+      "fd_amount_yi": 5.5,
+      "pct_chg": 10.0,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 173.0,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=5.5亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600892.SH",
+      "name": "大晟文化",
+      "industry": "游戏Ⅱ",
+      "theme": "网络游戏、手机游戏",
+      "limit_times": 2,
+      "fd_amount_yi": 2.49,
+      "pct_chg": 10.07,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 26.9,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.5亿 (一字率26%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停48只，筛出 5 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

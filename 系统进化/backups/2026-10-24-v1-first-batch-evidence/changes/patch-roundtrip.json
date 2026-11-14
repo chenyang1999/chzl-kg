@@ -1,0 +1,27 @@
+{
+  "commands": [
+    {
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/evidence-delivery-staging/changes/repair-only.patch"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/evidence-delivery-staging/changes/repair-only.patch"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "files_verified": 23,
+  "scratch_only": true
+}

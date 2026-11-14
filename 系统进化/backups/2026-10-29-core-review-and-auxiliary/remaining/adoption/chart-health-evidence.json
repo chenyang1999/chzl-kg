@@ -1,0 +1,1301 @@
+{
+  "audit_at": "2026-10-29T12:27:36.990582+08:00",
+  "scope": "bounded local read-only audit; scratch-only output; no DB/account/credential/network/model/production rerun",
+  "task_list": {
+    "path": "chzl_kg/系统进化/2026-10-29 盘前核验问题任务清单.md",
+    "count": 13,
+    "entries": [
+      {
+        "line": 25,
+        "text": "| CHART-01 | P0 | 修复出图错名单：保留partial中的真实候选，不自动回退固定旧名单 | 实际main接收所选候选；空候选零模型调用；单票失败不换票；同日缓存只补缺失；不修改原研究与买权 | **限定代码验收完成**：本会话14项独立离线回归通过；源码由并发会话唯一写者修改。degraded等其他状态的准入语义未在本项认证 |"
+      },
+      {
+        "line": 26,
+        "text": "| CHART-02 | P0 | 验证正常流水线实际采用选池修复 | 同批研究候选→出图请求→成功/失败记录→个股画像消费可对账；无关旧票不再被请求 | 待下一次正常运行证据；本次未补跑、未调用付费视觉服务 |"
+      },
+      {
+        "line": 27,
+        "text": "| REVIEW-01 | P0 | 拆分“未通过”的状态含义 | 展示未评估、证据不足、已评估不合格、已通过与交易受禁；正式评估数、研究对象数、硬否决数分别显示 | **限定显示修复验收完成**：主控双render入口24项通过；缺字段写未知，不从观察池补数。生产者尚未透传的审核计数仍待接线，不改资格或解除禁令 |"
+      },
+      {
+        "line": 28,
+        "text": "| REVIEW-02 | P0 | 按模式与逐票必要证据审查，处理整份complete-only入口过粗 | 某项辅助缺口不抹其他已核事实；每种模式明确必要输入，缺失时局部未完成；无证据不得算通过 | **限定规则/指令实施结项**：用户已确认四类必要风险与辅助可降级，R6技能/两份规格已统一；高位不单独硬否决、真实出货及财务合规否决保留。5项指令检查通过；真实模型及正常采用不在本项冒称完成 |"
+      },
+      {
+        "line": 29,
+        "text": "| PRICE-01 | P0 | 修复分歧买区与止损的几何矛盾 | 原始及舍入后止损均低于买区下沿；光洋/盈方所示反例被回归覆盖；不能修复时显式失败，不返回自相矛盾的可用值 | **限定修复验收完成**：非法几何返回明确失败，不生成执行触发/RR；13项新增及26项既有展开回归通过。合法替代价位仍属PRICE-02/03，不擅改阈值 |"
+      },
+      {
+        "line": 30,
+        "text": "| PRICE-02 | P1 | 处理空entry默认MA50及当日不可达价位 | 按已经授权的通道建立情景，核查当日可达性；不可达值不能冒充当日买区；不以机械切换通道保证有票 | 待方案；涉及打法或通道政策须单独签核 |"
+      },
+      {
+        "line": 31,
+        "text": "| PRICE-03 | P1 | 对齐触发价、区间上沿、实际拟买价的RR和止损基准；处理报价分位舍入 | 同一拟买场景使用一致基准；最低报价单位与边界容差有明确依据；严格边界正负例可复算 | 待方案；不直接改5%、1.8等原门槛 |"
+      },
+      {
+        "line": 32,
+        "text": "| INPUT-01 | P0 | 协调主产物读取限制与技能的辅助输入义务 | 明确有版本的错题、人气、事件日历、观察材料的允许读取集合；读取白名单与写入白名单分开；旧研究不能冒充本批 | **限定读取/接线验收完成**：两类已批准的本交易日快照实际版本绑定，正常/安全网调用与D1技能已统一；主控完整54项通过，无过滤、守卫违规0。缺文件保留绑定缺口；无绑定旧汇总交回owner，不自签补读。真实模型及自然采用待验，其他类别仍未授权 |"
+      },
+      {
+        "line": 33,
+        "text": "| REASSESS-01 | P0 | 补齐缺项补证→正式审核→有权限决策重评→结果交付→下游采用 | 每个待重评结果有责任方、触发和终态；核清是否不必要地要求全部报告再生成；旧零预算只由合法新裁决替换 | 11:15签核日志已记录另一会话事件接线及40项限定验收、实际启动副本同步；本会话保留该段及全部其他安全网函数，不重复施工。自然有效事件交付仍待验；盘前逐票补证/选择性版本复用未闭环，故主项仍未完成 |"
+      },
+      {
+        "line": 34,
+        "text": "| CONF-01 | P1 | 评估完整度置信分接全局开仓硬阈值的适用性 | 区分数据质量、市场判断确定性和策略胜率；说明阈值依据及局部缺口的影响 | 政策评估待签；本日0.392无重复乘分证据，不临时改高求通过 |"
+      },
+      {
+        "line": 35,
+        "text": "| DATA-01 | P1 | 补齐真实必要缺口，并为每项分清必要/辅助/不适用 | 财务合规、禁止清单/核心/板型输入、长期人气、海外时点、ETF申赎等逐项有来源、观测时点、责任方和降级办法 | 待确认实施范围；必要证据缺失继续保留，不把全部缺口视为故障或无条件豁免 |"
+      },
+      {
+        "line": 36,
+        "text": "| HEALTH-01 | P1 | 修正健康归因，单独检查外部出图服务稳定性 | 读取成功但研究降级、业务调用失败、已恢复历史错误分开；外部失败率/延迟有实际调用回执支持 | 离线已查现有台账适配器：partial→degraded、error→failed，并非一概失败；未取得当日恢复标签及外部业务量测的完整回执，保留待验，不认定服务稳定或不稳定 |"
+      },
+      {
+        "line": 37,
+        "text": "| DOC-01 | P1 | 同步出图候选来源与研究/交易边界说明 | 技能说明与已验证实现一致，写明partial可用于研究补图不等于完整审核或开仓许可 | **对账结项**：现行R5技能已由并发工作写入候选/缓存/不授买权规则，与当前derive_from_file/load_snapshot接口核对一致；本会话不重复改写已有说明 |"
+      }
+    ],
+    "session_todo_tool_result": {
+      "todos": [],
+      "revision": 0
+    }
+  },
+  "chart02_status": "awaiting_post_fix_natural_adoption_receipt",
+  "health01_status": "historical_receipts_partially_available; overall_external_stability_unverified",
+  "pipeline": {
+    "run_id": "20261029T061042-19265-2699",
+    "started_at": "2026-10-29T06:10:42.244502+08:00",
+    "finished_at": "2026-10-29T07:12:16.431771+08:00",
+    "status": "completed"
+  },
+  "r2": {
+    "status": "partial",
+    "generated_at": "2026-10-29T06:40:10+08:00"
+  },
+  "snapshot": {
+    "generated_at": "2026-10-29T06:41:42",
+    "date": "20261029",
+    "n": 12,
+    "ok": 12,
+    "fail": 0,
+    "total_elapsed_s": 64.96,
+    "run": {
+      "requested": 12,
+      "recomputed": 12,
+      "failed": 0,
+      "merged_from": null
+    }
+  },
+  "snapshot_records": [
+    {
+      "ts_code": "000977.SZ",
+      "elapsed_s": 28.41,
+      "error": null,
+      "fetch_ms": 443,
+      "render_ms": 2321,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_000977_SZ_20261029_064038.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "000938.SZ",
+      "elapsed_s": 30.29,
+      "error": null,
+      "fetch_ms": 441,
+      "render_ms": 2439,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_000938_SZ_20261029_064038.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "300017.SZ",
+      "elapsed_s": 29.19,
+      "error": null,
+      "fetch_ms": 443,
+      "render_ms": 2313,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_300017_SZ_20261029_064038.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "002396.SZ",
+      "elapsed_s": 31.66,
+      "error": null,
+      "fetch_ms": 569,
+      "render_ms": 2365,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_002396_SZ_20261029_064038.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "001339.SZ",
+      "elapsed_s": 30.31,
+      "error": null,
+      "fetch_ms": 439,
+      "render_ms": 2252,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_001339_SZ_20261029_064038.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "301308.SZ",
+      "elapsed_s": 36.25,
+      "error": null,
+      "fetch_ms": 621,
+      "render_ms": 2197,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_301308_SZ_20261029_064038.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "300223.SZ",
+      "elapsed_s": 27.91,
+      "error": null,
+      "fetch_ms": 290,
+      "render_ms": 773,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_300223_SZ_20261029_064105.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "688766.SH",
+      "elapsed_s": 21.9,
+      "error": null,
+      "fetch_ms": 309,
+      "render_ms": 839,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_688766_SH_20261029_064106.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "603986.SH",
+      "elapsed_s": 24.07,
+      "error": null,
+      "fetch_ms": 347,
+      "render_ms": 901,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_603986_SH_20261029_064107.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "603893.SH",
+      "elapsed_s": 30.95,
+      "error": null,
+      "fetch_ms": 324,
+      "render_ms": 1041,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_603893_SH_20261029_064107.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "688018.SH",
+      "elapsed_s": 24.77,
+      "error": null,
+      "fetch_ms": 251,
+      "render_ms": 836,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_688018_SH_20261029_064108.png",
+      "chart_file_exists_now": true
+    },
+    {
+      "ts_code": "688521.SH",
+      "elapsed_s": 28.69,
+      "error": null,
+      "fetch_ms": 252,
+      "render_ms": 869,
+      "model": "seed-2-0-lite-260228",
+      "chart_path": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_688521_SH_20261029_064113.png",
+      "chart_file_exists_now": true
+    }
+  ],
+  "r5": {
+    "generated_at": "2026-10-29T06:56:30+08:00",
+    "status": "partial",
+    "coverage": {
+      "r2_current_candidates": 6,
+      "profiles": 6,
+      "codes": [
+        "002708.SZ",
+        "002636.SZ",
+        "600601.SH",
+        "300308.SZ",
+        "000670.SZ",
+        "603986.SH"
+      ],
+      "expanded": false,
+      "kline_ge30_count": 6,
+      "kline_count_per_stock": {
+        "002708.SZ": 80,
+        "002636.SZ": 80,
+        "600601.SH": 80,
+        "300308.SZ": 80,
+        "000670.SZ": 80,
+        "603986.SH": 80
+      },
+      "block_trade30d_queried": 6,
+      "margin_detail_queried": 6,
+      "margin_15published_sessions": 4,
+      "margin_not_applicable_verified": 2,
+      "chart_snapshot_hits": 1,
+      "charts_live_data_only_calls": 5,
+      "multimodal_missing": 5,
+      "persistent_top1_png_missing": 3
+    },
+    "profiles_chart_metadata": [
+      {
+        "ts_code": "002708.SZ",
+        "name": "光洋股份",
+        "chart_vision_present": false,
+        "vision_source": null,
+        "snapshot_date": null,
+        "captured_at": null,
+        "chart_degraded": true,
+        "chart_png_path": null
+      },
+      {
+        "ts_code": "002636.SZ",
+        "name": "金安国纪",
+        "chart_vision_present": false,
+        "vision_source": null,
+        "snapshot_date": null,
+        "captured_at": null,
+        "chart_degraded": true,
+        "chart_png_path": null
+      },
+      {
+        "ts_code": "600601.SH",
+        "name": "方正科技",
+        "chart_vision_present": false,
+        "vision_source": null,
+        "snapshot_date": null,
+        "captured_at": null,
+        "chart_degraded": true,
+        "chart_png_path": null
+      },
+      {
+        "ts_code": "300308.SZ",
+        "name": "中际旭创",
+        "chart_vision_present": false,
+        "vision_source": null,
+        "snapshot_date": null,
+        "captured_at": null,
+        "chart_degraded": true,
+        "chart_png_path": null
+      },
+      {
+        "ts_code": "000670.SZ",
+        "name": "盈方微",
+        "chart_vision_present": false,
+        "vision_source": null,
+        "snapshot_date": null,
+        "captured_at": null,
+        "chart_degraded": true,
+        "chart_png_path": null
+      },
+      {
+        "ts_code": "603986.SH",
+        "name": "兆易创新",
+        "chart_vision_present": true,
+        "vision_source": "snapshot",
+        "snapshot_date": "20261029",
+        "captured_at": "2026-10-29T06:41:42",
+        "chart_degraded": false,
+        "chart_png_path": null
+      }
+    ]
+  },
+  "reconciliation": {
+    "r5_candidate_count": 6,
+    "snapshot_record_count": 12,
+    "intersection_codes": [
+      "603986.SH"
+    ],
+    "candidates_missing_snapshot": [
+      "000670.SZ",
+      "002636.SZ",
+      "002708.SZ",
+      "300308.SZ",
+      "600601.SH"
+    ],
+    "requested_outside_r5_candidates": [
+      "000938.SZ",
+      "000977.SZ",
+      "001339.SZ",
+      "002396.SZ",
+      "300017.SZ",
+      "300223.SZ",
+      "301308.SZ",
+      "603893.SH",
+      "688018.SH",
+      "688521.SH",
+      "688766.SH"
+    ],
+    "warning": "comparison is current declared R5 candidate set and saved snapshot, not source-version proof of historical load"
+  },
+  "historical_batch_business_statistics": {
+    "denominator": 12,
+    "denominator_definition": "12 completed per-stock _analyze_one results matched with cron start/done receipts in one pre-fix normal batch; not provider internal HTTP attempts",
+    "recorded_failed": 0,
+    "recorded_failure_rate": 0.0,
+    "min_s": 21.9,
+    "max_s": 36.25,
+    "mean_s": 28.7,
+    "median_s": 28.94,
+    "batch_wall_s": 64.96,
+    "latency_scope": "render + data fetch + vision + local work; not isolated model/network latency",
+    "post_fix_verified_natural_batches": null,
+    "overall_provider_failure_rate": null,
+    "provider_retry_count": null,
+    "stability_conclusion": null
+  },
+  "mcp_chart_transport_probe": {
+    "checked_at": "2026-10-29T06:02:44",
+    "name": "canghai-charts",
+    "status": "ok",
+    "latency_ms": 1509,
+    "detail": "1509ms · 4 tools",
+    "tools_count": null,
+    "business_success_denominator": false
+  },
+  "ledger": {
+    "generated_at": "2026-10-29T08:30:42+08:00",
+    "summary": {
+      "total": 203,
+      "ok": 125,
+      "degraded": 32,
+      "failed": 30,
+      "pending": 7,
+      "skipped": 9,
+      "critical_failed": 0,
+      "critical_degraded": 3,
+      "jobs_run": 5,
+      "jobs_ok": 2,
+      "jobs_failed": 0,
+      "job_executions": 5
+    },
+    "summary_unit": "layer/key worst-state checks, NOT API attempts",
+    "focused_rows": [
+      {
+        "key": "source:canghai-charts",
+        "state": "ok",
+        "captured_at": "2026-10-29T06:02:44",
+        "records": null,
+        "note": "1509ms · 4 tools",
+        "invocation_status": null,
+        "coverage_status": null,
+        "recovery_status": null,
+        "artifact": null,
+        "source_path": null
+      },
+      {
+        "key": "research:R5",
+        "state": "degraded",
+        "captured_at": "2026-10-29T06:56:30+08:00",
+        "records": null,
+        "note": "status=partial conf=0.2625",
+        "invocation_status": null,
+        "coverage_status": null,
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": null
+      },
+      {
+        "key": "research:R5:002708.SZ/top_list",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:46:53.293854+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_list"
+      },
+      {
+        "key": "research:R5:002708.SZ/top_inst",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:46:53.363694+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_inst"
+      },
+      {
+        "key": "research:R5:002636.SZ/top_inst",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:46:53.949674+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_inst"
+      },
+      {
+        "key": "research:R5:002636.SZ/top_list",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:46:53.931630+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_list"
+      },
+      {
+        "key": "research:R5:600601.SH/top_list",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:46:55.316741+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_list"
+      },
+      {
+        "key": "research:R5:600601.SH/top_inst",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:46:55.491583+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_inst"
+      },
+      {
+        "key": "research:R5:300308.SZ/top_inst",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:47:01.183446+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_inst"
+      },
+      {
+        "key": "research:R5:300308.SZ/top_list",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:47:01.182730+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_list"
+      },
+      {
+        "key": "research:R5:000670.SZ/top_list",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:47:02.338843+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_list"
+      },
+      {
+        "key": "research:R5:000670.SZ/top_inst",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:47:02.387200+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_inst"
+      },
+      {
+        "key": "research:R5:603986.SH/top_list",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:47:03.597602+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_list"
+      },
+      {
+        "key": "research:R5:603986.SH/top_inst",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:47:03.731383+08:00",
+        "records": 0,
+        "note": "status=error · Exception: 必填参数, trade_date · top_list/top_inst区间首调失败已由逐日查询恢复",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_inst"
+      },
+      {
+        "key": "research:R5:top_list_daily_recovery",
+        "state": "ok",
+        "captured_at": "2026-10-29T06:47:46.669605+08:00",
+        "records": 6,
+        "note": "status=ok · 30自然日实际17个行情日逐日配对，过滤为6只候选；未扩池",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_list"
+      },
+      {
+        "key": "research:R5:top_inst_daily_recovery",
+        "state": "ok",
+        "captured_at": "2026-10-29T06:47:46.669605+08:00",
+        "records": 60,
+        "note": "status=ok · 30自然日实际17个行情日逐日配对，过滤为6只候选；未扩池",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "tushare.top_inst"
+      },
+      {
+        "key": "research:R5:chart_snapshot",
+        "state": "ok",
+        "captured_at": "2026-10-29T06:41:42",
+        "records": 1,
+        "note": "status=ok · date一致，6票仅兆易命中；其他快照对象不纳入研究池",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "data/raw/20261029/chart_vision_snapshot.json"
+      },
+      {
+        "key": "research:R5:charts_live_data_only",
+        "state": "ok",
+        "captured_at": "2026-10-29T06:56:30+08:00",
+        "records": 5,
+        "note": "status=ok · 5票调用成功但不具多模态图像；价格建议未采纳，300308涨停错误已纠正",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "mcp__canghai_charts__chart_vision_analyze(data_only=true)"
+      },
+      {
+        "key": "research:R5:multimodal_scratch",
+        "state": "degraded",
+        "captured_at": "2026-10-29T06:48:05.368220+08:00",
+        "records": 0,
+        "note": "status=error · 主动未调用（非接口调用失败）；覆盖/验证缺口保留 · VISION/OPENAI环境未配置；scratch图已生成但未完成识图。full MCP默认写output/charts故未调用",
+        "invocation_status": "not_called",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "scratch-only vision probe"
+      },
+      {
+        "key": "research:R5:persistent_PNG",
+        "state": "failed",
+        "captured_at": "2026-10-29T06:56:30+08:00",
+        "records": 0,
+        "note": "status=error · 3主线Top1持久PNG缺口；未伪造路径",
+        "invocation_status": "reported",
+        "coverage_status": "not_asserted",
+        "recovery_status": null,
+        "artifact": "data/research/20261029/R5_stock_profiles.json",
+        "source_path": "not_written_outside_whitelist"
+      }
+    ],
+    "historical_parameter_error_rows": 12,
+    "recovery_summary_rows": 2,
+    "recovery_proof_limit": "saved research/ledger reports recovery at 06:47:46; no independent full request/response attempt ledger verified; no aggregate provider rate inferred"
+  },
+  "log_inventory": [
+    {
+      "path": "data/logs/research_shell/20261029/D1.log",
+      "bytes": 1042
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R1.log",
+      "bytes": 1033
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R2.log",
+      "bytes": 1815
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R2_history_context.json",
+      "bytes": 9382
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R3.log",
+      "bytes": 724
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R4.log",
+      "bytes": 685
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R5.log",
+      "bytes": 859
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R6.log",
+      "bytes": 1743
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R7.log",
+      "bytes": 816
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "bytes": 3892
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.162548cc6c634ebbb5de40460a1ae1a8.attempt-1.usage.json",
+      "bytes": 1204
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.39fbec87a3cc46ee9ab17c5bc8d4b138.attempt-1.usage.json",
+      "bytes": 1202
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.4703a2475c3c4e97ab9fd053c8a2d4e6.attempt-1.usage.json",
+      "bytes": 1202
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.96da363793f143658e27084d32b8bda9.attempt-1.usage.json",
+      "bytes": 1196
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.a7b49502011540d081b3d08c17394b23.attempt-1.usage.json",
+      "bytes": 1204
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.dab0d0c208194548a9cdc38b74ccc720.attempt-1.usage.json",
+      "bytes": 1200
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.db20289d14cd4d01b8fa49b3340ecd2b.attempt-1.usage.json",
+      "bytes": 1204
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.e4c4c6848b3a493eb5f9412d64924cc3.attempt-1.usage.json",
+      "bytes": 1202
+    }
+  ],
+  "log_receipts": [
+    {
+      "path": "data/logs/research_shell/20261029/R5.log",
+      "line": 3,
+      "text": "覆盖 R2 的 6/6 只候选：光洋股份、金安国纪、方正科技、中际旭创、盈方微、兆易创新。每票含 80 根日K（截至20261028）、量价分析、事件时间线、六维画像及 alpha/risk 评级。"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R5.log",
+      "line": 7,
+      "text": "剩余缺口：5票未完成真正多模态识图，3条主线首推持久PNG未落盘；缠论、完整TAM估值及部分财务合规检查未完成。全部维持研究观察，未授予执行资格，零交易预算与既有保护不变。"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 2,
+      "text": "=== 2026-10-29 06:10:42 research shell orchestrator start ==="
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 26,
+      "text": "[06:40:36] Pre-rendering chart_vision snapshot from R2 leaders (non-blocking)"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 27,
+      "text": "[pool] R2 无候选(R2 status=partial) → 回退默认票池"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 28,
+      "text": "[chart_vision] date=20261029 · N=12 · concurrency=6"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 29,
+      "text": "[start] 000977.SZ 浪潮信息"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 30,
+      "text": "[start] 000938.SZ 紫光股份"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 31,
+      "text": "[start] 300017.SZ 网宿科技"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 32,
+      "text": "[start] 002396.SZ 星网锐捷"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 33,
+      "text": "[start] 001339.SZ 智微智能"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 34,
+      "text": "[start] 301308.SZ 江波龙"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 35,
+      "text": "[done]  000977.SZ 浪潮信息 · ok · 28.41s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 36,
+      "text": "[start] 300223.SZ 北京君正"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 37,
+      "text": "[done]  300017.SZ 网宿科技 · ok · 29.19s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 38,
+      "text": "[start] 688766.SH 普冉股份"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 39,
+      "text": "[done]  000938.SZ 紫光股份 · ok · 30.29s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 40,
+      "text": "[start] 603986.SH 兆易创新"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 41,
+      "text": "[done]  001339.SZ 智微智能 · ok · 30.31s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 42,
+      "text": "[start] 603893.SH 瑞芯微"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 43,
+      "text": "[done]  002396.SZ 星网锐捷 · ok · 31.66s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 44,
+      "text": "[start] 688018.SH 乐鑫科技"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 45,
+      "text": "[done]  301308.SZ 江波龙 · ok · 36.25s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 46,
+      "text": "[start] 688521.SH 芯原股份"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 47,
+      "text": "[done]  688766.SH 普冉股份 · ok · 21.9s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 48,
+      "text": "[done]  603986.SH 兆易创新 · ok · 24.07s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 49,
+      "text": "[done]  300223.SZ 北京君正 · ok · 27.91s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 50,
+      "text": "[done]  688018.SH 乐鑫科技 · ok · 24.77s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 51,
+      "text": "[done]  603893.SH 瑞芯微 · ok · 30.95s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 52,
+      "text": "[done]  688521.SH 芯原股份 · ok · 28.69s"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 53,
+      "text": "[chart_vision ✅] 12/12 · 64.96s · data/raw/20261029/chart_vision_snapshot.json"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 54,
+      "text": "  [06:41:42] launching R5 (skill=analyze_stock_profile_v1)"
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "line": 73,
+      "text": "=== 2026-10-29 07:12:15 research shell process finished (business result in data/health/research_pipeline_20261029.json) ==="
+    }
+  ],
+  "source_refs": [
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 8,
+      "text": "- 因此绕过 MCP,直接调 analyze_chart_vision 函数 + asyncio.gather 并发 6-8 路"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 40,
+      "text": "def _pool_from_r2(date: str) -> list[tuple[str, str]]:"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 43,
+      "text": "        from src.research.candidate_pool import derive_from_file"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 45,
+      "text": "        pool, meta = derive_from_file(date)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 47,
+      "text": "            print("
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 52,
+      "text": "        print(f\"[pool] R2 无候选({meta.get('reason') or meta.get('note')}) → 跳过\", file=sys.stderr)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 54,
+      "text": "        print(f\"[pool] R2 推导失败 {type(exc).__name__}: {exc} → 跳过\", file=sys.stderr)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 75,
+      "text": "    \"\"\"在线程池里跑一只票(analyze_chart_vision + 出图都是 sync)。\"\"\""
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 78,
+      "text": "        from src.analytics.lwc_chart_renderer import render_lwc_multi_period_kline"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 79,
+      "text": "        from src.agents.chart_vision_agent import analyze_chart_vision"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 81,
+      "text": "        render_info = render_lwc_multi_period_kline(ts_code, name=name, fq=2)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 84,
+      "text": "        analysis = analyze_chart_vision("
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 113,
+      "text": "                print(f\"[start] {ts_code} {name}\", flush=True)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 116,
+      "text": "                print("
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 141,
+      "text": "        print(f\"[fatal] 无效票池: {exc}\", file=sys.stderr)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 144,
+      "text": "        print(f\"[chart_vision ⏭️] {date} 零候选 · 零模型调用\", flush=True)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 153,
+      "text": "    print(f\"[pool] selected={selected_count} · pending={len(universe)} · reused={selected_count - len(universe)}\", flush=True)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 155,
+      "text": "        print(f\"[chart_vision ⏭️] {date} 全部复用当日有效快照 · 零模型调用\", flush=True)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 168,
+      "text": "    print(f\"[chart_vision] date={date} · N={len(universe)} · concurrency={args.concurrency}\", flush=True)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 205,
+      "text": "        \"total_elapsed_s\": total_s,"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 210,
+      "text": "        \"run\": {\"requested\": len(results), \"recomputed\": ok, \"failed\": fail, \"merged_from\": merged_from},"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 214,
+      "text": "    raw_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding=\"utf-8\")"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 219,
+      "text": "    latest_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding=\"utf-8\")"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 221,
+      "text": "    print("
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 226,
+      "text": "        print(f\"[chart_vision ⚠️] {fail} failures:\", flush=True)"
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "line": 229,
+      "text": "                print(f\"  - {r['ts_code']} {r.get('name','')}: {r['error']}\", flush=True)"
+    },
+    {
+      "path": "src/agents/chart_vision_agent.py",
+      "line": 134,
+      "text": "def analyze_chart_vision("
+    },
+    {
+      "path": "src/agents/chart_vision_agent.py",
+      "line": 159,
+      "text": "    resp = client.chat.completions.create("
+    },
+    {
+      "path": "src/agents/chart_vision_agent.py",
+      "line": 184,
+      "text": "def analyze_chart_data_only("
+    },
+    {
+      "path": "src/agents/chart_vision_agent.py",
+      "line": 202,
+      "text": "    resp = client.chat.completions.create("
+    },
+    {
+      "path": "src/agents/chart_vision_agent.py",
+      "line": 215,
+      "text": "    result[\"mode\"] = \"data_only\""
+    },
+    {
+      "path": "scripts/research/run_research_shell.sh",
+      "line": 40,
+      "text": "LOG_DIR=\"$ROOT/data/logs/research_shell/${TRADE_DATE}\""
+    },
+    {
+      "path": "scripts/research/run_research_shell.sh",
+      "line": 274,
+      "text": "echo \"[$(date '+%H:%M:%S')] Pre-rendering chart_vision snapshot from R2 leaders (non-blocking)\""
+    },
+    {
+      "path": "scripts/research/run_research_shell.sh",
+      "line": 276,
+      "text": "    .venv/bin/python scripts/fetch/run_chart_vision_snapshot.py --date \"${TRADE_DATE}\" --concurrency 6 \\"
+    },
+    {
+      "path": "scripts/research/run_research_shell.sh",
+      "line": 280,
+      "text": "run_agent \"R5\" \"analyze_stock_profile_v1\"   \"$ROOT/data/research/${TRADE_DATE}/R5_stock_profiles.json\" \"$R5_PROMPT\" || echo \"WARN: R5 failed, continuing\""
+    },
+    {
+      "path": "src/analytics/lwc_chart_renderer.py",
+      "line": 14,
+      "text": "from src.analytics.fast_chart_renderer import CHART_OUT_DIR, DEFAULT_PERIODS"
+    },
+    {
+      "path": "src/analytics/lwc_chart_renderer.py",
+      "line": 70,
+      "text": "    CHART_OUT_DIR.mkdir(parents=True, exist_ok=True)"
+    },
+    {
+      "path": "src/analytics/lwc_chart_renderer.py",
+      "line": 73,
+      "text": "    out_path = CHART_OUT_DIR / f\"lwc_kline_{safe}_{stamp}.png\""
+    },
+    {
+      "path": "src/analytics/lwc_chart_renderer.py",
+      "line": 82,
+      "text": "            [\"node\", str(LWC_SCRIPT), \"--input\", payload_path, \"--output\", str(out_path)],"
+    },
+    {
+      "path": "src/analytics/lwc_chart_renderer.py",
+      "line": 84,
+      "text": "            capture_output=True,"
+    },
+    {
+      "path": "src/analytics/lwc_chart_renderer.py",
+      "line": 106,
+      "text": "        \"path\": str(out_path),"
+    },
+    {
+      "path": "src/analytics/lwc_chart_renderer.py",
+      "line": 107,
+      "text": "        \"bytes\": out_path.stat().st_size if out_path.is_file() else 0,"
+    },
+    {
+      "path": "scripts/fetch/mcp_health_check.py",
+      "line": 9,
+      "text": "from __future__ import annotations"
+    },
+    {
+      "path": "scripts/fetch/mcp_health_check.py",
+      "line": 11,
+      "text": "import argparse"
+    },
+    {
+      "path": "scripts/fetch/mcp_health_check.py",
+      "line": 12,
+      "text": "import json"
+    },
+    {
+      "path": "scripts/fetch/mcp_health_check.py",
+      "line": 13,
+      "text": "import sys"
+    },
+    {
+      "path": "scripts/fetch/mcp_health_check.py",
+      "line": 14,
+      "text": "from datetime import datetime"
+    },
+    {
+      "path": "scripts/fetch/mcp_health_check.py",
+      "line": 15,
+      "text": "from pathlib import Path"
+    },
+    {
+      "path": "scripts/fetch/mcp_health_check.py",
+      "line": 20,
+      "text": "from src.fetch.mcp_health import write_health_artifact  # noqa: E402"
+    },
+    {
+      "path": "scripts/fetch/mcp_health_check.py",
+      "line": 21,
+      "text": "from src.settings import RAW_DIR  # noqa: E402"
+    },
+    {
+      "path": "scripts/fetch/mcp_health_check.py",
+      "line": 35,
+      "text": "    parser = argparse.ArgumentParser(description=\"mcp_health_check_v1 — ping MCP servers, write mcp_health.json\")"
+    }
+  ],
+  "source_manifest": [
+    {
+      "path": "chzl_kg/系统进化/2026-10-29 盘前核验问题任务清单.md",
+      "sha256": "1b2faa3bc27250cd096aaded03178cd3071430b63ed32d05a8c7c68dcd01dc13",
+      "bytes": 20594
+    },
+    {
+      "path": "data/raw/20261029/chart_vision_snapshot.json",
+      "sha256": "ee8b6fb9129f7189343ff72a1b269fb6dcf3ebee6f09ca8be119f3bcccd20727",
+      "bytes": 44417
+    },
+    {
+      "path": "data/cache/chart_vision_latest.json",
+      "sha256": "ee8b6fb9129f7189343ff72a1b269fb6dcf3ebee6f09ca8be119f3bcccd20727",
+      "bytes": 44417
+    },
+    {
+      "path": "data/research/20261029/R2_main_sectors.json",
+      "sha256": "fea9cb6f12f8bf93eabd06808d0a10b557fbd7884c575fdcfed99efb03e6f761",
+      "bytes": 63671
+    },
+    {
+      "path": "data/research/20261029/R5_stock_profiles.json",
+      "sha256": "df504bcce6c20b751d5c5c1aab394fb2001e3d8e157f9f19ef0ba728e85f2bb9",
+      "bytes": 3968372
+    },
+    {
+      "path": "data/health/datasource_ledger_20261029.json",
+      "sha256": "2a34450dbb6d8c4db336a5757b33c1972a670df769f4a97dc992465eeb0d3043",
+      "bytes": 461784
+    },
+    {
+      "path": "data/health/research_pipeline_20261029.json",
+      "sha256": "b0f4d94309af31a31b530e140b32a414ccbbe17d49f32fde5cc4c560bfb69e12",
+      "bytes": 47454
+    },
+    {
+      "path": "data/raw/20261029/mcp_health.json",
+      "sha256": "d1ed5ef101de66e15b96b800e5763a2dc8144b4f160bebd0aee5fa1d50f1ee39",
+      "bytes": 3837
+    },
+    {
+      "path": "src/research/candidate_pool.py",
+      "sha256": "7b970336e44c639e14af3955a735e9a4d6dd82e696527c9f31803fc64cf44e96",
+      "bytes": 7259
+    },
+    {
+      "path": "scripts/fetch/run_chart_vision_snapshot.py",
+      "sha256": "43c185b576e68958a9af3484c14e33e08eb2c05d18a1c54642e4fb547b0835cf",
+      "bytes": 9704
+    },
+    {
+      "path": "src/research/r5_stock_profiles.py",
+      "sha256": "2936d100b3cfdc4a7214fb988338e93f8eb9b2a29e5aa9450c8d125f868d104f",
+      "bytes": 29381
+    },
+    {
+      "path": "src/agents/chart_vision_agent.py",
+      "sha256": "492c80b38ee2b77a66635b61948663c37ed31ca9b3a15e3dc19649781e3f3847",
+      "bytes": 7412
+    },
+    {
+      "path": "src/analytics/lwc_chart_renderer.py",
+      "sha256": "066852c98780a9cd8d6f2dea4ce7595a9f2224f603fab2fe7f933c28816cfae1",
+      "bytes": 4064
+    },
+    {
+      "path": "scripts/research/run_research_shell.sh",
+      "sha256": "7a72f682455d3610046530f96d3ed495a78bbe31fcc074a4f2978221a456fbf5",
+      "bytes": 22148
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R2_history_context.json",
+      "sha256": "f38da370ebee3da5fc789836401167daa47f1f5b0cabd95436f03d9f3ae9c69d",
+      "bytes": 9382
+    },
+    {
+      "path": "data/logs/research_shell/20261029/cron_061042_19265.log",
+      "sha256": "739f6e2d180d1c59cedfe42b1a3f4de4b5afbaf7100a28e21f4cdcbd8ccddd2a",
+      "bytes": 3892
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.dab0d0c208194548a9cdc38b74ccc720.attempt-1.usage.json",
+      "sha256": "0848f977d11f71c91b16253947b9534a7000f2ae6190a25b2112c472f406d48f",
+      "bytes": 1200
+    },
+    {
+      "path": "data/logs/research_shell/20261029/D1.log",
+      "sha256": "baa555cd6f1b5792dc323b23a144c48a0fd23a9213476bd16ef55881c33b439a",
+      "bytes": 1042
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.96da363793f143658e27084d32b8bda9.attempt-1.usage.json",
+      "sha256": "2590b1fc0e7243bb682a612819831146647dd70758de78d507868c37148e49de",
+      "bytes": 1196
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R2.log",
+      "sha256": "1b1b1269cb4e1cf63fc73378c5e7550a66b0b85eaae494aba1208541d9b2ac84",
+      "bytes": 1815
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R3.log",
+      "sha256": "490eee7ee7d55fb7fb26276687455e2439546b5fdfc16e87acf294eda9f72492",
+      "bytes": 724
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R1.log",
+      "sha256": "5951599d43e46b7ae4aa3560f864aa174d0996d6b54b9f993dd0b296fc45c095",
+      "bytes": 1033
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R4.log",
+      "sha256": "3db5a18a4245c9d89f2e2ec2759c10089e20d6d7c6e7e7c731f40b785c43fc18",
+      "bytes": 685
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.39fbec87a3cc46ee9ab17c5bc8d4b138.attempt-1.usage.json",
+      "sha256": "dbb8177e19c48d151f044c6578f3505bcefae79f2df6b1f34e5c35261d120fba",
+      "bytes": 1202
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R5.log",
+      "sha256": "4dfa04d68a76407e367c03418653da0a9955bcc7b9e86ffdf0cd27b392be8312",
+      "bytes": 859
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R7.log",
+      "sha256": "2b2b608fb91255baf818e0698b3f71410af37ecffbc5c2e4a157e556d5dfc1d3",
+      "bytes": 816
+    },
+    {
+      "path": "data/logs/research_shell/20261029/R6.log",
+      "sha256": "1b7e66b2eee2859c468c39d4a23728d024a3d393f4f5359c798b96cb2e39e4b9",
+      "bytes": 1743
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.4703a2475c3c4e97ab9fd053c8a2d4e6.attempt-1.usage.json",
+      "sha256": "82d1e0895b86927ba52b38f155ef7f9f852b792b3c61a294a452441a49676952",
+      "bytes": 1202
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.162548cc6c634ebbb5de40460a1ae1a8.attempt-1.usage.json",
+      "sha256": "c16b0b95c8bc308a0775780d0449a6491aba3255cb0634cd5f1598fe74e87842",
+      "bytes": 1204
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.e4c4c6848b3a493eb5f9412d64924cc3.attempt-1.usage.json",
+      "sha256": "77ea25dabe83c4f64583f153160ed568929ddd0b0dfc5a630a9e9ec213c2fc7a",
+      "bytes": 1202
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.a7b49502011540d081b3d08c17394b23.attempt-1.usage.json",
+      "sha256": "2d8189d39b1e3770e87b0df78dfc100763425a9efa4cc794ba9c918cabbe094b",
+      "bytes": 1204
+    },
+    {
+      "path": "data/logs/research_shell/20261029/research_shell.db20289d14cd4d01b8fa49b3340ecd2b.attempt-1.usage.json",
+      "sha256": "af502d9023124ce4886a0960d9a18be4f4fd1874baf2f898e7c334d1982ed1b6",
+      "bytes": 1204
+    }
+  ],
+  "missing_edges": [
+    "post-fix normal run identity and loaded source/version binding",
+    "same-run R2 candidate version -> selected/reused/pending request codes",
+    "actual requested missing candidates -> render/vision successes or failures with timestamps",
+    "same-run R5 consumes resulting snapshot/version and states per-stock coverage",
+    "provider/business attempt-level start/end/outcome/retry records across a defined observation window",
+    "recovered historical failures linked to recovery coverage/terminal current state without erasing failures"
+  ],
+  "limitations": [
+    "No exact repair deployment timestamp reconstructed; scratch/test timestamps and current mtime are not deployment or consumption proof.",
+    "Current image-path existence is not proof a repaired task read the image.",
+    "Normal log inventory is bounded to today research_shell and related known locations; absence is not global proof no task exists.",
+    "Data-only 5 reported successes are not multimodal successes or added into the 12-stock denominator.",
+    "initialize/tools discovery/ping and ledger summary rows are excluded from business denominators."
+  ]
+}

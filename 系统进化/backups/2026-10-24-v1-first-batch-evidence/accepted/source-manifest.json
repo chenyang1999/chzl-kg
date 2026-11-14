@@ -1,0 +1,307 @@
+{
+  "scripts/__init__.py": {
+    "sha256": "40b78de2a496acaa44e4e2d5a415d5b978d6551bc0b1e1d612a4409351a76b54",
+    "bytes": 63,
+    "origin": "current_worktree"
+  },
+  "scripts/execute/run_paper_plan_once.py": {
+    "sha256": "966599762dd0797a1dbcb50789d8204f441c305aaa9714f8744da44ec624a44b",
+    "bytes": 21512,
+    "origin": "current_worktree"
+  },
+  "scripts/execute/run_paper_trading.py": {
+    "sha256": "dcfc70a433602b4a54d1d890ba2307234472f1ec0e5576f7921573c4c018409c",
+    "bytes": 4874,
+    "origin": "current_worktree"
+  },
+  "scripts/plan/apply_price_levels.py": {
+    "sha256": "0d47bebeefc82fcbfa20868a15bf1fc6880ebfcec68cdd76d4ef15432495da00",
+    "bytes": 11885,
+    "origin": "current_worktree"
+  },
+  "scripts/research/pipeline_artifacts.py": {
+    "sha256": "790dfee41d40776e10dac270cf2b4a15ab452c654d1ebae5df6e0357631aa4b1",
+    "bytes": 8152,
+    "origin": "current_worktree"
+  },
+  "src/__init__.py": {
+    "sha256": "ceaa53d0f89d6b8615d90814b49e9ba659f98ce86e2c052a50eaeeea1d66de40",
+    "bytes": 32,
+    "origin": "current_worktree"
+  },
+  "src/execute/amygdala.py": {
+    "sha256": "5f5607a9008420b9b9eef144e8dc52da0cd1c09e5db5a2e398fb98397b89ace1",
+    "bytes": 6114,
+    "origin": "current_worktree"
+  },
+  "src/execute/watcher_daemon.py": {
+    "sha256": "c304050e486a893d55de8821f36f54d66dc5265f024921066e2d3071e7caae9f",
+    "bytes": 9754,
+    "origin": "current_worktree"
+  },
+  "src/plan/__init__.py": {
+    "sha256": "fecae8e280caee2915aa279da5b0866f4dc3cf5f465fc5268e0864e590942d7f",
+    "bytes": 214,
+    "origin": "current_worktree"
+  },
+  "src/plan/buy_eligibility.py": {
+    "sha256": "a342b55787ec3a548c6133e1f9bd2872fb857b365266e8b2c10160f84ccf0d9f",
+    "bytes": 12765,
+    "origin": "current_worktree"
+  },
+  "src/plan/price_levels.py": {
+    "sha256": "db4e876468c7e4805d0af020115cd4f860a5426eeb5f50eebc31058229156d27",
+    "bytes": 10393,
+    "origin": "current_worktree"
+  },
+  "src/plan/risk_reward.py": {
+    "sha256": "0534c00839c6f4a1b600062e71c2825a2f46850cd4b9fefd0f8aa5db69696612",
+    "bytes": 6834,
+    "origin": "current_worktree"
+  },
+  "src/trading_agent/journal.py": {
+    "sha256": "2ba02fa1aac042f1c20a2c19cff1b1addc7abbf52c45686b772f4adc456f2ef7",
+    "bytes": 1360,
+    "origin": "current_worktree"
+  },
+  "src/trading_agent/models.py": {
+    "sha256": "8351144218b803df44366c3a1a08e77d507c3bfd4e4c7a1d44ff5beb87c32110",
+    "bytes": 11233,
+    "origin": "current_worktree"
+  },
+  "tests/pipeline/test_plan_staging_freshness.py": {
+    "sha256": "0a827d6a320a673785a0b36321aea1ec8b9ad36fff6ac912ec8b31859309635e",
+    "bytes": 23090,
+    "origin": "current_worktree"
+  },
+  "tests/test_canghai_paper_execution_20261023.py": {
+    "sha256": "9780d680e3949d68faf130a5beacb1b2721c158ab3306666d575396df528664c",
+    "bytes": 29172,
+    "origin": "current_worktree"
+  },
+  "tests/test_canghai_paper_parent_review_20261023.py": {
+    "sha256": "23373166f36ff738a7e14cff6af970bcd4305a5cba72b7e4f8429fea625ef8dd",
+    "bytes": 26755,
+    "origin": "current_worktree"
+  },
+  "tests/test_canghai_paper_plan_driver_20261023.py": {
+    "sha256": "aaeabf150df78a8a12e26e63c3b2dbc7706b8fdcb8285e04af988c5ef41b6ff3",
+    "bytes": 19451,
+    "origin": "current_worktree"
+  },
+  "tests/test_canghai_rr_parent_review_20261023.py": {
+    "sha256": "e8c32689c0217e03b63298876db86b86ad62eaec944460394970a7f8e79b4608",
+    "bytes": 10202,
+    "origin": "current_worktree"
+  },
+  "tests/test_canghai_rr_scope_20261023.py": {
+    "sha256": "844df1facee1ae8b5881fbe31b4285b1e66dfa425cc870100f7ae83fb6adf3d4",
+    "bytes": 27612,
+    "origin": "current_worktree"
+  },
+  "tests/test_v1_final_joint_acceptance_20261024.py": {
+    "sha256": "b081869466fea3ba712c8d3a979daba00c13db837c67be5aabeb23e79af56da8",
+    "bytes": 2961,
+    "origin": "current_worktree"
+  },
+  "tests/test_v1_independent_contract_review_20261024.py": {
+    "sha256": "39946982f581b020a8ff1ecdcccca8ed51f8a6def33fb91f5e887edaf56885f6",
+    "bytes": 8857,
+    "origin": "current_worktree"
+  },
+  "tests/test_v1_integration_authorization_20261024.py": {
+    "sha256": "dc43ba3894805b7e276ec04d9825d7beda1d0acc4fc70b7cf801e5fca88272e1",
+    "bytes": 22543,
+    "origin": "current_worktree"
+  },
+  "tests/test_v1_regression_contract_closeout_20261024.py": {
+    "sha256": "21b1a0a3e79a9ca55510df0a10485283912bfca7483ff10d0d499e8fcecc5247",
+    "bytes": 4188,
+    "origin": "current_worktree"
+  },
+  "tests/test_v1_s1_execution_boundaries_20261024.py": {
+    "sha256": "fb7b7e4138d5cf79d2754a7699d94df875d5b95e39c16e9b37295515214bb81a",
+    "bytes": 22893,
+    "origin": "current_worktree"
+  },
+  "tests/test_v1_s2_paper_exit_safety_20261024.py": {
+    "sha256": "a4ed8cda0d82a235e04324d60bbe8163279c665fe83aef07819ebbe5e0aecab0",
+    "bytes": 17490,
+    "origin": "current_worktree"
+  },
+  "tests/test_v1_s3_trigger_quote_safety_20261024.py": {
+    "sha256": "4d45be2db001d88717ee50d70438fec3661ef1bbb3bd90cfd878021b42d186ab",
+    "bytes": 29235,
+    "origin": "current_worktree"
+  },
+  "tests/test_v1_scan_date_binding_20261024.py": {
+    "sha256": "9368afa751c1b6a47c7a7c2782be52e1b6bc48520c90d78259a91f28cfbf1515",
+    "bytes": 8021,
+    "origin": "current_worktree"
+  },
+  "trading/__init__.py": {
+    "sha256": "c205a161f9ec0524a2bb1065ee6e2c6327669cd13f60c665ac361fca96e347e3",
+    "bytes": 102,
+    "origin": "current_worktree"
+  },
+  "trading/account_config.py": {
+    "sha256": "73ab8fb428fa1b1223179199ca86a63e38031f297a1e6221a9ea2a1ea49e8775",
+    "bytes": 1369,
+    "origin": "current_worktree"
+  },
+  "trading/after_close.py": {
+    "sha256": "b272d6ca08426885def11376ae2532c426c46e541bf6552019435821728b48fd",
+    "bytes": 2458,
+    "origin": "current_worktree"
+  },
+  "trading/entry_selector.py": {
+    "sha256": "b3c11a6562806258c73e46f79330ead5cde80ab3b9a033b672f4571478bf2b35",
+    "bytes": 7961,
+    "origin": "current_worktree"
+  },
+  "trading/execution_authorization.py": {
+    "sha256": "b7f1f95a0d6a9572f91795a353ccefacf9cfc28dbb10ac2c3d710e912166c927",
+    "bytes": 8956,
+    "origin": "current_worktree"
+  },
+  "trading/executors/_buy_common.py": {
+    "sha256": "b7033cb1d1ff926803c99eef9fe50f9857df7ffd7947e9c70d7248cf95f97d3f",
+    "bytes": 5173,
+    "origin": "current_worktree"
+  },
+  "trading/executors/_sell_common.py": {
+    "sha256": "924c80c91822dd497f6471b5ebb5955703f2c12d4aedffa7a9b6a57ced9ccc6c",
+    "bytes": 5114,
+    "origin": "current_worktree"
+  },
+  "trading/executors/base.py": {
+    "sha256": "21f630bbcda3588e0afa63cb27fc907f6ad2d50d5f01774e82707257924c9f9b",
+    "bytes": 7809,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_daban_confirm.py": {
+    "sha256": "f0e1192d1cebcb3af50cec0a59e89406a9353e29088dd1e4f378084ba71cd009",
+    "bytes": 891,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_exit_at_open.py": {
+    "sha256": "51c49d104f0192c4ee4015e612a64c255ab9ae3ce37ea56a05cb66a33185ca9c",
+    "bytes": 298,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_exit_if_no_new_high.py": {
+    "sha256": "c60b4f4bff2090af01338ebc55297b351b3e308850b6447f7691cbb337dacfe2",
+    "bytes": 305,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_intraday_break_exit.py": {
+    "sha256": "4e98d82d567ee0d57c39f7fdd21c1804c11cac203d16326e5e753c03be1e00c2",
+    "bytes": 305,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_leader_breakout.py": {
+    "sha256": "6348163ffcaacd50777a15d901d9a8a26ceaeca3a80278feebbc1041c2bbc3a6",
+    "bytes": 597,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_low_absorption_intraday.py": {
+    "sha256": "63efa91777df548e6eb5ccf1eb1a3c4fea393b309ca26f1d0c1bc0db37c4c566",
+    "bytes": 605,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_sector_switch_exit.py": {
+    "sha256": "ea61e8f1fc9ab0facc4ada8910aa6d8ed73617779b231be5387546d64d76ea52",
+    "bytes": 304,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_stop_loss_break.py": {
+    "sha256": "d7467083db3842e5d03fc02133349b720013310f0f5fb58224b2a2199cdff7c1",
+    "bytes": 301,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_t_add_pullback.py": {
+    "sha256": "682f8c5ae0b10cd6a9f624b587dd2128721143d6798a112aba66af5f435cbdd6",
+    "bytes": 1657,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_t_reduce_resistance.py": {
+    "sha256": "9f87ac24a5073ee5f96f73465c9162f5907ed3571e17c9746dcc88e8d0202977",
+    "bytes": 305,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_take_profit_hit.py": {
+    "sha256": "8acd8e00f7aff21f37004f4e1088e0f7c398cf973a47d11a0080de5e8316b1be",
+    "bytes": 301,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_trend_pullback_buy.py": {
+    "sha256": "99a2cd16891c5d543d40d331f9f71985c880002e7bb7b0d29acf0e25bfa7fec3",
+    "bytes": 600,
+    "origin": "current_worktree"
+  },
+  "trading/executors/execute_volume_price_divergence.py": {
+    "sha256": "0b1b6d420cdb6c2bb5b2b21947cf626c446fc3def4de442fd2a5c36c7a0a4a97",
+    "bytes": 309,
+    "origin": "current_worktree"
+  },
+  "trading/executors/registry.py": {
+    "sha256": "7d3baca1ab6439c293a5ff351e4cd1c489c4562dde458fcac60cfb7cdc959ea7",
+    "bytes": 2203,
+    "origin": "current_worktree"
+  },
+  "trading/load_plan.py": {
+    "sha256": "6c3625d22103bd00e22e2f988dedf792ec463a3d9c3c5737d55ff47e2a8dbd77",
+    "bytes": 21161,
+    "origin": "current_worktree"
+  },
+  "trading/order/qmt_context.py": {
+    "sha256": "91d9135e7b9fdace0202cb88bf308e49484d5d9730f79e82db3949bd53437f68",
+    "bytes": 17430,
+    "origin": "current_worktree"
+  },
+  "trading/paper/__init__.py": {
+    "sha256": "b556e8c3ec1b52d3d728ed0e461f59908ed96f78892988bdd54d0df705ea3195",
+    "bytes": 172,
+    "origin": "current_worktree"
+  },
+  "trading/paper/ledger.py": {
+    "sha256": "40d77a426defe9118d31960412da85e8b5dfd038b35eabd519f904db51ba2175",
+    "bytes": 62058,
+    "origin": "current_worktree"
+  },
+  "trading/paper/safety.py": {
+    "sha256": "208686a5f1f826ecaaf1b291368bc270b946d4951a07f91a7fdc298d075c744a",
+    "bytes": 1436,
+    "origin": "current_worktree"
+  },
+  "trading/positions_state.py": {
+    "sha256": "3e56f5f2430a200517167f511cae029a8b4c6d5e67c47aad3ce152b236645b94",
+    "bytes": 4656,
+    "origin": "current_worktree"
+  },
+  "trading/schema/normalize.py": {
+    "sha256": "50115439ed93caf694cf8f01942e51c4b9257b3b7617b9d74bbe712fbfa3eaa7",
+    "bytes": 1947,
+    "origin": "current_worktree"
+  },
+  "trading/schema/watchlist_plan.py": {
+    "sha256": "e1188f7580712014a438ee90678c3c9c63a9fe009c10fa8d85566daf0d6e686d",
+    "bytes": 4982,
+    "origin": "current_worktree"
+  },
+  "trading/watcher/dispatch.py": {
+    "sha256": "0054258c59d80c8259d22c6889a55a2b0ff9902d735abcd401706f549d1ef5d2",
+    "bytes": 8024,
+    "origin": "current_worktree"
+  },
+  "trading/watcher/run_once.py": {
+    "sha256": "ce77e2bdfa4637fa08f55d3dfdde4c0baa0b1c0bf3c0ba057cbf21688e0d6d30",
+    "bytes": 6302,
+    "origin": "current_worktree"
+  },
+  "trading/watcher/session_context.py": {
+    "sha256": "3d4bdb5d98b03879f15356c316314dfea549820ea0c37d07ca568e843e25be20",
+    "bytes": 3308,
+    "origin": "current_worktree"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "baseline": {
+    "count": 19,
+    "by_file": {
+      "tests.pipeline.test_price_contract_alignment": {
+        "failed": 12,
+        "passed": 7
+      }
+    },
+    "failures": [
+      "tests.pipeline.test_price_contract_alignment::test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50[None]",
+      "tests.pipeline.test_price_contract_alignment::test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50[]",
+      "tests.pipeline.test_price_contract_alignment::test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50[unknown]",
+      "tests.pipeline.test_price_contract_alignment::test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50[MA50]",
+      "tests.pipeline.test_price_contract_alignment::test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50[low_absorption_intraday]",
+      "tests.pipeline.test_price_contract_alignment::test_omitted_channel_is_not_implicit_authorization",
+      "tests.pipeline.test_price_contract_alignment::test_unreachable_explicit_trend_keeps_original_zone_never_switches_ma10[False]",
+      "tests.pipeline.test_price_contract_alignment::test_unreachable_explicit_trend_keeps_original_zone_never_switches_ma10[True]",
+      "tests.pipeline.test_price_contract_alignment::test_existing_ten_percent_unreachable_boundary_without_new_tolerance[89.99-False]",
+      "tests.pipeline.test_price_contract_alignment::test_caller_empty_entry_without_channel_must_not_manufacture_ma50[watch_pool]",
+      "tests.pipeline.test_price_contract_alignment::test_caller_empty_entry_without_channel_must_not_manufacture_ma50[b_plan]",
+      "tests.pipeline.test_price_contract_alignment::test_caller_cannot_replace_explicit_legal_trend_with_divergence"
+    ],
+    "exit": 1
+  },
+  "joint": {
+    "count": 141,
+    "by_file": {
+      "tests.pipeline.test_price_contract_alignment": {
+        "passed": 16,
+        "failed": 3
+      },
+      "tests.pipeline.test_price_geometry_validity": {
+        "passed": 13
+      },
+      "tests.test_canghai_rr_scope_20261023": {
+        "passed": 104,
+        "failed": 5
+      }
+    },
+    "failures": [
+      "tests.pipeline.test_price_contract_alignment::test_caller_empty_entry_without_channel_must_not_manufacture_ma50[watch_pool]",
+      "tests.pipeline.test_price_contract_alignment::test_caller_empty_entry_without_channel_must_not_manufacture_ma50[b_plan]",
+      "tests.pipeline.test_price_contract_alignment::test_caller_cannot_replace_explicit_legal_trend_with_divergence",
+      "tests.test_canghai_rr_scope_20261023::test_actual_common_buy_blocks_only_bad_stock_and_sell_still_runs",
+      "tests.test_canghai_rr_scope_20261023::test_dispatch_global_gate_does_not_stop_legal_sell_or_research",
+      "tests.test_canghai_rr_scope_20261023::test_actual_dispatch_mixed_rr_has_no_global_contagion",
+      "tests.test_canghai_rr_scope_20261023::test_real_engine_formula_2r_and_1_8_threshold",
+      "tests.test_canghai_rr_scope_20261023::test_scoped_dispatch_keeps_good_buy_bad_sell_and_watch"
+    ],
+    "exit": 1
+  },
+  "baseline_rr": {
+    "count": 109,
+    "by_file": {
+      ".hermes.cache.scratch.premarket-all-price-20261029.before.tests.test_canghai_rr_scope_20261023": {
+        "passed": 105,
+        "failed": 4
+      }
+    },
+    "failures": [
+      ".hermes.cache.scratch.premarket-all-price-20261029.before.tests.test_canghai_rr_scope_20261023::test_actual_common_buy_blocks_only_bad_stock_and_sell_still_runs",
+      ".hermes.cache.scratch.premarket-all-price-20261029.before.tests.test_canghai_rr_scope_20261023::test_dispatch_global_gate_does_not_stop_legal_sell_or_research",
+      ".hermes.cache.scratch.premarket-all-price-20261029.before.tests.test_canghai_rr_scope_20261023::test_actual_dispatch_mixed_rr_has_no_global_contagion",
+      ".hermes.cache.scratch.premarket-all-price-20261029.before.tests.test_canghai_rr_scope_20261023::test_scoped_dispatch_keeps_good_buy_bad_sell_and_watch"
+    ],
+    "exit": 1
+  }
+}

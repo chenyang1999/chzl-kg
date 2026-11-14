@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a/.venv/bin/python",
+    "-B",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+    "paper"
+  ],
+  "pytest_argv": [
+    "tests/test_canghai_paper_execution_20261023.py",
+    "tests/test_canghai_paper_parent_review_20261023.py",
+    "tests/test_canghai_paper_plan_driver_20261023.py",
+    "-q",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/paper/fixtures/pytest",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/paper/junit.xml"
+  ],
+  "exit_code": 0,
+  "violations": [],
+  "synthetic_only": true,
+  "rr_adapt": false,
+  "subtest_count": 65,
+  "collected_count": 156,
+  "collection_only": false
+}

@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/pipeline/test_d1_selective_reassessment.py",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases",
+    "--junitxml=/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/junit.xml",
+    "--tb=short",
+    "-q"
+  ],
+  "environment": {
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/home",
+    "HERMES_HOME": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/home/.hermes",
+    "XDG_CONFIG_HOME": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/home/.config",
+    "TMPDIR": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029",
+    "PYTHONPATH": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real",
+    "R6_GUARD_DIR": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/guards",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "LANG": "en_US.UTF-8",
+    "D1_BASELINE_SOURCE": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/ensure.before.py"
+  },
+  "cwd": "/Users/chenyang/Downloads/demo/沧海巨浪"
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261028",
+  "next_day": "20261029",
+  "generated_at": "2026-10-28T22:00:44+08:00",
+  "n_total": 72,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "001219.SZ",
+      "name": "青岛食品",
+      "industry": "休闲食品",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 1.85,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 31.3,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.8亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002708.SZ",
+      "name": "光洋股份",
+      "industry": "汽车零部件",
+      "theme": "飞行汽车(eVTOL)",
+      "limit_times": 3,
+      "fd_amount_yi": 1.78,
+      "pct_chg": 9.99,
+      "first_time": "93000",
+      "open_times": 0,
+      "float_mv_yi": 96.5,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.8亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "000678.SZ",
+      "name": "襄阳轴承",
+      "industry": "汽车零部件",
+      "theme": "减速器、农机、军民融合",
+      "limit_times": 5,
+      "fd_amount_yi": 2.92,
+      "pct_chg": 9.99,
+      "first_time": "93215",
+      "open_times": 0,
+      "float_mv_yi": 80.9,
+      "prob_yizi": 27.8,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=2.9亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002636.SZ",
+      "name": "金安国纪",
+      "industry": "元件",
+      "theme": "消毒剂",
+      "limit_times": 1,
+      "fd_amount_yi": 3.27,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 1,
+      "float_mv_yi": 424.9,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.3亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停72只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

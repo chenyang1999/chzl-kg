@@ -1,0 +1,71 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261015",
+  "next_day": "20261016",
+  "generated_at": "2026-10-17T18:55:36+08:00",
+  "n_total": 36,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "000530.SZ",
+      "name": "冰山冷热",
+      "industry": "通用设备",
+      "limit_times": 3,
+      "fd_amount_yi": 0.16,
+      "pct_chg": 10.0,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.2亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "001318.SZ",
+      "name": "阳光乳业",
+      "industry": "饮料乳品",
+      "limit_times": 3,
+      "fd_amount_yi": 1.08,
+      "pct_chg": 9.98,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.1亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "002343.SZ",
+      "name": "慈文传媒",
+      "industry": "影视院线",
+      "limit_times": 5,
+      "fd_amount_yi": 1.4,
+      "pct_chg": 10.0,
+      "prob_yizi": 20.0,
+      "prob_up": 42.0,
+      "rank": "关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=1.4亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "002815.SZ",
+      "name": "崇达技术",
+      "industry": "元件",
+      "limit_times": 1,
+      "fd_amount_yi": 3.27,
+      "pct_chg": 9.98,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.3亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停36只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

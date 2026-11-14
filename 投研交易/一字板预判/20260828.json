@@ -1,0 +1,131 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260828",
+  "next_day": "20260831",
+  "generated_at": "2026-10-17T18:55:27+08:00",
+  "n_total": 82,
+  "n_candidates": 8,
+  "candidates": [
+    {
+      "ts_code": "000712.SZ",
+      "name": "锦龙股份",
+      "industry": "证券Ⅱ",
+      "limit_times": 3,
+      "fd_amount_yi": 2.37,
+      "pct_chg": 9.97,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.4亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002084.SZ",
+      "name": "海鸥住工",
+      "industry": "家居用品",
+      "limit_times": 5,
+      "fd_amount_yi": 3.61,
+      "pct_chg": 10.06,
+      "prob_yizi": 31.0,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=3.6亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002942.SZ",
+      "name": "新农股份",
+      "industry": "农化制品",
+      "limit_times": 3,
+      "fd_amount_yi": 0.13,
+      "pct_chg": 9.99,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.1亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600479.SH",
+      "name": "千金药业",
+      "industry": "中药Ⅱ",
+      "limit_times": 3,
+      "fd_amount_yi": 0.47,
+      "pct_chg": 9.98,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.5亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600371.SH",
+      "name": "万向德农",
+      "industry": "种植业",
+      "limit_times": 4,
+      "fd_amount_yi": 1.63,
+      "pct_chg": 10.01,
+      "prob_yizi": 26.2,
+      "prob_up": 38.1,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.6亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "600378.SH",
+      "name": "昊华科技",
+      "industry": "化学制品",
+      "limit_times": 2,
+      "fd_amount_yi": 4.31,
+      "pct_chg": 10.01,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=4.3亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002886.SZ",
+      "name": "沃特股份",
+      "industry": "塑料",
+      "limit_times": 2,
+      "fd_amount_yi": 2.65,
+      "pct_chg": 10.0,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.7亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002354.SZ",
+      "name": "天娱数科",
+      "industry": "广告营销",
+      "limit_times": 1,
+      "fd_amount_yi": 5.3,
+      "pct_chg": 9.94,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=5.3亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停82只，筛出 8 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

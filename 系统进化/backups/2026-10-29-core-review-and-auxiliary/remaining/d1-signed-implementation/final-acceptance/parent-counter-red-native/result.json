@@ -1,0 +1,48 @@
+{
+  "exit_code": 1,
+  "cases": [
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_multiple_trusted_r6_updates_do_not_require_d1_between_each[False]",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_multiple_trusted_r6_updates_do_not_require_d1_between_each[True]",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_d1_selective_reassessment::test_intermediate_r6_reception_drift_cannot_supply_inheritance",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    }
+  ],
+  "source_unchanged": true,
+  "index_unchanged": true,
+  "guard_violations": [],
+  "guard_pids": [
+    9134,
+    9136,
+    9137,
+    9139,
+    9140,
+    9141,
+    9142,
+    9144,
+    9146
+  ],
+  "native_child_pids": [
+    9136,
+    9137,
+    9139,
+    9140,
+    9141,
+    9142,
+    9144,
+    9146
+  ],
+  "unguarded_native_children": []
+}

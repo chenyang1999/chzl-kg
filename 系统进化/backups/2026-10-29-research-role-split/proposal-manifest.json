@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-29T12:30:19.973177+08:00",
+  "status": "pending_explicit_identity_sign_off",
+  "applied": false,
+  "target": "/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md",
+  "before_sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35",
+  "candidate_sha256": "02e14bd405246a3ed45c8bc1e2a78635018397b8a4b934798c226fee3ac0cb10",
+  "files": [
+    {
+      "path": "SOUL.before.md",
+      "bytes": 5030,
+      "sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35"
+    },
+    {
+      "path": "SOUL.expected.md",
+      "bytes": 5817,
+      "sha256": "02e14bd405246a3ed45c8bc1e2a78635018397b8a4b934798c226fee3ac0cb10"
+    },
+    {
+      "path": "pending-role-split.diff",
+      "bytes": 1483,
+      "sha256": "b8ae831f380f2af46cd41b45254ce303538130f579d2f53f243dc563dfb07d3c"
+    },
+    {
+      "path": "role-candidate.json",
+      "bytes": 514,
+      "sha256": "33722916780a7ae04c85cb3b9d85a1a2d72679bdd290bc54dcce5026137d983e"
+    },
+    {
+      "path": "launch-metadata.json",
+      "bytes": 30995,
+      "sha256": "45e207b9e0416b964170da0fcd0914fd5a30c9dcfec0875b855b0e14629ea3f2"
+    },
+    {
+      "path": "parent-read-verification.json",
+      "bytes": 868,
+      "sha256": "e087e1828386a47b4357aa7035fdfbdefda6d5727b057ab88c4ac24ec1d637de"
+    },
+    {
+      "path": "role-loader-preflight.json",
+      "bytes": 769,
+      "sha256": "b0b0d81ac610d85962a6af8f9374e0a4bf06b48b87de54c4ae6d2b534bf65cde"
+    },
+    {
+      "path": "role-loader-preflight-2.json",
+      "bytes": 2712,
+      "sha256": "ae8da564f65cf868806847c8b415773c281b3c5045ec7d263813c1b109a0cef0"
+    },
+    {
+      "path": "large-return-report.md",
+      "bytes": 3678,
+      "sha256": "8c6f937e3c6ac0182949317030ffc120d22cd044cbe3c1a9b58d9c26a9897cba"
+    },
+    {
+      "path": "large-return-extract.json",
+      "bytes": 13544,
+      "sha256": "1bc00f213963eb40a6e3249860f26369b9a0c6be0777dc720448af82e9c9aaef"
+    },
+    {
+      "path": "inspect_launches.py",
+      "bytes": 4385,
+      "sha256": "9ca9c4cb75574e97934034589fdafcfaff1cbbfb4f63886851a12473c3b91781"
+    },
+    {
+      "path": "prepare_identity_patch.py",
+      "bytes": 2938,
+      "sha256": "99ccd9474be0fdd271138008f02a3b34f8f3610d358347e57db12eabf35929e5"
+    },
+    {
+      "path": "check_identity_loader.py",
+      "bytes": 3372,
+      "sha256": "a75b9ac2eb9d19abdef47d1569606ec90441a023ef4cdf7629749eafeee132f3"
+    }
+  ],
+  "source_identity_unchanged": true,
+  "native_loader_content_checks_passed": true,
+  "full_guard_preflight_passed": false,
+  "blocked_initialization_attempts": [
+    "git rev-parse HEAD version probe",
+    "read scratch candidate/.env; blocked before open"
+  ],
+  "actual_credentials_read": false,
+  "production_model_calls": 0,
+  "archive_kind": "proposal and read-only diagnostic evidence, not deployed code acceptance",
+  "index_sha256": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143"
+}

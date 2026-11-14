@@ -1,0 +1,517 @@
+{
+  "backtest_window": [
+    "20260831",
+    "20260904"
+  ],
+  "daily_reports": [
+    {
+      "date": "20260831",
+      "emotion_phase": "未算",
+      "main_lines_count": 2,
+      "main_lines_names": [
+        "粮食安全/农业种植",
+        "AI算力/光通信"
+      ],
+      "recommendations_count": 10,
+      "recommendations": [
+        {
+          "line": "粮食安全/农业种植",
+          "stage": "early",
+          "score": 86.0,
+          "ts_code": "600371.SH",
+          "name": "万向德农",
+          "role": "龙一",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "粮食安全/农业种植",
+          "stage": "early",
+          "score": 86.0,
+          "ts_code": "600127.SH",
+          "name": "金健米业",
+          "role": "龙二",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "粮食安全/农业种植",
+          "stage": "early",
+          "score": 86.0,
+          "ts_code": "600540.SH",
+          "name": "新赛股份",
+          "role": "候补",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "粮食安全/农业种植",
+          "stage": "early",
+          "score": 86.0,
+          "ts_code": "600354.SH",
+          "name": "敦煌种业",
+          "role": "候补",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "粮食安全/农业种植",
+          "stage": "early",
+          "score": 86.0,
+          "ts_code": "002942.SZ",
+          "name": "新农股份",
+          "role": "候补",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "AI算力/光通信",
+          "stage": "late",
+          "score": 74.0,
+          "ts_code": "002396.SZ",
+          "name": "星网锐捷",
+          "role": "龙一",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "AI算力/光通信",
+          "stage": "late",
+          "score": 74.0,
+          "ts_code": "002886.SZ",
+          "name": "沃特股份",
+          "role": "龙二",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "AI算力/光通信",
+          "stage": "late",
+          "score": 74.0,
+          "ts_code": "300308.SZ",
+          "name": "中际旭创",
+          "role": "候补",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        }
+      ],
+      "top20_count": 20,
+      "hit_count_in_top20": 0,
+      "hit_details": [],
+      "miss_top20": [
+        [
+          "920223.BJ",
+          29.9672
+        ],
+        [
+          "920021.BJ",
+          29.9559
+        ],
+        [
+          "301151.SZ",
+          20.0231
+        ],
+        [
+          "300364.SZ",
+          20.0176
+        ],
+        [
+          "300911.SZ",
+          20.009
+        ]
+      ]
+    },
+    {
+      "date": "20260901",
+      "emotion_phase": "未算",
+      "main_lines_count": 3,
+      "main_lines_names": [
+        "AI应用与AIGC",
+        "算力基建与液冷",
+        "半导体存储与先进封装"
+      ],
+      "recommendations_count": 15,
+      "recommendations": [
+        {
+          "line": "AI应用与AIGC",
+          "stage": "?",
+          "score": 82.0,
+          "ts_code": "300418.SZ",
+          "name": "昆仑万维",
+          "role": "龙一",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "AI应用与AIGC",
+          "stage": "?",
+          "score": 82.0,
+          "ts_code": "300364.SZ",
+          "name": "中文在线",
+          "role": "龙二",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "AI应用与AIGC",
+          "stage": "?",
+          "score": 82.0,
+          "ts_code": "300413.SZ",
+          "name": "芒果超媒",
+          "role": "龙二",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "AI应用与AIGC",
+          "stage": "?",
+          "score": 82.0,
+          "ts_code": "002230.SZ",
+          "name": "科大讯飞",
+          "role": "中军",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "AI应用与AIGC",
+          "stage": "?",
+          "score": 82.0,
+          "ts_code": "300496.SZ",
+          "name": "中科创达",
+          "role": "候补",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "算力基建与液冷",
+          "stage": "?",
+          "score": 73.0,
+          "ts_code": "002837.SZ",
+          "name": "英维克",
+          "role": "龙一",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "算力基建与液冷",
+          "stage": "?",
+          "score": 73.0,
+          "ts_code": "000977.SZ",
+          "name": "浪潮信息",
+          "role": "龙二",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "算力基建与液冷",
+          "stage": "?",
+          "score": 73.0,
+          "ts_code": "688256.SH",
+          "name": "寒武纪",
+          "role": "龙二",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        }
+      ],
+      "top20_count": 20,
+      "hit_count_in_top20": 1,
+      "hit_details": [
+        [
+          "300413.SZ",
+          20.0236,
+          20.0236
+        ]
+      ],
+      "miss_top20": [
+        [
+          "601123.SH",
+          290.9774
+        ],
+        [
+          "301697.SZ",
+          196.6942
+        ],
+        [
+          "920855.BJ",
+          29.9845
+        ],
+        [
+          "920895.BJ",
+          29.9753
+        ],
+        [
+          "920592.BJ",
+          29.959
+        ]
+      ]
+    },
+    {
+      "date": "20260902",
+      "error": "no R2 data"
+    },
+    {
+      "date": "20260903",
+      "error": "no R2 data"
+    },
+    {
+      "date": "20260904",
+      "emotion_phase": "高位震荡",
+      "main_lines_count": 1,
+      "main_lines_names": [
+        "机器人/具身智能"
+      ],
+      "recommendations_count": 5,
+      "recommendations": [
+        {
+          "line": "机器人/具身智能",
+          "stage": "?",
+          "score": 77.0,
+          "ts_code": "002708.SZ",
+          "name": "光洋股份",
+          "role": "龙一",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "机器人/具身智能",
+          "stage": "?",
+          "score": 77.0,
+          "ts_code": "603728.SH",
+          "name": "鸣志电器",
+          "role": "龙二",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "机器人/具身智能",
+          "stage": "?",
+          "score": 77.0,
+          "ts_code": "688836.SH",
+          "name": "宇树科技",
+          "role": "候补",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "机器人/具身智能",
+          "stage": "?",
+          "score": 77.0,
+          "ts_code": "300607.SZ",
+          "name": "拓斯达",
+          "role": "候补",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        },
+        {
+          "line": "机器人/具身智能",
+          "stage": "?",
+          "score": 77.0,
+          "ts_code": "002050.SZ",
+          "name": "三花智控",
+          "role": "候补(中军)",
+          "leader_type": "watch",
+          "type_label": "待观察"
+        }
+      ],
+      "top20_count": 20,
+      "hit_count_in_top20": 0,
+      "hit_details": [],
+      "miss_top20": [
+        [
+          "920289.BJ",
+          111.7448
+        ],
+        [
+          "920075.BJ",
+          30.0
+        ],
+        [
+          "920970.BJ",
+          17.7019
+        ],
+        [
+          "688170.SH",
+          17.5019
+        ],
+        [
+          "300300.SZ",
+          16.0102
+        ]
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "code": "300413.SZ",
+      "name": "芒果超媒",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 20.02,
+      "avg_daily": 20.02
+    },
+    {
+      "code": "600540.SH",
+      "name": "新赛股份",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 10.1,
+      "avg_daily": 10.1
+    },
+    {
+      "code": "002396.SZ",
+      "name": "星网锐捷",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 10.0,
+      "avg_daily": 10.0
+    },
+    {
+      "code": "002886.SZ",
+      "name": "沃特股份",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 10.0,
+      "avg_daily": 10.0
+    },
+    {
+      "code": "600371.SH",
+      "name": "万向德农",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 9.97,
+      "avg_daily": 9.97
+    },
+    {
+      "code": "002942.SZ",
+      "name": "新农股份",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 5.21,
+      "avg_daily": 5.21
+    },
+    {
+      "code": "300418.SZ",
+      "name": "昆仑万维",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 4.43,
+      "avg_daily": 4.43
+    },
+    {
+      "code": "300364.SZ",
+      "name": "中文在线",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 3.78,
+      "avg_daily": 3.78
+    },
+    {
+      "code": "600127.SH",
+      "name": "金健米业",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 2.29,
+      "avg_daily": 2.29
+    },
+    {
+      "code": "600354.SH",
+      "name": "敦煌种业",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 0.97,
+      "avg_daily": 0.97
+    },
+    {
+      "code": "000977.SZ",
+      "name": "浪潮信息",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": 0.49,
+      "avg_daily": 0.49
+    },
+    {
+      "code": "300496.SZ",
+      "name": "中科创达",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": -0.08,
+      "avg_daily": -0.08
+    },
+    {
+      "code": "002230.SZ",
+      "name": "科大讯飞",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": -0.2,
+      "avg_daily": -0.2
+    },
+    {
+      "code": "688256.SH",
+      "name": "寒武纪",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": -0.29,
+      "avg_daily": -0.29
+    },
+    {
+      "code": "300308.SZ",
+      "name": "中际旭创",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": -0.75,
+      "avg_daily": -0.75
+    },
+    {
+      "code": "002708.SZ",
+      "name": "光洋股份",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": -1.99,
+      "avg_daily": -1.99
+    },
+    {
+      "code": "002050.SZ",
+      "name": "三花智控",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": -2.31,
+      "avg_daily": -2.31
+    },
+    {
+      "code": "300607.SZ",
+      "name": "拓斯达",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": -3.14,
+      "avg_daily": -3.14
+    },
+    {
+      "code": "002837.SZ",
+      "name": "英维克",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": -3.39,
+      "avg_daily": -3.39
+    },
+    {
+      "code": "688836.SH",
+      "name": "宇树科技",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": -3.66,
+      "avg_daily": -3.66
+    },
+    {
+      "code": "603728.SH",
+      "name": "鸣志电器",
+      "type": "待观察",
+      "days_held": 1,
+      "cum_return": -6.04,
+      "avg_daily": -6.04
+    }
+  ],
+  "type_distribution": {
+    "待观察": 21
+  },
+  "generated_at": "2026-09-05T17:15:21+08:00"
+}

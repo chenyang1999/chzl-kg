@@ -1,0 +1,86 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260930",
+  "next_day": "20261008",
+  "generated_at": "2026-10-17T18:55:34+08:00",
+  "n_total": 52,
+  "n_candidates": 5,
+  "candidates": [
+    {
+      "ts_code": "600825.SH",
+      "name": "新华传媒",
+      "industry": "出版",
+      "limit_times": 7,
+      "fd_amount_yi": 19.88,
+      "pct_chg": 9.99,
+      "prob_yizi": 31.0,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=7 (一字率20%)",
+        "封单=19.9亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002242.SZ",
+      "name": "九阳股份",
+      "industry": "小家电",
+      "limit_times": 3,
+      "fd_amount_yi": 1.65,
+      "pct_chg": 10.04,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.6亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "000011.SZ",
+      "name": "深物业A",
+      "industry": "房地产开发",
+      "limit_times": 3,
+      "fd_amount_yi": 0.4,
+      "pct_chg": 9.97,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.4亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "301190.SZ",
+      "name": "善水科技",
+      "industry": "化学原料",
+      "limit_times": 3,
+      "fd_amount_yi": 1.06,
+      "pct_chg": 20.01,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.1亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "600241.SH",
+      "name": "时代万恒",
+      "industry": "电池",
+      "limit_times": 3,
+      "fd_amount_yi": 1.42,
+      "pct_chg": 9.95,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.4亿 (一字率19%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停52只，筛出 5 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

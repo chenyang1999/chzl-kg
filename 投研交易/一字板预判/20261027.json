@@ -1,0 +1,87 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261027",
+  "next_day": "20261028",
+  "generated_at": "2026-10-27T22:00:24+08:00",
+  "n_total": 41,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "600838.SH",
+      "name": "上海九百",
+      "industry": "一般零售",
+      "theme": "",
+      "limit_times": 5,
+      "fd_amount_yi": 1.5,
+      "pct_chg": 10.0,
+      "first_time": "93026",
+      "open_times": 0,
+      "float_mv_yi": 53.4,
+      "prob_yizi": 25.2,
+      "prob_up": 42.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=1.5亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "000678.SZ",
+      "name": "襄阳轴承",
+      "industry": "汽车零部件",
+      "theme": "减速器、农机、军民融合",
+      "limit_times": 4,
+      "fd_amount_yi": 1.28,
+      "pct_chg": 10.03,
+      "first_time": "93409",
+      "open_times": 1,
+      "float_mv_yi": 73.6,
+      "prob_yizi": 21.7,
+      "prob_up": 38.1,
+      "rank": "关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.3亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "603528.SH",
+      "name": "多伦科技",
+      "industry": "软件开发",
+      "theme": "车路云一体化、无人驾驶应用、新能车检概念",
+      "limit_times": 4,
+      "fd_amount_yi": 1.15,
+      "pct_chg": 10.06,
+      "first_time": "92501",
+      "open_times": 1,
+      "float_mv_yi": 69.5,
+      "prob_yizi": 21.7,
+      "prob_up": 38.1,
+      "rank": "关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.1亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "000058.SZ",
+      "name": "深 赛 格",
+      "industry": "一般零售",
+      "theme": "",
+      "limit_times": 1,
+      "fd_amount_yi": 4.01,
+      "pct_chg": 10.07,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 77.5,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.0亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停41只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

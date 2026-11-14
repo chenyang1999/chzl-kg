@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="0.072" timestamp="2026-10-29T16:36:20.537482+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_distance_diagnostic_does_not_certify_exchange_price_band[000001.SZ]" time="0.009"><failure message="KeyError: 'reachability_status'">tests/pipeline/test_price_contract_alignment.py:228: in test_distance_diagnostic_does_not_certify_exchange_price_band
+    assert row["reachability_status"] == "unverified"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'reachability_status'</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_distance_diagnostic_does_not_certify_exchange_price_band[300001.SZ]" time="0.007"><failure message="KeyError: 'reachability_status'">tests/pipeline/test_price_contract_alignment.py:228: in test_distance_diagnostic_does_not_certify_exchange_price_band
+    assert row["reachability_status"] == "unverified"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'reachability_status'</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_distance_diagnostic_does_not_certify_exchange_price_band[920001.BJ]" time="0.007"><failure message="KeyError: 'reachability_status'">tests/pipeline/test_price_contract_alignment.py:228: in test_distance_diagnostic_does_not_certify_exchange_price_band
+    assert row["reachability_status"] == "unverified"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'reachability_status'</failure></testcase></testsuite></testsuites>

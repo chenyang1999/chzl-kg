@@ -1,0 +1,131 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260902",
+  "next_day": "20260903",
+  "generated_at": "2026-10-17T18:55:28+08:00",
+  "n_total": 52,
+  "n_candidates": 8,
+  "candidates": [
+    {
+      "ts_code": "000892.SZ",
+      "name": "欢瑞世纪",
+      "industry": "影视院线",
+      "limit_times": 3,
+      "fd_amount_yi": 3.95,
+      "pct_chg": 9.94,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=3.9亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "601086.SH",
+      "name": "国芳集团",
+      "industry": "一般零售",
+      "limit_times": 4,
+      "fd_amount_yi": 3.06,
+      "pct_chg": 10.01,
+      "prob_yizi": 32.0,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=3.1亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002909.SZ",
+      "name": "集泰股份",
+      "industry": "化学制品",
+      "limit_times": 3,
+      "fd_amount_yi": 0.74,
+      "pct_chg": 9.97,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.7亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600892.SH",
+      "name": "大晟文化",
+      "industry": "游戏Ⅱ",
+      "limit_times": 3,
+      "fd_amount_yi": 1.34,
+      "pct_chg": 10.08,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.3亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "605577.SH",
+      "name": "龙版传媒",
+      "industry": "出版",
+      "limit_times": 3,
+      "fd_amount_yi": 0.74,
+      "pct_chg": 10.02,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.7亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "003005.SZ",
+      "name": "竞业达",
+      "industry": "IT服务Ⅱ",
+      "limit_times": 4,
+      "fd_amount_yi": 1.81,
+      "pct_chg": 10.01,
+      "prob_yizi": 26.2,
+      "prob_up": 38.1,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.8亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "600967.SH",
+      "name": "内蒙一机",
+      "industry": "地面兵装",
+      "limit_times": 2,
+      "fd_amount_yi": 2.76,
+      "pct_chg": 10.01,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.8亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "600869.SH",
+      "name": "远东股份",
+      "industry": "电网设备",
+      "limit_times": 1,
+      "fd_amount_yi": 4.3,
+      "pct_chg": 9.98,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.3亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停52只，筛出 8 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

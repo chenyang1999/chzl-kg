@@ -1,0 +1,163 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261026",
+  "next_day": "20261027",
+  "generated_at": "2026-10-26T22:00:20+08:00",
+  "n_total": 55,
+  "n_candidates": 8,
+  "candidates": [
+    {
+      "ts_code": "603528.SH",
+      "name": "多伦科技",
+      "industry": "软件开发",
+      "theme": "车路云一体化、无人驾驶应用、新能车检概念",
+      "limit_times": 3,
+      "fd_amount_yi": 3.55,
+      "pct_chg": 9.95,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 63.2,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=3.6亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "603028.SH",
+      "name": "赛福天",
+      "industry": "通用设备",
+      "theme": "特钢概念",
+      "limit_times": 3,
+      "fd_amount_yi": 2.89,
+      "pct_chg": 9.95,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 26.6,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.9亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "000678.SZ",
+      "name": "襄阳轴承",
+      "industry": "汽车零部件",
+      "theme": "减速器、农机、军民融合",
+      "limit_times": 3,
+      "fd_amount_yi": 1.08,
+      "pct_chg": 9.98,
+      "first_time": "93118",
+      "open_times": 5,
+      "float_mv_yi": 66.9,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.1亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "002535.SZ",
+      "name": "林州重机",
+      "industry": "专用设备",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.37,
+      "pct_chg": 9.9,
+      "first_time": "93100",
+      "open_times": 1,
+      "float_mv_yi": 24.9,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.4亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "301502.SZ",
+      "name": "华阳智能",
+      "industry": "电机Ⅱ",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.01,
+      "pct_chg": 20.0,
+      "first_time": "92500",
+      "open_times": 5,
+      "float_mv_yi": 18.4,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.0亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "603089.SH",
+      "name": "正裕工业",
+      "industry": "汽车零部件",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.32,
+      "pct_chg": 10.01,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 36.1,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.3亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600838.SH",
+      "name": "上海九百",
+      "industry": "一般零售",
+      "theme": "",
+      "limit_times": 4,
+      "fd_amount_yi": 1.36,
+      "pct_chg": 10.0,
+      "first_time": "92501",
+      "open_times": 1,
+      "float_mv_yi": 48.5,
+      "prob_yizi": 21.7,
+      "prob_up": 38.1,
+      "rank": "关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.4亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "603337.SH",
+      "name": "杰克科技",
+      "industry": "专用设备",
+      "theme": "",
+      "limit_times": 2,
+      "fd_amount_yi": 2.45,
+      "pct_chg": 10.01,
+      "first_time": "93000",
+      "open_times": 0,
+      "float_mv_yi": 201.8,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.4亿 (一字率26%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停55只，筛出 8 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

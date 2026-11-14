@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-10-26T20:08:30.620722+08:00",
+  "scope": "文档结构、链接、六项审阅修订及已渲染图块一致性；不代表业务实现验收",
+  "files": [
+    {
+      "path": "chzl_kg/系统进化/2026-10-26 市场反馈驱动的认知闭环与分期施工方案.md",
+      "sha256": "ac4d30f4995b54188d85fba7e7b9c59c086fe127c2194943a4cecaa90e5db538",
+      "lines": 365
+    },
+    {
+      "path": "chzl_kg/系统进化/2026-10-26 认知闭环施工方案审阅记录.md",
+      "sha256": "c6e65ab8fad3c5530239bf70a1dbb58abec8deb4451a7f69fe22f6cc2d7e3f77",
+      "lines": 83
+    },
+    {
+      "path": "chzl_kg/系统进化/2026-10-26 GPT6.1-sol主模型统一与实测记录.md",
+      "sha256": "ef73eef319e031c215e6196313fec4ec40a8ed294e89aace3235933d4aeda0de",
+      "lines": 74
+    }
+  ],
+  "links": [
+    {
+      "from": "2026-10-26 市场反馈驱动的认知闭环与分期施工方案.md",
+      "target": "chzl_kg/系统进化/2026-10-26 GPT6.1-sol主模型统一与实测记录.md",
+      "exists": true
+    },
+    {
+      "from": "2026-10-26 市场反馈驱动的认知闭环与分期施工方案.md",
+      "target": "chzl_kg/系统进化/2026-10-26 认知闭环施工方案审阅记录.md",
+      "exists": true
+    },
+    {
+      "from": "2026-10-26 市场反馈驱动的认知闭环与分期施工方案.md",
+      "target": "chzl_kg/系统进化/2026-10-26 系统架构全景与定时任务数据流.md",
+      "exists": true
+    },
+    {
+      "from": "2026-10-26 市场反馈驱动的认知闭环与分期施工方案.md",
+      "target": "chzl_kg/系统进化/2026-10-26 重构进度与验收边界.md",
+      "exists": true
+    },
+    {
+      "from": "2026-10-26 市场反馈驱动的认知闭环与分期施工方案.md",
+      "target": "chzl_kg/系统进化/2026-10-25 辅助研究输入接线待签说明.md",
+      "exists": true
+    },
+    {
+      "from": "2026-10-26 认知闭环施工方案审阅记录.md",
+      "target": "chzl_kg/系统进化/2026-10-26 市场反馈驱动的认知闭环与分期施工方案.md",
+      "exists": true
+    }
+  ],
+  "link_count": 6,
+  "mermaid_blocks": 4,
+  "mermaid_hash_match": true,
+  "review_spec_checks": {
+    "R1_budget": true,
+    "R2_time": true,
+    "R3_population": true,
+    "R4_sequence": true,
+    "R5_authority": true,
+    "R6_complexity": true
+  },
+  "all_passed": true
+}

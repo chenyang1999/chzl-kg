@@ -1,0 +1,163 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261020",
+  "next_day": "20261021",
+  "generated_at": "2026-10-21T15:30:48+08:00",
+  "n_total": 54,
+  "n_candidates": 8,
+  "candidates": [
+    {
+      "ts_code": "600178.SH",
+      "name": "东安动力",
+      "industry": "汽车零部件",
+      "theme": "黑龙江自贸区、飞行汽车(eVTOL)、长安汽车概念",
+      "limit_times": 3,
+      "fd_amount_yi": 2.75,
+      "pct_chg": 10.02,
+      "first_time": "92501",
+      "open_times": 0,
+      "float_mv_yi": 57.9,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.7亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "603278.SH",
+      "name": "大业股份",
+      "industry": "通用设备",
+      "theme": "高端装备、轮胎、生物质能发电",
+      "limit_times": 3,
+      "fd_amount_yi": 2.28,
+      "pct_chg": 10.0,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 41.0,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.3亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002724.SZ",
+      "name": "海洋王",
+      "industry": "照明设备",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.94,
+      "pct_chg": 9.98,
+      "first_time": "93018",
+      "open_times": 3,
+      "float_mv_yi": 52.5,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.9亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600148.SH",
+      "name": "长春一东",
+      "industry": "汽车零部件",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.27,
+      "pct_chg": 9.99,
+      "first_time": "93010",
+      "open_times": 4,
+      "float_mv_yi": 27.9,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.3亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600860.SH",
+      "name": "京城股份",
+      "industry": "通用设备",
+      "theme": "小米机器人",
+      "limit_times": 3,
+      "fd_amount_yi": 0.58,
+      "pct_chg": 10.0,
+      "first_time": "93041",
+      "open_times": 2,
+      "float_mv_yi": 42.5,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.6亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "003029.SZ",
+      "name": "吉大正元",
+      "industry": "软件开发",
+      "theme": "跨境支付、AI安全",
+      "limit_times": 4,
+      "fd_amount_yi": 1.12,
+      "pct_chg": 10.0,
+      "first_time": "92500",
+      "open_times": 4,
+      "float_mv_yi": 46.7,
+      "prob_yizi": 21.7,
+      "prob_up": 38.1,
+      "rank": "关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.1亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "002835.SZ",
+      "name": "同为股份",
+      "industry": "计算机设",
+      "theme": "AI视觉",
+      "limit_times": 1,
+      "fd_amount_yi": 3.12,
+      "pct_chg": 10.02,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 18.0,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.1亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600293.SH",
+      "name": "三峡新材",
+      "industry": "玻璃玻纤",
+      "theme": "光伏辅材",
+      "limit_times": 1,
+      "fd_amount_yi": 5.3,
+      "pct_chg": 9.92,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 50.1,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=5.3亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停54只，筛出 8 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

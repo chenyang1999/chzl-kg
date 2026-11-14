@@ -1,0 +1,87 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261109",
+  "next_day": "20261110",
+  "generated_at": "2026-11-09T22:00:49+08:00",
+  "n_total": 54,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "002578.SZ",
+      "name": "闽发铝业",
+      "industry": "工业金属",
+      "theme": "金属铝概念",
+      "limit_times": 6,
+      "fd_amount_yi": 1.88,
+      "pct_chg": 9.98,
+      "first_time": "92500",
+      "open_times": 1,
+      "float_mv_yi": 47.5,
+      "prob_yizi": 25.2,
+      "prob_up": 42.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=6 (一字率20%)",
+        "封单=1.9亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "603366.SH",
+      "name": "日出东方",
+      "industry": "厨卫电器",
+      "theme": "空气能热泵、华为液冷快充、净水概念",
+      "limit_times": 2,
+      "fd_amount_yi": 8.0,
+      "pct_chg": 10.01,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 80.4,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=8.0亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002310.SZ",
+      "name": "东方新能",
+      "industry": "电力",
+      "theme": "金属回收、生态农业、汽车拆解概念",
+      "limit_times": 2,
+      "fd_amount_yi": 2.32,
+      "pct_chg": 9.91,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 112.2,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.3亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002037.SZ",
+      "name": "保利联合",
+      "industry": "化学制品",
+      "theme": "雅下水电概念、西藏水电概念、汽车拆解概念",
+      "limit_times": 1,
+      "fd_amount_yi": 4.35,
+      "pct_chg": 10.05,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 35.0,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.4亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停54只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

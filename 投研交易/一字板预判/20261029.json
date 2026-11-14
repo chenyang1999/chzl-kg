@@ -1,0 +1,87 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261029",
+  "next_day": "20261030",
+  "generated_at": "2026-10-29T22:00:43+08:00",
+  "n_total": 39,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "601956.SH",
+      "name": "东贝集团",
+      "industry": "家电零部",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 1.83,
+      "pct_chg": 10.02,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 41.6,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.8亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "600715.SH",
+      "name": "文投控股",
+      "industry": "游戏Ⅱ",
+      "theme": "网络游戏、手机游戏、NFT概念",
+      "limit_times": 3,
+      "fd_amount_yi": 0.4,
+      "pct_chg": 10.19,
+      "first_time": "93011",
+      "open_times": 6,
+      "float_mv_yi": 65.0,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.4亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "001219.SZ",
+      "name": "青岛食品",
+      "industry": "休闲食品",
+      "theme": "",
+      "limit_times": 4,
+      "fd_amount_yi": 1.65,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 34.5,
+      "prob_yizi": 26.2,
+      "prob_up": 38.1,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.7亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002862.SZ",
+      "name": "实丰文化",
+      "industry": "文娱用品",
+      "theme": "谷子经济概念、游戏、HJT电池",
+      "limit_times": 2,
+      "fd_amount_yi": 4.06,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 21.8,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=4.1亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停39只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

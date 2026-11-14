@@ -1,0 +1,302 @@
+{
+  "observed_at": "2026-10-29T14:30:09.213371+08:00",
+  "scope": "shared dependency compatibility handoff; no test/model/production run",
+  "input54_historical_verified_at": "2026-10-29T12:09:54.555366+08:00",
+  "input54_changed_dependencies": [
+    {
+      "path": "scripts/research/build_research_summary.py",
+      "tested_sha256": "f66b99d0a38755c303aab79e5d98cc177aaefb478b38ea06a57e141e8dc7489a",
+      "observed_sha256": "afd5a5b4ea09ed12f3ad4c3ad3fe456ae3312f01759c911d1e782d0669c67c44",
+      "matches": false
+    },
+    {
+      "path": "scripts/research/pipeline_artifacts.py",
+      "tested_sha256": "59516e95c37231441566e5311cb1e485eb62dc278f77706657fe0b4047bd9aeb",
+      "observed_sha256": "4e351c1494b1ccf1efb6013dbc7d59f5a01cfc14ca0d89c8d49ac6af2b54a5ca",
+      "matches": false
+    },
+    {
+      "path": "scripts/research/run_research_shell.sh",
+      "tested_sha256": "7a72f682455d3610046530f96d3ed495a78bbe31fcc074a4f2978221a456fbf5",
+      "observed_sha256": "b146e3923ceef93e6dc9953532c6afe69fa0319c7f040fdc34c29b80a8e3759b",
+      "matches": false
+    },
+    {
+      "path": "skills/analyze_devil_advocate_v1/SKILL.md",
+      "tested_sha256": "c5e67efb76cd622ec6cbf60806bdf3e1a9b6b19da9757d9942c077f9f4e38291",
+      "observed_sha256": "b6ab02eaf3f7b7b6ebb775d3a5b5f38cb4009e715494e14236b4ca00019e1d25",
+      "matches": false
+    }
+  ],
+  "input54_current_acceptance": "historical only; final shared-source compatibility must be rerun after the sole research writer freezes its work",
+  "price154_changed_dependencies": [],
+  "input54_queue": [
+    "tests/pipeline/test_bound_auxiliary_inputs.py",
+    "tests/pipeline/test_signed_input_review_contract.py",
+    "tests/pipeline/test_d1_auxiliary_caller_wiring.py"
+  ],
+  "input54_all_comparisons": [
+    {
+      "path": "scripts/research/build_research_summary.py",
+      "tested_sha256": "f66b99d0a38755c303aab79e5d98cc177aaefb478b38ea06a57e141e8dc7489a",
+      "observed_sha256": "afd5a5b4ea09ed12f3ad4c3ad3fe456ae3312f01759c911d1e782d0669c67c44",
+      "matches": false
+    },
+    {
+      "path": "scripts/research/pipeline_artifacts.py",
+      "tested_sha256": "59516e95c37231441566e5311cb1e485eb62dc278f77706657fe0b4047bd9aeb",
+      "observed_sha256": "4e351c1494b1ccf1efb6013dbc7d59f5a01cfc14ca0d89c8d49ac6af2b54a5ca",
+      "matches": false
+    },
+    {
+      "path": "scripts/research/run_research_shell.sh",
+      "tested_sha256": "7a72f682455d3610046530f96d3ed495a78bbe31fcc074a4f2978221a456fbf5",
+      "observed_sha256": "b146e3923ceef93e6dc9953532c6afe69fa0319c7f040fdc34c29b80a8e3759b",
+      "matches": false
+    },
+    {
+      "path": "scripts/plan/ensure_watchlist_plan.py",
+      "tested_sha256": "08688d64512fbda8db711195298cba5ff659fa4cce32402f91fa8208f504b5a1",
+      "observed_sha256": "08688d64512fbda8db711195298cba5ff659fa4cce32402f91fa8208f504b5a1",
+      "matches": true
+    },
+    {
+      "path": "skills/main_decision_v1/SKILL.md",
+      "tested_sha256": "72bc196a0690af6d5a5a74efaa33a9f7c1e9683eeafd5efb47fbac7215d50f2b",
+      "observed_sha256": "72bc196a0690af6d5a5a74efaa33a9f7c1e9683eeafd5efb47fbac7215d50f2b",
+      "matches": true
+    },
+    {
+      "path": "skills/analyze_devil_advocate_v1/SKILL.md",
+      "tested_sha256": "c5e67efb76cd622ec6cbf60806bdf3e1a9b6b19da9757d9942c077f9f4e38291",
+      "observed_sha256": "b6ab02eaf3f7b7b6ebb775d3a5b5f38cb4009e715494e14236b4ca00019e1d25",
+      "matches": false
+    },
+    {
+      "path": "docs/agents/R6-反证Agent.md",
+      "tested_sha256": "2215386a0065f1f0e9607b07f321e65dc840b0c142c4929a852dff1b9918487e",
+      "observed_sha256": "2215386a0065f1f0e9607b07f321e65dc840b0c142c4929a852dff1b9918487e",
+      "matches": true
+    },
+    {
+      "path": "docs/06-专题-反证机制.md",
+      "tested_sha256": "c6af453bd6aec812274d9a72ca0154f5f3733d89d9ad8ec34bf9e89667c520f7",
+      "observed_sha256": "c6af453bd6aec812274d9a72ca0154f5f3733d89d9ad8ec34bf9e89667c520f7",
+      "matches": true
+    },
+    {
+      "path": "tests/pipeline/test_bound_auxiliary_inputs.py",
+      "tested_sha256": "166ffe44ccc8cda58e65b3a1254bdb0fbcd207dd98d28645ea749ad7058ab25c",
+      "observed_sha256": "166ffe44ccc8cda58e65b3a1254bdb0fbcd207dd98d28645ea749ad7058ab25c",
+      "matches": true
+    },
+    {
+      "path": "tests/pipeline/test_signed_input_review_contract.py",
+      "tested_sha256": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8",
+      "observed_sha256": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8",
+      "matches": true
+    },
+    {
+      "path": "tests/pipeline/test_d1_auxiliary_caller_wiring.py",
+      "tested_sha256": "55bfbb32f860bb91684c7215a70d4a628c6187de544e93267b6e55e5422be4ad",
+      "observed_sha256": "55bfbb32f860bb91684c7215a70d4a628c6187de544e93267b6e55e5422be4ad",
+      "matches": true
+    }
+  ],
+  "price154_all_comparisons": [
+    {
+      "path": "scripts/plan/apply_price_levels.py",
+      "tested_sha256": "124b0eee2ce1cef02f8abad1d4aefb651c3bcf535953833ba779527536175c0e",
+      "observed_sha256": "124b0eee2ce1cef02f8abad1d4aefb651c3bcf535953833ba779527536175c0e",
+      "matches": true
+    },
+    {
+      "path": "src/__init__.py",
+      "tested_sha256": "ceaa53d0f89d6b8615d90814b49e9ba659f98ce86e2c052a50eaeeea1d66de40",
+      "observed_sha256": "ceaa53d0f89d6b8615d90814b49e9ba659f98ce86e2c052a50eaeeea1d66de40",
+      "matches": true
+    },
+    {
+      "path": "src/plan/__init__.py",
+      "tested_sha256": "fecae8e280caee2915aa279da5b0866f4dc3cf5f465fc5268e0864e590942d7f",
+      "observed_sha256": "fecae8e280caee2915aa279da5b0866f4dc3cf5f465fc5268e0864e590942d7f",
+      "matches": true
+    },
+    {
+      "path": "src/plan/buy_eligibility.py",
+      "tested_sha256": "a342b55787ec3a548c6133e1f9bd2872fb857b365266e8b2c10160f84ccf0d9f",
+      "observed_sha256": "a342b55787ec3a548c6133e1f9bd2872fb857b365266e8b2c10160f84ccf0d9f",
+      "matches": true
+    },
+    {
+      "path": "src/plan/price_levels.py",
+      "tested_sha256": "c547df87ecbf58f9e5f8ef9562e8d416c559d1681125f99d8cc11a8a97115380",
+      "observed_sha256": "c547df87ecbf58f9e5f8ef9562e8d416c559d1681125f99d8cc11a8a97115380",
+      "matches": true
+    },
+    {
+      "path": "src/plan/risk_reward.py",
+      "tested_sha256": "0534c00839c6f4a1b600062e71c2825a2f46850cd4b9fefd0f8aa5db69696612",
+      "observed_sha256": "0534c00839c6f4a1b600062e71c2825a2f46850cd4b9fefd0f8aa5db69696612",
+      "matches": true
+    },
+    {
+      "path": "tests/pipeline/test_price_contract_alignment.py",
+      "tested_sha256": "c96a3993f6d68cb697bac89495753494df1404c19a3204afc6d902be543c5088",
+      "observed_sha256": "c96a3993f6d68cb697bac89495753494df1404c19a3204afc6d902be543c5088",
+      "matches": true
+    },
+    {
+      "path": "tests/pipeline/test_price_geometry_validity.py",
+      "tested_sha256": "c097c1be88fc845764dcf4a39b34fb9e3c7fb88362b2e5f77e64588800058f34",
+      "observed_sha256": "c097c1be88fc845764dcf4a39b34fb9e3c7fb88362b2e5f77e64588800058f34",
+      "matches": true
+    },
+    {
+      "path": "tests/test_canghai_rr_scope_20261023.py",
+      "tested_sha256": "13d49451c298044d37aea23c3988b67b2ac395f6d130b6e4ed2bbf70fdb5bef6",
+      "observed_sha256": "13d49451c298044d37aea23c3988b67b2ac395f6d130b6e4ed2bbf70fdb5bef6",
+      "matches": true
+    },
+    {
+      "path": "trading/__init__.py",
+      "tested_sha256": "c205a161f9ec0524a2bb1065ee6e2c6327669cd13f60c665ac361fca96e347e3",
+      "observed_sha256": "c205a161f9ec0524a2bb1065ee6e2c6327669cd13f60c665ac361fca96e347e3",
+      "matches": true
+    },
+    {
+      "path": "trading/execution_authorization.py",
+      "tested_sha256": "b7f1f95a0d6a9572f91795a353ccefacf9cfc28dbb10ac2c3d710e912166c927",
+      "observed_sha256": "b7f1f95a0d6a9572f91795a353ccefacf9cfc28dbb10ac2c3d710e912166c927",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/__init__.py",
+      "tested_sha256": "f4d9a69ec4d9ab9d5a273babeebff072795b427f9d2dfd1fce3f2d08df464b1c",
+      "observed_sha256": "f4d9a69ec4d9ab9d5a273babeebff072795b427f9d2dfd1fce3f2d08df464b1c",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/_buy_common.py",
+      "tested_sha256": "b7033cb1d1ff926803c99eef9fe50f9857df7ffd7947e9c70d7248cf95f97d3f",
+      "observed_sha256": "b7033cb1d1ff926803c99eef9fe50f9857df7ffd7947e9c70d7248cf95f97d3f",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/_sell_common.py",
+      "tested_sha256": "d685ba03f002ccdbdd81e010ec7c75b1224a4bb5efc080b15e3c653a4e57dea7",
+      "observed_sha256": "d685ba03f002ccdbdd81e010ec7c75b1224a4bb5efc080b15e3c653a4e57dea7",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/base.py",
+      "tested_sha256": "21f630bbcda3588e0afa63cb27fc907f6ad2d50d5f01774e82707257924c9f9b",
+      "observed_sha256": "21f630bbcda3588e0afa63cb27fc907f6ad2d50d5f01774e82707257924c9f9b",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_daban_confirm.py",
+      "tested_sha256": "f0e1192d1cebcb3af50cec0a59e89406a9353e29088dd1e4f378084ba71cd009",
+      "observed_sha256": "f0e1192d1cebcb3af50cec0a59e89406a9353e29088dd1e4f378084ba71cd009",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_exit_at_open.py",
+      "tested_sha256": "51c49d104f0192c4ee4015e612a64c255ab9ae3ce37ea56a05cb66a33185ca9c",
+      "observed_sha256": "51c49d104f0192c4ee4015e612a64c255ab9ae3ce37ea56a05cb66a33185ca9c",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_exit_if_no_new_high.py",
+      "tested_sha256": "c60b4f4bff2090af01338ebc55297b351b3e308850b6447f7691cbb337dacfe2",
+      "observed_sha256": "c60b4f4bff2090af01338ebc55297b351b3e308850b6447f7691cbb337dacfe2",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_intraday_break_exit.py",
+      "tested_sha256": "4e98d82d567ee0d57c39f7fdd21c1804c11cac203d16326e5e753c03be1e00c2",
+      "observed_sha256": "4e98d82d567ee0d57c39f7fdd21c1804c11cac203d16326e5e753c03be1e00c2",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_leader_breakout.py",
+      "tested_sha256": "6348163ffcaacd50777a15d901d9a8a26ceaeca3a80278feebbc1041c2bbc3a6",
+      "observed_sha256": "6348163ffcaacd50777a15d901d9a8a26ceaeca3a80278feebbc1041c2bbc3a6",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_low_absorption_intraday.py",
+      "tested_sha256": "63efa91777df548e6eb5ccf1eb1a3c4fea393b309ca26f1d0c1bc0db37c4c566",
+      "observed_sha256": "63efa91777df548e6eb5ccf1eb1a3c4fea393b309ca26f1d0c1bc0db37c4c566",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_sector_switch_exit.py",
+      "tested_sha256": "ea61e8f1fc9ab0facc4ada8910aa6d8ed73617779b231be5387546d64d76ea52",
+      "observed_sha256": "ea61e8f1fc9ab0facc4ada8910aa6d8ed73617779b231be5387546d64d76ea52",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_stop_loss_break.py",
+      "tested_sha256": "d7467083db3842e5d03fc02133349b720013310f0f5fb58224b2a2199cdff7c1",
+      "observed_sha256": "d7467083db3842e5d03fc02133349b720013310f0f5fb58224b2a2199cdff7c1",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_t_add_pullback.py",
+      "tested_sha256": "682f8c5ae0b10cd6a9f624b587dd2128721143d6798a112aba66af5f435cbdd6",
+      "observed_sha256": "682f8c5ae0b10cd6a9f624b587dd2128721143d6798a112aba66af5f435cbdd6",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_t_reduce_resistance.py",
+      "tested_sha256": "9f87ac24a5073ee5f96f73465c9162f5907ed3571e17c9746dcc88e8d0202977",
+      "observed_sha256": "9f87ac24a5073ee5f96f73465c9162f5907ed3571e17c9746dcc88e8d0202977",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_take_profit_hit.py",
+      "tested_sha256": "8acd8e00f7aff21f37004f4e1088e0f7c398cf973a47d11a0080de5e8316b1be",
+      "observed_sha256": "8acd8e00f7aff21f37004f4e1088e0f7c398cf973a47d11a0080de5e8316b1be",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_trend_pullback_buy.py",
+      "tested_sha256": "99a2cd16891c5d543d40d331f9f71985c880002e7bb7b0d29acf0e25bfa7fec3",
+      "observed_sha256": "99a2cd16891c5d543d40d331f9f71985c880002e7bb7b0d29acf0e25bfa7fec3",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/execute_volume_price_divergence.py",
+      "tested_sha256": "0b1b6d420cdb6c2bb5b2b21947cf626c446fc3def4de442fd2a5c36c7a0a4a97",
+      "observed_sha256": "0b1b6d420cdb6c2bb5b2b21947cf626c446fc3def4de442fd2a5c36c7a0a4a97",
+      "matches": true
+    },
+    {
+      "path": "trading/executors/registry.py",
+      "tested_sha256": "7d3baca1ab6439c293a5ff351e4cd1c489c4562dde458fcac60cfb7cdc959ea7",
+      "observed_sha256": "7d3baca1ab6439c293a5ff351e4cd1c489c4562dde458fcac60cfb7cdc959ea7",
+      "matches": true
+    },
+    {
+      "path": "trading/schema/watchlist_plan.py",
+      "tested_sha256": "693153c988eb7bcd8edd0db2d18c843cf7374857421483435a148d4b27c907ca",
+      "observed_sha256": "693153c988eb7bcd8edd0db2d18c843cf7374857421483435a148d4b27c907ca",
+      "matches": true
+    },
+    {
+      "path": "trading/watcher/dispatch.py",
+      "tested_sha256": "0054258c59d80c8259d22c6889a55a2b0ff9902d735abcd401706f549d1ef5d2",
+      "observed_sha256": "0054258c59d80c8259d22c6889a55a2b0ff9902d735abcd401706f549d1ef5d2",
+      "matches": true
+    },
+    {
+      "path": "trading/watcher/session_context.py",
+      "tested_sha256": "3d4bdb5d98b03879f15356c316314dfea549820ea0c37d07ca568e843e25be20",
+      "observed_sha256": "3d4bdb5d98b03879f15356c316314dfea549820ea0c37d07ca568e843e25be20",
+      "matches": true
+    }
+  ],
+  "d1_pending_patch_permission": "latest explicit clarification timed_out/unanswered, not applied",
+  "no_new_production_or_trading_authority": true
+}

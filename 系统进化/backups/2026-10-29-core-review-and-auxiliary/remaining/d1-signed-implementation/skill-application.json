@@ -1,0 +1,9 @@
+{
+  "applied_at": "2026-10-29T16:21:42.232895+08:00",
+  "target": "skills/main_decision_v1/SKILL.md",
+  "actual_sha256": "3eb4f6695151edc5422ca3ffabccf84f2fce9b347406a46d5ec43193fe3bce5c",
+  "equals_approved_candidate": true,
+  "only_approved_two_hunks": true,
+  "selective_reassessment_code_acceptance": false,
+  "real_model_or_production_run": false
+}

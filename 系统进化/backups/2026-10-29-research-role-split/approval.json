@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-29T12:35:46.976829+08:00",
+  "user_response": "批准这份研究角色身份差异，并继续实施",
+  "target": "/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md",
+  "before_sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35",
+  "candidate_sha256": "02e14bd405246a3ed45c8bc1e2a78635018397b8a4b934798c226fee3ac0cb10",
+  "patch_sha256": "b8ae831f380f2af46cd41b45254ce303538130f579d2f53f243dc563dfb07d3c",
+  "approved_scope": "Only research identity Purpose and Invocation Modes; Ownership and discipline suffix unchanged; default SOUL/models/schedules/permissions excluded",
+  "manual_business_run_authorized": false,
+  "index_sha256": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143"
+}

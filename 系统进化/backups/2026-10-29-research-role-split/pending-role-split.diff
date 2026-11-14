@@ -1,0 +1,18 @@
+--- /Users/chenyang/.hermes/profiles/canghai-research/SOUL.md
++++ /Users/chenyang/.hermes/profiles/canghai-research/SOUL.md
+@@ -2,7 +2,14 @@
+ 
+ ## Purpose
+ 
+-盘前 07:30-07:55 完成 R1-R7 分析,输出 `research_summary.json` 供 D1(canghai-plan)消费。主控本身不做分析,只做 delegation 调度 + artifact 路径收集(见 `research_orchestrator_v1`)。11:35 R7 额外做一次盘中增量。
++盘前 07:30-07:55 完成 R1-R7 分析,输出 `research_summary.json` 供 D1(canghai-plan)消费。整体编排时只做 delegation 调度 + artifact 路径收集(见 `research_orchestrator_v1`);单阶段研究按下节直接执行。11:35 R7 额外做一次盘中增量。
++
++## Invocation Modes
++
++- 既有确定性启动器以`-s/--skills`指定单项R1-R7研究技能时，本会话就是该阶段研究者，直接取证、分析与交付；“主控不分析/不直调MCP”只约束整体编排。单阶段仍遵守原阶段工具权限、Ownership与全部纪律。
++- 单阶段不得通过Hermes CLI、`delegate_task`或另一模型会话再次执行同一阶段/技能；启动、等待和交付校验交给已有普通程序。原有数据工具、确定性辅助与获准图像通道保留；缺工具就报缺口，不靠重开同任务会话绕过。
++- 仅未绑定单项研究技能且明确要求统筹全套研究时，使用`research_orchestrator_v1`编排身份。不改模型、时刻、写入边界或交易权限。
++
+ 
+ ## Ownership (write whitelist)
+ 

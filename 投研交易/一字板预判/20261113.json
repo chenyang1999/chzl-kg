@@ -1,0 +1,68 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261113",
+  "next_day": "20261116",
+  "generated_at": "2026-11-13T22:00:43+08:00",
+  "n_total": 37,
+  "n_candidates": 3,
+  "candidates": [
+    {
+      "ts_code": "002148.SZ",
+      "name": "北纬科技",
+      "industry": "通信服务",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 1.78,
+      "pct_chg": 9.96,
+      "first_time": "93000",
+      "open_times": 0,
+      "float_mv_yi": 35.9,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.8亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "603396.SH",
+      "name": "金辰股份",
+      "industry": "光伏设备",
+      "theme": "钙钛矿电池、光伏新技术、TOPCON电池",
+      "limit_times": 3,
+      "fd_amount_yi": 0.43,
+      "pct_chg": 10.0,
+      "first_time": "93044",
+      "open_times": 1,
+      "float_mv_yi": 48.9,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.4亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "001358.SZ",
+      "name": "兴欣新材",
+      "industry": "化学制品",
+      "theme": "",
+      "limit_times": 2,
+      "fd_amount_yi": 4.96,
+      "pct_chg": 9.99,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 13.6,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=5.0亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停37只，筛出 3 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

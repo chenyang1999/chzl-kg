@@ -1,0 +1,890 @@
+{
+  "generated_at": "2026-10-29T12:02:44.335568+08:00",
+  "database_mode": "read_only",
+  "coverage": "only previously identified eleven outer/inner session pairs",
+  "pair_count": 11,
+  "pairs": [
+    {
+      "day": "20261028",
+      "stage": "R5",
+      "outer_sid": "local-ae0b1b0057c9f2528b678c4b0c5e9199970b3d37eda266a55a766fa72241d6ba",
+      "inner_sid": "local-a12360fd90479a539f6e19691fab9e513b6d6217d979d7a95033b715026b25a8",
+      "prior_link_strength": "exact_inner_session_id_in_outer_tool_result",
+      "inner_session_metadata": {
+        "id": "local-a12360fd90479a539f6e19691fab9e513b6d6217d979d7a95033b715026b25a8",
+        "started_at": 1793141614.074076,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "5ed5fb7d17106af13459e88e9575d04392cab6d45dee5aa30286b95bdb387f8a",
+          "command_bytes": 89,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_stock_profile_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41736,
+          "timestamp": 1793141570.371278,
+          "child_start_minus_request_s": 43.70279788970947
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "34ef8ff50360581417e009eac49a1c6ad9cdb572a0eb65d07c628f12f81461e1",
+          "command_bytes": 18,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_stock_profile_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41741,
+          "timestamp": 1793141579.631767,
+          "child_start_minus_request_s": 34.44230890274048
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "da3feb051f8db2839e94d55faf1cbd0bd9d00e919282691702b1da6b7de51224",
+          "command_bytes": 2674,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [
+            "analyze_stock_profile_v1"
+          ],
+          "expected_skill": "analyze_stock_profile_v1",
+          "same_stage_explicit_skill": true,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--max-turns"
+          ],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41745,
+          "timestamp": 1793141604.451761,
+          "child_start_minus_request_s": 9.622314929962158
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "1c44e376985dfa75f975095319f26e45a13d16e520a740ac97f9617d9907adb0",
+          "command_bytes": 47,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_stock_profile_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41858,
+          "timestamp": 1793142047.6479151,
+          "child_start_minus_request_s": -433.57383918762207
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "f00af2e4ccb23ea704f1b4636b6fedaa1dd6d6f827b953bee6738e3eb11e27a6",
+          "command_bytes": 50,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_stock_profile_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41860,
+          "timestamp": 1793142058.561182,
+          "child_start_minus_request_s": -444.4871060848236
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "c2656fd47c66970cd3e749da12835872966a1c2324c0d66e4794c9d7ce53c529",
+          "command_bytes": 490,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_stock_profile_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--max-turns"
+          ],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41862,
+          "timestamp": 1793142079.0385559,
+          "child_start_minus_request_s": -464.9644799232483
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "ccc4554ebc7c63f39dcb4c0a63e841a9ce379c51029576b468ff3b7889ab4c9f",
+          "command_bytes": 457,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_stock_profile_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q"
+          ],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41864,
+          "timestamp": 1793142097.120737,
+          "child_start_minus_request_s": -483.04666113853455
+        }
+      ]
+    },
+    {
+      "day": "20261028",
+      "stage": "R3",
+      "outer_sid": "local-5a1df4441665e4aaa6a8e358fc04fa205270f33a7e9019fa9dd0b3ca17a19199",
+      "inner_sid": "local-dcae45ef47ced5ac764fb643cda97f569f1974c20186f3bfa8ebe412e8afd0d6",
+      "prior_link_strength": "same_skill_and_contained_start_time_inferred",
+      "inner_session_metadata": {
+        "id": "local-dcae45ef47ced5ac764fb643cda97f569f1974c20186f3bfa8ebe412e8afd0d6",
+        "started_at": 1793140367.30818,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "bbff1d6ea39cd67f7fe2f8150d30593501aaf6951d9ec831e50eed8b961d6d44",
+          "command_bytes": 32,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_sentiment_resonance_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41603,
+          "timestamp": 1793140330.015907,
+          "child_start_minus_request_s": 37.29227304458618
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "a78f7c8e15d4e6fe5b55a79388bc9870f2af57c47dc5c650b140c39ef04c338e",
+          "command_bytes": 2638,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [
+            "analyze_sentiment_resonance_v1"
+          ],
+          "expected_skill": "analyze_sentiment_resonance_v1",
+          "same_stage_explicit_skill": true,
+          "has_query_argument": true,
+          "flags_present": [
+            "-z"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 41607,
+          "timestamp": 1793140352.786339,
+          "child_start_minus_request_s": 14.521841049194336
+        }
+      ]
+    },
+    {
+      "day": "20261028",
+      "stage": "R1",
+      "outer_sid": "local-8c3976a2cc976fc1b09fb4c9e9368a3679bf7e548ca547b2acbc76b46504ebbf",
+      "inner_sid": "local-2d48f0ac4b05cb90d06d899bd49a8b90722fe58356ba1a6f0e2bad5a51d73bd1",
+      "prior_link_strength": "exact_inner_session_id_in_outer_tool_result",
+      "inner_session_metadata": {
+        "id": "local-2d48f0ac4b05cb90d06d899bd49a8b90722fe58356ba1a6f0e2bad5a51d73bd1",
+        "started_at": 1793139147.660618,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "a6134f13654ac01348273b01d4a1ea04e0489ffe45a2559e4a50a7b88fd09448",
+          "command_bytes": 65,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_style_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41156,
+          "timestamp": 1793139096.0251038,
+          "child_start_minus_request_s": 51.63551425933838
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "a8930592739eddb341364f74a8bd59e47f1743f818d62efc36e1bd7bc8797798",
+          "command_bytes": 2200,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [
+            "analyze_style_v1"
+          ],
+          "expected_skill": "analyze_style_v1",
+          "same_stage_explicit_skill": true,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo",
+            "--max-turns"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 41171,
+          "timestamp": 1793139117.2056751,
+          "child_start_minus_request_s": 30.45494294166565
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "79a31e06d7119f29aa07e8f47a16696c1b753a2621dfd3b054a00c531c479686",
+          "command_bytes": 1405,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_style_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo",
+            "--max-turns"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 41442,
+          "timestamp": 1793139522.900297,
+          "child_start_minus_request_s": -375.2396788597107
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "88b7ad8d4c29009335ad31bcbdda70e642f8caac5c3154462668bca5b6133a03",
+          "command_bytes": 1321,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_style_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 41454,
+          "timestamp": 1793139550.938545,
+          "child_start_minus_request_s": -403.2779269218445
+        }
+      ]
+    },
+    {
+      "day": "20261028",
+      "stage": "R4",
+      "outer_sid": "local-f82d3101de00308659bc6137e02653c8ec58c4ae73a377e67e3303de95b79ca1",
+      "inner_sid": "local-cc49ae2a18cd6cb598d5acdaccddc339380c37c11f7550d948fc43fc33496eb6",
+      "prior_link_strength": "exact_inner_session_id_in_outer_tool_result",
+      "inner_session_metadata": {
+        "id": "local-cc49ae2a18cd6cb598d5acdaccddc339380c37c11f7550d948fc43fc33496eb6",
+        "started_at": 1793139137.724137,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "bbff1d6ea39cd67f7fe2f8150d30593501aaf6951d9ec831e50eed8b961d6d44",
+          "command_bytes": 32,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_news_impact_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41134,
+          "timestamp": 1793139079.003815,
+          "child_start_minus_request_s": 58.720322132110596
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "5c5b08118e27c9ff0fa697580405a6364fb82bfe0ab798707877c17d4e99fad9",
+          "command_bytes": 1977,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [
+            "analyze_news_impact_v1"
+          ],
+          "expected_skill": "analyze_news_impact_v1",
+          "same_stage_explicit_skill": true,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo",
+            "--max-turns"
+          ],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41158,
+          "timestamp": 1793139103.8193102,
+          "child_start_minus_request_s": 33.90482687950134
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "8098c7de8aaead557fd5923cd712e506ab5f262db38c188194764be331886108",
+          "command_bytes": 1518,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_news_impact_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo",
+            "--max-turns"
+          ],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41411,
+          "timestamp": 1793139443.824948,
+          "child_start_minus_request_s": -306.1008110046387
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "4317d24e2bdec4faeff76212edf497a62a6b74f3423f207109bc6e2c01322dc6",
+          "command_bytes": 1185,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_news_impact_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo"
+          ],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41417,
+          "timestamp": 1793139470.7617888,
+          "child_start_minus_request_s": -333.03765177726746
+        }
+      ]
+    },
+    {
+      "day": "20261028",
+      "stage": "R7",
+      "outer_sid": "local-199337474563101a197638eacd485ed115e37ec6971b81b2ef8e774600f265ea",
+      "inner_sid": "local-73aeab8a8dde4b0493833e7d5ed518123f56a6999be01bf7c461c011a651243b",
+      "prior_link_strength": "same_skill_and_contained_start_time_inferred",
+      "inner_session_metadata": {
+        "id": "local-73aeab8a8dde4b0493833e7d5ed518123f56a6999be01bf7c461c011a651243b",
+        "started_at": 1793139133.452653,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "bbff1d6ea39cd67f7fe2f8150d30593501aaf6951d9ec831e50eed8b961d6d44",
+          "command_bytes": 32,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_capital_flow_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 41145,
+          "timestamp": 1793139083.336024,
+          "child_start_minus_request_s": 50.116628885269165
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "185c752c137de3c613a0190852843223b463d6f03d227efdc003985a26b4d120",
+          "command_bytes": 2394,
+          "profile_flags": [],
+          "skill_flags": [
+            "analyze_capital_flow_v1"
+          ],
+          "expected_skill": "analyze_capital_flow_v1",
+          "same_stage_explicit_skill": true,
+          "has_query_argument": true,
+          "flags_present": [
+            "-z"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 41163,
+          "timestamp": 1793139110.9331431,
+          "child_start_minus_request_s": 22.51950979232788
+        }
+      ]
+    },
+    {
+      "day": "20261027",
+      "stage": "R5",
+      "outer_sid": "local-996aeb2bf247627875e671a0fef2fbc6e76ed27af0f9113ac020e31b33c72225",
+      "inner_sid": "local-a04b9aa8f2939488acf8ccafbadbc47e42ca4d90c89dd2822397b678f67160dd",
+      "prior_link_strength": "exact_inner_session_id_in_outer_tool_result",
+      "inner_session_metadata": {
+        "id": "local-a04b9aa8f2939488acf8ccafbadbc47e42ca4d90c89dd2822397b678f67160dd",
+        "started_at": 1793054987.974624,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "34ef8ff50360581417e009eac49a1c6ad9cdb572a0eb65d07c628f12f81461e1",
+          "command_bytes": 18,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_stock_profile_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 40882,
+          "timestamp": 1793054953.217314,
+          "child_start_minus_request_s": 34.757309913635254
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "e36bee8054895b082344ddda4a0f35a7ee8e3d7c20ac716a27ae991ebc611f6d",
+          "command_bytes": 3921,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_stock_profile_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--max-turns"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 40886,
+          "timestamp": 1793054983.741814,
+          "child_start_minus_request_s": 4.232810020446777
+        }
+      ]
+    },
+    {
+      "day": "20261027",
+      "stage": "R2",
+      "outer_sid": "local-2a00d457949cbe79301b9b1cd9cb7964f71cc2c9b59ede188698f5ef667813ac",
+      "inner_sid": "local-f411b1126c110841275cde38893f83aa79b8ae3c3c1865060f2cefe549f6d823",
+      "prior_link_strength": "exact_inner_session_id_in_outer_tool_result",
+      "inner_session_metadata": {
+        "id": "local-f411b1126c110841275cde38893f83aa79b8ae3c3c1865060f2cefe549f6d823",
+        "started_at": 1793054113.948424,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "bbff1d6ea39cd67f7fe2f8150d30593501aaf6951d9ec831e50eed8b961d6d44",
+          "command_bytes": 32,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_main_sectors_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 40748,
+          "timestamp": 1793054093.738235,
+          "child_start_minus_request_s": 20.2101891040802
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "c49a8de2a91c51d4afecd05922e384e8a32a654cde3580a3ef5014c0be51bb88",
+          "command_bytes": 1346,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [
+            "analyze_main_sectors_v1"
+          ],
+          "expected_skill": "analyze_main_sectors_v1",
+          "same_stage_explicit_skill": true,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo",
+            "--max-turns"
+          ],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 40754,
+          "timestamp": 1793054112.024881,
+          "child_start_minus_request_s": 1.9235432147979736
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "3df7a1672be53486b462a7014af8659d53ec94a61fe4313b2bfc8b983e3528f0",
+          "command_bytes": 89,
+          "profile_flags": [
+            "canghai-research",
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_main_sectors_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 40821,
+          "timestamp": 1793054544.7944472,
+          "child_start_minus_request_s": -430.84602308273315
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "356db59fd35db9d1a93cfd72643c7806f5656f58a17bce8989a51d053b376a83",
+          "command_bytes": 434,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_main_sectors_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo",
+            "--max-turns"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 40823,
+          "timestamp": 1793054553.276515,
+          "child_start_minus_request_s": -439.3280909061432
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "1ffeee84d0983a931a1b4cfa84866c04b53395bd6eea7eb329fd51d9f3edbb69",
+          "command_bytes": 419,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [],
+          "expected_skill": "analyze_main_sectors_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 40829,
+          "timestamp": 1793054563.195219,
+          "child_start_minus_request_s": -449.24679493904114
+        }
+      ]
+    },
+    {
+      "day": "20261027",
+      "stage": "R3",
+      "outer_sid": "local-aea4e1768655b4970faae627b037fb000923be9e992917da73486d29b16e8234",
+      "inner_sid": "local-62cb5cda9548f15ff4ef60a88fcbe9c9f5d793acc9d5758b603368aa7eccda30",
+      "prior_link_strength": "exact_inner_session_id_in_outer_tool_result",
+      "inner_session_metadata": {
+        "id": "local-62cb5cda9548f15ff4ef60a88fcbe9c9f5d793acc9d5758b603368aa7eccda30",
+        "started_at": 1793053595.400401,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "bbff1d6ea39cd67f7fe2f8150d30593501aaf6951d9ec831e50eed8b961d6d44",
+          "command_bytes": 32,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_sentiment_resonance_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 40622,
+          "timestamp": 1793053564.970855,
+          "child_start_minus_request_s": 30.429546117782593
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "34ef8ff50360581417e009eac49a1c6ad9cdb572a0eb65d07c628f12f81461e1",
+          "command_bytes": 18,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_sentiment_resonance_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 40626,
+          "timestamp": 1793053570.1720939,
+          "child_start_minus_request_s": 25.228307247161865
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "c03a4f457cb551b33f6586d749611bdf4990e4688ac82853397697685297502d",
+          "command_bytes": 2087,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [
+            "analyze_sentiment_resonance_v1"
+          ],
+          "expected_skill": "analyze_sentiment_resonance_v1",
+          "same_stage_explicit_skill": true,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo",
+            "--max-turns"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 40630,
+          "timestamp": 1793053590.3821702,
+          "child_start_minus_request_s": 5.01823091506958
+        }
+      ]
+    },
+    {
+      "day": "20261027",
+      "stage": "R7",
+      "outer_sid": "local-f03f867045fc1256f849291054702f116d939e051cd6ccb7032e4737964ffa1c",
+      "inner_sid": "local-922920799d296405debbbecf64685452997e16971fd2a0f39587700086292093",
+      "prior_link_strength": "exact_inner_session_id_in_outer_tool_result",
+      "inner_session_metadata": {
+        "id": "local-922920799d296405debbbecf64685452997e16971fd2a0f39587700086292093",
+        "started_at": 1793052673.266321,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "bbff1d6ea39cd67f7fe2f8150d30593501aaf6951d9ec831e50eed8b961d6d44",
+          "command_bytes": 32,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_capital_flow_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 40226,
+          "timestamp": 1793052651.357536,
+          "child_start_minus_request_s": 21.908784866333008
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "a5df3e09cdd2dfd19733451b077aae79eb84b6fa598cb0b69c55eea737e3556d",
+          "command_bytes": 1923,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [
+            "analyze_capital_flow_v1"
+          ],
+          "expected_skill": "analyze_capital_flow_v1",
+          "same_stage_explicit_skill": true,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo",
+            "--max-turns"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 40240,
+          "timestamp": 1793052669.415509,
+          "child_start_minus_request_s": 3.8508119583129883
+        }
+      ]
+    },
+    {
+      "day": "20261027",
+      "stage": "R1",
+      "outer_sid": "local-e44955b73f34955fe4b1879156444e953dedde2b01fdb4ae0c56233032140a6e",
+      "inner_sid": "local-6683c043944cdaa3de67e186a2506a341b876ff70dd8000e4820cc11b9905f7a",
+      "prior_link_strength": "same_skill_and_contained_start_time_inferred",
+      "inner_session_metadata": {
+        "id": "local-6683c043944cdaa3de67e186a2506a341b876ff70dd8000e4820cc11b9905f7a",
+        "started_at": 1793052669.770482,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "f6991076d71145c5a2a9c1722699fc462747e40a5bfe7de011d402f13b803f0f",
+          "command_bytes": 13,
+          "profile_flags": [],
+          "skill_flags": [],
+          "expected_skill": "analyze_style_v1",
+          "same_stage_explicit_skill": false,
+          "has_query_argument": false,
+          "flags_present": [],
+          "background": null,
+          "direct_terminal_request": true,
+          "message_id": 40215,
+          "timestamp": 1793052645.2999911,
+          "child_start_minus_request_s": 24.4704909324646
+        },
+        {
+          "tool": "terminal",
+          "command_sha256": "3f30bcd8310a8f0ee9a5cb3b278d8c88729771f69a34347e0b9d4b305c9cdba3",
+          "command_bytes": 2282,
+          "profile_flags": [],
+          "skill_flags": [
+            "analyze_style_v1"
+          ],
+          "expected_skill": "analyze_style_v1",
+          "same_stage_explicit_skill": true,
+          "has_query_argument": true,
+          "flags_present": [
+            "-z"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 40233,
+          "timestamp": 1793052666.468559,
+          "child_start_minus_request_s": 3.3019230365753174
+        }
+      ]
+    },
+    {
+      "day": "20261027",
+      "stage": "R4",
+      "outer_sid": "local-5de379dbf8b5c22ee36913d236f1751ba3d60bd073edad5bb9eb87918bc23b81",
+      "inner_sid": "local-cdc232bab05dc52a6e7c85bd00fcd725442d89be25fc802d3fa20e8427df93d2",
+      "prior_link_strength": "exact_inner_session_id_in_outer_tool_result",
+      "inner_session_metadata": {
+        "id": "local-cdc232bab05dc52a6e7c85bd00fcd725442d89be25fc802d3fa20e8427df93d2",
+        "started_at": 1793052667.650527,
+        "parent_session_id": null,
+        "model": "gpt-6.1-sol",
+        "source": "oneshot"
+      },
+      "launcher_candidates": [
+        {
+          "tool": "terminal",
+          "command_sha256": "ca3312d01508878cb84b1739b4e9709e3f8dc6d846cfd683536f2dd598e4049f",
+          "command_bytes": 1512,
+          "profile_flags": [
+            "canghai-research"
+          ],
+          "skill_flags": [
+            "analyze_news_impact_v1"
+          ],
+          "expected_skill": "analyze_news_impact_v1",
+          "same_stage_explicit_skill": true,
+          "has_query_argument": true,
+          "flags_present": [
+            "-q",
+            "--yolo",
+            "--max-turns"
+          ],
+          "background": true,
+          "direct_terminal_request": true,
+          "message_id": 40231,
+          "timestamp": 1793052662.648693,
+          "child_start_minus_request_s": 5.001833915710449
+        }
+      ]
+    }
+  ],
+  "unique_launcher_message_ids": [
+    40215,
+    40226,
+    40231,
+    40233,
+    40240,
+    40622,
+    40626,
+    40630,
+    40748,
+    40754,
+    40821,
+    40823,
+    40829,
+    40882,
+    40886,
+    41134,
+    41145,
+    41156,
+    41158,
+    41163,
+    41171,
+    41411,
+    41417,
+    41442,
+    41454,
+    41603,
+    41607,
+    41736,
+    41741,
+    41745,
+    41858,
+    41860,
+    41862,
+    41864
+  ],
+  "raw_commands_prompts_or_credentials_exported": false
+}

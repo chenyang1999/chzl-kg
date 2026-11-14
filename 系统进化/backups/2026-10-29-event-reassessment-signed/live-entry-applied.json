@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-10-29T11:11:50.584578+08:00",
+  "actual_script": "/Users/chenyang/.hermes/scripts/canghai_retreat_reversal.sh",
+  "script_sha256": "f6052c361ff7104cfe5b9f6089c3f7aec2f36c124ec258ba89cf4e778885fb6d",
+  "matches_approved_candidate_and_tested_project_wrapper": true,
+  "bash_syntax_exit_code": 0,
+  "job_definition_unchanged": true,
+  "index_unchanged": true,
+  "manual_trigger": false,
+  "natural_effective_event_delivery": "not_yet_observed"
+}

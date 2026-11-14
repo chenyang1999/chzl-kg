@@ -1,0 +1,29 @@
+{
+  "status": "approved_scope_implemented_and_isolated_verified",
+  "status_at_proposal_creation": "pending_sign_off_not_applied",
+  "approval": "批准上条两段差异及必要代码接线，仅做隔离验证 该批的都批了，别问了。继续干就完事了。",
+  "application_receipt": "d1-signed-implementation/skill-application.json",
+  "prior_implementation_receipt": "d1-signed-implementation/final-acceptance/closure.json",
+  "implementation_receipt": "solo-compatibility/closure.json",
+  "implementation_accepted_at": "2026-10-29T18:17:04.894663+08:00",
+  "current_joint_cases_passed": 184,
+  "original_task_counts": {"total": 13, "limited_completed": 8, "waiting_business_evidence": 5, "implementation_in_progress": 0},
+  "target": "skills/main_decision_v1/SKILL.md",
+  "before_sha256": "72bc196a0690af6d5a5a74efaa33a9f7c1e9683eeafd5efb47fbac7215d50f2b",
+  "candidate_sha256": "3eb4f6695151edc5422ca3ffabccf84f2fce9b347406a46d5ec43193fe3bce5c",
+  "patch_sha256": "c8511761d80b257dad33483df252b966aaa61e06045ae013556da01076022429",
+  "changes": [
+    "price interface/geometry and separate planned vs actual RR documentation",
+    "replace unnecessary full research refresh prerequisite with explicitly version-bound selective reassessment contract"
+  ],
+  "unchanged": [
+    "confidence=0.392 and R1 threshold 0.4",
+    "all existing stop/RR thresholds",
+    "all valid zero budgets and no-new-position conditions",
+    "Step3.5.9 separate event branch",
+    "account/role/trading permission"
+  ],
+  "production_or_model_run": false,
+  "selective_reassessment_implementation": "accepted by single-writer parent on current 30-source closure: original106 and original74 retained, four added cases, 184 passed; ownerless standalone delivery no longer fails optional reuse receipt, while missing binding/inheritance identity and owned receipt failures still reject; no agents or further implementation/sign-off pending",
+  "actual_recovery_approval": "not included: user explicitly limits this batch to isolated verification; no recovery launched"
+}

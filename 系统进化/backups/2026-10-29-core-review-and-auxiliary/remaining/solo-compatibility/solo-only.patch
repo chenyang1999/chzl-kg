@@ -1,0 +1,145 @@
+--- before/scripts/plan/ensure_watchlist_plan.py
++++ current/scripts/plan/ensure_watchlist_plan.py
+@@ -695,10 +695,11 @@
+         # is legitimate LLM output. JSON-only or old-MD delivery is not complete.
+         plan_artifact(ROOT, date, since_ns=started_ns)
+         publish_runtime_plan(ROOT, date, since_ns=started_ns)
+-        # Actual publisher requires this MD; transport-only legacy test doubles
+-        # without a human report cannot create a reusable trusted receipt.
++        # Standalone delivery remains valid without a research run owner, but
++        # cannot gain a reusable identity. A real owned delivery must still
++        # record its checked receipt; failures there remain delivery failures.
+         human = ROOT / "chzl_kg/投研交易/盘前预案" / f"{date}.md"
+-        if human.is_file():
++        if human.is_file() and run_id:
+             _record_d1_delivery(directory, date)
+     except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
+         return False, f"LLM 重跑交付失败: {exc}，日志 {log_path}"
+--- before/tests/pipeline/test_safety_net_input_versions.py
++++ current/tests/pipeline/test_safety_net_input_versions.py
+@@ -25,7 +25,7 @@
+ RUN = "synthetic-input-version-run"
+ 
+ 
+-def prepare(env, *, bound=True, partial=False):
++def prepare(env, *, bound=True, partial=False, auxiliary_binding=True):
+     legacy._research(env)
+     if partial:
+         (env.root / f"data/research/{DATE}/R1_style.json").unlink()
+@@ -40,7 +40,12 @@
+             state["contract_results"][unit] = {"json": {
+                 **version, "passed": True, "run_id": RUN, "attempt": 1}}
+         legacy._write(env.root / f"data/health/research_pipeline_{DATE}.json", state)
+-    summary, _ = env.builder.make_summary(DATE, run_id=RUN if bound else "")
++    # A current producer explicitly binds the reviewed read scope, even when
++    # optional snapshots are absent. Run ownership is a separate contract.
++    kwargs = {"run_id": RUN if bound else ""}
++    if auxiliary_binding:
++        kwargs["auxiliary_paths"] = env.builder.approved_d1_auxiliary_paths(DATE)
++    summary, _ = env.builder.make_summary(DATE, **kwargs)
+     path = env.root / f"data/research/{DATE}/research_summary.json"
+     legacy._write(path, summary)
+     if bound:
+@@ -69,6 +74,56 @@
+ 
+     env.monkeypatch.setattr(env.ensure.subprocess, "run", run)
+     return calls
++
++
++@pytest.mark.parametrize("bound", [False, True])
++def test_legacy_auxiliary_binding_is_not_self_signed(env, bound):
++    summary_path = prepare(env, bound=bound, auxiliary_binding=False)
++    original = summary_path.read_bytes()
++    calls = launcher(env)
++    ok, note = env.ensure.retry_llm(DATE)
++    assert not ok and "auxiliary binding missing" in note
++    assert calls == [] and summary_path.read_bytes() == original
++    assert not env.canonical.exists() and not env.runtime.exists()
++    assert not (env.root / f"data/logs/research_shell/{DATE}").exists()
++
++
++def test_standalone_delivery_does_not_invent_reusable_owner(env):
++    prepare(env, bound=False)
++    calls = launcher(env)
++    ok, note = env.ensure.retry_llm(DATE)
++    assert ok, note
++    assert len(calls) == 1
++    logs = env.root / f"data/logs/research_shell/{DATE}"
++    inputs = list(logs.glob("D1_retry_*/inputs.json"))
++    assert len(inputs) == 1
++    assert env.artifacts.read_object(inputs[0])["saved"]["run_id"] is None
++    assert list(logs.glob("D1_retry_*/receipt.json")) == []
++    plan = env.artifacts.read_object(env.runtime)
++    assert plan == env.artifacts.read_object(env.canonical)
++    assert plan["no_trade"] is True and plan["execution_pool"] == []
++    assert plan["risk_limits"]["target_total_position_pct"] == 0
++    assert plan["autonomous_trading_enabled"] is False
++    assert plan["requires_user_confirmation"] is True
++    # An ownerless standalone delivery still cannot enter trusted inheritance.
++    legacy._write(env.root / f"data/health/research_pipeline_{DATE}.json",
++                  {"trade_date": DATE, "run_id": ""})
++    with pytest.raises(ValueError, match="research owner missing"):
++        env.ensure._selective_context(DATE, plan)
++
++
++def test_owned_delivery_cannot_skip_failed_reuse_receipt(env):
++    prepare(env)
++    calls = launcher(env)
++
++    def reject_receipt(*args):
++        raise ValueError("synthetic checked receipt failure")
++
++    env.monkeypatch.setattr(env.ensure, "_record_d1_delivery", reject_receipt)
++    ok, note = env.ensure.retry_llm(DATE)
++    assert not ok and "synthetic checked receipt failure" in note
++    assert len(calls) == 1
++    assert not list((env.root / f"data/logs/research_shell/{DATE}").glob("D1_retry_*/receipt.json"))
+ 
+ 
+ def change(env, kind):
+@@ -158,7 +213,8 @@
+ 
+     def refresh():
+         change(env, "primary_same_mtime")
+-        summary, _ = env.builder.make_summary(DATE)
++        summary, _ = env.builder.make_summary(
++            DATE, auxiliary_paths=env.builder.approved_d1_auxiliary_paths(DATE))
+         legacy._write(env.root / f"data/research/{DATE}/research_summary.json", summary)
+ 
+     launcher(env, refresh)
+--- before/tests/pipeline/test_plan_interim_preservation.py
++++ current/tests/pipeline/test_plan_interim_preservation.py
+@@ -22,6 +22,15 @@
+ code = legacy.code
+ env = legacy.env
+ DATE = legacy.DATE
++
++
++def _reviewed_research(env):
++    # Only synthetic positive transport scenarios use the current producer
++    # contract. Do not alter the shared legacy/unbound fixture or review flags.
++    legacy._research(env)
++    summary, _ = env.builder.make_summary(
++        DATE, auxiliary_paths=env.builder.approved_d1_auxiliary_paths(DATE))
++    legacy._write(env.root / f"data/research/{DATE}/research_summary.json", summary)
+ 
+ 
+ @pytest.fixture
+@@ -88,7 +97,7 @@
+ def test_retry_current_bytes_win_without_snapshot_restore(env, fallback, capsys, initial, result, retry_rc):
+     if initial != "absent":
+         legacy._deliver(env, _bad() if initial == "rejected_llm" else legacy._plan(decision_source="python_fallback", mode="fallback"))
+-    legacy._research(env)
++    _reviewed_research(env)
+     env.monkeypatch.setattr(env.ensure, "_hermes_bin", lambda: "/synthetic/hermes")
+     written = []
+ 
+@@ -127,7 +136,7 @@
+ 
+ def test_rejected_old_llm_can_be_repaired_by_real_retry(env, fallback):
+     legacy._deliver(env, _bad())
+-    legacy._research(env)
++    _reviewed_research(env)
+     calls = legacy._fake_llm(env)
+     assert env.ensure.ensure_plan(DATE, force=True) == 0
+     assert len(calls) == 1 and fallback == []

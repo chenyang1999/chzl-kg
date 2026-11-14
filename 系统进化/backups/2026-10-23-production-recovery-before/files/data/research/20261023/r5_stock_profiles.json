@@ -1,0 +1,147 @@
+{
+  "schema_version": "research_unit_v1",
+  "agent": "R5",
+  "trade_date": "20261023",
+  "resolved_trade_date": "20261022",
+  "generated_at": "2026-10-23T06:45:28+08:00",
+  "status": "skipped",
+  "degraded": true,
+  "confidence": null,
+  "confidence_note": "空候选任务，无逐票画像置信度；不把读取成功解释为投资胜率。",
+  "profiles": [],
+  "candidate_count": 0,
+  "emotion": "主跌",
+  "emotion_cycle_phase": "main_down",
+  "research_action": "观察",
+  "new_position_allowed": false,
+  "execution_eligible": false,
+  "execution_pool": [],
+  "watch_pool": [],
+  "skip_reason": "R2主动空池：主跌阶段不构建股票候选；R5不越权重选股票。",
+  "task_completion": "empty_pool_fallback_only",
+  "requested_candidate_range": [
+    6,
+    15
+  ],
+  "requested_full_profiles_completed": false,
+  "leader_filter_applied": true,
+  "primary_template": "首板隔日",
+  "template_status": "观察模板，未启用",
+  "r2_schema_missing_top10": true,
+  "r2_expand_shortfall": 5,
+  "expansion": {
+    "applied": false,
+    "reason": "主跌门禁优先于最少5只扩池规则；且R2无all_scored_boards_top10，不从历史锚或事件映射造票"
+  },
+  "market_context": {
+    "source": "R1/R2 artifacts; not independently live verified",
+    "observed_trade_date": "20261022",
+    "break_rate": 0.4107142857142857,
+    "limit_up_count": 33,
+    "limit_down_count": 48,
+    "main_line": "人形机器人（仅板块观察）",
+    "persistence_days": null,
+    "seal_rate": null,
+    "next_session_expectation": null
+  },
+  "coverage": {
+    "six_dimensions": {
+      "requested": true,
+      "applicable": false,
+      "completed": 0,
+      "reason": "无R2股票候选，不适用；未调用，不代表数据源故障"
+    },
+    "kline_30d": {
+      "requested": true,
+      "applicable": false,
+      "completed": 0,
+      "reason": "无R2股票候选，不适用；未调用，不代表数据源故障"
+    },
+    "volume_price": {
+      "requested": true,
+      "applicable": false,
+      "completed": 0,
+      "reason": "无R2股票候选，不适用；未调用，不代表数据源故障"
+    },
+    "stock_event_timeline": {
+      "requested": true,
+      "applicable": false,
+      "completed": 0,
+      "reason": "无R2股票候选，不适用；未调用，不代表数据源故障"
+    },
+    "block_trades": {
+      "requested": true,
+      "applicable": false,
+      "completed": 0,
+      "reason": "无R2股票候选，不适用；未调用，不代表数据源故障"
+    },
+    "margin_15d_trend": {
+      "requested": true,
+      "applicable": false,
+      "completed": 0,
+      "reason": "无R2股票候选，不适用；未调用，不代表数据源故障"
+    },
+    "chart_vision": {
+      "requested": true,
+      "applicable": false,
+      "completed": 0,
+      "reason": "无R2股票候选，不适用；未调用，不代表数据源故障"
+    },
+    "leader_verdict": {
+      "requested": true,
+      "applicable": false,
+      "completed": 0,
+      "reason": "无R2股票候选，不适用；未调用，不代表数据源故障"
+    }
+  },
+  "data_sources": [
+    {
+      "name": "R2",
+      "path": "data/research/20261023/R2_main_sectors.json",
+      "status": "stale",
+      "captured_at": "2026-10-23T06:42:12+08:00",
+      "record_count": 0,
+      "error": "提前版且上游降级；仅作输入与门禁审计，本次未做在线市场复核"
+    },
+    {
+      "name": "R1",
+      "path": "data/research/20261023/R1_style.json",
+      "status": "stale",
+      "captured_at": "2026-10-23T06:19:59+08:00",
+      "record_count": 1,
+      "error": "提前版且上游降级；仅作输入与门禁审计，本次未做在线市场复核"
+    },
+    {
+      "name": "R4",
+      "path": "data/research/20261023/R4_news.json",
+      "status": "stale",
+      "captured_at": "2026-10-23T06:18:09+08:00",
+      "record_count": 1,
+      "error": "提前版且上游降级；仅作输入与门禁审计，本次未做在线市场复核"
+    },
+    {
+      "name": "R7",
+      "path": "data/research/20261023/R7_capital_flow_20261023.json",
+      "status": "stale",
+      "captured_at": "2026-10-23T06:29:07+08:00",
+      "record_count": 1,
+      "error": "提前版且上游降级；仅作输入与门禁审计，本次未做在线市场复核"
+    }
+  ],
+  "input_freshness": "partial",
+  "input_freshness_note": "R2为当日提前降级版，行情观察日为20261022；本次仅消费授权上游artifact，没有实盘数据调用。",
+  "fetch_global_severity": 2,
+  "hard_reject_authority": "R6_only",
+  "risks": [
+    "未完成6–15只股票六维画像，原因是上游无候选，而非研究覆盖已达标。",
+    "本产物不授权新仓，也不要求对存量持仓即时清仓。",
+    "没有个股则无板型/龙头/盈亏比/禁止清单逐票结果，不补造。"
+  ],
+  "validation": {
+    "pydantic_status": "passed_before_write",
+    "pydantic_version": "2.13.4",
+    "schema_definition_gap": true,
+    "model_origin": "本次执行内显式定义EmptyR5空池模型；非仓库生产全量画像模型",
+    "writing_contract": "empty_pool_scope; per-stock clauses not applicable"
+  }
+}

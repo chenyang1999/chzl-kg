@@ -1,0 +1,12 @@
+{
+  "exit_code": 1,
+  "cases": [
+    {
+      "name": "test_partial_review_updates_explicit_zero_evaluated_count",
+      "failed": true,
+      "error": false
+    }
+  ],
+  "source_unchanged": true,
+  "guard_violations": []
+}

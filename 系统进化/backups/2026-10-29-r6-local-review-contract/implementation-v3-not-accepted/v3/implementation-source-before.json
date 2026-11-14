@@ -1,0 +1,7 @@
+{
+  "scripts/research/run_research_shell.sh": "7a72f682455d3610046530f96d3ed495a78bbe31fcc074a4f2978221a456fbf5",
+  "scripts/research/native_usage.py": "41adb2d82be46d63da29c8d41d44d8974e384ecfc45aec2ed2a74375e776c170",
+  "scripts/research/pipeline_state.py": "b276481a3230c91fb8b7dac5f3c12c7ef73749086df038c889c5bf1601376b29",
+  "scripts/research/pipeline_artifacts.py": "59516e95c37231441566e5311cb1e485eb62dc278f77706657fe0b4047bd9aeb",
+  "scripts/research/build_research_summary.py": "f66b99d0a38755c303aab79e5d98cc177aaefb478b38ea06a57e141e8dc7489a"
+}

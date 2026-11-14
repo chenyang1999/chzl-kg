@@ -1,0 +1,131 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260923",
+  "next_day": "20260924",
+  "generated_at": "2026-10-17T18:55:33+08:00",
+  "n_total": 51,
+  "n_candidates": 8,
+  "candidates": [
+    {
+      "ts_code": "001234.SZ",
+      "name": "泰慕士",
+      "industry": "服装家纺",
+      "limit_times": 3,
+      "fd_amount_yi": 3.43,
+      "pct_chg": 10.02,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=3.4亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600825.SH",
+      "name": "新华传媒",
+      "industry": "出版",
+      "limit_times": 3,
+      "fd_amount_yi": 19.21,
+      "pct_chg": 9.97,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=19.2亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "000560.SZ",
+      "name": "我爱我家",
+      "industry": "房地产服务",
+      "limit_times": 3,
+      "fd_amount_yi": 0.73,
+      "pct_chg": 9.97,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.7亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002614.SZ",
+      "name": "奥佳华",
+      "industry": "其他家电",
+      "limit_times": 3,
+      "fd_amount_yi": 0.77,
+      "pct_chg": 10.03,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.8亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600503.SH",
+      "name": "华丽家族",
+      "industry": "房地产开发",
+      "limit_times": 3,
+      "fd_amount_yi": 0.17,
+      "pct_chg": 10.11,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.2亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600743.SH",
+      "name": "华远控股",
+      "industry": "房地产服务",
+      "limit_times": 3,
+      "fd_amount_yi": 1.31,
+      "pct_chg": 10.16,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.3亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "603636.SH",
+      "name": "南威软件",
+      "industry": "IT服务Ⅱ",
+      "limit_times": 3,
+      "fd_amount_yi": 0.56,
+      "pct_chg": 9.99,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.6亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "601811.SH",
+      "name": "新华文轩",
+      "industry": "出版",
+      "limit_times": 4,
+      "fd_amount_yi": 1.44,
+      "pct_chg": 9.99,
+      "prob_yizi": 21.7,
+      "prob_up": 38.1,
+      "rank": "关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.4亿 (一字率19%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停51只，筛出 8 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

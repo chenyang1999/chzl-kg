@@ -1,0 +1,11 @@
+{
+  "exit": 1,
+  "cases": 74,
+  "failed": 29,
+  "errors": 0,
+  "skipped": 0,
+  "same_all_outcomes_as_original_and_child": true,
+  "source_stable": true,
+  "guard_violations": [],
+  "unguarded_native_children": []
+}

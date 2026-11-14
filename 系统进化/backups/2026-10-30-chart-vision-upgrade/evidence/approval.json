@@ -1,0 +1,14 @@
+{
+  "user_model": "DeepSeek-V4.1-Flash-1017",
+  "user_confirmed_api_id": "deepseek-v4.1-flash-1017",
+  "connection": "apiyi existing vision credentials",
+  "scope": [
+    "clear candles,volume,date,price axes; optional moving averages and MACD",
+    "single shared input for chart and context",
+    "separate render/model concurrency and browser reuse",
+    "cache segregates input/model/prompt/renderer versions",
+    "unlimited-by-fixed-list real candidate/plan/request pools; no trading permission changes",
+    "verify real image input and batch behavior"
+  ],
+  "no_credentials_or_production_research_artifact_changes": true
+}

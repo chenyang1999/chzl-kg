@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-10-29T22:29:50.882017+08:00",
+  "job_id": "8588cd3d9943",
+  "changed_job_fields": [
+    "next_run_at",
+    "prompt",
+    "schedule",
+    "schedule_display"
+  ],
+  "schedule": "30 7 * * *",
+  "next_run_at": "2026-10-30T07:30:00+08:00",
+  "model_preserved": true,
+  "provider_preserved": true,
+  "existing_job_only": true,
+  "holiday_keeps_calendar": true,
+  "other_keep_rules_preserved": true,
+  "missing_daily_calendar_visible": true,
+  "synthetic_weekend_calendar_accepted": true,
+  "unexpected_io": [],
+  "real_model_report_generated_by_this_test": false,
+  "first_verification_issue": "Initial whitelist omitted derived schedule_display; unchanged business configuration, derived field explicitly checked on retry"
+}

@@ -1,0 +1,239 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261104",
+  "next_day": "20261105",
+  "generated_at": "2026-11-04T22:00:40+08:00",
+  "n_total": 118,
+  "n_candidates": 12,
+  "candidates": [
+    {
+      "ts_code": "002827.SZ",
+      "name": "高争民爆",
+      "industry": "化学制品",
+      "theme": "雅下水电概念、西藏水电概念、民爆概念",
+      "limit_times": 3,
+      "fd_amount_yi": 4.2,
+      "pct_chg": 10.0,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 190.3,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=4.2亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "601599.SH",
+      "name": "浙文影业",
+      "industry": "纺织制造",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 1.86,
+      "pct_chg": 9.95,
+      "first_time": "93020",
+      "open_times": 0,
+      "float_mv_yi": 48.7,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.9亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002058.SZ",
+      "name": "紫竹高科",
+      "industry": "电池",
+      "theme": "石墨烯、特斯拉概念、比亚迪产业链",
+      "limit_times": 3,
+      "fd_amount_yi": 0.21,
+      "pct_chg": 9.99,
+      "first_time": "93706",
+      "open_times": 2,
+      "float_mv_yi": 33.3,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.2亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002578.SZ",
+      "name": "闽发铝业",
+      "industry": "工业金属",
+      "theme": "金属铝概念",
+      "limit_times": 3,
+      "fd_amount_yi": 0.54,
+      "pct_chg": 10.11,
+      "first_time": "130351",
+      "open_times": 0,
+      "float_mv_yi": 35.7,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.5亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600892.SH",
+      "name": "大晟文化",
+      "industry": "游戏Ⅱ",
+      "theme": "网络游戏、手机游戏",
+      "limit_times": 3,
+      "fd_amount_yi": 1.43,
+      "pct_chg": 9.98,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 29.6,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.4亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "605577.SH",
+      "name": "龙版传媒",
+      "industry": "出版",
+      "theme": "黑龙江自贸区、短剧产业、沪股通",
+      "limit_times": 3,
+      "fd_amount_yi": 0.21,
+      "pct_chg": 10.0,
+      "first_time": "93105",
+      "open_times": 4,
+      "float_mv_yi": 69.9,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.2亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "000096.SZ",
+      "name": "广聚能源",
+      "industry": "炼化及贸",
+      "theme": "",
+      "limit_times": 1,
+      "fd_amount_yi": 4.24,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 43.2,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.2亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002156.SZ",
+      "name": "通富微电",
+      "industry": "半导体",
+      "theme": "韬（τ）定律概念、扇出型封装、大基金持股",
+      "limit_times": 1,
+      "fd_amount_yi": 3.8,
+      "pct_chg": 10.01,
+      "first_time": "134724",
+      "open_times": 0,
+      "float_mv_yi": 642.3,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.8亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002371.SZ",
+      "name": "北方华创",
+      "industry": "半导体",
+      "theme": "韬（τ）定律概念",
+      "limit_times": 1,
+      "fd_amount_yi": 3.56,
+      "pct_chg": 10.0,
+      "first_time": "134703",
+      "open_times": 0,
+      "float_mv_yi": 3895.0,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.6亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002428.SZ",
+      "name": "云南锗业",
+      "industry": "小金属",
+      "theme": "金属回收、第三代半导体、磷化铟概念",
+      "limit_times": 1,
+      "fd_amount_yi": 4.09,
+      "pct_chg": 10.0,
+      "first_time": "93233",
+      "open_times": 3,
+      "float_mv_yi": 492.2,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.1亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600641.SH",
+      "name": "先导基电",
+      "industry": "半导体",
+      "theme": "高端装备、长江存储概念、设备更新",
+      "limit_times": 1,
+      "fd_amount_yi": 3.11,
+      "pct_chg": 9.98,
+      "first_time": "133817",
+      "open_times": 0,
+      "float_mv_yi": 262.4,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.1亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "603259.SH",
+      "name": "药明康德",
+      "industry": "医疗服务",
+      "theme": "上证50样本股",
+      "limit_times": 1,
+      "fd_amount_yi": 3.23,
+      "pct_chg": 10.0,
+      "first_time": "140520",
+      "open_times": 2,
+      "float_mv_yi": 3680.5,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.2亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停118只，筛出 12 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

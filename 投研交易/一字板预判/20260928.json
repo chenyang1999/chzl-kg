@@ -1,0 +1,71 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260928",
+  "next_day": "20260929",
+  "generated_at": "2026-10-17T18:55:33+08:00",
+  "n_total": 33,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "600825.SH",
+      "name": "新华传媒",
+      "industry": "出版",
+      "limit_times": 5,
+      "fd_amount_yi": 23.86,
+      "pct_chg": 10.04,
+      "prob_yizi": 31.0,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=5 (一字率20%)",
+        "封单=23.9亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600802.SH",
+      "name": "福建水泥",
+      "industry": "水泥",
+      "limit_times": 3,
+      "fd_amount_yi": 0.61,
+      "pct_chg": 9.97,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.6亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "603396.SH",
+      "name": "金辰股份",
+      "industry": "光伏设备",
+      "limit_times": 3,
+      "fd_amount_yi": 0.4,
+      "pct_chg": 9.99,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.4亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "603949.SH",
+      "name": "雪龙集团",
+      "industry": "汽车零部件",
+      "limit_times": 3,
+      "fd_amount_yi": 0.51,
+      "pct_chg": 10.0,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.5亿 (一字率12%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停33只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

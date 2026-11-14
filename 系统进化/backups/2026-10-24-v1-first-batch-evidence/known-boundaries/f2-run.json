@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a/.venv/bin/python",
+    "-B",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-254d2883/run_safe_tests.py",
+    "f2"
+  ],
+  "pytest_argv": [
+    "tests/test_f2_final_safety.py",
+    "-q",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-254d2883/fixtures/f2",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-254d2883/f2-junit.xml"
+  ],
+  "exit_code": 1,
+  "violations": [],
+  "collected": 86,
+  "synthetic_only": true,
+  "production_live_certified": false
+}

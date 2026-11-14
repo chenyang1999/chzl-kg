@@ -1,0 +1,53 @@
+....................................................F.F................. [ 83%]
+..............                                                           [100%]
+=================================== FAILURES ===================================
+_ test_counterexample_low_level_sell_rule_presence_not_full_authority[untriggered] _
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-25...enyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-254d2883/app/trading/after_close.py'>)
+violation = 'untriggered'
+
+    @pytest.mark.parametrize('violation',['untriggered','limit','quantity'])
+    def test_counterexample_low_level_sell_rule_presence_not_full_authority(code,violation):
+        p=plan_dict();p['execution_pool'][0]['exit_rules'][0]['quantity_pct']=.1
+        q=direct(code,p);q.holdings={SYMBOL:dict(total_qty=1000,available_qty=1000)}
+        q.quotes[SYMBOL].last=q.quotes[SYMBOL].bid=8.
+        kw=dict(quantity=100,limit_price=8.)
+        if violation=='untriggered':q.quotes[SYMBOL].last=q.quotes[SYMBOL].bid=10.;kw['limit_price']=10.
+        if violation=='limit':kw['limit_price']=.01
+        if violation=='quantity':kw['quantity']=1000
+        out=sell(q,**kw);persisted(code,q,out)
+>       assert out['status']=='rejected',json.dumps(dict(actual=out,transport=orders(code),bound_rule=p['execution_pool'][0]['exit_rules'][0]),ensure_ascii=False)
+E       AssertionError: {"actual": {"at": "2026-10-24T22:54:27.647438", "ts_code": "600000.SH", "side": "sell", "quantity": 100, "limit_price": 10.0, "rule_type": "stop_loss_break", "reasons": ["synthetic_only"], "position_pct": 0.0, "dry_run": false, "meta": {}, "status": "submitted", "order": {"synthetic_only": true, "order_id": "SYNTHETIC_NOT_A_BROKER_ORDER"}}, "transport": [{"symbol": "600000.SH", "side": "sell", "quantity": 100, "limit_price": 10.0, "remark": "trading stop_loss_break"}], "bound_rule": {"type": "stop_loss_break", "trigger_price": 9.0, "quantity_pct": 0.1}}
+E       assert 'submitted' == 'rejected'
+E         
+E         - rejected
+E         + submitted
+
+tests/test_f2_final_safety.py:180: AssertionError
+_ test_counterexample_low_level_sell_rule_presence_not_full_authority[quantity] _
+
+code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-25...enyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-254d2883/app/trading/after_close.py'>)
+violation = 'quantity'
+
+    @pytest.mark.parametrize('violation',['untriggered','limit','quantity'])
+    def test_counterexample_low_level_sell_rule_presence_not_full_authority(code,violation):
+        p=plan_dict();p['execution_pool'][0]['exit_rules'][0]['quantity_pct']=.1
+        q=direct(code,p);q.holdings={SYMBOL:dict(total_qty=1000,available_qty=1000)}
+        q.quotes[SYMBOL].last=q.quotes[SYMBOL].bid=8.
+        kw=dict(quantity=100,limit_price=8.)
+        if violation=='untriggered':q.quotes[SYMBOL].last=q.quotes[SYMBOL].bid=10.;kw['limit_price']=10.
+        if violation=='limit':kw['limit_price']=.01
+        if violation=='quantity':kw['quantity']=1000
+        out=sell(q,**kw);persisted(code,q,out)
+>       assert out['status']=='rejected',json.dumps(dict(actual=out,transport=orders(code),bound_rule=p['execution_pool'][0]['exit_rules'][0]),ensure_ascii=False)
+E       AssertionError: {"actual": {"at": "2026-10-24T22:54:27.674154", "ts_code": "600000.SH", "side": "sell", "quantity": 1000, "limit_price": 8.0, "rule_type": "stop_loss_break", "reasons": ["synthetic_only"], "position_pct": 0.0, "dry_run": false, "meta": {}, "status": "submitted", "order": {"synthetic_only": true, "order_id": "SYNTHETIC_NOT_A_BROKER_ORDER"}}, "transport": [{"symbol": "600000.SH", "side": "sell", "quantity": 1000, "limit_price": 8.0, "remark": "trading stop_loss_break"}], "bound_rule": {"type": "stop_loss_break", "trigger_price": 9.0, "quantity_pct": 0.1}}
+E       assert 'submitted' == 'rejected'
+E         
+E         - rejected
+E         + submitted
+
+tests/test_f2_final_safety.py:180: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_f2_final_safety.py::test_counterexample_low_level_sell_rule_presence_not_full_authority[untriggered]
+FAILED tests/test_f2_final_safety.py::test_counterexample_low_level_sell_rule_presence_not_full_authority[quantity]
+2 failed, 84 passed in 0.69s

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 12px;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #fff;
+      color: #37352f;
+    }
+    h1 { font-size: 14px; font-weight: 600; margin: 0 0 10px 4px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .panel {
+      border: 1px solid #e8e8e6;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .panel-title {
+      font-size: 11px;
+      padding: 6px 10px;
+      border-bottom: 1px solid #e8e8e6;
+      display: flex;
+      justify-content: space-between;
+    }
+    .main-pane { height: 168px; }
+    .sise-pane { height: 44px; border-top: 1px solid #e8e8e6; }
+    .macd-pane { height: 62px; border-top: 1px solid #e8e8e6; }
+  </style>
+  <!--LWC_INLINE-->
+</head>
+<body>
+  <h1 id="title"></h1>
+  <div id="grid" class="grid"></div>
+  <script>
+    window.__chartsReady = false;
+
+    const CHART_BASE = {
+      layout: { background: { type: LightweightCharts.ColorType.Solid, color: "#FFFFFF" }, textColor: "#37352F", fontSize: 10 },
+      grid: { vertLines: { color: "#F0F0EE" }, horzLines: { color: "#F0F0EE" } },
+      rightPriceScale: { borderVisible: false },
+      timeScale: { borderVisible: false, timeVisible: false },
+      handleScroll: false,
+      handleScale: false,
+      crosshair: { mode: LightweightCharts.CrosshairMode.Hidden },
+    };
+
+    function mountChart(el, h) {
+      return LightweightCharts.createChart(el, {
+        ...CHART_BASE,
+        width: el.clientWidth || 640,
+        height: h,
+      });
+    }
+
+    function renderSise(chart, candles, bands) {
+      chart.addLineSeries({
+        color: "rgba(0,0,0,0)",
+        lineWidth: 0,
+        lastValueVisible: false,
+        priceLineVisible: false,
+        crosshairMarkerVisible: false,
+      }).setData(candles.map((c) => ({ time: c.time, value: 0 })));
+
+      const rows = [
+        { key: "row4", margin: { top: 0, bottom: 0.84 } },
+        { key: "row3", margin: { top: 0.19, bottom: 0.63 } },
+        { key: "row2", margin: { top: 0.4, bottom: 0.42 } },
+        { key: "row1", margin: { top: 0.61, bottom: 0.21 } },
+        { key: "row0", margin: { top: 0.82, bottom: 0 } },
+      ];
+      rows.forEach(({ key, margin }, idx) => {
+        const pid = `sise${idx}`;
+        const s = chart.addHistogramSeries({
+          priceScaleId: pid,
+          priceFormat: { type: "volume" },
+          lastValueVisible: false,
+          priceLineVisible: false,
+        });
+        chart.priceScale(pid).applyOptions({ scaleMargins: margin, borderVisible: false });
+        s.setData((bands && bands[key]) || []);
+      });
+    }
+
+    function renderPanel(root, panel, width) {
+      const wrap = document.createElement("div");
+      wrap.className = "panel";
+      wrap.innerHTML = `<div class="panel-title"><span>${panel.label}</span><span>${panel.source || ""}</span></div>`;
+      const body = document.createElement("div");
+      wrap.appendChild(body);
+
+      const mainEl = document.createElement("div");
+      mainEl.className = "main-pane";
+      mainEl.style.width = `${width}px`;
+      body.appendChild(mainEl);
+
+      const chart = mountChart(mainEl, 168);
+      const candle = chart.addCandlestickSeries({
+        upColor: "#26a69a",
+        downColor: "#ef5350",
+        borderVisible: false,
+        wickUpColor: "#26a69a",
+        wickDownColor: "#ef5350",
+        lastValueVisible: false,
+        priceLineVisible: false,
+      });
+      candle.setData(panel.candles);
+
+      if (panel.volumes?.length) {
+        const vol = chart.addHistogramSeries({ priceFormat: { type: "volume" }, priceScaleId: "" });
+        vol.priceScale().applyOptions({ scaleMargins: { top: 0.78, bottom: 0 } });
+        vol.setData(panel.volumes);
+      }
+
+      const overlay = { lastValueVisible: false, priceLineVisible: false, crosshairMarkerVisible: false, lineWidth: 1 };
+      if (panel.bullBear?.niu?.length) {
+        chart.addLineSeries({ ...overlay, color: "#FFB300", lineWidth: 2 }).setData(panel.bullBear.niu);
+        chart.addLineSeries({ ...overlay, color: "#E91E63", lineWidth: 2, lineStyle: 1 }).setData(panel.bullBear.xiong);
+        chart.addLineSeries({ ...overlay, color: "#FFEB3B", lineWidth: 2, lineStyle: 2 }).setData(panel.bullBear.jueCe);
+      }
+
+      chart.timeScale().fitContent();
+
+      if (panel.bullBear?.siSeSiLiang) {
+        const siseEl = document.createElement("div");
+        siseEl.className = "sise-pane";
+        siseEl.style.width = `${width}px`;
+        body.appendChild(siseEl);
+        const siseChart = mountChart(siseEl, 44);
+        renderSise(siseChart, panel.candles, panel.bullBear.siSeSiLiang);
+        siseChart.timeScale().fitContent();
+      }
+
+      if (panel.macd) {
+        const macdEl = document.createElement("div");
+        macdEl.className = "macd-pane";
+        macdEl.style.width = `${width}px`;
+        body.appendChild(macdEl);
+        const macdChart = mountChart(macdEl, 62);
+        macdChart.addHistogramSeries({ priceFormat: { type: "price", precision: 3 } }).setData(panel.macd.histogram || []);
+        macdChart.addLineSeries({ color: "#2962FF", lineWidth: 1, lastValueVisible: false, priceLineVisible: false }).setData(panel.macd.macdLine || []);
+        macdChart.addLineSeries({ color: "#FF6D00", lineWidth: 1, lastValueVisible: false, priceLineVisible: false }).setData(panel.macd.signalLine || []);
+        macdChart.timeScale().fitContent();
+      }
+
+      root.appendChild(wrap);
+    }
+
+    window.__renderCharts = function (payload) {
+      document.getElementById("title").textContent = payload.title || "";
+      const grid = document.getElementById("grid");
+      grid.innerHTML = "";
+      const panelW = Math.floor((payload.width || 1320) / 2) - 24;
+      (payload.panels || []).forEach((p) => renderPanel(grid, p, panelW));
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          window.__chartsReady = true;
+        });
+      });
+    };
+  </script>
+</body>
+</html>

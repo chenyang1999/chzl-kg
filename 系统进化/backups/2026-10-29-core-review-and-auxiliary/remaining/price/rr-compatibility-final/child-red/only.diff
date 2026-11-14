@@ -1,0 +1,176 @@
+--- tests/test_canghai_rr_scope_20261023.py.before
++++ tests/test_canghai_rr_scope_20261023.py
+@@ -34,6 +34,7 @@
+     files = ["src/__init__.py", "src/plan/__init__.py", "src/plan/buy_eligibility.py",
+              "src/plan/price_levels.py", "src/plan/risk_reward.py",
+              "scripts/plan/apply_price_levels.py", "trading/__init__.py",
++             "trading/execution_authorization.py",
+              "trading/schema/watchlist_plan.py", "trading/watcher/dispatch.py",
+              "trading/watcher/session_context.py"]
+     files += [str(p.relative_to(REPO)) for p in (REPO / "trading/executors").glob("*.py")]
+@@ -144,14 +145,26 @@
+     return s
+ 
+ 
++class FixturePositions:
++    """Explicit known-absent per-symbol state; never loads/saves account data."""
++    def __init__(self):
++        self.trade_date = DATE
++        self.positions = {}
++
++
+ class FixtureContext:
+     """Only in-memory call observations, not simulated fills or account equity."""
+-    def __init__(self, stocks, *, total_asset=100000.0):
++    def __init__(self, stocks, *, total_asset=100000.0, sellable=None):
+         self.quotes = {s["ts_code"]: SimpleNamespace(last=100.0, ask=100.0, bid=99.9) for s in stocks}
+         self.total_asset = total_asset  # synthetic sizing fixture, not paper seed or production budget
+         self.cash = total_asset
+         self.holdings = {}
+         self.trade_date = DATE
++        self.dry_run = True
++        self._positions_binding = None
++        self.sellable = dict(sellable or {})
++        assert set(self.sellable) <= set(self.quotes)
++        assert all(type(qty) is int and qty > 0 for qty in self.sellable.values())
+         # Explicit same-day evidence belongs in the test, not the harness.
+         # Never turn an undated scan into today's permission.
+         importlib.import_module("trading.watcher.session_context").set_scan_result({
+@@ -165,17 +178,44 @@
+         assert set(symbols) <= set(self.quotes)
+ 
+     def place_order(self, **kwargs):
++        # Intent observations only: no QMT/fill/live authorization is asserted.
++        if kwargs["side"] == "sell":
++            assert kwargs["sell_position"] is self.sell_position_state(kwargs["ts_code"])
++            assert kwargs["quantity"] <= self.available_qty(kwargs["ts_code"])
+         self.calls.append(kwargs)
+         return {"status": "fixture_order_intent"}
+ 
+     def log_event(self, row):
+         self.events.append(row)
+ 
++    def bind_positions_store(self, store, *, trade_date, dry_run):
++        if self._positions_binding is not None:
++            raise ValueError("sell_positions_store_already_bound")
++        if (type(store) is not FixturePositions or store.trade_date != trade_date
++                or trade_date != self.trade_date or type(dry_run) is not bool
++                or dry_run != self.dry_run or type(store.positions) is not dict):
++            raise ValueError("sell_positions_store_binding_invalid")
++        self._positions_binding = (store, trade_date, dry_run)
++
++    def sell_position_state(self, code, *, store=None):
++        if self._positions_binding is None:
++            raise ValueError("sell_positions_store_unbound")
++        bound, trade_date, dry_run = self._positions_binding
++        if (trade_date != self.trade_date or dry_run != self.dry_run
++                or bound.trade_date != trade_date or type(bound.positions) is not dict):
++            raise ValueError("sell_positions_store_binding_invalid")
++        if store is not None and store is not bound:
++            raise ValueError("sell_positions_store_mismatch")
++        if code not in bound.positions:
++            return None
++        # This fixture defines absent state only, not arbitrary position validity.
++        raise ValueError("sell_position_state_invalid")
++
+     def has_position(self, code):
+-        return True
++        return self.available_qty(code) > 0
+ 
+     def available_qty(self, code):
+-        return 200  # synthetic legally sellable fixture
++        return self.sellable.get(code, 0)
+ 
+ 
+ def tech(monkeypatch, code, *, fail=False):
+@@ -264,7 +304,9 @@
+     # Original top-level stop (95.95) conflicts with actual exit stop (90):
+     # preserve both and require evidence review, not a zero-deviation veto.
+     w = watch_stock(plan_status="watch_pool_only")
+-    b = {"ts_code": "000004.SZ", "name": "SYNTHETIC_B", "reference_close": 100}
++    w["entry_rules"] = [{"type": "trend_pullback_buy"}]
++    b = {"ts_code": "000004.SZ", "name": "SYNTHETIC_B", "reference_close": 100,
++         "entry_rules": [{"type": "trend_pullback_buy"}]}
+     p = plan(execution_pool=[a], watch_pool=[w],
+              seesaw_plan={"seesaw_directions": [{"candidates": [b]}]})
+     exits = deepcopy(a["exit_rules"])
+@@ -299,13 +341,18 @@
+     w = watch_stock()
+     p = plan(watch_pool=[w], no_trade_conditions=[{"code": "RR_FAIL", "source": "price_levels_engine", "active": True}])
+     tech(monkeypatch, code, fail=True)
++    # Owner supplies a fresh original channel; generated engine-only rules
++    # from a previous refresh cannot authorize a channel for the next one.
++    w["entry_rules"] = [{"type": "trend_pullback_buy"}]
+     code.apply.apply_to_plan(p, DATE)
+     assert w["buy_eligibility"]["status"] == "blocked"
+     tech(monkeypatch, code, fail=False)
++    w["entry_rules"] = [{"type": "trend_pullback_buy"}]
+     code.apply.apply_to_plan(p, DATE)
+     assert w["buy_eligibility"]["status"] == "eligible"
+     assert p["no_trade_conditions"] == []
+     w["ts_code"] = "000003.SZ"
++    w["entry_rules"] = [{"type": "trend_pullback_buy"}]
+     code.apply.apply_to_plan(p, DATE)
+     assert w["buy_eligibility"]["status"] == "unknown"
+     assert w["engine_levels"]["ok"] is False
+@@ -343,8 +390,10 @@
+ 
+ def test_actual_common_buy_blocks_only_bad_stock_and_sell_still_runs(code):
+     good, bad = stock(), stock("000002.SZ", take=110)
+-    ctx = FixtureContext([good, bad], total_asset=200000.0)  # 5% at 100 funds one whole lot
+-    positions = SimpleNamespace(positions={})
++    ctx = FixtureContext([good, bad], total_asset=200000.0,
++                         sellable={bad["ts_code"]: 200})  # 5% at 100 funds one whole lot
++    positions = FixturePositions()
++    ctx.bind_positions_store(positions, trade_date=DATE, dry_run=True)
+     for s in (good, bad):
+         result = code.buy.run_buy_executor(s, s["entry_rules"][0], ctx, positions,
+                                           expected_type="trend_pullback_buy", simulate=True, force_trigger=True)
+@@ -380,8 +429,10 @@
+     w = stock("000002.SZ", plan_status="watch_pool_only", auto_trade_enabled=False)
+     p = code.schema.WatchlistPlan.model_validate(plan(execution_pool=[s], watch_pool=[w],
+         no_trade_conditions=[{"code": "R7_STALE", "active": True}]))
+-    ctx = FixtureContext([s, w])
+-    report = code.dispatch.dispatch_plan(p, ctx, SimpleNamespace(positions={}))
++    ctx = FixtureContext([s, w], sellable={s["ts_code"]: 200})
++    positions = FixturePositions()
++    ctx.bind_positions_store(positions, trade_date=DATE, dry_run=True)
++    report = code.dispatch.dispatch_plan(p, ctx, positions)
+     assert len(ctx.calls) == 1 and ctx.calls[0]["side"] == "sell"
+     assert report.entry_results == [] and report.exit_results[0]["side"] == "sell"
+     assert report.watch_started == [w["ts_code"]]
+@@ -421,17 +472,18 @@
+ 
+ def test_real_engine_formula_2r_and_1_8_threshold(code, monkeypatch):
+     tech(monkeypatch, code)
+-    r = code.levels.derive("000001.SZ", DATE, ref_close=100)
++    r = code.levels.derive("000001.SZ", DATE, ref_close=100, channel="trend_pullback_buy")
+     assert r["buy_zone"] == [99, 101] and r["stop_loss"] == 95.95
+     assert r["take_profit"] == 111.1 and r["risk_reward_ratio"] == 2.0 and r["rr_grade"] == "pass"
+     tech(monkeypatch, code, fail=True)
+-    r = code.levels.derive("000001.SZ", DATE, ref_close=100)
++    r = code.levels.derive("000001.SZ", DATE, ref_close=100, channel="trend_pullback_buy")
+     assert r["take_profit"] == 108 and r["risk_reward_ratio"] == 1.39 and r["rr_grade"] == "RR_FAIL"
+ 
+ 
+ def test_main_writes_only_relocated_synthetic_plan_and_report(code, monkeypatch):
+     tech(monkeypatch, code, fail=True)
+     p = plan(watch_pool=[watch_stock()])
++    p["watch_pool"][0]["entry_rules"] = [{"type": "trend_pullback_buy"}]
+     path = code.root / f"data/plans/{DATE}/watchlist_plan.json"
+     path.parent.mkdir(parents=True, exist_ok=True)
+     path.write_text(json.dumps(p))
+@@ -546,8 +598,11 @@
+     p = code.schema.WatchlistPlan.model_validate(plan(execution_pool=[good, bad], watch_pool=[observed],
+         no_trade_conditions=[{"scope": "stock", "ts_code": bad["ts_code"], "active": True,
+                               "code": "STOCK_REVIEW"}]))
+-    ctx = FixtureContext([good, bad, observed], total_asset=200000.0)  # RR-only positive fixture
+-    report = code.dispatch.dispatch_plan(p, ctx, SimpleNamespace(positions={}), simulate=True)
++    ctx = FixtureContext([good, bad, observed], total_asset=200000.0,
++                         sellable={bad["ts_code"]: 200})  # RR-only positive fixture
++    positions = FixturePositions()
++    ctx.bind_positions_store(positions, trade_date=DATE, dry_run=True)
++    report = code.dispatch.dispatch_plan(p, ctx, positions, simulate=True)
+     assert [(x["ts_code"], x["side"]) for x in ctx.calls] == [(good["ts_code"], "buy"), (bad["ts_code"], "sell")]
+     assert any(x["reason"] == "stock_buy_gate" for x in report.skipped)
+     assert report.watch_started == [observed["ts_code"]]
