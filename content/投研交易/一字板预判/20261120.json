@@ -1,0 +1,49 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261120",
+  "next_day": "20261123",
+  "generated_at": "2026-11-20T22:00:08+08:00",
+  "n_total": 28,
+  "n_candidates": 2,
+  "candidates": [
+    {
+      "ts_code": "002771.SZ",
+      "name": "真视通",
+      "industry": "IT服务Ⅱ",
+      "theme": "高压快充、语音技术、电力物联网",
+      "limit_times": 4,
+      "fd_amount_yi": 1.59,
+      "pct_chg": 10.01,
+      "first_time": "93021",
+      "open_times": 0,
+      "float_mv_yi": 28.6,
+      "prob_yizi": 26.2,
+      "prob_up": 38.1,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.6亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002579.SZ",
+      "name": "中京电子",
+      "industry": "元件",
+      "theme": "芯片概念、粤港澳大湾区、物联网",
+      "limit_times": 2,
+      "fd_amount_yi": 2.04,
+      "pct_chg": 10.02,
+      "first_time": "93624",
+      "open_times": 0,
+      "float_mv_yi": 78.1,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.0亿 (一字率26%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停28只，筛出 2 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}
