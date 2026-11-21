@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="0.582" timestamp="2026-10-29T14:18:22.774326+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname=".hermes.cache.scratch.r6-original-replay.tests.pipeline.test_original_cross_run" name="test_original_cross_run_reuse_cannot_pass_current_receipt_reader" time="0.060"><failure message="AssertionError: {'status': 'mismatch', 'run_id': 'local-revision-new-run', 'attempt': 1, 'receipt': {'path': 'data/research/20990106/R...1a2e6c65036f56460f870a0a88dfcc162f6a50f7063cf78bd0cc3012dbd', 'bytes': 144, 'mtime_ns': 1793254703211941582, ...}, ...}&#10;assert 'mismatch' == 'verified'&#10;  &#10;  - verified&#10;  + mismatch">native = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_original_cross_run_reuse...Path('/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_original_cross_run_reuse_0/app/fake-hermes'))
+
+    def test_original_cross_run_reuse_cannot_pass_current_receipt_reader(native):
+        n=native
+        # The original terminal run itself is valid.
+        assert n.b.consume_authorized_inputs(n.summary,root=n.root)
+        # A new run cannot truthfully re-label the six old reports as newly produced.
+        newstate=json.loads(json.dumps(n.state));newstate['run_id']='local-revision-new-run'
+        for u in n.a.UNIT_FILES:
+            if u=='R6':continue
+            fingerprint=n.a.file_version(n.root,n.root/n.summary['artifacts'][u])
+            binding=n.b._binding(n.root,newstate,u,'json',fingerprint,newstate['run_id'],DATE)
+&gt;           assert binding['status']=='verified', binding
+E           AssertionError: {'status': 'mismatch', 'run_id': 'local-revision-new-run', 'attempt': 1, 'receipt': {'path': 'data/research/20990106/R...1a2e6c65036f56460f870a0a88dfcc162f6a50f7063cf78bd0cc3012dbd', 'bytes': 144, 'mtime_ns': 1793254703211941582, ...}, ...}
+E           assert 'mismatch' == 'verified'
+E             
+E             - verified
+E             + mismatch
+
+../../../.hermes/cache/scratch/r6-original-replay/tests/pipeline/test_original_cross_run.py:19: AssertionError</failure></testcase><testcase classname=".hermes.cache.scratch.r6-original-replay.tests.pipeline.test_r6_local_revision" name="test_explicit_local_branch_precedes_full_batch" time="0.000"><failure message="assert '--r6-local-review' in '#!/bin/bash\n# 沧海巨浪 · 研究端 R1-R7 shell wait 编排（替代 delegate_task process-local 陷阱）\n# 2026-07-06 用户签 B 口径：R1-R7 必须 LLM ...ss result in data/health/research_pipeline_%s.json) ===\\n\' &quot;$(date \'+%F %T\')&quot; &quot;$TRADE_DATE&quot;\nexit &quot;$PIPELINE_RC&quot;\n'">def test_explicit_local_branch_precedes_full_batch():
+        text = (REPO/'scripts/research/run_research_shell.sh').read_text()
+&gt;       assert '--r6-local-review' in text
+E       assert '--r6-local-review' in '#!/bin/bash\n# 沧海巨浪 · 研究端 R1-R7 shell wait 编排（替代 delegate_task process-local 陷阱）\n# 2026-07-06 用户签 B 口径：R1-R7 必须 LLM ...ss result in data/health/research_pipeline_%s.json) ===\\n\' "$(date \'+%F %T\')" "$TRADE_DATE"\nexit "$PIPELINE_RC"\n'
+
+../../../.hermes/cache/scratch/r6-original-replay/tests/pipeline/test_r6_local_revision.py:296: AssertionError</failure></testcase><testcase classname=".hermes.cache.scratch.r6-original-replay.tests.pipeline.test_r6_local_revision" name="test_cross_terminal_revision_supported_without_restarting" time="0.033"><failure message="AssertionError: assert False&#10; +  where False = callable(None)&#10; +    where None = getattr(&lt;module 'scripts.research.pipeline_state' from '/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_cross_terminal_revision_s0/app/scripts/research/pipeline_state.py'&gt;, 'run_r6_revision', None)&#10; +      where &lt;module 'scripts.research.pipeline_state' from '/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_cross_terminal_revision_s0/app/scripts/research/pipeline_state.py'&gt; = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_cross_terminal_revision_...Path('/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_cross_terminal_revision_s0/app/fake-hermes')).s">native = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_cross_terminal_revision_...Path('/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_cross_terminal_revision_s0/app/fake-hermes'))
+
+    def test_cross_terminal_revision_supported_without_restarting(native):
+&gt;       assert callable(getattr(native.s, 'run_r6_revision', None))
+E       AssertionError: assert False
+E        +  where False = callable(None)
+E        +    where None = getattr(&lt;module 'scripts.research.pipeline_state' from '/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_cross_terminal_revision_s0/app/scripts/research/pipeline_state.py'&gt;, 'run_r6_revision', None)
+E        +      where &lt;module 'scripts.research.pipeline_state' from '/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_cross_terminal_revision_s0/app/scripts/research/pipeline_state.py'&gt; = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_cross_terminal_revision_...Path('/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_cross_terminal_revision_s0/app/fake-hermes')).s
+
+../../../.hermes/cache/scratch/r6-original-replay/tests/pipeline/test_r6_local_revision.py:301: AssertionError</failure></testcase><testcase classname=".hermes.cache.scratch.r6-original-replay.tests.pipeline.test_r6_local_revision" name="test_global_boolean_does_not_prove_per_stock_review" time="0.035"><failure message="AttributeError: module 'scripts.research.pipeline_artifacts' has no attribute 'r6_coverage'">native = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_global_boolean_does_not_...Path('/Users/chenyang/.hermes/cache/scratch/r6-original-replay/cases/test_global_boolean_does_not_p0/app/fake-hermes'))
+
+    def test_global_boolean_does_not_prove_per_stock_review(native):
+        payload = {'formal_review_completed':True, 'review_passed':True,'hard_rejects':[]}
+&gt;       assert native.a.r6_coverage(payload, [A,B], {})['completed'] == []
+               ^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'scripts.research.pipeline_artifacts' has no attribute 'r6_coverage'
+
+../../../.hermes/cache/scratch/r6-original-replay/tests/pipeline/test_r6_local_revision.py:306: AttributeError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a/.venv/bin/python",
+    "-B",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/audit_worker.py",
+    "s2diagnostic"
+  ],
+  "pytest_argv": [
+    "tests/test_audit_d_diagnostics.py::test_pending_fractional_profit_exit_must_not_block_new_hard_stop",
+    "tests/test_audit_d_diagnostics.py::test_lowlevel_paper_execute_must_honor_same_default_kill_file",
+    "-q",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s2diagnostic/fixtures/pytest",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-final-20261024T145313Z-297d6ce2/s2diagnostic/junit.xml"
+  ],
+  "exit_code": 0,
+  "violations": [],
+  "synthetic_only": true,
+  "rr_adapt": false,
+  "subtest_count": 0,
+  "collected_count": 2,
+  "collection_only": false
+}

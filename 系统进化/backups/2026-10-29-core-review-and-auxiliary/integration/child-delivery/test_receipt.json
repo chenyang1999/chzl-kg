@@ -1,0 +1,34 @@
+{
+  "pytest_exit": 0,
+  "violations": [],
+  "guard_selftest_denials": [
+    {
+      "kind": "file",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/data/INPUT01-SYNTHETIC-DO-NOT-READ.json",
+      "writing": false
+    },
+    {
+      "kind": "file",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/.env.INPUT01-SYNTHETIC",
+      "writing": false
+    },
+    {
+      "kind": "file",
+      "path": "/Users/chenyang/Downloads/demo/沧海巨浪/INPUT01-SYNTHETIC-DO-NOT-WRITE",
+      "writing": true
+    }
+  ],
+  "source_sha_before": {
+    "scripts/research/build_research_summary.py": "32336a82851263497d0630e0f83ab5ae0004cd3518d4e316bb87067f5cce9fcc",
+    "scripts/research/pipeline_artifacts.py": "59516e95c37231441566e5311cb1e485eb62dc278f77706657fe0b4047bd9aeb",
+    "tests/pipeline/test_bound_auxiliary_inputs.py": "166ffe44ccc8cda58e65b3a1254bdb0fbcd207dd98d28645ea749ad7058ab25c",
+    "tests/pipeline/test_signed_input_review_contract.py": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8"
+  },
+  "source_sha_after": {
+    "scripts/research/build_research_summary.py": "32336a82851263497d0630e0f83ab5ae0004cd3518d4e316bb87067f5cce9fcc",
+    "scripts/research/pipeline_artifacts.py": "59516e95c37231441566e5311cb1e485eb62dc278f77706657fe0b4047bd9aeb",
+    "tests/pipeline/test_bound_auxiliary_inputs.py": "166ffe44ccc8cda58e65b3a1254bdb0fbcd207dd98d28645ea749ad7058ab25c",
+    "tests/pipeline/test_signed_input_review_contract.py": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8"
+  },
+  "source_drift": false
+}

@@ -1,0 +1,25 @@
+{
+  "verified_at": "2026-10-29T18:32:21.455076+08:00",
+  "candidate_only": true,
+  "cases": 231,
+  "groups": {
+    "tests.pipeline.test_r6_consumer_continuation": 7,
+    "tests.pipeline.test_intraday_event_reassessment": 40,
+    "tests.pipeline.test_d1_selective_reassessment": 50,
+    "tests.pipeline.test_bound_auxiliary_inputs": 28,
+    "tests.pipeline.test_d1_auxiliary_caller_wiring": 9,
+    "tests.pipeline.test_signed_input_review_contract": 17,
+    "tests.pipeline.test_safety_net_input_versions": 28,
+    "tests.pipeline.test_plan_interim_preservation": 50,
+    "tests.pipeline.test_native_usage_observation": 2
+  },
+  "source_unchanged": true,
+  "R6_guard_violations": [],
+  "EVENT_dedicated_guard_receipts": 157,
+  "native_children": 138,
+  "unguarded_native_children_after_native_receipt_reconciliation": [],
+  "old184_all_original_case_ids_retained": true,
+  "candidate_sha256": "35a374964485f96f53a078231a4e9efd12079cc54f4aac86794e183086336f5e",
+  "current_source_sha256": "f01223b6cf0a43d601db250af5b35c2b0edc6a1ec7b491dfd4143037044fe6f3",
+  "not_full_system_acceptance": true
+}

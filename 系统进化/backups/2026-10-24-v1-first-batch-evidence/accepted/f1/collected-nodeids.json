@@ -1,0 +1,13 @@
+[
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_known_rule_still_rejects_invalid_book[None-buy]",
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_known_rule_still_rejects_invalid_book[None-sell]",
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_known_rule_still_rejects_invalid_book[0-buy]",
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_known_rule_still_rejects_invalid_book[0-sell]",
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_known_rule_still_rejects_invalid_book[True-buy]",
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_known_rule_still_rejects_invalid_book[True-sell]",
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_known_rule_still_rejects_invalid_book[nan-buy]",
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_known_rule_still_rejects_invalid_book[nan-sell]",
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_known_rule_still_rejects_invalid_book[inf-buy]",
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_known_rule_still_rejects_invalid_book[inf-sell]",
+  "tests/test_v1_final_joint_acceptance_20261024.py::test_authorized_positive_buy_and_independent_legal_exit_persist"
+]

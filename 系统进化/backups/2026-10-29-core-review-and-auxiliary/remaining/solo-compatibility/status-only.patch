@@ -1,0 +1,117 @@
+--- before/chzl_kg/系统进化/2026-10-29 盘前核验问题任务清单.md
++++ current/chzl_kg/系统进化/2026-10-29 盘前核验问题任务清单.md
+@@ -8,19 +8,23 @@
+ 
+ # 2026-10-29 盘前核验问题任务清单
+ 
+-## 17:47最终状态：本批实现与隔离验收结束
++## 18:17当前状态：主控单人收尾，旧兼容红项已修完
+ 
+-两段已批准技能差异精确应用，正常启动、安全网与可信局部补审后的决策重评接线均已完成；不再有本批待签或后台实现待回。这里不是今天原预案的重新裁决，没有启动真实补证/模型/交易。
++按用户“你自己直接修，别调用Agent，一次性修完”的最新要求，本轮全部由主控完成，没有新代理、没有重复签核或同版互审。已收尾旧直接调用兼容欠账，并修复它暴露的独立交付回归；真实业务证据仍单列，不通过修改完成标记冒充补审、补图或开仓许可。
+ 
+ | 本批验收 | 当前证据 | 没有据此声称 |
+ |---|---|---|
+-| 决策与辅助输入 | 主控最终106项全过：新专项50、原辅助54、正常shell回归2；27份源码/测试无漂移、0失败/错误/跳过、0守卫违规 | 真实模型已补审、实际开仓许可或自然流水线已采用 |
++| 决策与辅助输入 | 18:17主控一次联合184项全过，包含原106、原74及新增4项；30份监测源码/测试无漂移，0失败/错误/跳过/守卫违规 | 真实模型已补审、实际开仓许可或自然流水线已采用 |
+ | 原价位/RR | 16:49完整163项源码仍匹配；两队列共同依赖同版 | 全品种当日价带或成交已验证 |
+-| 旧直接调用夹具 | 原始、实现者版与最终版74项逐项结果一致：45过/29红；缺此前已签辅助绑定，原测试不改、不排除 | 全仓测试全部通过，或把29红隐藏进106绿 |
++| 旧直接调用兼容 | 原74项当前全部通过，原测试名/参数/业务断言保留；另加4项正负例。先补合成正例的显式辅助绑定，再修其中2项暴露的真实独立交付错误 | 将原29红全部归因于夹具，或删断言/跳过旧项求绿；仍不声称全仓通过 |
+ 
+ 主控独审另修两个真实断点：①连续几次合法R6补审后才调用D1，不能强迫每个中间版本都跑一次决策；②正常启动也必须留本次受信输入/输出回执，不能只让安全网正例成立。原41项测试函数、参数及断言完整保留，盘中事件函数及main分派AST等价。模型/QMT I/O与枚举元数据为明确合成替身，研究收据、schema、组装与发布链为真实代码。
+ 
+-当前唯一D1验收入口：`backups/2026-10-29-core-review-and-auxiliary/remaining/d1-signed-implementation/final-acceptance/closure.json`。422成员证据包已逐项读回；它是依赖当前工程的证据，不是独立安装包。原13主项仍为8项限定结项、5项待真实业务证据；REASSESS-01的实现子项已验收，父项保留自然交付/采用，不以扩大本轮离线授权销账。
++当前唯一D1验收入口：`backups/2026-10-29-core-review-and-auxiliary/remaining/solo-compatibility/closure.json`。17:47的106项及45过/29红回执原样保留为历史；新184是本轮真实联合执行，不是把不同版本的通过数相加。原13主项仍为8项限定结项、5项待真实业务证据，0项代码施工中。
++
++上轮“29红都只是旧夹具”的归因不完整：显式补齐当前合成输入后，原生结果为74过/2红。真实问题是没有研究run身份的独立安全交付，已经通过原校验，却因无法生成后续研究复用收据被返回失败。本轮仅让无owner交付不产生可复用身份；有owner的收据失败仍拒绝，原未绑定资料仍零模型调用，旧预案不能事后补身份。
++
++五项剩余验收均需要真实业务证据：修后候选→出图→画像采用、当日实际价带、真实补证→决策→下游采用、明确alert/合规范围/资金冲突审核，以及修后服务样本/逐一恢复绑定。本轮只读核对既有审计清单中的25份业务来源，内容版本均未变化，没有新采用证据；未启动补抓、真实模型或付费视觉，不读取账户/DB，不改今天原预案及有效零预算。这不是仍有代理在施工，也不是再次等待同批签核。
+ 
+ ## 结论与范围
+ 
+@@ -43,8 +47,8 @@
+ | PRICE-01 | P0 | 修复分歧买区与止损的几何矛盾 | 原始及舍入后止损均低于买区下沿；光洋/盈方所示反例被回归覆盖；不能修复时显式失败，不返回自相矛盾的可用值 | **限定修复验收完成**：非法几何返回明确失败，不生成执行触发/RR；13项新增及26项既有展开回归通过。合法替代价位仍属PRICE-02/03，不擅改阈值 |
+ | PRICE-02 | P1 | 处理空entry默认MA50及当日不可达价位 | 按已经授权的通道建立情景，核查当日可达性；不可达值不能冒充当日买区；不以机械切换通道保证有票 | **实现与已签技能同步均已验，真实当日可达性仍未验**：明确通道缺MA50时不再用昨收伪造该线；原10%距离诊断标为unverified，不冒充交易所证实不可达。16:49主控三文件完整163项通过，包含原154及全部109旧case，无过滤/越界/漂移。没有补新通道、阈值或真实行情；日内实际边界证据保留缺口，不再待签 |
+ | PRICE-03 | P1 | 对齐触发价、区间上沿、实际拟买价的RR和止损基准；处理报价分位舍入 | 同一拟买场景使用一致基准；最低报价单位与边界容差有明确依据；严格边界正负例可复算 | **限定实现/技能同步结项**：已签两场景及精度说明逐字落地；16:49完整163项当前价位联合验收通过，原154与109身份/断言保留。计划上沿/实际委托价各自重算，不改精度或阈值；普通沪深一般报价单位已有官方原文，不认证全品种/特别调整或当日成交 |
+-| INPUT-01 | P0 | 协调主产物读取限制与技能的辅助输入义务 | 明确有版本的错题、人气、事件日历、观察材料的允许读取集合；读取白名单与写入白名单分开；旧研究不能冒充本批 | **限定读取/接线已结，原54已纳入17:47当前106联验**：两类快照实际绑定/读取，正常与安全网统一；本批必要共享调用方更新后真实全队列通过，0过滤/越界/源码漂移。仅绑定批准材料，不扩其他类别/买权；真实模型采用另验 |
+-| REASSESS-01 | P0 | 补齐缺项补证→正式审核→有权限决策重评→结果交付→下游采用 | 每个待重评结果有责任方、触发和终态；核清是否不必要地要求全部报告再生成；旧零预算只由合法新裁决替换 | **本批实现/隔离验收结项，父项待真实业务采用**：主控当前106项全过，正常生产者的输入/输出回执、可信局部R6到D1及连续更新后重评均贯通；原六研究复用，部分必要仍缺则安全未就绪并非零返回。原终态不重开，事件/原池/买卖规则/有效零预算不变；无旧受信绑定仍拒绝，不追补身份。真实补证、模型及下游自然读取不在本轮冒称完成 |
++| INPUT-01 | P0 | 协调主产物读取限制与技能的辅助输入义务 | 明确有版本的错题、人气、事件日历、观察材料的允许读取集合；读取白名单与写入白名单分开；旧研究不能冒充本批 | **限定读取/接线已结，原54已纳入18:17当前184联验**：两类快照实际绑定/读取，正常与安全网统一；原106与旧74完整保留，新增无绑定拒绝/独立交付不造身份/有owner收据失败负例；0过滤/越界/监测源码漂移。仅绑定批准材料，不扩其他类别/买权；真实模型采用另验 |
++| REASSESS-01 | P0 | 补齐缺项补证→正式审核→有权限决策重评→结果交付→下游采用 | 每个待重评结果有责任方、触发和终态；核清是否不必要地要求全部报告再生成；旧零预算只由合法新裁决替换 | **本批实现/隔离验收结项，父项待真实业务采用**：18:17主控当前184项全过，含原106、原74和4项补充。正常/安全网/可信局部补审及连续更新后重评均保留；合法独立交付不再因缺研究owner被复用收据误判失败，但不能获得可继承身份，有owner的收据失败仍拒绝。原终态、事件/原池/买卖/零预算不改，不追补旧身份。真实补证、模型及下游自然读取未运行 |
+ | CONF-01 | P1 | 评估完整度置信分接全局开仓硬阈值的适用性 | 区分数据质量、市场判断确定性和策略胜率；说明阈值依据及局部缺口的影响 | **按原范围完成评估**：0.392为研究基准×新鲜度/覆盖×源一致性的复合启发式值，不是胜率；已定位0.4指令与局部缺口影响，限定范围未见统计校准依据。结项不等于校准或政策变更；原阈值/分数保留，真实新证据重评仍归DATA/REASSESS。不把另开历史校准追加为本评估结项前提 |
+ | DATA-01 | P1 | 补齐真实必要缺口，并为每项分清必要/辅助/不适用 | 财务合规、禁止清单/核心/板型输入、长期人气、海外时点、ETF申赎等逐项有来源、观测时点、责任方和降级办法 | **逐票定位已交，补证未运行**：六票已有逐票资金/三表，不是全缺；32条对象审核记录含六主对象及两R4-only条件对象，14条共用记录。真缺财务合规检查范围、显式alert覆盖、资金冲突裁决与正式审核；不自动扩池或删现有红旗 |
+ | HEALTH-01 | P1 | 修正健康归因，单独检查外部出图服务稳定性 | 读取成功但研究降级、业务调用失败、已恢复历史错误分开；外部失败率/延迟有实际调用回执支持 | **有限历史量测已交，整体未结**：旧批逐票业务失败0/12、端到端21.90–36.25秒、均值28.70秒；不是修复后稳定性或纯模型延迟。12条龙虎榜历史参数失败有恢复汇总但缺逐一绑定，不能当当前12次供应商故障。没有新增外部探针 |
+--- before/data/evolution/2026-W44/sign_off_log.md
++++ current/data/evolution/2026-W44/sign_off_log.md
+@@ -1,6 +1,15 @@
+ # Sign-off 日志 · 2026-W44
+ 
+-## 2026-10-29 17:47 · 本批D1必要接线主控验收完成，不启动真实恢复
++## 2026-10-29 18:17 · 主控单人完成旧兼容欠账，当前184项联合通过
++
++- 最新用户要求“继续todos，你自己直接修就行，别调用Agent，一次性修完”；本轮主控唯一写者，没有代理、重复索签或同版互审，继续遵守本批仅隔离验证边界。
++- 修正上轮归因：29个旧失败不能一概视为夹具问题。仅在对应合成正例显式提供已批准的辅助输入绑定后，原生结果为74过/2红；这两项真实暴露了独立安全交付无研究run身份、却被强制要求生成后续复用收据的回归。只修改`retry_llm`的收据条件：无owner不造可复用身份，有owner的收据失败仍拒绝。没有改资格、风险阈值、原事件路径、预算或交易许可。
++- 原74个展开case身份、测试函数/参数化/业务assert全部保留，未删除/跳过；原共用legacy夹具不动，正例显式使用当前producer绑定。新增4项覆盖旧无绑定拒绝、独立交付不造身份、有owner收据失败不得跳过。专项原生1红/1绿及完整76项74绿/2红均保留。
++- 18:17当前一次联合执行184项全部通过：完整原106＋原74＋新增4，退出0，无失败/错误/跳过；30份监测源码/测试摘要无漂移，259个Python守卫和90个已记录原生合成子进程均有守卫，0违规/未守卫子进程，Git索引不变。不是将多个版本的通过数相加，不宣称全仓测试通过。
++- 当前主证据`backups/2026-10-29-core-review-and-auxiliary/remaining/solo-compatibility/closure.json`，保留改前字节、精确增量、原生JUnit、完整命令/日志、收集前守卫及原74/106身份映射。17:47回执原样保留为历史。16:49价格163的32份受测源仍匹配，未重跑或合计进184。
++- 只读核对既有审计清单中的25份业务来源，版本均未变化，不构成修后自然采用。13主项仍8项限定完成/5项待真实业务证据/0项施工；待验证为出图画像采用、真实价带、真实补证与模型重评、必要风险补证、服务与历史恢复绑定。没有把这些父项改成通过，没有启动真实模型/视觉/补抓/账户/DB/交易或覆盖今天原预案。
++
++## 历史冻结：2026-10-29 17:47 · 本批D1必要接线主控验收完成，不启动真实恢复
+ 
+ - 当前验收入口：`backups/2026-10-29-core-review-and-auxiliary/remaining/d1-signed-implementation/final-acceptance/closure.json`。主控最终106项全过、退出0、无失败/错误/跳过，27份受测源码/测试无漂移；259个Python守卫回执、90个已记录原生合成子进程均有守卫，0违规/未守卫原生子进程。原辅助54完整包含、新专项50、必要shell2，不与旧95/98/120重复相加。
+ - 实现者首交95之后主控一次有界独审，真实复现并修正两项接线反例：多个可信R6更新在D1之前完成时，旧直接前驱比较误拒（原生1红/2绿）；正常shell交付成功却没有可复用的本次输入/输出绑定（原生1红）。沿既有previous_reception收据核完整继承，不强迫中间每次跑D1；正常D1启动前捕获实际已核版本、交付后核同版与新JSON/MD，再留回执，不给旧历史预案现场补身份。
+--- before/chzl_kg/系统进化/backups/2026-10-29-core-review-and-auxiliary/remaining/pending-sign-off.json
++++ current/chzl_kg/系统进化/backups/2026-10-29-core-review-and-auxiliary/remaining/pending-sign-off.json
+@@ -3,9 +3,10 @@
+   "status_at_proposal_creation": "pending_sign_off_not_applied",
+   "approval": "批准上条两段差异及必要代码接线，仅做隔离验证 该批的都批了，别问了。继续干就完事了。",
+   "application_receipt": "d1-signed-implementation/skill-application.json",
+-  "implementation_receipt": "d1-signed-implementation/final-acceptance/closure.json",
+-  "implementation_accepted_at": "2026-10-29T17:47:31.498188+08:00",
+-  "current_joint_cases_passed": 106,
++  "prior_implementation_receipt": "d1-signed-implementation/final-acceptance/closure.json",
++  "implementation_receipt": "solo-compatibility/closure.json",
++  "implementation_accepted_at": "2026-10-29T18:17:04.894663+08:00",
++  "current_joint_cases_passed": 184,
+   "original_task_counts": {"total": 13, "limited_completed": 8, "waiting_business_evidence": 5, "implementation_in_progress": 0},
+   "target": "skills/main_decision_v1/SKILL.md",
+   "before_sha256": "72bc196a0690af6d5a5a74efaa33a9f7c1e9683eeafd5efb47fbac7215d50f2b",
+@@ -23,6 +24,6 @@
+     "account/role/trading permission"
+   ],
+   "production_or_model_run": false,
+-  "selective_reassessment_implementation": "accepted by parent on current 27-source closure: normal producer, retry and trusted R6 selective reassessment wired; parent fixed two real boundary counterexamples; no further implementation/sign-off pending for this batch",
++  "selective_reassessment_implementation": "accepted by single-writer parent on current 30-source closure: original106 and original74 retained, four added cases, 184 passed; ownerless standalone delivery no longer fails optional reuse receipt, while missing binding/inheritance identity and owned receipt failures still reject; no agents or further implementation/sign-off pending",
+   "actual_recovery_approval": "not included: user explicitly limits this batch to isolated verification; no recovery launched"
+ }--- before/chzl_kg/系统进化/backups/2026-10-29-core-review-and-auxiliary/remaining/reassessment-coordination.json
++++ current/chzl_kg/系统进化/backups/2026-10-29-core-review-and-auxiliary/remaining/reassessment-coordination.json
+@@ -2,15 +2,15 @@
+   "scope": "REASSESS-01 duplicate-work prevention, no production authority",
+   "other_coordinator_session": "20261029_121656_152b79",
+   "other_handoff": "/Users/chenyang/.hermes/cache/scratch/r6-per-stock-review-readmission-handoff-20261029.md",
+-  "observed_stage": "R6 local research delivery accepted upstream at 16:06; this approved D1 implementation accepted by parent at 2026-10-29T17:47:31.498188+08:00 on current 27-source closure. Natural model/production adoption remains unverified",
++  "observed_stage": "R6 local research delivery accepted upstream at 16:06; D1 and legacy compatibility accepted by single-writer parent at 2026-10-29T18:17:04.894663+08:00 on current 30-source closure, 184 passed. No agents used in this continuation. Natural model/production adoption remains unverified",
+   "approved_contract_application": "chzl_kg/系统进化/backups/2026-10-29-r6-local-review-contract/contract-application.json",
+   "research_implementation_writer": "deleg_db660637/sa-0-217bd0ca",
+   "existing_auxiliary_consumer_compatibility": {
+-    "verified_at": "2026-10-29T17:47:31.498188+08:00",
+-    "closure": "d1-signed-implementation/final-acceptance/closure.json",
++    "verified_at": "2026-10-29T18:17:04.894663+08:00",
++    "closure": "solo-compatibility/closure.json",
+     "full_cases_passed": 54,
+-    "scope": "Original full 54 cases retained inside parent current joint106; also includes new selective/normal producer entry and continuous trusted R6 revision flow with synthetic external transport",
+-    "final_merge_requirement": "Satisfied for the recorded current 27-source closure; changed affecting source requires a new bounded acceptance, not repeat review of this same version"
++    "scope": "Original full54, original selective/normal producer and old74 cases retained inside current joint184; four additional binding/standalone/owned-receipt checks. Synthetic external transport only",
++    "final_merge_requirement": "Satisfied for the recorded current 30-source closure; changed affecting source requires bounded acceptance, not repeat review of this same version"
+   },
+   "shared_blockers": [
+     "terminal research runs cannot be silently restarted or edited",
+@@ -33,7 +33,8 @@
+   },
+   "approved_skill_patch": "price-and-selective-reassessment.pending.patch",
+   "skill_application_receipt": "d1-signed-implementation/skill-application.json",
+-  "implementation_receipt": "d1-signed-implementation/final-acceptance/closure.json",
++  "implementation_receipt": "solo-compatibility/closure.json",
++  "current_business_evidence_check": "solo-compatibility/existing-business-version-check.json",
+   "real_recovery_confirmation": "not included in explicit isolated-only approval; no real recovery launched",
+   "trading_permission_changed": false
+ }

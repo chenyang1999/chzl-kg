@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>20261117</title><meta charset="utf-8"/><link rel="preload" href="../../index-5a23ce28.css" as="style"/><link rel="preload" href="../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="沧海巨浪"/><meta property="og:title" content="20261117"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="20261117"/><meta name="twitter:description" content="2026-11-17 每日复盘：家电局部接力成立，广电延续失败，芯片轮动漏看 权限验收失败：本轮18:04:56的—dry-run预检实际改写data/research/20261117/emotion_cycle.json、emotion_cycle_closed.json、mainline_lifecycle.json。命令标签未约束底层compute_and_write，本轮未先追全副作用调用链，是E1自身执行事故。未越权恢复，未改代码或白名单；已保留ownership_incident.json及写前情绪对象恢复候选。以下行情来自独立MCP，不采用该次默认溢价重算值。报告分析状态par..."/><meta property="og:description" content="2026-11-17 每日复盘：家电局部接力成立，广电延续失败，芯片轮动漏看 权限验收失败：本轮18:04:56的—dry-run预检实际改写data/research/20261117/emotion_cycle.json、emotion_cycle_closed.json、mainline_lifecycle.json。命令标签未约束底层compute_and_write，本轮未先追全副作用调用链，是E1自身执行事故。未越权恢复，未改代码或白名单；已保留ownership_incident.json及写前情绪对象恢复候选。以下行情来自独立MCP，不采用该次默认溢价重算值。报告分析状态par..."/><meta property="og:image:alt" content="2026-11-17 每日复盘：家电局部接力成立，广电延续失败，芯片轮动漏看 权限验收失败：本轮18:04:56的—dry-run预检实际改写data/research/20261117/emotion_cycle.json、emotion_cycle_closed.json、mainline_lifecycle.json。命令标签未约束底层compute_and_write，本轮未先追全副作用调用链，是E1自身执行事故。未越权恢复，未改代码或白名单；已保留ownership_incident.json及写前情绪对象恢复候选。以下行情来自独立MCP，不采用该次默认溢价重算值。报告分析状态par..."/><meta property="og:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:url" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta name="twitter:image" content="https://chenyang1999.github.io/chzl-kg/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="chenyang1999.github.io/chzl-kg"/><meta property="og:url" content="https://chenyang1999.github.io/chzl-kg/投研交易/复盘记录/20261117"/><meta property="twitter:url" content="https://chenyang1999.github.io/chzl-kg/投研交易/复盘记录/20261117"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="2026-11-17 每日复盘：家电局部接力成立，广电延续失败，芯片轮动漏看 权限验收失败：本轮18:04:56的—dry-run预检实际改写data/research/20261117/emotion_cycle.json、emotion_cycle_closed.json、mainline_lifecycle.json。命令标签未约束底层compute_and_write，本轮未先追全副作用调用链，是E1自身执行事故。未越权恢复，未改代码或白名单；已保留ownership_incident.json及写前情绪对象恢复候选。以下行情来自独立MCP，不采用该次默认溢价重算值。报告分析状态par..."/><meta name="generator" content="Quartz"/><link href="../../index-5a23ce28.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/></head><body data-slug="投研交易/复盘记录/20261117" data-basepath="/chzl-kg"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">沧海巨浪</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-585" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-585" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../投研交易/">投研交易</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../投研交易/复盘记录/">复盘记录</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>20261117</a></div></nav><h1 class="article-title">20261117</h1><p show-comma="true" class="content-meta"><time datetime="2026-11-16T16:00:00.000Z">2026年11月17日</time><span>42分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="2026-11-17-每日复盘家电局部接力成立广电延续失败芯片轮动漏看">2026-11-17 每日复盘：家电局部接力成立，广电延续失败，芯片轮动漏看<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-11-17-每日复盘家电局部接力成立广电延续失败芯片轮动漏看" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>权限验收失败：本轮18:04:56的—dry-run预检实际改写data/research/20261117/emotion_cycle.json、emotion_cycle_closed.json、mainline_lifecycle.json。命令标签未约束底层compute_and_write，本轮未先追全副作用调用链，是E1自身执行事故。未越权恢复，未改代码或白名单；已保留ownership_incident.json及写前情绪对象恢复候选。以下行情来自独立MCP，不采用该次默认溢价重算值。报告分析状态partial，交付不能按complete验收。</p>
+<h2 id="结论与数据边界">结论与数据边界<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#结论与数据边界" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>真实启动由date核实为18:04:34（UTC+08:00），trade_date固定20261117，fresh context执行。未改cron、配置、skill、SOUL、上游计划或执行文件，未发送消息。只回看，不代plan层做明日决策。</p>
+<p>今日不是“两个候选都错”，也不是“执行池正收益所以系统正确”。长虹美菱接力成立，吉视传媒冲过确认位后失守；原计划明确dry_run且无成交证据，不能宣称实际赚钱、空仓避险成功或违规为零。</p>
+<p>整体状态partial。MCP核实22只当日行情；观察池20只均保留。真实成交、今日人气排名、方向兑现、复合买点成交证明仍缺。data_verified=false表示整体证据不完整，不否认已核收盘数据。available_at：收盘T0_1530、龙虎榜T0_1730、盘后新闻T0_1830；本次新闻固定覆盖09:15—17:30。</p>
+<h2 id="一全市场收盘全景">一、全市场收盘全景<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一全市场收盘全景" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-指数与广度">1. 指数与广度<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-指数与广度" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>指数代码</th><th style="text-align:right;">收盘</th><th style="text-align:right;">当日涨跌</th></tr></thead><tbody><tr><td>000001.SH</td><td style="text-align:right;">3584.5794</td><td style="text-align:right;">-0.4994%</td></tr><tr><td>399001.SZ</td><td style="text-align:right;">10638.5242</td><td style="text-align:right;">-0.4888%</td></tr><tr><td>000300.SH</td><td style="text-align:right;">3976.4629</td><td style="text-align:right;">-0.0839%</td></tr><tr><td>399006.SZ</td><td style="text-align:right;">2292.2037</td><td style="text-align:right;">-1.1990%</td></tr></tbody></table></div>
+<p>上证只用000001.SH，未将000001.SZ平安银行当指数。<br/>
+全A日线5573只：上涨1326、下跌4119、平盘128；涨跌比0.3219；中位数-1.3120%。分布而不是单看指数，显示多数股票依然亏钱。</p>
+<p>涨跌停口径：Tushare limit_list_d不含ST，涨停37、跌停67、炸板20；炸板率20/(37+20)=35.09%。最高连续3板，连板共6只。</p>
+<h3 id="2-梯队与真实晋级">2. 梯队与真实晋级<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-梯队与真实晋级" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>梯队</th><th>今日名单</th></tr></thead><tbody><tr><td>1板</td><td>双环科技 000707.SZ、江南化工 002226.SZ、九阳股份 002242.SZ、摩恩电气 002451.SZ、林州重机 002535.SZ、西陇科学 002584.SZ、扬子新材 002652.SZ、真视通 002771.SZ、泰嘉股份 002843.SZ、捷荣技术 002855.SZ、东方嘉盛 002889.SZ、中新赛克 002912.SZ、芯瑞达 002983.SZ、国林科技 300786.SZ、联合化学 301209.SZ、清研环境 301288.SZ、卡莱特 301391.SZ、哈空调 600202.SH、有研新材 600206.SH、阳光照明 600261.SH、华胜天成 600410.SH、好当家 600467.SH、海立股份 600619.SH、亚泰集团 600881.SH、全筑股份 603030.SH、江化微 603078.SH、嘉环科技 603206.SH、永新光学 603297.SH、盛剑科技 603324.SH、格林达 603931.SH、佳先股份 920489.BJ</td></tr><tr><td>2板</td><td>长虹美菱 000521.SZ、顺钠股份 000533.SZ、瀛通通讯 002861.SZ、小熊电器 002959.SZ、北投科技 600936.SH</td></tr><tr><td>3板</td><td>华东重机 002685.SZ</td></tr></tbody></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>昨日板位→今日</th><th style="text-align:right;">晋级/原样本</th><th style="text-align:right;">晋级率</th></tr></thead><tbody><tr><td>1_to_2</td><td style="text-align:right;">5/21</td><td style="text-align:right;">23.81%</td></tr><tr><td>2_to_3</td><td style="text-align:right;">1/8</td><td style="text-align:right;">12.50%</td></tr><tr><td>3_to_4</td><td style="text-align:right;">0/2</td><td style="text-align:right;">0.00%</td></tr><tr><td>4_to_5</td><td style="text-align:right;">0/1</td><td style="text-align:right;">0.00%</td></tr></tbody></table></div>
+<p>昨日二板及以上11只仅华东重机1只晋级，1/11=9.09%；不能将全部首板晋级率与连板晋级率混为一谈。昨日32只涨停今日反馈均值+0.2326%、中位数-0.4498%，均值微正不等于多数接力赚钱。</p>
+<h3 id="3-涨停跌停近跌停与大面">3. 涨停、跌停、近跌停与大面<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-涨停跌停近跌停与大面" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>涨停全名单（按官方池；首次封板/末封/开板次数/封单金额在market_panorama.json逐票保留）：<br/>
+长虹美菱(000521.SZ)、顺钠股份(000533.SZ)、双环科技(000707.SZ)、江南化工(002226.SZ)、九阳股份(002242.SZ)、摩恩电气(002451.SZ)、林州重机(002535.SZ)、西陇科学(002584.SZ)、扬子新材(002652.SZ)、华东重机(002685.SZ)、真视通(002771.SZ)、泰嘉股份(002843.SZ)、捷荣技术(002855.SZ)、瀛通通讯(002861.SZ)、东方嘉盛(002889.SZ)、中新赛克(002912.SZ)、小熊电器(002959.SZ)、芯瑞达(002983.SZ)、国林科技(300786.SZ)、联合化学(301209.SZ)、清研环境(301288.SZ)、卡莱特(301391.SZ)、哈空调(600202.SH)、有研新材(600206.SH)、阳光照明(600261.SH)、华胜天成(600410.SH)、好当家(600467.SH)、海立股份(600619.SH)、亚泰集团(600881.SH)、北投科技(600936.SH)、全筑股份(603030.SH)、江化微(603078.SH)、嘉环科技(603206.SH)、永新光学(603297.SH)、盛剑科技(603324.SH)、格林达(603931.SH)、佳先股份(920489.BJ)</p>
+<p>跌停全名单：<br/>
+华数传媒(000156.SZ)、合百集团(000417.SZ)、新能股份(000595.SZ)、湖北广电(000665.SZ)、襄阳轴承(000678.SZ)、通化金马(000766.SZ)、北京文化(000802.SZ)、岳阳兴长(000819.SZ)、中国稀土(000831.SZ)、欢瑞世纪(000892.SZ)、福星股份(000926.SZ)、青岛食品(001219.SZ)、魅视科技(001229.SZ)、立新能源(001258.SZ)、联域股份(001326.SZ)、国机精工(002046.SZ)、荣盛发展(002146.SZ)、粤 传 媒(002181.SZ)、国统股份(002205.SZ)、东方新能(002310.SZ)、慈文传媒(002343.SZ)、闽发铝业(002578.SZ)、亚玛顿(002623.SZ)、百洋股份(002696.SZ)、思美传媒(002712.SZ)、海洋王(002724.SZ)、锋龙股份(002931.SZ)、兆威机电(003021.SZ)、征和工业(003033.SZ)、惠城环保(300779.SZ)、郑州煤电(600121.SH)、返利科技(600228.SH)、中稀有色(600259.SH)、大东方(600327.SH)、统一股份(600506.SH)、山鹰国际(600567.SH)、东百集团(600693.SH)、文投控股(600715.SH)、新华传媒(600825.SH)、人民同泰(600829.SH)、广电网络(600831.SH)、上海九百(600838.SH)、宁波中百(600857.SH)、百大集团(600865.SH)、大晟文化(600892.SH)、岳阳林纸(600963.SH)、沈鼓集团(601091.SH)、九牧王(601566.SH)、浙文影业(601599.SH)、大丰实业(603081.SH)、横店影视(603103.SH)、东方材料(603110.SH)、电魂网络(603258.SH)、大业股份(603278.SH)、日盈电子(603286.SH)、杰克科技(603337.SH)、华达科技(603358.SH)、日出东方(603366.SH)、永臻股份(603381.SH)、金辰股份(603396.SH)、惠发食品(603536.SH)、东方环宇(603706.SH)、中广天择(603721.SH)、天安新材(603725.SH)、中马传动(603767.SH)、福莱新材(605488.SH)、龙版传媒(605577.SH)</p>
+<p>近跌停大面79只：定义为日跌幅≤-9%且不在官方跌停池；这是绝对跌幅筛查，创业板/科创板不代表距离其20%跌停只有1%。全部明细保留market_panorama.near_limit_down。<br/>
+翱捷科技-19.4022%、索辰科技-15.3362%、泛亚微透-14.5383%、邵阳液压-14.4263%、杭州柯林-14.1241%、凡拓数创-13.8764%、华策影视-13.3401%、*ST仕净-12.7869%、上纬新材-12.7264%、莱美药业-12.7189%、泽润新能-12.6902%、华智数媒-12.4158%、拓斯达-12.3260%、海天瑞声-12.0584%、宇树科技-11.9689%、华阳智能-11.9011%、流金科技-11.7773%、华是科技-11.2408%、力星股份-11.2251%、中青宝-11.1894%</p>
+<p>炸板全名单：<br/>
+深华发Ａ-1.6000%、冰山冷热+7.7300%、高新发展+4.6400%、国风新材+7.5500%、广百股份+5.6100%、福晶科技+5.4900%、北化股份+7.6500%、皖通科技+4.7800%、天虹股份-1.1100%、凯撒文化+6.6500%、国光股份+9.2400%、意华股份+6.8700%、金逸影视-5.8800%、怡达股份+15.5100%、仁信新材+19.1800%、波长光电+13.4200%、综艺股份+9.9400%、柏诚股份+6.8300%、百合花+2.7600%、伟测科技+14.3500%</p>
+<p>打板大面（炸板后收绿；第二列以当日最高价近似板价的回撤，不是确认成交收益）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>标的</th><th style="text-align:right;">昨收→收盘</th><th style="text-align:right;">日高→收盘</th></tr></thead><tbody><tr><td>深华发Ａ 000020.SZ</td><td style="text-align:right;">-1.6000%</td><td style="text-align:right;">-10.5489%</td></tr><tr><td>天虹股份 002419.SZ</td><td style="text-align:right;">-1.1100%</td><td style="text-align:right;">-10.1010%</td></tr><tr><td>金逸影视 002905.SZ</td><td style="text-align:right;">-5.8800%</td><td style="text-align:right;">-14.4407%</td></tr></tbody></table></div>
+<p>趋势大面筛查113只，列最差30只于market_panorama.trend_big_loss。口径为当日≤-7%、剔除跌停及上述近跌停，属于亏钱效应筛查，并未逐票证明此前处于上升趋势；不可改称趋势策略实亏。<br/>
+凯迪股份-8.9929%、德马科技-8.9448%、天龙集团-8.9165%、龙软科技-8.8459%、*ST开元-8.8235%、城市传媒-8.8040%、川网传媒-8.7919%、皮阿诺-8.7128%、奥精医疗-8.6957%、敏芯股份-8.6439%、奥普特-8.6151%、新大洲A-8.6066%、奥飞娱乐-8.5842%、风语筑-8.5509%、大千生态-8.5457%</p>
+<h3 id="4-百日新高与人气三组">4. 百日新高与人气三组<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-百日新高与人气三组" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>百日新高51只（正文/结构化主表列前40）；按5377只具有100个前序交易日K线的股票计算，196只历史不足/覆盖不足排除。历史只读kb/research.db，今日收盘来自现场MCP；不写DB。定义为今日收盘≥前100交易日最高价，未经复权因子交叉核验，不能等同完整全A策略回测。<br/>
+仁信新材 301395.SZ、北鼎股份 300824.SZ、九阳股份 002242.SZ、凯撒文化 002425.SZ、广百股份 002187.SZ、欧圣电气 301187.SZ、申能股份 600642.SH、马应龙 600993.SH、中国汽研 601965.SH、小熊电器 002959.SZ、邦基科技 603151.SH、罗莱生活 002293.SZ、中国中车 601766.SH、沪农商行 601825.SH、苏泊尔 002032.SZ、紫江企业 600210.SH、宝立食品 603170.SH、美亚光电 002690.SZ、唐山港 601000.SH、江苏银行 600919.SH、招商公路 001965.SZ、川投能源 600674.SH、浦发银行 600000.SH、好当家 600467.SH、杭州银行 600926.SH、中国移动 600941.SH、兴蓉环境 000598.SZ、云南白药 000538.SZ、伊利股份 600887.SH、苏州银行 002966.SZ、美的集团 000333.SZ、宁沪高速 600377.SH、南京银行 601009.SH、上港集团 600018.SH、冰山冷热 000530.SZ、中国银行 601988.SH、长江电力 600900.SH、新奥股份 600803.SH、长沙银行 601577.SH、一心堂 002727.SZ</p>
+<p>人气输入attention_signals正文日期20261116，是盘前滞后源。dc_hot与ths_hot当前日多次返回空；窄Web检索只有盘面文章，不能替代完整收盘榜。以下是昨日人气样本的今日表现，不冒充今日榜单：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>持续人气前10背景样本</th><th style="text-align:right;">今日涨跌</th></tr></thead><tbody><tr><td>亨通光电 600487.SH</td><td style="text-align:right;">-1.9735%</td></tr><tr><td>中际旭创 300308.SZ</td><td style="text-align:right;">-3.9049%</td></tr><tr><td>兆易创新 603986.SH</td><td style="text-align:right;">-3.8796%</td></tr><tr><td>京东方Ａ 000725.SZ</td><td style="text-align:right;">+2.6316%</td></tr><tr><td>中国巨石 600176.SH</td><td style="text-align:right;">+0.5010%</td></tr><tr><td>东山精密 002384.SZ</td><td style="text-align:right;">-5.4919%</td></tr><tr><td>有研新材 600206.SH</td><td style="text-align:right;">+10.0140%</td></tr><tr><td>太极实业 600667.SH</td><td style="text-align:right;">+2.2901%</td></tr><tr><td>华天科技 002185.SZ</td><td style="text-align:right;">+1.2894%</td></tr><tr><td>风华高科 000636.SZ</td><td style="text-align:right;">-1.3958%</td></tr></tbody></table></div>
+<p>昨日人气前10今日表现：文投控股-9.8930%、中际旭创-3.9049%、九阳股份+10.0175%、吉视传媒-6.7568%、凯撒文化+6.6514%、东山精密-5.4919%、龙江交通+0.2114%、北纬科技-7.3143%、共进股份+0.6118%、广百股份+5.6063%</p>
+<p>昨日surge跳升组今日表现（23只全部在JSON）：凯撒文化+6.6514%、龙江交通+0.2114%、共进股份+0.6118%、广百股份+5.6063%、新能股份-10.0329%、长鑫科技-5.6077%、工业富联-0.8835%、工商银行+0.1105%、慈文传媒-9.9802%、世龙实业-4.1820%、岳阳兴长-10.0000%、大晟文化-10.0000%、宇树科技-W-11.9689%、兆易创新-3.8796%、华帝股份+2.7778%、北巴传媒-6.8241%、小熊电器+10.0083%、长虹美菱+9.9768%、北鼎股份+16.0465%、鹏飞绿能-1.9841%、丸美生物+2.7684%、许继电气-0.3436%、江苏有线-8.0000%</p>
+<p>今日榜top10与昨日排名迁移、今日首次进榜组均unavailable，不把旧surge当今日新进。长期在榜频次输入出现190天等值，与backfill_days标签需进一步核口径，本轮只作背景。</p>
+<h2 id="二原预判逐条验证与执行池">二、原预判逐条验证与执行池<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二原预判逐条验证与执行池" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-开盘预判命中率">1. 开盘预判命中率<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-开盘预判命中率" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原计划逐票显式数值预期为expected_open_band，共22条，命中9/22=40.91%。分母是这22条原始开盘带，不是只挑执行池、不是T0上涨率、更不是交易胜率。20只watch的expected_direction全部缺失，不能自行补up再统计。所有条件入场/退出规则均在E1_data.prediction_review.plan_hypothesis_review逐条回顾，条件规则不混充无条件方向预测。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>标的</th><th style="text-align:right;">原开盘带</th><th style="text-align:right;">实际开盘</th><th>结果</th></tr></thead><tbody><tr><td>吉视传媒 601929.SH</td><td style="text-align:right;">[2.93, 3.05]</td><td style="text-align:right;">2.91</td><td>证伪</td></tr><tr><td>长虹美菱 000521.SZ</td><td style="text-align:right;">[4.27, 4.44]</td><td style="text-align:right;">4.4</td><td>命中</td></tr><tr><td>华数传媒 000156.SZ</td><td style="text-align:right;">[8.41, 8.71]</td><td style="text-align:right;">8.36</td><td>证伪</td></tr><tr><td>华帝股份 002035.SZ</td><td style="text-align:right;">[4.61, 4.77]</td><td style="text-align:right;">4.73</td><td>命中</td></tr><tr><td>小熊电器 002959.SZ</td><td style="text-align:right;">[35.73, 37.0]</td><td style="text-align:right;">37.33</td><td>证伪</td></tr><tr><td>北鼎股份 300824.SZ</td><td style="text-align:right;">[8.45, 8.81]</td><td style="text-align:right;">8.52</td><td>命中</td></tr><tr><td>广百股份 002187.SZ</td><td style="text-align:right;">[7.55, 7.82]</td><td style="text-align:right;">8.43</td><td>证伪</td></tr><tr><td>天虹股份 002419.SZ</td><td style="text-align:right;">[5.32, 5.51]</td><td style="text-align:right;">5.64</td><td>证伪</td></tr><tr><td>鹏飞绿能 002356.SZ</td><td style="text-align:right;">[2.48, 2.57]</td><td style="text-align:right;">2.41</td><td>证伪</td></tr><tr><td>北纬科技 002148.SZ</td><td style="text-align:right;">[8.62, 8.93]</td><td style="text-align:right;">8.58</td><td>证伪</td></tr><tr><td>凯撒文化 002425.SZ</td><td style="text-align:right;">[4.29, 4.45]</td><td style="text-align:right;">4.11</td><td>证伪</td></tr><tr><td>金逸影视 002905.SZ</td><td style="text-align:right;">[10.73, 11.11]</td><td style="text-align:right;">11.3</td><td>证伪</td></tr><tr><td>紫竹高科 002058.SZ</td><td style="text-align:right;">[22.06, 22.85]</td><td style="text-align:right;">22.4</td><td>命中</td></tr><tr><td>领湃科技 300530.SZ</td><td style="text-align:right;">[27.33, 28.5]</td><td style="text-align:right;">28.94</td><td>证伪</td></tr><tr><td>世龙实业 002748.SZ</td><td style="text-align:right;">[13.43, 13.9]</td><td style="text-align:right;">13.52</td><td>命中</td></tr><tr><td>龙江交通 601188.SH</td><td style="text-align:right;">[4.66, 4.82]</td><td style="text-align:right;">4.69</td><td>命中</td></tr><tr><td>顺钠股份 000533.SZ</td><td style="text-align:right;">[9.67, 10.02]</td><td style="text-align:right;">10.4</td><td>证伪</td></tr><tr><td>光启技术 002625.SZ</td><td style="text-align:right;">[17.86, 18.49]</td><td style="text-align:right;">19.1</td><td>证伪</td></tr><tr><td>福龙马 603686.SH</td><td style="text-align:right;">[13.84, 14.33]</td><td style="text-align:right;">13.91</td><td>命中</td></tr><tr><td>朗特智能 300916.SZ</td><td style="text-align:right;">[31.01, 32.34]</td><td style="text-align:right;">33.26</td><td>证伪</td></tr><tr><td>海思科 002653.SZ</td><td style="text-align:right;">[54.73, 56.67]</td><td style="text-align:right;">55.49</td><td>命中</td></tr><tr><td>金新农 002548.SZ</td><td style="text-align:right;">[4.15, 4.29]</td><td style="text-align:right;">4.21</td><td>命中</td></tr></tbody></table></div>
+<p>13条证伪统一归因为逻辑校准不足：原基准带对首板拥挤、旧高位兑现和不同波动率缺少独立校准。逐票原带/实际值与归因已保留，不因后来上涨改判，也不将13条误差都算成交易亏损。</p>
+<h3 id="2-执行池不是账户成交池">2. 执行池不是账户成交池<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-执行池不是账户成交池" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>标的</th><th style="text-align:right;">条件建议仓位</th><th style="text-align:right;">授权仓位</th><th>买区/确认</th><th style="text-align:right;">当日涨跌</th><th>实际成交/收益</th></tr></thead><tbody><tr><td>吉视传媒 601929.SH</td><td style="text-align:right;">4.5%</td><td style="text-align:right;">0%</td><td>[3.01, 3.08] / 3.03</td><td style="text-align:right;">-6.7568%</td><td>unavailable</td></tr><tr><td>长虹美菱 000521.SZ</td><td style="text-align:right;">3.5%</td><td style="text-align:right;">0%</td><td>[4.35, 4.44] / 4.41</td><td style="text-align:right;">+9.9768%</td><td>unavailable</td></tr></tbody></table></div>
+<p>执行池等权昨收→今收价差+1.6100%，仅作计划池mark-return对照；未知实际持仓不能填0。当前连接发现没有QMT，未切换连接，未下单。</p>
+<p>吉视传媒：开2.91不在预期2.93—3.05，早盘先跌至2.66。现场Tushare一分钟线显示10:51由2.92拉至3.07、收3.06，10:52最高3.10却回落收2.90；10:54再冲3.04，最终收2.76。突破3.03确曾发生，但发生在板块已走弱的背景，且未守住。盘中新闻09:33已有传媒下挫，行业收盘-8.13%；不能拿日高3.10认证完整买点，也不能当日按2.93止损卖出新增仓。候选延续失败归因逻辑：昨日先封/五日净入被当成今日承接的先验，反包不等于主升。</p>
+<p>长虹美菱：日开4.40、低4.38、高收4.74。现场一分钟线09:30为4.40/4.50/4.38/4.49，09:31低4.44，09:32最低4.49，09:33封至4.74。确认4.41与买区上沿4.44之间仅很短价格窗口；分钟OHLC不能证明同分钟板块和个股资金条件均成立，更不证明已成交。收盘强是选题结果支持，不是自动买权或已实现利润。</p>
+<p>Plan B三项逐条回顾：家电替代广电的候选就是原长虹，不重复计仓；紫竹最高23.63未到24.60确认，价格条件未成；福龙马最高14.05未到14.50，价格条件未成。A失效不自动授权B。原reject两票冰山冷热+7.7273%、文投控股-9.8930%；财务硬否决与短线方向分账，不因冰山上涨删除真实风险。</p>
+<p>P1/P2均timeout_no_amendment、0有效动作，修订准确率unavailable；不得写“修订判断正确”。P1确因超过09:29截止失败，生成于09:29:54；P2则是22票上午有效报价0/22、R7午间增量缺失的数据不足fallback，不是实际运行超时。不能只按状态名称混淆失败原因。</p>
+<h2 id="三前五交易日开仓生命周期含今日扩展六日">三、前五交易日开仓生命周期（含今日，扩展六日）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三前五交易日开仓生命周期含今日扩展六日" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>已完整读取20261110、11、12、13、16、17盘前预案md及JSON，覆盖前五交易日加今日。原引擎通过只读内存调用build_rolling，日历传现场trade_cal结果，不调用会写runtime日历缓存的主入口、不写DB/raw。诊断7条开仓中有锋龙两日全天高于买区、掌阅/东山突破变开盘低吸、吉视低于确认价开仓；原输出已明确rejected_for_business_use，不作为账户盈亏。</p>
+<h3 id="1-已实现">1. 已实现<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-已实现" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>真实已实现收益unavailable：无成交ID/时刻/可卖量。严格价格反事实只有三条历史候选可能触及原买区，且复合条件和时窗未证，不创建正式成本或持仓：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>原计划日/标的</th><th style="text-align:right;">价格可行区间</th><th>仅价格反事实结果（非真实成交）</th></tr></thead><tbody><tr><td>11-10 宇树科技</td><td style="text-align:right;">759.99—771.39</td><td>最早T+1才判离场；11-12触709.68风险位，区间-6.62%至-8.00%</td></tr><tr><td>11-11 掌阅科技</td><td style="text-align:right;">32.91—33.33</td><td>11-12开30.80跳过31.73风险位，区间-6.41%至-7.59%；跳空额外-2.79至-2.82pp，不是跌停封死</td></tr><tr><td>11-12 东山精密</td><td style="text-align:right;">93.13—93.44</td><td>11-13价格路径触88.77，区间-4.68%至-5.00%；同窗资金/时刻未核</td></tr><tr><td>11-11 锋龙股份</td><td style="text-align:right;">原48.01—48.97</td><td>全日低51.51，未开仓价格条件</td></tr><tr><td>11-12 锋龙股份</td><td style="text-align:right;">原52.81—53.88</td><td>全日低56.00，未开仓价格条件</td></tr></tbody></table></div>
+<p>以上保留原半仓止盈比例，未把触及目标自动算全平；不将无买权候选计为真实持仓。</p>
+<h3 id="2-持仓中">2. 持仓中<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-持仓中" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>实际持仓unavailable。今日吉视/长虹仅为条件价格场景；若纯假设原确认以上买区成交，收盘mark区间如下，仍不是已实现：</p>
+<ul>
+<li>吉视传媒：假设价格区间[3.03, 3.08]，收盘mark范围[-8.9109, -10.3896]%；今日新增仓无T+1卖出窗口。</li>
+<li>长虹美菱：假设价格区间[4.41, 4.44]，收盘mark范围[7.483, 6.7568]%；今日新增仓无T+1卖出窗口。</li>
+</ul>
+<h3 id="3-卖不出去与多亏pp">3. 卖不出去与多亏pp<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-卖不出去与多亏pp" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>确认持仓/委托不明，实际跌停封死笔数、阻塞天数、多亏pp均unavailable，不能补零。今日新仓“无卖出窗口”是T+1法律限制，不能写成“跌停封死”。历史掌阅反事实额外亏损来自跳空越过风险位，不可冒称卖不出去天数。价格模型close=low=跌停价只反映收盘流动性保守代理，日K无法证明全天所有时刻都不能卖。</p>
+<p>原skill要求chzl_kg/投研交易/持仓复盘/rolling/20261117.{json,md}，但Owner白名单不含该目录。本轮未越权，等价证据在data/reports/20261117/position_lifecycle_rolling.{json,md}；路径契约冲突与缺入场证明均记data_health降级，不能报原路径完成。</p>
+<h2 id="四观察池全量与跨天追踪">四、观察池全量与跨天追踪<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#四观察池全量与跨天追踪" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>标的</th><th>方向/原因码</th><th style="text-align:right;">今日涨跌</th><th>同日信息归因边界</th></tr></thead><tbody><tr><td>华数传媒 000156.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">-9.9532%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>华帝股份 002035.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">+2.7778%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>小熊电器 002959.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">+10.0083%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>北鼎股份 300824.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">+16.0465%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>广百股份 002187.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">+5.6063%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>天虹股份 002419.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">-1.1111%</td><td>检索未见直接个股新闻，不能断言纯资金</td></tr><tr><td>鹏飞绿能 002356.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">-1.9841%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>北纬科技 002148.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">-7.3143%</td><td>检索未见直接个股新闻，不能断言纯资金</td></tr><tr><td>凯撒文化 002425.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">+6.6514%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>金逸影视 002905.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">-5.8770%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>紫竹高科 002058.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">+4.2411%</td><td>检索未见直接个股新闻，不能断言纯资金</td></tr><tr><td>领湃科技 300530.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">-3.1980%</td><td>检索未见直接个股新闻，不能断言纯资金</td></tr><tr><td>世龙实业 002748.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">-4.1820%</td><td>检索未见直接个股新闻，不能断言纯资金</td></tr><tr><td>龙江交通 601188.SH</td><td>unavailable / unavailable</td><td style="text-align:right;">+0.2114%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>顺钠股份 000533.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">+9.9796%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>光启技术 002625.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">+0.3861%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>福龙马 603686.SH</td><td>unavailable / unavailable</td><td style="text-align:right;">-8.0427%</td><td>检索未见直接个股新闻，不能断言纯资金</td></tr><tr><td>朗特智能 300916.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">-4.2115%</td><td>有同日相关报道，非因果证明</td></tr><tr><td>海思科 002653.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">-2.8078%</td><td>检索未见直接个股新闻，不能断言纯资金</td></tr><tr><td>金新农 002548.SZ</td><td>unavailable / unavailable</td><td style="text-align:right;">-6.8884%</td><td>检索未见直接个股新闻，不能断言纯资金</td></tr></tbody></table></div>
+<p>20/20行情齐，20/20原方向缺失，20/20原因码缺失。watch_reason_code分组只能得到unavailable组20只，均值+0.0169%；evaluable=0、兑现率null，不能按涨跌补方向。观察池数量达到20，不触发“少于20”警示，但契约仍不合格。</p>
+<p>missed_alpha = 观察池等权+0.01692% − 执行池预案等权+1.61000% = -1.59308个百分点。simulated=true，均以昨日收盘为起点，仅比较两池选股mark表现。实际账户missed_alpha不可用；不把这数说成用户少赚/多亏的钱。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>追踪窗口</th><th>源交易日</th><th style="text-align:right;">报价覆盖</th><th style="text-align:right;">累计等权价差</th><th style="text-align:right;">原方向可核</th></tr></thead><tbody><tr><td>T+1</td><td>20261116</td><td style="text-align:right;">15/15</td><td style="text-align:right;">-3.7861%</td><td style="text-align:right;">0</td></tr><tr><td>T+5</td><td>20261110</td><td style="text-align:right;">11/11</td><td style="text-align:right;">-13.8552%</td><td style="text-align:right;">0</td></tr><tr><td>T+20</td><td>20261020</td><td style="text-align:right;">26/26</td><td style="text-align:right;">-14.8575%</td><td style="text-align:right;">26</td></tr></tbody></table></div>
+<p>跨天日期来自现场SSE trade_cal，不用自然日前推。T+1源20261116共15只，T+5源20261110共11只，均缺原方向，不能算兑现率。T+20源20261020有26只旧方向，按子skill简化阈值12/26=46.15%，但历史基准未交叉核复权，收益属于未复权价差研究代理，复权/分红可影响长期统计，严谨策略胜率仍不成立。全部缺行均显式保留，未静默删票。</p>
+<h2 id="五盘中新闻龙虎榜与资金">五、盘中新闻、龙虎榜与资金<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五盘中新闻龙虎榜与资金" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-真实回拉及时间因果">1. 真实回拉及时间因果<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-真实回拉及时间因果" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>xtick_hot_news回拉3864条快照，按09:15—17:30过滤并以平台/ID/标题去重保留2703条；execution_pool桶9条、watch_pool桶49条、广电51条、家电43条、零售87条、芯片光刻201条。逐条timestamp/codes/platform/title/url及全窗原文在intraday_news.json；不同桶可能重叠，不累加为新闻总数。</p>
+<p>首次YYYYMMDD传参收到code=-1、日期解析错误；查schema后使用YYYY-MM-DD成功，原错误保留。不是“无新闻”。盘后新闻不能倒推解释早盘先发生的价格，也不拿11:30的3500家上涨当收盘广度。</p>
+<ul>
+<li>2026-11-17T09:32:45+08:00 同花顺-快讯：文化传媒板块短线下挫，龙版传媒触及跌停；<a href="https://news.10jqka.com.cn/20261117/c681887734.shtml" class="external external-link">https://news.10jqka.com.cn/20261117/c681887734.shtml<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>2026-11-17T09:33:00+08:00 新浪财经-快讯：【文化传媒板块短线下挫，龙版传媒触及跌停】文化传媒板块短线下挫，龙版传媒触及跌停，湖北广电、三人行、华数传媒、无线传媒跟跌。；unavailable_source_url</li>
+<li>2026-11-17T09:38:45+08:00 新浪财经-快讯：【家电板块反复活跃 长虹美菱2连板】家电板块反复活跃，长虹美菱2连板，小熊电器触及涨停，华帝股份、海尔智家、北鼎股份、美的集团跟涨。；unavailable_source_url</li>
+<li>2026-11-17T09:39:25+08:00 东方财富-快讯：家电板块反复活跃 长虹美菱2连板；<a href="https://finance.eastmoney.com/a/202611173932687969.html" class="external external-link">https://finance.eastmoney.com/a/202611173932687969.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>2026-11-17T10:04:08+08:00 同花顺-快讯：金逸影视上演“天地板”；<a href="https://news.10jqka.com.cn/20261117/c681889215.shtml" class="external external-link">https://news.10jqka.com.cn/20261117/c681889215.shtml<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>2026-11-17T10:04:16+08:00 新浪财经-快讯：【金逸影视上演“天地板”】金逸影视盘中跌停，上演“天地板”，现报9.80元，成交额3.81亿元。；<a href="https://finance.sina.cn/7x24/2026-11-17/detail-iniyyzyp7767526.d.html" class="external external-link">https://finance.sina.cn/7x24/2026-11-17/detail-iniyyzyp7767526.d.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>2026-11-17T10:40:04+08:00 新浪财经-快讯：【主力资金：长鑫科技净卖出超7亿】截至目前，今日主力资金净流出132.54亿；净流入半导体产业、大基金二期、先进封装等板块，其中半导体产业板块净流入18.33亿；净流出转融券标的、融资融券、深股通等板块，其中转融券标的板块净流出119.70亿。</li>
+</ul>
+<p>个股方面，有研新材净买入11.73亿元位居首位，华胜天成、寒武纪、中芯国际主力资金净流入居前；长鑫科技净卖出7.89亿元位居首位，中际旭创、吉视传媒、澜起科技净流出额居前。；<a href="https://finance.sina.cn/7x24/2026-11-17/detail-iniyyzyp2347683.d.html" class="external external-link">https://finance.sina.cn/7x24/2026-11-17/detail-iniyyzyp2347683.d.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>2026-11-17T11:32:04+08:00 凤凰网-快讯：【午评：科创50指数半日涨超3% 芯片产业链集体反弹】财联社11月17日电，市场震荡回升，深成指、创业板指翻红，科创50指数涨超3%，此前一度跌超1%。沪深两市半日成交额8946亿，较上个交易日缩量59亿。全市场超3500只个股上涨。盘面上，芯片产业链早盘异动拉升，东方嘉盛、怡达股份、综艺股份、西陇科学、国林科技、联合化学、有研新材涨停；华为算力概念表现活跃，华胜天成3天2板，真视通、嘉环科技涨停；家电板块反复活跃，长虹美菱、小熊电器走；unavailable_source_url</li>
+</ul>
+<p>吉视下跌有同日行业走弱及席位卖出证据，但未找到直接个股新增利空，不能把财务旧风险写成当天突然黑天鹅。长虹受家电接力报道支持，仍是资金与价格共振的相关性，非已证明单一催化。</p>
+<h3 id="2-全市场龙虎榜">2. 全市场龙虎榜<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-全市场龙虎榜" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>已拉xtick全市场榜、93份席位原因快照及Tushare top_list/top_inst交叉核验。A股74只，另有汇丽B为非A股不纳入A股汇总；按ts_code组织完整明细。执行池命中2只，观察池命中8只。多上榜原因去重，单日榜与三日累计榜分列；无法用三日净买证明今日净买。部分上海席位Tushare字段为null，保留缺口并用XTick原买卖前五明细，不私补0。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>单日净买前10</th><th style="text-align:right;">净额（亿元）</th></tr></thead><tbody><tr><td>有研新材 600206.SH</td><td style="text-align:right;">+2.6199</td></tr><tr><td>阳光照明 600261.SH</td><td style="text-align:right;">+2.0651</td></tr><tr><td>锋龙股份 002931.SZ</td><td style="text-align:right;">+1.9782</td></tr><tr><td>九阳股份 002242.SZ</td><td style="text-align:right;">+1.8351</td></tr><tr><td>凡拓数创 301313.SZ</td><td style="text-align:right;">+1.4987</td></tr><tr><td>泰嘉股份 002843.SZ</td><td style="text-align:right;">+1.0282</td></tr><tr><td>凯撒文化 002425.SZ</td><td style="text-align:right;">+0.9978</td></tr><tr><td>国林科技 300786.SZ</td><td style="text-align:right;">+0.9812</td></tr><tr><td>索辰科技 688507.SH</td><td style="text-align:right;">+0.9417</td></tr><tr><td>江南化工 002226.SZ</td><td style="text-align:right;">+0.8814</td></tr></tbody></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>单日净卖前10</th><th style="text-align:right;">净额（亿元）</th></tr></thead><tbody><tr><td>翱捷科技 688220.SH</td><td style="text-align:right;">-3.5538</td></tr><tr><td>吉视传媒 601929.SH</td><td style="text-align:right;">-2.4725</td></tr><tr><td>龙江交通 601188.SH</td><td style="text-align:right;">-1.4150</td></tr><tr><td>托伦斯 301583.SZ</td><td style="text-align:right;">-1.1802</td></tr><tr><td>贝特利 301697.SZ</td><td style="text-align:right;">-1.1622</td></tr><tr><td>文投控股 600715.SH</td><td style="text-align:right;">-1.0635</td></tr><tr><td>晶华新材 603683.SH</td><td style="text-align:right;">-0.9440</td></tr><tr><td>顺钠股份 000533.SZ</td><td style="text-align:right;">-0.7715</td></tr><tr><td>东方新能 002310.SZ</td><td style="text-align:right;">-0.7127</td></tr><tr><td>金逸影视 002905.SZ</td><td style="text-align:right;">-0.5714</td></tr></tbody></table></div>
+<p>长虹仅三日累计榜净买8649.09万元，不能标为今日单日净流入；国泰海通南京太平南路三日净买约3304.75万元、开源西安西大街约2558.07万元（Tushare席位原名/金额并列）。本轮不将营业部未经核实映射成某位游资。吉视单日净卖约2.47247亿元，与收盘失守一致；锋龙跌停但单日净买约1.97825亿元，说明净买不保证当日上涨或次日承接，不能据席位净买抹去跌停风险。</p>
+<p>行业资金：半导体+29.63亿、设备+19.05亿、材料+18.83亿；层级嵌套不能加总成三个独立增量。家电+6.53亿、一般零售-6.69亿、电视广播-8.72亿。这里是盘后资金，不回填盘中入场条件；北向无可验证净额，不补0或neutral。</p>
+<h2 id="六板块三问与r1r2r4r7核验">六、板块三问与R1/R2/R4/R7核验<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#六板块三问与r1r2r4r7核验" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>该纳入没纳入：芯片/光刻。收盘有研、国林、联合化学等真实涨停，半导体及设备/材料资金靠前，原计划主线仍是广电/家电/零售。主要错在按昨日局部强线续写，以及海外AI硬件利空没有与国产设备/材料超跌回流拆分；有效P1/P2均缺。不是证明盘前一定可预知、也不把事后涨幅全算错失成本。</p>
+<p>纳入却差：广电。吉视-6.7568%、华数跌停，行业-8.13%；“昨日先封且5日流入→今日更有承接”不能独立成立。两票差异有先封/后封的相对信息，但共同板块退潮比相对排序重要。昨日局部广电+6.79亿元不等于今日继续流入。</p>
+<p>做对：家电。长虹、小熊二板，北鼎+16.0465%说明昨天四首板扩散确有接力。原计划优先家电先锋有市场支持；但行业整体-0.23%，不是全线修复，九阳地天板与北鼎弹性说明核心比较不能固化为昨日首封顺序。</p>
+<p>R1震荡分化/不全面修复获广度、尾部与晋级率支持，但25%研究仓位建议是否最优没有反事实证明。R2三线均写“分歧”，该词过宽，不能行情不论涨跌都认证命中；实际为广电弱、家电局部强、零售多数弱但广百盘中冲高。R7市场收缩背景正确，原广电局部资金延续失败，板块轮动必须重新取证。</p>
+<p>R4共27个原事件逐条映射价格反馈于sector_postmortem.r4_review；事实真假、利润兑现、单日价格响应分别统计，不将披露为真的事件算作盈利预判命中。重点：顺钠回购后+9.9796%符合催化相关性，但单日龙虎榜净卖约0.7715亿、三日榜净买相反；光启硬合同只涨0.3861%，不能订单金额直接推涨幅；福龙马预售后-8.0427%，朗特并购后-4.2115%，海思科医保后-2.8078%，说明新故事不等于当日接力。海外AI链负面与国产芯片反弹可同时存在。</p>
+<h2 id="七昨日r6preferences与八项纪律">七、昨日R6、preferences与八项纪律<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#七昨日r6preferences与八项纪律" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>昨日R6反证17条均逐条保留原假设、有效期、今日行情及验证边界。财务/法律论证不能仅凭一日跌涨判真假；原11月16交易窗口已经结束，也不能无限继承为11月17禁令。</p>
+<p>昨日hard_reject只有通化金马：今日最高14.50低于前收14.85、收13.37（-9.9663%），在“全日最高不及前收”的保守充分条件下未向上启动，1/1=100%。这是拒绝后价格未启动统计，绝非财务红旗真伪的命中率。今日R6冰山上涨与文投下跌另列，不回改昨日分母。</p>
+<p>preferences：观察数量20达到最小20；逐票方向/九类原因码覆盖0/20，兑现率无法计算。执行候选均为原定性先锋，无实际成交不能认证leader偏好收益最优、非主线浮亏>5%换仓规则被执行。active thesis目录无md，故无thesis兑现可算。当前preferences取消固定仓位百分比与SOUL仍要求扫单票≥30%的审计条件并存，只披露，不改任何规则。</p>
+<p>八项纪律逐条扫描结果：模式外、09:30后临时非计划挂单、中位杂毛、退潮开仓、14:30后投机点火、单票≥30%、同日连续加仓>2、不执行止损，全部unavailable（无真实events/orders/positions_state）；不能“未发现证据”写成“0次违规”。以下系统错题不计入真实交易违规。</p>
+<h2 id="八错题本与反馈是否落地">八、错题本与反馈是否落地<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#八错题本与反馈是否落地" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>最近三周错题已比对，6条均复发；4条可证生产契约/引擎或本轮E1权限防范仍未落实，2条责任/落实情况未知。D1 meta.corrections_applied原文是“未授权读错题目录；内嵌review_feedback为空，不能宣称已读无错题。”这暴露反馈交接断点，不证明D1主观无视建议；第6条权限事故明确由本轮E1承担。</p>
+<h3 id="error_case_20261117_001数据契约观察池规模与枚举">error_case_20261117_001：数据契约/观察池规模与枚举<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#error_case_20261117_001数据契约观察池规模与枚举" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>20只观察均缺expected_direction及watch_reason_code；数量达20但方向兑现仍无法计算。<br/>
+归因：信息；前例：error_case_20261116_001；复发=true；纠正未落实=True（只就可观测契约，不定性主观）。<br/>
+下次可测规则：发布时输出watch_count/valid_direction_count/valid_reason_count，后两者必须等于watch_count；缺失保持null，不能E1补up。</p>
+<h3 id="error_case_20261117_002预案执行p1断档">error_case_20261117_002：预案执行/P1断档<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#error_case_20261117_002预案执行p1断档" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>P1/P2均timeout_no_amendment，不能以零动作认证正确；今日午间芯片反弹与广电下跌未进入有效修订。<br/>
+归因：执行；前例：error_case_20261116_002；复发=true；纠正未落实=True（只就可观测契约，不定性主观）。<br/>
+下次可测规则：P1以09:29前有效回执计交付，P2保存上午逐票source_time与动作版本；零动作准确率必须null。</p>
+<h3 id="error_case_20261117_003复盘数据事故解析器串票与虚拟成交">error_case_20261117_003：复盘数据事故/解析器串票与虚拟成交<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#error_case_20261117_003复盘数据事故解析器串票与虚拟成交" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>只读调用原引擎得到7笔模拟开仓；锋龙两笔全日高于原买区，吉视开盘2.91低于3.03确认，均不能接受为原突破成交。<br/>
+归因：逻辑；前例：error_case_20261116_003；复发=true；纠正未落实=True（只就可观测契约，不定性主观）。<br/>
+下次可测规则：逐笔校原MD/JSON、trigger/zone/window/授权/真实fill；无复合条件仅保留价格反事实；新增仓卖出日严格大于入场交易日。</p>
+<h3 id="error_case_20261117_004竞价预期基准带偏差">error_case_20261117_004：竞价预期/基准带偏差<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#error_case_20261117_004竞价预期基准带偏差" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>原22条开盘基准带仅9条覆盖；13条证伪，不因股票后来上涨抹去开盘预判错误。<br/>
+归因：逻辑；前例：error_case_20261116_004；复发=true；纠正未落实=None（只就可观测契约，不定性主观）。<br/>
+下次可测规则：按原band/open逐条保留误差；至少20个同身位历史样本评估覆盖率，区分基准预测失败与不追价保护，不回改原band。</p>
+<h3 id="error_case_20261117_005主线识别盘中覆盖与动态修复">error_case_20261117_005：主线识别/盘中覆盖与动态修复<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#error_case_20261117_005主线识别盘中覆盖与动态修复" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>家电局部判断对，广电延续选择失败；芯片/光刻链资金与涨停簇未覆盖；有效盘中重评断档。<br/>
+归因：逻辑；前例：error_case_20261116_005；复发=true；纠正未落实=None（只就可观测契约，不定性主观）。<br/>
+下次可测规则：盘中复核必须输出涨停主题与资金TOP5覆盖交集；负面传导按实际子行业拆分，候选突破必须同时有同板承接，不能沿昨日先封身份机械排序。</p>
+<h2 id="九公开参考采纳与分歧">九、公开参考采纳与分歧<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#九公开参考采纳与分歧" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>前置自纠error_case_20261117_006（复盘权限/预检副作用）：对应前例error_case_20261113_005，本轮复发且未落实=true，归因执行。run_daily_review_prep —dry-run只禁最终四件套写入；build_market_panorama仍在缺失指标时调用compute_and_write，于18:04:56改写三份研究文件，其中mainline_lifecycle的lines变成空列表。这不是账户交易违规，但确实违反Owner写边界。下次可测规则是执行任何prep前追踪全部可达write_text/compute_and_write，出现research/raw/runtime/DB写路径即不用该主函数；只消费已审计纯读取入口。没有写前逐文件哈希，本轮不猜原文件字节、不擅自恢复；需父主控及研究Owner审阅影响与恢复候选。事故证据：data/reports/20261117/ownership_incident.json。</p>
+<p>本轮预检返回的external_market_reference已原样嵌入E1_data，抓取时点2026-11-17T18:04:56+08:00；另18:12:12的external-reference-only纯读取入口再次核到同业务日收盘页。预检整体并非只读，副作用已在权限事故单列。实际使用固定日期页：<a href="https://lianban.net/days/2026-11-17.html%EF%BC%9B%E6%AD%A3%E6%96%87%E4%B8%9A%E5%8A%A1%E6%97%A520261117%E3%80%81%E6%AF%8F%E6%97%A5%E9%A1%B5%E6%A0%87%E8%AF%86%E6%94%B6%E7%9B%98%EF%BC%8C%E5%8C%BF%E5%90%8D%E5%85%AC%E5%BC%80%E9%83%A8%E5%88%86%E4%B8%8D%E7%AD%89%E4%BA%8E%E4%BC%9A%E5%91%98%E5%AE%8C%E6%95%B4%E5%86%85%E5%AE%B9%E3%80%82" class="external external-link">https://lianban.net/days/2026-11-17.html；正文业务日20261117、每日页标识收盘，匿名公开部分不等于会员完整内容。<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>采纳：37涨停/67跌停/最高3板、1326/4119与独立MCP一致；芯片光刻和家电局部强有本轮新闻/资金/行情交叉支持。分歧：公开页称广百“4天4板”，而MCP收8.10、+5.6063%，涨停价8.44未封，官方最高3板。判为盘中标签残留，拒绝照抄其唯一总龙和完整接力结论。温度15.9度与盘前high_chop是口径差异，不映射固定仓位。其同景次日上证50%不是我们的选票/交易胜率。</p>
+<h2 id="十给明日的提示仅交接不是预案">十、给明日的提示（仅交接，不是预案）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#十给明日的提示仅交接不是预案" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>由plan owner用新证据比较芯片/光刻与家电的延续、广电的反向修复或继续失效；本报告不选股、不定仓、不设新委托。</li>
+<li>先补方向/原因枚举和修订回执、真实成交链，再谈研究兑现或仓位优劣；辅助源缺失不独立触发全局禁新或清池。</li>
+<li>长虹今日浮强不代表明日可兑现；吉视即使盘中冲回确认位，也须同分钟板块/个股资金及合法买权，新增仓不能靠T0止损“快切”。</li>
+</ol>
+<p>人工入口（不是本轮机器数据日证明）：<br/>
+<a href="https://lianban.net/today.html" class="external external-link">https://lianban.net/today.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+<a href="https://lianban.net/mainline.html" class="external external-link">https://lianban.net/mainline.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="交付与验收声明">交付与验收声明<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#交付与验收声明" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>E1_data.json、observation_tracking.json、dragon_tiger.json、intraday_news.json已落正式reports；本报告与KG副本逐字一致验SHA256。整体partial，不以体积或文件存在假报业务complete。runtime镜像留父主控验收后执行，本Owner不写runtime。独立精确路径/JSON递归检查及项目检查器实际结果见delivery_validation.json。</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-568" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#2026-11-17-每日复盘家电局部接力成立广电延续失败芯片轮动漏看" data-for="2026-11-17-每日复盘家电局部接力成立广电延续失败芯片轮动漏看">2026-11-17 每日复盘：家电局部接力成立，广电延续失败，芯片轮动漏看</a></li><li class="depth-1"><a href="#结论与数据边界" data-for="结论与数据边界">结论与数据边界</a></li><li class="depth-1"><a href="#一全市场收盘全景" data-for="一全市场收盘全景">一、全市场收盘全景</a></li><li class="depth-2"><a href="#1-指数与广度" data-for="1-指数与广度">1. 指数与广度</a></li><li class="depth-2"><a href="#2-梯队与真实晋级" data-for="2-梯队与真实晋级">2. 梯队与真实晋级</a></li><li class="depth-2"><a href="#3-涨停跌停近跌停与大面" data-for="3-涨停跌停近跌停与大面">3. 涨停、跌停、近跌停与大面</a></li><li class="depth-2"><a href="#4-百日新高与人气三组" data-for="4-百日新高与人气三组">4. 百日新高与人气三组</a></li><li class="depth-1"><a href="#二原预判逐条验证与执行池" data-for="二原预判逐条验证与执行池">二、原预判逐条验证与执行池</a></li><li class="depth-2"><a href="#1-开盘预判命中率" data-for="1-开盘预判命中率">1. 开盘预判命中率</a></li><li class="depth-2"><a href="#2-执行池不是账户成交池" data-for="2-执行池不是账户成交池">2. 执行池不是账户成交池</a></li><li class="depth-1"><a href="#三前五交易日开仓生命周期含今日扩展六日" data-for="三前五交易日开仓生命周期含今日扩展六日">三、前五交易日开仓生命周期（含今日，扩展六日）</a></li><li class="depth-2"><a href="#1-已实现" data-for="1-已实现">1. 已实现</a></li><li class="depth-2"><a href="#2-持仓中" data-for="2-持仓中">2. 持仓中</a></li><li class="depth-2"><a href="#3-卖不出去与多亏pp" data-for="3-卖不出去与多亏pp">3. 卖不出去与多亏pp</a></li><li class="depth-1"><a href="#四观察池全量与跨天追踪" data-for="四观察池全量与跨天追踪">四、观察池全量与跨天追踪</a></li><li class="depth-1"><a href="#五盘中新闻龙虎榜与资金" data-for="五盘中新闻龙虎榜与资金">五、盘中新闻、龙虎榜与资金</a></li><li class="depth-2"><a href="#1-真实回拉及时间因果" data-for="1-真实回拉及时间因果">1. 真实回拉及时间因果</a></li><li class="depth-2"><a href="#2-全市场龙虎榜" data-for="2-全市场龙虎榜">2. 全市场龙虎榜</a></li><li class="depth-1"><a href="#六板块三问与r1r2r4r7核验" data-for="六板块三问与r1r2r4r7核验">六、板块三问与R1/R2/R4/R7核验</a></li><li class="depth-1"><a href="#七昨日r6preferences与八项纪律" data-for="七昨日r6preferences与八项纪律">七、昨日R6、preferences与八项纪律</a></li><li class="depth-1"><a href="#八错题本与反馈是否落地" data-for="八错题本与反馈是否落地">八、错题本与反馈是否落地</a></li><li class="depth-2"><a href="#error_case_20261117_001数据契约观察池规模与枚举" data-for="error_case_20261117_001数据契约观察池规模与枚举">error_case_20261117_001：数据契约/观察池规模与枚举</a></li><li class="depth-2"><a href="#error_case_20261117_002预案执行p1断档" data-for="error_case_20261117_002预案执行p1断档">error_case_20261117_002：预案执行/P1断档</a></li><li class="depth-2"><a href="#error_case_20261117_003复盘数据事故解析器串票与虚拟成交" data-for="error_case_20261117_003复盘数据事故解析器串票与虚拟成交">error_case_20261117_003：复盘数据事故/解析器串票与虚拟成交</a></li><li class="depth-2"><a href="#error_case_20261117_004竞价预期基准带偏差" data-for="error_case_20261117_004竞价预期基准带偏差">error_case_20261117_004：竞价预期/基准带偏差</a></li><li class="depth-2"><a href="#error_case_20261117_005主线识别盘中覆盖与动态修复" data-for="error_case_20261117_005主线识别盘中覆盖与动态修复">error_case_20261117_005：主线识别/盘中覆盖与动态修复</a></li><li class="depth-1"><a href="#九公开参考采纳与分歧" data-for="九公开参考采纳与分歧">九、公开参考采纳与分歧</a></li><li class="depth-1"><a href="#十给明日的提示仅交接不是预案" data-for="十给明日的提示仅交接不是预案">十、给明日的提示（仅交接，不是预案）</a></li><li class="depth-1"><a href="#交付与验收声明" data-for="交付与验收声明">交付与验收声明</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../../未命名.base" class="internal">未命名</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-509bcb48.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript-171b89dc.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,162 @@
+--- before/src/plan/price_levels.py
++++ after/src/plan/price_levels.py
+@@ -87,12 +87,21 @@
+     *,
+     name: str = "",
+     ref_close: float | None = None,
+-    channel: str = "trend_pullback_buy",
++    channel: str | None = None,
+     ignition: bool = False,
+     one_word: bool = False,
+     rr_min: float = 1.8,
+ ) -> dict[str, Any]:
+-    """返回一只票的完整价位推导 + 公式明细（每条都写清怎么算的）。"""
++    """按显式通道推导情景；买区上沿是计划拟买基准，不是实际委托价。
++
++    触发价只表示入场条件。消费者对实际拟委托价须另行重算 RR，
++    不得把此处基于买区上沿的 RR 借给 max_acceptable_ask 或盘口 ask。
++    无明确通道不能推断 MA50；不可达的原情景不能换用其他均线凑价。
++    """
++    if channel not in ("trend_pullback_buy", "leader_breakout", "divergence_pullback"):
++        return {"ts_code": ts_code, "ok": False,
++                "reason": "missing_or_unsupported_channel: 需明确已有通道，未生成价位",
++                "channel": channel, "trigger_price": None, "risk_reward_ratio": None}
+     tech = load_tech(ts_code, trade_date)
+     ref = float(ref_close or tech.get("close") or 0)
+     if ref <= 0:
+@@ -154,14 +163,14 @@
+         if gap < -10:
+             unreachable = round(gap, 1)
+ 
+-        # 若离决策线过远，退到 MA10 档（短线回踩口径）
+-        if unreachable is not None and ma10 and ma10 < ref:
+-            buy_zone = [round(ma10 * 0.99, 2), round(ma10 * 1.02, 2)]
+-            trigger = buy_zone[0]
+-            max_ask = round(buy_zone[1] * 1.01, 2)
+-            formula = (f"决策线MA50={base:.2f} 距现价{ref:.2f}达{abs(gap):.1f}%(不可达) → "
+-                       f"退用MA10={ma10:.2f}: 买区=[MA10×0.99={buy_zone[0]:.2f}, MA10×1.02={buy_zone[1]:.2f}]")
+-            unreachable = round((buy_zone[1] / ref - 1) * 100, 1)
++        if unreachable is not None:
++            # Keep the authorized scenario and its original zone as evidence.
++            # The existing >10% diagnostic is not a license to switch to MA10.
++            return {"ts_code": ts_code, "ok": False,
++                    "reason": "unreachable_buy_zone: 原通道买区不可达，未生成当日执行价位",
++                    "ref_close": round(ref, 2), "limit_pct": lim, "channel": channel,
++                    "buy_zone": buy_zone, "unreachable_pct": unreachable,
++                    "trigger_price": None, "risk_reward_ratio": None}
+ 
+     # ── 2) 止损: 以买入价(买区上沿)为基准, 三者取最高但必须低于买价 ──
+     buy_ref = buy_zone[1] if buy_zone else ref
+--- before/scripts/plan/apply_price_levels.py
++++ after/scripts/plan/apply_price_levels.py
+@@ -26,24 +26,27 @@
+ )
+ 
+ 
+-def pick_channel(stock: dict, td: str) -> str:
+-    """选择价位口径: 强势票(远离均线)用分歧回踩, 其余用均线回踩/突破。"""
+-    explicit = None
+-    for r in (stock.get("entry_rules") or []):
+-        if r.get("type") in ("trend_pullback_buy", "leader_breakout",
+-                             "divergence_pullback") and r.get("price_src") != "engine":
+-            explicit = r["type"]
+-            break
+-    ref = stock.get("reference_close") or 0
+-    # 现价相对 MA10 溢价 > 8% → 强势票, 用分歧回踩口径
+-    from src.plan.price_levels import load_tech
+-    t = load_tech(stock["ts_code"], td)
+-    ma10 = t.get("ma10")
+-    if explicit == "leader_breakout":
+-        return "leader_breakout"
+-    if ma10 and ref and ref / ma10 - 1 > 0.08:
+-        return "divergence_pullback"
+-    return explicit or "trend_pullback_buy"
++def pick_channel(stock: dict, td: str) -> str | None:
++    """仅保留明确的原始通道；技术位置与引擎旧价不构成通道选择。
++
++    当前逐票引擎只能表达一个通道。空、非法或相互冲突的原始规则
++    不能以默认MA50、第一条规则或MA10溢价代替决策端的明确选择。
++    td保留既有调用接口；选择阶段不读取技术库。
++    """
++    rules = stock.get("entry_rules")
++    if not isinstance(rules, list):
++        return None
++    channels = set()
++    for rule in rules:
++        if not isinstance(rule, dict):
++            return None
++        if rule.get("price_src") in ("engine", "tech_backfill"):
++            continue
++        channel = rule.get("type")
++        if channel not in ("trend_pullback_buy", "leader_breakout", "divergence_pullback"):
++            return None
++        channels.add(channel)
++    return next(iter(channels)) if len(channels) == 1 else None
+ 
+ 
+ def fmt(v, nd=2):
+--- before/tests/pipeline/test_price_geometry_validity.py
++++ after/tests/pipeline/test_price_geometry_validity.py
+@@ -138,6 +138,8 @@
+ 
+ def test_single_invalid_stock_does_not_block_a_valid_sibling_or_make_a_global_ban(env, monkeypatch):
+     bad, good = stock(), stock("000002.SZ", 100.0, exit_rules=[], max_position_pct=.1)
++    # The positive scenario is explicitly selected, not an empty-entry default.
++    good["entry_rules"] = [{"type": "trend_pullback_buy"}]
+     p = plan([bad, good], no_trade=False, risk_limits={"target_total_position_pct": .5})
+     def tech(code, _date):
+         return {"close": 18.94, "ma10": 15.0} if code == "000001.SZ" else {"close": 100.0, "ma10": 100.0, "ma50": 100.0}
+--- before/tests/pipeline/test_price_contract_alignment.py
++++ after/tests/pipeline/test_price_contract_alignment.py
+@@ -126,6 +126,25 @@
+     assert env.helper.RR_MIN == 1.8
+ 
+ 
++@pytest.mark.parametrize("rules", [
++    [], None, "trend_pullback_buy", [None],
++    [{"type": "unknown"}],
++    [{"type": "trend_pullback_buy", "price_src": "engine"}],
++    [{"type": "trend_pullback_buy"}, {"type": "leader_breakout"}],
++])
++def test_picker_missing_generated_or_conflicting_channel_never_reads_tech(env, rules):
++    stock = {"ts_code": "000001.SZ", "entry_rules": deepcopy(rules)}
++    before = deepcopy(stock)
++    assert env.apply.pick_channel(stock, DATE) is None
++    assert stock == before
++
++
++@pytest.mark.parametrize("channel", ["trend_pullback_buy", "leader_breakout", "divergence_pullback"])
++def test_picker_retains_explicit_channel_without_loading_technical_data(env, channel):
++    stock = {"ts_code": "000001.SZ", "entry_rules": [{"type": channel}]}
++    assert env.apply.pick_channel(stock, DATE) == channel
++
++
+ def fixture_stock(**updates):
+     return {"ts_code": "300001.SZ", "reference_close": 100., "entry_rules": [], "exit_rules": [],
+             "auto_trade_enabled": False, "requires_user_confirmation": True,
+@@ -164,6 +183,25 @@
+     assert rows[0]["buy_zone"] == rule["buy_zone"] and stock["entry_rules"] == [rule]
+ 
+ 
++@pytest.mark.parametrize("group", ["execution_pool", "watch_pool", "b_plan"])
++def test_explicit_geometry_failure_reaches_engine_and_preserves_selected_rule(env, monkeypatch, group):
++    monkeypatch.setattr(env.levels, "load_tech", lambda *a: {"close": 100., "ma10": 80.})
++    rule = {"type": "divergence_pullback"}
++    stock = fixture_stock(ts_code="000001.SZ", entry_rules=[deepcopy(rule)])
++    plan = fixture_plan(stock)
++    if group != "watch_pool":
++        plan["watch_pool"] = []
++        if group == "b_plan":
++            plan["seesaw_plan"] = {"seesaw_directions": [{"candidates": [stock]}]}
++        else:
++            plan["execution_pool"] = [stock]
++    rows = env.apply.apply_to_plan(plan, DATE)
++    assert rows[0]["ok"] is False and "invalid_stop_geometry" in rows[0]["reason"]
++    assert stock["entry_rules"] == [rule] and stock["exit_rules"] == []
++    assert stock["buy_eligibility"]["status"] != "eligible"
++    assert env.helper.evaluate_plan_buy_gate(plan)["status"] == "blocked"
++
++
+ def test_explicit_leader_roundtrip_keeps_entry_exits_budget_and_buy_gate(env, monkeypatch):
+     monkeypatch.setattr(env.levels, "load_tech", lambda *a: {"close": 100., "hi20": 100.})
+     rule = {"type": "leader_breakout", "buy_zone": [99.5, 101.5], "trigger_price": 100.}

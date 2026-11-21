@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "instruction_checks": 5,
+  "before": {
+    "skills/analyze_devil_advocate_v1/SKILL.md": "c5e67efb76cd622ec6cbf60806bdf3e1a9b6b19da9757d9942c077f9f4e38291",
+    "docs/agents/R6-反证Agent.md": "2215386a0065f1f0e9607b07f321e65dc840b0c142c4929a852dff1b9918487e",
+    "docs/06-专题-反证机制.md": "c6af453bd6aec812274d9a72ca0154f5f3733d89d9ad8ec34bf9e89667c520f7",
+    "tests/pipeline/test_signed_input_review_contract.py": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8"
+  },
+  "after": {
+    "skills/analyze_devil_advocate_v1/SKILL.md": "c5e67efb76cd622ec6cbf60806bdf3e1a9b6b19da9757d9942c077f9f4e38291",
+    "docs/agents/R6-反证Agent.md": "2215386a0065f1f0e9607b07f321e65dc840b0c142c4929a852dff1b9918487e",
+    "docs/06-专题-反证机制.md": "c6af453bd6aec812274d9a72ca0154f5f3733d89d9ad8ec34bf9e89667c520f7",
+    "tests/pipeline/test_signed_input_review_contract.py": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8"
+  },
+  "source_stable": true,
+  "guard_violations": 0,
+  "business_model_executed": false
+}

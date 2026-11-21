@@ -1,0 +1,386 @@
+{
+  "verified_at": "2026-10-23T14:33:10.629018+08:00",
+  "status": "delivery_verified_research_degraded_paper_idle",
+  "pipeline_run_id": "20261023T125645-recovery-3520",
+  "pipeline_started_at": "2026-10-23T12:56:45.265918+08:00",
+  "pipeline_finished_at": "2026-10-23T14:24:37.310318+08:00",
+  "pipeline_error": null,
+  "contract_delivery_count": 16,
+  "research_delivery_count_excluding_D1": 14,
+  "summary_separate": {
+    "path": "data/research/20261023/research_summary.json",
+    "sha256": "726ac65fd98348fcb7be3bef93dc21e68d09c6142cde112a92eeb1071d837466",
+    "status": null,
+    "generated_at": "2026-10-23T14:13:47+08:00"
+  },
+  "artifacts": [
+    {
+      "unit": "R1",
+      "kind": "json",
+      "path": "data/research/20261023/R1_style.json",
+      "resolved_path": "data/research/20261023/R1_style.json",
+      "symlink": false,
+      "sha256": "1d9929a765a37d45f19ac87cf8da62aceeffdc5b8580f4e09fd86250e429aca2",
+      "generated_at": "2026-10-23T13:09:04+08:00",
+      "business_status": "degraded",
+      "analysis_status": "completed"
+    },
+    {
+      "unit": "R1",
+      "kind": "md",
+      "path": "chzl_kg/投研交易/风格研判/20261023.md",
+      "resolved_path": "chzl_kg/投研交易/风格研判/20261023.md",
+      "symlink": false,
+      "sha256": "9af050eecd96fbf4c1c834a3a2c5c4012fce84d05adf76b66a791fdecc633ad9",
+      "generated_at": "2026-10-23T13:09:04+08:00",
+      "business_status": null,
+      "analysis_status": "completed"
+    },
+    {
+      "unit": "R2",
+      "kind": "json",
+      "path": "data/research/20261023/R2_main_sectors.json",
+      "resolved_path": "data/research/20261023/R2_main_sectors.json",
+      "symlink": false,
+      "sha256": "dd6d49229cd68bb4465f8a0eb1554c1091e7f9dc6f0fc2d4f54272adafc5b90d",
+      "generated_at": "2026-10-23T13:34:25+08:00",
+      "business_status": "partial",
+      "analysis_status": "completed"
+    },
+    {
+      "unit": "R2",
+      "kind": "md",
+      "path": "chzl_kg/投研交易/主线研判/20261023.md",
+      "resolved_path": "chzl_kg/投研交易/主线研判/20261023.md",
+      "symlink": false,
+      "sha256": "7a852461ca0f8172e09b6e2d8abcccad3e2a88db01e63891b97062d5764f51a0",
+      "generated_at": "2026-10-23T13:34:25+08:00",
+      "business_status": null,
+      "analysis_status": "completed"
+    },
+    {
+      "unit": "R3",
+      "kind": "json",
+      "path": "data/research/20261023/R3_sentiment.json",
+      "resolved_path": "data/research/20261023/R3_sentiment.json",
+      "symlink": false,
+      "sha256": "79c56ae6b2eb6877653781ba07f0d9cfd6a64ceb409f7e6238a7612dd79c267f",
+      "generated_at": "2026-10-23T13:22:51+08:00",
+      "business_status": "degraded",
+      "analysis_status": "completed"
+    },
+    {
+      "unit": "R3",
+      "kind": "md",
+      "path": "chzl_kg/投研交易/群聊情绪/20261023.md",
+      "resolved_path": "chzl_kg/投研交易/群聊情绪/20261023.md",
+      "symlink": false,
+      "sha256": "ed773db9116b8472bd4e4dface7be662236dc83eff2feb2dfe5406da7c67bc18",
+      "generated_at": "2026-10-23T13:22:51+08:00",
+      "business_status": "degraded",
+      "analysis_status": "completed"
+    },
+    {
+      "unit": "R4",
+      "kind": "json",
+      "path": "data/research/20261023/R4_news.json",
+      "resolved_path": "data/research/20261023/R4_news.json",
+      "symlink": false,
+      "sha256": "165b3da710335b6a0bc96d5eef1d97e13fc282827f26f265491827cfcf96dcc1",
+      "generated_at": "2026-10-23T13:09:43+08:00",
+      "business_status": "partial",
+      "analysis_status": "complete"
+    },
+    {
+      "unit": "R4",
+      "kind": "md",
+      "path": "chzl_kg/投研交易/消息面/20261023.md",
+      "resolved_path": "chzl_kg/投研交易/消息面/20261023.md",
+      "symlink": false,
+      "sha256": "03f9107b9346982074e2290af82101de9d7e3c897ed7f067e1783e829dab37ef",
+      "generated_at": "2026-10-23T13:09:43+08:00",
+      "business_status": null,
+      "analysis_status": "complete"
+    },
+    {
+      "unit": "R5",
+      "kind": "json",
+      "path": "data/research/20261023/R5_stock_profiles.json",
+      "resolved_path": "data/research/20261023/R5_stock_profiles.json",
+      "symlink": false,
+      "sha256": "6ae314cea261246196cd93c493b3ad7aa3daa67a36a5d0d691d9b80ca1530fb4",
+      "generated_at": "2026-10-23T14:04:34+08:00",
+      "business_status": "partial",
+      "analysis_status": "completed"
+    },
+    {
+      "unit": "R5",
+      "kind": "md",
+      "path": "chzl_kg/投研交易/个股画像/20261023.md",
+      "resolved_path": "chzl_kg/投研交易/个股画像/20261023.md",
+      "symlink": false,
+      "sha256": "2164da42338f56b4b24d2b28eda512fce0ea69800b0cd46f0473e3f62c37f9bf",
+      "generated_at": "2026-10-23T14:04:34+08:00",
+      "business_status": null,
+      "analysis_status": "completed"
+    },
+    {
+      "unit": "R6",
+      "kind": "json",
+      "path": "data/research/20261023/R6_devil_advocate.json",
+      "resolved_path": "data/research/20261023/R6_devil_advocate.json",
+      "symlink": false,
+      "sha256": "0ae59e7a73bafd6a8b4eb69d9f8dfc39fa8e2ef77dbcbd12eb60d19c9f89799c",
+      "generated_at": "2026-10-23T14:13:08+08:00",
+      "business_status": "degraded",
+      "analysis_status": "partial"
+    },
+    {
+      "unit": "R6",
+      "kind": "md",
+      "path": "chzl_kg/投研交易/反证/20261023.md",
+      "resolved_path": "chzl_kg/投研交易/反证/20261023.md",
+      "symlink": false,
+      "sha256": "a0cde787375f442e3947dd9e330cf11d74acc0d67547aadfbb4c46d8af9b6f6f",
+      "generated_at": "2026-10-23T14:13:08+08:00",
+      "business_status": null,
+      "analysis_status": "partial"
+    },
+    {
+      "unit": "R7",
+      "kind": "json",
+      "path": "data/research/20261023/R7_capital_flow.json",
+      "resolved_path": "data/research/20261023/R7_capital_flow_20261023.json",
+      "symlink": true,
+      "sha256": "a121d505b78424a2d248f47ab8f14a4fd77769b7e3b1a74eaa569dd285abfa96",
+      "generated_at": "2026-10-23T13:14:09+08:00",
+      "business_status": "partial",
+      "analysis_status": "complete"
+    },
+    {
+      "unit": "R7",
+      "kind": "md",
+      "path": "chzl_kg/投研交易/资金面/20261023.md",
+      "resolved_path": "chzl_kg/投研交易/资金面/20261023.md",
+      "symlink": false,
+      "sha256": "0771040eaccb2189d75f40e882447a7b8c8d41bddf4c4426ada002be4f185a03",
+      "generated_at": "2026-10-23T13:14:09+08:00",
+      "business_status": null,
+      "analysis_status": null
+    },
+    {
+      "unit": "D1",
+      "kind": "json",
+      "path": "data/plans/20261023/watchlist_plan.json",
+      "resolved_path": "data/plans/20261023/watchlist_plan.json",
+      "symlink": false,
+      "sha256": "102c92d7b45cd86fe87a205c4f83e5876723712ab5dd90103ddc8985e7857846",
+      "generated_at": "2026-10-23T14:22:58+08:00",
+      "business_status": "degraded",
+      "analysis_status": null
+    },
+    {
+      "unit": "D1",
+      "kind": "md",
+      "path": "chzl_kg/投研交易/盘前预案/20261023.md",
+      "resolved_path": "chzl_kg/投研交易/盘前预案/20261023.md",
+      "symlink": false,
+      "sha256": "1c09c8da534e84d3346628c1a906600079481b3a0b9a92a796a9c248506e10c3",
+      "generated_at": "2026-10-23T14:22:58+08:00",
+      "business_status": null,
+      "analysis_status": "completed_for_available_primary_artifacts"
+    }
+  ],
+  "r6_source_links_verified": [
+    {
+      "agent": "R1",
+      "path": "data/research/20261023/R1_style.json",
+      "sha256": "1d9929a765a37d45f19ac87cf8da62aceeffdc5b8580f4e09fd86250e429aca2",
+      "matched": true
+    },
+    {
+      "agent": "R2",
+      "path": "data/research/20261023/R2_main_sectors.json",
+      "sha256": "dd6d49229cd68bb4465f8a0eb1554c1091e7f9dc6f0fc2d4f54272adafc5b90d",
+      "matched": true
+    },
+    {
+      "agent": "R3",
+      "path": "data/research/20261023/R3_sentiment.json",
+      "sha256": "79c56ae6b2eb6877653781ba07f0d9cfd6a64ceb409f7e6238a7612dd79c267f",
+      "matched": true
+    },
+    {
+      "agent": "R4",
+      "path": "data/research/20261023/R4_news.json",
+      "sha256": "165b3da710335b6a0bc96d5eef1d97e13fc282827f26f265491827cfcf96dcc1",
+      "matched": true
+    },
+    {
+      "agent": "R5",
+      "path": "data/research/20261023/R5_stock_profiles.json",
+      "sha256": "6ae314cea261246196cd93c493b3ad7aa3daa67a36a5d0d691d9b80ca1530fb4",
+      "matched": true
+    },
+    {
+      "agent": "R7",
+      "path": "data/research/20261023/R7_capital_flow_20261023.json",
+      "sha256": "a121d505b78424a2d248f47ab8f14a4fd77769b7e3b1a74eaa569dd285abfa96",
+      "matched": true
+    }
+  ],
+  "plan": {
+    "generated_at": "2026-10-23T14:22:58+08:00",
+    "sha256": "102c92d7b45cd86fe87a205c4f83e5876723712ab5dd90103ddc8985e7857846",
+    "execution_pool_count": 0,
+    "watch_pool_count": 4,
+    "research_anchor_count": 9,
+    "no_trade": true,
+    "production_ready": false,
+    "research_completion_passed": false,
+    "risk_limits": {
+      "target_total_position_pct": 0.0,
+      "new_position_budget_pct": 0.0,
+      "max_positions": 5,
+      "max_buy_orders_per_day": 0,
+      "max_orders_per_symbol_per_day": 0,
+      "max_single_stock_pct": 0.15,
+      "max_single_sector_pct": 0.4,
+      "block_prefixes": [
+        "920"
+      ],
+      "block_st": true
+    },
+    "no_trade_conditions": [
+      {
+        "code": "INHERITED_ZERO_BUDGET",
+        "active": true,
+        "description": "本次R1 position_cap_suggestion=0且new_position_allowed=false；授权未允许抬预算。"
+      },
+      {
+        "code": "R1_FAIL",
+        "active": true,
+        "description": "本次R1 confidence=0.245<skill既有0.4开仓资格门槛；不停止研究。"
+      },
+      {
+        "code": "RESEARCH_NOT_READY",
+        "active": true,
+        "description": "summary=partial；R6 formal_review_status=blocked_upstream_not_complete，不能把契约结构通过等同研究通过。"
+      },
+      {
+        "code": "R7_STALE",
+        "active": false,
+        "description": "R7 staleness_status=ok；北向仅可选缺口，不触发全局R7_STALE。"
+      },
+      {
+        "code": "GLOBAL_SEVERITY_3",
+        "active": false,
+        "description": "summary severity=2，非>=3。"
+      },
+      {
+        "code": "R6_HARD_REJECT_OVERFLOW",
+        "active": false,
+        "description": "本次hard_rejects空；正式评估0，比例无推断资格。"
+      }
+    ]
+  },
+  "paper_cycle_readback": {
+    "account_id": "canghai_paper",
+    "as_of": "2026-10-23T14:28:42.109527+08:00",
+    "authorization": {
+      "id": "user_confirmed_20261023_1000000_cny_empty",
+      "source": "explicit_cli"
+    },
+    "canonical_path": "/Users/chenyang/Downloads/demo/沧海巨浪/data/plans/20261023/watchlist_plan.json",
+    "canonical_sha256": "102c92d7b45cd86fe87a205c4f83e5876723712ab5dd90103ddc8985e7857846",
+    "environment": "paper",
+    "event": "paper_idle",
+    "fills": [],
+    "global_buy_gate": {
+      "reasons": [
+        "NO_TRADE",
+        "ACTIVE_NO_TRADE_CONDITION",
+        "ACTIVE_NO_TRADE_CONDITION",
+        "ACTIVE_NO_TRADE_CONDITION",
+        "ZERO_OR_INVALID_POSITION_BUDGET",
+        "ZERO_OR_INVALID_POSITION_BUDGET",
+        "ZERO_OR_INVALID_POSITION_BUDGET"
+      ],
+      "scope": "global_buy_only",
+      "status": "blocked"
+    },
+    "intents": [],
+    "kill_switch_snapshot": {
+      "configured": false,
+      "observed_at": "2026-10-23T14:28:42.109527+08:00"
+    },
+    "observations": [],
+    "orders": [],
+    "reasons": [
+      "NO_TRADE",
+      "ACTIVE_NO_TRADE_CONDITION",
+      "ACTIVE_NO_TRADE_CONDITION",
+      "ACTIVE_NO_TRADE_CONDITION",
+      "ZERO_OR_INVALID_POSITION_BUDGET",
+      "ZERO_OR_INVALID_POSITION_BUDGET",
+      "ZERO_OR_INVALID_POSITION_BUDGET",
+      "plan_not_ready",
+      "explicit_plan_readiness_required:production_ready",
+      "explicit_plan_readiness_required:research_completion_passed",
+      "plan_not_ready",
+      "plan_not_ready",
+      "execution_pool_empty_no_watch_or_B_plan_promotion",
+      "empty_paper_account_no_potential_action_market_inputs_not_requested"
+    ],
+    "rejections": [],
+    "snapshot_after": {
+      "account_id": "canghai_paper",
+      "as_of": "2026-10-23T14:28:42.112344+08:00",
+      "authorization_id": "user_confirmed_20261023_1000000_cny_empty",
+      "cash_cents": 100000000,
+      "environment": "paper",
+      "fee_model": {
+        "model": "zero_fee_assumption"
+      },
+      "fees_cents": 0,
+      "fills": [],
+      "initial_cash_cents": 100000000,
+      "lots": [],
+      "managed_exit_plans": {},
+      "orders": [],
+      "positions": {},
+      "seed_source": "user_explicit_1000000_CNY_empty_confirmation_20261023",
+      "time_source": "system"
+    },
+    "snapshot_before": {
+      "account_id": "canghai_paper",
+      "as_of": "2026-10-23T14:28:42.112344+08:00",
+      "authorization_id": "user_confirmed_20261023_1000000_cny_empty",
+      "cash_cents": 100000000,
+      "environment": "paper",
+      "fee_model": {
+        "model": "zero_fee_assumption"
+      },
+      "fees_cents": 0,
+      "fills": [],
+      "initial_cash_cents": 100000000,
+      "lots": [],
+      "managed_exit_plans": {},
+      "orders": [],
+      "positions": {},
+      "seed_source": "user_explicit_1000000_CNY_empty_confirmation_20261023",
+      "time_source": "system"
+    },
+    "status": "idle"
+  },
+  "paper_cycle_path": "data/execution/paper_cycle_20261023.json",
+  "canonical_unchanged_after_consumer": true,
+  "original_index_unchanged": true,
+  "limitations": [
+    "formal R6 evaluation is 0; not all research complete/qualified",
+    "upstream per-artifact run_id mostly null; content/time lineage is verified, not complete producer-ID attribution",
+    "current recovery retained prior zero budget; its zero execution pool is not proof no market opportunities existed",
+    "no credible executable quote bundle has been certified; current paper_idle did not request market inputs because no eligible actions/positions existed",
+    "no permanent simulation schedule has been installed"
+  ]
+}

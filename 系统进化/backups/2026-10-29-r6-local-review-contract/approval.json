@@ -1,0 +1,57 @@
+{
+  "at": "2026-10-29T13:47:25.064755+08:00",
+  "user_response": "批准这两份契约差异及现有脚本的必要实现，仅做隔离验证",
+  "combined_diff_sha256": "9caf2e8f670dfeef7c8489ea54a7dc149d44623707ff484731b349930e7e983d",
+  "targets": [
+    {
+      "target": "skills/analyze_devil_advocate_v1/SKILL.md",
+      "before_sha256": "c5e67efb76cd622ec6cbf60806bdf3e1a9b6b19da9757d9942c077f9f4e38291",
+      "candidate_sha256": "b6ab02eaf3f7b7b6ebb775d3a5b5f38cb4009e715494e14236b4ca00019e1d25",
+      "diff_sha256": "45c8d1c849364fab005b819c43170ae8b7b51376ae6da064f6c44bd9ce25cd99"
+    },
+    {
+      "target": "docs/10-契约-研究汇总.md",
+      "before_sha256": "14e57f6ed5e6292aed312973fbfe37cd2fa34efebdc0a914fbb4b9a4e58229e9",
+      "candidate_sha256": "3d73fb06585f629bc206c4ad4dcbb1c787982a101d91544af3455e56ce605bb9",
+      "diff_sha256": "072b43e0cadc22dc8ab47fc980ba89a3747f028e36755c08676beaffcda4903c"
+    }
+  ],
+  "implementation_scope": [
+    "existing research runner/native launch",
+    "trusted state/artifact receipt helpers",
+    "summary binding/reader",
+    "bounded isolated regressions"
+  ],
+  "excluded": [
+    "new service/module/profile/model",
+    "production/manual model or market reruns",
+    "plan publication or stock readmission",
+    "budget/threshold/identity/entry/exit changes"
+  ],
+  "code_baseline": [
+    {
+      "path": "scripts/research/run_research_shell.sh",
+      "sha256": "7a72f682455d3610046530f96d3ed495a78bbe31fcc074a4f2978221a456fbf5"
+    },
+    {
+      "path": "scripts/research/native_usage.py",
+      "sha256": "41adb2d82be46d63da29c8d41d44d8974e384ecfc45aec2ed2a74375e776c170"
+    },
+    {
+      "path": "scripts/research/pipeline_state.py",
+      "sha256": "b276481a3230c91fb8b7dac5f3c12c7ef73749086df038c889c5bf1601376b29"
+    },
+    {
+      "path": "scripts/research/pipeline_artifacts.py",
+      "sha256": "59516e95c37231441566e5311cb1e485eb62dc278f77706657fe0b4047bd9aeb"
+    },
+    {
+      "path": "scripts/research/build_research_summary.py",
+      "sha256": "f66b99d0a38755c303aab79e5d98cc177aaefb478b38ea06a57e141e8dc7489a"
+    }
+  ],
+  "single_writer": "one delegated local R6 implementation; main owns contract application and integration",
+  "other_session_scope_protected": "D1 selective-reassessment/price engine changes not owned here; shared-source drift stops rather than overwrite",
+  "index_sha256": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143",
+  "production_rerun_authorized": false
+}

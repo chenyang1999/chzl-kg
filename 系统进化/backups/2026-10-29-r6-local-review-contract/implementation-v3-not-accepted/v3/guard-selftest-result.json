@@ -1,0 +1,1 @@
+{"valid_scratch_ops": true, "expected_blocked": ["dotenv", "production_write", "private_credentials", "network", "symlink_location", "dirfd_write"]}

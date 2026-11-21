@@ -1,0 +1,56 @@
+{
+  "id": "8588cd3d9943",
+  "name": "canghai-catalyst-calendar",
+  "prompt": "你是催化剂日历 agent。读取 skills/催化剂日历/SKILL.md，按 4 步工作流（定义覆盖/收集催化剂/日历视图/维护节奏），输出未来 4 周 A 股关键事件到 chzl_kg/投研交易/催化剂/YYYYMMDD.md。",
+  "skills": [
+    "催化剂日历"
+  ],
+  "skill": "催化剂日历",
+  "model": "gpt-6.1-sol",
+  "provider": "openai-codex",
+  "provider_snapshot": null,
+  "model_snapshot": null,
+  "base_url": null,
+  "script": null,
+  "no_agent": false,
+  "context_from": null,
+  "schedule": {
+    "kind": "cron",
+    "expr": "30 7 * * 1",
+    "display": "30 7 * * 1"
+  },
+  "schedule_display": "30 7 * * 1",
+  "repeat": {
+    "times": null,
+    "completed": 12
+  },
+  "enabled": true,
+  "state": "scheduled",
+  "paused_at": null,
+  "paused_reason": null,
+  "created_at": "2026-08-07T02:56:57.713041+08:00",
+  "next_run_at": "2026-11-02T07:30:00+08:00",
+  "last_run_at": "2026-10-26T07:30:51.411280+08:00",
+  "last_status": "error",
+  "last_error": "RuntimeError: Codex provider quota exhausted (429); retry after 542532s. Credentials are still valid.",
+  "last_delivery_error": null,
+  "deliver": "local",
+  "origin": null,
+  "enabled_toolsets": null,
+  "workdir": "/Users/chenyang/Downloads/demo/沧海巨浪",
+  "fire_claim": null,
+  "failure_streak": 1,
+  "last_dispatch": {
+    "scheduled_at": "2026-10-26T07:30:00+08:00",
+    "dispatched_at": "2026-10-26T07:30:48.057932+08:00",
+    "lateness_seconds": 48.1,
+    "kind": "on_time"
+  },
+  "canonical_completions": [
+    "78816692543c47c393b2f2b301274e8b"
+  ],
+  "last_failure": {
+    "at": "2026-10-26T07:30:51.411280+08:00",
+    "detail": "RuntimeError: Codex provider quota exhausted (429); retry after 542532s. Credentials are still valid."
+  }
+}

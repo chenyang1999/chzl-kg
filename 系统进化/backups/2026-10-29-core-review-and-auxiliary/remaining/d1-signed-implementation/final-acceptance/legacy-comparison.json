@@ -1,0 +1,47 @@
+{
+  "same_all_native_case_outcomes": true,
+  "baseline_and_current_tested_shas": {
+    "legacy-baseline": [
+      "08688d64512fbda8db711195298cba5ff659fa4cce32402f91fa8208f504b5a1"
+    ],
+    "legacy-current": [
+      "c0885a6519266c21f273b5864a5043fbe229c5fea36d3178bd4e84aa4cf831ca"
+    ]
+  },
+  "failed_native_ids": [
+    "tests.pipeline.test_safety_net_input_versions::test_valid_versioned_partial_and_zero_budget_delivery[True-False]",
+    "tests.pipeline.test_safety_net_input_versions::test_valid_versioned_partial_and_zero_budget_delivery[False-False]",
+    "tests.pipeline.test_safety_net_input_versions::test_valid_versioned_partial_and_zero_budget_delivery[True-True]",
+    "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[primary_same_mtime]",
+    "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[missing_summary]",
+    "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[wrong_run]",
+    "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[attempt]",
+    "tests.pipeline.test_safety_net_input_versions::test_input_changes_during_llm_refuse_handoff_without_restoring_analysis[old_summary]",
+    "tests.pipeline.test_safety_net_input_versions::test_new_valid_summary_during_llm_cannot_switch_input_batch",
+    "tests.pipeline.test_safety_net_input_versions::test_standalone_cannot_deliver_after_new_run_appears",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-absent]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-rejected_llm]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-rejected_llm-fallback]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-absent]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-rejected_llm]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-corrupt-fallback]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-removed-absent]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-removed-rejected_llm]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[0-removed-fallback]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-absent]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-rejected_llm]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-rejected_llm-fallback]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-absent]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-rejected_llm]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-corrupt-fallback]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-removed-absent]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-removed-rejected_llm]",
+    "tests.pipeline.test_plan_interim_preservation::test_retry_current_bytes_win_without_snapshot_restore[17-removed-fallback]",
+    "tests.pipeline.test_plan_interim_preservation::test_rejected_old_llm_can_be_repaired_by_real_retry"
+  ],
+  "reason": "Old fixtures lack previously signed bound_auxiliary_inputs; baseline and current both refuse model preflight",
+  "baseline_cases": 74,
+  "baseline_failures": 29,
+  "unfiltered": true,
+  "source_test_assertions_unchanged": true
+}

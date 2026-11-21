@@ -1,0 +1,9 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+__________ test_partial_review_updates_explicit_zero_evaluated_count ___________
+../../../.hermes/cache/scratch/r6-parent-review-20261029/parent_cases.py:65: in test_partial_review_updates_explicit_zero_evaluated_count
+    assert revised['candidates_evaluated'] == 1
+E   assert 0 == 1
+=========================== short test summary info ============================
+FAILED ../../../.hermes/cache/scratch/r6-parent-review-20261029/parent_cases.py::test_partial_review_updates_explicit_zero_evaluated_count
+1 failed in 0.20s

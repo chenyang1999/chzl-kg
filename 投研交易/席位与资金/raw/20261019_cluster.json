@@ -1,0 +1,1833 @@
+[
+ {
+  "ts_code": "002568.SZ",
+  "people": 4,
+  "rows": 7,
+  "known_price": 4,
+  "total_amount": 85944229.04,
+  "total_vol": 5912049.0,
+  "holders": [
+   "刘嘉瑞",
+   "喻晨",
+   "马良",
+   "刘晓东"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260722",
+   "20260901",
+   "20260908"
+  ],
+  "name": "百润股份"
+ },
+ {
+  "ts_code": "600238.SH",
+  "people": 2,
+  "rows": 7,
+  "known_price": 5,
+  "total_amount": 81572871.12,
+  "total_vol": 22163254.0,
+  "holders": [
+   "海南环樾科技合伙企业(有限合伙)",
+   "秦胡伟"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260825"
+  ],
+  "name": "ST椰岛"
+ },
+ {
+  "ts_code": "002655.SZ",
+  "people": 2,
+  "rows": 14,
+  "known_price": 7,
+  "total_amount": 66260776.84,
+  "total_vol": 13705400.0,
+  "holders": [
+   "上海韦豪创芯投资管理有限公司",
+   "王靖"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260731",
+   "20260812",
+   "20260813",
+   "20260814"
+  ],
+  "name": "共达电声"
+ },
+ {
+  "ts_code": "688625.SH",
+  "people": 5,
+  "rows": 5,
+  "known_price": 5,
+  "total_amount": 59922752.63,
+  "total_vol": 944901.0,
+  "holders": [
+   "余志亮",
+   "张旭",
+   "段淑丽",
+   "金鹰优选251号集合资产管理计划",
+   "陈映红"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260826"
+  ],
+  "name": "呈和科技"
+ },
+ {
+  "ts_code": "002601.SZ",
+  "people": 7,
+  "rows": 7,
+  "known_price": 7,
+  "total_amount": 47771264.79,
+  "total_vol": 3154000.0,
+  "holders": [
+   "吴彭森",
+   "孙亮",
+   "张刚",
+   "张海涛",
+   "王旭东",
+   "许冉",
+   "陈建立"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260803"
+  ],
+  "name": "龙佰集团"
+ },
+ {
+  "ts_code": "300806.SZ",
+  "people": 4,
+  "rows": 4,
+  "known_price": 4,
+  "total_amount": 35014610.44,
+  "total_vol": 806880.0,
+  "holders": [
+   "吴江",
+   "姜章健",
+   "杨比",
+   "王超"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260908"
+  ],
+  "name": "斯迪克"
+ },
+ {
+  "ts_code": "002296.SZ",
+  "people": 7,
+  "rows": 7,
+  "known_price": 7,
+  "total_amount": 34419493.09,
+  "total_vol": 3668800.0,
+  "holders": [
+   "张奕敏",
+   "杜旭升",
+   "郭治国",
+   "黄继军",
+   "窦永贺",
+   "谢春生",
+   "李海鹰"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260915",
+   "20260916",
+   "20261014"
+  ],
+  "name": "辉煌科技"
+ },
+ {
+  "ts_code": "000988.SZ",
+  "people": 6,
+  "rows": 6,
+  "known_price": 6,
+  "total_amount": 33673990.36,
+  "total_vol": 379100.0,
+  "holders": [
+   "刘含树",
+   "张勤",
+   "熊文",
+   "王霞",
+   "马新强",
+   "武汉国有资本投资运营集团有限公司"
+  ],
+  "holder_types": [
+   "C",
+   "G"
+  ],
+  "dates": [
+   "20260722",
+   "20261013"
+  ],
+  "name": "华工科技"
+ },
+ {
+  "ts_code": "002416.SZ",
+  "people": 11,
+  "rows": 14,
+  "known_price": 14,
+  "total_amount": 32167587.54,
+  "total_vol": 3501600.0,
+  "holders": [
+   "吴海南",
+   "周友盟",
+   "崔国峰",
+   "张尧",
+   "方华",
+   "李振",
+   "王斌",
+   "米泽东",
+   "陈亮",
+   "季刚",
+   "芮晓明"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260722",
+   "20261013"
+  ],
+  "name": "爱施德"
+ },
+ {
+  "ts_code": "300326.SZ",
+  "people": 2,
+  "rows": 2,
+  "known_price": 1,
+  "total_amount": 22453791.0,
+  "total_vol": 9308701.0,
+  "holders": [
+   "上海凯诚君泰投资有限公司、吕向东、李虹、刘双全、魏永梅",
+   "吕向东"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260910"
+  ],
+  "name": "ST凯利"
+ },
+ {
+  "ts_code": "603312.SH",
+  "people": 2,
+  "rows": 2,
+  "known_price": 2,
+  "total_amount": 20601363.18,
+  "total_vol": 662300.0,
+  "holders": [
+   "PAN SHU XIN(潘淑新)",
+   "SHENG JIAN HUA(盛建华)"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260828"
+  ],
+  "name": "西典新能"
+ },
+ {
+  "ts_code": "002083.SZ",
+  "people": 3,
+  "rows": 4,
+  "known_price": 2,
+  "total_amount": 20272963.05,
+  "total_vol": 8053490.0,
+  "holders": [
+   "孙小惠",
+   "高密安信投资管理股份有限公司",
+   "孙小惠、孙浩博"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260827",
+   "20260901",
+   "20260930"
+  ],
+  "name": "孚日股份"
+ },
+ {
+  "ts_code": "002637.SZ",
+  "people": 11,
+  "rows": 11,
+  "known_price": 11,
+  "total_amount": 19358683.79,
+  "total_vol": 1744500.0,
+  "holders": [
+   "连武杰",
+   "吴吉华",
+   "孙建明",
+   "张勇",
+   "张建国",
+   "张敬国",
+   "徐强",
+   "河南兴业房地产开发有限公司",
+   "裘明",
+   "马晗",
+   "黄建文"
+  ],
+  "holder_types": [
+   "C",
+   "G"
+  ],
+  "dates": [
+   "20260908",
+   "20260922"
+  ],
+  "name": "赞宇科技"
+ },
+ {
+  "ts_code": "300286.SZ",
+  "people": 2,
+  "rows": 3,
+  "known_price": 3,
+  "total_amount": 14639537.0,
+  "total_vol": 763000.0,
+  "holders": [
+   "周中",
+   "朱芳"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260722",
+   "20260923"
+  ],
+  "name": "安科瑞"
+ },
+ {
+  "ts_code": "002049.SZ",
+  "people": 11,
+  "rows": 11,
+  "known_price": 11,
+  "total_amount": 11956247.0,
+  "total_vol": 194300.0,
+  "holders": [
+   "丁芝永",
+   "佟晓丹",
+   "岳超",
+   "李天池",
+   "杨秋平",
+   "王坤",
+   "翟应斌",
+   "邬睿",
+   "陈杰",
+   "陈雄",
+   "马宁辉"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260827"
+  ],
+  "name": "紫光国微"
+ },
+ {
+  "ts_code": "688328.SH",
+  "people": 2,
+  "rows": 2,
+  "known_price": 2,
+  "total_amount": 11872704.79,
+  "total_vol": 199741.0,
+  "holders": [
+   "林广满",
+   "周尔清"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260804",
+   "20261015"
+  ],
+  "name": "深科达"
+ },
+ {
+  "ts_code": "301498.SZ",
+  "people": 3,
+  "rows": 3,
+  "known_price": 3,
+  "total_amount": 11306702.33,
+  "total_vol": 287300.0,
+  "holders": [
+   "杜士芳",
+   "王鹏",
+   "秦华"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260901"
+  ],
+  "name": "乖宝宠物"
+ },
+ {
+  "ts_code": "300498.SZ",
+  "people": 10,
+  "rows": 10,
+  "known_price": 1,
+  "total_amount": 10472306.0,
+  "total_vol": 2807380.0,
+  "holders": [
+   "温淑颖",
+   "温煜麒",
+   "冯惠萍",
+   "孙建宽",
+   "张祥斌",
+   "林建兴",
+   "秦开田",
+   "蒋荣金",
+   "马群燕",
+   "黎少松"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260929",
+   "20261015",
+   "20261016"
+  ],
+  "name": "温氏股份"
+ },
+ {
+  "ts_code": "002146.SZ",
+  "people": 6,
+  "rows": 19,
+  "known_price": 19,
+  "total_amount": 10463929.6,
+  "total_vol": 8555500.0,
+  "holders": [
+   "吴秋云",
+   "王冰",
+   "王晓辉",
+   "穆旸",
+   "邹家立",
+   "隆小康"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260723",
+   "20260818",
+   "20260915",
+   "20261009"
+  ],
+  "name": "荣盛发展"
+ },
+ {
+  "ts_code": "002353.SZ",
+  "people": 3,
+  "rows": 3,
+  "known_price": 3,
+  "total_amount": 9309026.0,
+  "total_vol": 66900.0,
+  "holders": [
+   "李志勇",
+   "李慧涛",
+   "路伟"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260729"
+  ],
+  "name": "杰瑞股份"
+ },
+ {
+  "ts_code": "600052.SH",
+  "people": 4,
+  "rows": 4,
+  "known_price": 2,
+  "total_amount": 8688040.0,
+  "total_vol": 3048000.0,
+  "holders": [
+   "东阳市源泰实业投资合伙企业(有限合伙)",
+   "东阳市野风控股有限公司",
+   "浙江野风创业投资有限公司",
+   "野风集团有限公司"
+  ],
+  "holder_types": [
+   "C"
+  ],
+  "dates": [
+   "20260722"
+  ],
+  "name": "东望时代"
+ },
+ {
+  "ts_code": "601717.SH",
+  "people": 4,
+  "rows": 5,
+  "known_price": 5,
+  "total_amount": 6379900.1,
+  "total_vol": 411000.0,
+  "holders": [
+   "付奇",
+   "张海斌",
+   "李开顺",
+   "贾浩"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260724",
+   "20260728"
+  ],
+  "name": "中创智领"
+ },
+ {
+  "ts_code": "003015.SZ",
+  "people": 3,
+  "rows": 3,
+  "known_price": 3,
+  "total_amount": 6271812.0,
+  "total_vol": 478500.0,
+  "holders": [
+   "彭磊",
+   "徐一佳",
+   "陈鑫帅"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260723"
+  ],
+  "name": "日久光电"
+ },
+ {
+  "ts_code": "002615.SZ",
+  "people": 5,
+  "rows": 5,
+  "known_price": 5,
+  "total_amount": 5490413.59,
+  "total_vol": 803100.0,
+  "holders": [
+   "吕丽珍",
+   "吴汝来",
+   "孙玉来",
+   "欧阳波",
+   "邵巧蓉"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260930"
+  ],
+  "name": "哈尔斯"
+ },
+ {
+  "ts_code": "300010.SZ",
+  "people": 2,
+  "rows": 2,
+  "known_price": 2,
+  "total_amount": 5315890.4,
+  "total_vol": 1923300.0,
+  "holders": [
+   "朱雅特",
+   "赵伯奇"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260805"
+  ],
+  "name": "ST豆神"
+ },
+ {
+  "ts_code": "002096.SZ",
+  "people": 11,
+  "rows": 15,
+  "known_price": 15,
+  "total_amount": 5212300.07,
+  "total_vol": 574500.0,
+  "holders": [
+   "付军",
+   "刘刚",
+   "刘小钧",
+   "宋龙梅",
+   "张健辉",
+   "张震宇",
+   "王志强",
+   "胡良伟",
+   "蔡峰",
+   "邓小英",
+   "邹七平"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260723",
+   "20260915"
+  ],
+  "name": "易普力"
+ },
+ {
+  "ts_code": "301089.SZ",
+  "people": 6,
+  "rows": 9,
+  "known_price": 9,
+  "total_amount": 5024476.62,
+  "total_vol": 233290.0,
+  "holders": [
+   "杨西宁",
+   "邵艳行",
+   "马冠军",
+   "李涛",
+   "渠桂荣",
+   "王德地"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260724",
+   "20260930"
+  ],
+  "name": "拓新药业"
+ },
+ {
+  "ts_code": "688557.SH",
+  "people": 4,
+  "rows": 8,
+  "known_price": 2,
+  "total_amount": 4996199.11,
+  "total_vol": 269679.0,
+  "holders": [
+   "张小艺",
+   "林茂",
+   "沈长鹏",
+   "董新军"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260722",
+   "20260924"
+  ],
+  "name": "兰剑智能"
+ },
+ {
+  "ts_code": "603768.SH",
+  "people": 2,
+  "rows": 2,
+  "known_price": 2,
+  "total_amount": 4020255.11,
+  "total_vol": 349700.0,
+  "holders": [
+   "余大权",
+   "程义"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260915",
+   "20261015"
+  ],
+  "name": "常青股份"
+ },
+ {
+  "ts_code": "000656.SZ",
+  "people": 3,
+  "rows": 6,
+  "known_price": 6,
+  "total_amount": 3190249.45,
+  "total_vol": 2647800.0,
+  "holders": [
+   "李根",
+   "杨鹏",
+   "郭伟"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260930"
+  ],
+  "name": "金科股份"
+ },
+ {
+  "ts_code": "000078.SZ",
+  "people": 8,
+  "rows": 8,
+  "known_price": 8,
+  "total_amount": 3131340.11,
+  "total_vol": 2078100.0,
+  "holders": [
+   "史晓明",
+   "张晓鹏",
+   "张翼飞",
+   "张锋",
+   "李爽",
+   "车汉澍",
+   "金戈",
+   "金锐"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260923"
+  ],
+  "name": "ST海王"
+ },
+ {
+  "ts_code": "002456.SZ",
+  "people": 2,
+  "rows": 2,
+  "known_price": 2,
+  "total_amount": 3001298.08,
+  "total_vol": 419200.0,
+  "holders": [
+   "周亮",
+   "曾兆豪"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260827"
+  ],
+  "name": "欧菲光"
+ },
+ {
+  "ts_code": "301078.SZ",
+  "people": 3,
+  "rows": 3,
+  "known_price": 1,
+  "total_amount": 2837320.0,
+  "total_vol": 2358700.0,
+  "holders": [
+   "侍光磊",
+   "徐卫红",
+   "江苏博思达企业信息咨询有限公司"
+  ],
+  "holder_types": [
+   "C",
+   "G"
+  ],
+  "dates": [
+   "20260817"
+  ],
+  "name": "孩子王"
+ },
+ {
+  "ts_code": "920168.BJ",
+  "people": 2,
+  "rows": 3,
+  "known_price": 3,
+  "total_amount": 2788333.41,
+  "total_vol": 179331.0,
+  "holders": [
+   "刘威",
+   "刘国学"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260724",
+   "20260923",
+   "20261015"
+  ],
+  "name": "通宝光电"
+ },
+ {
+  "ts_code": "603927.SH",
+  "people": 2,
+  "rows": 2,
+  "known_price": 2,
+  "total_amount": 2651701.2,
+  "total_vol": 204000.0,
+  "holders": [
+   "左春",
+   "蔡宏"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260729"
+  ],
+  "name": "中科软"
+ },
+ {
+  "ts_code": "688478.SH",
+  "people": 2,
+  "rows": 2,
+  "known_price": 1,
+  "total_amount": 2646620.57,
+  "total_vol": 64625.0,
+  "holders": [
+   "郑一鸣",
+   "李辉"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260910",
+   "20261012"
+  ],
+  "name": "晶升股份"
+ },
+ {
+  "ts_code": "920187.BJ",
+  "people": 2,
+  "rows": 2,
+  "known_price": 2,
+  "total_amount": 2499262.4,
+  "total_vol": 123000.0,
+  "holders": [
+   "项建武",
+   "项春潮"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260903"
+  ],
+  "name": "通领科技"
+ },
+ {
+  "ts_code": "600187.SH",
+  "people": 7,
+  "rows": 7,
+  "known_price": 7,
+  "total_amount": 1887022.88,
+  "total_vol": 1443900.0,
+  "holders": [
+   "丁宏伟",
+   "刘国虎",
+   "姜卓",
+   "庄建龙",
+   "张音心",
+   "李炜亮",
+   "胡朔晨"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260724",
+   "20261008"
+  ],
+  "name": "*ST国中"
+ },
+ {
+  "ts_code": "300832.SZ",
+  "people": 2,
+  "rows": 3,
+  "known_price": 3,
+  "total_amount": 1854400.0,
+  "total_vol": 40000.0,
+  "holders": [
+   "张蕾",
+   "李婷华"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260825"
+  ],
+  "name": "新产业"
+ },
+ {
+  "ts_code": "688720.SH",
+  "people": 3,
+  "rows": 3,
+  "known_price": 3,
+  "total_amount": 1787500.0,
+  "total_vol": 35000.0,
+  "holders": [
+   "赵建龙",
+   "陈小华",
+   "向文胜"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260731",
+   "20260804"
+  ],
+  "name": "艾森股份"
+ },
+ {
+  "ts_code": "920640.BJ",
+  "people": 6,
+  "rows": 6,
+  "known_price": 6,
+  "total_amount": 1648900.0,
+  "total_vol": 65000.0,
+  "holders": [
+   "付景超",
+   "党作红",
+   "常国亮",
+   "朱克元",
+   "蔡亚娟",
+   "雷杰"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260723"
+  ],
+  "name": "富士达"
+ },
+ {
+  "ts_code": "002480.SZ",
+  "people": 5,
+  "rows": 5,
+  "known_price": 5,
+  "total_amount": 1183905.52,
+  "total_vol": 231200.0,
+  "holders": [
+   "王钒宇",
+   "翟潇雨",
+   "贾秀英",
+   "郑宇",
+   "陈思遥"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260929"
+  ],
+  "name": "新筑股份"
+ },
+ {
+  "ts_code": "300176.SZ",
+  "people": 3,
+  "rows": 4,
+  "known_price": 2,
+  "total_amount": 1037274.0,
+  "total_vol": 1786100.0,
+  "holders": [
+   "卢宇轩",
+   "朱龙华",
+   "黄平"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260930"
+  ],
+  "name": "鸿特科技"
+ },
+ {
+  "ts_code": "601005.SH",
+  "people": 5,
+  "rows": 5,
+  "known_price": 5,
+  "total_amount": 638823.4,
+  "total_vol": 530200.0,
+  "holders": [
+   "李海峰",
+   "林长春",
+   "王虎祥",
+   "谢超",
+   "陈应明"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260930"
+  ],
+  "name": "重庆钢铁"
+ },
+ {
+  "ts_code": "920519.BJ",
+  "people": 2,
+  "rows": 2,
+  "known_price": 2,
+  "total_amount": 625793.7,
+  "total_vol": 66000.0,
+  "holders": [
+   "汪希领",
+   "王育斌"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260731"
+  ],
+  "name": "万德股份"
+ },
+ {
+  "ts_code": "000801.SZ",
+  "people": 6,
+  "rows": 6,
+  "known_price": 5,
+  "total_amount": 620343.88,
+  "total_vol": 1624791.0,
+  "holders": [
+   "四川九洲创业投资有限责任公司",
+   "张邯",
+   "程旗",
+   "罗来所",
+   "谷雨",
+   "邓明兴"
+  ],
+  "holder_types": [
+   "C",
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260903"
+  ],
+  "name": "四川九洲"
+ },
+ {
+  "ts_code": "600022.SH",
+  "people": 6,
+  "rows": 6,
+  "known_price": 6,
+  "total_amount": 385300.0,
+  "total_vol": 298000.0,
+  "holders": [
+   "唐邦秀",
+   "李洪建",
+   "郭小龙",
+   "高凤娟",
+   "王培文",
+   "郭伟达"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260925",
+   "20261001"
+  ],
+  "name": "山东钢铁"
+ },
+ {
+  "ts_code": "002155.SZ",
+  "people": 18,
+  "rows": 21,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 77898285.0,
+  "holders": [
+   "中国国际金融股份有限公司自营类(含做市)账户",
+   "中国国际金融股份有限公司衍生品业务自营性质账户",
+   "中国国际金融股份有限公司资管业务账户",
+   "周剑",
+   "周建平",
+   "戴雪灵",
+   "招商证券国际有限公司",
+   "招商证券股份有限公司金融市场投资总部股票投资部",
+   "招商证券股份有限公司金融市场投资总部衍生投资部",
+   "方宋林",
+   "曾俊芳",
+   "王伟",
+   "王钰丰",
+   "罗元梅",
+   "舒超",
+   "詹桂林",
+   "招商证券金融市场投资总部衍生投资部",
+   "袁添玟"
+  ],
+  "holder_types": [
+   "C",
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260728",
+   "20260909"
+  ],
+  "name": "湖南黄金"
+ },
+ {
+  "ts_code": "002064.SZ",
+  "people": 8,
+  "rows": 8,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 42940473.0,
+  "holders": [
+   "余晓媚",
+   "国泰君安国际控股有限公司",
+   "国泰海通证券股份有限公司权益客需部",
+   "国泰海通证券股份有限公司权益投资部",
+   "国泰海通证券股份有限公司证券衍生品投资部",
+   "国泰海通资产管理有限公司",
+   "海通国际证券集团有限公司",
+   "蔡之荣"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260922"
+  ],
+  "name": "华峰化学"
+ },
+ {
+  "ts_code": "000552.SZ",
+  "people": 6,
+  "rows": 6,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 37479826.0,
+  "holders": [
+   "上海国泰海通证券资产管理有限公司",
+   "国泰君安国际控股有限公司",
+   "国泰海通证券股份有限公司权益客需部",
+   "国泰海通证券股份有限公司证券衍生品投资部",
+   "姚建军",
+   "白玉龙"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260917"
+  ],
+  "name": "甘肃能化"
+ },
+ {
+  "ts_code": "600362.SH",
+  "people": 9,
+  "rows": 9,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 26404844.0,
+  "holders": [
+   "中国国际金融股份有限公司自营(含做市)账户",
+   "中国国际金融股份有限公司资管业务账户",
+   "刘辉",
+   "周韬",
+   "杜阳鹏",
+   "郭国卿",
+   "黄建琪",
+   "黄强",
+   "黄芳恩"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260807"
+  ],
+  "name": "江西铜业"
+ },
+ {
+  "ts_code": "600058.SH",
+  "people": 10,
+  "rows": 10,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 17410846.0,
+  "holders": [
+   "中信证券股份有限公司自营业务股票账户",
+   "刘净余",
+   "吴晓亮",
+   "孟庆娟",
+   "方联姿",
+   "沈艺宁",
+   "王旭东",
+   "赵树林",
+   "郭伟",
+   "魏立臣"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260804"
+  ],
+  "name": "五矿发展"
+ },
+ {
+  "ts_code": "600818.SH",
+  "people": 7,
+  "rows": 7,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 16333600.0,
+  "holders": [
+   "北京乾瑞翔科技有限公司",
+   "北海永亨海融投资有限公司",
+   "北海永亨科技有限公司",
+   "北海科源创业服务有限公司",
+   "北海红芯芯片技术有限公司",
+   "北海银河供应链管理有限公司",
+   "广西永亨投资集团有限公司"
+  ],
+  "holder_types": [
+   "C"
+  ],
+  "dates": [
+   "20260803"
+  ],
+  "name": "ST中路"
+ },
+ {
+  "ts_code": "300929.SZ",
+  "people": 3,
+  "rows": 10,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 12250149.0,
+  "holders": [
+   "王凤仙",
+   "王根九",
+   "王健业"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260727",
+   "20260731",
+   "20260825",
+   "20260901",
+   "20261016"
+  ],
+  "name": "华骐环保"
+ },
+ {
+  "ts_code": "300638.SZ",
+  "people": 9,
+  "rows": 10,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 12016083.0,
+  "holders": [
+   "中信证券股份有限公司自营业务股票账户",
+   "中信证券股份有限公司资产管理业务股票账户",
+   "周慧萍",
+   "张涛",
+   "朱丽娟",
+   "李毅",
+   "王蕊",
+   "程庆富",
+   "陈姣"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260807"
+  ],
+  "name": "广和通"
+ },
+ {
+  "ts_code": "600499.SH",
+  "people": 4,
+  "rows": 4,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 11443079.0,
+  "holders": [
+   "上海国泰海通证券资产管理有限公司",
+   "国泰君安国际控股有限公司",
+   "国泰海通证券股份有限公司权益客需部",
+   "国泰海通证券股份有限公司证券衍生品投资部"
+  ],
+  "holder_types": [
+   "C"
+  ],
+  "dates": [
+   "20260827"
+  ],
+  "name": "科达制造"
+ },
+ {
+  "ts_code": "600827.SH",
+  "people": 5,
+  "rows": 5,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 8849113.0,
+  "holders": [
+   "上海国泰海通资产管理有限公司、国泰海通证券股份有限公司资管营运管理部",
+   "国泰君安国际控股有限公司",
+   "国泰海通证券股份有限公司权益客需部",
+   "国泰海通证券股份有限公司证券衍生品投资部",
+   "桂水发"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260925"
+  ],
+  "name": "百联股份"
+ },
+ {
+  "ts_code": "002554.SZ",
+  "people": 2,
+  "rows": 3,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 6000000.0,
+  "holders": [
+   "张中炜、林娜",
+   "林娜"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260915"
+  ],
+  "name": "惠博普"
+ },
+ {
+  "ts_code": "003008.SZ",
+  "people": 2,
+  "rows": 3,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 5291077.0,
+  "holders": [
+   "仵博",
+   "陕西华富新能源有限公司"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260723"
+  ],
+  "name": "开普检测"
+ },
+ {
+  "ts_code": "601127.SH",
+  "people": 2,
+  "rows": 2,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 4150066.0,
+  "holders": [
+   "张正萍",
+   "重庆小康控股有限公司"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260925"
+  ],
+  "name": "赛力斯"
+ },
+ {
+  "ts_code": "603733.SH",
+  "people": 2,
+  "rows": 4,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 2904487.0,
+  "holders": [
+   "王敏文",
+   "王敏良"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260728",
+   "20261016"
+  ],
+  "name": "仙鹤股份"
+ },
+ {
+  "ts_code": "600340.SH",
+  "people": 6,
+  "rows": 6,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 2433100.0,
+  "holders": [
+   "庄永",
+   "王文学",
+   "赵威",
+   "钟坚",
+   "陈怀洲",
+   "黎毓珊"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260812"
+  ],
+  "name": "*ST华幸"
+ },
+ {
+  "ts_code": "000612.SZ",
+  "people": 9,
+  "rows": 9,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 1576800.0,
+  "holders": [
+   "中国银河证券股份有限公司创新投资总部账户",
+   "中国银河证券股份有限公司权益投资总部账户",
+   "张丽娟",
+   "张伟刚",
+   "拓刘毅",
+   "楼琦",
+   "浙商证券股份有限公司",
+   "童建中",
+   "许子怡"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260924"
+  ],
+  "name": "焦作万方"
+ },
+ {
+  "ts_code": "688157.SH",
+  "people": 2,
+  "rows": 3,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 1271284.0,
+  "holders": [
+   "熊开阔",
+   "汪斌"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260724",
+   "20260917"
+  ],
+  "name": "松井股份"
+ },
+ {
+  "ts_code": "000688.SZ",
+  "people": 6,
+  "rows": 6,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 1095100.0,
+  "holders": [
+   "中信·明达6期证券投资集合资金信托计划",
+   "中信·朴石7期管理型证券投资集合资金信托计划",
+   "中信朴石1期管理型证券投资集合资金信托计划",
+   "中信衍航1号管理型证券投资集合资金信托计划",
+   "王沛然",
+   "锐进58源乐晟证券投资集合资金信托计划"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260731"
+  ],
+  "name": "国城矿业"
+ },
+ {
+  "ts_code": "301533.SZ",
+  "people": 2,
+  "rows": 4,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 880000.0,
+  "holders": [
+   "严华",
+   "夏峰"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260907",
+   "20260916"
+  ],
+  "name": "威马农机"
+ },
+ {
+  "ts_code": "688155.SH",
+  "people": 2,
+  "rows": 2,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 787066.0,
+  "holders": [
+   "潘延庆",
+   "王颖琳"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260916"
+  ],
+  "name": "先惠技术"
+ },
+ {
+  "ts_code": "002169.SZ",
+  "people": 4,
+  "rows": 4,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 444200.0,
+  "holders": [
+   "冯斯克",
+   "周理德",
+   "孙小营",
+   "广发证券股权衍生品业务部自营账户"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260916"
+  ],
+  "name": "智光电气"
+ },
+ {
+  "ts_code": "600903.SH",
+  "people": 8,
+  "rows": 8,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 402200.0,
+  "holders": [
+   "余安民",
+   "刘永基",
+   "徐曼",
+   "李伟杰",
+   "王秀",
+   "申伟",
+   "谭棱文",
+   "贵阳市工业投资有限公司"
+  ],
+  "holder_types": [
+   "C",
+   "P"
+  ],
+  "dates": [
+   "20260917"
+  ],
+  "name": "贵州燃气"
+ },
+ {
+  "ts_code": "002192.SZ",
+  "people": 2,
+  "rows": 3,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 311413.0,
+  "holders": [
+   "张长虹",
+   "计阳先生的配偶"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260812",
+   "20260821"
+  ],
+  "name": "融捷股份"
+ },
+ {
+  "ts_code": "301316.SZ",
+  "people": 2,
+  "rows": 2,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 302100.0,
+  "holders": [
+   "余浩",
+   "常金安"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20260908",
+   "20260921"
+  ],
+  "name": "慧博云通"
+ },
+ {
+  "ts_code": "002803.SZ",
+  "people": 2,
+  "rows": 2,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 268500.0,
+  "holders": [
+   "庄浩",
+   "陆它山"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20261008"
+  ],
+  "name": "吉宏股份"
+ },
+ {
+  "ts_code": "301429.SZ",
+  "people": 3,
+  "rows": 3,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 207400.0,
+  "holders": [
+   "唐道远",
+   "张勇",
+   "王斌"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260814"
+  ],
+  "name": "森泰股份"
+ },
+ {
+  "ts_code": "601528.SH",
+  "people": 2,
+  "rows": 2,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 160000.0,
+  "holders": [
+   "盛丽丹",
+   "黄斐"
+  ],
+  "holder_types": [
+   "G"
+  ],
+  "dates": [
+   "20260915"
+  ],
+  "name": "瑞丰银行"
+ },
+ {
+  "ts_code": "920675.BJ",
+  "people": 7,
+  "rows": 20,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 156297.0,
+  "holders": [
+   "何鹏",
+   "刘明均",
+   "张瑶红",
+   "樊良",
+   "许昌龙",
+   "邓杰财",
+   "陈静岗"
+  ],
+  "holder_types": [
+   "G",
+   "P"
+  ],
+  "dates": [
+   "20261015"
+  ],
+  "name": "秉扬科技"
+ },
+ {
+  "ts_code": "605336.SH",
+  "people": 2,
+  "rows": 2,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 136480.0,
+  "holders": [
+   "国金证券股份有限公司资管产品账户",
+   "国金证券股份有限公司金融创新部账户"
+  ],
+  "holder_types": [
+   "C"
+  ],
+  "dates": [
+   "20260916"
+  ],
+  "name": "*ST帅电"
+ },
+ {
+  "ts_code": "301505.SZ",
+  "people": 4,
+  "rows": 4,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 128700.0,
+  "holders": [
+   "刘立新",
+   "周涵伟",
+   "王单妮",
+   "马里"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260910"
+  ],
+  "name": "苏州规划"
+ },
+ {
+  "ts_code": "002628.SZ",
+  "people": 2,
+  "rows": 22,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 90800.0,
+  "holders": [
+   "谢东",
+   "谢玉婷"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20261015"
+  ],
+  "name": "成都路桥"
+ },
+ {
+  "ts_code": "688051.SH",
+  "people": 4,
+  "rows": 4,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 90440.0,
+  "holders": [
+   "任敬顺",
+   "康煜权",
+   "李灏",
+   "王瑜"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260724"
+  ],
+  "name": "佳华科技"
+ },
+ {
+  "ts_code": "301486.SZ",
+  "people": 7,
+  "rows": 15,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 25300.0,
+  "holders": [
+   "俞晓琳",
+   "刘少斌",
+   "刘庆红",
+   "林新珠",
+   "欧竹林",
+   "葛佩传",
+   "鲍家丰"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260915"
+  ],
+  "name": "致尚科技"
+ },
+ {
+  "ts_code": "688693.SH",
+  "people": 2,
+  "rows": 2,
+  "known_price": 0,
+  "total_amount": null,
+  "total_vol": 2600.0,
+  "holders": [
+   "曾浩",
+   "肖智轶"
+  ],
+  "holder_types": [
+   "P"
+  ],
+  "dates": [
+   "20260821"
+  ],
+  "name": "锴威特"
+ }
+]

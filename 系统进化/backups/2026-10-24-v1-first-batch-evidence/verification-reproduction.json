@@ -1,0 +1,35 @@
+{
+  "verified_at": "2026-10-24T23:05:22.059181+08:00",
+  "copy_source": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-24-v1-first-batch-evidence/verification",
+  "copied_to": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/delivered-replay-4e9c85ff",
+  "runs": [
+    {
+      "script": "run_parent_verification.py",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/delivered-replay-4e9c85ff/run_parent_verification.py",
+        "--label",
+        "delivery-replay"
+      ],
+      "actual_exit_code": 0,
+      "runroot": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/delivered-replay-4e9c85ff/delivery-replay-20261024T150511Z-e49b1012"
+    },
+    {
+      "script": "parent_known_boundary_probe.py",
+      "command": [
+        "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+        "-B",
+        "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/delivered-replay-4e9c85ff/parent_known_boundary_probe.py"
+      ],
+      "actual_exit_code": 1,
+      "runroot": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/delivered-replay-4e9c85ff/parent-boundary-20261024T150521Z-a3ce94ee"
+    }
+  ],
+  "core_cases": 790,
+  "subtests": 65,
+  "boundary_passed": 84,
+  "boundary_failed": 2,
+  "synthetic_only": true,
+  "production_certified": false
+}

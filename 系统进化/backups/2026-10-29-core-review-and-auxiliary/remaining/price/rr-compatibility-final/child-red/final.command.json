@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a/.venv/bin/python",
+    "-B",
+    "/Users/chenyang/.hermes/cache/scratch/premarket-all-rr-fixtures-20261029/run_rr_guarded.py",
+    "final"
+  ],
+  "pytest_argv": [
+    "tests/test_canghai_rr_scope_20261023.py",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/premarket-all-rr-fixtures-20261029/basetemp/final",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/premarket-all-rr-fixtures-20261029/final.xml",
+    "-q",
+    "--tb=short"
+  ],
+  "guards": {
+    "/Users/chenyang/.hermes/cache/scratch/premarket-all-price-20261029/run_price_guarded.py": "e0ff3a085871e81e4415be5bec34063a275f358920836dd2cb26d260c6e3e371",
+    "/Users/chenyang/.hermes/cache/scratch/chart-pool-fix-20261029-093948/run_guarded.py": "9c302a01fdfacf623338f41b771b925b7ddd9955cc43173576725e58bbd68818"
+  },
+  "env": {
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "pre_collection": true
+}

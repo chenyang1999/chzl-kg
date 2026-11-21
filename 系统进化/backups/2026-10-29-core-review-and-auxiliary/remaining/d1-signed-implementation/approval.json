@@ -1,0 +1,16 @@
+{
+  "approved_at": "2026-10-29T16:19:13.973342+08:00",
+  "user_words": "批准上条两段差异及必要代码接线，仅做隔离验证 该批的都批了，别问了。继续干就完事了。",
+  "target": "skills/main_decision_v1/SKILL.md",
+  "before_sha256": "72bc196a0690af6d5a5a74efaa33a9f7c1e9683eeafd5efb47fbac7215d50f2b",
+  "approved_candidate_sha256": "3eb4f6695151edc5422ca3ffabccf84f2fce9b347406a46d5ec43193fe3bce5c",
+  "approved_patch_sha256": "c8511761d80b257dad33483df252b966aaa61e06045ae013556da01076022429",
+  "hunks": 2,
+  "scope": "Both displayed D1 skill changes and necessary existing-code wiring, synthetic isolated acceptance only; no repeated approval request for this batch",
+  "not_authorized": [
+    "real model/market/production recovery",
+    "account access/trading or budget changes",
+    "SOUL/credentials/configuration/schedule changes"
+  ],
+  "git_index_sha256": "c24736dd938685a85db19301280d8b9fdafdf6fb2bab56a056068dc026df152b"
+}

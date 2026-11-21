@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-10-29T16:29:48.267032+08:00",
+  "scope": "Approved D1 skill applied + unchanged accepted price/RR implementation; not a live-market or universal instrument certification",
+  "skill_application": "skill-application.json",
+  "approved_skill_sha256": "3eb4f6695151edc5422ca3ffabccf84f2fce9b347406a46d5ec43193fe3bce5c",
+  "price_acceptance": "../price/rr-compatibility-final/closure.json",
+  "price_frozen_cases": 154,
+  "price_current_source_matches": true,
+  "no_price_suite_rerun": true,
+  "price03_engineering_scope_completed": true,
+  "price02_remaining": "Complete real-day price-band/ref-price applicability not certified; maintain explicit gap, no unapproved new price policy",
+  "r6_final_accepted_at": "2026-10-29T16:06:38.867079+08:00",
+  "r6_research_sources_match_accepted_version": true,
+  "r6_existing_joint_cases": 120,
+  "r6_joint_is_historical_due_to_expected_D1_skill_change": true,
+  "d1_code_writer": "deleg_c652dc81/sa-0-ef5fb80b",
+  "d1_code_implementation_acceptance": false,
+  "reused_evidence_does_not_certify_natural_adoption": true,
+  "real_model_market_account_or_trade_run": false
+}

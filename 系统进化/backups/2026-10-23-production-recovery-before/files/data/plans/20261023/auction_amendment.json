@@ -1,0 +1,18 @@
+{
+  "schema_version": "amendment_v1",
+  "amendment_type": "auction",
+  "trade_date": "20261023",
+  "generated_at": "2026-10-23T09:31:08+08:00",
+  "source_agent": "P1-auction-calibration",
+  "ref_watchlist_plan": {
+    "path": "data/plans/20261023/watchlist_plan.json",
+    "schema_version": "watchlist_plan_v1",
+    "generated_at": "2026-10-23T06:51:36+08:00"
+  },
+  "status": "timeout_no_amendment",
+  "confidence": 0,
+  "data_health_severity": 2,
+  "items": [],
+  "user_briefing": null,
+  "notes": "canghai-plan P1 超时降级；observe-only；execute 不 reload；不交易、不新增标的、不做 tighten_exit。主控首次时钟已于2026-10-23 09:29:01 CST超出09:29硬截止，本执行者首核09:30:22+08:00；不补MCP、不重跑研究。正式plan同日且通过trading.schema.watchlist_plan.WatchlistPlan验证，generated_at=2026-10-23T06:51:36+08:00，execution_pool=0、watch_pool=0，原plan交易决策=no_trade，未改plan。本地竞价快照存在，captured_at=2026-10-23T09:28:07+08:00、status=ok、source=tushare_stk_auction，pool_auction=74条（bare-code去重74），其中价或昨收非正/零值16条；market_sentiment含NaN，不可当有效读数。已按bare-code比较覆盖：plan两池为空，缺口列表=[]；参考价与快照昨收逐票核对0只，不适用，不声称校准通过或覆盖率100%。research_summary.orchestrator_status=partial；plan.meta.research_completion_passed=False；data_health_severity=2取自research_summary.fetch_global_severity=2，研究状态partial；不把partial改写为complete。本地data/runtime/trade_cal_cache.json包含20261023=True，仅为本地缓存交易日证据，未联网刷新。items=[]只因超时无有效修订，不能据此判断符合预期。快照仅作事后参考，不是09:29前生效修订；空池不从情绪篮子拼候选。"
+}

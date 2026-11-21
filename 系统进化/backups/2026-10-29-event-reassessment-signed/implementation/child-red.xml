@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="21" time="8.721" timestamp="2026-10-29T10:40:29.377235+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_real_detector_cli_to_runtime_and_duplicate" time="0.540" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_cli_rejection_preserves_last_plan[exit]" time="0.557" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_cli_rejection_preserves_last_plan[empty]" time="0.546" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_cli_rejection_preserves_last_plan[protected]" time="0.587" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_cli_rejection_preserves_last_plan[old]" time="0.529" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_cli_rejection_preserves_last_plan[missing_md]" time="0.542" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_cli_rejection_preserves_last_plan[coverage]" time="0.529" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_cli_rejection_preserves_last_plan[all_pass]" time="0.563" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_cli_rejection_preserves_last_plan[drift]" time="0.271" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_direct_event_cli_refuses_bad_binding[future]" time="0.476" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_direct_event_cli_refuses_bad_binding[wrong_day]" time="0.486" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_direct_event_cli_refuses_bad_binding[unknown]" time="0.628" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_direct_event_cli_refuses_bad_binding[source_drift]" time="0.434" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_direct_event_cli_refuses_bad_binding[event_version]" time="0.405" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_legacy_default_detector_never_launches_owner" time="0.101" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_validated_delivery_failure_retries_without_model" time="0.416" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_proposed_wrapper_overlay_uses_real_detector_entry" time="0.388" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_event_cli_future_weekend_is_rejected_before_lock" time="0.106" /><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_bad_plan_does_not_erase_detection" time="0.100"><failure message="AssertionError: assert False&#10; +  where False = exists()&#10; +    where exists = (PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_bad_plan_does_not_erase_d0/app') / 'data/research/20261029/retreat_reversal.json').exists">box = (PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_bad_plan_does_not_erase_d0/app'), '20261029',...local-ab5f84870f40301edb689dd4bc8b85c4401fb9978c661a93f3357a5ab591967e', 'paste_collapse_char_threshold': '2000', ...})
+
+    def test_bad_plan_does_not_erase_detection(box):
+        root,date,base,canonical,run,env=box
+        canonical.write_text('{broken')
+        p=run();assert p.returncode==1
+&gt;       assert (root/f'data/research/{date}/retreat_reversal.json').exists()
+E       AssertionError: assert False
+E        +  where False = exists()
+E        +    where exists = (PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_bad_plan_does_not_erase_d0/app') / 'data/research/20261029/retreat_reversal.json').exists
+
+tests/pipeline/test_intraday_event_reassessment.py:252: AssertionError</failure></testcase><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_missing_index_is_not_a_third_core_gate" time="0.195"><failure message="AssertionError: Traceback (most recent call last):&#10;    File &quot;/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_missing_index_is_not_a_th0/app/scripts/plan/run_retreat_reversal.py&quot;, line 137, in &lt;module&gt;&#10;      sys.exit(main())&#10;               ^^^^^^&#10;    File &quot;/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_missing_index_is_not_a_th0/app/scripts/plan/run_retreat_reversal.py&quot;, line 105, in main&#10;      v = owner.bind_reversal_event(args.date, v, inputs)&#10;          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;    File &quot;/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_missing_index_is_not_a_th0/app/scripts/plan/ensure_watchlist_plan.py&quot;, line 529, in bind_reversal_event&#10;      raise ValueError(&quot;index source observation unavailable&quot;)&#10;  ValueError: index source observation unavailable&#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python', '-B', 'scripts/plan/run_retreat_reversa...ent\n    raise ValueError(&quot;index source observation unavailable&quot;)\nValueError: index source observation unavailable\n').returncode">box = (PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_missing_index_is_not_a_th0/app'), '20261029',...local-ab5f84870f40301edb689dd4bc8b85c4401fb9978c661a93f3357a5ab591967e', 'paste_collapse_char_threshold': '2000', ...})
+
+    def test_missing_index_is_not_a_third_core_gate(box):
+        root,date,base,canonical,run,env=box
+        path=root/'verdict.json';v=json.loads(path.read_text())
+        v['index_pct']=None;v['source_time_quality']['index']={}
+        path.write_text(json.dumps(v))
+&gt;       p=run();assert p.returncode==0,p.stderr
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Traceback (most recent call last):
+E           File "/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_missing_index_is_not_a_th0/app/scripts/plan/run_retreat_reversal.py", line 137, in &lt;module&gt;
+E             sys.exit(main())
+E                      ^^^^^^
+E           File "/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_missing_index_is_not_a_th0/app/scripts/plan/run_retreat_reversal.py", line 105, in main
+E             v = owner.bind_reversal_event(args.date, v, inputs)
+E                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           File "/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_missing_index_is_not_a_th0/app/scripts/plan/ensure_watchlist_plan.py", line 529, in bind_reversal_event
+E             raise ValueError("index source observation unavailable")
+E         ValueError: index source observation unavailable
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python', '-B', 'scripts/plan/run_retreat_reversa...ent\n    raise ValueError("index source observation unavailable")\nValueError: index source observation unavailable\n').returncode
+
+tests/pipeline/test_intraday_event_reassessment.py:262: AssertionError</failure></testcase><testcase classname="tests.pipeline.test_intraday_event_reassessment" name="test_failed_raw_proposal_is_retained" time="0.258"><failure message="assert 0 == 1&#10; +  where 0 = len([])">box = (PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-event-red-1039/test_failed_raw_proposal_is_re0/app'), '20261029',...local-ab5f84870f40301edb689dd4bc8b85c4401fb9978c661a93f3357a5ab591967e', 'paste_collapse_char_threshold': '2000', ...})
+
+    def test_failed_raw_proposal_is_retained(box):
+        root,date,base,canonical,run,env=box
+        p=run('protected');assert p.returncode==1
+        logs=root/f'data/logs/research_shell/{date}'
+        proposals=list(logs.glob('D1_event_*/proposal.json'))
+&gt;       assert len(proposals)==1
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+tests/pipeline/test_intraday_event_reassessment.py:272: AssertionError</failure></testcase></testsuite></testsuites>

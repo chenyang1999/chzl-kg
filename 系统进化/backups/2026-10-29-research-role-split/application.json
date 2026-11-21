@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-29T12:42:05.374140+08:00",
+  "target": "/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md",
+  "user_approval": "批准这份研究角色身份差异，并继续实施",
+  "actual_sha256": "02e14bd405246a3ed45c8bc1e2a78635018397b8a4b934798c226fee3ac0cb10",
+  "equals_approved_candidate": true,
+  "ownership_and_discipline_unchanged": true,
+  "native_loader_reads_actual_target": true,
+  "known_initialization_probes_blocked": [
+    {
+      "event": "subprocess.Popen",
+      "kind": "git_version_probe"
+    },
+    {
+      "event": "open",
+      "kind": "scratch_env_probe"
+    }
+  ],
+  "unexpected_guard_violations": [],
+  "index_unchanged": true,
+  "models_network_or_business_run": false,
+  "process_level_recursion_prevention_proven": false,
+  "natural_adoption_proven": false,
+  "effective_on": "new research sessions; no hot reload",
+  "earlier_strict_preflight_failures_retained": true,
+  "applied_and_verified": true
+}

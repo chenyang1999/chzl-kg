@@ -1,0 +1,244 @@
+--- a/skills/analyze_capital_flow_v1/SKILL.md
++++ b/skills/analyze_capital_flow_v1/SKILL.md
+@@ -22,6 +22,10 @@
+ 
+ 四维统合 **北向 / 主力 / 游资 / ETF+期货** 时序，输出板块与个股资金约束，供 R2/R5/D1 消费。
+ 
++**北向仅作可选参考**：缺失、口径不可比或延迟时，仅如实记录北向缺口，不升级为整体资金失效、整体置信度归零或全局禁新仓。其余必要数据、逐票资金确认与时效要求沿现有契约，不新增必要维度、评分公式或数值门槛；真正必要输入缺失仍不得认定完成或通过。必要性未明文定义处须列为契约缺口，不擅自补定义，也不据此声称已满足全部开仓条件。
++
++**接口可用性与净买入语义分开**：`moneyflow_hsgt` 有行、当日尚未落库和可信净买入不可得不是同一状态。可得成交总额、原字段值与实际数据日独立留在来源证据，不能因净额不可得写“接口关闭/北向全空”；`north_money` / `hgt` / `sgt` 等原字段未经口径核实不能当净买入；已核为成交总额（Buy+Sell）的值也不得跨口径拼成净流入趋势。净买入未核实时，对应净额/净额趋势仍为 null，写语义缺口；可用成交额只作成交活跃度参考，不补造买卖方向。
++
+ **禁止**: 风格(R1)、板块排序(R2)、个股画像(R5)、hard_reject(R6)。
+ 
+ ---
+@@ -82,7 +86,7 @@
+ 
+ 1. 读 manifest；severity≥2 时在 JSON 标注 `data_health`  
+ 1.5. **读 `data/raw/YYYYMMDD/overseas_snapshot.json`（v1.3 新增·必做）** — 提取 `us_stocks`（MU/NVDA/AVGO/AMD/TSM/AAPL/MSFT/META 等）与美股指数（SPX/IXIC/SOX）隔夜涨跌，写入 `overseas_core_stocks` 段，并在 md 落盘的「外部传导」节给出：*美股半导体/存储方向(MU/NVDA/AVGO/AMD/TSM)隔夜涨跌 → 今日 A 股存储/CPO/半导体链情绪压制或提振* 的判断。数据源来自 `overseas_snapshot.json::us_stocks`（无该文件则标 `overseas_stale: true`，不编造数值）
+-2. 拉北向 5/10/20 日趋势 → `northbound`  
++2. 尝试拉北向 5/10/20 日趋势 → `northbound`（可选参考；缺失写 null、实际日期与缺口，不影响其余研究继续）  
+ 3. 板块主力净流入排名 → `main_force`
+ 4. **vibe-trading 交叉核实(硬调用)** — 对 R2 候选票池(6-15 只)逐票并行调:
+    - `get_block_trades(code, days=30)` → `block_trades[]` = {trade_date, price, volume, amount, premium_pct, buyer_seat, seller_seat}
+@@ -109,7 +113,7 @@
+ 
+ ## 降级
+ 
+-- 北向延迟 → 用最近有效交易日，标注 `stale`  
++- 北向延迟 → 仅在口径可信时引用最近有效交易日并标实际日期/缺口；无可信值写 null，不用旧值冒充当日或用代理冒充净额  
+ - 子 skill 失败 → 对应字段空数组，不阻塞主 JSON 落盘
+ 
+ ---
+@@ -230,50 +234,51 @@
+ ```yaml
+ # R7 落盘前必填的三时间字段
+ generated_at: "ISO8601+08:00"        # 本次落盘时刻(机器时)
+-resolved_trade_date: "YYYYMMDD"      # 实际数据归属交易日(可能 = T-1)
+-staleness_status: ok | partial | stale | unavailable
++resolved_trade_date: "YYYYMMDD"      # 其余已用必要资金证据的实际归属日，不拿缺失北向代填
++staleness_status: ok | partial | stale | unavailable  # 资金数据质量，不等于研究完成状态
+ stale_threshold_hours: 24             # 硬阈值
+ unavailable_reason: ""                # 当 status=unavailable 时必填
+ ```
+ 
+-**staleness 计算与状态机**(由 R7 LLM 在写盘前自动算):
++**完成状态与数据质量分开**：顶层 `status` 表示研究工作是否完成；只有其余现有必需工作及交付已完成才可写 `complete`，不能仅因尝试过或有 JSON 就算完成。北向缺失写 `northbound.status=unavailable`，未取得的数值/序列、`northbound.resolved_trade_date` 与 `northbound.trading_gap` 如实为 null，并写 `northbound.unavailable_reason`；有日期/交易日缺口则保留实值。各维保留来源与实际日期，不伪造统一日期。顶层 `degraded` / `data_health` / `staleness_status` 如实表达质量缺口，但北向单维缺失不得自动把顶层状态设为 `unavailable`、研究工作设为未完成或整体 `confidence` 设为零；也不得把必要数据真正失效洗为正常。整体置信度按已有真实评价保留，未评价为 null，真实零保留零；不新造汇总公式或为缺失补分。
++
++**北向参考数据的时效状态机**（原交易日缺口分档只作用于北向，不充当整体资金门禁）:
+ 
+ ```
+ # 主口径: 交易日缺口(trading_gap)—— 小时数会误伤周一/长假(64h 的周五数据其实是最新 T-1)
+-trading_gap = trade_date 与 resolved_trade_date 之间的「交易日」间隔
++trading_gap = trade_date 与 northbound.resolved_trade_date 之间的「交易日」间隔
++# 采用沪深港通适用交易日；不能仅凭A股开市判定北向当天应有数据
+              (0 = T-1 或当日 → 数据就是最新可得; 1 = T-2 缺一档; 2 = T-3 缺两档; ...)
+ # 用 tushare trade_cal(或 manifest 可见的最早交易日)数交易日, 不算自然日/周末
+-
+-if trading_gap <= 0:     status = "ok"        # 周一盘前用上周五数据 = 正常, 绝非 stale
+-elif trading_gap == 1:   status = "partial"   # T-2, 真降级一档
+-elif trading_gap == 2:   status = "stale"     # T-3, 衰减 0.7
+-else:                    status = "unavailable"
+-  → unavailable_reason = "northbound_data_lag_{gap}days"
+-  → 整体 confidence = 0 (消费者应走降级)
+-
+-# 副口径(仅写 note, 不进状态机): hours_since_data = (generated_at - resolved_trade_date 当日 15:00) 小时
++# 北向日期未知时不计算交易日缺口/年龄，保留 null 与原因，不借其它维度日期代填
++
++if trading_gap <= 0:     northbound.status = "ok"        # 周一盘前用上周五数据 = 正常, 绝非 stale
++elif trading_gap == 1:   northbound.status = "partial"   # T-2, 北向参考降级一档
++elif trading_gap == 2:   northbound.status = "stale"     # T-3, 仅标北向参考陈旧
++else:                    northbound.status = "unavailable"
++  → northbound.unavailable_reason = "northbound_data_lag_{gap}days"
++  → 保留其余资金证据及整体真实评价，不自动覆盖整体 confidence
++
++# 副口径(仅写 note, 不进状态机): hours_since_data = (generated_at - northbound.resolved_trade_date 当日 15:00) 小时
+ # 周一盘前它天然是 ~64h(周末), 不代表数据旧 —— 不要用小时数直接定 status
+ ```
+ 
+ **硬约束(新增强制项)**:
+-1. 当 `generated_at.date < trade_date + 06:00` 视为**严重错位**,直接 `status=unavailable`,写 `unavailable_reason="generated_at_before_trade_date_06am"`,**不得**让下游(D1/R6)按 ok 消费
++1. 当 `generated_at.date < trade_date + 06:00` 视为**严重错位**,直接 `staleness_status=unavailable`,写 `unavailable_reason="generated_at_before_trade_date_06am"`,**不得**让下游(D1/R6)按 ok 消费；本项是整份产物的原有时间约束，不因北向可选而豁免
+ 2. 文件名必须带 trade_date 后缀:`R7_capital_flow_{trade_date}.json`(老路径 `R7_capital_flow.json` 保留作 soft link 指向当日)
+ 3. `resolved_trade_date ∈ {trade_date, T-1}` 为**正常**(尤其周一 T-1=上周五);仅当 resolved 早于 T-1 才写 `cross_date_mismatch=true`。**禁止**把正常的 T-1 误判为 mismatch
+ 4. `staleness_status` 字段**不得为 null**,**不得省略**
+ 
+ **消费契约**(供 D1 / R6 消费):
+-- D1 在 §Step 0 读 R7 时,先看 `staleness_status`:
+-  - `ok` → 正常消费
+-  - `partial` → 消费但 `risk_limits.position_cap_pct` 衰减 ×0.95
+-  - `stale` → 消费但 `position_cap_pct` 衰减 ×0.85,且在 `meta.position_cap_source` 追加 `r7_stale_override`
+-  - `unavailable` → 跳过 R7 资金维度,`risk_limits.target_total_position_pct` 走 R1 默认 0.50
++- D1 分开核对研究完成、具体维度质量和交易资格；北向仅参考，不能仅凭北向缺失/延迟或其造成的质量标记激活 `R7_STALE`、否认其余资金证据或机械改仓；不新增默认资金/仓位，不抬有效零预算。其余维度的原有资格、时效与仓位约束保持不变，必要资金数据真正失效仍拒绝新仓。
++- R6 的 complete-only 输入定义和逐模式完整性保持不变；只有其余必需研究确已完成时，R7 才可如实 `status=complete`，北向参考缺口仍须披露。不得把原 partial/degraded、空反证或未评对象改成通过。
+ 
+ **降级**:
+-- 北向数据完全拉空(Tushare `moneyflow_hsgt` 错)→ `staleness_status=unavailable`,但仍写盘(填空数组),让 E1 复盘能感知
++- 北向净买入参考不可得（净额真缺失或口径未核实，不等于接口关闭/成交总额全空）→ 仅北向净额参考标 `northbound.status=unavailable`，缺失净额/净额趋势为 null，已有成交额原值及实际日期独立保留，明确接口状态与语义缺口；仍写其余已取得证据，不升级整体失效
+ - 硬约束 1 触发时,`degraded=true` 必须写入 JSON 顶层
+ 
+ **验收**:
+-- 盘后 `tests/check_r7_staleness.py` 校验四件事:`generated_at` 不早于 `trade_date 06:00`、`staleness_status` 非空、文件名为 `R7_capital_flow_{trade_date}.json`、`unavailable_reason` 在 status=unavailable 时非空。任一失败 → orchestrator 标 R7 失败,触发重跑
++- 主汇总实际调用 `src/research/contract_checks.py::check_r7_staleness`；独立脚本实际位于 `tests/checks/check_r7_staleness.py`，不是 `tests/check_r7_staleness.py`。两者保留顶层时效状态、数据归属日、原生成时间约束和 unavailable 原因检查；不会按北向缺失计算整体置信度或触发交易禁令。命名/别名与分维缺口须另按本契约核对，不能声称独立脚本已实现文件名验收；校验通过不证明必要资金齐全或获准交易。
+ 
+ ---
+ 
+--- a/docs/agents/R7-资金面Agent.md
++++ b/docs/agents/R7-资金面Agent.md
+@@ -26,14 +26,16 @@
+   - data/raw/YYYYMMDD/mcp_health.json
+ 
+ required (07:30 全量 · 按需调 MCP):
+-  - Tushare MCP:  moneyflow_hsgt / hk_hold / top_list / top_inst / margin_detail
++  - Tushare MCP:  top_list / top_inst / margin_detail
+   - DataPro MCP:  板块/个股主力资金、超大单拆分
+   - XTick MCP:    /doc/hot/moneyflow
+ 
+ required (11:35 增量 · 按需调 MCP):
+-  - Tushare MCP:  moneyflow_hsgt（北向盘中）
+   - DataPro MCP:  板块上午主力净流
+   - XTick MCP:    盘中实时资金流
++
++optional (北向仅参考，缺失不升级为整体失效或全局禁新):
++  - Tushare MCP:  moneyflow_hsgt / hk_hold（按真实发布频率引用；日频数据/季度持股不能当作实时净买入）
+ 
+ optional (上游 research):
+   - data/research/YYYYMMDD/R1_style.json         # 风格 → 仓位上限参考
+@@ -63,10 +65,14 @@
+   "status": "complete",
+   "confidence": 0.0,
+   "northbound": {
+-    "net_flow_today": 0,
+-    "trend_5d": [],
+-    "trend_10d": [],
+-    "trend_20d": []
++    "status": "unavailable",
++    "resolved_trade_date": null,
++    "trading_gap": null,
++    "unavailable_reason": "未取得可信同口径北向净买入；接口/成交额可得性另列",
++    "net_flow_today": null,
++    "trend_5d": null,
++    "trend_10d": null,
++    "trend_20d": null
+   },
+   "main_force": {
+     "sector_flows": {},
+@@ -86,12 +92,14 @@
+ }
+ ```
+ 
++顶层 `status` 表示必需研究工作的完成情况，数据质量由 `degraded` / `data_health` / `staleness_status` 与分维来源/日期/缺口表达。仅北向缺失不自动使整体 unavailable、整体 confidence 归零或必需研究未完成；其余必要输入和阈值沿现有契约，必要性未明文定义处列契约缺口，不自行新增维度/门槛。未评价 confidence 为 null，真实零保留零，不新造汇总公式；本示例的北向 null 不代表其余维度已被验证齐全。
++
+ 11:35 增量批次：同文件追加/覆盖 `midday_increment` 段（不重算全量 `northbound`/`main_force` 历史）:
+ 
+ ```json
+ "midday_increment": {
+   "generated_at": "2026-07-04T11:40:00+08:00",
+-  "northbound_intraday": 0,
++  "northbound_intraday": null,
+   "main_force_morning": {},
+   "notes": ""
+ }
+@@ -121,7 +129,7 @@
+ | R2 主线板块 | `main_force.top_inflow_sectors` → 验证主线资金是否配合 |
+ | R5 情报深挖 | 个股主力/游资字段 → 画像资金侧 |
+ | R6 反证 | 资金与 R2/R3 是否矛盾 |
+-| D1 主决策 | 北向趋势 + 板块资金 → 总仓位与 execution_pool 最后确认 |
++| D1 主决策 | 板块/个股资金按现有契约确认；北向趋势仅作可选参考，缺失不单独禁新或机械改仓 |
+ | P2 午盘修订 | `midday_increment` → 上午资金变盘 flag |
+ 
+ ---
+@@ -130,6 +138,7 @@
+ 
+ | 数据源死了 | 应对 |
+ |-----------|------|
++| 仅北向缺失/延迟 | 保留其余资金证据；北向缺失值为 null，列来源、实际日期或未知日期与缺口，不升级整体失效或全局禁新 |
+ | DataPro 死 | 降级为 Tushare + XTick，`data_health: degraded` |
+ | XTick 死 | 07:30 仍可用 Tushare+DataPro；11:35 增量整批跳过 |
+ | Tushare 死 | 仅 DataPro 口径，标注 severity |
+--- a/skills/main_decision_v1/SKILL.md
++++ b/skills/main_decision_v1/SKILL.md
+@@ -95,6 +95,8 @@
+ 2. 读取 `data/user_preferences.yaml` 全文
+ 3. 若 `orchestrator_status == "failed"` 或 R2 artifact 缺失 → **中止**，不写 plan
+ 4. 若 `fetch_global_severity >= 3` → 仍可出 plan，但 `mode` 必须为 `dry_run`，`autonomous_trading_enabled=false`
++
++**北向仅参考**：先核 R7 主产物的研究完成状态，再核各维数据质量与具体缺口。北向缺失/延迟、其导致的质量降级或 summary 对 `degraded` 的状态映射，不单独构成研究未完成或全局禁新依据；不能用这些标记自动清零整体置信度、改仓或补默认资金。顶层/北向实际日期分开，缺失数值保留 null、真实零及有效零预算原样保留。其余必需资金证据、R6 完整性与全部既有门禁仍独立核验；必要数据真缺失仍拒绝新仓，必要性未定义处列契约缺口、不自造要求或认定已通过。旧产物不因新规则被改写为 complete 或抬高零值，须由研究 owner 真实重评，再由 D1 独立裁决。
+ 
+ ### Step 0.4 — 近期错题本注入（快回路 · 2026-08-31 新增）
+ 
+@@ -1094,27 +1096,27 @@
+   "position_cap_derivation": {
+     "r1_style_signal": "震荡分化",
+     "r1_raw_cap": 0.60,
+-    "r7_northbound_strength": "neutral",   // strong_inflow / neutral / strong_outflow
+-    "r7_cap_adjustment": 0.0,              // strong_inflow +0.05, strong_outflow -0.10
++    "r7_northbound_strength": null,        // 可选参考；缺失为 null，不写 neutral
++    "r7_cap_adjustment": null,             // 缺失跳过该项；有效参考原 strong_inflow +0.05 / strong_outflow -0.10 不变
+     "r1_sentiment_score": 75,              // 来自 R1
+     "emotion_cycle_phase": "贪婪",          // 来自 Step 0.5
+     "emotion_cap_override": 0.60,          // 情绪联动:贪婪 → 顶格 0.60
+     "r2_main_lines_count": 2,
+     "main_lines_cap_multiplier": 1.0,      // 1 main=0.8, 2 main=1.0, 3 main=1.1
+     "final_position_cap_pct": 0.60,
+-    "derivation_formula": "min(r1_raw=0.60, r7_adj=0.60, emotion_override=0.60) × main_lines_mult=1.0 = 0.60",
++    "derivation_formula": "min(r1_raw=0.60, emotion_override=0.60) × main_lines_mult=1.0 = 0.60；北向缺失项未参与",
+     "derivation_confidence": 0.85
+   }
+ }
+ ```
+ 
+-**公式**:
++**公式**（缺北向时跳过北向项，其余原公式/数字不变；上游有效零预算或禁令优先，不得用本示例的 clamp 下限恢复仓位）:
+ ```
+ raw_cap = R1 风格给出的 cap
+-r7_adj = raw_cap + r7_cap_adjustment
++r7_adj = None if r7_cap_adjustment is None else raw_cap + r7_cap_adjustment
+ emotion_override = 0.60 if phase==贪婪/狂热 else 0.55 if phase==极恐 else raw_cap
+ main_mult = {1: 0.8, 2: 1.0, 3: 1.1}.get(main_lines_count, 0.7)
+-final = min(raw_cap, r7_adj, emotion_override) * main_mult
++final = min(raw_cap, emotion_override) * main_mult if r7_cap_adjustment is None else min(raw_cap, r7_adj, emotion_override) * main_mult
+ clamp(final, 0.20, 0.85)
+ ```
+ 
+@@ -1184,8 +1186,8 @@
+     },
+     {
+       "code": "R7_STALE",
+-      "description": "R7 staleness_status = unavailable → 不开仓(资金维度失效)",
+-      "active": true                       // 命中时, plan.md 顶部必须显式标 "⚠️ R7 数据失效,今日 no_trade"
++      "description": "R7 主产物缺失或现有契约要求的必要资金证据真正失效 → 不开仓；仅北向参考缺失/延迟不触发",
++      "active": false                      // 必须按实际必要数据缺口判定；真触发仍在顶部展示禁新仓
+     },
+     {
+       "code": "GLOBAL_SEVERITY_3",
+@@ -1213,8 +1215,8 @@
+ 
+ **降级**:
+ - R1 缺 → `R1_FAIL` 自动 `active: true`
+-- R7 缺 → `R7_STALE` 自动 `active: true`
+-- 全部不交易条件自动激活,plan 报 `no_trade_mode` 状态
++- R7 主产物缺失或现有契约要求的必要资金证据真正失效 → `R7_STALE` 为 `active: true`；仅北向参考缺失/延迟不触发，顶层 unavailable 须核其实际原因，不把其余有效资金证据一并抹去
++- 不交易条件按各自原触发条件逐条核实；不因北向缺失联动激活其他条件，任一真实 active 项仍按既有禁新仓与研究观察契约处理
+ 
+ ### Step 2.7 — 跷跷板强对冲减仓（2026-09-06 周末会议纪要落地）
+ 

@@ -1,0 +1,24 @@
+..................................................F.....F............... [ 76%]
+......................                                                   [100%]
+=================================== FAILURES ===================================
+_ test_second_distinct_incomplete_target_can_be_reviewed_without_restarting_base _
+tests/pipeline/test_r6_local_revision.py:476: in test_second_distinct_incomplete_target_can_be_reviewed_without_restarting_base
+    result = n.s.run_r6_revision(n.root, DATE, 'second-target',
+../../../.hermes/cache/scratch/r6-local-delivery-20261029-v4/cases/test_second_distinct_incomplet0/app/scripts/research/pipeline_state.py:540: in run_r6_revision
+    verified_delivery(root, date, unit, kind, owner)
+../../../.hermes/cache/scratch/r6-local-delivery-20261029-v4/cases/test_second_distinct_incomplet0/app/scripts/research/pipeline_artifacts.py:304: in verified_delivery
+    raise ValueError("delivery state trade_date mismatch")
+E   ValueError: delivery state trade_date mismatch
+__ test_successive_modes_retry_preserves_previous_acceptance_and_six_sources ___
+tests/pipeline/test_r6_local_revision.py:600: in test_successive_modes_retry_preserves_previous_acceptance_and_six_sources
+    with pytest.raises(OSError):n.s.run_r6_revision(n.root,DATE,'second-mode',**kwargs)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/r6-local-delivery-20261029-v4/cases/test_successive_modes_retry_pr0/app/scripts/research/pipeline_state.py:540: in run_r6_revision
+    verified_delivery(root, date, unit, kind, owner)
+../../../.hermes/cache/scratch/r6-local-delivery-20261029-v4/cases/test_successive_modes_retry_pr0/app/scripts/research/pipeline_artifacts.py:304: in verified_delivery
+    raise ValueError("delivery state trade_date mismatch")
+E   ValueError: delivery state trade_date mismatch
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_r6_local_revision.py::test_second_distinct_incomplete_target_can_be_reviewed_without_restarting_base
+FAILED tests/pipeline/test_r6_local_revision.py::test_successive_modes_retry_preserves_previous_acceptance_and_six_sources
+2 failed, 92 passed in 11.35s

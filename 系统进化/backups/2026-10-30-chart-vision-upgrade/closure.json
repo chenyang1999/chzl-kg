@@ -1,0 +1,256 @@
+{
+  "archived_at": "2026-10-30T01:05:49.309034+08:00",
+  "scope": "user-approved isolated chart module upgrade; not a trading/alpha acceptance",
+  "model_api_id": "deepseek-v4.1-flash-1017",
+  "response_model": "deepseek-flash",
+  "api_provider": "apiyi",
+  "source_current_sha256": {
+    "src/agents/chart_vision_agent.py": "63af32c87e7b5b3ace7665a4f67b073308bafa75902f433d72d9a594ef362a87",
+    "src/analytics/lwc_chart_renderer.py": "1425e9f4a913397f626cb7010f3201bbfd446dcbf010acb39c83868049a8bea8",
+    "scripts/fetch/run_chart_vision_snapshot.py": "d25761062e19777743f5f718511c6c43444b2b44b8225ab88d19de3309e724f8",
+    "src/research/candidate_pool.py": "7c366f34a987a58eca213bb764a3673c43f3b0d025ff2c5bd6cbd4f680573b6a",
+    "src/mcp/tools.py": "d2356d8aaa6d8b699180a55ec38f3633efacd32965e32285714c95fa36769238",
+    "web/scripts/headless/lwc_headless_render.mjs": "48c0851ef7e9a4da9c96532086324885349cbc42baf99946403d27d38307003e",
+    "web/scripts/headless/chart_template.html": "608791f5427090c1fec86fe6e96602360c677666ab2c003b33fd89d9f92d68dc",
+    "tests/pipeline/test_chart_candidate_routing_guardrail.py": "3a37396cd4bc3b244a35bfaaffcd7ad377d988f891837e8f9df1deaa0b27b748",
+    "src/mcp/charts_server.py": "28ecd3b61b4012976491f0bbcc99acbf7bb546421a41441d09c7c4515a7c40b7",
+    "web/src/components/chart/ChartVisionPanel.jsx": "21f75abad336ebe874fd2dc2f4410fb5cbdd6fb75e4d3020c689b221b1bcf3b3",
+    "src/analytics/chart_input.py": "f035d034d6376a21ec3f4c7cf78ee135d97b3b7efd460d01dfdc75bfca1851b0",
+    "src/analytics/chart_batch.py": "8c870e4e8cc0832b844440e5fca127c5511c5eee89ce6b674c60c58020973da9",
+    "tests/pipeline/test_chart_vision_upgrade.py": "bf9a6f706c14a9ef5b96a18330a1c1f9e53b9f5913f5d010171296ed8de7afbc"
+  },
+  "before_sha256": {
+    "src/agents/chart_vision_agent.py": "492c80b38ee2b77a66635b61948663c37ed31ca9b3a15e3dc19649781e3f3847",
+    "src/analytics/lwc_chart_renderer.py": "066852c98780a9cd8d6f2dea4ce7595a9f2224f603fab2fe7f933c28816cfae1",
+    "scripts/fetch/run_chart_vision_snapshot.py": "43c185b576e68958a9af3484c14e33e08eb2c05d18a1c54642e4fb547b0835cf",
+    "src/research/candidate_pool.py": "7b970336e44c639e14af3955a735e9a4d6dd82e696527c9f31803fc64cf44e96",
+    "src/mcp/tools.py": "dd1175d99988a389792cc8095c0f6dc2c1054c8c328532f7f9ccdf5477fd7156",
+    "web/scripts/headless/lwc_headless_render.mjs": "2b17e371e1bd81a3d730383bfea5013d8217afeec3a76ee568636c9c1f35354d",
+    "web/scripts/headless/chart_template.html": "6d089c080c5d64fee38b8a3a0faa95065e74700c3751853b9777f11a27d491c7",
+    "tests/pipeline/test_chart_candidate_routing_guardrail.py": "6c5ccd38e0e0281f3b07f08d9215d7ca299ef2b00c4b9d1b61ced248c390aeae",
+    "src/mcp/charts_server.py": "e053bcd6382fc31a7c96f3eea92986a9d88b71e6145b11528b39fb53316dc90a",
+    "web/src/components/chart/ChartVisionPanel.jsx": "fc5e863b2345044064d198b3ef89d63550727bfaa66b37c23280a15bd6a967d8"
+  },
+  "new_files": [
+    "src/analytics/chart_input.py",
+    "src/analytics/chart_batch.py",
+    "tests/pipeline/test_chart_vision_upgrade.py"
+  ],
+  "unit_passed": 27,
+  "unit_guard_violations": 0,
+  "live_symbols": 40,
+  "live_fresh_s": 122.315,
+  "live_reuse_s": 7.386,
+  "live_extra_model_calls_on_reuse": 0,
+  "live_failures": 0,
+  "render_worker_count": 2,
+  "fresh_native_mcp_verified": true,
+  "old_persistent_mcp_sessions_restarted": false,
+  "production_plan_and_old_chart_archive_unchanged": true,
+  "images": {
+    "002708.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_002708_SZ_20261030_005350_115108.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/002708.SZ.png",
+      "sha256": "5c951a86191528cda8a3913377638d901936edc37af02e5d42a559c118cb94af"
+    },
+    "002636.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_002636_SZ_20261030_005350_117375.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/002636.SZ.png",
+      "sha256": "bb7da16b4f4212614d1f8bddbc96212bd18dd5a87b45d12db78cab3d686561d7"
+    },
+    "600601.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_600601_SH_20261030_005351_727003.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/600601.SH.png",
+      "sha256": "795e1bc3b0fae9cd310b56fe921ae6685871bdf24ba61e0ca5c47c5537ea8ff5"
+    },
+    "300308.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_300308_SZ_20261030_005351_864222.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/300308.SZ.png",
+      "sha256": "40305072f4882d6f319be2b211fd852f8b6d61ec95f79a12c89bf18ac6cb6a6b"
+    },
+    "000670.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_000670_SZ_20261030_005352_610218.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/000670.SZ.png",
+      "sha256": "89f0e2910eb6d7c414346e0b11a9214a849b1315e5b52d5309edc1529232fa58"
+    },
+    "603986.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_603986_SH_20261030_005352_710235.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/603986.SH.png",
+      "sha256": "ac6ca79e7b5ba11363a48eab73b6d36c6254af0ed0f7a5c1aec6975beeedfe9b"
+    },
+    "000678.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_000678_SZ_20261030_005353_332322.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/000678.SZ.png",
+      "sha256": "c9fc755572598153a0b59f6cb97a94ede334816e80a9b1962149072bc22bd08a"
+    },
+    "002249.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_002249_SZ_20261030_005353_545784.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/002249.SZ.png",
+      "sha256": "bd0bbe900c7ee0a69ef583de27260df0fbcbde2765b13ffa3e5a308992b68416"
+    },
+    "605488.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_605488_SH_20261030_005354_125880.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/605488.SH.png",
+      "sha256": "6ac431dbdd678da84de610145902632dd83559f32ce06212cc68c788b1be4038"
+    },
+    "600353.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_600353_SH_20261030_005354_339938.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/600353.SH.png",
+      "sha256": "3446cd82e8173c2ccd0c90901acd9752a5ca5bfe685aab9605fd148f1bf1e8e8"
+    },
+    "002579.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_002579_SZ_20261030_005354_865883.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/002579.SZ.png",
+      "sha256": "7bd35040cbfc6ca99a8fb31f024725f0ce36ae00e8500826ab309f9b933149ae"
+    },
+    "300296.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_300296_SZ_20261030_005354_999048.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/300296.SZ.png",
+      "sha256": "6b3b96e09ebdf9e86a30758cb1f5168210b4ee6f63affcc06035092902bb3368"
+    },
+    "002009.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_002009_SZ_20261030_005355_662358.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/002009.SZ.png",
+      "sha256": "d7a7f27aaa7ebd5fb42ddaa8ecf934d3ea69fb9d46700ea660ab8c5082ccd49f"
+    },
+    "688787.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_688787_SH_20261030_005355_719840.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/688787.SH.png",
+      "sha256": "48b080c83527332e5c57ac82b7981db964c1e6f7378d238f81e5aece3bc6a364"
+    },
+    "300307.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_300307_SZ_20261030_005356_585880.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/300307.SZ.png",
+      "sha256": "9c6280b7604470e36635cc77bb182d662efcb696590f19691a9b742a7bd32df4"
+    },
+    "688825.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_688825_SH_20261030_005356_584757.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/688825.SH.png",
+      "sha256": "26a10e81b11954256905c1441576ee32001c7e893af51f32a60e65053776d9bd"
+    },
+    "002354.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_002354_SZ_20261030_005357_284139.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/002354.SZ.png",
+      "sha256": "9ed32d0cedf8be8980a257106af2d8a3658111ba11a65e0a4da992d1e940f528"
+    },
+    "301660.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_301660_SZ_20261030_005357_293340.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/301660.SZ.png",
+      "sha256": "9293831c76646efe5a97bc06c4749c7b740eb18dde37e231c63d016e1c46a345"
+    },
+    "603278.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_603278_SH_20261030_005358_011178.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/603278.SH.png",
+      "sha256": "3e0f3b60f68ca4b559f6fb2cee3ced24b92103f154b42eef0aa9a127b2079203"
+    },
+    "603933.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_603933_SH_20261030_005358_154525.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/603933.SH.png",
+      "sha256": "cd3145d814ba914a702fcbce2c8ea567fb7935f9c73e8b850cf35b73d893d0bc"
+    },
+    "001298.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_001298_SZ_20261030_005358_787834.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/001298.SZ.png",
+      "sha256": "87ad6d113b0f3268043dcd816d4e0afc71f994589759c27478fcf614072cbf34"
+    },
+    "301313.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_301313_SZ_20261030_005359_006390.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/301313.SZ.png",
+      "sha256": "1a8720fe7f3f55dd1e2686a094f622d03bac655a17c4a1174834704bdd5728e7"
+    },
+    "300115.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_300115_SZ_20261030_005359_587708.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/300115.SZ.png",
+      "sha256": "5cad84ab04257bd66806cc34631efc0a76cde44fcc2adab72d4a12c3a5defec0"
+    },
+    "003029.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_003029_SZ_20261030_005359_776038.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/003029.SZ.png",
+      "sha256": "126e20042ddae754cb699d4b4d2a104546d1a266d686a9188cae5f4c1e017190"
+    },
+    "688507.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_688507_SH_20261030_005400_643933.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/688507.SH.png",
+      "sha256": "b2912a70b17d37000f60833eb94daba95d2be142872bc4e83cef5c8f4e191742"
+    },
+    "688004.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_688004_SH_20261030_005400_766299.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/688004.SH.png",
+      "sha256": "3794054c491953283f18c5dcf1f64e3119af9652a8311799df0392d3eda1e23b"
+    },
+    "688322.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_688322_SH_20261030_005401_421007.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/688322.SH.png",
+      "sha256": "9a7287c9e7de9b36ec2b393297a4113177553f57ba3693436e6659d087da4ff9"
+    },
+    "002421.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_002421_SZ_20261030_005401_509133.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/002421.SZ.png",
+      "sha256": "5cde2ab135f1bf289c9f07318c79dc58cc1702553ccb87df4fa0b9b79b81a73a"
+    },
+    "300418.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_300418_SZ_20261030_005402_356855.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/300418.SZ.png",
+      "sha256": "e3ebf9078935020f1bf910fc7d41fff4dc57f170ec5098e680d328623930bb9b"
+    },
+    "300579.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_300579_SZ_20261030_005402_569273.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/300579.SZ.png",
+      "sha256": "ec6c633436c2a74b457a03c56db54b5e74f842cbd96914ccf2737944f7f5c8aa"
+    },
+    "603636.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_603636_SH_20261030_005403_258262.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/603636.SH.png",
+      "sha256": "68d8474e6ed7e1085b1d27b0146f5c2e696dddb7e33cbf3ff371fe9d778eba91"
+    },
+    "600487.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_600487_SH_20261030_005403_476219.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/600487.SH.png",
+      "sha256": "136495bfce67bd0fff56a193e5883e4da18b502b0392b730479f73ebabae0fc6"
+    },
+    "688008.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_688008_SH_20261030_005404_467468.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/688008.SH.png",
+      "sha256": "2a620b392f0a65cc9b1ecb1bd31a0fedec156fcad1fae99f5bd0944c82541b29"
+    },
+    "002929.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_002929_SZ_20261030_005404_243590.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/002929.SZ.png",
+      "sha256": "548f3d866755df9490726802a707f7e60a319ad9c6fd878cd5148c269b23cf1d"
+    },
+    "000823.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_000823_SZ_20261030_005405_146083.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/000823.SZ.png",
+      "sha256": "adce5c7d4181610500e19e37182788f7b360d9cb3545ff4b5da871d854fa5b41"
+    },
+    "002651.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_002651_SZ_20261030_005405_149849.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/002651.SZ.png",
+      "sha256": "4a4ed963b4d95ebf7df702ad1d255264c0d2e83d00fa0de204ed71b7ed6ef6a0"
+    },
+    "600178.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_600178_SH_20261030_005405_715783.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/600178.SH.png",
+      "sha256": "4084aa9ee97ddae934e170c31947f0c1eced01a38636be4bae17355e809579c8"
+    },
+    "688836.SH": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_688836_SH_20261030_005405_714968.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/688836.SH.png",
+      "sha256": "c16fb4d68ffd67aacf864b2dcf662bd741d03b61a045447dacdcc874e7c2bf75"
+    },
+    "002242.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_002242_SZ_20261030_005406_399392.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/002242.SZ.png",
+      "sha256": "571c2cf252c56dcb61d69772c2f1daf7056f3dc424a4cc7f45fa0581a92e6e62"
+    },
+    "300058.SZ": {
+      "original": "/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/live-batch-final/output/charts/lwc_kline_300058_SZ_20261030_005406_537489.png",
+      "archived": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-30-chart-vision-upgrade/images/300058.SZ.png",
+      "sha256": "000ae5e00ecf045e58f5f7b817dd7d548f088ad925b3ddbe54209fa09351d42b"
+    }
+  },
+  "no_buying_power_or_trade_permission_changes": true,
+  "no_credentials_or_global_model_config_changes": true,
+  "next_scheduled_production_adoption_verified": false,
+  "image_understanding_quality_not_profit_win_rate": true
+}

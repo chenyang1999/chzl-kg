@@ -1,0 +1,512 @@
+{
+  "test_function_checks": [
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_missing_scan_is_not_permission",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_scan_exception_fails_closed_even_simulation",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_scan_replacement_does_not_keep_old_success",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_scan_sise_requires_explicit_true",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_scan_only_known_matched_signal_passes",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_scan_errors_are_local_and_duplicate_evidence_rejected",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_breakout_reaches_trigger_and_confirm_with_ask_cap",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_trigger_invalid_numeric_is_not_defaulted",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_active_complex_predicate_explicitly_unsupported",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_full_schema_normal_positive_buy_intent_chain",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_serialized_plan_through_real_dispatch_registry_to_valid_intent",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_dispatch_preserves_legal_sell_with_missing_scan",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_buy_zone_normal_reclaim_is_not_globally_blocked",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_submitted_intent_uses_exact_proposed_limit_for_sizing",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_missing_ask_never_uses_last_or_plan_cap",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_insufficient_or_invalid_buy_budget_has_no_minimum_lot",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_sizing_is_bound_to_target_symbol_cash_and_remaining_position_room",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_executor_zero_quantity_never_calls_order_boundary",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_available_qty_never_uses_total_and_rejects_bool_nan",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_missing_available_qty_returns_zero",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_quote_refresh_does_not_invent_book_from_holdings",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_valid_quote_refresh_preserves_explicit_book",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_confirmed_scan_cannot_bypass_missing_breakout_even_with_force",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_unknown_or_zero_available_qty_cannot_generate_sell_intent",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_final_context_refuses_missing_or_invalid_executable_book",
+      "decorators_preserved": true,
+      "original_status_rejected_preserved": true,
+      "change": "authorized real rules and split first-rejection reasons; client/real JSONL assertions added"
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_missing_book_sell_fallback_cannot_become_order_intent",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_legal_sell_intent_not_blocked_by_missing_scan",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_selector_cheap_price_not_enough_but_confirmed_setup_passes",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_s3_trigger_quote_safety_20261024.py",
+      "function": "test_scan_fetch_failure_is_per_symbol_and_positive_neighbor_survives",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_import_is_pure_and_relocated",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_rr_engine_rounding_boundary",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_invalid_numerics_never_authorize",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_quote_cannot_fallback_to_last",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_exact_buy_price_recomputed_not_engine_rr",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_d1_disagreement_is_audit_not_zero_deviation_gate",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_multi_rule_must_select_then_each_rule_checked",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_scope_and_research_membership_survive_enrichment",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_legacy_migration_exact_source_and_idempotence",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_fail_then_pass_then_missing_refresh_is_not_sticky",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_external_qualification_survives_repeated_refresh",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_real_global_blockers_and_zero_budgets_preserved",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_actual_common_buy_blocks_only_bad_stock_and_sell_still_runs",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_other_entry_cannot_promote_watch_or_b",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_actual_common_buy_preserves_zero_budget",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_dispatch_global_gate_does_not_stop_legal_sell_or_research",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_actual_dispatch_mixed_rr_has_no_global_contagion",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_d1_actual_limit_not_cached_buy_zone_rr",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_original_sizing_1_2_3_not_changed",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_real_engine_formula_2r_and_1_8_threshold",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_main_writes_only_relocated_synthetic_plan_and_report",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_d1_watch_trigger_only_and_b_prices_are_not_overwritten",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_enrichment_preserves_invalid_d1_as_unknown_not_auto_repaired",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_all_registered_buy_entries_use_same_stock_gate",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_generated_entry_does_not_borrow_engine_rr_for_d1_exits",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_unverified_stock_cannot_bypass_by_just_changing_pool",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_stripped_engine_evidence_never_authorizes",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_explicit_stock_condition_only_blocks_its_target",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_invalid_or_global_condition_is_not_silently_ignored",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_canghai_rr_scope_20261023.py",
+      "function": "test_scoped_dispatch_keeps_good_buy_bad_sell_and_watch",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_schema_loader_watcher_dispatch_executor_context_positive_buy",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_loader_default_single_dispatch_with_real_context",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_preparation_does_not_construct_or_dispatch",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_two_watcher_rounds_each_dispatch_once_and_respect_count",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_requested_live_cannot_supply_plan_or_account_permission",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_stock_permission_not_filled_by_live_request_or_holdings",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_unbound_invalid_live_context_has_zero_client_calls",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_final_boundary_revalidates_invalid_authorization_snapshots",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_zero_missing_budget_cannot_buy_via_watcher_or_low_level",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_missing_zero_stock_budget_does_not_get_schema_positive_default",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_real_chain_and_direct_buy_gates",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_legal_explicit_sell_survives_zero_budget_and_missing_scan",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_sell_skips_only_buy_gates_not_final_safety",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_positive_actual_order_counts_survive_new_context",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_actual_positive_capacity_limits",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_dry_run_is_not_promotion_or_force_authority",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_readonly_context_and_actual_after_close_not_misclassified_as_orders",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_bad_canonical_not_old_loaded_and_restricted_not_promoted",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_force_simulate_cannot_add_authority_in_actual_executor",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_bound_context_must_match_current_request",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_accepted_notional_reserves_capacity_across_context_restart",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_modes_and_rejections_do_not_consume_live_order_count",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_malformed_journal_fails_buy_closed_but_not_explicit_exit",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_dry_run_does_not_create_buy_permission",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    },
+    {
+      "file": "tests/test_v1_integration_authorization_20261024.py",
+      "function": "test_loader_preserves_same_day_real_t_state",
+      "decorators_preserved": true,
+      "all_assertions_preserved_after_explicit_fixture_date_or_asset_normalization": true
+    }
+  ],
+  "checked_functions": 84,
+  "f1_11_byte_identical": true,
+  "normalization": "Only explicit trade_date=DATE on buy_allowed/set_scan_result and total_asset=200000 on FixtureContext. No assert predicate, threshold, quote or rule proportion normalized. The one authorized S3 method is explicitly adjudicated, not called unchanged."
+}

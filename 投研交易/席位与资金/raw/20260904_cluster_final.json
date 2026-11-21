@@ -1,0 +1,1077 @@
+[
+ {
+  "ts_code": "300929.SZ",
+  "n_holder": 2,
+  "amt_wan": 7573.9,
+  "detail": [
+   {
+    "holder": "王凤仙",
+    "vol": "1434400.0",
+    "px_est": 17.99,
+    "amt_wan": 2580.5,
+    "ann": "20260901",
+    "begin": "20260828",
+    "close": "20260901",
+    "type": "P",
+    "after_ratio": "8.1016"
+   },
+   {
+    "holder": "王根九",
+    "vol": "471700.0",
+    "px_est": 17.99,
+    "amt_wan": 848.6,
+    "ann": "20260901",
+    "begin": "20260827",
+    "close": "20260901",
+    "type": "P",
+    "after_ratio": "10.5918"
+   },
+   {
+    "holder": "王凤仙",
+    "vol": "1885640.0",
+    "px_est": 17.45,
+    "amt_wan": 3290.4,
+    "ann": "20260825",
+    "begin": "20260814",
+    "close": "20260825",
+    "type": "P",
+    "after_ratio": "6.9574"
+   },
+   {
+    "holder": "王根九",
+    "vol": "489600.0",
+    "px_est": 17.45,
+    "amt_wan": 854.4,
+    "ann": "20260825",
+    "begin": "20260814",
+    "close": "20260825",
+    "type": "P",
+    "after_ratio": "10.2155"
+   }
+  ],
+  "anns": [
+   "20260825",
+   "20260901"
+  ]
+ },
+ {
+  "ts_code": "688625.SH",
+  "n_holder": 5,
+  "amt_wan": 5992.3,
+  "detail": [
+   {
+    "holder": "金鹰优选251号集合资产管理计划",
+    "vol": "447444.0",
+    "px_est": 53.75,
+    "amt_wan": 2405.1,
+    "ann": "20260826",
+    "begin": "20260623",
+    "close": "20260825",
+    "type": "C",
+    "after_ratio": "0.1723"
+   },
+   {
+    "holder": "段淑丽",
+    "vol": "103697.0",
+    "px_est": 72.44,
+    "amt_wan": 751.2,
+    "ann": "20260826",
+    "begin": "20260623",
+    "close": "20260825",
+    "type": "G",
+    "after_ratio": "0.0399"
+   },
+   {
+    "holder": "张旭",
+    "vol": "124831.0",
+    "px_est": 72.16,
+    "amt_wan": 900.8,
+    "ann": "20260826",
+    "begin": "20260623",
+    "close": "20260825",
+    "type": "G",
+    "after_ratio": "0.0481"
+   },
+   {
+    "holder": "余志亮",
+    "vol": "103989.0",
+    "px_est": 72.24,
+    "amt_wan": 751.2,
+    "ann": "20260826",
+    "begin": "20260623",
+    "close": "20260825",
+    "type": "G",
+    "after_ratio": "0.04"
+   },
+   {
+    "holder": "陈映红",
+    "vol": "164940.0",
+    "px_est": 71.78,
+    "amt_wan": 1184.0,
+    "ann": "20260826",
+    "begin": "20260623",
+    "close": "20260825",
+    "type": "G",
+    "after_ratio": "0.0635"
+   }
+  ],
+  "anns": [
+   "20260826"
+  ]
+ },
+ {
+  "ts_code": "002083.SZ",
+  "n_holder": 2,
+  "amt_wan": 2293.0,
+  "detail": [
+   {
+    "holder": "高密安信投资管理股份有限公司",
+    "vol": "1963490.0",
+    "px_est": 10.49,
+    "amt_wan": 2059.7,
+    "ann": "20260901",
+    "begin": "20260715",
+    "close": "20260831",
+    "type": "C",
+    "after_ratio": "11.2113"
+   },
+   {
+    "holder": "孙小惠",
+    "vol": "228500.0",
+    "px_est": 10.21,
+    "amt_wan": 233.3,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "P",
+    "after_ratio": "3.1944"
+   }
+  ],
+  "anns": [
+   "20260827",
+   "20260901"
+  ]
+ },
+ {
+  "ts_code": "002568.SZ",
+  "n_holder": 3,
+  "amt_wan": 2242.1,
+  "detail": [
+   {
+    "holder": "喻晨",
+    "vol": "254800.0",
+    "px_est": 17.71,
+    "amt_wan": 451.3,
+    "ann": "20260901",
+    "begin": "20260721",
+    "close": "20260831",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "马良",
+    "vol": "505900.0",
+    "px_est": 17.71,
+    "amt_wan": 895.9,
+    "ann": "20260901",
+    "begin": "20260721",
+    "close": "20260831",
+    "type": "G",
+    "after_ratio": "0.1427"
+   },
+   {
+    "holder": "刘嘉瑞",
+    "vol": "505300.0",
+    "px_est": 17.71,
+    "amt_wan": 894.9,
+    "ann": "20260901",
+    "begin": "20260721",
+    "close": "20260831",
+    "type": "G",
+    "after_ratio": "0.1457"
+   }
+  ],
+  "anns": [
+   "20260901"
+  ]
+ },
+ {
+  "ts_code": "603312.SH",
+  "n_holder": 2,
+  "amt_wan": 2060.1,
+  "detail": [
+   {
+    "holder": "PAN SHU XIN",
+    "vol": "641900.0",
+    "px_est": 31.15,
+    "amt_wan": 1999.3,
+    "ann": "20260828",
+    "begin": "20260710",
+    "close": "20260827",
+    "type": "G",
+    "after_ratio": "2.2638"
+   },
+   {
+    "holder": "SHENG JIAN HUA",
+    "vol": "20400.0",
+    "px_est": 29.82,
+    "amt_wan": 60.8,
+    "ann": "20260828",
+    "begin": "20260710",
+    "close": "20260827",
+    "type": "G",
+    "after_ratio": "2.2565"
+   }
+  ],
+  "anns": [
+   "20260828"
+  ]
+ },
+ {
+  "ts_code": "000801.SZ",
+  "n_holder": 6,
+  "amt_wan": 2053.9,
+  "detail": [
+   {
+    "holder": "四川九洲创业投资有限责任公司",
+    "vol": "1572091.0",
+    "px_est": 12.67,
+    "amt_wan": 1991.8,
+    "ann": "20260903",
+    "begin": "20260611",
+    "close": "20260901",
+    "type": "C",
+    "after_ratio": "1.3176"
+   },
+   {
+    "holder": "张邯",
+    "vol": "10000.0",
+    "px_est": 11.0,
+    "amt_wan": 11.0,
+    "ann": "20260903",
+    "begin": "20260603",
+    "close": "20260901",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "程旗",
+    "vol": "15000.0",
+    "px_est": 12.83,
+    "amt_wan": 19.2,
+    "ann": "20260903",
+    "begin": "20260603",
+    "close": "20260901",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "罗来所",
+    "vol": "10000.0",
+    "px_est": 11.34,
+    "amt_wan": 11.3,
+    "ann": "20260903",
+    "begin": "20260603",
+    "close": "20260901",
+    "type": "G",
+    "after_ratio": "0.001"
+   },
+   {
+    "holder": "谷雨",
+    "vol": "9900.0",
+    "px_est": 12.04,
+    "amt_wan": 11.9,
+    "ann": "20260903",
+    "begin": "20260603",
+    "close": "20260901",
+    "type": "G",
+    "after_ratio": "0.001"
+   },
+   {
+    "holder": "邓明兴",
+    "vol": "7800.0",
+    "px_est": 10.95,
+    "amt_wan": 8.5,
+    "ann": "20260903",
+    "begin": "20260603",
+    "close": "20260901",
+    "type": "G",
+    "after_ratio": ""
+   }
+  ],
+  "anns": [
+   "20260903"
+  ]
+ },
+ {
+  "ts_code": "002192.SZ",
+  "n_holder": 2,
+  "amt_wan": 1967.1,
+  "detail": [
+   {
+    "holder": "张长虹",
+    "vol": "19800.0",
+    "px_est": 67.14,
+    "amt_wan": 132.9,
+    "ann": "20260821",
+    "begin": "20260731",
+    "close": "20260819",
+    "type": "P",
+    "after_ratio": "1.7892"
+   },
+   {
+    "holder": "张长虹",
+    "vol": "287813.0",
+    "px_est": 62.77,
+    "amt_wan": 1806.6,
+    "ann": "20260812",
+    "begin": "20260727",
+    "close": "20260730",
+    "type": "P",
+    "after_ratio": "1.7816"
+   },
+   {
+    "holder": "计阳配偶",
+    "vol": "3800.0",
+    "px_est": 72.4,
+    "amt_wan": 27.5,
+    "ann": "20260812",
+    "begin": "20260713",
+    "close": "20260713",
+    "type": "P",
+    "after_ratio": ""
+   }
+  ],
+  "anns": [
+   "20260812",
+   "20260821"
+  ]
+ },
+ {
+  "ts_code": "301078.SZ",
+  "n_holder": 3,
+  "amt_wan": 1712.4,
+  "detail": [
+   {
+    "holder": "侍光磊",
+    "vol": "400000.0",
+    "px_est": 7.26,
+    "amt_wan": 290.4,
+    "ann": "20260817",
+    "begin": "20260518",
+    "close": "20260817",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "徐卫红",
+    "vol": "1878800.0",
+    "px_est": 7.26,
+    "amt_wan": 1364.0,
+    "ann": "20260817",
+    "begin": "20260709",
+    "close": "20260817",
+    "type": "G",
+    "after_ratio": "0.2083"
+   },
+   {
+    "holder": "江苏博思达企业信息咨询有限公司",
+    "vol": "79943.0",
+    "px_est": 7.26,
+    "amt_wan": 58.0,
+    "ann": "20260817",
+    "begin": "20260709",
+    "close": "20260817",
+    "type": "C",
+    "after_ratio": "22.9271"
+   }
+  ],
+  "anns": [
+   "20260817"
+  ]
+ },
+ {
+  "ts_code": "002049.SZ",
+  "n_holder": 12,
+  "amt_wan": 1696.0,
+  "detail": [
+   {
+    "holder": "北京智路资产管理有限公司",
+    "vol": "79400.0",
+    "px_est": 62.88,
+    "amt_wan": 499.3,
+    "ann": "20260829",
+    "begin": "20260828",
+    "close": "20260828",
+    "type": "C",
+    "after_ratio": "0.0094"
+   },
+   {
+    "holder": "丁芝永",
+    "vol": "1800.0",
+    "px_est": 61.59,
+    "amt_wan": 11.1,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0002"
+   },
+   {
+    "holder": "王坤",
+    "vol": "2000.0",
+    "px_est": 61.59,
+    "amt_wan": 12.3,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0002"
+   },
+   {
+    "holder": "陈雄",
+    "vol": "2000.0",
+    "px_est": 61.59,
+    "amt_wan": 12.3,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0002"
+   },
+   {
+    "holder": "佟晓丹",
+    "vol": "20000.0",
+    "px_est": 61.59,
+    "amt_wan": 123.2,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0024"
+   },
+   {
+    "holder": "杨秋平",
+    "vol": "3600.0",
+    "px_est": 61.59,
+    "amt_wan": 22.2,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0004"
+   },
+   {
+    "holder": "翟应斌",
+    "vol": "4000.0",
+    "px_est": 61.59,
+    "amt_wan": 24.6,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0005"
+   },
+   {
+    "holder": "邬睿",
+    "vol": "8000.0",
+    "px_est": 61.59,
+    "amt_wan": 49.3,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0009"
+   },
+   {
+    "holder": "马宁辉",
+    "vol": "3200.0",
+    "px_est": 61.59,
+    "amt_wan": 19.7,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0004"
+   },
+   {
+    "holder": "岳超",
+    "vol": "21100.0",
+    "px_est": 61.59,
+    "amt_wan": 130.0,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0025"
+   },
+   {
+    "holder": "李天池",
+    "vol": "20000.0",
+    "px_est": 61.59,
+    "amt_wan": 123.2,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0024"
+   },
+   {
+    "holder": "陈杰",
+    "vol": "108600.0",
+    "px_est": 61.59,
+    "amt_wan": 668.9,
+    "ann": "20260827",
+    "begin": "20260826",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": "0.0129"
+   }
+  ],
+  "anns": [
+   "20260827",
+   "20260829"
+  ]
+ },
+ {
+  "ts_code": "301498.SZ",
+  "n_holder": 3,
+  "amt_wan": 1130.7,
+  "detail": [
+   {
+    "holder": "王鹏",
+    "vol": "7700.0",
+    "px_est": 39.31,
+    "amt_wan": 30.3,
+    "ann": "20260901",
+    "begin": "20260423",
+    "close": "20260901",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "杜士芳",
+    "vol": "25500.0",
+    "px_est": 39.27,
+    "amt_wan": 100.1,
+    "ann": "20260901",
+    "begin": "20260423",
+    "close": "20260901",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "秦华",
+    "vol": "254100.0",
+    "px_est": 39.37,
+    "amt_wan": 1000.3,
+    "ann": "20260901",
+    "begin": "20260423",
+    "close": "20260901",
+    "type": "G",
+    "after_ratio": ""
+   }
+  ],
+  "anns": [
+   "20260901"
+  ]
+ },
+ {
+  "ts_code": "002456.SZ",
+  "n_holder": 4,
+  "amt_wan": 601.2,
+  "detail": [
+   {
+    "holder": "申成哲",
+    "vol": "194900.0",
+    "px_est": 7.61,
+    "amt_wan": 148.3,
+    "ann": "20260829",
+    "begin": "20260717",
+    "close": "20260828",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "黄丽辉",
+    "vol": "199600.0",
+    "px_est": 7.61,
+    "amt_wan": 151.9,
+    "ann": "20260829",
+    "begin": "20260717",
+    "close": "20260828",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "曾兆豪",
+    "vol": "209900.0",
+    "px_est": 7.18,
+    "amt_wan": 150.7,
+    "ann": "20260827",
+    "begin": "20260717",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "周亮",
+    "vol": "209300.0",
+    "px_est": 7.18,
+    "amt_wan": 150.3,
+    "ann": "20260827",
+    "begin": "20260717",
+    "close": "20260826",
+    "type": "G",
+    "after_ratio": ""
+   }
+  ],
+  "anns": [
+   "20260827",
+   "20260829"
+  ]
+ },
+ {
+  "ts_code": "300010.SZ",
+  "n_holder": 2,
+  "amt_wan": 531.6,
+  "detail": [
+   {
+    "holder": "朱雅特",
+    "vol": "139300.0",
+    "px_est": 2.16,
+    "amt_wan": 30.1,
+    "ann": "20260805",
+    "begin": "20260730",
+    "close": "20260730",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "赵伯奇",
+    "vol": "1784000.0",
+    "px_est": 2.81,
+    "amt_wan": 501.5,
+    "ann": "20260805",
+    "begin": "20260507",
+    "close": "20260608",
+    "type": "G",
+    "after_ratio": ""
+   }
+  ],
+  "anns": [
+   "20260805"
+  ]
+ },
+ {
+  "ts_code": "301429.SZ",
+  "n_holder": 3,
+  "amt_wan": 351.8,
+  "detail": [
+   {
+    "holder": "王斌",
+    "vol": "25400.0",
+    "px_est": 16.96,
+    "amt_wan": 43.1,
+    "ann": "20260814",
+    "begin": "20260710",
+    "close": "20260813",
+    "type": "G",
+    "after_ratio": "0.1422"
+   },
+   {
+    "holder": "张勇",
+    "vol": "30700.0",
+    "px_est": 16.96,
+    "amt_wan": 52.1,
+    "ann": "20260814",
+    "begin": "20260710",
+    "close": "20260813",
+    "type": "G",
+    "after_ratio": "0.1302"
+   },
+   {
+    "holder": "唐道远",
+    "vol": "151300.0",
+    "px_est": 16.96,
+    "amt_wan": 256.6,
+    "ann": "20260814",
+    "begin": "20260710",
+    "close": "20260813",
+    "type": "G",
+    "after_ratio": "0.7958"
+   }
+  ],
+  "anns": [
+   "20260814"
+  ]
+ },
+ {
+  "ts_code": "600340.SH",
+  "n_holder": 6,
+  "amt_wan": 265.2,
+  "detail": [
+   {
+    "holder": "王文学",
+    "vol": "989300.0",
+    "px_est": 1.09,
+    "amt_wan": 107.8,
+    "ann": "20260812",
+    "begin": "20260519",
+    "close": "20260811",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "赵威",
+    "vol": "765100.0",
+    "px_est": 1.09,
+    "amt_wan": 83.4,
+    "ann": "20260812",
+    "begin": "20260519",
+    "close": "20260811",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "钟坚",
+    "vol": "156000.0",
+    "px_est": 1.09,
+    "amt_wan": 17.0,
+    "ann": "20260812",
+    "begin": "20260519",
+    "close": "20260811",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "陈怀洲",
+    "vol": "511000.0",
+    "px_est": 1.09,
+    "amt_wan": 55.7,
+    "ann": "20260812",
+    "begin": "20260519",
+    "close": "20260811",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "黎毓珊",
+    "vol": "2200.0",
+    "px_est": 1.09,
+    "amt_wan": 0.2,
+    "ann": "20260812",
+    "begin": "20260519",
+    "close": "20260811",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "庄永",
+    "vol": "9500.0",
+    "px_est": 1.09,
+    "amt_wan": 1.0,
+    "ann": "20260812",
+    "begin": "20260519",
+    "close": "20260811",
+    "type": "G",
+    "after_ratio": ""
+   }
+  ],
+  "anns": [
+   "20260812"
+  ]
+ },
+ {
+  "ts_code": "920187.BJ",
+  "n_holder": 2,
+  "amt_wan": 253.1,
+  "detail": [
+   {
+    "holder": "项建武",
+    "vol": "20000.0",
+    "px_est": 20.62,
+    "amt_wan": 41.2,
+    "ann": "20260904",
+    "begin": "20260605",
+    "close": "20260903",
+    "type": "G",
+    "after_ratio": "0.1503"
+   },
+   {
+    "holder": "项春潮",
+    "vol": "103000.0",
+    "px_est": 20.57,
+    "amt_wan": 211.9,
+    "ann": "20260904",
+    "begin": "20260605",
+    "close": "20260903",
+    "type": "G",
+    "after_ratio": "0.4609"
+   }
+  ],
+  "anns": [
+   "20260904"
+  ]
+ },
+ {
+  "ts_code": "300832.SZ",
+  "n_holder": 2,
+  "amt_wan": 185.4,
+  "detail": [
+   {
+    "holder": "李婷华",
+    "vol": "10000.0",
+    "px_est": 45.79,
+    "amt_wan": 45.8,
+    "ann": "20260825",
+    "begin": "20260721",
+    "close": "20260721",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "张蕾",
+    "vol": "20000.0",
+    "px_est": 45.98,
+    "amt_wan": 92.0,
+    "ann": "20260825",
+    "begin": "20260721",
+    "close": "20260721",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "张蕾",
+    "vol": "10000.0",
+    "px_est": 47.69,
+    "amt_wan": 47.7,
+    "ann": "20260825",
+    "begin": "20260723",
+    "close": "20260723",
+    "type": "G",
+    "after_ratio": ""
+   }
+  ],
+  "anns": [
+   "20260825"
+  ]
+ },
+ {
+  "ts_code": "002146.SZ",
+  "n_holder": 5,
+  "amt_wan": 113.6,
+  "detail": [
+   {
+    "holder": "吴秋云",
+    "vol": "440000.0",
+    "px_est": 1.17,
+    "amt_wan": 51.5,
+    "ann": "20260818",
+    "begin": "20260723",
+    "close": "20260817",
+    "type": "G",
+    "after_ratio": "0.0123"
+   },
+   {
+    "holder": "穆旸",
+    "vol": "360000.0",
+    "px_est": 1.17,
+    "amt_wan": 42.1,
+    "ann": "20260818",
+    "begin": "20260723",
+    "close": "20260817",
+    "type": "G",
+    "after_ratio": "0.01"
+   },
+   {
+    "holder": "隆小康",
+    "vol": "21000.0",
+    "px_est": 1.17,
+    "amt_wan": 2.5,
+    "ann": "20260818",
+    "begin": "20260723",
+    "close": "20260817",
+    "type": "G",
+    "after_ratio": "0.0303"
+   },
+   {
+    "holder": "邹家立",
+    "vol": "40000.0",
+    "px_est": 1.17,
+    "amt_wan": 4.7,
+    "ann": "20260818",
+    "begin": "20260723",
+    "close": "20260817",
+    "type": "G",
+    "after_ratio": "0.6108"
+   },
+   {
+    "holder": "王晓辉",
+    "vol": "110000.0",
+    "px_est": 1.17,
+    "amt_wan": 12.9,
+    "ann": "20260818",
+    "begin": "20260723",
+    "close": "20260817",
+    "type": "G",
+    "after_ratio": "0.0136"
+   }
+  ],
+  "anns": [
+   "20260818"
+  ]
+ },
+ {
+  "ts_code": "600328.SH",
+  "n_holder": 10,
+  "amt_wan": 109.3,
+  "detail": [
+   {
+    "holder": "王以飞",
+    "vol": "21300.0",
+    "px_est": 6.32,
+    "amt_wan": 13.5,
+    "ann": "20260808",
+    "begin": "20260521",
+    "close": "20260807",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "刘伟国",
+    "vol": "19000.0",
+    "px_est": 6.53,
+    "amt_wan": 12.4,
+    "ann": "20260808",
+    "begin": "20260525",
+    "close": "20260803",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "程序",
+    "vol": "18000.0",
+    "px_est": 6.39,
+    "amt_wan": 11.5,
+    "ann": "20260808",
+    "begin": "20260515",
+    "close": "20260515",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "许明",
+    "vol": "13500.0",
+    "px_est": 6.73,
+    "amt_wan": 9.1,
+    "ann": "20260808",
+    "begin": "20260519",
+    "close": "20260605",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "赵生强",
+    "vol": "14200.0",
+    "px_est": 6.39,
+    "amt_wan": 9.1,
+    "ann": "20260808",
+    "begin": "20260518",
+    "close": "20260527",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "邵正军",
+    "vol": "15400.0",
+    "px_est": 6.39,
+    "amt_wan": 9.8,
+    "ann": "20260808",
+    "begin": "20260520",
+    "close": "20260521",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "郭国庆",
+    "vol": "14600.0",
+    "px_est": 6.0,
+    "amt_wan": 8.8,
+    "ann": "20260808",
+    "begin": "20260518",
+    "close": "20260707",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "陈云泉",
+    "vol": "14500.0",
+    "px_est": 6.39,
+    "amt_wan": 9.3,
+    "ann": "20260808",
+    "begin": "20260519",
+    "close": "20260526",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "王广斌",
+    "vol": "15300.0",
+    "px_est": 6.65,
+    "amt_wan": 10.2,
+    "ann": "20260808",
+    "begin": "20260604",
+    "close": "20260623",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "周杰",
+    "vol": "26200.0",
+    "px_est": 6.0,
+    "amt_wan": 15.7,
+    "ann": "20260808",
+    "begin": "20260518",
+    "close": "20260707",
+    "type": "G",
+    "after_ratio": ""
+   }
+  ],
+  "anns": [
+   "20260808"
+  ]
+ },
+ {
+  "ts_code": "002024.SZ",
+  "n_holder": 2,
+  "amt_wan": 35.0,
+  "detail": [
+   {
+    "holder": "黄巍",
+    "vol": "121000.0",
+    "px_est": 1.24,
+    "amt_wan": 15.0,
+    "ann": "20260808",
+    "begin": "20260527",
+    "close": "20260807",
+    "type": "G",
+    "after_ratio": ""
+   },
+   {
+    "holder": "周斌",
+    "vol": "162700.0",
+    "px_est": 1.23,
+    "amt_wan": 20.0,
+    "ann": "20260808",
+    "begin": "20260527",
+    "close": "20260807",
+    "type": "G",
+    "after_ratio": ""
+   }
+  ],
+  "anns": [
+   "20260808"
+  ]
+ }
+]

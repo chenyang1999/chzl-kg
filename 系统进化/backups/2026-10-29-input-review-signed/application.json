@@ -1,0 +1,53 @@
+{
+  "approved_patch_sha256": "c243e6719014cbd9e9413ac92bb2b4dc71d6b53cb4088795ac598f401b9976fb",
+  "all_approved_hunks_applied": true,
+  "hunk_count": 5,
+  "targets": {
+    "scripts/research/run_research_shell.sh": {
+      "sha256": "e946bdd4a5ebe4a380c18f54d7477b3467815a906ede085752059024c56ded82",
+      "approved_hunks_exact": true,
+      "whole_file_matches_candidate": true
+    },
+    "scripts/plan/ensure_watchlist_plan.py": {
+      "sha256": "9f27bb28fbc60dba3b76e1d67395f380af47dcced217a6afb6b94cd96ac95d33",
+      "approved_hunks_exact": true,
+      "whole_file_matches_candidate": false
+    },
+    "skills/main_decision_v1/SKILL.md": {
+      "sha256": "4a0524ebcd9a2113baa7f3862b5c889c290e1b65e4877a752e410c7ff09e4dec",
+      "approved_hunks_exact": true,
+      "whole_file_matches_candidate": true
+    },
+    "skills/analyze_devil_advocate_v1/SKILL.md": {
+      "sha256": "dd0bcbcc27795f620f714224f49c5078958fca1d82c935294564713d4fc2cadf",
+      "approved_hunks_exact": true,
+      "whole_file_matches_candidate": true
+    }
+  },
+  "testcase_count": 16,
+  "native_input_and_adapter_cases": 11,
+  "instruction_contract_cases": 5,
+  "test_failures": 0,
+  "test_guard_violations": 0,
+  "index_preserved": true,
+  "production_rerun": false,
+  "formal_r6_or_d1_model_run": false,
+  "configured_roles_reference_repository_skills": true,
+  "actual_new_model_uptake_verified": false,
+  "d1_auxiliary_read_permission_activated": false,
+  "unresolved": [
+    "Concrete auxiliary input path/version/window authorization and production connection",
+    "Required formal per-stock review coverage and pre-existing severity conflict",
+    "Normal pipeline adoption, not demonstrated by offline tests"
+  ],
+  "native_tested_dependency_closure": {
+    "pipeline_artifacts.py": {
+      "unique_fixture_versions_verified": 11,
+      "sha256": "59516e95c37231441566e5311cb1e485eb62dc278f77706657fe0b4047bd9aeb"
+    },
+    "build_research_summary.py": {
+      "unique_fixture_versions_verified": 11,
+      "sha256": "eb464f22c5199b12a556fc2db8540e3c680d909f24366d16d6b7efcd3f1e61a3"
+    }
+  }
+}

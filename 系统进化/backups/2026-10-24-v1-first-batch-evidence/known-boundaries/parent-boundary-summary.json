@@ -1,0 +1,33 @@
+{
+  "root": "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-254d2883",
+  "command": [
+    "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+    "-B",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-254d2883/run_safe_tests.py",
+    "f2"
+  ],
+  "actual_exit_code": 1,
+  "counts": {
+    "passed": 84,
+    "failure": 2,
+    "error": 0,
+    "skipped": 0
+  },
+  "cases": 86,
+  "failures": [
+    {
+      "identity": "tests.test_f2_final_safety::test_counterexample_low_level_sell_rule_presence_not_full_authority[untriggered]",
+      "status": "failure",
+      "detail": "code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-25...enyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-254d2883/app/trading/after_close.py'>)\nviolation = 'untriggered'\n\n    @pytest.mark.parametrize('violation',['untriggered','limit','quantity'])\n    def test_counterexample_low_level_sell_rule_presence_not_full_authority(code,violation):\n        p=plan_dict();p['execution_pool'][0]['exit_rules'][0]['quantity_pct']=.1\n        q=direct(code,p);q.holdings={SYMBOL:dict(total_qty=1000,available_qty=1000)}\n        q.quotes[SYMBOL].last=q.quotes[SYMBOL].bid=8.\n        kw=dict(quantity=100,limit_price=8.)\n        if violation=='untriggered':q.quotes[SYMBOL].last=q.quotes[SYMBOL].bid=10.;kw['limit_price']=10.\n        if violation=='limit':kw['limit_price']=.01\n        if violation=='quantity':kw['quantity']=1000\n        out=sell(q,**kw);persisted(code,q,out)\n>       assert out['status']=='rejected',json.dumps(dict(actual=out,transport=orders(code),bound_rule=p['execution_pool'][0]['exit_rules'][0]),ensure_ascii=False)\nE       AssertionError: {\"actual\": {\"at\": \"2026-10-24T22:54:27.647438\", \"ts_code\": \"600000.SH\", \"side\": \"sell\", \"quantity\": 100, \"limit_price\": 10.0, \"rule_type\": \"stop_loss_break\", \"reasons\": [\"synthetic_only\"], \"position_pct\": 0.0, \"dry_run\": false, \"meta\": {}, \"status\": \"submitted\", \"order\": {\"synthetic_only\": true, \"order_id\": \"SYNTHETIC_NOT_A_BROKER_ORDER\"}}, \"transport\": [{\"symbol\": \"600000.SH\", \"side\": \"sell\", \"quantity\": 100, \"limit_price\": 10.0, \"remark\": \"trading stop_loss_break\"}], \"bound_rule\": {\"type\": \"stop_loss_break\", \"trigger_price\": 9.0, \"quantity_pct\": 0.1}}\nE       assert 'submitted' == 'rejected'\nE         \nE         - rejected\nE         + submitted\n\ntests/test_f2_final_safety.py:180: AssertionError"
+    },
+    {
+      "identity": "tests.test_f2_final_safety::test_counterexample_low_level_sell_rule_presence_not_full_authority[quantity]",
+      "status": "failure",
+      "detail": "code = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-25...enyang/.hermes/cache/scratch/v1-repair-20261024/parent-boundary-20261024T145426Z-254d2883/app/trading/after_close.py'>)\nviolation = 'quantity'\n\n    @pytest.mark.parametrize('violation',['untriggered','limit','quantity'])\n    def test_counterexample_low_level_sell_rule_presence_not_full_authority(code,violation):\n        p=plan_dict();p['execution_pool'][0]['exit_rules'][0]['quantity_pct']=.1\n        q=direct(code,p);q.holdings={SYMBOL:dict(total_qty=1000,available_qty=1000)}\n        q.quotes[SYMBOL].last=q.quotes[SYMBOL].bid=8.\n        kw=dict(quantity=100,limit_price=8.)\n        if violation=='untriggered':q.quotes[SYMBOL].last=q.quotes[SYMBOL].bid=10.;kw['limit_price']=10.\n        if violation=='limit':kw['limit_price']=.01\n        if violation=='quantity':kw['quantity']=1000\n        out=sell(q,**kw);persisted(code,q,out)\n>       assert out['status']=='rejected',json.dumps(dict(actual=out,transport=orders(code),bound_rule=p['execution_pool'][0]['exit_rules'][0]),ensure_ascii=False)\nE       AssertionError: {\"actual\": {\"at\": \"2026-10-24T22:54:27.674154\", \"ts_code\": \"600000.SH\", \"side\": \"sell\", \"quantity\": 1000, \"limit_price\": 8.0, \"rule_type\": \"stop_loss_break\", \"reasons\": [\"synthetic_only\"], \"position_pct\": 0.0, \"dry_run\": false, \"meta\": {}, \"status\": \"submitted\", \"order\": {\"synthetic_only\": true, \"order_id\": \"SYNTHETIC_NOT_A_BROKER_ORDER\"}}, \"transport\": [{\"symbol\": \"600000.SH\", \"side\": \"sell\", \"quantity\": 1000, \"limit_price\": 8.0, \"remark\": \"trading stop_loss_break\"}], \"bound_rule\": {\"type\": \"stop_loss_break\", \"trigger_price\": 9.0, \"quantity_pct\": 0.1}}\nE       assert 'submitted' == 'rejected'\nE         \nE         - rejected\nE         + submitted\n\ntests/test_f2_final_safety.py:180: AssertionError"
+    }
+  ],
+  "guard_violations": [],
+  "current_source_drift": [],
+  "synthetic_only": true,
+  "production_live_certified": false
+}

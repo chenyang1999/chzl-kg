@@ -1,0 +1,73 @@
+{
+  "started_at": "2026-10-29T23:58:16.958610+08:00",
+  "requested_model_literal": "deepseek-v4.1-flash-1017",
+  "user_requested_display_name": "DeepSeek-V4.1-Flash-1017",
+  "connection_host": "api.apiyi.com",
+  "connection_source": "existing _vision_client configuration; credentials never displayed",
+  "source_archive_generated_at": "2026-10-29T06:41:42",
+  "source_image": "/Users/chenyang/Downloads/demo/沧海巨浪/output/charts/lwc_kline_000977_SZ_20261029_064038.png",
+  "source_image_sha256": "1bcaa1fac71182dad2bd7a5083d798e6c1f0a87e76b70499431eeb0cc205e09b",
+  "probe_image": "/Users/chenyang/.hermes/cache/scratch/vision-probe-20261029-deepseek/catalog-id/existing_chart_with_check.png",
+  "probe_image_sha256": "37876e6f1734e5657d4c996f2ef950f3eb49ae528c0386be2f79df9eda70e22f",
+  "image_check_expected": "VISION-CHECK-D733DA93BF",
+  "no_fresh_market_or_account_data": true,
+  "attempts": [
+    {
+      "kind": "image_input",
+      "requested_model": "deepseek-v4.1-flash-1017",
+      "request_succeeded": true,
+      "response_model": "deepseek-flash",
+      "finish_reason": "stop",
+      "content": "{\"image_check\":\"VISION-CHECK-D733DA93BF\",\"stock_name\":\"浪潮信息\",\"stock_code\":\"000977.SZ\",\"panel_titles\":[\"日K\",\"周K\",\"60分\",\"15分\"],\"has_candlesticks\":true,\"has_volume\":true,\"has_macd\":true,\"layout_observation\":\"2×2四宫格布局，每个面板自上而下依次为主图K线（带均线）、成交量柱和MACD指标。\"}",
+      "usage": {
+        "completion_tokens": 329,
+        "prompt_tokens": 956,
+        "total_tokens": 1285,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 226,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 956
+      },
+      "parsed_json": {
+        "image_check": "VISION-CHECK-D733DA93BF",
+        "stock_name": "浪潮信息",
+        "stock_code": "000977.SZ",
+        "panel_titles": [
+          "日K",
+          "周K",
+          "60分",
+          "15分"
+        ],
+        "has_candlesticks": true,
+        "has_volume": true,
+        "has_macd": true,
+        "layout_observation": "2×2四宫格布局，每个面板自上而下依次为主图K线（带均线）、成交量柱和MACD指标。"
+      },
+      "json_valid": true,
+      "elapsed_s": 4.811,
+      "image_check_matches": true
+    }
+  ],
+  "finished_at": "2026-10-29T23:58:21.769656+08:00",
+  "production_sha_before": {
+    "src/agents/chart_vision_agent.py": "492c80b38ee2b77a66635b61948663c37ed31ca9b3a15e3dc19649781e3f3847",
+    "scripts/fetch/run_chart_vision_snapshot.py": "43c185b576e68958a9af3484c14e33e08eb2c05d18a1c54642e4fb547b0835cf",
+    "data/raw/20261029/chart_vision_snapshot.json": "ee8b6fb9129f7189343ff72a1b269fb6dcf3ebee6f09ca8be119f3bcccd20727"
+  },
+  "production_sha_after": {
+    "src/agents/chart_vision_agent.py": "492c80b38ee2b77a66635b61948663c37ed31ca9b3a15e3dc19649781e3f3847",
+    "scripts/fetch/run_chart_vision_snapshot.py": "43c185b576e68958a9af3484c14e33e08eb2c05d18a1c54642e4fb547b0835cf",
+    "data/raw/20261029/chart_vision_snapshot.json": "ee8b6fb9129f7189343ff72a1b269fb6dcf3ebee6f09ca8be119f3bcccd20727"
+  },
+  "production_unchanged": true,
+  "image_input_proven": true,
+  "production_model_changed": false
+}

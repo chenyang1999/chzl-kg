@@ -1,0 +1,541 @@
+{
+  "exit_code": 0,
+  "cases": [
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_completed_and_untouched_cells_preserved_and_completed_target_no_launch",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_retry_rejects_drift_of_saved_proposal_original_or_request[proposal]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_retry_rejects_drift_of_saved_proposal_original_or_request[backup]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_retry_rejects_drift_of_saved_proposal_original_or_request[request]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_post_acceptance_failure_restores_only_own_bytes_and_invalidates_acceptance",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_concurrent_canonical_edit_never_rolled_back",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_rfc6901_and_false_zero_preserved[/a~1b/~0/0-False]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_rfc6901_and_false_zero_preserved[/a~1b/~0/1-0]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_rfc6901_and_false_zero_preserved[-expected2]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_ordinary_start_check_summary_receipt_and_consumer_compatible",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_accepted_revision_drift_is_never_consumable[R6]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_accepted_revision_drift_is_never_consumable[R4]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_accepted_revision_drift_is_never_consumable[md]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_accepted_revision_drift_is_never_consumable[summary]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_accepted_revision_drift_is_never_consumable[acceptance]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_invalid_coverage_or_delta_is_not_completion[null_value]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_invalid_coverage_or_delta_is_not_completion[unknown_completion]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_invalid_coverage_or_delta_is_not_completion[incomplete_without_gap]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_invalid_coverage_or_delta_is_not_completion[duplicate]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_invalid_coverage_or_delta_is_not_completion[unknown_pattern]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_invalid_coverage_or_delta_is_not_completion[no_md]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_invalid_coverage_or_delta_is_not_completion[new_hard_mode2]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_explicit_local_branch_precedes_full_batch",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_cross_terminal_revision_supported_without_restarting",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_global_boolean_does_not_prove_per_stock_review",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_terminal_baseline_real_consumer_and_preservation[False]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_terminal_baseline_real_consumer_and_preservation[True]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_proposal_rejected_before_canonical_write[scope]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_proposal_rejected_before_canonical_write[mode]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_proposal_rejected_before_canonical_write[bool_mode]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_proposal_rejected_before_canonical_write[missing_refs]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_proposal_rejected_before_canonical_write[missing_pointer]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_proposal_rejected_before_canonical_write[bad_escape]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_proposal_rejected_before_canonical_write[missing_evidence]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_proposal_rejected_before_canonical_write[global]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_proposal_rejected_before_canonical_write[extra]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_proposal_rejected_before_canonical_write[null]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_request_never_launches_model[out_of_scope]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_request_never_launches_model[bad_summary]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_request_never_launches_model[bad_r6]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_request_never_launches_model[bad_receipt]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_bad_request_never_launches_model[no_work]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_publication_failure_preserves_and_delivery_retry_no_model[json]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_publication_failure_preserves_and_delivery_retry_no_model[md]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_publication_failure_preserves_and_delivery_retry_no_model[summary]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_publication_failure_preserves_and_delivery_retry_no_model[acceptance]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_source_drift_preserved_not_overwritten",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_delivery_only_retry_without_prior_proposal_never_launches_model",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_actual_child_os_policy_denies_canonical_and_receipt_writes",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_r6_local_revision::test_actual_shell_entry_only_launches_r6",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_actual_summary_and_consumers_preserve_main_and_auxiliary_identity",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_only_reviewed_paths_read_and_default_never_promotes_adapter",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[missing]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[wrong_date]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[missing_date]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[not_object]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[bad_json]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_invalid_or_missing_snapshots_are_explicit_gaps_not_zeros[symlink]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[bytes]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[mtime]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[deleted]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[date]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[path]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[hash]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[size]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[schema]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[run]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[main_version]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[main_attempt]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[receipt]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_drift_rejected_even_with_rehashed_manifest[projection]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_reviewed_caller_cannot_expand_approved_scope[extra]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_reviewed_caller_cannot_expand_approved_scope[wrong_date]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_reviewed_caller_cannot_expand_approved_scope[traversal]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_reviewed_caller_cannot_expand_approved_scope[absolute]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_reviewed_caller_cannot_expand_approved_scope[wildcard]",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_saved_summary_pre_and_post_delivery_rechecks_bound_versions",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_bound_auxiliary_inputs::test_cli_uses_reviewed_code_for_actual_binding_and_preflight",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_native_usage_observation::test_native_totals_separate_reported_subtotal_from_unprovable_authority",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_native_usage_observation::test_legal_zero_is_preserved_without_asserting_usage_coverage",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_native_usage_observation::test_same_binding_idempotent_conflicting_report_rejected",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_native_usage_observation::test_superseded_attempt_and_run_cannot_accept_report",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_native_usage_observation::test_safety_net_observation_without_pipeline_does_not_invent_business_success",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_native_usage_observation::test_safety_observation_terminal_pipeline_preserves_business_bytes",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_native_usage_observation::test_real_isolated_launcher_pid_argv_and_nonzero_report",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_native_usage_observation::test_actual_local_child_does_not_outlive_pid_registration_failure",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "identity": "tests.pipeline.test_native_usage_observation::test_popen_itself_failure_remains_a_failed_launch_observation",
+      "failed": false,
+      "error": false,
+      "skipped": false
+    }
+  ],
+  "case_count": 87,
+  "failure_count": 0,
+  "error_count": 0,
+  "skip_count": 0,
+  "source_unchanged": true,
+  "index_before": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143",
+  "index_after": "ac7ff7479ac6a4bc2f9f0bdbb50b45e405e26164731dd8dfbe0a5f21ba950143",
+  "guard_process_count": 39,
+  "native_child_count": 36,
+  "unguarded_native_children": [],
+  "guard_violations": [],
+  "repair_patch_sha256": "1b1742aa422fe4b62d37d01919bbda02fe6afe0f34839ca84856c3d6e364471a",
+  "production_model_or_market_run": false,
+  "natural_adoption_verified": false
+}

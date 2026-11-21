@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="12" skipped="0" tests="19" time="0.262" timestamp="2026-10-29T12:27:35.020559+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50[None]" time="0.011"><failure message="Failed: technical DB access is forbidden">tests/pipeline/test_price_contract_alignment.py:63: in test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50
+    row = env.levels.derive("000001.SZ", DATE, ref_close=100, channel=channel)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/premarket-all-price-20261029/basetemp/baseline/test_missing_or_unsupported_ch0/app/src/plan/price_levels.py:96: in derive
+    tech = load_tech(ts_code, trade_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/pipeline/test_price_contract_alignment.py:51: in deny
+    pytest.fail("technical DB access is forbidden")
+E   Failed: technical DB access is forbidden</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50[]" time="0.009"><failure message="Failed: technical DB access is forbidden">tests/pipeline/test_price_contract_alignment.py:63: in test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50
+    row = env.levels.derive("000001.SZ", DATE, ref_close=100, channel=channel)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/premarket-all-price-20261029/basetemp/baseline/test_missing_or_unsupported_ch1/app/src/plan/price_levels.py:96: in derive
+    tech = load_tech(ts_code, trade_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/pipeline/test_price_contract_alignment.py:51: in deny
+    pytest.fail("technical DB access is forbidden")
+E   Failed: technical DB access is forbidden</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50[unknown]" time="0.008"><failure message="Failed: technical DB access is forbidden">tests/pipeline/test_price_contract_alignment.py:63: in test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50
+    row = env.levels.derive("000001.SZ", DATE, ref_close=100, channel=channel)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/premarket-all-price-20261029/basetemp/baseline/test_missing_or_unsupported_ch2/app/src/plan/price_levels.py:96: in derive
+    tech = load_tech(ts_code, trade_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/pipeline/test_price_contract_alignment.py:51: in deny
+    pytest.fail("technical DB access is forbidden")
+E   Failed: technical DB access is forbidden</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50[MA50]" time="0.007"><failure message="Failed: technical DB access is forbidden">tests/pipeline/test_price_contract_alignment.py:63: in test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50
+    row = env.levels.derive("000001.SZ", DATE, ref_close=100, channel=channel)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/premarket-all-price-20261029/basetemp/baseline/test_missing_or_unsupported_ch3/app/src/plan/price_levels.py:96: in derive
+    tech = load_tech(ts_code, trade_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/pipeline/test_price_contract_alignment.py:51: in deny
+    pytest.fail("technical DB access is forbidden")
+E   Failed: technical DB access is forbidden</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50[low_absorption_intraday]" time="0.007"><failure message="Failed: technical DB access is forbidden">tests/pipeline/test_price_contract_alignment.py:63: in test_missing_or_unsupported_channel_never_loads_tech_or_invents_ma50
+    row = env.levels.derive("000001.SZ", DATE, ref_close=100, channel=channel)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/premarket-all-price-20261029/basetemp/baseline/test_missing_or_unsupported_ch4/app/src/plan/price_levels.py:96: in derive
+    tech = load_tech(ts_code, trade_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/pipeline/test_price_contract_alignment.py:51: in deny
+    pytest.fail("technical DB access is forbidden")
+E   Failed: technical DB access is forbidden</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_omitted_channel_is_not_implicit_authorization" time="0.008"><failure message="Failed: technical DB access is forbidden">tests/pipeline/test_price_contract_alignment.py:71: in test_omitted_channel_is_not_implicit_authorization
+    row = env.levels.derive("000001.SZ", DATE, ref_close=100)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.hermes/cache/scratch/premarket-all-price-20261029/basetemp/baseline/test_omitted_channel_is_not_im0/app/src/plan/price_levels.py:96: in derive
+    tech = load_tech(ts_code, trade_date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/pipeline/test_price_contract_alignment.py:51: in deny
+    pytest.fail("technical DB access is forbidden")
+E   Failed: technical DB access is forbidden</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_unreachable_explicit_trend_keeps_original_zone_never_switches_ma10[False]" time="0.008"><failure message="assert (True is False)">tests/pipeline/test_price_contract_alignment.py:79: in test_unreachable_explicit_trend_keeps_original_zone_never_switches_ma10
+    assert row["ok"] is False and "unreachable_buy_zone" in row["reason"]
+E   assert (True is False)</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_unreachable_explicit_trend_keeps_original_zone_never_switches_ma10[True]" time="0.008"><failure message="assert (True is False)">tests/pipeline/test_price_contract_alignment.py:79: in test_unreachable_explicit_trend_keeps_original_zone_never_switches_ma10
+    assert row["ok"] is False and "unreachable_buy_zone" in row["reason"]
+E   assert (True is False)</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_existing_ten_percent_unreachable_boundary_without_new_tolerance[90.0-True]" time="0.008" /><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_existing_ten_percent_unreachable_boundary_without_new_tolerance[89.99-False]" time="0.008"><failure message="assert True is False">tests/pipeline/test_price_contract_alignment.py:88: in test_existing_ten_percent_unreachable_boundary_without_new_tolerance
+    assert row["ok"] is ok
+E   assert True is False</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_explicit_legal_scenarios_share_planned_high_stop_rr_and_quote_precision[000001.SZ-trend_pullback_buy-tech0-99.0]" time="0.007" /><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_explicit_legal_scenarios_share_planned_high_stop_rr_and_quote_precision[000001.SZ-leader_breakout-tech1-100.0]" time="0.007" /><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_explicit_legal_scenarios_share_planned_high_stop_rr_and_quote_precision[300001.SZ-divergence_pullback-tech2-97.0]" time="0.007" /><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_existing_rr_rounding_boundary_not_new_tick_tolerance[117.94-blocked]" time="0.007" /><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_existing_rr_rounding_boundary_not_new_tick_tolerance[117.95-eligible]" time="0.008" /><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_caller_empty_entry_without_channel_must_not_manufacture_ma50[watch_pool]" time="0.008"><failure message="AssertionError: caller still invents channel for empty entry&#10;assert True is False">tests/pipeline/test_price_contract_alignment.py:151: in test_caller_empty_entry_without_channel_must_not_manufacture_ma50
+    assert rows[0]["ok"] is False, "caller still invents channel for empty entry"
+E   AssertionError: caller still invents channel for empty entry
+E   assert True is False</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_caller_empty_entry_without_channel_must_not_manufacture_ma50[b_plan]" time="0.008"><failure message="AssertionError: caller still invents channel for empty entry&#10;assert True is False">tests/pipeline/test_price_contract_alignment.py:151: in test_caller_empty_entry_without_channel_must_not_manufacture_ma50
+    assert rows[0]["ok"] is False, "caller still invents channel for empty entry"
+E   AssertionError: caller still invents channel for empty entry
+E   assert True is False</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_caller_cannot_replace_explicit_legal_trend_with_divergence" time="0.007"><failure message="AssertionError: caller overrides explicit authorized channel&#10;assert 'divergence_pullback' == 'trend_pullback_buy'&#10;  &#10;  - trend_pullback_buy&#10;  + divergence_pullback">tests/pipeline/test_price_contract_alignment.py:163: in test_caller_cannot_replace_explicit_legal_trend_with_divergence
+    assert rows[0]["channel"] == "trend_pullback_buy", "caller overrides explicit authorized channel"
+E   AssertionError: caller overrides explicit authorized channel
+E   assert 'divergence_pullback' == 'trend_pullback_buy'
+E     
+E     - trend_pullback_buy
+E     + divergence_pullback</failure></testcase><testcase classname="tests.pipeline.test_price_contract_alignment" name="test_explicit_leader_roundtrip_keeps_entry_exits_budget_and_buy_gate" time="0.007" /></testsuite></testsuites>

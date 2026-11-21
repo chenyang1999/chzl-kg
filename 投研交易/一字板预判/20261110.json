@@ -1,0 +1,125 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261110",
+  "next_day": "20261111",
+  "generated_at": "2026-11-10T22:00:42+08:00",
+  "n_total": 93,
+  "n_candidates": 6,
+  "candidates": [
+    {
+      "ts_code": "002310.SZ",
+      "name": "东方新能",
+      "industry": "电力",
+      "theme": "金属回收、生态农业、汽车拆解概念",
+      "limit_times": 3,
+      "fd_amount_yi": 3.24,
+      "pct_chg": 10.2,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 123.6,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=3.2亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "603366.SH",
+      "name": "日出东方",
+      "industry": "厨卫电器",
+      "theme": "空气能热泵、华为液冷快充、净水概念",
+      "limit_times": 3,
+      "fd_amount_yi": 7.8,
+      "pct_chg": 10.01,
+      "first_time": "92501",
+      "open_times": 0,
+      "float_mv_yi": 88.5,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=7.8亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600327.SH",
+      "name": "大东方",
+      "industry": "一般零售",
+      "theme": "高股息",
+      "limit_times": 3,
+      "fd_amount_yi": 2.17,
+      "pct_chg": 10.0,
+      "first_time": "93020",
+      "open_times": 0,
+      "float_mv_yi": 52.6,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.2亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "601188.SH",
+      "name": "龙江交通",
+      "industry": "铁路公路",
+      "theme": "石墨电极",
+      "limit_times": 3,
+      "fd_amount_yi": 0.14,
+      "pct_chg": 10.02,
+      "first_time": "92502",
+      "open_times": 11,
+      "float_mv_yi": 60.2,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.1亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002623.SZ",
+      "name": "亚玛顿",
+      "industry": "光伏设备",
+      "theme": "钙钛矿电池、玻璃基板、反内卷概念",
+      "limit_times": 2,
+      "fd_amount_yi": 2.37,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 40.9,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.4亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002708.SZ",
+      "name": "光洋股份",
+      "industry": "汽车零部件",
+      "theme": "飞行汽车(eVTOL)、车路云一体化、智能驾驶系统",
+      "limit_times": 2,
+      "fd_amount_yi": 2.65,
+      "pct_chg": 10.01,
+      "first_time": "93012",
+      "open_times": 0,
+      "float_mv_yi": 123.2,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.7亿 (一字率26%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停93只，筛出 6 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}
