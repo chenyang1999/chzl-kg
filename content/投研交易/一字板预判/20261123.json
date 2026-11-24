@@ -1,0 +1,30 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261123",
+  "next_day": "20261124",
+  "generated_at": "2026-11-23T22:00:09+08:00",
+  "n_total": 146,
+  "n_candidates": 1,
+  "candidates": [
+    {
+      "ts_code": "002579.SZ",
+      "name": "中京电子",
+      "industry": "元件",
+      "theme": "芯片概念、粤港澳大湾区、物联网",
+      "limit_times": 3,
+      "fd_amount_yi": 1.02,
+      "pct_chg": 10.01,
+      "first_time": "93051",
+      "open_times": 6,
+      "float_mv_yi": 85.9,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.0亿 (一字率19%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停146只，筛出 1 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}
