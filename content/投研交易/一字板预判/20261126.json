@@ -1,0 +1,106 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261126",
+  "next_day": "20261127",
+  "generated_at": "2026-11-26T22:00:03+08:00",
+  "n_total": 65,
+  "n_candidates": 5,
+  "candidates": [
+    {
+      "ts_code": "002872.SZ",
+      "name": "天圣制药",
+      "industry": "化学制药",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 1.81,
+      "pct_chg": 10.0,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 16.8,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.8亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002651.SZ",
+      "name": "利君股份",
+      "industry": "航空装备",
+      "theme": "成飞概念",
+      "limit_times": 3,
+      "fd_amount_yi": 1.16,
+      "pct_chg": 10.0,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 49.1,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.2亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "600722.SH",
+      "name": "金牛化工",
+      "industry": "化学原料",
+      "theme": "风电、煤化工概念、京津冀一体化",
+      "limit_times": 3,
+      "fd_amount_yi": 1.32,
+      "pct_chg": 10.04,
+      "first_time": "95842",
+      "open_times": 0,
+      "float_mv_yi": 98.4,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.3亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "603030.SH",
+      "name": "全筑股份",
+      "industry": "装修装饰",
+      "theme": "韧性城市概念",
+      "limit_times": 3,
+      "fd_amount_yi": 0.54,
+      "pct_chg": 9.96,
+      "first_time": "95515",
+      "open_times": 2,
+      "float_mv_yi": 37.8,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.5亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002144.SZ",
+      "name": "宏达高科",
+      "industry": "纺织制造",
+      "theme": "",
+      "limit_times": 2,
+      "fd_amount_yi": 4.57,
+      "pct_chg": 10.02,
+      "first_time": "93009",
+      "open_times": 2,
+      "float_mv_yi": 13.8,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=4.6亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停65只，筛出 5 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}
