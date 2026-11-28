@@ -1,0 +1,68 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261117",
+  "next_day": "20261118",
+  "generated_at": "2026-11-17T22:00:44+08:00",
+  "n_total": 37,
+  "n_candidates": 3,
+  "candidates": [
+    {
+      "ts_code": "002685.SZ",
+      "name": "华东重机",
+      "industry": "工程机械",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 2.71,
+      "pct_chg": 10.02,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 67.5,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.7亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002451.SZ",
+      "name": "摩恩电气",
+      "industry": "电网设备",
+      "theme": "化债概念(AMC概念)、上海自贸区",
+      "limit_times": 1,
+      "fd_amount_yi": 4.45,
+      "pct_chg": 10.03,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 31.3,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.5亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600410.SH",
+      "name": "华胜天成",
+      "industry": "IT服务Ⅱ",
+      "theme": "超聚变、腾讯AI概念、网络安全",
+      "limit_times": 1,
+      "fd_amount_yi": 3.11,
+      "pct_chg": 10.0,
+      "first_time": "93055",
+      "open_times": 1,
+      "float_mv_yi": 167.7,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.1亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停37只，筛出 3 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

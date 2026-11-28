@@ -1,0 +1,12 @@
+{
+  "scripts/research/run_research_shell.sh": "b146e3923ceef93e6dc9953532c6afe69fa0319c7f040fdc34c29b80a8e3759b",
+  "scripts/research/native_usage.py": "a1dd43f16d814ee9c75387103be2f07c4cd708d7aac8fe7df01eb3aaa7e7c1c0",
+  "scripts/research/pipeline_state.py": "7390067f5298fe69ebc97e3770a5b503101db5067de260dcf6e7f6f84bcf83ee",
+  "scripts/research/pipeline_artifacts.py": "b7e1c4913ad564f96c2556da9fa180d121c7f8f71b7affc76ce28e9fd9f12384",
+  "scripts/research/build_research_summary.py": "afd5a5b4ea09ed12f3ad4c3ad3fe456ae3312f01759c911d1e782d0669c67c44",
+  "tests/pipeline/test_r6_local_revision.py": "bfafcb87a13bee6722e3c89b69aa50df18d09edb688f0003384327e7c1199b3a",
+  "tests/pipeline/test_bound_auxiliary_inputs.py": "166ffe44ccc8cda58e65b3a1254bdb0fbcd207dd98d28645ea749ad7058ab25c",
+  "tests/pipeline/test_native_usage_observation.py": "879ed23123da10b2f132f4eb66f20a210fe0a39c672714ecd1f3f929d500175b",
+  "skills/analyze_devil_advocate_v1/SKILL.md": "b6ab02eaf3f7b7b6ebb775d3a5b5f38cb4009e715494e14236b4ca00019e1d25",
+  "docs/10-契约-研究汇总.md": "3d73fb06585f629bc206c4ad4dcbb1c787982a101d91544af3455e56ce605bb9"
+}

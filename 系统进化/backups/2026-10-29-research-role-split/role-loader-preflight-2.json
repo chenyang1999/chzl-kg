@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "mode": "baseline",
+      "loaded": true,
+      "exact_stripped_text_match": true,
+      "source_sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35",
+      "loaded_chars": 3009,
+      "invocation_mode_present": false
+    },
+    {
+      "mode": "candidate",
+      "loaded": true,
+      "exact_stripped_text_match": true,
+      "source_sha256": "02e14bd405246a3ed45c8bc1e2a78635018397b8a4b934798c226fee3ac0cb10",
+      "loaded_chars": 3348,
+      "invocation_mode_present": true
+    }
+  ],
+  "violations": [
+    {
+      "event": "subprocess.Popen",
+      "stack": [
+        {
+          "file": "__init__.py",
+          "function": "<module>",
+          "line": 39
+        },
+        {
+          "file": "version_info.py",
+          "function": "get_version_info",
+          "line": 290
+        },
+        {
+          "file": "version_info.py",
+          "function": "_stamp_version_info",
+          "line": 167
+        },
+        {
+          "file": "version_info.py",
+          "function": "_run_git",
+          "line": 63
+        },
+        {
+          "file": "subprocess.py",
+          "function": "run",
+          "line": 548
+        },
+        {
+          "file": "subprocess.py",
+          "function": "__init__",
+          "line": 1026
+        },
+        {
+          "file": "subprocess.py",
+          "function": "_execute_child",
+          "line": 1823
+        }
+      ],
+      "executable": "git",
+      "argument_flags": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ]
+    },
+    {
+      "event": "open",
+      "path": "/Users/chenyang/.hermes/cache/scratch/nested-launch-20261029/candidate/.env",
+      "mode": "r",
+      "flags": 16777216,
+      "stack": [
+        {
+          "file": "<frozen importlib._bootstrap_external>",
+          "function": "exec_module",
+          "line": 940
+        },
+        {
+          "file": "<frozen importlib._bootstrap>",
+          "function": "_call_with_frames_removed",
+          "line": 241
+        },
+        {
+          "file": "__init__.py",
+          "function": "<module>",
+          "line": 294
+        },
+        {
+          "file": "__init__.py",
+          "function": "_base_url",
+          "line": 74
+        },
+        {
+          "file": "config.py",
+          "function": "get_env_value_prefer_dotenv",
+          "line": 2933
+        },
+        {
+          "file": "config.py",
+          "function": "load_env",
+          "line": 2533
+        },
+        {
+          "file": "secret_scope.py",
+          "function": "load_env_file",
+          "line": 378
+        }
+      ]
+    }
+  ],
+  "paid_model_calls": 0,
+  "network_calls": 0,
+  "live_profile_written": false,
+  "passed": false
+}

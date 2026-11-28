@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/Users/chenyang/Downloads/demo/\u6ca7\u6d77\u5de8\u6d6a/.venv/bin/python",
+    "-B",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/audit_worker.py",
+    "rrscope",
+    "--rr-adapt"
+  ],
+  "pytest_argv": [
+    "tests/test_canghai_rr_scope_20261023.py",
+    "-q",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/rrscope/fixtures/pytest",
+    "--junitxml",
+    "/Users/chenyang/.hermes/cache/scratch/v1-repair-20261024/FINAL/parent-before-closeout-20261024T143915Z-20eb404d/rrscope/junit.xml"
+  ],
+  "exit_code": 1,
+  "violations": [],
+  "synthetic_only": true,
+  "rr_adapt": true,
+  "subtest_count": 0
+}

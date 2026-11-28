@@ -1,0 +1,1528 @@
+{
+  "schema_version": "watchlist_plan_v1",
+  "trade_date": "20261023",
+  "mode": "dry_run",
+  "decision_source": "llm",
+  "agent_name": "D1-main-decision (main_decision_v1, LLM)",
+  "generated_at": "2026-10-23T06:51:36+08:00",
+  "generated_by": "gpt-6.1-sol",
+  "status": "degraded",
+  "status_note": "本次研究未通过开仓资格，产出防误执行预案；不是完整可交易预案。",
+  "trading_style": "mainline_right_side_with_trend_pullback",
+  "trading_decision": "no_trade",
+  "no_trade": true,
+  "new_position_allowed": false,
+  "production_ready": false,
+  "autonomous_trading_enabled": false,
+  "requires_user_confirmation": true,
+  "data_sources": {
+    "research_summary": "data/research/20261023/research_summary.json",
+    "summary_sha256": "b529273d5b606d6bffc0945f4bd5196e9617d7af152390aff9eea3f509321d2c",
+    "run_id": "20261023T061047-60743-14677",
+    "artifacts": {
+      "R1": "data/research/20261023/R1_style.json",
+      "R2": "data/research/20261023/R2_main_sectors.json",
+      "R3": "data/research/20261023/R3_sentiment.json",
+      "R4": "data/research/20261023/R4_news.json",
+      "R5": "data/research/20261023/R5_stock_profiles.json",
+      "R6": "data/research/20261023/R6_devil_advocate.json",
+      "R7": "data/research/20261023/R7_capital_flow.json"
+    },
+    "audit": [
+      {
+        "unit": "R1",
+        "path": "data/research/20261023/R1_style.json",
+        "sha256": "f1a6a5c2ab565f6579a03d6cf38fbb31f95a8444bc949cbf3bcfa6836e402b65",
+        "status": "degraded",
+        "confidence": 0.4,
+        "generated_at": "2026-10-23T06:19:59+08:00",
+        "readable": true,
+        "current_summary_unit_timestamp_match": true,
+        "embedded_run_id": null,
+        "research_complete": false,
+        "execution_clearance": false,
+        "decision_note": "主跌，零研究风险预算；主线扩散仅数量标签，20/42覆盖；非生产时段完整复核。"
+      },
+      {
+        "unit": "R2",
+        "path": "data/research/20261023/R2_main_sectors.json",
+        "sha256": "745efba341f9a3f65200a8111427318e920f429fc85a3d3041998e734a3d0b23",
+        "status": "degraded",
+        "confidence": 0.392,
+        "generated_at": "2026-10-23T06:42:12+08:00",
+        "readable": true,
+        "current_summary_unit_timestamp_match": true,
+        "embedded_run_id": null,
+        "research_complete": false,
+        "execution_clearance": false,
+        "decision_note": "仅人形机器人板块观察，确认可交易主线0，股票候选0，生命周期/持续性/封板率未知。"
+      },
+      {
+        "unit": "R3",
+        "path": "data/research/20261023/R3_sentiment.json",
+        "sha256": "5520c9618dcdfeca4f76004901678f792a1c5579a235059444954988e20e9df6",
+        "status": "degraded",
+        "confidence": 0.364,
+        "generated_at": "2026-10-23T06:31:47+08:00",
+        "readable": true,
+        "current_summary_unit_timestamp_match": true,
+        "embedded_run_id": null,
+        "research_complete": false,
+        "execution_clearance": false,
+        "decision_note": "五主题L1+L2为关注共振非资金确认；56分不覆盖主跌；次日反弹为匿名成员条件观点。"
+      },
+      {
+        "unit": "R4",
+        "path": "data/research/20261023/R4_news.json",
+        "sha256": "02e91dfa2a1dd5d05563f2f4d5241ea4e720e437ef87ac4fb080dbc941b222fd",
+        "status": "partial",
+        "confidence": 0.62,
+        "generated_at": "2026-10-23T06:18:09+08:00",
+        "readable": true,
+        "current_summary_unit_timestamp_match": true,
+        "embedded_run_id": null,
+        "research_complete": false,
+        "execution_clearance": false,
+        "decision_note": "8条核心事件可供叙事交叉；逐票主营/冲突公告/受益池未完成，不授权候选。"
+      },
+      {
+        "unit": "R5",
+        "path": "data/research/20261023/R5_stock_profiles.json",
+        "sha256": "4e699d5f118dca8c7a9d5516007de983390da6a7dc4169f25867bfa96960bd70",
+        "status": "skipped",
+        "confidence": null,
+        "generated_at": "2026-10-23T06:45:28+08:00",
+        "readable": true,
+        "current_summary_unit_timestamp_match": true,
+        "embedded_run_id": null,
+        "research_complete": false,
+        "execution_clearance": false,
+        "decision_note": "skipped，画像0；不是研究通过，不能用默认B伪装完成画像。"
+      },
+      {
+        "unit": "R6",
+        "path": "data/research/20261023/R6_devil_advocate.json",
+        "sha256": "e626f35c9587e54f5a1a4c6204882d28c6904d954ea71e90dcc1ea305efba025",
+        "status": "degraded",
+        "confidence": 0.28,
+        "generated_at": "2026-10-23T06:47:39+08:00",
+        "readable": true,
+        "current_summary_unit_timestamp_match": true,
+        "embedded_run_id": null,
+        "research_complete": false,
+        "execution_clearance": false,
+        "decision_note": "正式反证未完成，counter_arguments及hard_rejects均为空；不代表排除风险。"
+      },
+      {
+        "unit": "R7",
+        "path": "data/research/20261023/R7_capital_flow.json",
+        "sha256": "737ea61c637a86ec4f16e2a1f52957fff643a8f93c9342767194e15c30176187",
+        "status": "partial",
+        "confidence": 0.0,
+        "generated_at": "2026-10-23T06:29:07+08:00",
+        "readable": true,
+        "current_summary_unit_timestamp_match": true,
+        "embedded_run_id": null,
+        "research_complete": false,
+        "execution_clearance": false,
+        "decision_note": "整体unavailable且confidence=0；可靠北向净额缺失，局部T-1主力数据仍可用于审计。"
+      }
+    ],
+    "fetch_global_severity": 2,
+    "fetch_manifest_reference_only": "data/raw/20261023/manifest.json",
+    "raw_manifest_read": false,
+    "live_mcp_calls_by_d1": 0,
+    "scope": "只消费当前summary列出的七份主产物；preferences/schema/写作契约为只读配置或规范，非额外研究证据。",
+    "entry_channels": {
+      "style": "主线扩散型",
+      "channels": [],
+      "ignition": false,
+      "raw_candidates": 0,
+      "reason": "主跌与数据资格门禁阻断；不因扩散风格开放leader_breakout"
+    },
+    "grade_gate_drops": [],
+    "upstream_source_audits": {
+      "R1": {
+        "sources": [
+          "MCP.tushare.trade_cal",
+          "MCP.tushare.fund_daily",
+          "MCP.tushare.limit_list_d",
+          "MCP.tushare.limit_step",
+          "MCP.tushare.index_daily",
+          "MCP.tushare.limit_cpt_list",
+          "MCP.tushare.index_global",
+          "MCP.tushare.us_daily",
+          "MCP.xtick.market_emotion",
+          "MCP.vibe_trading.get_market_data(yfinance)",
+          "local.manifest_and_text_context"
+        ],
+        "freshness": "partial"
+      },
+      "R2": [
+        {
+          "name": "R1",
+          "path": "data/research/20261023/R1_style.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:19:59+08:00",
+          "record_count": 1,
+          "error": "提前版且上游降级；stale表示生产窗口未刷新，不表示过期24小时"
+        },
+        {
+          "name": "R3",
+          "path": "data/research/20261023/R3_sentiment.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:31:47+08:00",
+          "record_count": 1,
+          "error": "提前版且上游降级；stale表示生产窗口未刷新，不表示过期24小时"
+        },
+        {
+          "name": "R4",
+          "path": "data/research/20261023/R4_news.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:18:09+08:00",
+          "record_count": 1,
+          "error": "提前版且上游降级；stale表示生产窗口未刷新，不表示过期24小时"
+        },
+        {
+          "name": "R7",
+          "path": "data/research/20261023/R7_capital_flow_20261023.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:29:07+08:00",
+          "record_count": 1,
+          "error": "提前版且上游降级；stale表示生产窗口未刷新，不表示过期24小时"
+        },
+        {
+          "name": "tushare.ths_hot",
+          "path": "MCP.tushare.ths_hot",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:42:12+08:00",
+          "record_count": 20,
+          "observed_trade_date": "20261022"
+        },
+        {
+          "name": "tushare.dc_hot",
+          "path": "MCP.tushare.dc_hot",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:42:12+08:00",
+          "record_count": 100,
+          "observed_trade_date": "20261022"
+        },
+        {
+          "name": "tushare.moneyflow_ind_dc",
+          "path": "MCP.tushare.moneyflow_ind_dc",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:42:12+08:00",
+          "record_count": 516,
+          "observed_trade_date": "20261022"
+        },
+        {
+          "name": "tushare.limit_cpt_list",
+          "path": "MCP.tushare.limit_cpt_list",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:42:12+08:00",
+          "record_count": 20,
+          "observed_trade_date": "20261022"
+        },
+        {
+          "name": "tushare.limit_list_d",
+          "path": "MCP.tushare.limit_list_d",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:42:12+08:00",
+          "record_count": null,
+          "observed_trade_date": "20261022"
+        },
+        {
+          "name": "hithink-sector-selector",
+          "path": "https://openapi.iwencai.com/v1/query2data",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:42:12+08:00",
+          "record_count": 8,
+          "observed_trade_date": "20261022"
+        },
+        {
+          "name": "fetch_manifest",
+          "path": "data/raw/20261023/manifest.json",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:00:47",
+          "record_count": 1
+        },
+        {
+          "name": "wechat_official_20 / wechat_cli_5groups",
+          "path": "R3/R4上游引文；本R2不重新计源",
+          "status": "stale",
+          "captured_at": null,
+          "record_count": null,
+          "error": "仅消费R3/R4已审计叙事，不冒充本次在线独立复核"
+        },
+        {
+          "name": "weflow_snapshot",
+          "path": "data/raw/20261023/weflow_snapshot.json",
+          "status": "error",
+          "captured_at": null,
+          "record_count": null,
+          "error": "R3表明WeFlow退场；L1+L2为热榜+KOL文本，不声称L3"
+        },
+        {
+          "name": "factor_layer",
+          "path": "data/factor_snapshot/本周/top_ir_factors.json",
+          "status": "error",
+          "captured_at": null,
+          "record_count": null,
+          "error": "data/factor_snapshot目录缺失，跳过因子层，不合成因子"
+        },
+        {
+          "name": "theme_anchors",
+          "path": "data/rules/theme_anchors/latest.json",
+          "status": "stale",
+          "captured_at": "2026-10-20T18:45:23+08:00",
+          "record_count": 597,
+          "error": "仅辨识度背景；主跌不展开TOP3个股，不使用历史锚当今日龙头"
+        },
+        {
+          "name": "human_thesis",
+          "path": "data/human_thesis/active/*.md",
+          "status": "ok",
+          "captured_at": null,
+          "record_count": 0
+        }
+      ],
+      "R3": {
+        "weflow": "retired_permanently_not_called",
+        "wechat_cli_by_group": {
+          "群组A": {
+            "status": "ok",
+            "record_count": 104
+          },
+          "群组B": {
+            "status": "ok",
+            "record_count": 93
+          },
+          "群组C": {
+            "status": "ok",
+            "record_count": 105
+          },
+          "群组D": {
+            "status": "ok",
+            "record_count": 3
+          },
+          "群组E": {
+            "status": "ok",
+            "record_count": 131
+          }
+        },
+        "official_rss": {
+          "status": "ok",
+          "record_count": 90,
+          "accounts_with_articles": 12
+        },
+        "hotlist": {
+          "ths": "live_query_ok_Tminus1",
+          "dc": "live_query_ok_Tminus1",
+          "today_20261023_ths": "queried_empty_preopen",
+          "ths_concept": "two_days_live_query_ok"
+        },
+        "attention_signals": "missing_required_input_live_hotlists_partial_replacement",
+        "attention_weekend": "not_applicable_friday_missing",
+        "hotlist_signals_file": "missing_inline_partial_diff",
+        "xtick": "live_query_ok_20261022",
+        "moneyflow_ths": "live_query_ok_one_stock_only",
+        "moneyflow_dc": "live_query_ok_one_stock_only",
+        "xtick_money": "live_query_ok_one_stock_only"
+      },
+      "R4": [
+        {
+          "name": "wechat_official_20",
+          "path": "data/raw/20261023/wechat_official_20.jsonl",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:00:47+08:00",
+          "record_count": 90,
+          "note": "当日fetch产物；不是本会话MCP直采"
+        },
+        {
+          "name": "wechat_cli_5groups",
+          "path": "data/raw/20261023/wechat_cli_5groups.jsonl",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:00:47+08:00",
+          "record_count": 436,
+          "note": "当日fetch产物；不是本会话MCP直采"
+        },
+        {
+          "name": "news_cls",
+          "path": "data/raw/20261023/news_cls.jsonl",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:03:43+08:00",
+          "record_count": 2987,
+          "note": "当日fetch产物；不是本会话MCP直采"
+        },
+        {
+          "name": "news_major",
+          "path": "data/raw/20261023/news_major.jsonl",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:03:43+08:00",
+          "record_count": 800,
+          "note": "当日fetch产物；不是本会话MCP直采"
+        },
+        {
+          "name": "anns_window",
+          "path": "data/raw/20261023/anns_window.jsonl",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:03:44+08:00",
+          "record_count": 2672,
+          "note": "当日fetch产物；不是本会话MCP直采"
+        },
+        {
+          "name": "eastmoney_earnings_predict",
+          "path": "data/raw/20261023/eastmoney_earnings_predict.json",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:03:43+08:00",
+          "record_count": 500,
+          "note": "500条是财务指标记录；归母净利/净利润去重公司196家；并非500只票；2026Q3非中报"
+        },
+        {
+          "name": "hithink_news_search",
+          "path": "https://openapi.iwencai.com/v1/comprehensive/search",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:15:02+08:00",
+          "record_count": 59,
+          "note": "本会话两批12个有效关键词查询，另一次宽泛Isaac查询被丢弃；当日及相关内容筛选结果，过期与百科命中不得用于验证"
+        },
+        {
+          "name": "primary_documents",
+          "path": "PHP官网及cninfo公告PDF",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:15:02+08:00",
+          "record_count": 3,
+          "note": "已读取PHP安全归档、天孚活动记录、赤峰控制权变更PDF；每经页面正文抽取不完整不计原文核实"
+        },
+        {
+          "name": "hithink_business_query",
+          "path": "not_called",
+          "status": "error",
+          "captured_at": null,
+          "record_count": 0,
+          "error": "主跌期禁止选股；无交易首推，不推算主营重叠率"
+        },
+        {
+          "name": "beneficiary_pool",
+          "path": "hithink-market-query / announcement-search",
+          "status": "error",
+          "captured_at": null,
+          "record_count": 0,
+          "error": "受益股池及冲突公告专项核验未完成；现有个股仅原文点名映射"
+        },
+        {
+          "name": "MCP_cross_verification",
+          "path": "vibe/datapro/xtick",
+          "status": "error",
+          "captured_at": null,
+          "record_count": 0,
+          "error": "当前profile主控禁止直接MCP；delegation工具检索无匹配，未调用，不标源故障"
+        },
+        {
+          "name": "R3_sentiment",
+          "path": "data/research/20261023/R3_sentiment.json",
+          "status": "error",
+          "captured_at": null,
+          "record_count": 0,
+          "error": "运行时无文件；公众号群聊不当独立验证"
+        },
+        {
+          "name": "R7_capital_flow",
+          "path": "data/research/20261023/R7_capital_flow.json",
+          "status": "error",
+          "captured_at": null,
+          "record_count": 0,
+          "error": "运行时无文件；不伪造资金验证"
+        },
+        {
+          "name": "hithink_symbol_lookup",
+          "path": "https://openapi.iwencai.com/v1/query2data",
+          "status": "ok",
+          "captured_at": "2026-10-23T06:18:09+08:00",
+          "record_count": 5,
+          "note": "只核对原文点名代码，不作选股；附带最新价为盘前上一时段报价，未用于制定买点"
+        }
+      ],
+      "R5": [
+        {
+          "name": "R2",
+          "path": "data/research/20261023/R2_main_sectors.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:42:12+08:00",
+          "record_count": 0,
+          "error": "提前版且上游降级；仅作输入与门禁审计，本次未做在线市场复核"
+        },
+        {
+          "name": "R1",
+          "path": "data/research/20261023/R1_style.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:19:59+08:00",
+          "record_count": 1,
+          "error": "提前版且上游降级；仅作输入与门禁审计，本次未做在线市场复核"
+        },
+        {
+          "name": "R4",
+          "path": "data/research/20261023/R4_news.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:18:09+08:00",
+          "record_count": 1,
+          "error": "提前版且上游降级；仅作输入与门禁审计，本次未做在线市场复核"
+        },
+        {
+          "name": "R7",
+          "path": "data/research/20261023/R7_capital_flow_20261023.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:29:07+08:00",
+          "record_count": 1,
+          "error": "提前版且上游降级；仅作输入与门禁审计，本次未做在线市场复核"
+        }
+      ],
+      "R6": [
+        {
+          "name": "R1",
+          "path": "data/research/20261023/R1_style.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:19:59+08:00",
+          "record_count": 1,
+          "error": "上游status=degraded；可读但非complete，不作为完整研究输入"
+        },
+        {
+          "name": "R2",
+          "path": "data/research/20261023/R2_main_sectors.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:42:12+08:00",
+          "record_count": 1,
+          "error": "上游status=degraded；可读但非complete，不作为完整研究输入"
+        },
+        {
+          "name": "R3",
+          "path": "data/research/20261023/R3_sentiment.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:31:47+08:00",
+          "record_count": 1,
+          "error": "上游status=degraded；可读但非complete，不作为完整研究输入"
+        },
+        {
+          "name": "R4",
+          "path": "data/research/20261023/R4_news.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:18:09+08:00",
+          "record_count": 1,
+          "error": "上游status=partial；可读但非complete，不作为完整研究输入"
+        },
+        {
+          "name": "R5",
+          "path": "data/research/20261023/R5_stock_profiles.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:45:28+08:00",
+          "record_count": 0,
+          "error": "上游status=skipped；可读但非complete，不作为完整研究输入"
+        },
+        {
+          "name": "R7",
+          "path": "data/research/20261023/R7_capital_flow_20261023.json",
+          "status": "stale",
+          "captured_at": "2026-10-23T06:29:07+08:00",
+          "record_count": 1,
+          "error": "上游status=partial；可读但非complete，不作为完整研究输入"
+        }
+      ],
+      "R7": [
+        {
+          "name": "tushare.trade_cal",
+          "path": "tushare.trade_cal",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 20,
+          "note": "最新已收盘T-1；最近20交易日按实时日历对齐"
+        },
+        {
+          "name": "tushare.moneyflow_mkt_dc",
+          "path": "tushare.moneyflow_mkt_dc",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 20,
+          "note": "单位元；20/10/5日完整"
+        },
+        {
+          "name": "tushare.moneyflow_ind_dc",
+          "path": "tushare.moneyflow_ind_dc",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 9920,
+          "note": "初次SSE超限；字段压缩并拆窗恢复20日，每日496个分类条目，禁止跨层级相加"
+        },
+        {
+          "name": "tushare.moneyflow_dc",
+          "path": "tushare.moneyflow_dc",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 6029,
+          "note": "全市场主力净流入排序；单位万元；十票历史本次实时逐票请求"
+        },
+        {
+          "name": "tushare.moneyflow_hsgt",
+          "path": "tushare.moneyflow_hsgt",
+          "status": "stale",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 31,
+          "note": "时间新，但北向净流量语义不可信；原始北向字段保留20条投影不作净流入"
+        },
+        {
+          "name": "tushare.hk_hold",
+          "path": "tushare.hk_hold",
+          "status": "stale",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20260930",
+          "record_count": 2089,
+          "note": "仅季度持股，不可替代日净流量"
+        },
+        {
+          "name": "tushare.top_list_top_inst",
+          "path": "tushare.top_list_top_inst",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 3720,
+          "note": "近5交易日全市场统计及席位实调；条目含双边与多日榜重复，禁止直接求和"
+        },
+        {
+          "name": "xtick.hot_money",
+          "path": "xtick.hot_money",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 10,
+          "note": "全市场响应内部截断，四票定向实时补回；十票当日均覆盖"
+        },
+        {
+          "name": "xtick.hot_bk",
+          "path": "xtick.hot_bk",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 68,
+          "note": "仅返回板块名和成分；不是可用的资金排名，资金排名以东财为准"
+        },
+        {
+          "name": "datapro",
+          "path": "datapro",
+          "status": "error",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": null,
+          "record_count": 0,
+          "note": "4013订阅失效或未分配席位；实调两次均失败"
+        },
+        {
+          "name": "vibe.get_fund_flow",
+          "path": "vibe.get_fund_flow",
+          "status": "error",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": null,
+          "record_count": 0,
+          "note": "顶层ok但十票均ProxyError，不能按成功源使用"
+        },
+        {
+          "name": "vibe.get_block_trades",
+          "path": "vibe.get_block_trades",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 10,
+          "note": "逐票30自然日调用；德明利边界差异记录"
+        },
+        {
+          "name": "vibe.get_margin_trading",
+          "path": "vibe.get_margin_trading",
+          "status": "stale",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261021",
+          "record_count": 120,
+          "note": "逐票15日；8票有记录2票无记录，非全域DOWN"
+        },
+        {
+          "name": "tushare.margin_detail",
+          "path": "tushare.margin_detail",
+          "status": "stale",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261021",
+          "record_count": 120,
+          "note": "15个交易日逐日实时拉取与vibe余额核对；昨日尚未更新"
+        },
+        {
+          "name": "vibe.get_dragon_tiger",
+          "path": "vibe.get_dragon_tiger",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 75,
+          "note": "全市场75条appearance（非75只股票）加十票逐票核实；与Tushare东财同源"
+        },
+        {
+          "name": "vibe.get_northbound_flow",
+          "path": "vibe.get_northbound_flow",
+          "status": "error",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": null,
+          "record_count": 0,
+          "note": "realtime三字段null、history空；不是零流入"
+        },
+        {
+          "name": "vibe.iwencai_search",
+          "path": "vibe.iwencai_search",
+          "status": "error",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": null,
+          "record_count": 0,
+          "note": "MCP缺VIBE_TRADING_IWENCAI_KEY；官方OpenAPI独立回退有效"
+        },
+        {
+          "name": "iwencai.official.etf",
+          "path": "iwencai.official.etf",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 1712,
+          "note": "实时is_cache=0；1712行与code_count一致；净份额非净金额"
+        },
+        {
+          "name": "iwencai.official.northbound",
+          "path": "iwencai.official.northbound",
+          "status": "stale",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 10,
+          "note": "解析为龙虎榜沪深股通席位净买入，仅局部代理非全市场北向"
+        },
+        {
+          "name": "iwencai.official.options",
+          "path": "iwencai.official.options",
+          "status": "error",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261022",
+          "record_count": 0,
+          "note": "隐波问句无匹配；vibe options仅支持美股，不冒用作A股ETF期权"
+        },
+        {
+          "name": "overseas_snapshot",
+          "path": "data/raw/20261023/overseas_snapshot.json",
+          "status": "stale",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261021",
+          "record_count": 12,
+          "note": "本日文件但美股实际asof为20261021；SOX/INTC/MRVL缺失"
+        },
+        {
+          "name": "tushare.anns_d",
+          "path": "tushare.anns_d",
+          "status": "ok",
+          "captured_at": null,
+          "retrieved_on": "2026-10-23",
+          "asof": "20261023",
+          "record_count": 0,
+          "note": "沈鼓20261020至20261023公告实调为空，不扩展为无风险"
+        }
+      ]
+    },
+    "source_audit_interpretation": {
+      "not_yet_landed": "R4生成时R3/R7未落盘是历史时点，当前主产物已读；不改写R4的原始审计，也不称源故障。",
+      "call_failed": "R7 ProxyError/缺key/空响应是调用或权限/覆盖问题；D1未探针，不宣称source_down。",
+      "unavailable": "R7 reliable northbound净额语义未获验证，保留整体unavailable；不是全部子源均失效。",
+      "independence": "跨R引用与新闻转载不重复计独立来源；行业/概念/个股粒度不可互换。"
+    }
+  },
+  "market_context": {
+    "structure": "主跌优先于扩散标签；人形机器人仅观察；关注与资金背离，不开新仓。",
+    "observed_trade_date": "20261022",
+    "emotion_cycle": {
+      "phase": "main_down",
+      "phase_name": "主跌",
+      "metrics": {
+        "metrics_date": "20261022",
+        "premium": null,
+        "ladder": 5,
+        "break_rate": 0.4107142857142857,
+        "limit_up_count": 33,
+        "limit_down_count": 48
+      },
+      "basis": "src/research/emotion_cycle.py:172-188：n_d>=20进入主跌分支；回退高位震荡的例外要求premium>0且break_rate<40%，实际break_rate>=40%使例外必为假，故无需假造premium即可判main_down；跌停48<50且<80，不命中补跌规则。",
+      "premium_note": "本地预计算premium=1.37%带intraday_fallback标记，仅上下文；未完成在线全池溢价复算，量化事实设null。",
+      "markov_prediction": null,
+      "reason": "缺少在线复核的上一阶段与完整溢价，不输出伪精确转移概率。"
+    },
+    "r1_sentiment_score": 46,
+    "r3_sentiment_score": 56,
+    "confirmed_tradeable_mainlines": 0,
+    "observation_mainlines": 1,
+    "primary_template": "首板隔日",
+    "template_enabled": false,
+    "macro_regime": "unconfirmed",
+    "four_quadrant_cross_product": {
+      "status": "partial",
+      "axes": {
+        "sentiment": "主题关注/讨论热度，不代表看多；高=R3 L1+L2或R2已披露概念top20；低=明确无共振且概念榜外，未观测不填低。",
+        "capital": "高=同一主题同口径当日主力净流入>0；低=净额<=0；缺失=unknown。这里只是方向代理，不是强度或五日持续性。"
+      },
+      "observed_trade_date": "20261022",
+      "Q1_高情绪高资金": {
+        "targets": [],
+        "negative_risk": "拥挤一致与次日接力衰竭；本次无可匹配实例，不补造。"
+      },
+      "Q2_高情绪低资金": {
+        "targets": [
+          {
+            "target": "人形机器人",
+            "concept_hot_rank": 1,
+            "net_amount_yuan": -2688531456.0,
+            "net_amount_yi": -26.8853,
+            "source": "data/research/20261023/R2_main_sectors.json#/observation_scores",
+            "action": "观察"
+          },
+          {
+            "target": "网络安全",
+            "concept_hot_rank": 16,
+            "net_amount_yuan": -2502819840.0,
+            "net_amount_yi": -25.0282,
+            "source": "data/research/20261023/R2_main_sectors.json#/observation_scores",
+            "action": "不进"
+          },
+          {
+            "target": "军工",
+            "concept_hot_rank": 6,
+            "net_amount_yuan": -3585932032.0,
+            "net_amount_yi": -35.8593,
+            "source": "data/research/20261023/R2_main_sectors.json#/observation_scores",
+            "action": "不进"
+          },
+          {
+            "target": "AI应用",
+            "concept_hot_rank": 9,
+            "net_amount_yuan": -6720991744.0,
+            "net_amount_yi": -67.2099,
+            "source": "data/research/20261023/R2_main_sectors.json#/observation_scores",
+            "action": "不进"
+          },
+          {
+            "target": "CPO",
+            "concept_hot_rank": 4,
+            "net_amount_yuan": -12742677760.0,
+            "net_amount_yi": -127.4268,
+            "source": "data/research/20261023/R2_main_sectors.json#/observation_scores",
+            "action": "不进"
+          }
+        ],
+        "negative_risk": "热度陷阱/跌中关注；不等于已确认霸榜出货。"
+      },
+      "Q3_低情绪高资金": {
+        "targets": [],
+        "negative_risk": "孤立净买或下跌承接不等于新主线；美容护理/家电未有同口径低情绪证据，不能强塞本象限。"
+      },
+      "Q4_低情绪低资金": {
+        "targets": [],
+        "negative_risk": "缺乏接力与流动性；本次没有明确双低样本。"
+      },
+      "unclassified": [
+        {
+          "target": "基础油",
+          "reason": "R3 L1+L2；R2资金缺测，不能填零或用油气资源净流量替代。"
+        },
+        {
+          "target": "油气开采/油服",
+          "reason": "R2热度缺测，不能把未入top20写成低情绪。"
+        },
+        {
+          "target": "减速器/机器人执行器",
+          "reason": "R2同日子方向净流入，但未取得同粒度关注证据；不能覆盖人形机器人整板净流出。"
+        }
+      ],
+      "scope_note": "负面诊断附录，非正式counter_arguments；不新增个股、不改变R2空池。"
+    },
+    "r4_events": [
+      {
+        "event_id": "E20261023_001",
+        "parent_event_id": "AI_REPRICING",
+        "title": "海外AI硬件遭抛售与资本开支回报担忧",
+        "polarity": "负面",
+        "strength": "high",
+        "bearish_scope": "行业级",
+        "bearish_impact_sectors": [
+          "光模块",
+          "CPO",
+          "半导体",
+          "存储",
+          "AI算力"
+        ],
+        "sectors_impact": [
+          {
+            "name": "光模块",
+            "polarity": "负面",
+            "strength": "high",
+            "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+          },
+          {
+            "name": "CPO",
+            "polarity": "负面",
+            "strength": "high",
+            "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+          },
+          {
+            "name": "半导体",
+            "polarity": "负面",
+            "strength": "high",
+            "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+          },
+          {
+            "name": "存储",
+            "polarity": "负面",
+            "strength": "high",
+            "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+          },
+          {
+            "name": "AI算力",
+            "polarity": "负面",
+            "strength": "high",
+            "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+          }
+        ]
+      },
+      {
+        "event_id": "E20261023_002",
+        "parent_event_id": "ISAAC",
+        "title": "英伟达扩展Isaac机器人开发平台",
+        "polarity": "正面",
+        "strength": "high",
+        "bearish_scope": null,
+        "bearish_impact_sectors": [],
+        "sectors_impact": [
+          {
+            "name": "人形机器人",
+            "polarity": "正面",
+            "strength": "high",
+            "mechanism": "训练与仿真工具降低开发门槛"
+          },
+          {
+            "name": "工业软件",
+            "polarity": "正面",
+            "strength": "medium",
+            "mechanism": "设计仿真工具链需求映射"
+          }
+        ]
+      },
+      {
+        "event_id": "E20261023_003",
+        "parent_event_id": "PHP",
+        "title": "PHP高危漏洞触发紧急修复与安全防护需求",
+        "polarity": "正面",
+        "strength": "high",
+        "bearish_scope": null,
+        "bearish_impact_sectors": [],
+        "sectors_impact": [
+          {
+            "name": "网络安全",
+            "polarity": "正面",
+            "strength": "high",
+            "mechanism": "漏洞排查与应急响应需求增加"
+          },
+          {
+            "name": "AI安全",
+            "polarity": "正面",
+            "strength": "medium",
+            "mechanism": "自动发现漏洞与机器速度攻防需求"
+          }
+        ]
+      },
+      {
+        "event_id": "E20261023_004",
+        "parent_event_id": "CPO_CLARIFICATION",
+        "title": "天孚通信披露CPO提产节奏未变与物料改善",
+        "polarity": "正面",
+        "strength": "high",
+        "bearish_scope": null,
+        "bearish_impact_sectors": [],
+        "sectors_impact": [
+          {
+            "name": "光模块",
+            "polarity": "正面",
+            "strength": "medium",
+            "mechanism": "经营与交付正常提供事实澄清"
+          },
+          {
+            "name": "CPO",
+            "polarity": "正面",
+            "strength": "medium",
+            "mechanism": "FAU及ELS配套与提产节奏未明显变化"
+          }
+        ]
+      },
+      {
+        "event_id": "E20261023_005",
+        "parent_event_id": "GOLD_PRICE",
+        "title": "国际黄金白银价格显著下跌",
+        "polarity": "负面",
+        "strength": "medium",
+        "bearish_scope": "行业级",
+        "bearish_impact_sectors": [
+          "黄金",
+          "白银",
+          "贵金属"
+        ],
+        "sectors_impact": [
+          {
+            "name": "黄金",
+            "polarity": "负面",
+            "strength": "high",
+            "mechanism": "金价下跌压制矿企收入与风险偏好"
+          },
+          {
+            "name": "白银",
+            "polarity": "负面",
+            "strength": "high",
+            "mechanism": "银价跌幅更大形成价格压力"
+          }
+        ]
+      },
+      {
+        "event_id": "E20261023_006",
+        "parent_event_id": "CHIFENG_CONTROL",
+        "title": "紫金黄金完成取得赤峰黄金控制权",
+        "polarity": "正面",
+        "strength": "high",
+        "bearish_scope": null,
+        "bearish_impact_sectors": [],
+        "sectors_impact": [
+          {
+            "name": "黄金",
+            "polarity": "正面",
+            "strength": "medium",
+            "mechanism": "公司层面控制权交割与资源整合"
+          },
+          {
+            "name": "并购重组",
+            "polarity": "正面",
+            "strength": "medium",
+            "mechanism": "协议转让与H股配售完成交割"
+          }
+        ]
+      },
+      {
+        "event_id": "E20261023_007",
+        "parent_event_id": "HORMUZ",
+        "title": "霍尔木兹船只遇袭提升油气供给风险溢价",
+        "polarity": "正面",
+        "strength": "high",
+        "bearish_scope": null,
+        "bearish_impact_sectors": [],
+        "sectors_impact": [
+          {
+            "name": "油气开采",
+            "polarity": "正面",
+            "strength": "high",
+            "mechanism": "航运受阻可能抬升油气供给风险溢价"
+          },
+          {
+            "name": "油服",
+            "polarity": "正面",
+            "strength": "medium",
+            "mechanism": "高油价若持续可能改善资本开支预期"
+          }
+        ]
+      },
+      {
+        "event_id": "E20261023_008",
+        "parent_event_id": "HORMUZ",
+        "title": "霍尔木兹事件增加航空与运输成本风险",
+        "polarity": "负面",
+        "strength": "high",
+        "bearish_scope": "行业级",
+        "bearish_impact_sectors": [
+          "航空运输",
+          "航运物流",
+          "化工成本敏感链"
+        ],
+        "sectors_impact": [
+          {
+            "name": "航空运输",
+            "polarity": "负面",
+            "strength": "high",
+            "mechanism": "燃油与空域扰动提高成本"
+          },
+          {
+            "name": "航运物流",
+            "polarity": "负面",
+            "strength": "medium",
+            "mechanism": "通航安全与保险成本风险；不等同所有船型运价下跌"
+          },
+          {
+            "name": "化工成本敏感链",
+            "polarity": "负面",
+            "strength": "medium",
+            "mechanism": "原料成本传导不畅可能压缩利润"
+          }
+        ]
+      }
+    ],
+    "external_risk": "R1已核22日美股指数收跌；R7美股个股仍截至21日，不拼接成同夜完整数据。"
+  },
+  "risk_limits": {
+    "target_total_position_pct": 0.0,
+    "max_positions": 5,
+    "max_buy_orders_per_day": 0,
+    "max_orders_per_symbol_per_day": 0,
+    "block_prefixes": [
+      "920"
+    ],
+    "block_st": true,
+    "max_single_stock_pct": 0.15,
+    "max_single_sector_pct": 0.4,
+    "new_position_budget_pct": 0.0,
+    "existing_holdings_liquidation_required": false
+  },
+  "position_cap_derivation": {
+    "r1_style_signal": "主线扩散型",
+    "r1_raw_cap": 0.0,
+    "emotion_cycle_phase": "main_down",
+    "phase_priority": true,
+    "r7_northbound_strength": "unknown",
+    "r7_cap_adjustment": null,
+    "r2_main_lines_count": 0,
+    "main_lines_cap_multiplier": null,
+    "final_position_cap_pct": 0.0,
+    "derivation_formula": "min(R1显式零预算=0, 主跌无试仓资格=0, R7 unavailable开仓门禁=0) = 0；禁止degraded默认0.5与下限0.20回填。",
+    "seesaw_penalty": {
+      "applied": false,
+      "ratio": 1.0,
+      "reason": "R7 20行业190对未达到-0.6，不额外惩罚，亦不当作安全放行。"
+    },
+    "scope": "仅研究新仓风险预算，未知真实持仓，不要求立即清仓。"
+  },
+  "execution_pool": [],
+  "watch_pool": [],
+  "rejected": [],
+  "sector_observation_only": [
+    {
+      "name": "人形机器人",
+      "score": 72,
+      "execution_eligible": false,
+      "action": "降级观察",
+      "reason": "9家涨停及高热度有催化，但整板主力净流出26.8853亿元，生命周期未确认。",
+      "leaders": [],
+      "persistence_days": null,
+      "seal_rate": null,
+      "next_session_expectation": null
+    }
+  ],
+  "t1_candidates": {
+    "open_position": [],
+    "add_on_pullback": [],
+    "stop_loss_only": [],
+    "status": "blocked",
+    "reason": "无授权股票候选/持仓，不能虚构至少一条止损持仓；本次三档不满足可交易版完整度。"
+  },
+  "no_trade_conditions": [
+    {
+      "code": "MAIN_DOWN",
+      "description": "主跌且炸板率41.07%，没有计划内试仓资格，禁止新仓",
+      "active": true
+    },
+    {
+      "code": "R7_STALE",
+      "description": "R7 staleness_status=unavailable，可靠北向净额缺失，整体资金资格未通过",
+      "active": true
+    },
+    {
+      "code": "RESEARCH_NOT_PRODUCTION_READY",
+      "description": "本批提前版未完成生产窗口复核；R5 skipped、R6正式反证未完成",
+      "active": true
+    },
+    {
+      "code": "NO_ELIGIBLE_CANDIDATES",
+      "description": "R2 execution_candidates为空且确认可交易主线0",
+      "active": true
+    },
+    {
+      "code": "R1_FAIL",
+      "description": "R1 confidence<0.4（本批恰为0.4，未命中该阈值；其降级状态仍未通过）",
+      "active": false
+    },
+    {
+      "code": "R6_HARD_REJECT_OVERFLOW",
+      "description": "本次候选数0，不计算否决率，不把0/0记0%",
+      "active": false
+    },
+    {
+      "code": "GLOBAL_SEVERITY_3",
+      "description": "本次severity=2，未命中>=3；非通过所有数据源的证明",
+      "active": false
+    },
+    {
+      "code": "EMOTION_EXTREME_GREED",
+      "description": "本次为main_down而非贪婪",
+      "active": false
+    },
+    {
+      "code": "USER_HOLIDAY",
+      "description": "授权输入无出行标记，不推断假期",
+      "active": false
+    }
+  ],
+  "seesaw_plan": {
+    "status": "observation_only_no_trade",
+    "trigger_conditions": [
+      "主线继续净流出且无承接",
+      "盘中修复未获广度及昨涨停红盘率共同确认"
+    ],
+    "seesaw_directions": [
+      {
+        "direction": "机器人内部减速器/执行器承接",
+        "source_evidence": "R2主产物capital_subthemes",
+        "candidates": [],
+        "trigger": "整板资金改善且同粒度热度、主线生命周期及逐票资格完成后再评估；本预案不授权开仓"
+      },
+      {
+        "direction": "美容护理/家用电器资金承接审计",
+        "source_evidence": "R7 main_force.top_inflow_sectors",
+        "candidates": [],
+        "trigger": "仅跟踪净买与下跌并存，不将其认定低情绪或新主线"
+      },
+      {
+        "direction": "油气供给冲击事件观察",
+        "source_evidence": "R4 E007/E008及R2油气资金审计",
+        "candidates": [],
+        "trigger": "催化须有资金与板块联动确认；不从基础油偷换油气概念"
+      }
+    ],
+    "opposite_side_note": "无已命名合格个股，不提供可自动切换B计划；各方向同步走弱继续不开新仓。"
+  },
+  "portfolio_rebalance": {
+    "status": "not_evaluated",
+    "reason": "授权输入不含持仓与既有T计划；不提出个股调仓。"
+  },
+  "meta": {
+    "position_cap_pct": 0.0,
+    "position_cap_source": "R1 explicit zero + main_down + R7 unavailable; LLM adjudication",
+    "emotion_cycle_phase": "main_down",
+    "emotion_cycle_action": "今天是不开新仓日；不启用试仓。",
+    "decision_source": "llm",
+    "run_id": "20261023T061047-60743-14677",
+    "research_contract_checks_passed": true,
+    "research_completion_passed": false,
+    "node_invalid_count": 0,
+    "node_validation_status": "not_applicable_no_candidates",
+    "watch_pool_shortfall_reason": "无候选且no_trade，两池全空；不从R4点名映射/R7资金跟踪名单拼20只旧观察票。",
+    "corrections_applied": [],
+    "corrections_status": "not_read_scope_restricted",
+    "r6_devil_advocate": {
+      "hard_rejects_applied": [],
+      "hard_reject_filter_executed": true,
+      "candidates_before": 0,
+      "candidates_after": 0,
+      "removed_count": 0,
+      "formal_review_completed": false,
+      "empty_rejects_is_clearance": false,
+      "strong_suggests_accepted": [],
+      "strong_suggests_overridden": [],
+      "soft_notes": [
+        "R6六模式全部degraded，Q2五主题为审计非出货定性。"
+      ]
+    },
+    "mainline_participation_applied": {
+      "applied": false,
+      "reason": "主跌；无已确认early主线及合格龙头，第一天轻仓原则不覆盖资格门禁。"
+    },
+    "event_premarket_gate": {
+      "event": "霍尔木兹地缘扰动及AI硬件行业重估",
+      "event_date": "20261023",
+      "post_event_only": true,
+      "high_pool_reduced": false,
+      "calendar_coverage": "仅R4事件，不具备未来三交易日完整日历",
+      "rationale": "无新增买单，事件缓释也不能自动解除R7及逐票资格门禁。"
+    },
+    "r3_r4_integration": {
+      "schema_version": "r3_r4_integration_v1",
+      "r3_themes": [
+        "人形机器人",
+        "基础油",
+        "网络安全",
+        "军工",
+        "AI应用"
+      ],
+      "events": [
+        {
+          "event_id": "E20261023_001",
+          "parent_event_id": "AI_REPRICING",
+          "title": "海外AI硬件遭抛售与资本开支回报担忧",
+          "polarity": "负面",
+          "strength": "high",
+          "bearish_scope": "行业级",
+          "bearish_impact_sectors": [
+            "光模块",
+            "CPO",
+            "半导体",
+            "存储",
+            "AI算力"
+          ],
+          "sectors_impact": [
+            {
+              "name": "光模块",
+              "polarity": "负面",
+              "strength": "high",
+              "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+            },
+            {
+              "name": "CPO",
+              "polarity": "负面",
+              "strength": "high",
+              "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+            },
+            {
+              "name": "半导体",
+              "polarity": "负面",
+              "strength": "high",
+              "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+            },
+            {
+              "name": "存储",
+              "polarity": "负面",
+              "strength": "high",
+              "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+            },
+            {
+              "name": "AI算力",
+              "polarity": "负面",
+              "strength": "high",
+              "mechanism": "海外可比资产折价通过风险偏好传导而非证明国内订单取消"
+            }
+          ]
+        },
+        {
+          "event_id": "E20261023_002",
+          "parent_event_id": "ISAAC",
+          "title": "英伟达扩展Isaac机器人开发平台",
+          "polarity": "正面",
+          "strength": "high",
+          "bearish_scope": null,
+          "bearish_impact_sectors": [],
+          "sectors_impact": [
+            {
+              "name": "人形机器人",
+              "polarity": "正面",
+              "strength": "high",
+              "mechanism": "训练与仿真工具降低开发门槛"
+            },
+            {
+              "name": "工业软件",
+              "polarity": "正面",
+              "strength": "medium",
+              "mechanism": "设计仿真工具链需求映射"
+            }
+          ]
+        },
+        {
+          "event_id": "E20261023_003",
+          "parent_event_id": "PHP",
+          "title": "PHP高危漏洞触发紧急修复与安全防护需求",
+          "polarity": "正面",
+          "strength": "high",
+          "bearish_scope": null,
+          "bearish_impact_sectors": [],
+          "sectors_impact": [
+            {
+              "name": "网络安全",
+              "polarity": "正面",
+              "strength": "high",
+              "mechanism": "漏洞排查与应急响应需求增加"
+            },
+            {
+              "name": "AI安全",
+              "polarity": "正面",
+              "strength": "medium",
+              "mechanism": "自动发现漏洞与机器速度攻防需求"
+            }
+          ]
+        },
+        {
+          "event_id": "E20261023_004",
+          "parent_event_id": "CPO_CLARIFICATION",
+          "title": "天孚通信披露CPO提产节奏未变与物料改善",
+          "polarity": "正面",
+          "strength": "high",
+          "bearish_scope": null,
+          "bearish_impact_sectors": [],
+          "sectors_impact": [
+            {
+              "name": "光模块",
+              "polarity": "正面",
+              "strength": "medium",
+              "mechanism": "经营与交付正常提供事实澄清"
+            },
+            {
+              "name": "CPO",
+              "polarity": "正面",
+              "strength": "medium",
+              "mechanism": "FAU及ELS配套与提产节奏未明显变化"
+            }
+          ]
+        },
+        {
+          "event_id": "E20261023_005",
+          "parent_event_id": "GOLD_PRICE",
+          "title": "国际黄金白银价格显著下跌",
+          "polarity": "负面",
+          "strength": "medium",
+          "bearish_scope": "行业级",
+          "bearish_impact_sectors": [
+            "黄金",
+            "白银",
+            "贵金属"
+          ],
+          "sectors_impact": [
+            {
+              "name": "黄金",
+              "polarity": "负面",
+              "strength": "high",
+              "mechanism": "金价下跌压制矿企收入与风险偏好"
+            },
+            {
+              "name": "白银",
+              "polarity": "负面",
+              "strength": "high",
+              "mechanism": "银价跌幅更大形成价格压力"
+            }
+          ]
+        },
+        {
+          "event_id": "E20261023_006",
+          "parent_event_id": "CHIFENG_CONTROL",
+          "title": "紫金黄金完成取得赤峰黄金控制权",
+          "polarity": "正面",
+          "strength": "high",
+          "bearish_scope": null,
+          "bearish_impact_sectors": [],
+          "sectors_impact": [
+            {
+              "name": "黄金",
+              "polarity": "正面",
+              "strength": "medium",
+              "mechanism": "公司层面控制权交割与资源整合"
+            },
+            {
+              "name": "并购重组",
+              "polarity": "正面",
+              "strength": "medium",
+              "mechanism": "协议转让与H股配售完成交割"
+            }
+          ]
+        },
+        {
+          "event_id": "E20261023_007",
+          "parent_event_id": "HORMUZ",
+          "title": "霍尔木兹船只遇袭提升油气供给风险溢价",
+          "polarity": "正面",
+          "strength": "high",
+          "bearish_scope": null,
+          "bearish_impact_sectors": [],
+          "sectors_impact": [
+            {
+              "name": "油气开采",
+              "polarity": "正面",
+              "strength": "high",
+              "mechanism": "航运受阻可能抬升油气供给风险溢价"
+            },
+            {
+              "name": "油服",
+              "polarity": "正面",
+              "strength": "medium",
+              "mechanism": "高油价若持续可能改善资本开支预期"
+            }
+          ]
+        },
+        {
+          "event_id": "E20261023_008",
+          "parent_event_id": "HORMUZ",
+          "title": "霍尔木兹事件增加航空与运输成本风险",
+          "polarity": "负面",
+          "strength": "high",
+          "bearish_scope": "行业级",
+          "bearish_impact_sectors": [
+            "航空运输",
+            "航运物流",
+            "化工成本敏感链"
+          ],
+          "sectors_impact": [
+            {
+              "name": "航空运输",
+              "polarity": "负面",
+              "strength": "high",
+              "mechanism": "燃油与空域扰动提高成本"
+            },
+            {
+              "name": "航运物流",
+              "polarity": "负面",
+              "strength": "medium",
+              "mechanism": "通航安全与保险成本风险；不等同所有船型运价下跌"
+            },
+            {
+              "name": "化工成本敏感链",
+              "polarity": "负面",
+              "strength": "medium",
+              "mechanism": "原料成本传导不畅可能压缩利润"
+            }
+          ]
+        }
+      ],
+      "llm_verdict_check": "R3分数56及成员试反弹观点不推翻R1主跌；无可验证修复信号。",
+      "llm_policy_catalyst": "机器人平台及PHP漏洞有事件依据，不等于订单与利润；CPO经营澄清不抵销行业重估。",
+      "llm_kol_corroboration": "关注与行情同源传播不增独立证据；未确认署名KOL次日看多信号。",
+      "llm_first_board_quality": "R4首板候选0、R2候选0、R5跳过，禁止从点名股票升级执行。"
+    },
+    "gate_checks": {
+      "status": "blocked_before_stock_gates",
+      "stock_gate_calls": 0,
+      "passed": false,
+      "reason": "无逐票输入且预算为0，不给空值默认通过"
+    },
+    "blocked_requirements": [
+      "实际WatchlistPlan.mode仅接受live/dry_run，不能写skill所述no_trade；以mode=dry_run + trading_decision=no_trade + 零额度 + 空池 + autonomous_trading_enabled=false表达，不改schema。",
+      "用户仅授权核心JSON与KG主MD；不生成plan.md、点位表、散文副本、价位推导附加MD、runtime副本或一字板文件；profile外路径禁止写。",
+      "价位脚本默认扩读非artifacts研究/数据库并产生额外输出，本次不运行；无股票候选，数值价位及逐票价位引擎不适用，不构造伪价。",
+      "仅限当前summary主产物，不扩读错题本、attention_signals、昨日观察/持仓/T计划、原始manifest或其他同日版本；相应检查未完成，不标通过。",
+      "无execution候选，core_judge/risk_reward/board_pattern/dragon_switch/forbidden_filter逐票调用及七项开仓资格未执行；不产生任何execution许可。",
+      "无授权持仓与既有T计划，不能生成个股减仓/清仓方案或伪造stop_loss_only持仓条目；零新仓额度不等于全账户即时清仓。",
+      "主产物未嵌run_id；仅以summary显式指针、日期及各unit完成时间完全匹配绑定本批，附SHA256；不宣称具备独立run_id血缘证明。"
+    ],
+    "completion_status": "degraded_no_trade_artifacts_only",
+    "schema_validation": {
+      "model": "trading.schema.watchlist_plan.WatchlistPlan",
+      "mode_compatibility": "dry_run only; no_trade stored separately",
+      "not_a_full_strategy_acceptance": true
+    }
+  },
+  "sector_core_watchlist": [],
+  "research_anchor_only": []
+}

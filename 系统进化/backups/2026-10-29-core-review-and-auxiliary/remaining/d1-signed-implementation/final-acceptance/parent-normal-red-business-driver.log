@@ -1,0 +1,39 @@
+{
+  "exit_code": 1,
+  "source_unchanged": true,
+  "index_unchanged": true,
+  "guard_violations": [],
+  "guard_pids": [
+    18356,
+    18362,
+    18364,
+    18365,
+    18366,
+    18369,
+    18374,
+    18378,
+    18379,
+    18382
+  ],
+  "native_child_pids": [
+    18366
+  ],
+  "unguarded_native_children": []
+}
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____ test_real_normal_shell_delivery_can_later_use_selective_reassessment _____
+tests/pipeline/test_d1_selective_reassessment.py:385: in test_real_normal_shell_delivery_can_later_use_selective_reassessment
+    assert len(list(logs.glob('D1_retry_*/receipt.json')))==1, 'normal producer must record its own actual input/output binding'
+E   AssertionError: normal producer must record its own actual input/output binding
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = list(<generator object Path.glob at 0x10712b780>)
+E    +      where <generator object Path.glob at 0x10712b780> = glob('D1_retry_*/receipt.json')
+E    +        where glob = PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-business/cases/test_real_normal_shell_deliver0/app/data/logs/research_shell/20990106').glob
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_real_normal_shell_delivery_can_later_use_selective_reassessment
+1 failed in 1.11s
+

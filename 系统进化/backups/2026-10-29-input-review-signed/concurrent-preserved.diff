@@ -1,0 +1,43 @@
+--- approved-candidate
++++ concurrent-current
+@@ -647,8 +647,8 @@
+             "updates(顶层字段字典), adjudications(逐项对象列表), report_markdown(至少5行)。"
+             "逐项adjudications必须含target、status(retained/superseded/unresolved)、evidence、window。"
+             "required_targets每项恰好一条；retained仅保留原状态，不代表新审核通过；未审票不得superseded冒充新通过。明确原研究事实时点与本次生成时点。"
+-            "只可updates market_context/no_trade/decision_status/no_trade_conditions；变更字段须有原计划"
+-            "condition_sources封闭读取映射及绑定版本；仅已绑定condition可改变active，其余对象逐字保留。"
++            "只可updates market_context/no_trade/decision_status/no_trade_conditions；变更依据仅限本次读取投影"
++            "condition_sources封闭映射及绑定版本（不是原计划已有metadata）；仅已绑定condition可改变active，其余对象逐字保留。"
+             "active=false保护项不阻塞解禁；未知active或R6审核缺口/硬拒绝仍阻塞。无来源禁令不可撤销，只写retained/unresolved。"
+             "不改变原池身份、退出、账户/用户预算/制度/真实逐票否决/执行身份/确认要求。"
+             "可重新判断已有合法来源的当日市场结论，不保证非空；仅事件参考档位不授予买权。\n"
+@@ -665,7 +665,8 @@
+         # Existing log hierarchy retains failed raw output and exact binding.
+         with __import__('contextlib').nullcontext(__import__('tempfile').mkdtemp(prefix="D1_event_", dir=logs)) as temporary:
+             output = Path(temporary) / "proposal.json"
+-            atomic_json(Path(temporary) / "binding.json", {"event": event_version, "inputs": bound})
++            atomic_json(Path(temporary) / "binding.json", {"event": event_version, "inputs": bound,
++                                                       "condition_sources": sources})
+             original_md = (ROOT / bound["md"]["path"]).read_bytes()
+             (Path(temporary) / "previous-main.md").write_bytes(original_md)
+             binding = native_usage.prepare(ROOT, date, bound["run_id"], "D1_event", 1,
+@@ -712,6 +713,10 @@
+             allowed = {"market_context", "no_trade", "decision_status", "no_trade_conditions"}
+             if not isinstance(updates, dict) or set(updates) - allowed:
+                 raise ValueError("proposal attempts protected fields")
++            if "no_trade" in updates and type(updates["no_trade"]) is not bool:
++                raise ValueError("no_trade must be an explicit boolean")
++            if "decision_status" in updates and not isinstance(updates["decision_status"], str):
++                raise ValueError("decision_status must be explicit text")
+             if (not isinstance(judgments, list) or not judgments or any(
+                     not isinstance(row, dict) or row.get("status") not in {"retained", "superseded", "unresolved"}
+                     or not all(row.get(k) for k in ("target", "evidence", "window")) for row in judgments)):
+@@ -735,6 +740,8 @@
+                 raise ValueError("original conditions must retain identity and order")
+             changed = []
+             for i, (original, replacement) in enumerate(zip(conditions, revised)):
++                if f"condition:{i}" not in sources and statuses[f"condition:{i}"] == "superseded":
++                    raise ValueError("protected restriction must remain retained/unresolved")
+                 if original == replacement:
+                     continue
+                 target_name = f"condition:{i}"

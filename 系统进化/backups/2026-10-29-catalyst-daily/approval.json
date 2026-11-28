@@ -1,0 +1,10 @@
+{
+  "approved_at": "2026-10-29T22:24:39.727047+08:00",
+  "user_approval": "同意,现在用的是codex的额度是无限的,不要瞎担心",
+  "scope": "Existing catalyst job: daily 07:30 including weekends; retain four-week full analysis and daily delta; same Codex model and output directory; no duplicate job or new judgment engine",
+  "before_sha256": {
+    "scripts/health/check_daily_output.py": "f535de906f7a49fcd2d011cecb166445f00263e5d86cbd18beb9688454d0d3ba",
+    "scripts/cron/holiday_maintenance.py": "9c54f01d42de6130e8fad6606e97b612a669f8829e3eea804f24bfe5ba72086d",
+    "chzl_kg/投研交易/催化剂/README.md": "eccfb0cc91747fb49c30e35e0a4648a2029104e489c63cdf944f7ebcf54fb5e7"
+  }
+}

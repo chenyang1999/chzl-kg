@@ -1,0 +1,152 @@
+---
+date: 2026-07-06
+agent: R3-sentiment-resonance
+skill_version: analyze_sentiment_resonance_v1@1.0
+generated_at: 2026-07-06T02:45:00+08:00
+confidence: 0.5
+degraded: true
+data_sources:
+  - name: wechat_cli_5groups
+    path: data/raw/20260706/wechat_cli_5groups.jsonl
+    status: ok
+    record_count: 94
+    note: 5 群全活(AA盘中新闻 / 颜晓滨V / AA陆家嘴 / AA摩天轮 / 专注核心)
+  - name: wechat_official_20
+    path: data/raw/20260706/wechat_official_20.jsonl
+    status: ok
+    note: KOL 语义抽取主源
+  - name: weflow_snapshot
+    path: data/raw/20260706/weflow_snapshot.json
+    status: error
+    error: weflow-analytics MCP down · TimeoutError · 文件不存在
+    record_count: 0
+  - name: tushare_ths_hot_baseline
+    path: mcp_tushareMcp_ths_hot(20260703, 20260702)
+    status: ok
+    note: L1 使用最近交易日 T-1 baseline · 20260706 07:30 当日热榜尚未生成
+  - name: tushare_dc_concept_baseline
+    path: mcp_tushareMcp_moneyflow_cnt_ths(20260703)
+    status: ok
+  - name: xtick_emotion_moneyflow
+    path: xtick /doc/hot/emotion & /doc/hot/moneyflow
+    status: error
+    error: cron 环境无 XTick MCP 权限
+  - name: R1_style.json
+    path: data/research/20260706/R1_style.json
+    status: error
+    error: 尚未落盘 · 情绪基准退化为中性 50
+input_freshness: partial
+input_freshness_note: WeFlow (L3) 死 + XTick 不可用 + R1 未落盘 · L1 使用 T-1 baseline · L2 (KOL 5 群) 全活兜底
+---
+
+# 2026-07-06 · 群聊情绪与热度共振
+
+> **数据源新鲜度**: partial(WeFlow/XTick/R1 三源缺失,L1 使用 T-1 baseline)
+> **降级状态**: yes(L3 死,confidence 上限锁 0.6)
+> **置信度**: 0.5
+
+## 一句话结论
+
+盘前情绪浓度 58 分,处中性偏乐观区间——周末利空(Meta 云端需求担忧、科技板块拥挤度回调)与利好(华为韬定律 V2 混合键合量产验证、三星 DRAM 三季拟涨价 20%、长征十号乙 7 月 10-13 日首飞窗口)对冲之下,**人形机器人、存储芯片、先进封装/华为韬定律**三条主线在 KOL 与 T-1 热榜两源都出现明确共振,建议 D1/R2 优先在此三条上排龙头。
+
+## 情绪浓度构成:58 分怎么来的
+
+情绪浓度 = 基准分 + 共振修正,本次两个变量都在降级路径上:
+
+- **基准分 50 分**:标准做法是从 R1_style.json 读取当日风格基线,但 R1 artifact 07:30 时点尚未落盘,依据 r3-降级手册第 3 条,基准退化为中性 50 分。
+- **共振修正 +8 分**:标准做法是按 L2+L3 主题密度 × 3 分/条,但 L3(WeFlow)整源死,改用 L1+L2 双源密度 × 2 分/条。共命中 5 条 L1+L2 主题,理论加分 10;考虑到周末情绪 mixed(Meta 云担忧 / 拥挤度回调 vs 韬定律 V2 / DRAM 涨价 / MLCC 涨价 / 首飞临近),保守下调至 +8 分。
+- **净得 58 分**:落在"中性偏乐观"档,不足以给 D1 发出激进加仓信号,但也没有触发红线出货预警。
+
+置信度 0.5 的推导路径:基准 0.55(三源健全)−0.05(L3 WeFlow 死,可选源)−0.05(L1 用 T-1 baseline)−0.05(R1_style 缺失)−0.05(XTick 不可用),扣至 0.35;因 5 群 KOL 全活且周末资讯极密集(卖方研报 + 产业催化 + 机构电话会),LLM 语义抽取质量优于规则版,回补 +0.15,最终 **0.50**,符合降级手册 ≤0.6 上限。
+
+## 共振主题(top 5)
+
+| rank | theme_name | resonance_level | 命中源 | 建议板块 | 建议个股(供 R2/R5 交叉) |
+|------|-----------|-----------------|--------|----------|--------------------------|
+| 1 | 人形机器人 | L1+L2 | KOL×3 + 同花顺热榜 rank1(hot=331004) + 东财 net_amount+2.26 亿 | 人形机器人 / 机器人概念 / 减速器 / 特斯拉概念 | 300124 汇川技术 / 002050 三花智控 / 东财 lead=丰光精密(30cm) |
+| 2 | 存储芯片 | L1+L2 | KOL×3 + 同花顺 rank3(hot=140310) + 东财 lead=天山电子 | 存储芯片 / HBM / 先进制程 | 300223 北京君正 / 002049 紫光国微 / 002185 华天科技 · 江波龙 Q2 预告 92-110 亿(同比 622-744 倍) |
+| 3 | 先进封装/华为韬定律 | L1+L2 | KOL×3(华创 mike / 摩天轮 / LoongTetara) + 同花顺 rank14 新进榜 + 芯片概念 rank13 | 先进封装 / 混合键合 / EDA / 半导体设备 | 688072 拓荆科技 / 688200 华大九天 / 华创点名清单:中芯 / 华虹 / 长电 / 北方华创 / 中微 |
+| 4 | 光通信/光模块 | L1+L2 | KOL×5(中信通信 / 天风 / 蒋颖开源 / 刘高畅国金 / 陈铁林华福) + 同花顺光纤 rank11↑7、CPO rank5 稳 | 光通信 / 光模块 / 光芯片 / 光纤 / CPO | 300308 中际旭创 / 688048 长光华芯 / 601869 长飞光纤 / 688629 华丰科技 · 天风独家:永鼎股份(600105) |
+| 5 | 商业航天 | L1+L2 | KOL×3(秋生 / 炭烤脑花 / 刘高畅) + 同花顺 rank6↑5(hot=79586, +1.68%) + 军工共振 | 商业航天 / 卫星互联网 / 低空经济 | 600435 北方导航 / 688776 国光电气 / 600879 航天电子 / 002151 北斗星通 |
+
+### top 3 主题解读
+
+**1. 人形机器人(middle)**
+特斯拉副总裁陶琳表态 Optimus 2026 年底正式启动规模化量产,7 月周产从大几十台爬坡到 100-200 台——这是周末央视/央媒集中报道的核心量产催化。同花顺概念热榜从 20260702 的 rank3 升到 20260703 的 rank1(+2 位),hot 值 331004 居首,pct_change +3.46%,东财资金流 net_amount +2.26 亿是 top5 主题中最强的一档。判断为 middle(不早不晚):已在热榜第 1 位数日,周一注意兑现风险,若开盘冲高不接量应视作出货信号而非启动信号。
+
+**2. 存储芯片(middle · 分歧)**
+利好侧极密集——三星 Q3 DRAM 拟提价 20%(已发口头通知)、美光 93 亿美元扩建先进存储 2028 下半年出货 HBM、三星传获 Meta 超 10 万亿韩元 AI 芯片代工订单、韩国拟斥资 312 万亿韩元打造物理 AI 枢纽、中信电子预判 DRAM/NAND 三季度合约价综合环比涨 20-30%+。但热榜 pct_change 显示周五 -1.97%,存在 Meta 云端资本开支/拥挤度担忧的负面博弈。方向不明,middle。江波龙业绩预告 92-110 亿(同比 622-744 倍)是个股级重磅催化,可拉高单点。
+
+**3. 先进封装 / 华为韬定律 V2(middle · L1 新进榜)**
+周末最强单一叙事:华为何庭波韬定律 V2 论文,LogicFolding 混合键合垂直堆叠——晶体管密度 155→238 MTr/mm²、功耗 -41%、CPU 频率 2.75→3.1 GHz,昇腾 990 将 2030 年前后导入逻辑折叠。KOL 三条独立点名(华创 mike、题材摩天轮 f、专注核心 LoongTetara),产业链拆解一致:晶体管层(中芯 / 华虹)/电路层(华大九天)/芯片层(拓荆 / 盛美 / 三美)/系统层(源杰 / 盛科 / 澜起)。热榜信号:先进封装 20260702 未上榜 → 20260703 rank14 **新进榜**,是本次 L1 层最重要的正向信号。**注意跷跷板**:同一日东财资金流 net_amount -0.88 亿,叙事强 vs 资金弱的组合,进场要选量能配合的龙一。
+
+## KOL 关键动作(top 6)
+
+**1. 颜晓滨V @ 07-05 22:29 · 秋生转开源策略韦冀星**
+"科技主线未破,短期再平衡",牛市多回调、当前牛市没结束;科技难度提升,重点关注四类"二次点火 + 叙事张力":① 国产算力/半导体/PCB;② 电力设备/液冷;③ 商业航天/军工/机器人;④ 再平衡两条线——业绩兑现(有色/券商/创新药/农林牧渔)+ 油价改善成本受益(美护/交运/建筑/家电)。valid_period:1-3 天(周策略,盘中会分层兑现)。
+
+**2. 颜晓滨V @ 07-05 22:29 · 秋生转中信通信**
+"风雨过后见彩虹,坚定站在光里";四大判断——① 光模块龙一业绩不会差首推中际旭创;② 光芯片是大趋势首推长光华芯;③ 光纤壁垒高首推长飞;④ 国产超节点连接器弹性大推荐华丰 + 胜蓝。valid_period:1-2 周(产业深度观点,配合周一蒋颖电话会)。
+
+**3. AA盘中新闻 @ 07-05 23:35 · mike 华创计算机**
+韬定律 V2 开辟未来 5-10 年算力新路径;LogicFolding 混合键合垂直堆叠已取得量产验证(238 MTr/mm² / 功耗 -41% / CPU 3.1GHz);系统层 Unified Bus / 近封装光引擎 / 3D Folding 三者协同,预计 2035 年 AI 硬件集成度增长超 100 倍;产业从几何微缩进入时间优化时代。valid_period:1-4 周(长期路线图,短期看周一先进封装/EDA/混合键合板块反应)。
+
+**4. AA陆家嘴 @ 07-05 17:48 · 蒋颖开源证券通信首席**
+周一 07:30 / 08:00 / 08:30 三场电话会议——锐捷网络业绩预告解读 / 当下时点液冷观点 / 务必重视光通信投资机会。valid_period:1 天(周一开盘前明牌催化)。**这是最强的短期时间锚**。
+
+**5. AA盘中新闻 @ 07-05 17:46 · Tony 周末汇总**
+特斯拉副总裁陶琳表态 Optimus 2026 年底正式启动规模化量产,7 月周产从大几十台爬坡到 100-200 台;三星 Q3 DRAM 拟提价 20% 厂家称已接口头通知;美光科技投资 93 亿美元扩建先进存储 2028 下半年出货 HBM。valid_period:1-3 天(产业硬数据,机器人 + 存储双主线支撑)。
+
+**6. AA摩天轮 @ 07-05 14:22 · f MLCC 华强北跟踪**
+7 月 4 日下午华强北 AI 专用高容 MLCC 继续涨价,村田 1206 封装 476 单日涨幅 4-6%,超高容 GPU 专用型号加价 10%+,报价半小时变动,档口惜售限量供货。valid_period:1-3 天(供需侧数据,MLCC/被动元件板块催化,注意与存储芯片同属科技上游共振)。
+
+## 热榜信号(L1 · 20260703 baseline)
+
+- **rank_momentum_up 强共振**:人形机器人 3→1(+2)、光纤概念 18→11(+7)、商业航天 11→6(+5)——三者均已在 KOL 侧独立点名,属 L1+L2 强共振。
+- **new_in_top 新进榜**:先进封装 rank14(韬定律 V2 混合键合核心叙事,L1+L2 强)、减速器 rank7(仅通过"机器人"共振,L1_only)、液冷服务器 rank19(蒋颖周一电话会专题,L1+L2 弱)、PCB 概念 rank8(周五 rank8 稳定,美银/国泰海通推电子布 CCL 涨 15%,建议 R2 关注)。
+- **dropped_from_top 掉出 top20**:培育钻石(前 rank7)、光刻胶(前 rank14)、稀土永磁(前 rank16)——注意稀土永磁掉出,与机器人主线的减速器/永磁产业链存在弱背离。
+- **反例·rank_momentum_down**:AI 应用 15→20(-5),叙事被动;创新药 1→2(-1),但仍稳居 top2 属正常震荡。
+- **distribution_alert 霸榜出货**:无红线 5 触发。20260703 rank1 为人形机器人(20260702 rank3),不构成"连续两日 rank1"的霸榜条件,当前无出货预警。
+- **cross_source_moneyflow(20260703)**:人形机器人 net_amount +2.26 亿(强)、光通信/CPO 净流入 +0.27 亿(微正)、**先进封装 net_amount -0.88 亿(卖出多于买入)**——先进封装是"叙事强 / 资金弱"的分歧组合,是本 md 最需要 R7 交叉验证的一条。
+
+## 数据源审计
+
+| 源 | 状态 | 记录数 | 备注 |
+|---|---|---|---|
+| wechat_cli_5groups(L2 · 5 群) | alive | 94 条 | AA盘中新闻 / 颜晓滨V / AA陆家嘴 / AA摩天轮 / 专注核心 全活 |
+| wechat_official_20(L2 · 公众号) | alive | - | 语义抽取主源 |
+| weflow_snapshot(L3) | **dead** | 0 | weflow-analytics MCP down + 文件不存在(TimeoutError)· L3 整源缺失 |
+| tushare_ths_hot(L1 · 20260703 baseline) | alive | - | 当日 20260706 07:30 热榜尚未生成,依 hotlist_rank_signal_v1 spec §5 允许使用最近交易日基线 |
+| tushare_dc_concept(L1) | alive | - | 20260703 概念资金流 |
+| dc_hot / tushare_ths_hot(20260706 当日) | **empty** | 0 | 周一 07:30 尚未产出,当日基线缺失 |
+| xtick_emotion / xtick_moneyflow | **not_available** | - | cron 环境无 XTick MCP 权限 |
+| R1_style.json | **not_ready** | - | R1 尚未落盘,情绪基准退化为中性 50 |
+
+**降级综合影响**:L3(WeFlow)整源死意味着热词映射与语义细粒度信号缺失,所有主题共振级别降为 L1+L2 而非满级 L1+L2+L3,置信度锁 ≤0.6;L1 使用 T-1 baseline 而非当日快照,存在开盘后反转风险(周一开盘 30 分钟内建议 R7 与实时资金流交叉再评);R1 缺失使基准分退化为中性 50,若 R1 后补落盘且情绪基线偏乐观,本 md 的 58 分应上调 3-8 分。
+
+## 不确定性 / 反证
+
+- **周末信号 vs 周一兑现之间的价差** · KOL 侧极度密集(5 群 94 条 + 20 篇公众号),存在过度定价风险。人形机器人已在热榜 rank1 多日,若周一开盘冲高不接量应视作出货信号;先进封装叙事最新最强但热榜刚新进 rank14 且资金 net_amount -0.88 亿,分歧明显,不建议一把梭。
+- **L3 死叠加 R1 未落盘** · 情绪浓度 58 分是"中性偏乐观"的定性判断,数值精度不足以支持仓位微调级决策,建议 D1 把它作为方向指示而非量化输入。
+- **Meta 云端拥挤度担忧未被充分定价** · 周五科技板块整体回调 -3.5%(中信电子情绪反馈),周末利好是否能扭转情绪反转,取决于周一 09:30 前 30 分钟龙头封板速度——若封板慢,存储/光通信的分歧会放大。
+- **距 R6 反证的接口** · 本 md 建议 R6 重点审视"先进封装叙事强/资金弱"这条,以及人形机器人在热榜 rank1 多日后是否满足红线 5(霸榜出货)的先兆条件——当前 20260702→20260703 未连续两日 rank1,尚未触发,但周一若继续 rank1 且资金转负,应升级警戒。
+
+## 与其他 R/D 的关系
+
+- **上游依赖**(读):data/raw/20260706/manifest.json(global_severity=2)· wechat_cli_5groups.jsonl(L2)· wechat_official_20.jsonl(L2)· mcp_health.json;应读但缺失的:weflow_snapshot.json(L3 死)、R1_style.json(未落盘)。
+- **横切 skill**:@hotlist_rank_signal_v1(L1 热榜四层信号)· @r3-降级场景手册(WeFlow 死 fallback 路径)。
+- **下游消费者**:
+  - **D1(main_decision_v1)** · 消费情绪浓度 58 + top5 主题清单构建 execution_pool 主线权重
+  - **R2(analyze_main_sectors_v1)** · 消费 top5 主题的 suggested_sectors + suggested_stocks 作为候选池种子(注意 R3 侧未做龙头硬约束过滤,由 R2 用 filter_leader_v1 收敛)
+  - **R6(analyze_devil_advocate_v1)** · 消费"先进封装资金分歧"+"人形机器人热榜霸榜先兆"两条作为反证候选
+  - **R7(analyze_capital_flow_v1)** · 07:30 全量 + 11:35 增量时交叉验证 top5 主题的资金侧表现
+
+## Sub-Agent 元数据
+
+- skill: analyze_sentiment_resonance_v1@1.0
+- artifact(机读): data/research/20260706/R3_sentiment.json
+- 本 md(人读): chzl_kg/投研交易/群聊情绪/20260706.md
+- method: llm_v1_degraded_no_weflow(降级路径,r3-降级场景手册)
+- resolved_trade_date: 20260706 · l1_baseline_trade_date: 20260703
+- fetch_global_severity: 2(局部降级但 5 群 KOL 全活)
+- confidence: 0.5(基准 0.55 − 四项降级扣分至 0.35 + LLM 语义抽取质量回补 +0.15)

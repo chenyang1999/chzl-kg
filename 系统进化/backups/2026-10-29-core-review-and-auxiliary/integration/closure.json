@@ -1,0 +1,44 @@
+{
+  "verified_at": "2026-10-29T12:09:54.555366+08:00",
+  "tests": 54,
+  "exit_code": 0,
+  "audit_violations": 0,
+  "source_stable": true,
+  "no_selection_or_deselection": true,
+  "baseline_caller_cases_failed": 6,
+  "current_optional_missing_file_continues_with_gap": true,
+  "unbound_old_summary_rejected_without_self_binding": true,
+  "prior_session_observation_date_preserved": true,
+  "actual_model_invocation": false,
+  "production_rerun": false,
+  "shell_check": "syntax and source ordering only",
+  "safety_net_check": "actual retry function and input consumers; model transport and output publication boundary stubbed",
+  "real_data_inspection": "parent inspected only approved two snapshot metadata; tests synthetic-only",
+  "auxiliary_inputs_authorized": [
+    "attention_signals.json",
+    "emotion_cycle.json"
+  ],
+  "other_auxiliary_classes_authorized": false,
+  "trading_authorization_changed": false,
+  "other_safety_net_functions_unchanged": true,
+  "event_skill_segment_unchanged": true,
+  "evidence_kind": "dependency-bound repair evidence; not a standalone installation or clean Git checkpoint",
+  "known_attempts": [
+    "initial harness missing basetemp parent: 6 passed,39 setup errors; no boundary violations",
+    "initial caller fixtures: 48 passed,5 failed; missing generated_at and wrong old-binding expectation corrected without production gate changes",
+    "child concurrent old-document assertion failed; final full queue runs unchanged assertion without exclusion"
+  ],
+  "final_source_sha256": {
+    "scripts/research/build_research_summary.py": "f66b99d0a38755c303aab79e5d98cc177aaefb478b38ea06a57e141e8dc7489a",
+    "scripts/research/pipeline_artifacts.py": "59516e95c37231441566e5311cb1e485eb62dc278f77706657fe0b4047bd9aeb",
+    "scripts/research/run_research_shell.sh": "7a72f682455d3610046530f96d3ed495a78bbe31fcc074a4f2978221a456fbf5",
+    "scripts/plan/ensure_watchlist_plan.py": "08688d64512fbda8db711195298cba5ff659fa4cce32402f91fa8208f504b5a1",
+    "skills/main_decision_v1/SKILL.md": "72bc196a0690af6d5a5a74efaa33a9f7c1e9683eeafd5efb47fbac7215d50f2b",
+    "skills/analyze_devil_advocate_v1/SKILL.md": "c5e67efb76cd622ec6cbf60806bdf3e1a9b6b19da9757d9942c077f9f4e38291",
+    "docs/agents/R6-反证Agent.md": "2215386a0065f1f0e9607b07f321e65dc840b0c142c4929a852dff1b9918487e",
+    "docs/06-专题-反证机制.md": "c6af453bd6aec812274d9a72ca0154f5f3733d89d9ad8ec34bf9e89667c520f7",
+    "tests/pipeline/test_bound_auxiliary_inputs.py": "166ffe44ccc8cda58e65b3a1254bdb0fbcd207dd98d28645ea749ad7058ab25c",
+    "tests/pipeline/test_signed_input_review_contract.py": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8",
+    "tests/pipeline/test_d1_auxiliary_caller_wiring.py": "55bfbb32f860bb91684c7215a70d4a628c6187de544e93267b6e55e5422be4ad"
+  }
+}

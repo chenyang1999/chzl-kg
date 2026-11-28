@@ -1,0 +1,49 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261116",
+  "next_day": "20261117",
+  "generated_at": "2026-11-16T22:00:44+08:00",
+  "n_total": 32,
+  "n_candidates": 2,
+  "candidates": [
+    {
+      "ts_code": "002187.SZ",
+      "name": "广百股份",
+      "industry": "一般零售",
+      "theme": "广东自贸区、免税店",
+      "limit_times": 3,
+      "fd_amount_yi": 1.99,
+      "pct_chg": 10.04,
+      "first_time": "93003",
+      "open_times": 0,
+      "float_mv_yi": 53.8,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.0亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002205.SZ",
+      "name": "国统股份",
+      "industry": "水泥",
+      "theme": "新疆、中吉乌铁路概念",
+      "limit_times": 3,
+      "fd_amount_yi": 0.12,
+      "pct_chg": 9.98,
+      "first_time": "93445",
+      "open_times": 5,
+      "float_mv_yi": 26.4,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.1亿 (一字率12%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停32只，筛出 2 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

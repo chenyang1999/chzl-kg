@@ -1,0 +1,522 @@
+[
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_cash_single_total_rule_and_holdings_budget",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "key": "'cash'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_cash_single_total_rule_and_holdings_budget",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "key": "'single'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_cash_single_total_rule_and_holdings_budget",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "key": "'total'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_cash_single_total_rule_and_holdings_budget",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "key": "'rule'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_cash_single_total_rule_and_holdings_budget",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "key": "'positions'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'future'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'stale'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'received_future'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'wrong_date'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'naive'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'tick'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'suspended'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'crossed'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'negative_depth'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'wrong_unit'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'nan'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_future_stale_inverted_wrong_date_and_timezone",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'st'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'no_trade'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'no_trade_condition'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'kill'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'kill_file_unverified'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'decision'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'unready'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'reassessment'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'stub'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'paper_auth'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'auth_id'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'live'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'live_auth'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'r6'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'hard_list'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'eligibility'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'missing_rr_price'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'watch_only'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_global_conditions_r6_eligibility_and_authorization",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'rebalance'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_limit_price_trigger_and_unsupported_rule",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'limit'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_limit_price_trigger_and_unsupported_rule",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'trigger'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_limit_price_trigger_and_unsupported_rule",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'unsupported'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_limit_price_trigger_and_unsupported_rule",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'extra_signal'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_limit_price_trigger_and_unsupported_rule",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'lot'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_limit_price_trigger_and_unsupported_rule",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'smallcap'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_lunch_close_weekend_and_calendar_fail_closed",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'lunch'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_lunch_close_weekend_and_calendar_fail_closed",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'close'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_lunch_close_weekend_and_calendar_fail_closed",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "label": "'weekend'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'source'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'symbol'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'trade_date'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'observed_at'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'received_at'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'bid_price'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'bid_size'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'ask_price'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'ask_size'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'last_price'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'lower_limit'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'upper_limit'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'suspended'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'at_upper_limit'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'at_lower_limit'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'tick_size'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'lot_size'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'quantity_unit'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'board'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'security_type'"
+    }
+  },
+  {
+    "nodeid": "tests/test_canghai_paper_execution_20261023.py::PaperAcceptance::test_missing_quote_fields_and_bad_metadata",
+    "outcome": "passed",
+    "message": null,
+    "params": {
+      "field": "'is_st'"
+    }
+  }
+]

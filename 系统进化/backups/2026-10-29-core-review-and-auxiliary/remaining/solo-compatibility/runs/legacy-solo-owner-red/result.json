@@ -1,0 +1,25 @@
+{
+  "exit_code": 1,
+  "cases": [
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_standalone_delivery_does_not_invent_reusable_owner",
+      "failure": true,
+      "error": false,
+      "skipped": false
+    },
+    {
+      "id": "tests.pipeline.test_safety_net_input_versions::test_owned_delivery_cannot_skip_failed_reuse_receipt",
+      "failure": false,
+      "error": false,
+      "skipped": false
+    }
+  ],
+  "source_unchanged": true,
+  "index_unchanged": true,
+  "guard_violations": [],
+  "guard_pids": [
+    40812
+  ],
+  "native_child_pids": [],
+  "unguarded_native_children": []
+}

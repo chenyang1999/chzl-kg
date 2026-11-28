@@ -1,0 +1,27 @@
+{
+  "ref": "refs/heads/safe-save-20261023-repair-archive",
+  "commit": "f91ba43957e31c1c0bc4e822e9b20377f2ac3fb8",
+  "parent": "03c1d25caf94e8c8576765442b55cbf4538559f1",
+  "tree": "9583476a3bf572e1eb46e6fce00b3abba0f09b06",
+  "paths": [
+    "chzl_kg/系统进化/backups/2026-10-23-repair-source-archive.patch",
+    "chzl_kg/系统进化/backups/2026-10-23-repair-source-archive.manifest.json",
+    "chzl_kg/系统进化/backups/2026-10-23-paper-recovery-final416-acceptance.json",
+    "chzl_kg/系统进化/backups/2026-10-23-paper-recovery-final416-junit.xml",
+    "chzl_kg/系统进化/backups/2026-10-23-paper-recovery-final416-pytest.log",
+    "chzl_kg/系统进化/backups/2026-10-23-paper-recovery-verify.py"
+  ],
+  "sha256": {
+    "chzl_kg/系统进化/backups/2026-10-23-repair-source-archive.patch": "1ff9469dc3b16122f08f27e822972b372cb8972156e8315d312b622e2a5c64c3",
+    "chzl_kg/系统进化/backups/2026-10-23-repair-source-archive.manifest.json": "d640150d56ef1f4eab2f88522ba726afd3ee5513428c5d54371e7559dc6e314d",
+    "chzl_kg/系统进化/backups/2026-10-23-paper-recovery-final416-acceptance.json": "f3b6f587ef976c9152bd027b336f1d5835f3417bd63717334b62ec90108ec7d3",
+    "chzl_kg/系统进化/backups/2026-10-23-paper-recovery-final416-junit.xml": "de6ec4b597be952eabdeb58abd4d49dc015c366d660099a40c06710e17fb386f",
+    "chzl_kg/系统进化/backups/2026-10-23-paper-recovery-final416-pytest.log": "7118b84782149a6b8f1b0d2b8c2cecf3cf62f0ff3610181b44c685699a68d2db",
+    "chzl_kg/系统进化/backups/2026-10-23-paper-recovery-verify.py": "6ad2378bffcfb1f47c7932285548cce1f9b59bf8e965c93b4f7c78941f3a6050"
+  },
+  "archive_only_not_runnable_product": true,
+  "main_HEAD_unchanged": true,
+  "original_index_unchanged": true,
+  "pushed": false,
+  "payload_blobs_read_back": true
+}

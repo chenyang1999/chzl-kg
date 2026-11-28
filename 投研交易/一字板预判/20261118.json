@@ -1,0 +1,49 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261118",
+  "next_day": "20261119",
+  "generated_at": "2026-11-18T22:00:07+08:00",
+  "n_total": 41,
+  "n_candidates": 2,
+  "candidates": [
+    {
+      "ts_code": "002685.SZ",
+      "name": "华东重机",
+      "industry": "工程机械",
+      "theme": "",
+      "limit_times": 4,
+      "fd_amount_yi": 5.32,
+      "pct_chg": 10.0,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 74.3,
+      "prob_yizi": 32.0,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=5.3亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600410.SH",
+      "name": "华胜天成",
+      "industry": "IT服务Ⅱ",
+      "theme": "超聚变、腾讯AI概念、网络安全",
+      "limit_times": 2,
+      "fd_amount_yi": 2.84,
+      "pct_chg": 10.01,
+      "first_time": "95501",
+      "open_times": 0,
+      "float_mv_yi": 184.4,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.8亿 (一字率26%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停41只，筛出 2 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

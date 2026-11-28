@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="24" time="2.569" timestamp="2026-10-30T00:24:15.594231+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_real_research_candidates_survive_status_without_trading_permission[complete]" time="0.013" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_real_research_candidates_survive_status_without_trading_permission[partial]" time="0.009" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_unusable_research_never_substitutes_a_default_universe[failed]" time="0.010" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_unusable_research_never_substitutes_a_default_universe[skeleton]" time="0.010" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_unusable_research_never_substitutes_a_default_universe[None]" time="0.008" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_missing_or_empty_candidates_never_render_unrelated_symbols[missing]" time="0.008" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_missing_or_empty_candidates_never_render_unrelated_symbols[empty]" time="0.009" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_missing_or_empty_candidates_never_render_unrelated_symbols[bad_json]" time="0.009" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_missing_or_empty_candidates_never_render_unrelated_symbols[wrong_shape]" time="0.010" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_deduplication_role_and_input_permissions_stay_unchanged" time="0.008" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_main_requests_current_partial_candidates_not_old_defaults" time="0.011"><failure message="TypeError: test_main_requests_current_partial_candidates_not_old_defaults.&lt;locals&gt;.synthetic_run() got an unexpected keyword argument 'render_workers'">env = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/red-tmp/test_main_reques...chart-vision-upgrade-20261030/red-tmp/test_main_requests_current_par0/app/scripts/fetch/run_chart_vision_snapshot.py'&gt;)
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x1066ec110&gt;
+
+    def test_main_requests_current_partial_candidates_not_old_defaults(env, monkeypatch):
+        save_research(env, research())
+        requested = []
+        async def synthetic_run(universe, concurrency):
+            requested.extend(universe)
+            return [{"ts_code": code, "name": name, "error": None, "pattern": "fixture-only"} for code, name in universe]
+        monkeypatch.setattr(env.chart, "_run_all", synthetic_run)
+        monkeypatch.setattr(sys, "argv", ["chart", "--date", DATE])
+&gt;       assert env.chart.main() == 0
+               ^^^^^^^^^^^^^^^^
+
+tests/pipeline/test_chart_candidate_routing_guardrail.py:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def main() -&gt; int:
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--universe", type=Path, default=None, help="JSON file: [{ts_code,name},...] or [ts_code,...]")
+        parser.add_argument("--date", type=str, default=None, help="YYYYMMDD (default=today)")
+        parser.add_argument("--concurrency", type=int, default=CONCURRENCY)
+        parser.add_argument("--render-workers", type=int, default=2)
+        parser.add_argument("--codes", nargs="+", help="Explicit ts_code list for review or ad-hoc research; no fixed stock-count cap")
+        parser.add_argument("--as-of", help="Input cutoff as ISO timestamp; historical dates never fetch past their date")
+        parser.add_argument("--no-ma", action="store_true", help="Candles and volume only, without moving-average overlays")
+        parser.add_argument("--macd", action="store_true", help="Include optional MACD pane")
+        parser.add_argument("--output-dir", type=Path, help="Isolated output directory; does not update production snapshots")
+        parser.add_argument(
+            "--force",
+            action="store_true",
+            help="重算选中票池；默认仅补当日有效快照未覆盖的票",
+        )
+        args = parser.parse_args()
+    
+        date = args.date or datetime.now().strftime("%Y%m%d")
+        try:
+            datetime.strptime(date, "%Y%m%d")
+            if args.codes and args.universe:
+                raise ValueError("choose --codes or --universe, not both")
+            universe = list(dict.fromkeys((c, "") for c in args.codes)) if args.codes else _load_universe(args.universe) if args.universe else _pool_from_r2(date)
+            if any(not isinstance(c, str) or not re.fullmatch(r"\d{6}\.(SH|SZ|BJ)", c) for c, _ in universe):
+                raise ValueError("stock identifiers must be literal six-digit codes with .SH/.SZ/.BJ suffixes")
+            if args.concurrency &lt; 1 or args.render_workers &lt; 1:
+                raise ValueError("worker counts must be positive")
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            print(f"[fatal] 无效票池: {exc}", file=sys.stderr)
+            return 2
+        if not universe:
+            print(f"[chart_vision ⏭️] {date} 零候选 · 零模型调用", flush=True)
+            return 0
+    
+        from src.research.candidate_pool import load_snapshot
+    
+        cached, _ = load_snapshot(date)
+        if args.output_dir:
+            output_cache = args.output_dir / "chart_vision_snapshot.json"
+            prior = json.loads(output_cache.read_text()) if output_cache.is_file() else {}
+            cached = prior.get("results", {}) if prior.get("date") == date else {}
+        selected_count = len(universe)
+        print(f"[pool] selected={selected_count} · checking shared-input/model/render identities before reuse", flush=True)
+    
+        # 只有确需外部计算时才加载凭据；空池／全缓存不触碰 .env。
+        try:
+            from dotenv import load_dotenv
+            load_dotenv(ROOT / ".env")
+        except ImportError:
+            pass
+        if not (os.environ.get("VISION_API_KEY") or os.environ.get("OPENAI_API_KEY")):
+            print("[fatal] VISION_API_KEY / OPENAI_API_KEY 未设置", file=sys.stderr)
+            return 2
+    
+        print(f"[chart_vision] date={date} · N={len(universe)} · concurrency={args.concurrency}", flush=True)
+    
+        t0 = time.time()
+        as_of = args.as_of or (date if date &lt; datetime.now().strftime("%Y%m%d") else None)
+        if as_of and as_of[:10].replace("-", "") &gt; date:
+            print("[fatal] input cutoff cannot be later than the requested report date", file=sys.stderr)
+            return 2
+&gt;       results = asyncio.run(_run_all(universe, args.concurrency, render_workers=args.render_workers,
+                                      cached=cached, force=args.force, as_of=as_of,
+                                      moving_averages=[] if args.no_ma else None, macd=args.macd,
+                                      output_dir=args.output_dir / "charts" if args.output_dir else None))
+E       TypeError: test_main_requests_current_partial_candidates_not_old_defaults.&lt;locals&gt;.synthetic_run() got an unexpected keyword argument 'render_workers'
+
+../../../.hermes/cache/scratch/chart-vision-upgrade-20261030/red-tmp/test_main_requests_current_par0/app/scripts/fetch/run_chart_vision_snapshot.py:176: TypeError</failure></testcase><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_snapshot_failure_stays_on_the_selected_symbol" time="0.011"><failure message="TypeError: test_snapshot_failure_stays_on_the_selected_symbol.&lt;locals&gt;.synthetic_run() got an unexpected keyword argument 'render_workers'">env = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/red-tmp/test_snapshot_fa...chart-vision-upgrade-20261030/red-tmp/test_snapshot_failure_stays_on0/app/scripts/fetch/run_chart_vision_snapshot.py'&gt;)
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x10679e1d0&gt;
+
+    def test_snapshot_failure_stays_on_the_selected_symbol(env, monkeypatch):
+        save_research(env, research())
+        requested = []
+        async def synthetic_run(universe, concurrency):
+            requested.extend(universe)
+            return [{"ts_code": code, "name": name, "error": "synthetic-render-failure" if code == "000001.SZ" else None} for code, name in universe]
+        monkeypatch.setattr(env.chart, "_run_all", synthetic_run)
+        monkeypatch.setattr(sys, "argv", ["chart", "--date", DATE])
+&gt;       assert env.chart.main() == 1
+               ^^^^^^^^^^^^^^^^
+
+tests/pipeline/test_chart_candidate_routing_guardrail.py:168: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def main() -&gt; int:
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--universe", type=Path, default=None, help="JSON file: [{ts_code,name},...] or [ts_code,...]")
+        parser.add_argument("--date", type=str, default=None, help="YYYYMMDD (default=today)")
+        parser.add_argument("--concurrency", type=int, default=CONCURRENCY)
+        parser.add_argument("--render-workers", type=int, default=2)
+        parser.add_argument("--codes", nargs="+", help="Explicit ts_code list for review or ad-hoc research; no fixed stock-count cap")
+        parser.add_argument("--as-of", help="Input cutoff as ISO timestamp; historical dates never fetch past their date")
+        parser.add_argument("--no-ma", action="store_true", help="Candles and volume only, without moving-average overlays")
+        parser.add_argument("--macd", action="store_true", help="Include optional MACD pane")
+        parser.add_argument("--output-dir", type=Path, help="Isolated output directory; does not update production snapshots")
+        parser.add_argument(
+            "--force",
+            action="store_true",
+            help="重算选中票池；默认仅补当日有效快照未覆盖的票",
+        )
+        args = parser.parse_args()
+    
+        date = args.date or datetime.now().strftime("%Y%m%d")
+        try:
+            datetime.strptime(date, "%Y%m%d")
+            if args.codes and args.universe:
+                raise ValueError("choose --codes or --universe, not both")
+            universe = list(dict.fromkeys((c, "") for c in args.codes)) if args.codes else _load_universe(args.universe) if args.universe else _pool_from_r2(date)
+            if any(not isinstance(c, str) or not re.fullmatch(r"\d{6}\.(SH|SZ|BJ)", c) for c, _ in universe):
+                raise ValueError("stock identifiers must be literal six-digit codes with .SH/.SZ/.BJ suffixes")
+            if args.concurrency &lt; 1 or args.render_workers &lt; 1:
+                raise ValueError("worker counts must be positive")
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            print(f"[fatal] 无效票池: {exc}", file=sys.stderr)
+            return 2
+        if not universe:
+            print(f"[chart_vision ⏭️] {date} 零候选 · 零模型调用", flush=True)
+            return 0
+    
+        from src.research.candidate_pool import load_snapshot
+    
+        cached, _ = load_snapshot(date)
+        if args.output_dir:
+            output_cache = args.output_dir / "chart_vision_snapshot.json"
+            prior = json.loads(output_cache.read_text()) if output_cache.is_file() else {}
+            cached = prior.get("results", {}) if prior.get("date") == date else {}
+        selected_count = len(universe)
+        print(f"[pool] selected={selected_count} · checking shared-input/model/render identities before reuse", flush=True)
+    
+        # 只有确需外部计算时才加载凭据；空池／全缓存不触碰 .env。
+        try:
+            from dotenv import load_dotenv
+            load_dotenv(ROOT / ".env")
+        except ImportError:
+            pass
+        if not (os.environ.get("VISION_API_KEY") or os.environ.get("OPENAI_API_KEY")):
+            print("[fatal] VISION_API_KEY / OPENAI_API_KEY 未设置", file=sys.stderr)
+            return 2
+    
+        print(f"[chart_vision] date={date} · N={len(universe)} · concurrency={args.concurrency}", flush=True)
+    
+        t0 = time.time()
+        as_of = args.as_of or (date if date &lt; datetime.now().strftime("%Y%m%d") else None)
+        if as_of and as_of[:10].replace("-", "") &gt; date:
+            print("[fatal] input cutoff cannot be later than the requested report date", file=sys.stderr)
+            return 2
+&gt;       results = asyncio.run(_run_all(universe, args.concurrency, render_workers=args.render_workers,
+                                      cached=cached, force=args.force, as_of=as_of,
+                                      moving_averages=[] if args.no_ma else None, macd=args.macd,
+                                      output_dir=args.output_dir / "charts" if args.output_dir else None))
+E       TypeError: test_snapshot_failure_stays_on_the_selected_symbol.&lt;locals&gt;.synthetic_run() got an unexpected keyword argument 'render_workers'
+
+../../../.hermes/cache/scratch/chart-vision-upgrade-20261030/red-tmp/test_snapshot_failure_stays_on0/app/scripts/fetch/run_chart_vision_snapshot.py:176: TypeError</failure></testcase><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_empty_main_has_no_model_call_and_preserves_prior_snapshot" time="0.011" /><testcase classname="tests.pipeline.test_chart_candidate_routing_guardrail" name="test_existing_snapshot_only_renders_missing_candidates" time="0.009"><failure message="TypeError: test_existing_snapshot_only_renders_missing_candidates.&lt;locals&gt;.synthetic_run() got an unexpected keyword argument 'render_workers'">env = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/chart-vision-upgrade-20261030/red-tmp/test_existing_sn...chart-vision-upgrade-20261030/red-tmp/test_existing_snapshot_only_re0/app/scripts/fetch/run_chart_vision_snapshot.py'&gt;)
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x106a22c90&gt;
+
+    def test_existing_snapshot_only_renders_missing_candidates(env, monkeypatch):
+        save_research(env, research())
+        save_snapshot(env, {"000001.SZ": {"ts_code": "000001.SZ", "error": None}})
+        requested = []
+        async def synthetic_run(universe, concurrency):
+            requested.extend(universe)
+            return [{"ts_code": code, "name": name, "error": None} for code, name in universe]
+        monkeypatch.setattr(env.chart, "_run_all", synthetic_run)
+        monkeypatch.setattr(sys, "argv", ["chart", "--date", DATE])
+&gt;       assert env.chart.main() == 0
+               ^^^^^^^^^^^^^^^^
+
+tests/pipeline/test_chart_candidate_routing_guardrail.py:196: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def main() -&gt; int:
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--universe", type=Path, default=None, help="JSON file: [{ts_code,name},...] or [ts_code,...]")
+        parser.add_argument("--date", type=str, default=None, help="YYYYMMDD (default=today)")
+        parser.add_argument("--concurrency", type=int, default=CONCURRENCY)
+        parser.add_argument("--render-workers", type=int, default=2)
+        parser.add_argument("--codes", nargs="+", help="Explicit ts_code list for review or ad-hoc research; no fixed stock-count cap")
+        parser.add_argument("--as-of", help="Input cutoff as ISO timestamp; historical dates never fetch past their date")
+        parser.add_argument("--no-ma", action="store_true", help="Candles and volume only, without moving-average overlays")
+        parser.add_argument("--macd", action="store_true", help="Include optional MACD pane")
+        parser.add_argument("--output-dir", type=Path, help="Isolated output directory; does not update production snapshots")
+        parser.add_argument(
+            "--force",
+            action="store_true",
+            help="重算选中票池；默认仅补当日有效快照未覆盖的票",
+        )
+        args = parser.parse_args()
+    
+        date = args.date or datetime.now().strftime("%Y%m%d")
+        try:
+            datetime.strptime(date, "%Y%m%d")
+            if args.codes and args.universe:
+                raise ValueError("choose --codes or --universe, not both")
+            universe = list(dict.fromkeys((c, "") for c in args.codes)) if args.codes else _load_universe(args.universe) if args.universe else _pool_from_r2(date)
+            if any(not isinstance(c, str) or not re.fullmatch(r"\d{6}\.(SH|SZ|BJ)", c) for c, _ in universe):
+                raise ValueError("stock identifiers must be literal six-digit codes with .SH/.SZ/.BJ suffixes")
+            if args.concurrency &lt; 1 or args.render_workers &lt; 1:
+                raise ValueError("worker counts must be positive")
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            print(f"[fatal] 无效票池: {exc}", file=sys.stderr)
+            return 2
+        if not universe:
+            print(f"[chart_vision ⏭️] {date} 零候选 · 零模型调用", flush=True)
+            return 0
+    
+        from src.research.candidate_pool import load_snapshot
+    
+        cached, _ = load_snapshot(date)
+        if args.output_dir:
+            output_cache = args.output_dir / "chart_vision_snapshot.json"
+            prior = json.loads(output_cache.read_text()) if output_cache.is_file() else {}
+            cached = prior.get("results", {}) if prior.get("date") == date else {}
+        selected_count = len(universe)
+        print(f"[pool] selected={selected_count} · checking shared-input/model/render identities before reuse", flush=True)
+    
+        # 只有确需外部计算时才加载凭据；空池／全缓存不触碰 .env。
+        try:
+            from dotenv import load_dotenv
+            load_dotenv(ROOT / ".env")
+        except ImportError:
+            pass
+        if not (os.environ.get("VISION_API_KEY") or os.environ.get("OPENAI_API_KEY")):
+            print("[fatal] VISION_API_KEY / OPENAI_API_KEY 未设置", file=sys.stderr)
+            return 2
+    
+        print(f"[chart_vision] date={date} · N={len(universe)} · concurrency={args.concurrency}", flush=True)
+    
+        t0 = time.time()
+        as_of = args.as_of or (date if date &lt; datetime.now().strftime("%Y%m%d") else None)
+        if as_of and as_of[:10].replace("-", "") &gt; date:
+            print("[fatal] input cutoff cannot be later than the requested report date", file=sys.stderr)
+            return 2
+&gt;       results = asyncio.run(_run_all(universe, args.concurrency, render_workers=args.render_workers,
+                                      cached=cached, force=args.force, as_of=as_of,
+                                      moving_averages=[] if args.no_ma else None, macd=args.macd,
+                                      output_dir=args.output_dir / "charts" if args.output_dir else None))
+E       TypeError: test_existing_snapshot_only_renders_missing_candidates.&lt;locals&gt;.synthetic_run() got an unexpected keyword argument 'render_workers'
+
+../../../.hermes/cache/scratch/chart-vision-upgrade-20261030/red-tmp/test_existing_snapshot_only_re0/app/scripts/fetch/run_chart_vision_snapshot.py:176: TypeError</failure></testcase><testcase classname="tests.pipeline.test_chart_vision_upgrade" name="test_shared_input_fetches_each_period_once_and_clips_future" time="0.572" /><testcase classname="tests.pipeline.test_chart_vision_upgrade" name="test_model_is_chart_specific_and_frozen_context_prevents_refetch" time="0.011" /><testcase classname="tests.pipeline.test_chart_vision_upgrade" name="test_chart_universe_is_uncapped_union_without_changing_trade_permission" time="0.010" /><testcase classname="tests.pipeline.test_chart_vision_upgrade" name="test_fifty_symbols_separate_pools_and_verified_input_cache" time="0.475" /><testcase classname="tests.pipeline.test_chart_vision_upgrade" name="test_cache_segregates_model_prompt_and_renderer[model]" time="0.096" /><testcase classname="tests.pipeline.test_chart_vision_upgrade" name="test_cache_segregates_model_prompt_and_renderer[prompt]" time="0.134" /><testcase classname="tests.pipeline.test_chart_vision_upgrade" name="test_cache_segregates_model_prompt_and_renderer[render]" time="0.218" /><testcase classname="tests.pipeline.test_chart_vision_upgrade" name="test_failed_object_is_not_replaced_and_transient_only_retries_model" time="0.778" /><testcase classname="tests.pipeline.test_chart_vision_upgrade" name="test_empty_batch_never_touches_market_or_model" time="0.018" /><testcase classname="tests.pipeline.test_chart_vision_upgrade" name="test_invalid_worker_counts_are_explicit" time="0.009" /></testsuite></testsuites>

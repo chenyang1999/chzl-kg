@@ -1,0 +1,75 @@
+--- src/plan/price_levels.py.before
++++ src/plan/price_levels.py
+@@ -34,6 +34,7 @@
+ from __future__ import annotations
+ 
+ import sqlite3
++from math import isfinite
+ from pathlib import Path
+ from typing import Any
+ 
+@@ -142,7 +143,14 @@
+             formula += "；⚠️一字板需等开板换手后再按此区间承接"
+             trigger = None
+     else:
+-        base = ma50 or ref
++        if (isinstance(ma50, bool) or not isinstance(ma50, (int, float))
++                or not isfinite(ma50) or ma50 <= 0):
++            return {"ts_code": ts_code, "ok": False,
++                    "reason": "missing_technical_ma50: 原通道所需MA50缺失或无效，未用昨收代替",
++                    "ref_close": round(ref, 2), "limit_pct": lim, "channel": channel,
++                    "missing_inputs": ["ma50"],
++                    "trigger_price": None, "risk_reward_ratio": None}
++        base = ma50
+         lower_line = min(base, float(niu or base))
+         buy_zone = [round(lower_line * 0.99, 2), round(base * 1.01, 2)]
+         # 买区过宽(MA50与牛线相距太远)→ 收窄到基准线 ±1.5%
+@@ -166,10 +174,12 @@
+         if unreachable is not None:
+             # Keep the authorized scenario and its original zone as evidence.
+             # The existing >10% diagnostic is not a license to switch to MA10.
++            # Its legacy reason code is not an exchange price-band certificate.
+             return {"ts_code": ts_code, "ok": False,
+-                    "reason": "unreachable_buy_zone: 原通道买区不可达，未生成当日执行价位",
++                    "reason": "unreachable_buy_zone: 原10%距离诊断触发；当日边界未核，不能据此确认不可达；保留原通道，未生成执行价位",
+                     "ref_close": round(ref, 2), "limit_pct": lim, "channel": channel,
+                     "buy_zone": buy_zone, "unreachable_pct": unreachable,
++                    "reference_gap_pct": unreachable, "reachability_status": "unverified",
+                     "trigger_price": None, "risk_reward_ratio": None}
+ 
+     # ── 2) 止损: 以买入价(买区上沿)为基准, 三者取最高但必须低于买价 ──
+--- tests/pipeline/test_price_contract_alignment.py.before
++++ tests/pipeline/test_price_contract_alignment.py
+@@ -213,3 +213,32 @@
+     for key, value in before.items():
+         assert stock[key] == value
+     assert env.helper.evaluate_plan_buy_gate(plan)["status"] == "blocked"
++
++
++@pytest.mark.parametrize("code", ["000001.SZ", "300001.SZ", "920001.BJ"])
++def test_distance_diagnostic_does_not_certify_exchange_price_band(env, monkeypatch, code):
++    monkeypatch.setattr(env.levels, "load_tech", lambda *a: {"close": 100., "ma50": 85.})
++    rule = {"type": "trend_pullback_buy"}
++    stock = fixture_stock(ts_code=code, entry_rules=[deepcopy(rule)])
++    rows = env.apply.apply_to_plan(fixture_plan(stock), DATE)
++    row = rows[0]
++    # Preserve the existing conservative distance result, not a new price-band
++    # threshold. A heuristic must not claim the exchange proved impossibility.
++    assert row["ok"] is False and "unreachable_buy_zone" in row["reason"]
++    assert row["reachability_status"] == "unverified"
++    assert row["reference_gap_pct"] == round((row["buy_zone"][1] / 100 - 1) * 100, 1)
++    assert "当日边界未核" in stock["engine_levels"]["reason"]
++    assert row["trigger_price"] is None and row["risk_reward_ratio"] is None
++    assert stock["entry_rules"] == [rule] and stock["buy_eligibility"]["status"] == "unknown"
++
++
++@pytest.mark.parametrize("ma50", [None, 0., -1., float("nan"), float("inf"), True])
++def test_explicit_ma50_channel_never_fabricates_its_missing_line(env, monkeypatch, ma50):
++    monkeypatch.setattr(env.levels, "load_tech", lambda *a: {"close": 100., "ma50": ma50})
++    rule = {"type": "trend_pullback_buy"}
++    stock = fixture_stock(entry_rules=[deepcopy(rule)])
++    row = env.apply.apply_to_plan(fixture_plan(stock), DATE)[0]
++    assert row["ok"] is False and row["missing_inputs"] == ["ma50"]
++    assert row["channel"] == "trend_pullback_buy" and "未用昨收代替" in row["reason"]
++    assert row["trigger_price"] is None and row["risk_reward_ratio"] is None
++    assert stock["entry_rules"] == [rule] and stock["buy_eligibility"]["status"] == "unknown"

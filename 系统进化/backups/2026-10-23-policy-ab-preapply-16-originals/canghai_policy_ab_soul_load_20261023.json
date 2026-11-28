@@ -1,0 +1,40 @@
+{
+  "loader": "agent.prompt_builder.load_soul_md",
+  "loader_source": "/Users/chenyang/.hermes/hermes-agent/agent/prompt_builder.py",
+  "interpreter": "/Users/chenyang/.hermes/hermes-agent/venv/bin/python",
+  "home_override_used": true,
+  "ambient_home": "/Users/chenyang/.hermes/cache/scratch/canghai_policy_AB_hermes_load_home_20261023",
+  "profile_content_printed": false,
+  "profiles": [
+    {
+      "profile": "canghai-research",
+      "path": "/Users/chenyang/.hermes/profiles/canghai-research/SOUL.md",
+      "loaded": true,
+      "exact_stripped_source": true,
+      "characters": 3009,
+      "file_sha256": "f3b1d30e494f42ca6efd037a6d793a309c7202c957e043c6a0bafa6a59eb5d35",
+      "loaded_sha256": "e01748769cee829c2046f307d44d755dba8871aa95b3015d0750e3797760fd1a"
+    },
+    {
+      "profile": "canghai-plan",
+      "path": "/Users/chenyang/.hermes/profiles/canghai-plan/SOUL.md",
+      "loaded": true,
+      "exact_stripped_source": true,
+      "characters": 2675,
+      "file_sha256": "2a1497baba4db228927ac7376b32453044d0126c4378e149c7152fc8b64364b1",
+      "loaded_sha256": "1370b983a42cbf431905ff66990652c137f2f48856c82c59a0aba21c2894b3f8"
+    }
+  ],
+  "outside_scratch_write_or_network_violations": [],
+  "allowed_readonly_subprocesses": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Users/chenyang/.hermes/hermes-agent"
+    }
+  ],
+  "scope": "loader acceptance only; no production session or research launched"
+}

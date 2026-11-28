@@ -1,0 +1,9 @@
+{
+  "schema_version": "mainline_lifecycle_v1",
+  "trade_date": "20261023",
+  "note": "由 R2 对每条主线调用 locate_mainline_lifecycle() 填充；此骨架供 R2 skill 参考",
+  "emotion_cycle_phase": "主跌",
+  "emotion_cycle_confidence": 0.88,
+  "lines": [],
+  "generated_at": "2026-10-23T06:03:46+08:00"
+}

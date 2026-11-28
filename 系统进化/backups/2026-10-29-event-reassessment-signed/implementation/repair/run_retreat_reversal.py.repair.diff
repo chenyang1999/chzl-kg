@@ -1,0 +1,52 @@
+--- before/scripts/plan/run_retreat_reversal.py
++++ after/scripts/plan/run_retreat_reversal.py
+@@ -87,22 +87,29 @@
+     args = ap.parse_args()
+ 
+     plan_path = ROOT / "data" / "plans" / args.date / "watchlist_plan.json"
+-    plan = json.loads(plan_path.read_text(encoding="utf-8")) if plan_path.is_file() else None
+-
+-    inputs = None
++    plan_error = None
++    try:
++        plan = json.loads(plan_path.read_text(encoding="utf-8")) if plan_path.is_file() else None
++        if args.reassess and plan is not None and not isinstance(plan, dict):
++            raise ValueError("original plan must be an object")
++    except (OSError, ValueError) as exc:
++        if not args.reassess:
++            raise
++        plan, plan_error = None, str(exc)
+     owner = None
+-    if args.reassess:
++    handoff_error = None
++    v = detect(args.date, plan=plan).to_dict()
++    if args.reassess and v["state"] == "reversal_confirmed":
+         from scripts.plan import ensure_watchlist_plan as owner
+         owner.ROOT = ROOT
+         try:
++            if plan_error:
++                raise ValueError(f"original plan unreadable: {plan_error}")
+             inputs, _, _ = owner.event_inputs(args.date)
++            v = owner.bind_reversal_event(args.date, v, inputs)
+         except (OSError, ValueError, TypeError, KeyError) as exc:
+-            print(f"[retreat_reversal] event inputs blocked: {exc}", file=sys.stderr)
+-            return 1
+-
+-    v = detect(args.date, plan=plan).to_dict()
+-    if owner is not None and v["state"] == "reversal_confirmed":
+-        v = owner.bind_reversal_event(args.date, v, inputs)
++            handoff_error = str(exc)
++            v["reassessment_handoff"] = {"status": "failed", "error": handoff_error}
+ 
+     out_json = ROOT / "data" / "research" / args.date / "retreat_reversal.json"
+     out_json.parent.mkdir(parents=True, exist_ok=True)
+@@ -122,6 +129,9 @@
+         "json": str(out_json.relative_to(ROOT)),
+         "md": str(md_path.relative_to(ROOT)) if md_path else None,
+     }, ensure_ascii=False))
++    if handoff_error:
++        print(f"[retreat_reversal] detection saved; reassessment handoff failed: {handoff_error}", file=sys.stderr)
++        return 1
+     if owner is not None and v["state"] == "reversal_confirmed":
+         if not owner._try_lock(args.date):
+             print("[retreat_reversal] D1 busy; event remains unconsumed", file=sys.stderr)

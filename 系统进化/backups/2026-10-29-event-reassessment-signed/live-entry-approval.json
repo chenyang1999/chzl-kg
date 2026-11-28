@@ -1,0 +1,9 @@
+{
+  "approved_at": "2026-10-29T11:11:13.300159+08:00",
+  "user_response": "批准，同步实际启动脚本这一行",
+  "target": "/Users/chenyang/.hermes/scripts/canghai_retreat_reversal.sh",
+  "before_sha256": "f950ebd4664c048848111f91e1223e0c93bbc851258588f7badfef754fe477d5",
+  "candidate_sha256": "f6052c361ff7104cfe5b9f6089c3f7aec2f36c124ec258ba89cf4e778885fb6d",
+  "job_definition_sha256": "032ef9c505e9c40a97e9ddfc42bbc46cd04bfe7239ef1c2cd9c648622e42cbee",
+  "manual_trigger_authorized": false
+}

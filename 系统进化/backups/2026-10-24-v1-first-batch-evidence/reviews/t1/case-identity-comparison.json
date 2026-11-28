@@ -1,0 +1,154 @@
+{
+  "before": 711,
+  "after": 790,
+  "missing": [],
+  "added_count": 79,
+  "added": [
+    "tests.test_v1_regression_contract_closeout_20261024::test_loader_missing_scan_date_does_not_default_to_today",
+    "tests.test_v1_regression_contract_closeout_20261024::test_original_100k_five_percent_at_100_is_zero_buy_qty_not_forced_one_lot[flags0]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_original_100k_five_percent_at_100_is_zero_buy_qty_not_forced_one_lot[flags1]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_original_100k_five_percent_at_100_is_zero_buy_qty_not_forced_one_lot[flags2]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_undated_scan_never_inherits_authorized_context_date[None-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_undated_scan_never_inherits_authorized_context_date[None-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_undated_scan_never_inherits_authorized_context_date[absent-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_undated_scan_never_inherits_authorized_context_date[absent-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[0-buy-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[0-buy-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[0-sell-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[0-sell-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[10.0-buy-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[10.0-buy-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[10.0-sell-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[10.0-sell-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[None-buy-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[None-buy-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[None-sell-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[None-sell-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[True-buy-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[True-buy-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[True-sell-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[True-sell-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[inf-buy-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[inf-buy-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[inf-sell-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[inf-sell-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[nan-buy-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[nan-buy-live]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[nan-sell-dry_run]",
+    "tests.test_v1_regression_contract_closeout_20261024::test_unknown_rule_is_rejected_before_book_even_with_valid_consent[nan-sell-live]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[20990104-executor-dry_run]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[20990104-executor-live]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[20990104-final-dry_run]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[20990104-final-live]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[20990105-executor-dry_run]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[20990105-executor-live]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[20990105-final-dry_run]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[20990105-final-live]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[None-executor-dry_run]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[None-executor-live]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[None-final-dry_run]",
+    "tests.test_v1_scan_date_binding_20261024::test_both_consumers_require_context_date[None-final-live]",
+    "tests.test_v1_scan_date_binding_20261024::test_default_loader_dispatch_rejects_old_or_undated_success[20990104]",
+    "tests.test_v1_scan_date_binding_20261024::test_default_loader_dispatch_rejects_old_or_undated_success[20990105]",
+    "tests.test_v1_scan_date_binding_20261024::test_default_loader_dispatch_rejects_old_or_undated_success[None]",
+    "tests.test_v1_scan_date_binding_20261024::test_final_sell_limit_must_equal_existing_valid_bid[0.01]",
+    "tests.test_v1_scan_date_binding_20261024::test_final_sell_limit_must_equal_existing_valid_bid[7.99]",
+    "tests.test_v1_scan_date_binding_20261024::test_final_sell_limit_must_equal_existing_valid_bid[8.01]",
+    "tests.test_v1_scan_date_binding_20261024::test_original_call_without_authorized_date_explicitly_refuses",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_date_gate_does_not_block_legal_bid_sell[20990104]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_date_gate_does_not_block_legal_bid_sell[None]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[-20990104]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[-20990105_0]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[-20990105_1]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[-False]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[-None]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[-]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990104-20990104]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990104-20990105_0]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990104-20990105_1]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990104-False]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990104-None]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990104-]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990105-20990104]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990105-20990105_0]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990105-20990105_1]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990105-False]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990105-None]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[20990105-]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[None-20990104]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[None-20990105_0]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[None-20990105_1]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[None-False]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[None-None]",
+    "tests.test_v1_scan_date_binding_20261024::test_scan_requires_explicit_nonempty_matching_authorized_date[None-]",
+    "tests.test_v1_scan_date_binding_20261024::test_watcher_normal_buy_then_scanless_sell_two_rounds_two_dispatches",
+    "tests.test_v1_scan_date_binding_20261024::test_watcher_same_day_scans_replace_old_success_two_rounds_two_dispatches"
+  ],
+  "closed_original_failures": [
+    {
+      "identity": "tests.test_v1_s3_trigger_quote_safety_20261024::test_final_context_refuses_missing_or_invalid_executable_book[None-buy]",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_v1_s3_trigger_quote_safety_20261024::test_final_context_refuses_missing_or_invalid_executable_book[None-sell]",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_v1_s3_trigger_quote_safety_20261024::test_final_context_refuses_missing_or_invalid_executable_book[0-buy]",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_v1_s3_trigger_quote_safety_20261024::test_final_context_refuses_missing_or_invalid_executable_book[0-sell]",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_v1_s3_trigger_quote_safety_20261024::test_final_context_refuses_missing_or_invalid_executable_book[True-buy]",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_v1_s3_trigger_quote_safety_20261024::test_final_context_refuses_missing_or_invalid_executable_book[True-sell]",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_v1_s3_trigger_quote_safety_20261024::test_final_context_refuses_missing_or_invalid_executable_book[nan-buy]",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_v1_s3_trigger_quote_safety_20261024::test_final_context_refuses_missing_or_invalid_executable_book[nan-sell]",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_v1_s3_trigger_quote_safety_20261024::test_final_context_refuses_missing_or_invalid_executable_book[inf-buy]",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_v1_s3_trigger_quote_safety_20261024::test_final_context_refuses_missing_or_invalid_executable_book[inf-sell]",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_canghai_rr_scope_20261023::test_actual_common_buy_blocks_only_bad_stock_and_sell_still_runs",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_canghai_rr_scope_20261023::test_actual_dispatch_mixed_rr_has_no_global_contagion",
+      "before": "failure",
+      "after": "passed"
+    },
+    {
+      "identity": "tests.test_canghai_rr_scope_20261023::test_scoped_dispatch_keeps_good_buy_bad_sell_and_watch",
+      "before": "failure",
+      "after": "passed"
+    }
+  ]
+}

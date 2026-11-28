@@ -1,0 +1,146 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260901",
+  "next_day": "20260902",
+  "generated_at": "2026-10-17T18:55:28+08:00",
+  "n_total": 83,
+  "n_candidates": 9,
+  "candidates": [
+    {
+      "ts_code": "002679.SZ",
+      "name": "福建金森",
+      "industry": "林业Ⅱ",
+      "limit_times": 3,
+      "fd_amount_yi": 3.53,
+      "pct_chg": 9.97,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=3.5亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "003005.SZ",
+      "name": "竞业达",
+      "industry": "IT服务Ⅱ",
+      "limit_times": 3,
+      "fd_amount_yi": 2.12,
+      "pct_chg": 9.98,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.1亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "601086.SH",
+      "name": "国芳集团",
+      "industry": "一般零售",
+      "limit_times": 3,
+      "fd_amount_yi": 1.96,
+      "pct_chg": 10.03,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.0亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "600540.SH",
+      "name": "新赛股份",
+      "industry": "种植业",
+      "limit_times": 4,
+      "fd_amount_yi": 2.01,
+      "pct_chg": 10.07,
+      "prob_yizi": 28.8,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=2.0亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "000560.SZ",
+      "name": "我爱我家",
+      "industry": "房地产服务",
+      "limit_times": 3,
+      "fd_amount_yi": 0.47,
+      "pct_chg": 10.0,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.5亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600551.SH",
+      "name": "时代出版",
+      "industry": "出版",
+      "limit_times": 3,
+      "fd_amount_yi": 0.43,
+      "pct_chg": 10.06,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.4亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002084.SZ",
+      "name": "海鸥住工",
+      "industry": "家居用品",
+      "limit_times": 7,
+      "fd_amount_yi": 1.72,
+      "pct_chg": 10.03,
+      "prob_yizi": 25.2,
+      "prob_up": 42.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=7 (一字率20%)",
+        "封单=1.7亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "600371.SH",
+      "name": "万向德农",
+      "industry": "种植业",
+      "limit_times": 6,
+      "fd_amount_yi": 1.19,
+      "pct_chg": 10.01,
+      "prob_yizi": 20.0,
+      "prob_up": 42.0,
+      "rank": "关注",
+      "evidence": [
+        "连板=6 (一字率20%)",
+        "封单=1.2亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "000892.SZ",
+      "name": "欢瑞世纪",
+      "industry": "影视院线",
+      "limit_times": 2,
+      "fd_amount_yi": 3.27,
+      "pct_chg": 10.0,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=3.3亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停83只，筛出 9 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

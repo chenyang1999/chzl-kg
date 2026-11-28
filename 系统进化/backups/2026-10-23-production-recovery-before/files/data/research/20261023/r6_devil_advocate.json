@@ -1,0 +1,278 @@
+{
+  "schema_version": "research_unit_v1",
+  "agent": "R6",
+  "trade_date": "20261023",
+  "generated_at": "2026-10-23T06:47:39+08:00",
+  "status": "degraded",
+  "degraded": true,
+  "confidence": 0.28,
+  "confidence_breakdown": {
+    "base_confidence": 0.8,
+    "freshness_factor": 0.7,
+    "source_agreement_factor": 0.5,
+    "formula": "0.80 * 0.70 * 0.50 = 0.28; clamp [0.05,0.95] = 0.28",
+    "input_freshness": "partial",
+    "independent_source_count": 1,
+    "note": "基于本地上游的有限审计质量；同源派生不重复计源，非交易胜率。"
+  },
+  "upstream_usable": {
+    "R1": false,
+    "R2": false,
+    "R3": false,
+    "R4": false,
+    "R5": false,
+    "R7": false
+  },
+  "upstream_readable": {
+    "R1": true,
+    "R2": true,
+    "R3": true,
+    "R4": true,
+    "R5": true,
+    "R7": true
+  },
+  "upstream_status": {
+    "R1": "degraded",
+    "R2": "degraded",
+    "R3": "degraded",
+    "R4": "partial",
+    "R5": "skipped",
+    "R7": "partial"
+  },
+  "overall_conclusion": "上游R2非complete，按降级规则今日不出正式反证。counter_arguments=0，hard_reject=0；情绪=主跌，保留空股票池。五个高关注主题出现当日净流出，仅作负面审计，不构成出货定性。",
+  "counter_arguments": [],
+  "hard_rejects": [],
+  "patterns_status": {
+    "mode1_数据源冲突": {
+      "status": "degraded",
+      "reason": "R2非complete，停止正式反证；可读观察主线存在热度与净流出背离，仅附审计。"
+    },
+    "mode2_一致性检查": {
+      "status": "degraded",
+      "reason": "R1/R2均非complete；可读字段同为主跌、禁新仓、空股票池，未见防御对进攻的实际冲突。R1风格标签不得覆盖周期门禁。"
+    },
+    "mode3_估值与主线临界": {
+      "status": "degraded",
+      "reason": "R5 skipped且profiles为空，无估值、筹码或逐票盈亏比；不推断便宜/昂贵。"
+    },
+    "mode4_历史类比": {
+      "status": "degraded",
+      "reason": "授权仅限本日R1-R5/R7 JSON；这些输入未提供可验证失败事件库，不扩读历史，不编造类比。"
+    },
+    "mode5_昨日预期错误连锁": {
+      "status": "degraded",
+      "reason": "授权输入未含昨日R6及E1兑现记录；未读取范围外历史，不能用R7龙虎榜案例冒充昨日R6命中。"
+    },
+    "mode6_霸榜出货硬约束": {
+      "status": "degraded",
+      "severity_class": "hard_reject仅模式六",
+      "hard_reject_count": 0,
+      "reason": "R2 execution_eligible龙一/龙二为空；宁德时代代理警报未确认高置信出货，R5无五日资金字段，不能完成合取判定。"
+    }
+  },
+  "candidates_evaluated": 0,
+  "sectors_audited": 5,
+  "four_quadrant_negative_identification": {
+    "status": "partial",
+    "axes": {
+      "sentiment": "主题关注/讨论热度，不代表看多；高=R3 L1+L2或R2已披露概念top20；低=明确无共振且概念榜外，未观测不填低。",
+      "capital": "高=同一主题同口径当日主力净流入>0；低=净额<=0；缺失=unknown。这里只是方向代理，不是强度或五日持续性。"
+    },
+    "observed_trade_date": "20261022",
+    "Q1_高情绪高资金": {
+      "targets": [],
+      "negative_risk": "拥挤一致与次日接力衰竭；本次无可匹配实例，不补造。"
+    },
+    "Q2_高情绪低资金": {
+      "targets": [
+        {
+          "target": "人形机器人",
+          "concept_hot_rank": 1,
+          "net_amount_yuan": -2688531456.0,
+          "net_amount_yi": -26.8853,
+          "source": "data/research/20261023/R2_main_sectors.json#/observation_scores",
+          "action": "观察"
+        },
+        {
+          "target": "网络安全",
+          "concept_hot_rank": 16,
+          "net_amount_yuan": -2502819840.0,
+          "net_amount_yi": -25.0282,
+          "source": "data/research/20261023/R2_main_sectors.json#/observation_scores",
+          "action": "不进"
+        },
+        {
+          "target": "军工",
+          "concept_hot_rank": 6,
+          "net_amount_yuan": -3585932032.0,
+          "net_amount_yi": -35.8593,
+          "source": "data/research/20261023/R2_main_sectors.json#/observation_scores",
+          "action": "不进"
+        },
+        {
+          "target": "AI应用",
+          "concept_hot_rank": 9,
+          "net_amount_yuan": -6720991744.0,
+          "net_amount_yi": -67.2099,
+          "source": "data/research/20261023/R2_main_sectors.json#/observation_scores",
+          "action": "不进"
+        },
+        {
+          "target": "CPO",
+          "concept_hot_rank": 4,
+          "net_amount_yuan": -12742677760.0,
+          "net_amount_yi": -127.4268,
+          "source": "data/research/20261023/R2_main_sectors.json#/observation_scores",
+          "action": "不进"
+        }
+      ],
+      "negative_risk": "热度陷阱/跌中关注；不等于已确认霸榜出货。"
+    },
+    "Q3_低情绪高资金": {
+      "targets": [],
+      "negative_risk": "孤立净买或下跌承接不等于新主线；美容护理/家电未有同口径低情绪证据，不能强塞本象限。"
+    },
+    "Q4_低情绪低资金": {
+      "targets": [],
+      "negative_risk": "缺乏接力与流动性；本次没有明确双低样本。"
+    },
+    "unclassified": [
+      {
+        "target": "基础油",
+        "reason": "R3 L1+L2；R2资金缺测，不能填零或用油气资源净流量替代。"
+      },
+      {
+        "target": "油气开采/油服",
+        "reason": "R2热度缺测，不能把未入top20写成低情绪。"
+      },
+      {
+        "target": "减速器/机器人执行器",
+        "reason": "R2同日子方向净流入，但未取得同粒度关注证据；不能覆盖人形机器人整板净流出。"
+      }
+    ],
+    "scope_note": "负面诊断附录，非正式counter_arguments；不新增个股、不改变R2空池。"
+  },
+  "distribution_audit": {
+    "alerts_read": 1,
+    "eligible_candidate_count": 0,
+    "hard_reject_triggered": false,
+    "checks": [
+      {
+        "ts_code": "300750.SZ",
+        "name": "宁德时代",
+        "r2_execution_eligible": false,
+        "alert_scope": "个股两日top1代理，非板块高置信distribution_alert",
+        "high_confidence_distribution_confirmed": false,
+        "r5_main_force_5d_net_wan": null,
+        "single_day_dc_net_wan": -171691.7,
+        "single_day_ths_net_wan": 276714.87,
+        "fund_flow_status": "conflicting",
+        "decision": "观察",
+        "severity": null,
+        "reason": "不在R2执行龙一/龙二，R3明确confirmed_distribution=false，R5无五日净额；不把单日跨口径净卖代替五日确认。"
+      }
+    ],
+    "missing_data_is_clearance": false
+  },
+  "discipline_self_check": {
+    "market_pays_for": "上游仅确认机器人局部关注及子方向流入，未确认整体可交易主线。",
+    "phase": "主跌",
+    "emotion": "主跌",
+    "break_rate": 0.4107142857142857,
+    "position_status": "无经R2认定可执行龙头，不自造龙二或补涨替补。",
+    "plan": "观察；不开新仓，不以无hard_reject解释为放行。",
+    "primary_template": "首板隔日（未启用）",
+    "candidate_reduction": {
+      "triggered": true,
+      "before": 0,
+      "after": 0,
+      "reason": "炸板率>=35%且主跌，仅观察更严格。"
+    },
+    "mainline": {
+      "name": "人形机器人（仅观察）",
+      "persistence_days": null,
+      "seal_rate_pct": null,
+      "next_session_expectation": null,
+      "missing_note": "上游缺测，不伪填1/3/5日、封板率或明日方向。"
+    }
+  },
+  "consumer_guard": {
+    "action": "拦截将空池/零研究风险预算默认为可执行候选的消费路径；此为一致性守卫，不是逐票hard_reject。",
+    "required_research_position_cap": 0.0,
+    "new_position_allowed": false,
+    "existing_holdings_instruction": "不要求即时清仓，存量T及T+1另由D1处理。",
+    "leader_rejected_exit": "空execution_pool或保留龙一等分歧买点；hard_reject票不得进入execution_pool；禁止降级替补。"
+  },
+  "input_freshness": "partial",
+  "input_freshness_note": "任务交易日20261023；境内已收盘行情截至20261022属于正常T-1。全部输入非complete且为提前版，R7外盘截至20261021为滞后；未抓取新数据。",
+  "data_observation_trade_date": "20261022",
+  "production_ready": false,
+  "data_sources": [
+    {
+      "name": "R1",
+      "path": "data/research/20261023/R1_style.json",
+      "status": "stale",
+      "captured_at": "2026-10-23T06:19:59+08:00",
+      "record_count": 1,
+      "error": "上游status=degraded；可读但非complete，不作为完整研究输入"
+    },
+    {
+      "name": "R2",
+      "path": "data/research/20261023/R2_main_sectors.json",
+      "status": "stale",
+      "captured_at": "2026-10-23T06:42:12+08:00",
+      "record_count": 1,
+      "error": "上游status=degraded；可读但非complete，不作为完整研究输入"
+    },
+    {
+      "name": "R3",
+      "path": "data/research/20261023/R3_sentiment.json",
+      "status": "stale",
+      "captured_at": "2026-10-23T06:31:47+08:00",
+      "record_count": 1,
+      "error": "上游status=degraded；可读但非complete，不作为完整研究输入"
+    },
+    {
+      "name": "R4",
+      "path": "data/research/20261023/R4_news.json",
+      "status": "stale",
+      "captured_at": "2026-10-23T06:18:09+08:00",
+      "record_count": 1,
+      "error": "上游status=partial；可读但非complete，不作为完整研究输入"
+    },
+    {
+      "name": "R5",
+      "path": "data/research/20261023/R5_stock_profiles.json",
+      "status": "stale",
+      "captured_at": "2026-10-23T06:45:28+08:00",
+      "record_count": 0,
+      "error": "上游status=skipped；可读但非complete，不作为完整研究输入"
+    },
+    {
+      "name": "R7",
+      "path": "data/research/20261023/R7_capital_flow_20261023.json",
+      "status": "stale",
+      "captured_at": "2026-10-23T06:29:07+08:00",
+      "record_count": 1,
+      "error": "上游status=partial；可读但非complete，不作为完整研究输入"
+    }
+  ],
+  "data_sources_used": [
+    "data/research/20261023/R1_style.json",
+    "data/research/20261023/R2_main_sectors.json",
+    "data/research/20261023/R3_sentiment.json",
+    "data/research/20261023/R4_news.json",
+    "data/research/20261023/R5_stock_profiles.json",
+    "data/research/20261023/R7_capital_flow_20261023.json"
+  ],
+  "method": "llm_v1_disk_only_strict_upstream_gate",
+  "validation": {
+    "pydantic_status": "passed_before_write",
+    "pydantic_version": "2.13.4",
+    "schema_definition_gap": true,
+    "model_origin": "本次内联R6Output/Argument/Evidence模型验证核心类型、枚举、时区及R2非complete空反证不变量；未声称存在仓库生产R6模型。",
+    "writing_contract": "empty_stock_pool; per-stock promotion clauses not applicable",
+    "no_network_calls": true,
+    "scope": "六模式状态、四象限负面诊断、模式六合取检查；不是完整正式反证完成。"
+  }
+}

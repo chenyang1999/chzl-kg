@@ -1,0 +1,73 @@
+{
+  "status": "bounded_implementation_verified_with_explicit_legacy_red",
+  "source_sha256": {
+    "scripts/plan/ensure_watchlist_plan.py": "c0885a6519266c21f273b5864a5043fbe229c5fea36d3178bd4e84aa4cf831ca",
+    "tests/pipeline/test_d1_selective_reassessment.py": "7f2edd7dbbf714b7067c2efd63e24d834a15863bce9d730df3ebb76b760a0c68"
+  },
+  "baseline_sha256": "08688d64512fbda8db711195298cba5ff659fa4cce32402f91fa8208f504b5a1",
+  "only_diff_sha256": "ec39c0aa613775c8a0b632cf8a9a5c758e8c774e59f70a8fedb1b67d878a4903",
+  "index_unchanged": true,
+  "shared_research_sources_unchanged": [
+    "scripts/research/build_research_summary.py",
+    "scripts/research/native_usage.py",
+    "scripts/research/pipeline_artifacts.py",
+    "scripts/research/pipeline_state.py",
+    "scripts/research/run_research_shell.sh"
+  ],
+  "signed_d1_skill_unchanged": true,
+  "groups": {
+    "tests.pipeline.test_d1_selective_reassessment": 41,
+    "tests.pipeline.test_bound_auxiliary_inputs": 28,
+    "tests.pipeline.test_d1_auxiliary_caller_wiring": 9,
+    "tests.pipeline.test_signed_input_review_contract": 17
+  },
+  "green_cases": 95,
+  "guard_violations": [],
+  "guard_processes": 51,
+  "synthetic_native_children": 50,
+  "unguarded_children": [],
+  "actual_baseline_business_red": {
+    "path": "red-real",
+    "failed": 14,
+    "passed": 15,
+    "source": "08688d64512fbda8db711195298cba5ff659fa4cce32402f91fa8208f504b5a1"
+  },
+  "legacy_direct": {
+    "cases": 74,
+    "failed": 29,
+    "passed": 45,
+    "all_case_outcomes_identical_to_baseline": true,
+    "unfiltered": true,
+    "reason": "Old fixtures lack previously signed bound_auxiliary_inputs; baseline and current both refuse model preflight"
+  },
+  "historical_failures": [
+    "red: fixture package/dispatch setup failed; fixed only new test fixture",
+    "green-new: private MD parent missing; fixed",
+    "green-new-2: native safety-net usage mutated terminal research version; moved D1 invocation observation into its existing log evidence",
+    "legacy-direct: urllib3 import-time IPv6 bind was BLOCKED; no successful network; suppressed import-only has_ipv6 probe for baseline/current replay"
+  ],
+  "boundaries": [
+    "No production research supplementation, real model, network, account, DB, trade, git write or natural adoption",
+    "Old shell/legacy interim plans without a prior implementation-owned exact D1 input/output receipt remain blocked; no retroactive binding",
+    "Cross-run inheritance is blocked; terminal owner revisions must use accepted local R6 consumer",
+    "Selective D1 native usage is PID/argv-bound local retry observation, not a mutation/new receipt on the terminal research run and not proof of all-provider billing coverage",
+    "Original intraday event functions and main dispatch are AST-equivalent; no new event semantics added",
+    "Legacy tests still have 29 baseline failures from missing previously approved auxiliary bindings; no assertions/source tests filtered or edited"
+  ],
+  "commands": [
+    "affected-aux/command.json",
+    "legacy-baseline/command.json",
+    "legacy-current/command.json",
+    "guard-selftest/command.json"
+  ],
+  "junit": [
+    "affected-aux/junit.xml",
+    "red-real/junit.xml",
+    "legacy-baseline/junit.xml",
+    "legacy-current/junit.xml"
+  ],
+  "files_modified": [
+    "scripts/plan/ensure_watchlist_plan.py",
+    "tests/pipeline/test_d1_selective_reassessment.py"
+  ]
+}

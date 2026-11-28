@@ -1,0 +1,71 @@
+---
+date: 2026-07-06
+agent: R2-main-sectors
+skill_version: analyze_main_sectors_v1@1.0
+generated_at: 2026-07-06T02:58:30+08:00
+confidence: 0.7
+degraded: false
+data_sources:
+  - name: R1_style.json
+    path: data/research/20260706/R1_style.json
+    status: ok
+  - name: R3_sentiment.json
+    path: data/research/20260706/R3_sentiment.json
+    status: ok
+  - name: R4_news.json
+    path: data/research/20260706/R4_news.json
+    status: ok
+  - name: R7_capital_flow.json
+    path: data/research/20260706/R7_capital_flow.json
+    status: ok
+  - name: tushare_MCP
+    status: ok
+input_freshness: ok
+input_freshness_note: ""
+---
+# 2026-07-06 · 主线研判
+> **数据源新鲜度**: ok  
+> **降级状态**: no  
+> **置信度**: 0.7  
+
+## 一句话结论
+
+TBD · 请从 JSON artifact 提取核心判断
+
+## 详细分析
+
+_(artifact 无 high-signal 字段 · 完整 JSON 见下)_
+
+## 关键证据
+
+_(见上方核心结构化输出 · 主要证据字段随 skill 不同)_
+
+## 数据源审计
+
+| 源 | 状态 | 抓取时间 | 记录数 | 备注 |
+|---|---|---|---|---|
+| R1_style.json | ok | - | - | - |
+| R3_sentiment.json | ok | - | - | - |
+| R4_news.json | ok | - | - | - |
+| R7_capital_flow.json | ok | - | - | - |
+| tushare_MCP | ok | - | - | - |
+
+## 不确定性 / 反证
+
+_(artifact 未显式记录反证段 · 建议后续 skill 补足)_
+
+## 与其他 R/D/E 的关系
+
+- **依赖**: R1, R3, R4, R7
+- **被消费**: R5, R6, D1
+
+## Sub-Agent 元数据
+
+- skill: `analyze_main_sectors_v1`
+- artifact: `data/research/20260706/R2_main_sectors.json`
+- 生成时间: 2026-07-06T02:58:30+08:00
+- 主 orchestrator: `research_orchestrator_v1` (proc_46cb002764ca · 25 min)
+
+---
+
+_本文件由 `scripts/render_kg_md_backfill.py` 从 artifact 回渲染 · schema: `render_kg_md_v1`_

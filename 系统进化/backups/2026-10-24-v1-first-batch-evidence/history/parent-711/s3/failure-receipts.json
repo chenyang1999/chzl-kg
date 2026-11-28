@@ -1,0 +1,82 @@
+[
+  {
+    "nodeid": "tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[None-buy]",
+    "locals": {
+      "result": "{'at': '2026-10-24T22:39:22.174907', 'ts_code': '600000.SH', 'side': 'buy', 'quantity': 100, 'limit_price': 10.0, 'rule_type': 'synthetic_only', 'reasons': [], 'position_pct': 0.0, 'dry_run': True, 'meta': {}, 'status': 'rejected', 'reason': 'buy_rule_not_uniquely_authorized'}",
+      "side": "'buy'",
+      "book": "None"
+    }
+  },
+  {
+    "nodeid": "tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[None-sell]",
+    "locals": {
+      "result": "{'at': '2026-10-24T22:39:22.193237', 'ts_code': '600000.SH', 'side': 'sell', 'quantity': 100, 'limit_price': 10.0, 'rule_type': 'synthetic_only', 'reasons': [], 'position_pct': 0.0, 'dry_run': True, 'meta': {}, 'status': 'rejected', 'reason': 'sell_rule_not_authorized'}",
+      "side": "'sell'",
+      "book": "None"
+    }
+  },
+  {
+    "nodeid": "tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[0-buy]",
+    "locals": {
+      "result": "{'at': '2026-10-24T22:39:22.200454', 'ts_code': '600000.SH', 'side': 'buy', 'quantity': 100, 'limit_price': 10.0, 'rule_type': 'synthetic_only', 'reasons': [], 'position_pct': 0.0, 'dry_run': True, 'meta': {}, 'status': 'rejected', 'reason': 'buy_rule_not_uniquely_authorized'}",
+      "side": "'buy'",
+      "book": "0"
+    }
+  },
+  {
+    "nodeid": "tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[0-sell]",
+    "locals": {
+      "result": "{'at': '2026-10-24T22:39:22.207798', 'ts_code': '600000.SH', 'side': 'sell', 'quantity': 100, 'limit_price': 10.0, 'rule_type': 'synthetic_only', 'reasons': [], 'position_pct': 0.0, 'dry_run': True, 'meta': {}, 'status': 'rejected', 'reason': 'sell_rule_not_authorized'}",
+      "side": "'sell'",
+      "book": "0"
+    }
+  },
+  {
+    "nodeid": "tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[True-buy]",
+    "locals": {
+      "result": "{'at': '2026-10-24T22:39:22.215410', 'ts_code': '600000.SH', 'side': 'buy', 'quantity': 100, 'limit_price': 10.0, 'rule_type': 'synthetic_only', 'reasons': [], 'position_pct': 0.0, 'dry_run': True, 'meta': {}, 'status': 'rejected', 'reason': 'buy_rule_not_uniquely_authorized'}",
+      "side": "'buy'",
+      "book": "True"
+    }
+  },
+  {
+    "nodeid": "tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[True-sell]",
+    "locals": {
+      "result": "{'at': '2026-10-24T22:39:22.223190', 'ts_code': '600000.SH', 'side': 'sell', 'quantity': 100, 'limit_price': 10.0, 'rule_type': 'synthetic_only', 'reasons': [], 'position_pct': 0.0, 'dry_run': True, 'meta': {}, 'status': 'rejected', 'reason': 'sell_rule_not_authorized'}",
+      "side": "'sell'",
+      "book": "True"
+    }
+  },
+  {
+    "nodeid": "tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[nan-buy]",
+    "locals": {
+      "result": "{'at': '2026-10-24T22:39:22.231103', 'ts_code': '600000.SH', 'side': 'buy', 'quantity': 100, 'limit_price': 10.0, 'rule_type': 'synthetic_only', 'reasons': [], 'position_pct': 0.0, 'dry_run': True, 'meta': {}, 'status': 'rejected', 'reason': 'buy_rule_not_uniquely_authorized'}",
+      "side": "'buy'",
+      "book": "nan"
+    }
+  },
+  {
+    "nodeid": "tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[nan-sell]",
+    "locals": {
+      "result": "{'at': '2026-10-24T22:39:22.238714', 'ts_code': '600000.SH', 'side': 'sell', 'quantity': 100, 'limit_price': 10.0, 'rule_type': 'synthetic_only', 'reasons': [], 'position_pct': 0.0, 'dry_run': True, 'meta': {}, 'status': 'rejected', 'reason': 'sell_rule_not_authorized'}",
+      "side": "'sell'",
+      "book": "nan"
+    }
+  },
+  {
+    "nodeid": "tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[inf-buy]",
+    "locals": {
+      "result": "{'at': '2026-10-24T22:39:22.246120', 'ts_code': '600000.SH', 'side': 'buy', 'quantity': 100, 'limit_price': 10.0, 'rule_type': 'synthetic_only', 'reasons': [], 'position_pct': 0.0, 'dry_run': True, 'meta': {}, 'status': 'rejected', 'reason': 'buy_rule_not_uniquely_authorized'}",
+      "side": "'buy'",
+      "book": "inf"
+    }
+  },
+  {
+    "nodeid": "tests/test_v1_s3_trigger_quote_safety_20261024.py::test_final_context_refuses_missing_or_invalid_executable_book[inf-sell]",
+    "locals": {
+      "result": "{'at': '2026-10-24T22:39:22.253956', 'ts_code': '600000.SH', 'side': 'sell', 'quantity': 100, 'limit_price': 10.0, 'rule_type': 'synthetic_only', 'reasons': [], 'position_pct': 0.0, 'dry_run': True, 'meta': {}, 'status': 'rejected', 'reason': 'sell_rule_not_authorized'}",
+      "side": "'sell'",
+      "book": "inf"
+    }
+  }
+]

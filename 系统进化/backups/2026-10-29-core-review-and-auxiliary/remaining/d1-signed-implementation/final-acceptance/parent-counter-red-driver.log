@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/run_acceptance.py", line 49, in <module>
+    before=manifest();index=hashlib.sha256((R/'.git/index').read_bytes()).hexdigest()
+           ^^^^^^^^^^
+  File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/run_acceptance.py", line 48, in manifest
+    def manifest():return {p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in monitor}
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/run_acceptance.py", line 48, in <dictcomp>
+    def manifest():return {p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in monitor}
+                                            ^^^^^^^^^^^^^^^^^^
+  File "/Users/chenyang/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py", line 1050, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chenyang/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/Downloads/demo/沧海巨浪/tests/pipeline/test_d1_selective_reassessment.py::test_multiple_trusted_r6_updates_do_not_require_d1_between_each'

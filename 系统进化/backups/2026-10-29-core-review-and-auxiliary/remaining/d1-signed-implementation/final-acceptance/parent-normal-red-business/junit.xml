@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.109" timestamp="2026-10-29T17:28:19.613969+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_real_normal_shell_delivery_can_later_use_selective_reassessment" time="0.947"><failure message="AssertionError: normal producer must record its own actual input/output binding&#10;assert 0 == 1&#10; +  where 0 = len([])&#10; +    where [] = list(&lt;generator object Path.glob at 0x10712b780&gt;)&#10; +      where &lt;generator object Path.glob at 0x10712b780&gt; = glob('D1_retry_*/receipt.json')&#10; +        where glob = PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-business/cases/test_real_normal_shell_deliver0/app/data/logs/research_shell/20990106').glob">tests/pipeline/test_d1_selective_reassessment.py:385: in test_real_normal_shell_delivery_can_later_use_selective_reassessment
+    assert len(list(logs.glob('D1_retry_*/receipt.json')))==1, 'normal producer must record its own actual input/output binding'
+E   AssertionError: normal producer must record its own actual input/output binding
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = list(&lt;generator object Path.glob at 0x10712b780&gt;)
+E    +      where &lt;generator object Path.glob at 0x10712b780&gt; = glob('D1_retry_*/receipt.json')
+E    +        where glob = PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-business/cases/test_real_normal_shell_deliver0/app/data/logs/research_shell/20990106').glob</failure></testcase></testsuite></testsuites>

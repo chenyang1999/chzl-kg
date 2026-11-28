@@ -1,0 +1,69 @@
+{
+  "started_at": "2026-10-30T00:53:49.603090+08:00",
+  "selected_count": 40,
+  "source_lists": [
+    "data/plans/20261029/watchlist_plan.json",
+    "data/plans/20261028/watchlist_plan.json",
+    "data/plans/20261027/watchlist_plan.json",
+    "data/plans/20261026/watchlist_plan.json",
+    "data/plans/20261023/watchlist_plan.json",
+    "data/plans/20261022/watchlist_plan.json",
+    "data/plans/20261021/watchlist_plan.json"
+  ],
+  "first_rc": 0,
+  "first_elapsed_s": 122.315,
+  "first_model_requests": 40,
+  "first_run": {
+    "selected": 40,
+    "requested": 40,
+    "recomputed": 40,
+    "reused": 0,
+    "failed": 0,
+    "merged_from": null
+  },
+  "models": [
+    "deepseek-v4.1-flash-1017"
+  ],
+  "response_models": [
+    "deepseek-flash"
+  ],
+  "render_worker_pids": [
+    96702,
+    96703
+  ],
+  "first_errors": {},
+  "second_rc": 0,
+  "second_elapsed_s": 7.386,
+  "second_run": {
+    "selected": 40,
+    "requested": 40,
+    "recomputed": 0,
+    "reused": 40,
+    "failed": 0,
+    "merged_from": "2026-10-30T00:55:51"
+  },
+  "second_additional_model_requests": 0,
+  "finished_at": "2026-10-30T00:55:59.305841+08:00",
+  "source_sha_before": {
+    "src/agents/chart_vision_agent.py": "63af32c87e7b5b3ace7665a4f67b073308bafa75902f433d72d9a594ef362a87",
+    "src/analytics/chart_input.py": "f035d034d6376a21ec3f4c7cf78ee135d97b3b7efd460d01dfdc75bfca1851b0",
+    "src/analytics/chart_batch.py": "8c870e4e8cc0832b844440e5fca127c5511c5eee89ce6b674c60c58020973da9",
+    "src/analytics/lwc_chart_renderer.py": "1425e9f4a913397f626cb7010f3201bbfd446dcbf010acb39c83868049a8bea8",
+    "src/research/candidate_pool.py": "7c366f34a987a58eca213bb764a3673c43f3b0d025ff2c5bd6cbd4f680573b6a",
+    "scripts/fetch/run_chart_vision_snapshot.py": "d25761062e19777743f5f718511c6c43444b2b44b8225ab88d19de3309e724f8",
+    "web/scripts/headless/lwc_headless_render.mjs": "48c0851ef7e9a4da9c96532086324885349cbc42baf99946403d27d38307003e",
+    "web/scripts/headless/chart_template.html": "608791f5427090c1fec86fe6e96602360c677666ab2c003b33fd89d9f92d68dc"
+  },
+  "source_sha_after": {
+    "src/agents/chart_vision_agent.py": "63af32c87e7b5b3ace7665a4f67b073308bafa75902f433d72d9a594ef362a87",
+    "src/analytics/chart_input.py": "f035d034d6376a21ec3f4c7cf78ee135d97b3b7efd460d01dfdc75bfca1851b0",
+    "src/analytics/chart_batch.py": "8c870e4e8cc0832b844440e5fca127c5511c5eee89ce6b674c60c58020973da9",
+    "src/analytics/lwc_chart_renderer.py": "1425e9f4a913397f626cb7010f3201bbfd446dcbf010acb39c83868049a8bea8",
+    "src/research/candidate_pool.py": "7c366f34a987a58eca213bb764a3673c43f3b0d025ff2c5bd6cbd4f680573b6a",
+    "scripts/fetch/run_chart_vision_snapshot.py": "d25761062e19777743f5f718511c6c43444b2b44b8225ab88d19de3309e724f8",
+    "web/scripts/headless/lwc_headless_render.mjs": "48c0851ef7e9a4da9c96532086324885349cbc42baf99946403d27d38307003e",
+    "web/scripts/headless/chart_template.html": "608791f5427090c1fec86fe6e96602360c677666ab2c003b33fd89d9f92d68dc"
+  },
+  "production_archives_unchanged": true,
+  "source_stable": true
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="14" skipped="0" tests="29" time="8.487" timestamp="2026-10-29T16:31:57.225530+08:00" hostname="Chenyang-MacBook-Pro.local"><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_old_six_and_trusted_local_r6_actually_reach_d1" time="0.427"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_old_six_and_trusted_local0/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:154: in test_old_six_and_trusted_local_r6_actually_reach_d1
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_old_six_and_trusted_local0/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_unchanged_unbound_forged_or_drifted_never_transport[none]" time="0.127" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_unchanged_unbound_forged_or_drifted_never_transport[mtime]" time="0.124" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_unchanged_unbound_forged_or_drifted_never_transport[ready_summary]" time="0.142" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_unchanged_unbound_forged_or_drifted_never_transport[unbound_original]" time="0.134" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_unchanged_unbound_forged_or_drifted_never_transport[wrong_owner]" time="0.124" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_unchanged_unbound_forged_or_drifted_never_transport[forged_revision]" time="0.311" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_unchanged_unbound_forged_or_drifted_never_transport[R4_drift]" time="0.321" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_unchanged_unbound_forged_or_drifted_never_transport[receipt_drift]" time="0.354" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_unchanged_unbound_forged_or_drifted_never_transport[env_run]" time="0.132" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[exit]" time="0.450"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca0/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca0/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[empty]" time="0.470"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca1/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca1/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[all_pass]" time="0.382"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca2/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca2/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[budget]" time="0.344"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca3/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca3/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[missing_budget]" time="0.398"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca4/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca4/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[user_ban]" time="0.365"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca5/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca5/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[pool]" time="0.345"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca6/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca6/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[exit_rule]" time="0.345"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca7/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca7/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[entry_rule]" time="0.379"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca8/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca8/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[consent]" time="0.329"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca9/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca9/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[hard_reject]" time="0.345"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca10/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca10/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[drift]" time="0.381"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca11/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca11/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_failed_or_unauthorized_candidate_preserves_last_valid_plan[wrong_binding]" time="0.347"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca12/app/d1.count'">tests/pipeline/test_d1_selective_reassessment.py:194: in test_failed_or_unauthorized_candidate_preserves_last_valid_plan
+    assert (n.root/'d1.count').read_text()=='1'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../../.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/red-real/cases/test_failed_or_unauthorized_ca12/app/d1.count'</failure></testcase><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[False-False]" time="0.141" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[False-True]" time="0.156" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[True-False]" time="0.134" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_complete_llm_no_trade_is_idempotent_under_force_and_no_llm[True-True]" time="0.161" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_pending_no_llm_never_uses_python_or_model" time="0.342" /><testcase classname="tests.pipeline.test_d1_selective_reassessment" name="test_original_event_branch_ast_and_dispatch_unchanged" time="0.023" /></testsuite></testsuites>

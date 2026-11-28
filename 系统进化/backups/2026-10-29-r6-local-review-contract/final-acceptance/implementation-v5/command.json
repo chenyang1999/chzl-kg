@@ -1,0 +1,40 @@
+{
+  "argv": [
+    "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/pipeline/test_r6_local_revision.py",
+    "tests/pipeline/test_bound_auxiliary_inputs.py",
+    "tests/pipeline/test_native_usage_observation.py::test_native_totals_separate_reported_subtotal_from_unprovable_authority",
+    "tests/pipeline/test_native_usage_observation.py::test_legal_zero_is_preserved_without_asserting_usage_coverage",
+    "tests/pipeline/test_native_usage_observation.py::test_same_binding_idempotent_conflicting_report_rejected",
+    "tests/pipeline/test_native_usage_observation.py::test_superseded_attempt_and_run_cannot_accept_report",
+    "tests/pipeline/test_native_usage_observation.py::test_safety_net_observation_without_pipeline_does_not_invent_business_success",
+    "tests/pipeline/test_native_usage_observation.py::test_safety_observation_terminal_pipeline_preserves_business_bytes",
+    "tests/pipeline/test_native_usage_observation.py::test_real_isolated_launcher_pid_argv_and_nonzero_report",
+    "tests/pipeline/test_native_usage_observation.py::test_actual_local_child_does_not_outlive_pid_registration_failure",
+    "tests/pipeline/test_native_usage_observation.py::test_popen_itself_failure_remains_a_failed_launch_observation",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/cases",
+    "--junitxml=/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/junit.xml",
+    "--tb=short",
+    "-q"
+  ],
+  "environment": {
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/home",
+    "HERMES_HOME": "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/home/.hermes",
+    "XDG_CONFIG_HOME": "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/home/.config",
+    "TMPDIR": "/Users/chenyang/.hermes/cache/scratch",
+    "PYTHONPATH": "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5",
+    "R6_GUARD_DIR": "/Users/chenyang/.hermes/cache/scratch/r6-local-delivery-20261029-v5/guards",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "LANG": "en_US.UTF-8"
+  },
+  "cwd": "/Users/chenyang/Downloads/demo/沧海巨浪"
+}

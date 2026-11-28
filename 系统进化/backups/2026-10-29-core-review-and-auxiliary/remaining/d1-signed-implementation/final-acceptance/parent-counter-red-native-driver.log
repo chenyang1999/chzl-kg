@@ -1,0 +1,47 @@
+{
+  "exit_code": 1,
+  "source_unchanged": true,
+  "index_unchanged": true,
+  "guard_violations": [],
+  "guard_pids": [
+    9134,
+    9136,
+    9137,
+    9139,
+    9140,
+    9141,
+    9142,
+    9144,
+    9146
+  ],
+  "native_child_pids": [
+    9136,
+    9137,
+    9139,
+    9140,
+    9141,
+    9142,
+    9144,
+    9146
+  ],
+  "unguarded_native_children": []
+}
+F..                                                                      [100%]
+=================================== FAILURES ===================================
+____ test_multiple_trusted_r6_updates_do_not_require_d1_between_each[False] ____
+tests/pipeline/test_d1_selective_reassessment.py:313: in test_multiple_trusted_r6_updates_do_not_require_d1_between_each
+    assert (n.root/'d1.count').exists(), 'accepted intermediate R6 must not force an extra D1 call'
+E   AssertionError: accepted intermediate R6 must not force an extra D1 call
+E   assert False
+E    +  where False = exists()
+E    +    where exists = (PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-counter-red-native/cases/test_multiple_trusted_r6_updat0/app') / 'd1.count').exists
+E    +      where PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-counter-red-native/cases/test_multiple_trusted_r6_updat0/app') = namespace(root=PosixPath('/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-counter-red-native/cases/...961d2', 'bytes': 48, 'mtime_ns': 1793264733666066467, 'passed': True, 'run_id': 'baseline-terminal', 'attempt': 1}}}}}).root
+---------------------------- Captured stdout setup -----------------------------
+🔁 D1 大模型重跑中（profile=canghai-plan, skill=main_decision_v1, 上限 2700s）…
+----------------------------- Captured stderr call -----------------------------
+[ensure_watchlist_plan] safe interim published; reassessment required: plan.production_ready is not true; plan.research_completion_passed is not true; plan.reassessment_required
+[ensure_watchlist_plan] upstream missing/invalid: bound research delta: R6 revision does not inherit the original D1 input version; no fabricated fallback
+=========================== short test summary info ============================
+FAILED tests/pipeline/test_d1_selective_reassessment.py::test_multiple_trusted_r6_updates_do_not_require_d1_between_each[False]
+1 failed, 2 passed in 3.05s
+

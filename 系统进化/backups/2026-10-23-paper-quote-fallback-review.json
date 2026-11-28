@@ -1,0 +1,158 @@
+{
+  "task": "paper_quote_fallback_source_review",
+  "trade_date": "20261023",
+  "reviewed_at": "2026-10-23T14:19:18.046100+08:00",
+  "workspace": "/Users/chenyang/Downloads/demo/沧海巨浪",
+  "canary_symbol": "600519.SH",
+  "purpose": "Read-only interface canary, not a stock recommendation",
+  "result": "blocked_not_certified",
+  "trusted_executable_paper_quote_obtained": false,
+  "trusted_quote_adapter_feasibility": "Not established. Do not implement or enable an adapter from this evidence; field semantics, units, source observation time and status coverage remain unverified.",
+  "adapter_code_written": false,
+  "paper_fill_created": false,
+  "owner": {
+    "profile": "canghai-fetch",
+    "new_cli_session": true,
+    "session_id": "local-477cdb24b6635cb5b4e6c75da162a70f560d4a0a8c0a0db1a3d88616888e5d77",
+    "command": "hermes -p canghai-fetch chat --query-file /Users/chenyang/.hermes/cache/scratch/canghai_paper_quote_fallback_owner_20261023.txt --oneshot --quiet --max-turns 22 --run-budget 380",
+    "soul_path": "/Users/chenyang/.hermes/profiles/canghai-fetch/SOUL.md",
+    "cli_exit_code": 0,
+    "background_handle": "proc_e8a6c72d52f3",
+    "background_status": "exited",
+    "completion_verified_with": "process_manage wait returned status=exited, exit_code=0; exact raw target read and parsed independently",
+    "raw_write_method_reported": "Python open(mode='x'), single new-file write",
+    "raw_prelaunch_exists_check": false,
+    "log_path": "/Users/chenyang/.hermes/cache/scratch/canghai_paper_quote_fallback_owner_20261023.log"
+  },
+  "raw": {
+    "path": "/Users/chenyang/Downloads/demo/沧海巨浪/data/raw/20261023/paper_quote_fallback_probe_20261023.jsonl",
+    "sha256": "1d3c2292552859e5b6bf2b960e86e39fa3775e77a777fcb2a21ea9d640d113b1",
+    "bytes": 15198,
+    "jsonl_records": 5,
+    "independently_parsed": true,
+    "all_records_certified_false": true,
+    "source_observed_at_all_records": null,
+    "wire_response_available": false,
+    "provenance_note": "Hithink evidence preserves complete parsed stdout emitted by the existing CLI, not the gateway raw HTTP body. CLI adds success/query/trace/pagination fields; success is not quote certification. SDK evidence is inspection, not a quote response."
+  },
+  "attempts": [
+    {
+      "source": "registered mcp__vibe_trading__orderbook_depth",
+      "action": "Real tool_describe schema inspected; no quote invocation",
+      "quote_request_executed": false,
+      "exit_code": null,
+      "result": "not_applicable",
+      "reason": "Crypto spot only; exchange enum okx/binance; symbol requires BASE-QUOTE. Cannot use for 600519.SH. No alternate symbol or exchange was called."
+    },
+    {
+      "source": "同花顺问财 installed hithink-market-query CLI",
+      "attempt": 1,
+      "request_parameters_location": "raw record 2",
+      "exit_code": 0,
+      "query_target": "600519.SH",
+      "source_returned_code_count": 2,
+      "source_returned_count": 1,
+      "source_has_more": true,
+      "returned_symbol": "002717.SZ",
+      "returned_fields": [
+        "股票代码",
+        "股票简称",
+        "买一量[20261023]",
+        "买五量[20261023]",
+        "收盘价:不复权[20261023]",
+        "卖一量[20261023]",
+        "卖五量[20261023]",
+        "涨停价[20261023]",
+        "跌停价[20261023]",
+        "交易状态[20261023]",
+        "停牌状态[20261023]"
+      ],
+      "result": "rejected_symbol_mismatch",
+      "accepted_quote_fields": [],
+      "note": "Returned non-target row is retained only as actual API evidence; no fields are transferred to 600519.SH. This is not an exhaustive extraction of the response's reported two matches."
+    },
+    {
+      "source": "同花顺问财 installed hithink-market-query CLI",
+      "attempt": 2,
+      "request_parameters_location": "raw record 3",
+      "exit_code": 0,
+      "result": "empty",
+      "datas": [],
+      "code_count": 0,
+      "accepted_quote_fields": [],
+      "cache_note": "Existing CLI uses is_cache=1. No evidence of uncached observation or source-internal quote timestamp."
+    },
+    {
+      "source": "installed tushare SDK",
+      "sdk_version": "1.4.24",
+      "inspection_exit_code": 0,
+      "underlying_signature": "realtime_quote(ts_code='688553.SH', src='sina')",
+      "public_callable_signature": "(*args, **kwargs)",
+      "quote_request_executed": false,
+      "quote_exit_code": null,
+      "result": "documentation_gate_not_passed",
+      "reason": "Owner searched official tushare.pro domain but did not locate matching realtime_quote documentation. Installed public entrypoint is permission-wrapped and calls get_token/verify_token. No quote request or token-file inspection was performed; this does not prove existing credentials lack permission.",
+      "unit_evidence": "Installed function docstring labels b1_v/a1_v as 笔数, not shares. amount CNY and total-volume comments do not establish book-quantity or price units.",
+      "sdk_source_paths": [
+        "/Users/chenyang/Library/Python/3.9/lib/python/site-packages/tushare/util/verify_token.py",
+        "/Users/chenyang/Library/Python/3.9/lib/python/site-packages/tushare/stock/rtq.py"
+      ]
+    }
+  ],
+  "required_field_review": {
+    "correct_symbol_current_snapshot": "missing; first response wrong symbol, retry empty",
+    "source_internal_date_and_time": "missing; request/receive/record timestamps are not quote observation times",
+    "bid_ask_levels_1_to_5_prices": "missing for 600519.SH",
+    "bid_ask_levels_1_to_5_sizes": "missing for 600519.SH",
+    "book_size_share_unit_documentation": "missing; cannot borrow total-trade volume units",
+    "price_cny_yuan_unit_documentation": "not verified for an accepted target quote",
+    "same_day_upper_and_lower_price_limits": "missing for 600519.SH; returned limits belong to another symbol",
+    "trustworthy_normal_suspended_and_ST_status": "missing; no false status inferred from stock familiarity",
+    "derived_fields": {},
+    "inferred_fields": {}
+  },
+  "documentation": [
+    {
+      "url": "https://hermes-agent.nousresearch.com/docs/reference/cli-commands",
+      "reviewer_access": "browser page loaded",
+      "use": "Named profile invocation -p/--profile and new CLI identity; not quote units"
+    },
+    {
+      "url": "https://www.iwencai.com/unifiedwap/chat",
+      "evidence": "Installed hithink skill states this data source; no verified book-unit specification"
+    },
+    {
+      "url": "https://www.iwencai.com/skillhub",
+      "evidence": "Installed skill distribution reference, not accepted field-unit documentation"
+    },
+    {
+      "url": "https://tushare.pro/document/2?doc_id=315",
+      "reviewer_access": "browser body: 404, 文档不存在！",
+      "use": "Not a valid realtime_quote documentation source"
+    },
+    {
+      "url": "https://tushare.pro/wctapi/documents/372.md",
+      "evidence": "Owner search returned other interface rt_k; must not transfer its units to realtime_quote"
+    },
+    {
+      "url": "https://github.com/waditu/tushare/blob/master/tushare/stock/trading.py",
+      "reviewer_access": "official repository search excerpt",
+      "use": "Legacy get_realtime_quotes docstring also calls b1_v/a1_v 笔数; different API, not accepted realtime_quote share-unit authority"
+    }
+  ],
+  "issues": [
+    "Owner execute_code was blocked in noninteractive single-query mode; owner used normal terminal tool and existing CLI instead.",
+    "Reviewer web_extract backend could not extract pages; browser successfully retrieved official Hermes CLI documentation and Tushare doc_id=315 error page.",
+    "Actual fallback requests did not produce a usable 600519.SH quote. Tool exit code 0 is not data validity."
+  ],
+  "scope": {
+    "reviewer_actions": "dispatch, read-only raw/log review, hash/parse, scratch reports only",
+    "raw_written_by_owner_only": true,
+    "account_or_trade_files_accessed": false,
+    "QMT_or_IB_connections_used": false,
+    "configuration_credentials_skills_cron_modified": false,
+    "manifest_research_plan_existing_probes_modified": false,
+    "existing_raw_target_overwritten": false,
+    "no_global_repository_cleanliness_claim": "Concurrent parent research pipeline was active; this report does not attribute unrelated repository changes."
+  }
+}

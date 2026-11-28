@@ -1,0 +1,101 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20260908",
+  "next_day": "20260909",
+  "generated_at": "2026-10-17T18:55:29+08:00",
+  "n_total": 73,
+  "n_candidates": 6,
+  "candidates": [
+    {
+      "ts_code": "600108.SH",
+      "name": "亚盛集团",
+      "industry": "种植业",
+      "limit_times": 4,
+      "fd_amount_yi": 5.55,
+      "pct_chg": 10.0,
+      "prob_yizi": 32.0,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=5.6亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600865.SH",
+      "name": "百大集团",
+      "industry": "一般零售",
+      "limit_times": 4,
+      "fd_amount_yi": 2.35,
+      "pct_chg": 10.01,
+      "prob_yizi": 28.8,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=2.4亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002702.SZ",
+      "name": "海欣食品",
+      "industry": "食品加工",
+      "limit_times": 3,
+      "fd_amount_yi": 0.69,
+      "pct_chg": 10.05,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.7亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600354.SH",
+      "name": "敦煌种业",
+      "industry": "种植业",
+      "limit_times": 3,
+      "fd_amount_yi": 1.2,
+      "pct_chg": 9.97,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.2亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "601949.SH",
+      "name": "中国出版",
+      "industry": "出版",
+      "limit_times": 3,
+      "fd_amount_yi": 0.98,
+      "pct_chg": 9.98,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.0亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002579.SZ",
+      "name": "中京电子",
+      "industry": "元件",
+      "limit_times": 2,
+      "fd_amount_yi": 2.4,
+      "pct_chg": 9.99,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.4亿 (一字率26%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停73只，筛出 6 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

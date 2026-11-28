@@ -1,0 +1,116 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261008",
+  "next_day": "20261009",
+  "generated_at": "2026-10-17T18:55:34+08:00",
+  "n_total": 43,
+  "n_candidates": 7,
+  "candidates": [
+    {
+      "ts_code": "600825.SH",
+      "name": "新华传媒",
+      "industry": "出版",
+      "limit_times": 8,
+      "fd_amount_yi": 17.76,
+      "pct_chg": 10.05,
+      "prob_yizi": 31.0,
+      "prob_up": 47.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=8 (一字率20%)",
+        "封单=17.8亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "605303.SH",
+      "name": "园林股份",
+      "industry": "基础建设",
+      "limit_times": 3,
+      "fd_amount_yi": 1.51,
+      "pct_chg": 10.01,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.5亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002242.SZ",
+      "name": "九阳股份",
+      "industry": "小家电",
+      "limit_times": 4,
+      "fd_amount_yi": 2.4,
+      "pct_chg": 10.0,
+      "prob_yizi": 28.8,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=2.4亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002058.SZ",
+      "name": "紫竹高科",
+      "industry": "电池",
+      "limit_times": 3,
+      "fd_amount_yi": 1.42,
+      "pct_chg": 10.0,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.4亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "002866.SZ",
+      "name": "传艺科技",
+      "industry": "消费电子",
+      "limit_times": 3,
+      "fd_amount_yi": 0.79,
+      "pct_chg": 10.0,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.8亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "603200.SH",
+      "name": "上海洗霸",
+      "industry": "环境治理",
+      "limit_times": 3,
+      "fd_amount_yi": 0.14,
+      "pct_chg": 9.99,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.1亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600241.SH",
+      "name": "时代万恒",
+      "industry": "电池",
+      "limit_times": 4,
+      "fd_amount_yi": 1.26,
+      "pct_chg": 9.98,
+      "prob_yizi": 21.7,
+      "prob_up": 38.1,
+      "rank": "关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.3亿 (一字率19%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停43只，筛出 7 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-10-29T10:13:22.933220+08:00",
+  "signed_patch_applied_exactly": true,
+  "before_sha256": "96352ca729d8cebfcaa61dada932ce6eb75da4d9bf7005ddff2762b753882496",
+  "after_sha256": "1f37c754dd2bac3ff0e5d366b36d7afdb10b7d893a31802120f8d705eaaeee4c",
+  "patch_sha256": "d02da9a2fa87451aef6a23a5c7619ab7d10d20e0cc1f0557932f2b9fd6b6bbe1",
+  "only_approved_section_added": true,
+  "index_unchanged": true,
+  "implementation_status": "in_progress",
+  "production_run": false
+}

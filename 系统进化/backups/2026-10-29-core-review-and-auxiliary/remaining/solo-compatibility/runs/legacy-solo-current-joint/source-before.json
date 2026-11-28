@@ -1,0 +1,16 @@
+{
+  "scripts/plan/ensure_watchlist_plan.py": "f01223b6cf0a43d601db250af5b35c2b0edc6a1ec7b491dfd4143037044fe6f3",
+  "tests/pipeline/test_safety_net_input_versions.py": "61848197028d906f26ce4724550ad76509e9cd65f035b76a7324b25f0530f4ee",
+  "tests/pipeline/test_plan_interim_preservation.py": "965751914d0e6cc85e75e03a3c698ca6a74a16094cf6984fb2653140805c4f96",
+  "tests/pipeline/test_d1_selective_reassessment.py": "8792810f4156a2f0f6e7541aec253084191d3a40df96ed4fd76e11fd1794eaec",
+  "tests/pipeline/test_bound_auxiliary_inputs.py": "166ffe44ccc8cda58e65b3a1254bdb0fbcd207dd98d28645ea749ad7058ab25c",
+  "tests/pipeline/test_d1_auxiliary_caller_wiring.py": "55bfbb32f860bb91684c7215a70d4a628c6187de544e93267b6e55e5422be4ad",
+  "tests/pipeline/test_signed_input_review_contract.py": "a4d5310c4bfde5092877c3b0c34ca2b3ab9c6efec08601d723c065c768dea8c8",
+  "tests/pipeline/test_native_usage_observation.py": "879ed23123da10b2f132f4eb66f20a210fe0a39c672714ecd1f3f929d500175b",
+  "scripts/research/pipeline_state.py": "7390067f5298fe69ebc97e3770a5b503101db5067de260dcf6e7f6f84bcf83ee",
+  "scripts/research/pipeline_artifacts.py": "b7e1c4913ad564f96c2556da9fa180d121c7f8f71b7affc76ce28e9fd9f12384",
+  "scripts/research/build_research_summary.py": "afd5a5b4ea09ed12f3ad4c3ad3fe456ae3312f01759c911d1e782d0669c67c44",
+  "scripts/research/native_usage.py": "a1dd43f16d814ee9c75387103be2f07c4cd708d7aac8fe7df01eb3aaa7e7c1c0",
+  "scripts/research/run_research_shell.sh": "0a75fa89a4d6909a6731e3c23b80db5f88a9100f593412d8cc8c5663b63cb2f2",
+  "tests/pipeline/test_r6_local_revision.py": "bfafcb87a13bee6722e3c89b69aa50df18d09edb688f0003384327e7c1199b3a"
+}

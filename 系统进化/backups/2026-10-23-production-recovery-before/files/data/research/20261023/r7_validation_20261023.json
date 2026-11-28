@@ -1,0 +1,22 @@
+{
+  "trade_date": "20261023",
+  "validated_at": "2026-10-23T06:29:07+08:00",
+  "strict_pydantic": "PASS",
+  "project_check_r7_staleness": [],
+  "project_check_md_namespace": [],
+  "coverage_checks": "PASS with explicit unavailable/prelisting states",
+  "writing_contract": "PASS: mermaid 13 nodes; 11 three-question objects; 10 scoped four-paragraph entries; audit table; no body seconds timestamps",
+  "analysis_status": "partial",
+  "staleness_status": "unavailable",
+  "confidence": 0.0,
+  "remaining": [
+    "北向全市场净流量不可得",
+    "两票两融无记录，其余8票两融昨日尚未公布",
+    "N通则上市前四个交易日不适用，不能补造五日实绩",
+    "本日文件海外实为20261021，缺20261022隔夜及SOX/INTC/MRVL",
+    "股指基差及A股ETF隐波不可得",
+    "vibe资金历史十票均失败",
+    "vibe快照保留字段投影而非完整原样payload"
+  ],
+  "schema_coverage": "项目现有R7时效contract + scratch严格Pydantic §3核心四维、十票日槽、两融、主力与全局时效；开放证据字典不验证每个上游字段的语义真实性"
+}

@@ -1,0 +1,178 @@
+{
+  "schema_version": "architecture_document_validation_v1",
+  "validated_at": "2026-10-26T16:13:53+08:00",
+  "status": "passed",
+  "scope": "Documentation only, not a rerun of engineering or business tests",
+  "documents": [
+    {
+      "path": "chzl_kg/系统进化/2026-10-26 系统架构全景与定时任务数据流.md",
+      "lines": 324,
+      "sha256": "e0a7faf0d822dc154fd1db6d1650700974abfa83f2ccfda0b938f1e1e62698ff"
+    },
+    {
+      "path": "chzl_kg/系统进化/2026-10-26 架构审阅图与决策路径.md",
+      "lines": 203,
+      "sha256": "10993fa9450e5e553f92b4508c79f355956fcd12d6d6060bda13d4dbcff4bf59"
+    },
+    {
+      "path": "chzl_kg/系统进化/2026-10-26 重构进度与验收边界.md",
+      "lines": 151,
+      "sha256": "45eff391316c05fd3f50ca3b77caaabcf17153edc63b95785b2c3ffb8785c093"
+    },
+    {
+      "path": "chzl_kg/系统进化/README.md",
+      "lines": 53,
+      "sha256": "5c0d093fef9ba76d795a4175f3257d5fbfab287d06855641db0aad5a63a61770"
+    }
+  ],
+  "mermaid": {
+    "count": 12,
+    "type_counts": {
+      "flowchart": 9,
+      "timeline": 1,
+      "sequenceDiagram": 1,
+      "stateDiagram-v2": 1
+    },
+    "renderer": "Actual Mermaid 11 browser SVG renderer",
+    "all_rendered": true,
+    "current_blocks_match_browser_hashes": true,
+    "overview_visually_inspected": true,
+    "blocks": [
+      {
+        "file": "2026-10-26 系统架构全景与定时任务数据流.md",
+        "index": 1,
+        "type": "flowchart",
+        "sha256": "e0f1766ea4f6a904e36b07af5c372ef21aaa8eb454d6e5532f2e552214ed8a57",
+        "rendered": true
+      },
+      {
+        "file": "2026-10-26 系统架构全景与定时任务数据流.md",
+        "index": 2,
+        "type": "timeline",
+        "sha256": "acf093bcc4d53a9a2273476db2d9ef0d8ccaf2ecb9c723b0d0c3a2e11b910b9e",
+        "rendered": true
+      },
+      {
+        "file": "2026-10-26 系统架构全景与定时任务数据流.md",
+        "index": 3,
+        "type": "flowchart",
+        "sha256": "bcca5b681b099216f9aaf126f2e4b95c87fb0f6209140628a53d9045042192b6",
+        "rendered": true
+      },
+      {
+        "file": "2026-10-26 系统架构全景与定时任务数据流.md",
+        "index": 4,
+        "type": "sequenceDiagram",
+        "sha256": "ce8205e4d689daf4f6dc7f1c1c95a37b04123d0bb9164bd25f77511ced7722a6",
+        "rendered": true
+      },
+      {
+        "file": "2026-10-26 系统架构全景与定时任务数据流.md",
+        "index": 5,
+        "type": "flowchart",
+        "sha256": "a60bd4f3e0189573ab84fd686ce9760195707d31679bcccce5d86e6bf9135a80",
+        "rendered": true
+      },
+      {
+        "file": "2026-10-26 系统架构全景与定时任务数据流.md",
+        "index": 6,
+        "type": "flowchart",
+        "sha256": "da12ea7c48e01a5c50d4dbdc6501fc8bf17909144a93464b79f847737e3d14b0",
+        "rendered": true
+      },
+      {
+        "file": "2026-10-26 架构审阅图与决策路径.md",
+        "index": 1,
+        "type": "flowchart",
+        "sha256": "9405e08d6c2f4c5c9d9a40a29908f81ee9e1a3ceb2c4248efb2e058b06ba2132",
+        "rendered": true
+      },
+      {
+        "file": "2026-10-26 架构审阅图与决策路径.md",
+        "index": 2,
+        "type": "flowchart",
+        "sha256": "601e12d331b757fb44b4f8ff69f9c25541f5be9b7a4b0bc7f29fc3a21000b2b9",
+        "rendered": true
+      },
+      {
+        "file": "2026-10-26 架构审阅图与决策路径.md",
+        "index": 3,
+        "type": "flowchart",
+        "sha256": "e71b0c40762b84bfe7c91fae3199fabc0ec0e2f2606c07fa2e0c044d0672cf34",
+        "rendered": true
+      },
+      {
+        "file": "2026-10-26 架构审阅图与决策路径.md",
+        "index": 4,
+        "type": "flowchart",
+        "sha256": "527f86c394503d25925b3c41a41108d7219432d16f9852e38ca93a719e022a01",
+        "rendered": true
+      },
+      {
+        "file": "2026-10-26 重构进度与验收边界.md",
+        "index": 1,
+        "type": "stateDiagram-v2",
+        "sha256": "d7024b30c187ee9ffd0947381487f6f47cdfca3d6461f70c86beca960f62e98e",
+        "rendered": true
+      },
+      {
+        "file": "README.md",
+        "index": 1,
+        "type": "flowchart",
+        "sha256": "75b7fed837c97f33f6098763f06484b3d327202e954ffaa0233723ee120d7e22",
+        "rendered": true
+      }
+    ]
+  },
+  "links": {
+    "checked": 37,
+    "missing": [],
+    "self_reference": "This generated validation output is the only link target deferred until its verified write"
+  },
+  "source_line_ranges": {
+    "checked": 40,
+    "all_within_existing_files": true
+  },
+  "historical_documents": [
+    {
+      "path": "00-CANONICAL-ARCHITECTURE-v1.md",
+      "sha256": "42c29da92be522b1c044a9bf59b0a7b9daf19064f7ef535a764399119596a12b",
+      "unchanged": true
+    },
+    {
+      "path": "07-重构进度表.md",
+      "sha256": "bca67718eaf486bc3462272956f3b2d6a1badc5e9075f700e08f1fc532669399",
+      "unchanged": true
+    },
+    {
+      "path": "09-架构审阅图-T1prime.md",
+      "sha256": "fd4e547831db182ca763302aa815b90e14c125d97525c7ceff0422c8169b1493",
+      "unchanged": true
+    },
+    {
+      "path": "10-系统架构全景-v1.md",
+      "sha256": "275817a4e1dc07599a4c9773c3f4bf247ca960652ebf7616d86d85519f1377d8",
+      "unchanged": true
+    }
+  ],
+  "cron": {
+    "stored_count": 37,
+    "unique_ids": 37,
+    "documented_rows": 37,
+    "document_ids_equal_current": true,
+    "configuration_differences_since_inventory": []
+  },
+  "credential_pattern_scan": {
+    "files_checked": 7,
+    "matches": []
+  },
+  "did_not_run": [
+    "research or decision agents",
+    "cron jobs",
+    "model probes",
+    "paper trading",
+    "broker operations",
+    "site synchronization",
+    "historical regression suites"
+  ]
+}

@@ -1,0 +1,276 @@
+--- before/tests/pipeline/test_intraday_event_reassessment.py
++++ after/tests/pipeline/test_intraday_event_reassessment.py
+@@ -22,6 +22,15 @@
+ root = Path(os.environ['EVENT_SANDBOX'])
+ production = Path(os.environ['EVENT_PRODUCTION'])
+ def guard(event, args):
++    if event == 'os.rename' and os.environ.get('EVENT_FAULT') in {'json_io','md_io','json_io_other_md','json_io_new_json'}:
++        suffix = '/watchlist_plan.json' if os.environ['EVENT_FAULT']=='json_io' else '/盘前预案/'+__import__('datetime').datetime.now().strftime('%Y%m%d')+'.md'
++        if os.environ['EVENT_FAULT'].startswith('json_io_'):suffix='/watchlist_plan.json'
++        if str(args[1]).endswith(suffix) and '/validated/' not in str(args[1]):
++            if os.environ['EVENT_FAULT']=='json_io_other_md':
++                (root/('chzl_kg/投研交易/盘前预案/'+__import__('datetime').datetime.now().strftime('%Y%m%d')+'.md')).write_text('# other writer\na\nb\nc\nd\n')
++            if os.environ['EVENT_FAULT']=='json_io_new_json':
++                Path(args[1]).write_bytes(Path(args[0]).read_bytes())
++            raise OSError('injected canonical replacement failure')
+     if event == 'os.rename' and os.environ.get('EVENT_FAULT') == 'publish_io' and str(args[1]).endswith('.json') and '/data/runtime/watchlist_plan_' in str(args[1]):
+         raise OSError('injected runtime atomic replacement failure')
+     if event in {'socket.connect', 'socket.bind', 'sqlite3.connect'}:
+@@ -69,6 +78,7 @@
+ assert '-q' not in args
+ context=json.loads(args[args.index('-z')+1].split('\n',1)[1])
+ (root/'argv.json').write_text(json.dumps(args))
++(root/'prompt-context.json').write_text(json.dumps(context))
+ mode=os.environ.get('EVENT_FAULT','')
+ if mode=='exit': sys.exit(17)
+ if mode=='empty': sys.exit(0)
+@@ -84,7 +94,19 @@
+ if mode=='missing_md':p['report_markdown']='short'
+ if mode=='coverage':p['adjudications']=p['adjudications'][:1]
+ if mode=='all_pass':
++    for row in p['adjudications']:row['status']='superseded'
++conditions=context['base_plan'].get('no_trade_conditions',[])
++if conditions:
++    p['updates']['no_trade_conditions']=[{**r,'active':False} if r.get('code') in {'R1_NO_NEW_POSITION','NO_CONFIRMED_TRADABLE_MAINLINE'} else r for r in conditions]
++    for row in p['adjudications']:
++        if row['target'].startswith('condition:') and row['target'] not in context.get('condition_sources',{}):row['status']='retained'
++if mode=='partial':p['updates'].pop('no_trade',None)
++if mode=='retain':
++    p['updates']={}
+     for row in p['adjudications']:row['status']='retained'
++if mode=='partial':
++    for row in p['adjudications']:
++        if row['target']=='condition:2':row['status']='unresolved'
+ if mode=='drift':
+     q=root/context['summary']['artifacts']['R1'];q.write_text(q.read_text()+' ')
+ usage={'input_tokens':1,'output_tokens':1,'cache_read_tokens':0,'cache_write_tokens':0,
+@@ -99,7 +121,8 @@
+          'scripts/research/pipeline_state.py','scripts/research/build_research_summary.py',
+          'trading/load_plan.py','trading/account_config.py','trading/execution_authorization.py',
+          'trading/positions_state.py','trading/schema/normalize.py','trading/schema/watchlist_plan.py',
+-         'src/trading_agent/models.py','src/fetch/price_limits.py']
++         'src/trading_agent/models.py','src/fetch/price_limits.py',
++         'src/plan/report_assembly.py','src/plan/quick_reference.py','scripts/plan/render_plan_tables.py']
+ 
+ @pytest.fixture
+ def box(tmp_path):
+@@ -120,8 +143,8 @@
+           'autonomous_trading_enabled':False,'requires_user_confirmation':True,'no_trade':True,
+           'generated_at':now.replace(hour=9,minute=0,second=0,microsecond=0).isoformat(),
+           'execution_pool':[],'watch_pool':[{'ts_code':'600000.SH','name':'fixture','score':70}],
+-          'no_trade_conditions':[], 'risk_limits':{'target_total_position_pct':0},
+-          'meta':{'market_judgment_sources':{'no_trade':source}}}
++          'no_trade_conditions':[{'code':'R1_NO_NEW_POSITION','description':'R1 permission','active':True}],
++          'risk_limits':{'target_total_position_pct':0},'meta':{}}
+     canonical=write(f'data/plans/{date}/watchlist_plan.json',base)
+     human=root/f'chzl_kg/投研交易/盘前预案/{date}.md';human.parent.mkdir(parents=True);human.write_text('# Base\na\nb\nc\nd\n')
+     stamp=(now-timedelta(minutes=1)).isoformat()
+@@ -140,7 +163,7 @@
+ import json,os
+ from pathlib import Path
+ r=Path(os.environ['EVENT_SANDBOX']);date=__import__('datetime').datetime.now().strftime('%Y%m%d')
+-p=r/f'data/research/{date}/R1_style.json';p.parent.mkdir(parents=True);p.write_text(json.dumps({'trade_date':date,'style':'retreat','status':'complete'}))
++p=r/f'data/research/{date}/R1_style.json';p.parent.mkdir(parents=True);p.write_text(json.dumps({'trade_date':date,'style':'retreat','status':'complete','permission_layers':{'new_position_allowed':False}}))
+ fp=file_version(r,p);art={'R1':fp['path']}
+ s={'schema_version':'research_summary_v1','trade_date':date,'run_id':None,'artifacts':art,'orchestrator_status':'partial','hard_rejects':[]}
+ m={'schema_version':b.MANIFEST_VERSION,'trade_date':date,'run_id':None,'authorized_main_inputs':art,
+@@ -166,6 +189,13 @@
+         assert result[key]==base[key]
+     runtime=root/f'data/runtime/watchlist_plan_{date}.json'
+     assert runtime.read_bytes()==canonical.read_bytes()
++    human=root/f'chzl_kg/投研交易/盘前预案/{date}.md'
++    assert 'plan_sha256: "'+hashlib.sha256(json.dumps(result,ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()+'"' in human.read_text()
++    assert '## 同版 JSON 共享表格' in human.read_text()
++    evidence=list((root/f'data/logs/research_shell/{date}').glob('D1_event_*'))
++    assert len(evidence)==1
++    assert (evidence[0]/'previous-main.md').read_bytes()==b'# Base\na\nb\nc\nd\n'
++    assert (evidence[0]/'narrative.md').read_text() in human.read_text()
+     before=canonical.read_bytes();argv=(root/'argv.json').read_bytes()
+     p=run();assert p.returncode==0,p.stderr
+     assert canonical.read_bytes()==before and (root/'argv.json').read_bytes()==argv
+@@ -195,7 +225,7 @@
+     if mutation=='source_drift':
+         q=root/f'data/research/{date}/R1_style.json';q.write_text(q.read_text()+' ')
+     if mutation=='unknown':
+-        obj=json.loads(canonical.read_text());obj['meta']={};canonical.write_text(json.dumps(obj))
++        obj=json.loads(canonical.read_text());obj['no_trade_conditions'][0]['code']='UNKNOWN_USER_BAN';canonical.write_text(json.dumps(obj))
+         # Rebind through actual detector; this tests the unknown-source update denial.
+         before=canonical.read_bytes();p=run();assert p.returncode==1,p.stderr
+         assert canonical.read_bytes()==before;return
+@@ -243,3 +273,176 @@
+     p=run(detector=False,extra=('--date','20990103'))
+     assert p.returncode != 0
+     assert not (root/'data/runtime/d1_decision_20990103.lock').exists()
++
++
++@pytest.mark.parametrize('broken',['{broken','[]','summary'])
++def test_bad_plan_does_not_erase_detection(box,broken):
++    root,date,base,canonical,run,env=box
++    if broken=='summary':(root/f'data/research/{date}/research_summary.json').write_text('{broken')
++    else:canonical.write_text(broken)
++    p=run();assert p.returncode==1
++    assert (root/f'data/research/{date}/retreat_reversal.json').exists()
++    assert (root/f'chzl_kg/投研交易/翻多检测/{date}.md').exists()
++    assert not (root/'argv.json').exists()
++
++
++def test_missing_index_is_not_a_third_core_gate(box):
++    root,date,base,canonical,run,env=box
++    path=root/'verdict.json';v=json.loads(path.read_text())
++    v['index_pct']=None;v['source_time_quality']['index']={}
++    path.write_text(json.dumps(v))
++    p=run();assert p.returncode==0,p.stderr
++    event=json.loads((root/f'data/research/{date}/retreat_reversal.json').read_text())
++    assert event['index_source_observed_at'] is None
++
++
++def rebind_primaries(box, additions):
++    root,date,base,canonical,run,env=box
++    script="""
++from scripts.research import build_research_summary as b
++from scripts.research.pipeline_artifacts import file_version, UNIT_FILES
++import json,sys
++from pathlib import Path
++r=Path.cwd();date=sys.argv[1]; additions=json.loads(sys.argv[2])
++p=r/f'data/research/{date}/research_summary.json';s=json.loads(p.read_text())
++for u,v in additions.items():
++    q=r/f'data/research/{date}'/UNIT_FILES[u];q.write_text(json.dumps(v));s['artifacts'][u]=str(q.relative_to(r))
++m=s['input_manifest'];m['authorized_main_inputs']=s['artifacts'];m['units']={u:{'json':file_version(r,r/v)} for u,v in s['artifacts'].items()}
++m['summary_projection_sha256']=b._digest({k:s.get(k) for k in b.SUMMARY_PROJECTION});m['sha256']=b._digest({k:v for k,v in m.items() if k!='sha256'})
++p.write_text(json.dumps(s))
++"""
++    p=subprocess.run([sys.executable,'-B','-c',script,date,json.dumps(additions)],cwd=root,env=env,capture_output=True,text=True)
++    assert p.returncode==0,p.stderr
++
++
++def test_real_shape_partial_and_negative_evidence_prompt(box):
++    root,date,base,canonical,run,env=box
++    base['no_trade_conditions']=[{'code':'USER_HOLIDAY','active':False},base['no_trade_conditions'][0],{'code':'R6_REVIEW_INCOMPLETE','active':True}]
++    base['no_trade_conditions'] += [{'code':'NO_CONFIRMED_TRADABLE_MAINLINE','active':True}]+[{'code':c,'active':False} for c in ('R1_FAIL','R6_HARD_REJECT_OVERFLOW','R7_STALE','GLOBAL_SEVERITY_3','EMOTION_EXTREME_GREED')]
++    canonical.write_text(json.dumps(base))
++    rebind_primaries(box,{
++        'R1':{'trade_date':date,'style':'retreat','permission_layers':{'new_position_allowed':False},'limitations':{'reason':'R1_NEGATIVE_MARKER'}},
++        'R2':{'trade_date':date,'confirmed_tradable_main_lines_count':0,'main_lines':[{'sector':'fixture','limitation':'R2_NEGATIVE_MARKER'}]},
++        'R5':{'trade_date':date,'profiles':[{'ts_code':'600000.SH','partial':True,'execution_eligible':False,'dimensions':{'warning':'R5_NEGATIVE_MARKER'}}]},
++        'R6':{'trade_date':date,'permission_layers':{'formal_review_completed':False,'all_candidates_cleared':False,'new_position_allowed':False},'candidates_evaluated':0,'counter_arguments':[{'ts_code':'600000.SH','reason':'R6_NEGATIVE_MARKER'}],'research_diagnostics':{'review_gap':'GAP_MARKER'},'mode6_condition_audit':[{'ts_code':'600000.SH','formal_evaluated':False}]}})
++    p=run('partial');assert p.returncode==0,p.stderr
++    result=json.loads(canonical.read_text())
++    assert result['no_trade'] is True
++    assert result['no_trade_conditions'][0]==base['no_trade_conditions'][0]
++    assert result['no_trade_conditions'][1]['active'] is False
++    assert result['no_trade_conditions'][2]==base['no_trade_conditions'][2]
++    assert len(result['no_trade_conditions'])==9 and result['no_trade_conditions'][3]['active'] is False
++    judgments=result['meta']['event_reassessment']['adjudications']
++    assert next(r for r in judgments if r['target']=='condition:2')['status']=='unresolved'
++    prompt=(root/'prompt-context.json').read_text()
++    assert all(m in prompt for m in ['R1_NEGATIVE_MARKER','R2_NEGATIVE_MARKER','R5_NEGATIVE_MARKER','R6_NEGATIVE_MARKER','GAP_MARKER'])
++    assert len(list((root/f'data/logs/research_shell/{date}').glob('D1_event_*/proposal.json')))==1
++
++
++@pytest.mark.parametrize('active',[False,True])
++def test_inactive_protected_is_not_a_blocker(box,active):
++    root,date,base,canonical,run,env=box
++    base['no_trade_conditions'].append({'code':'USER_HOLIDAY','active':active})
++    canonical.write_text(json.dumps(base));p=run()
++    assert p.returncode==(1 if active else 0),p.stderr
++    if not active:assert json.loads(canonical.read_text())['no_trade'] is False
++
++
++def test_retained_is_not_new_stock_approval(box):
++    root,date,base,canonical,run,env=box
++    p=run('retain');assert p.returncode==0,p.stderr
++    result=json.loads(canonical.read_text())
++    assert result['watch_pool']==base['watch_pool'] and result['no_trade'] is True
++
++
++@pytest.mark.parametrize('fault',['json_io','md_io'])
++def test_canonical_write_failure_preserves_previous_pair(box,fault):
++    root,date,base,canonical,run,env=box
++    human=root/f'chzl_kg/投研交易/盘前预案/{date}.md'
++    before=canonical.read_bytes();md=human.read_bytes()
++    p=run(fault);assert p.returncode==1
++    assert canonical.read_bytes()==before and human.read_bytes()==md
++    assert 'injected canonical' in p.stderr
++
++
++@pytest.mark.parametrize('status',['published','validated'])
++def test_retry_rejects_tampered_result_md(box,status):
++    root,date,base,canonical,run,env=box
++    p=run('publish_io' if status=='validated' else '');assert p.returncode==(1 if status=='validated' else 0),p.stderr
++    human=root/f'chzl_kg/投研交易/盘前预案/{date}.md'
++    human.write_text('# altered\na\nb\nc\nd\n')
++    argv=(root/'argv.json').read_bytes();p=run()
++    assert p.returncode==1,p.stderr
++    assert (root/'argv.json').read_bytes()==argv
++
++
++@pytest.mark.parametrize('fault',['json_io_other_md','json_io_new_json'])
++def test_failed_json_never_rolls_back_another_writer(box,fault):
++    root,date,base,canonical,run,env=box
++    p=run(fault);assert p.returncode==1,p.stderr
++    human=root/f'chzl_kg/投研交易/盘前预案/{date}.md'
++    if fault=='json_io_other_md':assert human.read_text()=='# other writer\na\nb\nc\nd\n'
++    else:
++        result=json.loads(canonical.read_text());assert result['no_trade'] is False
++        assert result['meta']['event_reassessment']['event_version'] in human.read_text()
++        assert 'plan_sha256' in human.read_text()
++
++
++def test_all_known_market_conditions_clear_without_budget_expansion(box):
++    root,date,base,canonical,run,env=box
++    base['no_trade_conditions'] += [{'code':'NO_CONFIRMED_TRADABLE_MAINLINE','active':True},{'code':'USER_HOLIDAY','active':False}]
++    base['risk_limits']['max_buy_orders_per_day']=0
++    canonical.write_text(json.dumps(base))
++    rebind_primaries(box,{'R2':{'trade_date':date,'confirmed_tradable_main_lines_count':0,'main_lines':[]}})
++    p=run();assert p.returncode==0,p.stderr
++    result=json.loads(canonical.read_text())
++    assert result['no_trade'] is False and all(r['active'] is False for r in result['no_trade_conditions'])
++    for key in ('risk_limits','watch_pool','execution_pool','mode','autonomous_trading_enabled','requires_user_confirmation'):
++        assert result[key]==base[key]
++    assert 'market_judgment_sources' not in result['meta']
++    context=json.loads((root/'prompt-context.json').read_text())
++    assert context['condition_sources']['condition:1']['field']=='confirmed_tradable_main_lines_count'
++    assert context['condition_sources']['condition:0']['version']==context['bound_versions']['primaries']['R1']
++
++
++@pytest.mark.parametrize('evidence',[
++    {'counter_arguments':[{'severity':'hard_reject','target':'600000.SH'}]},
++    {'permission_layers':{'formal_review_completed':False,'all_candidates_cleared':False,'new_position_allowed':False},'research_diagnostics':{'all_passed':True}},
++])
++def test_real_r6_rejection_or_review_gap_cannot_clear(box,evidence):
++    root,date,base,canonical,run,env=box
++    rebind_primaries(box,{'R6':{'trade_date':date,**evidence}})
++    before=canonical.read_bytes();p=run();assert p.returncode==1,p.stderr
++    assert 'R6 rejection/review gap' in p.stderr and canonical.read_bytes()==before
++
++
++@pytest.mark.parametrize('section',['breadth','yesterday_lu_quality','index'])
++def test_event_time_quality_is_core_first_but_future_index_rejected(box,section):
++    root,date,base,canonical,run,env=box
++    path=root/'verdict.json';v=json.loads(path.read_text())
++    if section=='index':v['source_time_quality']['index']['quote_age_min_seconds']=-60
++    else:v[section]['source_time_max']='2099-01-01T10:00:00+08:00'
++    path.write_text(json.dumps(v));before=canonical.read_bytes()
++    p=run();assert p.returncode==1,p.stderr
++    assert canonical.read_bytes()==before and not (root/'argv.json').exists()
++    assert (root/f'data/research/{date}/retreat_reversal.json').exists()
++
++
++def test_r6_formal_audit_not_r5_invented_status_controls_coverage(box):
++    root,date,base,canonical,run,env=box
++    rebind_primaries(box,{'R6':{'trade_date':date,'permission_layers':{'formal_review_completed':True,'all_candidates_cleared':True,'new_position_allowed':True},'candidates_evaluated':1,'mode6_condition_audit':[{'ts_code':'600000.SH','formal_evaluated':True}]},
++                         'R5':{'trade_date':date,'profiles':[{'ts_code':'600000.SH','partial':True,'execution_eligible':False}]}})
++    p=run('all_pass');assert p.returncode==0,p.stderr
++    result=json.loads(canonical.read_text())
++    assert result['watch_pool']==base['watch_pool'] and result['execution_pool']==base['execution_pool']
++
++
++def test_failed_raw_proposal_is_retained(box):
++    root,date,base,canonical,run,env=box
++    p=run('protected');assert p.returncode==1
++    logs=root/f'data/logs/research_shell/{date}'
++    proposals=list(logs.glob('D1_event_*/proposal.json'))
++    assert len(proposals)==1
++    assert 'risk_limits' in proposals[0].read_text()
++    assert (proposals[0].parent/'binding.json').exists()
++

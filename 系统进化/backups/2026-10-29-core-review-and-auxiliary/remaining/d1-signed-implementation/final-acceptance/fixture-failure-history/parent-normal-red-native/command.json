@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "/Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/pipeline/test_d1_selective_reassessment.py::test_real_normal_shell_delivery_can_later_use_selective_reassessment",
+    "--noconftest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/cases",
+    "--junitxml=/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/junit.xml",
+    "--tb=short",
+    "-q"
+  ],
+  "environment": {
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/home",
+    "HERMES_HOME": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/home/.hermes",
+    "XDG_CONFIG_HOME": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/home/.config",
+    "TMPDIR": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029",
+    "PYTHONPATH": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native",
+    "R6_GUARD_DIR": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/parent-normal-red-native/guards",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "LANG": "en_US.UTF-8",
+    "D1_BASELINE_SOURCE": "/Users/chenyang/.hermes/cache/scratch/d1-selective-20261029/ensure.before.py"
+  },
+  "cwd": "/Users/chenyang/Downloads/demo/沧海巨浪"
+}

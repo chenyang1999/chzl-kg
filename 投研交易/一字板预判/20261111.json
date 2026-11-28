@@ -1,0 +1,201 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261111",
+  "next_day": "20261112",
+  "generated_at": "2026-11-11T22:00:42+08:00",
+  "n_total": 85,
+  "n_candidates": 10,
+  "candidates": [
+    {
+      "ts_code": "603366.SH",
+      "name": "日出东方",
+      "industry": "厨卫电器",
+      "theme": "空气能热泵、华为液冷快充、净水概念",
+      "limit_times": 4,
+      "fd_amount_yi": 5.69,
+      "pct_chg": 10.02,
+      "first_time": "92501",
+      "open_times": 0,
+      "float_mv_yi": 97.3,
+      "prob_yizi": 32.0,
+      "prob_up": 43.7,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=5.7亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002623.SZ",
+      "name": "亚玛顿",
+      "industry": "光伏设备",
+      "theme": "钙钛矿电池、玻璃基板、反内卷概念",
+      "limit_times": 3,
+      "fd_amount_yi": 1.72,
+      "pct_chg": 10.0,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 44.9,
+      "prob_yizi": 30.2,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.7亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "002708.SZ",
+      "name": "光洋股份",
+      "industry": "汽车零部件",
+      "theme": "飞行汽车(eVTOL)、车路云一体化、智能驾驶系统",
+      "limit_times": 3,
+      "fd_amount_yi": 1.0,
+      "pct_chg": 10.01,
+      "first_time": "94345",
+      "open_times": 2,
+      "float_mv_yi": 135.5,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.0亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002931.SZ",
+      "name": "锋龙股份",
+      "industry": "通用设备",
+      "theme": "长安汽车概念、融资融券、股权转让(并购重组)",
+      "limit_times": 3,
+      "fd_amount_yi": 1.47,
+      "pct_chg": 10.01,
+      "first_time": "93021",
+      "open_times": 1,
+      "float_mv_yi": 107.5,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.5亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "600715.SH",
+      "name": "文投控股",
+      "industry": "游戏Ⅱ",
+      "theme": "网络游戏、犒赏经济、手机游戏",
+      "limit_times": 3,
+      "fd_amount_yi": 1.05,
+      "pct_chg": 10.18,
+      "first_time": "92500",
+      "open_times": 9,
+      "float_mv_yi": 89.9,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.0亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "603706.SH",
+      "name": "东方环宇",
+      "industry": "燃气Ⅱ",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.13,
+      "pct_chg": 10.0,
+      "first_time": "101322",
+      "open_times": 10,
+      "float_mv_yi": 46.3,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.1亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600327.SH",
+      "name": "大东方",
+      "industry": "一般零售",
+      "theme": "高股息",
+      "limit_times": 4,
+      "fd_amount_yi": 1.17,
+      "pct_chg": 9.93,
+      "first_time": "92501",
+      "open_times": 2,
+      "float_mv_yi": 57.8,
+      "prob_yizi": 21.7,
+      "prob_up": 38.1,
+      "rank": "关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=1.2亿 (一字率19%)"
+      ]
+    },
+    {
+      "ts_code": "002209.SZ",
+      "name": "达 意 隆",
+      "industry": "专用设备",
+      "theme": "",
+      "limit_times": 2,
+      "fd_amount_yi": 4.72,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 22.0,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=4.7亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002384.SZ",
+      "name": "东山精密",
+      "industry": "元件",
+      "theme": "沪深300样本股、折叠屏概念、同花顺果指数",
+      "limit_times": 1,
+      "fd_amount_yi": 6.57,
+      "pct_chg": 10.0,
+      "first_time": "131139",
+      "open_times": 0,
+      "float_mv_yi": 1276.2,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=6.6亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "603083.SH",
+      "name": "剑桥科技",
+      "industry": "通信设备",
+      "theme": "谷歌概念、物联网、液冷服务器",
+      "limit_times": 1,
+      "fd_amount_yi": 4.24,
+      "pct_chg": 10.0,
+      "first_time": "93408",
+      "open_times": 1,
+      "float_mv_yi": 322.3,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.2亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停85只，筛出 10 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

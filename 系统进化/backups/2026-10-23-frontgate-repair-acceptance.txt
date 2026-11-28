@@ -1,0 +1,52 @@
+FINAL JOINT ACCEPTANCE (344 cases + 24 subtests; repeated group runs not added)
+........................................................................ [ 20%]
+........................................................................ [ 41%]
+............................................................ [ 59%]
+............................................................... [ 77%]
+..................................................................... [ 97%]
+........                                                                 [100%]
+344 passed, 24 subtests passed in 5.40s
+
+INDEPENDENT PREVIOUS PIPELINE REGRESSION (34 different cases)
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- /Users/chenyang/Downloads/demo/沧海巨浪/.venv/bin/python
+rootdir: /Users/chenyang/.hermes/cache/scratch/canghai_repair_pipeline_regression_20261023/repo
+collecting ... collected 34 items
+
+tests/pipeline/test_research_pipeline_reliability.py::test_real_helpers_success_empty_llm_pool_and_runtime_handoff PASSED [  2%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[nonzero-R1] PASSED [  5%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[nonzero-R4] PASSED [  8%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[nonzero-R7] PASSED [ 11%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[invalid_json-R6] PASSED [ 14%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[wrong_date-R5] PASSED [ 17%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[skeleton-R3] PASSED [ 20%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[json_only-D1] PASSED [ 23%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[md_only-D1] PASSED [ 26%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[old_attempt-R1] PASSED [ 29%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[blocked_md-R2] PASSED [ 32%]
+tests/pipeline/test_research_pipeline_reliability.py::test_faults_are_business_failed_even_when_cli_zero[blocked_md-R5] PASSED [ 35%]
+tests/pipeline/test_research_pipeline_reliability.py::test_background_nonzero_retries_are_not_aborted_by_errexit[transient] PASSED [ 38%]
+tests/pipeline/test_research_pipeline_reliability.py::test_background_nonzero_retries_are_not_aborted_by_errexit[rate_limit] PASSED [ 41%]
+tests/pipeline/test_research_pipeline_reliability.py::test_same_day_rerun_cannot_reuse_old_success PASSED [ 44%]
+tests/pipeline/test_research_pipeline_reliability.py::test_legal_alias_or_skip_is_delivered_not_skeleton[alias] PASSED [ 47%]
+tests/pipeline/test_research_pipeline_reliability.py::test_legal_alias_or_skip_is_delivered_not_skeleton[skip_r5] PASSED [ 50%]
+tests/pipeline/test_research_pipeline_reliability.py::test_new_alias_cannot_validate_old_target PASSED [ 52%]
+tests/pipeline/test_research_pipeline_reliability.py::test_wrapper_acceptance_is_not_completion_and_does_not_wait_for_fetch PASSED [ 55%]
+tests/pipeline/test_research_pipeline_reliability.py::test_wrapper_guard_skip_unknown_and_real_error[1-completed] PASSED [ 58%]
+tests/pipeline/test_research_pipeline_reliability.py::test_wrapper_guard_skip_unknown_and_real_error[2-completed] PASSED [ 61%]
+tests/pipeline/test_research_pipeline_reliability.py::test_wrapper_guard_skip_unknown_and_real_error[9-failed] PASSED [ 64%]
+tests/pipeline/test_research_pipeline_reliability.py::test_fatal_missing_hermes_replaces_previous_green_state PASSED [ 67%]
+tests/pipeline/test_research_pipeline_reliability.py::test_atomic_parallel_stage_updates_and_superseded_run_protection PASSED [ 70%]
+tests/pipeline/test_research_pipeline_reliability.py::test_summary_real_current_degraded_artifacts_never_become_skeleton PASSED [ 73%]
+tests/pipeline/test_research_pipeline_reliability.py::test_reconciliation_malformed_json_missing_d1_and_old_runtime PASSED [ 76%]
+tests/pipeline/test_research_pipeline_reliability.py::test_d1_retry_validates_canonical_not_runtime_and_empty_pool_is_valid[success-True] PASSED [ 79%]
+tests/pipeline/test_research_pipeline_reliability.py::test_d1_retry_validates_canonical_not_runtime_and_empty_pool_is_valid[json_only-False] PASSED [ 82%]
+tests/pipeline/test_research_pipeline_reliability.py::test_d1_retry_validates_canonical_not_runtime_and_empty_pool_is_valid[wrong_date-False] PASSED [ 85%]
+tests/pipeline/test_research_pipeline_reliability.py::test_d1_retry_validates_canonical_not_runtime_and_empty_pool_is_valid[stale-False] PASSED [ 88%]
+tests/pipeline/test_research_pipeline_reliability.py::test_safety_net_force_does_not_overwrite_llm_or_bypass_missing_upstream PASSED [ 91%]
+tests/pipeline/test_research_pipeline_reliability.py::test_d1_lock_is_exclusive_and_not_stolen_by_age PASSED [ 94%]
+tests/pipeline/test_research_pipeline_reliability.py::test_pipeline_handoff_reuses_existing_no_live_promotion_guard PASSED [ 97%]
+tests/pipeline/test_research_pipeline_reliability.py::test_safety_net_rejects_previous_same_day_upstream_in_new_run PASSED [100%]
+
+- generated xml file: /Users/chenyang/.hermes/cache/scratch/canghai_repair_pipeline_regression_20261023/acceptance.xml -
+======================== 34 passed in 110.06s (0:01:50) ========================

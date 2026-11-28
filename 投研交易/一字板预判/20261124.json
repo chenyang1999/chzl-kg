@@ -1,0 +1,163 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261124",
+  "next_day": "20261125",
+  "generated_at": "2026-11-24T22:00:56+08:00",
+  "n_total": 55,
+  "n_candidates": 8,
+  "candidates": [
+    {
+      "ts_code": "603960.SH",
+      "name": "克来机电",
+      "industry": "汽车零部件",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 3.35,
+      "pct_chg": 10.02,
+      "first_time": "92501",
+      "open_times": 0,
+      "float_mv_yi": 44.3,
+      "prob_yizi": 36.0,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=3.3亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002086.SZ",
+      "name": "东方海洋",
+      "industry": "农产品加",
+      "theme": "食品安全、猴痘概念、海洋经济",
+      "limit_times": 3,
+      "fd_amount_yi": 0.77,
+      "pct_chg": 9.93,
+      "first_time": "94551",
+      "open_times": 10,
+      "float_mv_yi": 71.8,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.8亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002548.SZ",
+      "name": "金新农",
+      "industry": "饲料",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.19,
+      "pct_chg": 9.9,
+      "first_time": "93151",
+      "open_times": 0,
+      "float_mv_yi": 36.6,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.2亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "605018.SH",
+      "name": "长华集团",
+      "industry": "汽车零部件",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.88,
+      "pct_chg": 10.01,
+      "first_time": "92502",
+      "open_times": 0,
+      "float_mv_yi": 58.4,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.9亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002579.SZ",
+      "name": "中京电子",
+      "industry": "元件",
+      "theme": "芯片概念、粤港澳大湾区、物联网",
+      "limit_times": 4,
+      "fd_amount_yi": 1.97,
+      "pct_chg": 9.98,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 94.5,
+      "prob_yizi": 26.2,
+      "prob_up": 38.1,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=4 (一字率22%)",
+        "封单=2.0亿 (一字率21%)"
+      ]
+    },
+    {
+      "ts_code": "001278.SZ",
+      "name": "一彬科技",
+      "industry": "汽车零部件",
+      "theme": "",
+      "limit_times": 2,
+      "fd_amount_yi": 4.19,
+      "pct_chg": 9.98,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 12.6,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=4.2亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002242.SZ",
+      "name": "九阳股份",
+      "industry": "小家电",
+      "theme": "高股息、证金持股、汇金证金持股",
+      "limit_times": 2,
+      "fd_amount_yi": 3.17,
+      "pct_chg": 10.01,
+      "first_time": "93151",
+      "open_times": 1,
+      "float_mv_yi": 267.0,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=3.2亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002164.SZ",
+      "name": "宁波东力",
+      "industry": "通用设备",
+      "theme": "",
+      "limit_times": 2,
+      "fd_amount_yi": 2.93,
+      "pct_chg": 9.98,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 94.7,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.9亿 (一字率26%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停55只，筛出 8 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

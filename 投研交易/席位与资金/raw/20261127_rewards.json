@@ -1,0 +1,6407 @@
+{
+ "601615.SH": [
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "刘建军",
+   "title": "首席风控官",
+   "reward": 1575200.0,
+   "hold_vol": 464400.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "刘瑛",
+   "title": "独立董事",
+   "reward": 96000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "刘连玉",
+   "title": "原能源服务业务线总裁",
+   "reward": 965800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "叶凡",
+   "title": "副总裁",
+   "reward": 1335600.0,
+   "hold_vol": 101000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "张传卫",
+   "title": "董事长,首席执行官",
+   "reward": 4964200.0,
+   "hold_vol": 1909600.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "张启应",
+   "title": "董事,原首席技术官,原智造业务线总裁,业务总裁",
+   "reward": 3522800.0,
+   "hold_vol": 2600000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "张大伟",
+   "title": "原董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "张瑞",
+   "title": "董事,原光伏业务线总裁,副总裁",
+   "reward": 1827000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "张超",
+   "title": "董事,副总裁",
+   "reward": 2626200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "房猛",
+   "title": "首席财务官",
+   "reward": 2461500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "施少斌",
+   "title": "独立董事",
+   "reward": 96000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "易菱娜",
+   "title": "副总裁",
+   "reward": 1574600.0,
+   "hold_vol": 518027.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "朱滔",
+   "title": "独立董事",
+   "reward": 96000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "林茂亮",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "梁才发",
+   "title": "原首席财务官",
+   "reward": 189400.0,
+   "hold_vol": 954286.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "樊元峰",
+   "title": "董事",
+   "reward": 1701100.0,
+   "hold_vol": 334000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王冬冬",
+   "title": "原首席运营官,副总裁",
+   "reward": 1783700.0,
+   "hold_vol": 340000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王利民",
+   "title": "原监事会主席,职工代表董事",
+   "reward": 2142100.0,
+   "hold_vol": 75000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王成奎",
+   "title": "副总裁,董事会秘书",
+   "reward": 1418000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王荣昌",
+   "title": "独立董事",
+   "reward": 96000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王金发",
+   "title": "原董事",
+   "reward": 1285600.0,
+   "hold_vol": 4654620.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "葛长新",
+   "title": "原副董事长",
+   "reward": 880100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "韩冰",
+   "title": "副总裁",
+   "reward": 2259200.0,
+   "hold_vol": 220000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "刘建军",
+   "title": "首席风控官",
+   "reward": 1303000.0,
+   "hold_vol": 464400.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "刘瑛",
+   "title": "独立董事",
+   "reward": 96000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "刘连玉",
+   "title": "能源服务业务线总裁",
+   "reward": 1904400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "叶凡",
+   "title": "副总裁",
+   "reward": 1109400.0,
+   "hold_vol": 101000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "张传卫",
+   "title": "董事长,首席执行官",
+   "reward": 3971300.0,
+   "hold_vol": 1909600.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "张启应",
+   "title": "董事,首席技术官,智造业务线总裁",
+   "reward": 2875500.0,
+   "hold_vol": 2600000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "张大伟",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "张瑞",
+   "title": "董事,光伏业务线总裁",
+   "reward": 1331900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "张超",
+   "title": "副总裁",
+   "reward": 2533800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "成永峰",
+   "title": "职工代表监事",
+   "reward": 621400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "房猛",
+   "title": "首席财务官",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "施少斌",
+   "title": "独立董事",
+   "reward": 96000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "易菱娜",
+   "title": "副总裁",
+   "reward": 1228800.0,
+   "hold_vol": 518027.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "朱滔",
+   "title": "独立董事",
+   "reward": 96000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "梁才发",
+   "title": "原首席财务官",
+   "reward": 2025000.0,
+   "hold_vol": 954286.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "樊元峰",
+   "title": "董事",
+   "reward": 1290500.0,
+   "hold_vol": 334000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "潘永乐",
+   "title": "原副总裁,原董事会秘书",
+   "reward": 710200.0,
+   "hold_vol": 120000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "王冬冬",
+   "title": "首席运营官",
+   "reward": 1438100.0,
+   "hold_vol": 340000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "王利民",
+   "title": "监事会主席",
+   "reward": 1754900.0,
+   "hold_vol": 75000.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "王成奎",
+   "title": "副总裁,董事会秘书",
+   "reward": 294000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "王荣昌",
+   "title": "独立董事",
+   "reward": 96000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "王金发",
+   "title": "董事",
+   "reward": 2005500.0,
+   "hold_vol": 4654620.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "翟拥军",
+   "title": "监事",
+   "reward": 680700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "葛长新",
+   "title": "副董事长",
+   "reward": 2044500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "601615.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "韩冰",
+   "title": "副总裁",
+   "reward": 1528700.0,
+   "hold_vol": 220000.0
+  }
+ ],
+ "603150.SH": [
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "丁芳",
+   "title": "财务总监",
+   "reward": 451800.0,
+   "hold_vol": 40000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "万和国",
+   "title": "董事长",
+   "reward": 668800.0,
+   "hold_vol": 110000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "刘良德",
+   "title": "原董事",
+   "reward": 504000.0,
+   "hold_vol": 36000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "刘跃玲",
+   "title": "副总经理",
+   "reward": 477100.0,
+   "hold_vol": 27300.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "张小梅",
+   "title": "董事会秘书",
+   "reward": 453000.0,
+   "hold_vol": 40000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "张炳力",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "张芳芳",
+   "title": "董事,副总经理",
+   "reward": 612400.0,
+   "hold_vol": 70000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "时金敏",
+   "title": "副总经理",
+   "reward": 575700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "杜鹏程",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "沈刚",
+   "title": "职工董事,副总经理",
+   "reward": 566600.0,
+   "hold_vol": 25200.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "许进",
+   "title": "副总经理",
+   "reward": 554300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "邵燕妮",
+   "title": "副总经理",
+   "reward": 573900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "陈矜",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "陈雨海",
+   "title": "董事,总经理",
+   "reward": 577100.0,
+   "hold_vol": 74000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "丁芳",
+   "title": "财务总监",
+   "reward": 427700.0,
+   "hold_vol": 40000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "万和国",
+   "title": "董事长,总经理",
+   "reward": 653800.0,
+   "hold_vol": 110000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "刘良德",
+   "title": "董事",
+   "reward": 504000.0,
+   "hold_vol": 36000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "叶圣",
+   "title": "原独立董事",
+   "reward": 90000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "张小梅",
+   "title": "董事会秘书",
+   "reward": 428000.0,
+   "hold_vol": 40000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "张炳力",
+   "title": "独立董事",
+   "reward": 16400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "张芳芳",
+   "title": "董事,副总经理",
+   "reward": 606300.0,
+   "hold_vol": 70000.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "杜鹏程",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "王界晨",
+   "title": "监事",
+   "reward": 242700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "谭淇月",
+   "title": "监事",
+   "reward": 275000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "赵莉莉",
+   "title": "监事会主席,职工代表监事",
+   "reward": 207100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "陈矜",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603150.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "陈雨海",
+   "title": "董事,副总经理",
+   "reward": 540900.0,
+   "hold_vol": 74000.0
+  }
+ ],
+ "002851.SZ": [
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "张志",
+   "title": "董事,副总经理",
+   "reward": 796900.0,
+   "hold_vol": 15949050.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "柳建华",
+   "title": "原独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "梁敏",
+   "title": "原监事会主席",
+   "reward": 617600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "楚攀",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "毛栋材",
+   "title": "职工代表董事,原监事",
+   "reward": 585200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "沈华玉",
+   "title": "独立董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "沈楚春",
+   "title": "首席技术官",
+   "reward": 970200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王涛",
+   "title": "首席财务官,董事会秘书",
+   "reward": 1011600.0,
+   "hold_vol": 3400000.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王雪芬",
+   "title": "董事",
+   "reward": 1312300.0,
+   "hold_vol": 1955573.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "童永胜",
+   "title": "董事长,总经理",
+   "reward": 712700.0,
+   "hold_vol": 97483231.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "赵万栋",
+   "title": "原监事",
+   "reward": 516200.0,
+   "hold_vol": 65000.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "张志",
+   "title": "董事,副总经理",
+   "reward": 986600.0,
+   "hold_vol": 15949050.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "柳建华",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "梁敏",
+   "title": "监事会主席",
+   "reward": 739300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "楚攀",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "毛栋材",
+   "title": "监事",
+   "reward": 636400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "沈楚春",
+   "title": "首席技术官",
+   "reward": 1090800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "王涛",
+   "title": "首席财务官,董事会秘书",
+   "reward": 1142600.0,
+   "hold_vol": 3400000.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "王雪芬",
+   "title": "董事",
+   "reward": 1257200.0,
+   "hold_vol": 1954773.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "童永胜",
+   "title": "董事长,总经理",
+   "reward": 1100500.0,
+   "hold_vol": 97483231.0
+  },
+  {
+   "ts_code": "002851.SZ",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "赵万栋",
+   "title": "监事",
+   "reward": 621800.0,
+   "hold_vol": 65000.0
+  }
+ ],
+ "301571.SZ": [
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "吴明星",
+   "title": "董事,副总经理,财务负责人",
+   "reward": 1504900.0,
+   "hold_vol": 11050632.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "沈正祥",
+   "title": "独立董事",
+   "reward": 50000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "潘亚",
+   "title": "独立董事",
+   "reward": 50000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "王启林",
+   "title": "副总经理,董事会秘书",
+   "reward": 770000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "王玥",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "罗珏典",
+   "title": "董事长,总经理",
+   "reward": 1645300.0,
+   "hold_vol": 14698913.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "陈浩",
+   "title": "独立董事",
+   "reward": 50000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "韩璐",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "刘雯雯",
+   "title": "监事",
+   "reward": 495200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "吴明星",
+   "title": "董事,副总经理,财务负责人",
+   "reward": 1738200.0,
+   "hold_vol": 11050632.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "张伟",
+   "title": "原独立董事",
+   "reward": 56000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "杜爱军",
+   "title": "监事会主席,职工监事",
+   "reward": 850300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "沈正祥",
+   "title": "独立董事",
+   "reward": 3400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "潘亚",
+   "title": "独立董事",
+   "reward": 50000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "王启林",
+   "title": "副总经理,董事会秘书",
+   "reward": 795500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "王玥",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "罗珏典",
+   "title": "董事长,总经理",
+   "reward": 1913700.0,
+   "hold_vol": 14698913.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "陈浩",
+   "title": "独立董事",
+   "reward": 50000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "韩璐",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301571.SZ",
+   "ann_date": "20250424",
+   "end_date": "20241231",
+   "name": "马超",
+   "title": "监事",
+   "reward": 112100.0,
+   "hold_vol": 0.0
+  }
+ ],
+ "605020.SH": [
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "余锋",
+   "title": "董事",
+   "reward": 411000.0,
+   "hold_vol": 2082500.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "姜根法",
+   "title": "财务总监",
+   "reward": 552400.0,
+   "hold_vol": 148800.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "应振洲",
+   "title": "原总工程师",
+   "reward": 277100.0,
+   "hold_vol": 1494500.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "徐水土",
+   "title": "副董事长,副总经理",
+   "reward": 856500.0,
+   "hold_vol": 5725837.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "李清伟",
+   "title": "独立董事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "王建中",
+   "title": "独立董事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "程文霞",
+   "title": "副总经理,董事会秘书",
+   "reward": 708900.0,
+   "hold_vol": 318773.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "童嘉成",
+   "title": "董事,总经理",
+   "reward": 440500.0,
+   "hold_vol": 16014950.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "童建国",
+   "title": "董事长",
+   "reward": 1516700.0,
+   "hold_vol": 186300199.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "胡继荣",
+   "title": "独立董事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "谢东颖",
+   "title": "副总经理",
+   "reward": 466800.0,
+   "hold_vol": 540064.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "赵景平",
+   "title": "董事,常务副总经理",
+   "reward": 445100.0,
+   "hold_vol": 3080000.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20260403",
+   "end_date": "20251231",
+   "name": "陈文亮",
+   "title": "职工董事,总工程师",
+   "reward": 518600.0,
+   "hold_vol": 480094.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "余锋",
+   "title": "董事",
+   "reward": 445600.0,
+   "hold_vol": 2082500.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "傅招祥",
+   "title": "监事",
+   "reward": 440700.0,
+   "hold_vol": 1946000.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "姜根法",
+   "title": "财务总监",
+   "reward": 449500.0,
+   "hold_vol": 137134.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "应振洲",
+   "title": "总工程师",
+   "reward": 497900.0,
+   "hold_vol": 1480500.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "徐水土",
+   "title": "副总经理,副董事长",
+   "reward": 1473600.0,
+   "hold_vol": 5711837.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "李清伟",
+   "title": "独立董事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "王建中",
+   "title": "独立董事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "程文霞",
+   "title": "副总经理,董事会秘书",
+   "reward": 520800.0,
+   "hold_vol": 318773.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "童嘉成",
+   "title": "董事,总经理",
+   "reward": 319200.0,
+   "hold_vol": 16014950.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "童建国",
+   "title": "董事长,原总经理",
+   "reward": 438500.0,
+   "hold_vol": 178405463.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "胡永忠",
+   "title": "监事",
+   "reward": 269800.0,
+   "hold_vol": 259000.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "胡继荣",
+   "title": "独立董事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "谢东颖",
+   "title": "副总经理",
+   "reward": 104300.0,
+   "hold_vol": 590064.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "赵景平",
+   "title": "董事,常务副总经理",
+   "reward": 433900.0,
+   "hold_vol": 3080000.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "陈文亮",
+   "title": "董事",
+   "reward": 485800.0,
+   "hold_vol": 474687.0
+  },
+  {
+   "ts_code": "605020.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "黄国栋",
+   "title": "监事会主席",
+   "reward": 240400.0,
+   "hold_vol": 196000.0
+  }
+ ],
+ "688196.SH": [
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "何正凌",
+   "title": "董事,副总经理,财务总监",
+   "reward": 598300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "叶活动",
+   "title": "实际控制人,董事长,总经理,核心技术人员",
+   "reward": 919000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "方柏山",
+   "title": "独立董事",
+   "reward": 72000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "曾庆平",
+   "title": "董事,副总经理,核心技术人员",
+   "reward": 599000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "王高祥",
+   "title": "副总经理",
+   "reward": 798500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "罗春妹",
+   "title": "实际控制人,董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "连荣潮",
+   "title": "副总经理",
+   "reward": 650800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "郑学东",
+   "title": "副总经理,董事会秘书",
+   "reward": 591000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "郑祯",
+   "title": "独立董事",
+   "reward": 72000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "郭晓斌",
+   "title": "独立董事",
+   "reward": 72000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "何正凌",
+   "title": "董事,副总经理,财务总监",
+   "reward": 574400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "叶活动",
+   "title": "实际控制人,董事长,总经理,核心技术人员",
+   "reward": 929700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "方柏山",
+   "title": "独立董事",
+   "reward": 72000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "曾庆平",
+   "title": "董事,副总经理,核心技术人员",
+   "reward": 597900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "林春根",
+   "title": "监事会主席",
+   "reward": 140200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "王高祥",
+   "title": "副总经理",
+   "reward": 784300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "罗敏健",
+   "title": "监事",
+   "reward": 305400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "罗春妹",
+   "title": "实际控制人,董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "连荣潮",
+   "title": "副总经理",
+   "reward": 653600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "郑学东",
+   "title": "副总经理,董事会秘书",
+   "reward": 600000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "郑祯",
+   "title": "独立董事",
+   "reward": 72000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "郭晓斌",
+   "title": "独立董事",
+   "reward": 72000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688196.SH",
+   "ann_date": "20250419",
+   "end_date": "20241231",
+   "name": "陈文敏",
+   "title": "职工代表监事",
+   "reward": 352800.0,
+   "hold_vol": 0.0
+  }
+ ],
+ "603098.SH": [
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "刘爱森",
+   "title": "董事长,总经理",
+   "reward": 600000.0,
+   "hold_vol": 135413381.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "叶渊",
+   "title": "副总经理",
+   "reward": 800000.0,
+   "hold_vol": 405000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "周智敏",
+   "title": "财务总监",
+   "reward": 900000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "张进军",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "徐晓楠",
+   "title": "董事会秘书",
+   "reward": 430000.0,
+   "hold_vol": 60000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "李文学",
+   "title": "原董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "李桂茹",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 240.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "杜晓明",
+   "title": "独立董事",
+   "reward": 70000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "束伟农",
+   "title": "独立董事",
+   "reward": 70000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "王琪",
+   "title": "原独立董事",
+   "reward": 25000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "白忠学",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "石小敏",
+   "title": "原独立董事",
+   "reward": 25000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "翁家恩",
+   "title": "职工代表董事,副总经理",
+   "reward": 600000.0,
+   "hold_vol": 21040000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "苏中一",
+   "title": "独立董事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "陈俊臣",
+   "title": "副总经理",
+   "reward": 800000.0,
+   "hold_vol": 840350.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "颜坚",
+   "title": "副总经理",
+   "reward": 960000.0,
+   "hold_vol": 1190000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20260420",
+   "end_date": "20251231",
+   "name": "高伟",
+   "title": "副总经理",
+   "reward": 800000.0,
+   "hold_vol": 110000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "仇梦妍",
+   "title": "股东监事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "刘爱森",
+   "title": "董事长,总经理",
+   "reward": 600000.0,
+   "hold_vol": 135226381.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "叶渊",
+   "title": "副总经理",
+   "reward": 800000.0,
+   "hold_vol": 405000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "周智敏",
+   "title": "财务总监",
+   "reward": 720000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "孟托",
+   "title": "监事会主席",
+   "reward": 800000.0,
+   "hold_vol": 810000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "张进军",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "徐晓楠",
+   "title": "董事会秘书",
+   "reward": 450000.0,
+   "hold_vol": 60000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "李传伟",
+   "title": "职工监事",
+   "reward": 450000.0,
+   "hold_vol": 6000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "李文学",
+   "title": "原董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "李桂茹",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 240.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "杜晓明",
+   "title": "独立董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "束伟农",
+   "title": "独立董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "王琪",
+   "title": "原独立董事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "白忠学",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "石小敏",
+   "title": "原独立董事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "翁家恩",
+   "title": "董事,副总经理",
+   "reward": 600000.0,
+   "hold_vol": 21040000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "苏中一",
+   "title": "独立董事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "陈俊臣",
+   "title": "副总经理",
+   "reward": 800000.0,
+   "hold_vol": 840350.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "颜坚",
+   "title": "副总经理",
+   "reward": 800000.0,
+   "hold_vol": 1190000.0
+  },
+  {
+   "ts_code": "603098.SH",
+   "ann_date": "20250423",
+   "end_date": "20241231",
+   "name": "高伟",
+   "title": "副总经理",
+   "reward": 800000.0,
+   "hold_vol": 110000.0
+  }
+ ],
+ "002480.SZ": [
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "冯树庆",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "刘竹萌",
+   "title": "原董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "卫德佳",
+   "title": "独立董事",
+   "reward": 4500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "周凤岗",
+   "title": "董事,董事长",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "唐岚",
+   "title": "独立董事",
+   "reward": 4500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "夏玉龙",
+   "title": "董事,总经理",
+   "reward": 834200.0,
+   "hold_vol": 762900.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "张杨",
+   "title": "原副总经理,原董事会秘书",
+   "reward": 196900.0,
+   "hold_vol": 352499.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "朱劲",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "杨丽",
+   "title": "副总经理",
+   "reward": 684100.0,
+   "hold_vol": 163000.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "江涛",
+   "title": "原独立董事",
+   "reward": 115900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "王思程",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "罗哲",
+   "title": "原独立董事",
+   "reward": 115900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "罗珉",
+   "title": "原独立董事",
+   "reward": 115900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "翟潇雨",
+   "title": "副总经理",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "肖光辉",
+   "title": "原董事,原董事长",
+   "reward": 638900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "谭洪涛",
+   "title": "独立董事",
+   "reward": 4500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "贾秀英",
+   "title": "财务总监",
+   "reward": 683700.0,
+   "hold_vol": 456400.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "赵科星",
+   "title": "原董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "陈思遥",
+   "title": "副总经理,董事会秘书",
+   "reward": 219600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "黄晓波",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "冯树庆",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "刘竹萌",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "夏玉龙",
+   "title": "董事,总经理",
+   "reward": 834400.0,
+   "hold_vol": 762900.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "张宏鹰",
+   "title": "监事会主席,监事",
+   "reward": 314100.0,
+   "hold_vol": 90000.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "张杨",
+   "title": "董事会秘书,副总经理",
+   "reward": 684000.0,
+   "hold_vol": 352499.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "易泰宇",
+   "title": "职工代表监事",
+   "reward": 16500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "李旸",
+   "title": "监事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "杨丽",
+   "title": "副总经理",
+   "reward": 683900.0,
+   "hold_vol": 163000.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "江涛",
+   "title": "独立董事",
+   "reward": 119400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "涂利",
+   "title": "原职工代表监事",
+   "reward": 517800.0,
+   "hold_vol": 5800.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "王旭亮",
+   "title": "监事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "罗哲",
+   "title": "独立董事",
+   "reward": 119400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "罗珉",
+   "title": "独立董事",
+   "reward": 119400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "肖光辉",
+   "title": "董事长",
+   "reward": 833800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "贾秀英",
+   "title": "财务总监",
+   "reward": 683800.0,
+   "hold_vol": 456400.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "赵科星",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "黄晓波",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002480.SZ",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "龚勇",
+   "title": "职工代表监事",
+   "reward": 335200.0,
+   "hold_vol": 103700.0
+  }
+ ],
+ "688418.SH": [
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "吴闽华",
+   "title": "董事长,总经理",
+   "reward": 699200.0,
+   "hold_vol": 32147460.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "周春华",
+   "title": "副总经理,董事会秘书",
+   "reward": 608000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "姜坤",
+   "title": "董事,核心技术人员",
+   "reward": 842300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "孟庆晓",
+   "title": "董事,核心技术人员",
+   "reward": 806800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "张中华",
+   "title": "董事",
+   "reward": 794300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "张国新",
+   "title": "原独立董事",
+   "reward": 25000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "张广胜",
+   "title": "核心技术人员",
+   "reward": 958600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "徐展",
+   "title": "独立董事",
+   "reward": 35000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "杜旭峰",
+   "title": "核心技术人员,原副总经理",
+   "reward": 652100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "王明江",
+   "title": "独立董事",
+   "reward": 35000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "程翥",
+   "title": "职工代表董事",
+   "reward": 427000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "胡国庆",
+   "title": "原独立董事",
+   "reward": 25000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "薛梅芳",
+   "title": "原副总经理,原董事会秘书",
+   "reward": 587300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "薛胜利",
+   "title": "副总经理",
+   "reward": 714000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "赵华",
+   "title": "副总经理",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "黄福平",
+   "title": "独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20260424",
+   "end_date": "20251231",
+   "name": "黎民君",
+   "title": "财务总监",
+   "reward": 630100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "刘玲",
+   "title": "监事会主席",
+   "reward": 332200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "卫宣安",
+   "title": "监事",
+   "reward": 583800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "吴茂森",
+   "title": "职工代表监事",
+   "reward": 431000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "吴闽华",
+   "title": "董事长,总经理",
+   "reward": 685500.0,
+   "hold_vol": 32147460.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "周春华",
+   "title": "副总经理",
+   "reward": 617300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "姜坤",
+   "title": "董事,核心技术人员",
+   "reward": 857200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "孟庆晓",
+   "title": "董事,核心技术人员",
+   "reward": 743200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "张中华",
+   "title": "董事",
+   "reward": 808100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "张国新",
+   "title": "独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "张广胜",
+   "title": "核心技术人员",
+   "reward": 852000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "杜旭峰",
+   "title": "副总经理,核心技术人员",
+   "reward": 675700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "胡国庆",
+   "title": "独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "薛梅芳",
+   "title": "董事会秘书",
+   "reward": 536600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "薛胜利",
+   "title": "副总经理",
+   "reward": 662200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "黄福平",
+   "title": "独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "688418.SH",
+   "ann_date": "20250430",
+   "end_date": "20241231",
+   "name": "黎民君",
+   "title": "财务总监",
+   "reward": 593900.0,
+   "hold_vol": 400.0
+  }
+ ],
+ "300685.SZ": [
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "FRANK RON ZHENG",
+   "title": "董事,高级副总经理",
+   "reward": 2103200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "LI-MOU ZHENG",
+   "title": "董事长",
+   "reward": 665200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "吴乔",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "杨爽",
+   "title": "副总经理",
+   "reward": 1388600.0,
+   "hold_vol": 44650.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "沈哲",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "王弘宇",
+   "title": "副总经理",
+   "reward": 1281500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "王恩华",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "罗捷敏",
+   "title": "董事,总经理",
+   "reward": 1651200.0,
+   "hold_vol": 151875.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "董正伟",
+   "title": "副总经理",
+   "reward": 960300.0,
+   "hold_vol": 12250.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "郑惠彬",
+   "title": "副总经理",
+   "reward": 605200.0,
+   "hold_vol": 151875.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "阮力",
+   "title": "董事,高级副总经理",
+   "reward": 912400.0,
+   "hold_vol": 153075.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20260416",
+   "end_date": "20251231",
+   "name": "陈英",
+   "title": "财务总监,董事会秘书",
+   "reward": 919900.0,
+   "hold_vol": 151875.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "FRANK RON ZHENG",
+   "title": "董事,高级副总经理",
+   "reward": 1589900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "LI-MOU ZHENG",
+   "title": "董事长",
+   "reward": 615200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "吴乔",
+   "title": "独立董事",
+   "reward": 45800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "杜琦",
+   "title": "监事",
+   "reward": 10000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "沈哲",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "王弘宇",
+   "title": "原监事会主席,副总经理",
+   "reward": 1110200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "王恩华",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "罗捷敏",
+   "title": "董事,总经理",
+   "reward": 1170700.0,
+   "hold_vol": 151875.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "罗菲",
+   "title": "原董事,原副总经理",
+   "reward": 633100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "苏文金",
+   "title": "原独立董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "郑惠彬",
+   "title": "副总经理",
+   "reward": 605200.0,
+   "hold_vol": 151875.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "阮力",
+   "title": "董事,高级副总经理",
+   "reward": 904200.0,
+   "hold_vol": 153075.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "陈英",
+   "title": "财务总监,董事会秘书",
+   "reward": 944600.0,
+   "hold_vol": 151875.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "黄婕",
+   "title": "监事",
+   "reward": 225200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "300685.SZ",
+   "ann_date": "20250422",
+   "end_date": "20241231",
+   "name": "黄欣",
+   "title": "原董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  }
+ ],
+ "600998.SH": [
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "全铭",
+   "title": "副总经理",
+   "reward": 541200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "刘义常",
+   "title": "副董事长,业务总裁",
+   "reward": 453000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "刘兆年",
+   "title": "副董事长",
+   "reward": 822500.0,
+   "hold_vol": 60422905.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "刘志峰",
+   "title": "副总经理,董事会秘书",
+   "reward": 412200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "刘登攀",
+   "title": "副董事长",
+   "reward": 1934500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "刘长云",
+   "title": "董事长",
+   "reward": 1211000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "吴志龙",
+   "title": "职工董事",
+   "reward": 143100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "吴雪松",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "夏晓益",
+   "title": "财务总监",
+   "reward": 340800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "张青松",
+   "title": "副总经理",
+   "reward": 437000.0,
+   "hold_vol": 13455.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "曾湘泉",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "杨聂",
+   "title": "副总经理",
+   "reward": 405700.0,
+   "hold_vol": 255639.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "杨菊美",
+   "title": "副总经理",
+   "reward": 434000.0,
+   "hold_vol": 678117.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "汤谷良",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "王启兵",
+   "title": "副总经理",
+   "reward": 1435800.0,
+   "hold_vol": 281472.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "王琦",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "王瑛",
+   "title": "独立董事",
+   "reward": 121200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "艾华",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 5382.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "苏熙凌",
+   "title": "副总经理",
+   "reward": 482200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "许志君",
+   "title": "副总经理",
+   "reward": 1460000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "贺威",
+   "title": "董事,副总裁",
+   "reward": 603700.0,
+   "hold_vol": 269094.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "郭磊",
+   "title": "副总经理",
+   "reward": 410800.0,
+   "hold_vol": 888010.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "陆银娣",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "陈卫俊",
+   "title": "副总经理",
+   "reward": 2750700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "龚翼华",
+   "title": "副董事长,总经理",
+   "reward": 774900.0,
+   "hold_vol": 3616315.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "全铭",
+   "title": "副总经理",
+   "reward": 505200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "刘义常",
+   "title": "副董事长,业务总裁",
+   "reward": 92200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "刘兆年",
+   "title": "副董事长",
+   "reward": 823600.0,
+   "hold_vol": 60422905.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "刘庆鑫",
+   "title": "职工代表监事",
+   "reward": 170200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "刘志峰",
+   "title": "副总经理,董事会秘书",
+   "reward": 391900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "刘登攀",
+   "title": "副董事长",
+   "reward": 1556900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "刘长云",
+   "title": "董事长",
+   "reward": 1211000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "吴雪松",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "夏晓益",
+   "title": "财务总监",
+   "reward": 306700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "张青松",
+   "title": "副总经理",
+   "reward": 420900.0,
+   "hold_vol": 13455.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "曾湘泉",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "杨聂",
+   "title": "副总经理",
+   "reward": 1938200.0,
+   "hold_vol": 255639.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "杨菊美",
+   "title": "副总经理",
+   "reward": 427900.0,
+   "hold_vol": 678117.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "林新扬",
+   "title": "股东代表监事",
+   "reward": 47600.0,
+   "hold_vol": 888010.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "柳景汉",
+   "title": "原副总经理",
+   "reward": 697400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "汤谷良",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "王启兵",
+   "title": "副总经理",
+   "reward": 1577000.0,
+   "hold_vol": 281472.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "王琦",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "肖亚",
+   "title": "原职工代表监事",
+   "reward": 83700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "艾华",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 5382.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "许应政",
+   "title": "监事会主席",
+   "reward": 643500.0,
+   "hold_vol": 84765.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "许志君",
+   "title": "副总经理",
+   "reward": 1419900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "贺威",
+   "title": "董事,副总裁,原总经理",
+   "reward": 603100.0,
+   "hold_vol": 269094.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "郭磊",
+   "title": "副总经理",
+   "reward": 407200.0,
+   "hold_vol": 888010.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "陆银娣",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "陈卫俊",
+   "title": "副总经理",
+   "reward": 2710900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600998.SH",
+   "ann_date": "20250429",
+   "end_date": "20241231",
+   "name": "龚翼华",
+   "title": "副董事长,总经理",
+   "reward": 820600.0,
+   "hold_vol": 3616315.0
+  }
+ ],
+ "001389.SZ": [
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "刘锦婵",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 22386006.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "彭镜辉",
+   "title": "职工董事",
+   "reward": 2799600.0,
+   "hold_vol": 578738.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "施凌",
+   "title": "独立董事",
+   "reward": 71400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "曾杨清",
+   "title": "董事会秘书,副总经理",
+   "reward": 2518000.0,
+   "hold_vol": 3034035.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "曾红",
+   "title": "董事,总经理",
+   "reward": 4589900.0,
+   "hold_vol": 28832444.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "李莹",
+   "title": "独立董事",
+   "reward": 104200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "王峻",
+   "title": "副总经理",
+   "reward": 2227700.0,
+   "hold_vol": 8649820.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "管术春",
+   "title": "原副总经理",
+   "reward": 609800.0,
+   "hold_vol": 7234227.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "肖红星",
+   "title": "董事长",
+   "reward": 0.0,
+   "hold_vol": 176738257.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "贺剑青",
+   "title": "财务总监",
+   "reward": 2317100.0,
+   "hold_vol": 810233.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "陈丽梅",
+   "title": "独立董事",
+   "reward": 104200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "陈炯辉",
+   "title": "原副总经理",
+   "reward": 507800.0,
+   "hold_vol": 1826787.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20260328",
+   "end_date": "20251231",
+   "name": "黎钦源",
+   "title": "副总经理",
+   "reward": 4015700.0,
+   "hold_vol": 5766835.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "刘锦婵",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 22386006.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "周智勇",
+   "title": "监事会主席,监事",
+   "reward": 1107100.0,
+   "hold_vol": 347243.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "彭镜辉",
+   "title": "监事",
+   "reward": 1982400.0,
+   "hold_vol": 578738.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "曾杨清",
+   "title": "董事会秘书,副总经理",
+   "reward": 1956300.0,
+   "hold_vol": 3034035.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "曾红",
+   "title": "董事,总经理",
+   "reward": 3985700.0,
+   "hold_vol": 28832444.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "李莹",
+   "title": "独立董事",
+   "reward": 95200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "王峻",
+   "title": "副总经理",
+   "reward": 1954400.0,
+   "hold_vol": 8649820.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "管术春",
+   "title": "副总经理",
+   "reward": 1963400.0,
+   "hold_vol": 7234227.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "肖红星",
+   "title": "董事长",
+   "reward": 0.0,
+   "hold_vol": 176738257.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "薛婧",
+   "title": "监事",
+   "reward": 426200.0,
+   "hold_vol": 98964.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "贺剑青",
+   "title": "财务总监",
+   "reward": 1935100.0,
+   "hold_vol": 810233.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "陈丽梅",
+   "title": "独立董事",
+   "reward": 95200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "陈炯辉",
+   "title": "副总经理",
+   "reward": 1446700.0,
+   "hold_vol": 1826787.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "黄金广",
+   "title": "原监事会主席",
+   "reward": 410100.0,
+   "hold_vol": 1186413.0
+  },
+  {
+   "ts_code": "001389.SZ",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "黎钦源",
+   "title": "副总经理",
+   "reward": 2875200.0,
+   "hold_vol": 5766835.0
+  }
+ ],
+ "600141.SH": [
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "俞少俊",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "刘畅",
+   "title": "副总经理",
+   "reward": 1834300.0,
+   "hold_vol": 129500.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "崔大桥",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "张桥",
+   "title": "副总经理",
+   "reward": 1347300.0,
+   "hold_vol": 74000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "彭亚利",
+   "title": "副总经理",
+   "reward": 1838000.0,
+   "hold_vol": 50000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "曹先军",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "李国璋",
+   "title": "董事长",
+   "reward": 950000.0,
+   "hold_vol": 250071.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "李美辉",
+   "title": "职工董事",
+   "reward": 1062400.0,
+   "hold_vol": 85000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "杨光亮",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "杨坤明",
+   "title": "副总经理",
+   "reward": 1484700.0,
+   "hold_vol": 97000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "杨铁军",
+   "title": "副总经理",
+   "reward": 1715000.0,
+   "hold_vol": 144500.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "王杰",
+   "title": "董事,常务副总经理",
+   "reward": 2236300.0,
+   "hold_vol": 160000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "王琛",
+   "title": "董事,财务负责人,副总经理",
+   "reward": 1465300.0,
+   "hold_vol": 200000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "程亚利",
+   "title": "总经理,董事",
+   "reward": 1245400.0,
+   "hold_vol": 117500.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "胡国荣",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "胡坤裔",
+   "title": "副董事长",
+   "reward": 1449100.0,
+   "hold_vol": 137160.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "蒋春黔",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 8000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "薛冬峰",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "袁兵",
+   "title": "原董事",
+   "reward": 60000.0,
+   "hold_vol": 151300.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "赵勇",
+   "title": "副总经理",
+   "reward": 2187600.0,
+   "hold_vol": 117500.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "路明清",
+   "title": "原副总经理",
+   "reward": 1043900.0,
+   "hold_vol": 116000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20260404",
+   "end_date": "20251231",
+   "name": "鲍伯颖",
+   "title": "董事会秘书",
+   "reward": 1557100.0,
+   "hold_vol": 90500.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "俞少俊",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "刘晓晖",
+   "title": "监事",
+   "reward": 264700.0,
+   "hold_vol": 20000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "刘畅",
+   "title": "副总经理",
+   "reward": 1222700.0,
+   "hold_vol": 126500.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "刘鑫",
+   "title": "职工监事",
+   "reward": 1121000.0,
+   "hold_vol": 30000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "周相琼",
+   "title": "原监事",
+   "reward": 429700.0,
+   "hold_vol": 50000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "崔大桥",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "张小燕",
+   "title": "原独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "张桥",
+   "title": "副总经理",
+   "reward": 1669600.0,
+   "hold_vol": 74000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "彭亚利",
+   "title": "副总经理",
+   "reward": 1657000.0,
+   "hold_vol": 50000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "曹先军",
+   "title": "独立董事",
+   "reward": 30000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "李国璋",
+   "title": "董事长",
+   "reward": 950000.0,
+   "hold_vol": 250071.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "李美辉",
+   "title": "监事",
+   "reward": 1003800.0,
+   "hold_vol": 85000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "李钟华",
+   "title": "原独立董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "杨光亮",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "杨坤明",
+   "title": "副总经理",
+   "reward": 1010300.0,
+   "hold_vol": 97000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "杨铁军",
+   "title": "副总经理",
+   "reward": 1387500.0,
+   "hold_vol": 144500.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "王杰",
+   "title": "董事,常务副总经理",
+   "reward": 1206400.0,
+   "hold_vol": 140000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "王琛",
+   "title": "董事,副总经理,财务负责人",
+   "reward": 1262700.0,
+   "hold_vol": 200000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "王相森",
+   "title": "原监事会主席",
+   "reward": 900500.0,
+   "hold_vol": 177660.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "程亚利",
+   "title": "董事,总经理",
+   "reward": 1257000.0,
+   "hold_vol": 117500.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "胡国荣",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "胡坤裔",
+   "title": "副董事长",
+   "reward": 1225700.0,
+   "hold_vol": 137160.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "舒龙",
+   "title": "监事会主席,原董事,原总经理",
+   "reward": 1174400.0,
+   "hold_vol": 172160.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "蒋春黔",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "薛冬峰",
+   "title": "独立董事",
+   "reward": 180000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "袁兵",
+   "title": "董事",
+   "reward": 60000.0,
+   "hold_vol": 151300.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "谢娟",
+   "title": "原职工监事",
+   "reward": 283400.0,
+   "hold_vol": 58200.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "赵勇",
+   "title": "副总经理",
+   "reward": 1797100.0,
+   "hold_vol": 117500.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "路明清",
+   "title": "副总经理",
+   "reward": 1284000.0,
+   "hold_vol": 116000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "郑磊",
+   "title": "职工监事",
+   "reward": 1379800.0,
+   "hold_vol": 40000.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "鲍伯颖",
+   "title": "董事会秘书",
+   "reward": 1028500.0,
+   "hold_vol": 90500.0
+  },
+  {
+   "ts_code": "600141.SH",
+   "ann_date": "20250401",
+   "end_date": "20241231",
+   "name": "龚军",
+   "title": "原监事",
+   "reward": 10000.0,
+   "hold_vol": 75000.0
+  }
+ ],
+ "002296.SZ": [
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "侯菊艳",
+   "title": "原财务总监",
+   "reward": 296100.0,
+   "hold_vol": 350289.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "周建民",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "张奕敏",
+   "title": "副总经理",
+   "reward": 984200.0,
+   "hold_vol": 883657.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "李海鹰",
+   "title": "董事长",
+   "reward": 1814600.0,
+   "hold_vol": 30969300.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "杜旭升",
+   "title": "副总经理,董事会秘书",
+   "reward": 984200.0,
+   "hold_vol": 1042380.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "王涛",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "窦永贺",
+   "title": "财务总监",
+   "reward": 248100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "谢春生",
+   "title": "董事,总经理",
+   "reward": 2064600.0,
+   "hold_vol": 22168000.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "谭宪才",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "郭治国",
+   "title": "副总经理",
+   "reward": 984200.0,
+   "hold_vol": 434626.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "黄继军",
+   "title": "职工董事",
+   "reward": 71000.0,
+   "hold_vol": 357967.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "侯菊艳",
+   "title": "财务总监",
+   "reward": 682200.0,
+   "hold_vol": 350289.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "周建民",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "张奕敏",
+   "title": "副总经理",
+   "reward": 984200.0,
+   "hold_vol": 883657.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "李海鹰",
+   "title": "董事长",
+   "reward": 1814600.0,
+   "hold_vol": 30969300.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "杜旭升",
+   "title": "副总经理,董事会秘书",
+   "reward": 984200.0,
+   "hold_vol": 1042380.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "杨超",
+   "title": "职工监事",
+   "reward": 111200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "王涛",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "谢春生",
+   "title": "董事,总经理",
+   "reward": 2064600.0,
+   "hold_vol": 22168000.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "谭宪才",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "郝恩元",
+   "title": "职工监事",
+   "reward": 123900.0,
+   "hold_vol": 13749.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "郭治国",
+   "title": "副总经理",
+   "reward": 984200.0,
+   "hold_vol": 434626.0
+  },
+  {
+   "ts_code": "002296.SZ",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "黄继军",
+   "title": "监事会主席",
+   "reward": 142000.0,
+   "hold_vol": 357967.0
+  }
+ ],
+ "603768.SH": [
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "何旭光",
+   "title": "董事",
+   "reward": 642600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "余大权",
+   "title": "董事,人事总监",
+   "reward": 155100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "刘堃",
+   "title": "董事,副总经理",
+   "reward": 577400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "吴应宏",
+   "title": "董事长,总经理",
+   "reward": 775200.0,
+   "hold_vol": 64999500.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "宋方明",
+   "title": "董事,副总经理,董事会秘书",
+   "reward": 595200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "王斌",
+   "title": "财务总监",
+   "reward": 380500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "白先旭",
+   "title": "独立董事",
+   "reward": 80000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "程义",
+   "title": "原监事会主席,职工代表董事",
+   "reward": 188500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "许敏",
+   "title": "独立董事",
+   "reward": 80000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20260428",
+   "end_date": "20251231",
+   "name": "陈高才",
+   "title": "独立董事",
+   "reward": 80000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "何旭光",
+   "title": "董事",
+   "reward": 624600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "刘堃",
+   "title": "董事,副总经理",
+   "reward": 553800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "吴卫华",
+   "title": "监事",
+   "reward": 469900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "吴应宏",
+   "title": "董事长,总经理",
+   "reward": 707300.0,
+   "hold_vol": 64999500.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "宋方明",
+   "title": "董事,副总经理,董事会秘书",
+   "reward": 507600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "张旭峰",
+   "title": "职工代表监事",
+   "reward": 254200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "朱慧娟",
+   "title": "原董事",
+   "reward": 0.0,
+   "hold_vol": 23740500.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "王斌",
+   "title": "财务总监",
+   "reward": 94200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "白先旭",
+   "title": "独立董事",
+   "reward": 80000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "程义",
+   "title": "监事会主席",
+   "reward": 446100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "许敏",
+   "title": "独立董事",
+   "reward": 80000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "603768.SH",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "陈高才",
+   "title": "独立董事",
+   "reward": 80000.0,
+   "hold_vol": 0.0
+  }
+ ],
+ "600641.SH": [
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "万华林",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "于洵",
+   "title": "独立董事",
+   "reward": 25000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "余舒婷",
+   "title": "副董事长,副总裁",
+   "reward": 2258800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "刘荣明",
+   "title": "原董事",
+   "reward": 48400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "叶蒙蒙",
+   "title": "首席财务官",
+   "reward": 1544800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "周伟芳",
+   "title": "副总裁,董事会秘书",
+   "reward": 1958700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "夏雪",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "孟德庆",
+   "title": "原董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "徐磊",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "朱世会",
+   "title": "董事长,总裁",
+   "reward": 2308900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "朱刘",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "朱旭东",
+   "title": "原董事长",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "李勇军",
+   "title": "原董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "江加如",
+   "title": "原副总裁",
+   "reward": 25400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "王国平",
+   "title": "原独立董事",
+   "reward": 95000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "程光",
+   "title": "原副董事长",
+   "reward": NaN,
+   "hold_vol": 298080.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "罗海龙",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20260410",
+   "end_date": "20251231",
+   "name": "邬德兴",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "万华林",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "余舒婷",
+   "title": "副董事长,副总裁",
+   "reward": 96600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "刘荣明",
+   "title": "原董事",
+   "reward": 2538900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "叶蒙蒙",
+   "title": "首席财务官",
+   "reward": 58400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "吴祯旎",
+   "title": "监事",
+   "reward": 768100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "周伟芳",
+   "title": "副总裁,董事会秘书",
+   "reward": 1520400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "夏雪",
+   "title": "独立董事",
+   "reward": 120000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "孟德庆",
+   "title": "原董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "张国良",
+   "title": "监事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "徐江山",
+   "title": "监事",
+   "reward": 778500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "徐磊",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "朱世会",
+   "title": "董事长,总裁",
+   "reward": 281600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "朱刘",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "朱旭东",
+   "title": "原董事长",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "李勇军",
+   "title": "原董事,原总裁",
+   "reward": 2240000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "段雪侠",
+   "title": "原监事会主席",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "江加如",
+   "title": "原副总裁",
+   "reward": 1419600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "王侃",
+   "title": "监事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "王国平",
+   "title": "独立董事",
+   "reward": 61500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "王晓波",
+   "title": "原董事,原总裁",
+   "reward": 737700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "程光",
+   "title": "原副董事长",
+   "reward": NaN,
+   "hold_vol": 298080.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "罗海龙",
+   "title": "董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "邬德兴",
+   "title": "董事,原监事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "邵伟宏",
+   "title": "原首席财务官",
+   "reward": 1633400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "邵咏炜",
+   "title": "原监事",
+   "reward": 147600.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "金维召",
+   "title": "监事会主席",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "陈孟钊",
+   "title": "原监事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600641.SH",
+   "ann_date": "20250426",
+   "end_date": "20241231",
+   "name": "陈捷",
+   "title": "原独立董事",
+   "reward": 58300.0,
+   "hold_vol": 0.0
+  }
+ ],
+ "301158.SZ": [
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "于剑",
+   "title": "原副总经理",
+   "reward": 337400.0,
+   "hold_vol": 50000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "于广海",
+   "title": "总工程师",
+   "reward": 484300.0,
+   "hold_vol": 60000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "任鸿源",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "李志勇",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "李战军",
+   "title": "副总经理",
+   "reward": 556800.0,
+   "hold_vol": 350000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "柳喜军",
+   "title": "独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "王海斌",
+   "title": "副总经理,董事会秘书",
+   "reward": 337200.0,
+   "hold_vol": 1310280.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "王继平",
+   "title": "董事,副总经理",
+   "reward": 536900.0,
+   "hold_vol": 620190.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "程贵华",
+   "title": "董事长,总经理",
+   "reward": 553700.0,
+   "hold_vol": 2040000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "范忠廷",
+   "title": "独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "谢光义",
+   "title": "独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "贾延军",
+   "title": "副总经理",
+   "reward": 494900.0,
+   "hold_vol": 216000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "路伟",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20260417",
+   "end_date": "20251231",
+   "name": "陈振",
+   "title": "董事,财务总监",
+   "reward": 447500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "于剑",
+   "title": "副总经理",
+   "reward": 273500.0,
+   "hold_vol": 50000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "于广海",
+   "title": "副总经理,总工程师",
+   "reward": 383300.0,
+   "hold_vol": 60000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "任鸿源",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "吴艳",
+   "title": "监事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "朱乐",
+   "title": "职工代表监事",
+   "reward": 167200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "李志勇",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "李战军",
+   "title": "副总经理",
+   "reward": 458800.0,
+   "hold_vol": 350000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "李涛",
+   "title": "监事会主席",
+   "reward": 222700.0,
+   "hold_vol": 60000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "柳喜军",
+   "title": "独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "王海斌",
+   "title": "副总经理,董事会秘书",
+   "reward": 307100.0,
+   "hold_vol": 1637250.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "王继平",
+   "title": "董事,副总经理",
+   "reward": 415100.0,
+   "hold_vol": 720190.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "程贵华",
+   "title": "董事长,总经理",
+   "reward": 445600.0,
+   "hold_vol": 2040000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "范忠廷",
+   "title": "独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "谢光义",
+   "title": "独立董事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "贾延军",
+   "title": "副总经理",
+   "reward": 448500.0,
+   "hold_vol": 216000.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "路伟",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "301158.SZ",
+   "ann_date": "20250410",
+   "end_date": "20241231",
+   "name": "陈振",
+   "title": "董事,财务总监",
+   "reward": 332300.0,
+   "hold_vol": 0.0
+  }
+ ],
+ "002146.SZ": [
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "任勇",
+   "title": "原监事",
+   "reward": 320000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "伍小峰",
+   "title": "原副总裁,原董事,原董事会秘书",
+   "reward": 1240000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "刘晓文",
+   "title": "董事",
+   "reward": 50000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "吴秋云",
+   "title": "董事,总裁",
+   "reward": 1620000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "尚中卫",
+   "title": "副总裁",
+   "reward": 1450000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "景中华",
+   "title": "原副总裁",
+   "reward": 900000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王冰",
+   "title": "副总裁",
+   "reward": 1440000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王力",
+   "title": "独立董事",
+   "reward": 250000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王强",
+   "title": "原监事会主席",
+   "reward": 550000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "王晓辉",
+   "title": "副总裁",
+   "reward": 140000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "程玉民",
+   "title": "独立董事",
+   "reward": 250000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "穆旸",
+   "title": "董事,副总裁,财务总监",
+   "reward": 1100000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "耿建明",
+   "title": "董事长",
+   "reward": 590000.0,
+   "hold_vol": 560000000.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "邹家立",
+   "title": "副董事长",
+   "reward": 1130000.0,
+   "hold_vol": 22190000.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "金文辉",
+   "title": "独立董事",
+   "reward": 250000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "陈亮",
+   "title": "副总裁",
+   "reward": 1500000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "隆小康",
+   "title": "董事,董事会秘书",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20260429",
+   "end_date": "20251231",
+   "name": "颜玉珍",
+   "title": "原监事",
+   "reward": 370000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "任勇",
+   "title": "监事",
+   "reward": 60000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "伍小峰",
+   "title": "董事,副总裁,董事会秘书",
+   "reward": 1160000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "刘山",
+   "title": "原监事会主席",
+   "reward": 1120000.0,
+   "hold_vol": 15000000.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "刘晓文",
+   "title": "董事",
+   "reward": 50000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "刘鑫",
+   "title": "原副总裁",
+   "reward": 1080000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "吴秋云",
+   "title": "董事,总裁",
+   "reward": 1690000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "尚中卫",
+   "title": "副总裁",
+   "reward": 1560000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "彭国红",
+   "title": "原监事",
+   "reward": 390000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "景中华",
+   "title": "副总裁",
+   "reward": 1220000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "王冰",
+   "title": "副总裁",
+   "reward": 1440000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "王力",
+   "title": "独立董事",
+   "reward": 250000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "王强",
+   "title": "监事会主席",
+   "reward": 770000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "程玉民",
+   "title": "独立董事",
+   "reward": 250000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "穆旸",
+   "title": "财务总监",
+   "reward": 110000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "耿建明",
+   "title": "董事长",
+   "reward": 590000.0,
+   "hold_vol": 560000000.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "邹家立",
+   "title": "副董事长",
+   "reward": 1170000.0,
+   "hold_vol": 22190000.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "金文辉",
+   "title": "独立董事",
+   "reward": 250000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "陈亮",
+   "title": "董事,副总裁",
+   "reward": 350000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002146.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "颜玉珍",
+   "title": "监事",
+   "reward": 100000.0,
+   "hold_vol": 0.0
+  }
+ ],
+ "000426.SZ": [
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "吉兴业",
+   "title": "董事长",
+   "reward": 1384400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "吉祥",
+   "title": "副董事长",
+   "reward": 1156600.0,
+   "hold_vol": 225000.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "周显军",
+   "title": "独立董事",
+   "reward": 170000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "孙凯",
+   "title": "党委委员,董事,副总裁,董事会秘书",
+   "reward": 795700.0,
+   "hold_vol": 200000.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "常战军",
+   "title": "党委书记,副总裁",
+   "reward": 728300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "张世潮",
+   "title": "独立董事",
+   "reward": 170000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "张国新",
+   "title": "董事,副总裁",
+   "reward": 759400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "张斌",
+   "title": "副总裁",
+   "reward": 729800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "张旭东",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "张树成",
+   "title": "董事,总裁",
+   "reward": 1193500.0,
+   "hold_vol": 108700.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "李伍波",
+   "title": "原独立董事",
+   "reward": 170000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "李金城",
+   "title": "党委委员,副总裁",
+   "reward": 1014100.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "程崇刚",
+   "title": "独立董事",
+   "reward": 6900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "董永",
+   "title": "董事,常务副总裁,财务总监",
+   "reward": 840300.0,
+   "hold_vol": 40000.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "韩瑞霞",
+   "title": "独立董事",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "刘承革",
+   "title": "监事会主席",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "吉兴业",
+   "title": "董事长",
+   "reward": 1700000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "吉祥",
+   "title": "副董事长",
+   "reward": 1349900.0,
+   "hold_vol": 225000.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "周显军",
+   "title": "独立董事",
+   "reward": 170000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "孙凯",
+   "title": "党委委员,董事,副总经理,董事会秘书",
+   "reward": 859500.0,
+   "hold_vol": 200000.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "常战军",
+   "title": "党委书记,副总经理",
+   "reward": 1021900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "张世潮",
+   "title": "独立董事",
+   "reward": 170000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "张国新",
+   "title": "副总经理",
+   "reward": 868700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "张斌",
+   "title": "副总经理",
+   "reward": 799900.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "张旭东",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "张树成",
+   "title": "董事,总经理",
+   "reward": 1374300.0,
+   "hold_vol": 108700.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "张艳江",
+   "title": "监事",
+   "reward": 397300.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "李伍波",
+   "title": "独立董事",
+   "reward": 170000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "李金城",
+   "title": "党委委员,副总经理",
+   "reward": 1075400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "董永",
+   "title": "董事,常务副总经理,财务总监",
+   "reward": 958000.0,
+   "hold_vol": 40000.0
+  },
+  {
+   "ts_code": "000426.SZ",
+   "ann_date": "20250428",
+   "end_date": "20241231",
+   "name": "龙晶",
+   "title": "监事",
+   "reward": 360400.0,
+   "hold_vol": 0.0
+  }
+ ],
+ "600382.SH": [
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "凌炜",
+   "title": "财务总监",
+   "reward": 303700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "刘庆伟",
+   "title": "独立董事",
+   "reward": 150000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "刘文清",
+   "title": "副总裁,董事",
+   "reward": 1107800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "周荣",
+   "title": "独立董事",
+   "reward": 150000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "张媚",
+   "title": "董事会秘书",
+   "reward": 673700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "朱海涛",
+   "title": "董事",
+   "reward": 612200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "陈亦文",
+   "title": "董事",
+   "reward": 28800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "饶健华",
+   "title": "原董事,原财务总监",
+   "reward": 672000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "黄丙娣",
+   "title": "董事长,总裁",
+   "reward": 2571400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20260422",
+   "end_date": "20251231",
+   "name": "黄桂莲",
+   "title": "独立董事",
+   "reward": 150000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "刘庆伟",
+   "title": "独立董事",
+   "reward": 140000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "刘文清",
+   "title": "董事,副总裁",
+   "reward": NaN,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "周荣",
+   "title": "独立董事",
+   "reward": 140000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "张媚",
+   "title": "原职工代表监事,董事会秘书",
+   "reward": 431400.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "曾庆海",
+   "title": "职工代表监事",
+   "reward": 346700.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "朱海涛",
+   "title": "董事",
+   "reward": 535000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "袁雯",
+   "title": "监事会主席",
+   "reward": 375000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "陈达才",
+   "title": "监事",
+   "reward": 403500.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "饶健华",
+   "title": "董事,财务总监",
+   "reward": 640000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "黄丙娣",
+   "title": "董事长,总裁",
+   "reward": 1800000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "600382.SH",
+   "ann_date": "20250425",
+   "end_date": "20241231",
+   "name": "黄桂莲",
+   "title": "独立董事",
+   "reward": 140000.0,
+   "hold_vol": 0.0
+  }
+ ],
+ "002024.SZ": [
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "任峻",
+   "title": "董事长,总裁",
+   "reward": 1968400.0,
+   "hold_vol": 5026197.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "侯恩龙",
+   "title": "高级副总裁",
+   "reward": 1845100.0,
+   "hold_vol": 361000.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "关成华",
+   "title": "董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "冯永强",
+   "title": "独立董事",
+   "reward": 200800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "卞杨雨",
+   "title": "区域业务线总裁",
+   "reward": 812600.0,
+   "hold_vol": 142000.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "周斌",
+   "title": "财务负责人",
+   "reward": 1516300.0,
+   "hold_vol": 257000.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "姚凯",
+   "title": "物流服务集团总裁",
+   "reward": 1182200.0,
+   "hold_vol": 251600.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "孙波",
+   "title": "区域业务线总裁",
+   "reward": 1128500.0,
+   "hold_vol": 203900.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "张奎",
+   "title": "产品事业部总裁",
+   "reward": 730700.0,
+   "hold_vol": 179100.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "张康阳",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "徐仲",
+   "title": "产品事业部总裁",
+   "reward": 1246400.0,
+   "hold_vol": 261900.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "徐开闯",
+   "title": "渠道业务线总裁",
+   "reward": 971400.0,
+   "hold_vol": 233000.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "徐海澜",
+   "title": "区域业务线总裁",
+   "reward": 1198300.0,
+   "hold_vol": 266300.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "戴冯军",
+   "title": "区域业务线总裁",
+   "reward": 1118300.0,
+   "hold_vol": 226600.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "曹志坚",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "杨波",
+   "title": "独立董事",
+   "reward": 200800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "柳赛",
+   "title": "产品事业部总裁",
+   "reward": 1347000.0,
+   "hold_vol": 221600.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "汪令军",
+   "title": "产品事业部总裁",
+   "reward": 1247600.0,
+   "hold_vol": 198500.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "沈沉",
+   "title": "原董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "王振伟",
+   "title": "渠道业务线总裁",
+   "reward": 625700.0,
+   "hold_vol": 147900.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "王葵",
+   "title": "渠道业务线总裁",
+   "reward": 689800.0,
+   "hold_vol": 81600.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "范怀伟",
+   "title": "渠道业务线总裁",
+   "reward": 891800.0,
+   "hold_vol": 199900.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "贾红刚",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "郝嘉",
+   "title": "区域业务线总裁",
+   "reward": 1214600.0,
+   "hold_vol": 260800.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "陆耀",
+   "title": "副总裁",
+   "reward": 1849500.0,
+   "hold_vol": 301600.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "陈志斌",
+   "title": "独立董事",
+   "reward": 200800.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20260331",
+   "end_date": "20251231",
+   "name": "黄巍",
+   "title": "董事会秘书",
+   "reward": 870200.0,
+   "hold_vol": 205700.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "任峻",
+   "title": "董事长,总裁",
+   "reward": 1742100.0,
+   "hold_vol": 5026197.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "侯恩龙",
+   "title": "高级副总裁",
+   "reward": 1628200.0,
+   "hold_vol": 361000.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "关成华",
+   "title": "董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "冯永强",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "卞杨雨",
+   "title": "区域业务线总裁",
+   "reward": 632800.0,
+   "hold_vol": 142000.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "周斌",
+   "title": "财务负责人",
+   "reward": 1301700.0,
+   "hold_vol": 257000.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "姚凯",
+   "title": "物流服务集团总裁",
+   "reward": 1002000.0,
+   "hold_vol": 251600.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "孙为民",
+   "title": "监事会主席",
+   "reward": 0.0,
+   "hold_vol": 4603003.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "孙波",
+   "title": "区域业务线总裁",
+   "reward": 860400.0,
+   "hold_vol": 203900.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "张奎",
+   "title": "产品事业部总裁",
+   "reward": 689300.0,
+   "hold_vol": 179100.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "张康阳",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "徐仲",
+   "title": "产品事业部总裁",
+   "reward": 992700.0,
+   "hold_vol": 261900.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "徐开闯",
+   "title": "渠道业务线总裁",
+   "reward": 880300.0,
+   "hold_vol": 233000.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "徐海澜",
+   "title": "区域业务线总裁",
+   "reward": 937400.0,
+   "hold_vol": 266300.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "戴冯军",
+   "title": "区域业务线总裁",
+   "reward": 991800.0,
+   "hold_vol": 226600.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "曹志坚",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "杨波",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "柳赛",
+   "title": "产品事业部总裁",
+   "reward": 868700.0,
+   "hold_vol": 221600.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "汪令军",
+   "title": "产品事业部总裁",
+   "reward": 851600.0,
+   "hold_vol": 198500.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "汪晓玲",
+   "title": "职工代表监事",
+   "reward": 626200.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "沈沉",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "王振伟",
+   "title": "渠道业务线总裁",
+   "reward": 563600.0,
+   "hold_vol": 147900.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "王葵",
+   "title": "渠道业务线总裁",
+   "reward": 601200.0,
+   "hold_vol": 81600.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "胡晓",
+   "title": "原董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "胡苏迪",
+   "title": "监事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "范怀伟",
+   "title": "渠道业务线总裁",
+   "reward": 668900.0,
+   "hold_vol": 199900.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "贾红刚",
+   "title": "董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "郝嘉",
+   "title": "区域业务线总裁",
+   "reward": 1068000.0,
+   "hold_vol": 260800.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "陆俊",
+   "title": "原董事",
+   "reward": 0.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "陆耀",
+   "title": "副总裁",
+   "reward": 1561300.0,
+   "hold_vol": 301600.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "陈志斌",
+   "title": "独立董事",
+   "reward": 200000.0,
+   "hold_vol": 0.0
+  },
+  {
+   "ts_code": "002024.SZ",
+   "ann_date": "20250329",
+   "end_date": "20241231",
+   "name": "黄巍",
+   "title": "董事会秘书",
+   "reward": 709700.0,
+   "hold_vol": 205700.0
+  }
+ ]
+}

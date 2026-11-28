@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-10-29T18:27:51.090831+08:00",
+  "joint_passed": 184,
+  "source_count": 30,
+  "source_drift": [],
+  "original_task_counts": {
+    "total": 13,
+    "limited_completed": 8,
+    "waiting_business_evidence": 5,
+    "implementation_in_progress": 0
+  },
+  "task_ids": [
+    "CHART-01",
+    "CHART-02",
+    "REVIEW-01",
+    "REVIEW-02",
+    "PRICE-01",
+    "PRICE-02",
+    "PRICE-03",
+    "INPUT-01",
+    "REASSESS-01",
+    "CONF-01",
+    "DATA-01",
+    "HEALTH-01",
+    "DOC-01"
+  ],
+  "old_sign_off_history_preserved": true,
+  "current_metadata_pointers_match": true,
+  "archive_members": 343,
+  "archive_sha256": "52ba11fc92d6b71dea2932f2925a135288870d89694d237e85dbfda395d8b621",
+  "evidence": "/Users/chenyang/Downloads/demo/沧海巨浪/chzl_kg/系统进化/backups/2026-10-29-core-review-and-auxiliary/remaining/solo-compatibility/closure.json"
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261119",
+  "next_day": "20261120",
+  "generated_at": "2026-11-19T22:00:08+08:00",
+  "n_total": 23,
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "ts_code": "002771.SZ",
+      "name": "真视通",
+      "industry": "IT服务Ⅱ",
+      "theme": "高压快充、语音技术、电力物联网",
+      "limit_times": 3,
+      "fd_amount_yi": 2.08,
+      "pct_chg": 10.02,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 26.0,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=2.1亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "603030.SH",
+      "name": "全筑股份",
+      "industry": "装修装饰",
+      "theme": "韧性城市概念",
+      "limit_times": 3,
+      "fd_amount_yi": 0.96,
+      "pct_chg": 9.86,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 30.8,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=1.0亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "603324.SH",
+      "name": "盛剑科技",
+      "industry": "环保设备",
+      "theme": "华为海思概念股",
+      "limit_times": 3,
+      "fd_amount_yi": 0.28,
+      "pct_chg": 10.0,
+      "first_time": "93740",
+      "open_times": 0,
+      "float_mv_yi": 36.7,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.3亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "002420.SZ",
+      "name": "毅昌科技",
+      "industry": "综合Ⅱ",
+      "theme": "",
+      "limit_times": 1,
+      "fd_amount_yi": 4.96,
+      "pct_chg": 9.93,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 25.9,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=5.0亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停23只，筛出 4 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

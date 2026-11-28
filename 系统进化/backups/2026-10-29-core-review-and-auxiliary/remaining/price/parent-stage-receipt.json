@@ -1,0 +1,15 @@
+{
+  "verified_at": "2026-10-29T13:04:13.030030+08:00",
+  "new_and_geometry_cases_passed": 45,
+  "exit": 0,
+  "no_test_selection": true,
+  "pre_collection_guard_violations": 0,
+  "original_new_contract_test_functions_preserved": 9,
+  "geometry_assertions_unchanged": true,
+  "geometry_positive_fixture_change": "explicit trend_pullback_buy replaces former implicit default, assertions unchanged",
+  "old_rr_queue": "separate unique fixture writer active; earlier failures retained, not counted green",
+  "price02": "internal route/diagnostic fix verified; actual-day market-band proof and skill sync not accepted",
+  "price03": "separate planned-upper vs actual proposed-price RR verified under original 2-decimal convention; exchange tick calibration not certified",
+  "production_rerun": false,
+  "trading_authorization_changed": false
+}
