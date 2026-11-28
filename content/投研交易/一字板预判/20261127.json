@@ -1,0 +1,201 @@
+{
+  "schema_version": "yizi_predict_v1",
+  "data_date": "20261127",
+  "next_day": "20261130",
+  "generated_at": "2026-11-27T22:00:05+08:00",
+  "n_total": 417,
+  "n_candidates": 10,
+  "candidates": [
+    {
+      "ts_code": "002197.SZ",
+      "name": "证通电子",
+      "industry": "计算机设",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 2.97,
+      "pct_chg": 10.07,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 41.4,
+      "prob_yizi": 32.7,
+      "prob_up": 43.6,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=3.0亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002144.SZ",
+      "name": "宏达高科",
+      "industry": "纺织制造",
+      "theme": "",
+      "limit_times": 3,
+      "fd_amount_yi": 0.59,
+      "pct_chg": 10.01,
+      "first_time": "95142",
+      "open_times": 2,
+      "float_mv_yi": 15.1,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.6亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "600280.SH",
+      "name": "中央商场",
+      "industry": "一般零售",
+      "theme": "国潮消费",
+      "limit_times": 3,
+      "fd_amount_yi": 0.13,
+      "pct_chg": 10.0,
+      "first_time": "93001",
+      "open_times": 4,
+      "float_mv_yi": 38.5,
+      "prob_yizi": 28.3,
+      "prob_up": 38.0,
+      "rank": "重点关注",
+      "evidence": [
+        "连板=3 (一字率28%)",
+        "封单=0.1亿 (一字率12%)"
+      ]
+    },
+    {
+      "ts_code": "000158.SZ",
+      "name": "常山北明",
+      "industry": "IT服务Ⅱ",
+      "theme": "自主可控、智谱AI概念、华为鸿蒙",
+      "limit_times": 2,
+      "fd_amount_yi": 4.25,
+      "pct_chg": 10.01,
+      "first_time": "92500",
+      "open_times": 0,
+      "float_mv_yi": 242.9,
+      "prob_yizi": 19.0,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=4.2亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002261.SZ",
+      "name": "拓维信息",
+      "industry": "软件开发",
+      "theme": "托育服务、华为盘古、华为欧拉",
+      "limit_times": 2,
+      "fd_amount_yi": 2.48,
+      "pct_chg": 10.02,
+      "first_time": "93345",
+      "open_times": 2,
+      "float_mv_yi": 264.3,
+      "prob_yizi": 15.8,
+      "prob_up": 39.6,
+      "rank": "观察",
+      "evidence": [
+        "连板=2 (一字率13%)",
+        "封单=2.5亿 (一字率26%)"
+      ]
+    },
+    {
+      "ts_code": "002371.SZ",
+      "name": "北方华创",
+      "industry": "半导体",
+      "theme": "韬（τ）定律概念",
+      "limit_times": 1,
+      "fd_amount_yi": 4.35,
+      "pct_chg": 10.0,
+      "first_time": "130115",
+      "open_times": 0,
+      "float_mv_yi": 3835.9,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=4.3亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "002384.SZ",
+      "name": "东山精密",
+      "industry": "元件",
+      "theme": "沪深300样本股、折叠屏概念、同花顺果指数",
+      "limit_times": 1,
+      "fd_amount_yi": 6.01,
+      "pct_chg": 10.0,
+      "first_time": "130227",
+      "open_times": 1,
+      "float_mv_yi": 1105.9,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=6.0亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "600584.SH",
+      "name": "长电科技",
+      "industry": "半导体",
+      "theme": "韬（τ）定律概念、自主可控、科技重组预期概念",
+      "limit_times": 1,
+      "fd_amount_yi": 3.01,
+      "pct_chg": 10.0,
+      "first_time": "130338",
+      "open_times": 2,
+      "float_mv_yi": 940.9,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.0亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "603186.SH",
+      "name": "华正新材",
+      "industry": "元件",
+      "theme": "绿色电力、石墨烯、涨价概念",
+      "limit_times": 1,
+      "fd_amount_yi": 3.49,
+      "pct_chg": 10.0,
+      "first_time": "130001",
+      "open_times": 0,
+      "float_mv_yi": 196.4,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.5亿 (一字率32%)"
+      ]
+    },
+    {
+      "ts_code": "603986.SH",
+      "name": "兆易创新",
+      "industry": "半导体",
+      "theme": "模拟芯片、半导体存储器、上证50样本股",
+      "limit_times": 1,
+      "fd_amount_yi": 3.11,
+      "pct_chg": 10.0,
+      "first_time": "142607",
+      "open_times": 0,
+      "float_mv_yi": 1457.7,
+      "prob_yizi": 15.3,
+      "prob_up": 27.4,
+      "rank": "观察",
+      "evidence": [
+        "连板=1 (一字率7%)",
+        "封单=3.1亿 (一字率32%)"
+      ]
+    }
+  ],
+  "summary": "T-1 涨停417只，筛出 10 只次日一字候选。因子: 连板数+封单额（回测一字率 7%-32%）。3连板+封单≥1.5亿 = 一字率~35%，可重点排隔夜单；T字板归一字处理。"
+}

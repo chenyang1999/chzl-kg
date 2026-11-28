@@ -1,0 +1,8868 @@
+{
+ "601615.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "601615.SH",
+    "name": "杨璞",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20170323",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "毛端懿",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20180401",
+    "end_date": "20200714"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "沈忠民",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20170323",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "王玉",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170609",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "王金发",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20170323",
+    "end_date": "20250813"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "程家晚",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20170323",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "翟拥军",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20170323",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "邵希娟",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170609",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "邹荔兵",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20170323",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "陈桥宁",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20170323",
+    "end_date": "20190916"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "顾乃康",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170323",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "马学亮",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20170323",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "高文飞",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20170323",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "李仲飞",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170609",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "曹人靖",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20170323",
+    "end_date": "20200320"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "刘连玉",
+    "gender": "M",
+    "lev": "高管",
+    "title": "首席营运官(COO)",
+    "begin_date": "20171225",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "吴国贤",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20170323",
+    "end_date": "20190528"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "吴坤林",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20170323",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "吴隽诗",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20170323",
+    "end_date": "20200320"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "黄冬明",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20170323",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "张传卫",
+    "gender": "M",
+    "lev": "高管",
+    "title": "首席执行官(CEO)",
+    "begin_date": "20170323",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "张忠海",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20170323",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "张献中",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20170323",
+    "end_date": "20200320"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "张瑞",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20170323",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "张启应",
+    "gender": "M",
+    "lev": "高管",
+    "title": "业务总监",
+    "begin_date": "20171225",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "刘建军",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20170323",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "梁才发",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20190528",
+    "end_date": "20250124"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "郭智勇",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20200304",
+    "end_date": "20210428"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "郑伟力",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20200304",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "王冬冬",
+    "gender": "M",
+    "lev": "高管",
+    "title": "首席营运官(COO)",
+    "begin_date": "20200327",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "郑洁珊",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20200327",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "鱼江涛",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200327",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "易菱娜",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200327",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "韩昱",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20200624",
+    "end_date": "20230112"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "李一鸣",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20210406",
+    "end_date": "20230926"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "张超",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20230216",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "王利民",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20230829",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "王荣昌",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20230829",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "葛长新",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20230829",
+    "end_date": "20250814"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "朱滔",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20230829",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "施少斌",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20230829",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "成永峰",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20230829",
+    "end_date": "20250909"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "张大伟",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20230829",
+    "end_date": "20250813"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "刘瑛",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20230829",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "樊元峰",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20230829",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "韩冰",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20230926",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "叶凡",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20230926",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "潘永乐",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20230926",
+    "end_date": "20241021"
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "王成奎",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20241021",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "房猛",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20250124",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "林茂亮",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20250814",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "魏会龙",
+    "gender": "M",
+    "lev": "高管",
+    "title": "审计负责人\\总审计师\\CAE",
+    "begin_date": "20260112",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "张津源",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20260924",
+    "end_date": null
+   },
+   {
+    "ts_code": "601615.SH",
+    "name": "张新宇",
+    "gender": "M",
+    "lev": "高管",
+    "title": "技术总监\\首席技术官(CTO)",
+    "begin_date": "20261023",
+    "end_date": null
+   }
+  ]
+ },
+ "603150.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "603150.SH",
+    "name": "马忠军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20191226",
+    "end_date": "20221226"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "马功权",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20191226",
+    "end_date": "20231220"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "陈涛",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20191226",
+    "end_date": "20221226"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "邵燕妮",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20191226",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "邱连强",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20191226",
+    "end_date": "20221226"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "欧阳瑞群",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20191226",
+    "end_date": "20221226"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "梅诗亮",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20191226",
+    "end_date": "20221226"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "时乾中",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20191226",
+    "end_date": "20221226"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "方媛",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20191226",
+    "end_date": "20221226"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "徐荣明",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20191226",
+    "end_date": "20221226"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "周利华",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20191226",
+    "end_date": "20221226"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "吴泗宗",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20191226",
+    "end_date": "20221226"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "刘良德",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20191226",
+    "end_date": "20251229"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "张芳芳",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20191226",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "万和国",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20191226",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "张小梅",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20220314",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "陈雨海",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20220916",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "丁芳",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20220916",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "王界晨",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20221209",
+    "end_date": "20250912"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "陈矜",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20221209",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "叶圣",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20221209",
+    "end_date": "20241111"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "杜鹏程",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20221209",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "余敏",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20221226",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "赵莉莉",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20221226",
+    "end_date": "20250912"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "谭淇月",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20231204",
+    "end_date": "20250912"
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "张炳力",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20241025",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "刘跃玲",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20250711",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "时金敏",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20250711",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "沈刚",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20250711",
+    "end_date": null
+   },
+   {
+    "ts_code": "603150.SH",
+    "name": "许进",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20250711",
+    "end_date": null
+   }
+  ]
+ },
+ "002851.SZ": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "002851.SZ",
+    "name": "刘健",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20130820",
+    "end_date": "20191114"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "高云",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20130820",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "陈菡",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20161008",
+    "end_date": "20170118"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "许建平",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20130820",
+    "end_date": "20161008"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "肖幼美",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20130820",
+    "end_date": "20161008"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "童永胜",
+    "gender": "M",
+    "lev": "高管",
+    "title": "公司秘书\\联席公司秘书\\授权代表",
+    "begin_date": "20130820",
+    "end_date": null
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "王长颖",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20130820",
+    "end_date": "20190508"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "王涛",
+    "gender": "M",
+    "lev": "高管",
+    "title": "公司秘书\\联席公司秘书\\授权代表",
+    "begin_date": "20130820",
+    "end_date": null
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "王勇峰",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20130820",
+    "end_date": "20191114"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "沈楚春",
+    "gender": "M",
+    "lev": "高管",
+    "title": "技术总监\\首席技术官(CTO)",
+    "begin_date": "20130820",
+    "end_date": null
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "毛栋材",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20130820",
+    "end_date": null
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "张波",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20161008",
+    "end_date": "20221114"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "高军",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20130820",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "张志",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20130820",
+    "end_date": null
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "王玉涛",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170118",
+    "end_date": "20221114"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "徐春阳",
+    "gender": "M",
+    "lev": "高管",
+    "title": "审计负责人\\总审计师\\CAE",
+    "begin_date": "20170324",
+    "end_date": "20251114"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "王雪芬",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20190415",
+    "end_date": null
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "梁敏",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20191029",
+    "end_date": "20251114"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "赵万栋",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20191029",
+    "end_date": "20251114"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "张悦",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20191114",
+    "end_date": "20210701"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "辛梦云",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20220523",
+    "end_date": null
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "柳建华",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20221028",
+    "end_date": "20251114"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "楚攀",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20221028",
+    "end_date": "20260527"
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "沈华玉",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20251029",
+    "end_date": null
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "屈万园",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20260428",
+    "end_date": null
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "何承晓",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20260609",
+    "end_date": null
+   },
+   {
+    "ts_code": "002851.SZ",
+    "name": "梁芷晴",
+    "gender": "F",
+    "lev": "高管",
+    "title": "公司秘书\\联席公司秘书\\授权代表",
+    "begin_date": "20260609",
+    "end_date": null
+   }
+  ]
+ },
+ "301571.SZ": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "301571.SZ",
+    "name": "张伟",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20201231",
+    "end_date": "20241206"
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "杜爱军",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20201231",
+    "end_date": "20250912"
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "潘亚",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20201231",
+    "end_date": null
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "王启林",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20201231",
+    "end_date": null
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "刘雯雯",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20201231",
+    "end_date": "20250912"
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "王玥",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20201231",
+    "end_date": null
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "马超",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20201231",
+    "end_date": "20250912"
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "韩璐",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20201231",
+    "end_date": null
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "吴明星",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20201231",
+    "end_date": null
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "罗珏典",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20201231",
+    "end_date": null
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "陈浩",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20201231",
+    "end_date": null
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "沈正祥",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20241118",
+    "end_date": null
+   },
+   {
+    "ts_code": "301571.SZ",
+    "name": "伊春",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20250422",
+    "end_date": null
+   }
+  ]
+ },
+ "605020.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "605020.SH",
+    "name": "郑庆",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20170801",
+    "end_date": "20210915"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "童建国",
+    "gender": "M",
+    "lev": "高管",
+    "title": "代理董事会秘书",
+    "begin_date": "20170801",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "白云霞",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20200508",
+    "end_date": "20220210"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "李敦波",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20190710",
+    "end_date": "20220120"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "文龙",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20170801",
+    "end_date": "20210906"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "徐水土",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20170801",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "张增英",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20190507",
+    "end_date": "20230803"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "应振洲",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总工程师",
+    "begin_date": "20170801",
+    "end_date": "20250703"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "傅招祥",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20170801",
+    "end_date": "20250724"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "童嘉成",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20170801",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "赵景平",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20190527",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "陆惠明",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20190507",
+    "end_date": "20230803"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "黄国栋",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20170801",
+    "end_date": "20250724"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "余锋",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20170801",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "刘水芳",
+    "gender": "F",
+    "lev": "高管",
+    "title": "审计负责人\\总审计师\\CAE",
+    "begin_date": "20210826",
+    "end_date": "20251020"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "胡永忠",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20210826",
+    "end_date": "20250724"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "程文霞",
+    "gender": "F",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20210915",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "姜根法",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20220120",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "王琳",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20220120",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "胡继荣",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20220120",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "陈文亮",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总工程师",
+    "begin_date": "20230712",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "唐浩东",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20230712",
+    "end_date": "20230723"
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "李清伟",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20230712",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "王建中",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20230723",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "谢东颖",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20241029",
+    "end_date": null
+   },
+   {
+    "ts_code": "605020.SH",
+    "name": "余利霞",
+    "gender": "F",
+    "lev": "高管",
+    "title": "审计负责人\\总审计师\\CAE",
+    "begin_date": "20251020",
+    "end_date": null
+   }
+  ]
+ },
+ "688196.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "688196.SH",
+    "name": "陈建洪",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20171129",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "郑学东",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20171129",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "蒋宏才",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20171129",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "胡月萍",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20171129",
+    "end_date": "20201112"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "罗丹明",
+    "gender": "M",
+    "lev": "高管",
+    "title": "技术总监\\首席技术官(CTO)",
+    "begin_date": "20190101",
+    "end_date": "20221111"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "王长南",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20171129",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "林春根",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20171129",
+    "end_date": "20251027"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "吴重茂",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20171129",
+    "end_date": "20231124"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "陆建",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20171129",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "陈江明",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20171129",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "陈石",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20171129",
+    "end_date": "20231124"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "陈明树",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20171129",
+    "end_date": "20231124"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "连荣潮",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20190101",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "罗敏健",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20201112",
+    "end_date": "20251027"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "陈文敏",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20201112",
+    "end_date": "20251027"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "余丹丹",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20201129",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "王高祥",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20221111",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "郭晓斌",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20231124",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "郑祯",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20231124",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "罗春妹",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20231124",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "方柏山",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20231124",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "叶活动",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20231124",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "何正凌",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20231124",
+    "end_date": "20261123"
+   },
+   {
+    "ts_code": "688196.SH",
+    "name": "曾庆平",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "职工董事",
+    "begin_date": "20251027",
+    "end_date": "20261123"
+   }
+  ]
+ },
+ "603098.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "603098.SH",
+    "name": "刘培华",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20120519",
+    "end_date": "20210526"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "蒋海峰",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20120519",
+    "end_date": "20220214"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "蔡鹰",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20160826",
+    "end_date": "20200317"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "谢莉",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20120519",
+    "end_date": "20190225"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "陈伟林",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20120519",
+    "end_date": "20220214"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "陈俊臣",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20160826",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "颜坚",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20120519",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "高伟",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20120519",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "黄亚明",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20120519",
+    "end_date": "20170513"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "齐涛",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20120519",
+    "end_date": "20170828"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "陈文",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20120519",
+    "end_date": "20220214"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "苗泽献",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20120519",
+    "end_date": "20190403"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "苏中一",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20131204",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "刘爱森",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20120519",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "李建群",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20120519",
+    "end_date": "20190329"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "李桂茹",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20120519",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "杨冠三",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20120519",
+    "end_date": "20190329"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "王树平",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20120519",
+    "end_date": "20190329"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "翁家恩",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "职工董事",
+    "begin_date": "20120519",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "叶渊",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20120519",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "刘德顺",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20120519",
+    "end_date": "20200429"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "李艳霞",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20161231",
+    "end_date": "20170513"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "马继峰",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20170512",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "徐晓楠",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20170828",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "王玉媛",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20170912",
+    "end_date": "20191227"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "马传骐",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20170912",
+    "end_date": "20230816"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "孟托",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20180329",
+    "end_date": "20250627"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "贺涛",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20180329",
+    "end_date": "20210507"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "申屠辉宏",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20180427",
+    "end_date": "20210507"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "郭观林",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20190313",
+    "end_date": "20190830"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "苟军利",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20190313",
+    "end_date": "20210526"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "张春虎",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20190313",
+    "end_date": "20210526"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "石小敏",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20190313",
+    "end_date": "20250321"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "庞京辉",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总工程师",
+    "begin_date": "20190403",
+    "end_date": "20200429"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "王琪",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20190808",
+    "end_date": "20250321"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "王旭",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20191227",
+    "end_date": "20240412"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "李传伟",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20200317",
+    "end_date": "20250627"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "张树功",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200429",
+    "end_date": "20220214"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "陈龙辉",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20210507",
+    "end_date": "20220214"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "李文学",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20210507",
+    "end_date": "20250321"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "蒋东宇",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20210507",
+    "end_date": "20230428"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "韩信",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20220125",
+    "end_date": "20230628"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "仇梦妍",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20230428",
+    "end_date": "20250627"
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "张进军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20230428",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "周智敏",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20240412",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "杜晓明",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20250227",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "束伟农",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20250227",
+    "end_date": null
+   },
+   {
+    "ts_code": "603098.SH",
+    "name": "白忠学",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20250227",
+    "end_date": null
+   }
+  ]
+ },
+ "002480.SZ": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "002480.SZ",
+    "name": "余文龙",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20071121",
+    "end_date": "20130927"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "汪省明",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20090810",
+    "end_date": "20160927"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "熊劲松",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20010201",
+    "end_date": "20200911"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "王斌",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20070920",
+    "end_date": "20210323"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "罗珉",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20080313",
+    "end_date": "20251212"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "郭旺",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20071121",
+    "end_date": "20110505"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "陆云",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理助理\\总裁助理",
+    "begin_date": "20080101",
+    "end_date": "20200911"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "陈灏康",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20071121",
+    "end_date": "20120427"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "陈翔越",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20090801",
+    "end_date": "20200911"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "马庭林",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20080313",
+    "end_date": "20130927"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "黄志明",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20070920",
+    "end_date": "20180806"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "江蔚波",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20071121",
+    "end_date": "20160927"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "王涛",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总工程师",
+    "begin_date": "20080601",
+    "end_date": "20200911"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "林万祥",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20080313",
+    "end_date": "20130927"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "刘学信",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20070920",
+    "end_date": "20121013"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "刘志超",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20071121",
+    "end_date": "20130927"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "周思伟",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20081001",
+    "end_date": "20180806"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "周泽军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20070920",
+    "end_date": "20110315"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "周立新",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20071121",
+    "end_date": "20110426"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "冯克敏",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20070920",
+    "end_date": "20200911"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "杜晓峰",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20071001",
+    "end_date": "20200911"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "彭波",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20090801",
+    "end_date": "20160927"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "党吉奎",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20020701",
+    "end_date": "20200911"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "夏玉龙",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20010201",
+    "end_date": "20260415"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "金之达",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20101019",
+    "end_date": "20130927"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "衡福明",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20101207",
+    "end_date": "20180806"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "张孝永",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20110302",
+    "end_date": "20120113"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "张宏鹰",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20101023",
+    "end_date": "20251212"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "张于兰",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20110526",
+    "end_date": "20180806"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "陈汉忠",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20110526",
+    "end_date": "20160927"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "龚勇",
+    "gender": "M",
+    "lev": "高管",
+    "title": "审计负责人\\总审计师\\CAE",
+    "begin_date": "20120426",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "周本宽",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20130927",
+    "end_date": "20150202"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "李双海",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20130927",
+    "end_date": "20191016"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "李永强",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20130927",
+    "end_date": "20150202"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "贾秀英",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20140724",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "张杨",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20150327",
+    "end_date": "20250821"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "冯俭",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150430",
+    "end_date": "20200911"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "王砾",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150430",
+    "end_date": "20191016"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "杨丽",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20160927",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "杨永林",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20160927",
+    "end_date": "20200323"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "金圣",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20180807",
+    "end_date": "20220831"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "粟立",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20180807",
+    "end_date": "20200911"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "何强",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20180807",
+    "end_date": "20190621"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "肖光辉",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20180807",
+    "end_date": "20250909"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "江涛",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20190929",
+    "end_date": "20251212"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "傅若雪",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20200824",
+    "end_date": "20220831"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "朱益霞",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20200824",
+    "end_date": "20220125"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "罗哲",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20200824",
+    "end_date": "20251212"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "黄晓波",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20200824",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "简杰",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20200911",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "冉权",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20210329",
+    "end_date": "20231113"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "严荣添",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20220126",
+    "end_date": "20231113"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "李旸",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20220902",
+    "end_date": "20251015"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "王旭亮",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20220902",
+    "end_date": "20251015"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "赵科星",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20221230",
+    "end_date": "20250827"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "刘竹萌",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20221230",
+    "end_date": "20250827"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "冯树庆",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20231026",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "涂利",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20231109",
+    "end_date": "20241227"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "贾珺",
+    "gender": "F",
+    "lev": "高管",
+    "title": "合规负责人",
+    "begin_date": "20240712",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "易泰宇",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20241227",
+    "end_date": "20251212"
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "陈思遥",
+    "gender": "F",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20250821",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "朱劲",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20250828",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "王思程",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20250828",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "周凤岗",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20250910",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "谭洪涛",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20251126",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "卫德佳",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20251126",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "唐岚",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20251126",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "翟潇雨",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20260128",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "郑宇",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20260415",
+    "end_date": null
+   },
+   {
+    "ts_code": "002480.SZ",
+    "name": "周兵",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20260626",
+    "end_date": null
+   }
+  ]
+ },
+ "688418.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "688418.SH",
+    "name": "陈玉强",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20181213",
+    "end_date": "20220120"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "钟水东",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170101",
+    "end_date": "20220120"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "邱春生",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170101",
+    "end_date": "20220120"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "袁宇杰",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170101",
+    "end_date": "20220120"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "薛胜利",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20170101",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "徐华",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20170101",
+    "end_date": "20220120"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "张广胜",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20150912",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "张凯威",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20170101",
+    "end_date": "20220120"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "杜旭峰",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20170101",
+    "end_date": "20250521"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "张一巍",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20170101",
+    "end_date": "20220120"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "崔欣欣",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20181213",
+    "end_date": "20220120"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "叶亚敏",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20210426",
+    "end_date": "20230428"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "卫宣安",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20220120",
+    "end_date": "20250521"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "吴茂森",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20220120",
+    "end_date": "20250521"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "刘玲",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20220120",
+    "end_date": "20250521"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "吴闽华",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20220120",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "姜坤",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20220120",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "张中华",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20220120",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "张国新",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20220120",
+    "end_date": "20250521"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "徐海波",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20220120",
+    "end_date": "20230130"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "郭海卫",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20220120",
+    "end_date": "20230801"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "孟庆晓",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20220120",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "张丹丹",
+    "gender": "F",
+    "lev": "高管",
+    "title": "审计负责人\\总审计师\\CAE",
+    "begin_date": "20220428",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "孙大勇",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20220729",
+    "end_date": "20221101"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "黎民君",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20220729",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "黄福平",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20230130",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "胡国庆",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20230801",
+    "end_date": "20250521"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "程翥",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "职工董事",
+    "begin_date": "20250521",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "徐展",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20250521",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "王明江",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20250521",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "高颖",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20250819",
+    "end_date": "20260630"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "周春华",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20260310",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "薛梅芳",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20260310",
+    "end_date": "20260422"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "赵华",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20260310",
+    "end_date": "20280520"
+   },
+   {
+    "ts_code": "688418.SH",
+    "name": "李小根",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": null,
+    "end_date": null
+   }
+  ]
+ },
+ "300685.SZ": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "300685.SZ",
+    "name": "辛少华",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20150901",
+    "end_date": "20210813"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "胡旭波",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20150618",
+    "end_date": "20210813"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "罗菲",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20150618",
+    "end_date": "20240814"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "罗捷敏",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20150618",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "王弘宇",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20150618",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "朱明华",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150618",
+    "end_date": "20210813"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "朱冠山",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20140501",
+    "end_date": "20221230"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "宋庆涛",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20120401",
+    "end_date": "20191231"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "周雪林",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150618",
+    "end_date": "20210813"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "叶少琴",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150801",
+    "end_date": "20170401"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "郑惠彬",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20150618",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "David Guowei Wang(王国玮)",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20150618",
+    "end_date": "20210813"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "阮力",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20150618",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "陈英",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20150618",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "黄欣",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20150618",
+    "end_date": "20240814"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "LI-MOU ZHENG(郑立谋)",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20150618",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "蔡宁",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170401",
+    "end_date": "20230511"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "杨守乾",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20170827",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "周文刚",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20190211",
+    "end_date": "20200713"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "FRANK RON ZHENG",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20210201",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "黄婕",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20210723",
+    "end_date": "20251225"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "苏文金",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20210723",
+    "end_date": "20240814"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "杜琦",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20210723",
+    "end_date": "20251225"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "王恩华",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20210723",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "沈哲",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20230414",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "吴乔",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20240729",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "杨爽",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20250108",
+    "end_date": null
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "涂东明",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20250107",
+    "end_date": "20251225"
+   },
+   {
+    "ts_code": "300685.SZ",
+    "name": "董正伟",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20250108",
+    "end_date": null
+   }
+  ]
+ },
+ "600998.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "600998.SH",
+    "name": "贾海平",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20070327",
+    "end_date": "20141028"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "郭云邦",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20090228",
+    "end_date": "20191231"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "郭磊",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20090228",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陈俊波",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20050516",
+    "end_date": "20111117"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陈启明",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20050516",
+    "end_date": "20211024"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陈应军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20050516",
+    "end_date": "20130129"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陈波",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20080222",
+    "end_date": "20171121"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陈继勇",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20100813",
+    "end_date": "20141028"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陶冶",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20090228",
+    "end_date": "20171121"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "高东坡",
+    "gender": "M",
+    "lev": "高管",
+    "title": "其他高级管理人员",
+    "begin_date": "20090801",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "高智勇",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20100813",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "黄丽华",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20050516",
+    "end_date": "20171121"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "龚力",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20050516",
+    "end_date": "20171121"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "龚翼华",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20081116",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "谷春光",
+    "gender": "M",
+    "lev": "高管",
+    "title": "技术总监\\首席技术官(CTO)",
+    "begin_date": "20080222",
+    "end_date": "20191231"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "蘧勇",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20100813",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "赵学军",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20070327",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "耿鸿武",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20090801",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "刘宝林",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20050516",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "刘树林",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20100813",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "范诗科",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20080222",
+    "end_date": "20171121"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "刘登攀",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20081116",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "宋瑞霖",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20100813",
+    "end_date": "20141028"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "罗飞",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20100813",
+    "end_date": "20141028"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "白红星",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20100813",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "刘辉",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20070327",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "王琦",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20070327",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "牛正乾",
+    "gender": "M",
+    "lev": "高管",
+    "title": "其他高级管理人员",
+    "begin_date": "20070327",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "刘兆年",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "副董事长",
+    "begin_date": "20050516",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "李旬",
+    "gender": "M",
+    "lev": "高管",
+    "title": "审计负责人\\总审计师\\CAE",
+    "begin_date": "20081116",
+    "end_date": "20191231"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "李吉鹏",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20050516",
+    "end_date": "20111117"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "朱汉明",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20100813",
+    "end_date": "20141028"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "戴旭彪",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20050516",
+    "end_date": "20141028"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "温旭民",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20070327",
+    "end_date": "20231115"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "刘志峰",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20110426",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "刘素芳",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20110426",
+    "end_date": "20170628"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "彭俊",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20110426",
+    "end_date": "20120424"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "许明珍",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20110426",
+    "end_date": "20180424"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陈松柏",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20110426",
+    "end_date": "20190326"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陈勇",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20110816",
+    "end_date": "20120424"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "胡双凯",
+    "gender": null,
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20111117",
+    "end_date": "20150428"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "蒋志涛",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20111117",
+    "end_date": "20140515"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "林新扬",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20111117",
+    "end_date": "20250523"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "朱志国",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20120424",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "谢猛",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20120424",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陈红波",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20131029",
+    "end_date": "20171121"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "余劲松",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20141028",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "张龙平",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20141028",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "毛宗福",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20141028",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "王锦霞",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20141028",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "王家明",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20141125",
+    "end_date": "20201105"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "许应政",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20151105",
+    "end_date": "20250523"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "杨菊美",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20160426",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "王启兵",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20170423",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "刘义常",
+    "gender": "M",
+    "lev": "高管",
+    "title": "执行总经理\\执行总裁",
+    "begin_date": "20170423",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陈莉",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20180211",
+    "end_date": "20210407"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "吴雪松",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20191220",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陆银娣",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "其他委员会成员",
+    "begin_date": "20201018",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "艾华",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20201018",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "曾湘泉",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "其他委员会成员",
+    "begin_date": "20201018",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "刘长云",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20201018",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "汤谷良",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20201018",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "全铭",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20201226",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "柳景汉",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20210204",
+    "end_date": "20241111"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "于靖韬",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20210204",
+    "end_date": "20231115"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "张青松",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20210204",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "曹炜",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20210204",
+    "end_date": "20231115"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "肖亚",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20210407",
+    "end_date": "20240328"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "杨聂",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20210425",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "贺威",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20220104",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "张溪",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20220423",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "夏晓益",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20231115",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "许志君",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20231115",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "陈卫俊",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20231115",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "刘庆鑫",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20240328",
+    "end_date": "20250523"
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "苏熙凌",
+    "gender": "M",
+    "lev": "高管",
+    "title": "其他高级管理人员",
+    "begin_date": "20250426",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "王瑛",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20250426",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "吴志龙",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "职工董事",
+    "begin_date": "20250522",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "李忠超",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20260728",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "黄涛",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20260821",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "卢彦昌",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20261023",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "汤湘希",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20261023",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "肖俊",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20261023",
+    "end_date": null
+   },
+   {
+    "ts_code": "600998.SH",
+    "name": "项莉",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20261023",
+    "end_date": null
+   }
+  ]
+ },
+ "001389.SZ": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "001389.SZ",
+    "name": "黎钦源",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200622",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "黄金广",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20200622",
+    "end_date": "20240520"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "陈炯辉",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200622",
+    "end_date": "20250531"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "贺剑青",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20200622",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "王峻",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200622",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "管术春",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200622",
+    "end_date": "20250809"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "刘锦婵",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20230621",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "曾红",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20230621",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "周智勇",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20240425",
+    "end_date": "20250516"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "薛婧",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20240520",
+    "end_date": "20250516"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "陈炜亮",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20240630",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "黄淑芳",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20240630",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "何倩彤",
+    "gender": "F",
+    "lev": "高管",
+    "title": "公司秘书\\联席公司秘书\\授权代表",
+    "begin_date": "20250429",
+    "end_date": "20250820"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "曾杨清",
+    "gender": "M",
+    "lev": "高管",
+    "title": "公司秘书\\联席公司秘书\\授权代表",
+    "begin_date": "20250429",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "肖红星",
+    "gender": "M",
+    "lev": "高管",
+    "title": "公司秘书\\联席公司秘书\\授权代表",
+    "begin_date": "20250429",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "彭镜辉",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "职工董事",
+    "begin_date": "20250530",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "李莹",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20250609",
+    "end_date": "20260618"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "关秀妍",
+    "gender": "F",
+    "lev": "高管",
+    "title": "公司秘书\\联席公司秘书\\授权代表",
+    "begin_date": "20250820",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "张瑾",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20260618",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "施凌",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20260618",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "陈丽梅",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20260618",
+    "end_date": "20290617"
+   },
+   {
+    "ts_code": "001389.SZ",
+    "name": "黄嘉文",
+    "gender": "F",
+    "lev": "高管",
+    "title": "公司秘书\\联席公司秘书\\授权代表",
+    "begin_date": "20261027",
+    "end_date": "20290617"
+   }
+  ]
+ },
+ "600141.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "600141.SH",
+    "name": "丁祥先",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20000117",
+    "end_date": "20020225"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "王华清",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000801",
+    "end_date": "20030801"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "陈荣",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": "20040413"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "邵明军",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000801",
+    "end_date": "20030801"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "赵光辉",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20060408",
+    "end_date": "20090228"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "孙高先",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": "20060511"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "胡家明",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": "20060511"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "王宵鹏",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20020225",
+    "end_date": "20080325"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "彭洪新",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20060408",
+    "end_date": "20150310"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "舒龙",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20001231",
+    "end_date": "20251112"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "赵良明",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000801",
+    "end_date": "20030801"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "刘代军",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000801",
+    "end_date": "20021224"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "戴德云",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20021224",
+    "end_date": "20090228"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "屈峰",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20000801",
+    "end_date": "20080325"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "李桂荣",
+    "gender": "F",
+    "lev": null,
+    "title": null,
+    "begin_date": "20030527",
+    "end_date": "20090228"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "黄家明",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20011201",
+    "end_date": "20030801"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "简万兴",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": "20040413"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "王虎",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000801",
+    "end_date": "20030801"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "樊令文",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": "20060511"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "李胜佳",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000801",
+    "end_date": "20030801"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "张晓兰",
+    "gender": "F",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000801",
+    "end_date": "20030801"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "唐家毅",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20030829",
+    "end_date": "20210517"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "杜兴中",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": "20060511"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "万林",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000801",
+    "end_date": "20030801"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "陈继忠",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20030930",
+    "end_date": "20080903"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "邓小雄",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20030930",
+    "end_date": "20080722"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "胡坤裔",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20030930",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "牛涛",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20030930",
+    "end_date": "20070807"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "万义成",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20030930",
+    "end_date": "20150310"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "包良云",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20030930",
+    "end_date": "20101023"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "王相森",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20030930",
+    "end_date": "20240425"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "孙卫东",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "副董事长",
+    "begin_date": "20030930",
+    "end_date": "20150310"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "明兵",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20040413",
+    "end_date": "20110329"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "李国璋",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20040413",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "聂佳林",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20050330",
+    "end_date": "20090331"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "潘世洪",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20060408",
+    "end_date": "20150310"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "何光昶",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20060408",
+    "end_date": "20120406"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "孙宜坤",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20060408",
+    "end_date": "20090228"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "顾宗勤",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20060408",
+    "end_date": "20120406"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "熊涛",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20070327",
+    "end_date": "20190716"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "陈澄海",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20080325",
+    "end_date": "20140415"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "胡亚益",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20080325",
+    "end_date": "20140415"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "袁兵",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20080722",
+    "end_date": "20260309"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "杨铁军",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20081230",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "易行国",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20090228",
+    "end_date": "20220321"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "谈晓华",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20090228",
+    "end_date": "20150310"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "贡长生",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20090228",
+    "end_date": "20150310"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "陈旭东",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20090228",
+    "end_date": "20150310"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "高朗",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20090228",
+    "end_date": "20150310"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "吴辉庆",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20090331",
+    "end_date": "20111026"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "王杰",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20090331",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "程亚利",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20101023",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "周明",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20120505",
+    "end_date": "20150410"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "杜哲兴",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20120406",
+    "end_date": "20141108"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "汪家乾",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20120406",
+    "end_date": "20180420"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "陈水文",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20120406",
+    "end_date": "20150310"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "傅孝思",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20140415",
+    "end_date": "20200525"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "俞少俊",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20140507",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "张时伟",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20140710",
+    "end_date": "20180208"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "王琛",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20141016",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "陈芳",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20150310",
+    "end_date": "20230425"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "陈祖兴",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150310",
+    "end_date": "20210517"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "熊新华",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150310",
+    "end_date": "20210517"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "杨晓勇",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150310",
+    "end_date": "20210517"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "张翔",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20150310",
+    "end_date": "20210517"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "万义甲",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20150310",
+    "end_date": "20210517"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "潘军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150310",
+    "end_date": "20210517"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "倪小山",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20151230",
+    "end_date": "20240426"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "陈先亮",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20151230",
+    "end_date": "20210517"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "鲍伯颖",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20180208",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "刘畅",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20180228",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "赵勇",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20180228",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "张小燕",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20180329",
+    "end_date": "20240425"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "李少平",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20180721",
+    "end_date": "20220321"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "路明清",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200426",
+    "end_date": "20260302"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "缪向水",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20200426",
+    "end_date": "20211206"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "崔大桥",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20200426",
+    "end_date": "20260423"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "曹先军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20210423",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "李美辉",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "职工董事",
+    "begin_date": "20210423",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "李钟华",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20210423",
+    "end_date": "20240425"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "蒋春黔",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20210423",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "谢娟",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20210423",
+    "end_date": "20240425"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "龚军",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20210423",
+    "end_date": "20240425"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "薛冬峰",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "其他委员会成员",
+    "begin_date": "20220319",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "胡国荣",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20220319",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "张桥",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20230119",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "周相琼",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20230320",
+    "end_date": "20240425"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "刘晓晖",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20240329",
+    "end_date": "20251112"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "刘鑫",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20240329",
+    "end_date": "20251112"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "杨光亮",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20240329",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "郑磊",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20240329",
+    "end_date": "20251112"
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "彭亚利",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20240426",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "杨坤明",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20240426",
+    "end_date": null
+   },
+   {
+    "ts_code": "600141.SH",
+    "name": "郭月梅",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20260402",
+    "end_date": null
+   }
+  ]
+ },
+ "002296.SZ": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "002296.SZ",
+    "name": "苗卫东",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20080818",
+    "end_date": "20200228"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "裴世雄",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总工程师",
+    "begin_date": "20080818",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "谢春生",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20080818",
+    "end_date": null
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "赵海东",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20080818",
+    "end_date": "20200228"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "郝恩元",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20080818",
+    "end_date": "20250708"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "郭明",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20080818",
+    "end_date": "20200228"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "魏春洪",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20080818",
+    "end_date": "20101123"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "胡江平",
+    "gender": "M",
+    "lev": "高管",
+    "title": "常务副总\\常务副总裁",
+    "begin_date": "20080818",
+    "end_date": "20200228"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "刘锐",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20080818",
+    "end_date": "20140214"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "孟焰",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20080818",
+    "end_date": "20101123"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "李力",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20071026",
+    "end_date": "20130911"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "李劲松",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20080818",
+    "end_date": "20130208"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "李新建",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20080818",
+    "end_date": "20140214"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "李海鹰",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20080818",
+    "end_date": null
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "李翀",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20080818",
+    "end_date": "20200228"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "杜旭升",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20080818",
+    "end_date": null
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "黄继军",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20080818",
+    "end_date": null
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "于辉",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20080818",
+    "end_date": "20150602"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "赵洁",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20091231",
+    "end_date": "20100813"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "唐涛",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20101123",
+    "end_date": "20170208"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "蒋承",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20101123",
+    "end_date": "20170208"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "谭宪才",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20101123",
+    "end_date": "20260708"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "郑予君",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20101123",
+    "end_date": "20140214"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "韩瑞",
+    "gender": "F",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20110310",
+    "end_date": "20180404"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "刘宝利",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20140108",
+    "end_date": "20170220"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "郭治国",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20140108",
+    "end_date": null
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "侯菊艳",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20140214",
+    "end_date": "20250708"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "张奕敏",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20140214",
+    "end_date": null
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "李柏慧",
+    "gender": "M",
+    "lev": "高管",
+    "title": "审计负责人\\总审计师\\CAE",
+    "begin_date": "20140214",
+    "end_date": "20250708"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "康斌生",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170120",
+    "end_date": "20230223"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "张宇锋",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170120",
+    "end_date": "20221025"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "郑建彪",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20170120",
+    "end_date": null
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "郭志敏",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20180423",
+    "end_date": null
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "杨超",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20200115",
+    "end_date": "20250708"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "王涛",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20221009",
+    "end_date": null
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "周建民",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20230207",
+    "end_date": "20260521"
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "窦永贺",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20250708",
+    "end_date": null
+   },
+   {
+    "ts_code": "002296.SZ",
+    "name": "宋静",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20260617",
+    "end_date": null
+   }
+  ]
+ },
+ "603768.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "603768.SH",
+    "name": "俞书宏",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20111127",
+    "end_date": "20171016"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "陈和英",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20111127",
+    "end_date": "20201015"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "邓德彪",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20161201",
+    "end_date": "20201015"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "贺佩珍",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20111127",
+    "end_date": "20210331"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "王素玲",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20111127",
+    "end_date": "20171016"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "王磊",
+    "gender": null,
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20121127",
+    "end_date": "20160318"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "王文化",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20160318",
+    "end_date": "20170106"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "朱慧娟",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20111127",
+    "end_date": "20241008"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "徐辉",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20111127",
+    "end_date": "20170814"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "徐怀宝",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20111127",
+    "end_date": "20170620"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "张家忠",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20161201",
+    "end_date": "20201015"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "周文俊",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20111127",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "吴应宏",
+    "gender": "M",
+    "lev": "高管",
+    "title": "代理董事会秘书",
+    "begin_date": "20111127",
+    "end_date": null
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "吴应举",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20111127",
+    "end_date": "20220228"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "吴卫华",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20111127",
+    "end_date": "20250912"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "张旭峰",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20111127",
+    "end_date": "20250912"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "吴云龙",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20161201",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "喻荣虎",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170106",
+    "end_date": "20230103"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "何义婷",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20170802",
+    "end_date": null
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "刘堃",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20170802",
+    "end_date": null
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "何旭光",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20170829",
+    "end_date": null
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "张良成",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20170829",
+    "end_date": "20201015"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "邱亚东",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20170829",
+    "end_date": "20201015"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "程敏",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170928",
+    "end_date": "20231013"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "钱立军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20170928",
+    "end_date": "20231013"
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "程义",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "职工董事",
+    "begin_date": "20200929",
+    "end_date": null
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "宋方明",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20210406",
+    "end_date": null
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "许敏",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20230118",
+    "end_date": null
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "白先旭",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20230927",
+    "end_date": null
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "陈高才",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20230927",
+    "end_date": null
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "王斌",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20241008",
+    "end_date": null
+   },
+   {
+    "ts_code": "603768.SH",
+    "name": "余大权",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20250826",
+    "end_date": null
+   }
+  ]
+ },
+ "600641.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "600641.SH",
+    "name": "李建红",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "19990803",
+    "end_date": "20051009"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张志良",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "王邦鹰",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "刘汉波",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20020901"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "曲毅民",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20020901"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "贺龙刚",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "蔡尚均",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20020901"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "袁宁",
+    "gender": "F",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20020901"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "赵继德",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20020901"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "邹之中",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990801",
+    "end_date": "20020901"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "陈荣玉",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20020901"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "陈琦伟",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20040410"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "陈洪生",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20030409"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "陈学斌",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20030409",
+    "end_date": "20090424"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "袁辉",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20030409"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "王耀凌",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20050430"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "潘飞",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20030409",
+    "end_date": "20150430"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "金永良",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20030409",
+    "end_date": "20151203"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "徐泽宪",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": "20050430"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "梁岩峰",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": "20030409"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "刘勇",
+    "gender": "F",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": "20030409"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "刘淑兰",
+    "gender": "F",
+    "lev": null,
+    "title": null,
+    "begin_date": "20050430",
+    "end_date": "20090523"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "孙敏",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": "20030409"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张兴山",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20001101",
+    "end_date": "20070913"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "詹琳",
+    "gender": "F",
+    "lev": null,
+    "title": null,
+    "begin_date": "20001101",
+    "end_date": "20030409"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张峻",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "19990901",
+    "end_date": "20110318"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张文光",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20030409",
+    "end_date": "20060622"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张湘",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "19990901",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "傅平",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "温恩奇",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20030625",
+    "end_date": "20060313"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "李澜",
+    "gender": "F",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": "20060313"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "倪强",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20030606",
+    "end_date": "20051011"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张俊",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20030625",
+    "end_date": "20040410"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "丰金华",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20040410",
+    "end_date": "20051011"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "王洪卫",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20040410",
+    "end_date": "20100320"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "林逢生",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "副董事长",
+    "begin_date": "20040410",
+    "end_date": "20151203"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "岳凤英",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务副总监\\副总会计师",
+    "begin_date": "20040529",
+    "end_date": "20060622"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "宋胜安",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20050430",
+    "end_date": "20060321"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "李振宇",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20050430",
+    "end_date": "20051011"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "陆健",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20050430",
+    "end_date": "20060321"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "蒋剑雄",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20051011",
+    "end_date": "20151203"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "尚志强",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20060313",
+    "end_date": "20100820"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "吴云韶",
+    "gender": "F",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20060313",
+    "end_date": "20190416"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "谢宗宣",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20060321",
+    "end_date": "20070428"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "曹曼华",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20060321",
+    "end_date": "20090424"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "林震森",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20060321",
+    "end_date": "20170602"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "朱明华",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20060321",
+    "end_date": "20151203"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "程光",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "副董事长",
+    "begin_date": "20060321",
+    "end_date": "20250113"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "王永平",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20060530",
+    "end_date": "20120427"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "陈中一",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20060729",
+    "end_date": "20100320"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "费军",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20060729",
+    "end_date": "20061025"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "郑志南",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20070428",
+    "end_date": "20140418"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张崇烨",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20070913",
+    "end_date": "20090424"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "孙铮",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20080301",
+    "end_date": "20120427"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "刘洁",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20080616",
+    "end_date": "20140418"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张凌云",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20080731",
+    "end_date": "20090523"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "顾功耘",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20090424",
+    "end_date": "20120427"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "崔海勇",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20160310",
+    "end_date": "20160531"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "黄瑞",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20090523",
+    "end_date": "20150521"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "范志燕",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20090523",
+    "end_date": "20160601"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张永岳",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20100320",
+    "end_date": "20150430"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "王洪飞",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20100320",
+    "end_date": "20110820"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "曹雄斌",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20100820",
+    "end_date": "20160329"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "丁典瑛",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20110318",
+    "end_date": "20151203"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "邬德兴",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20100906",
+    "end_date": "20260428"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "邵伟宏",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20100818",
+    "end_date": "20241203"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "唐波",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20120427",
+    "end_date": "20150430"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "林希腾",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20140418",
+    "end_date": "20151203"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "江加如",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20141125",
+    "end_date": "20250113"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "史剑梅",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150430",
+    "end_date": "20151203"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "周琼",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150430",
+    "end_date": "20151203"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "彭诚信",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20150430",
+    "end_date": "20210623"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张军红",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20150521",
+    "end_date": "20190115"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "邵咏炜",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20150521",
+    "end_date": "20240425"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "孟德庆",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20151203",
+    "end_date": "20250113"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张陆洋",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20151203",
+    "end_date": "20220126"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "曾庆生",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20151203",
+    "end_date": "20220126"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "陈孟钊",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20151203",
+    "end_date": "20250113"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "范晓莹",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20151203",
+    "end_date": "20190115"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "段雪侠",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20151203",
+    "end_date": "20250113"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "朱旭东",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20151203",
+    "end_date": "20250113"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "李勇军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20151203",
+    "end_date": "20250113"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "刘荣明",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20160310",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "孔旭",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20160601",
+    "end_date": "20190828"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "任凯",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20181224",
+    "end_date": "20210428"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "余峰",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20181224",
+    "end_date": "20210414"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "徐菲",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20190115",
+    "end_date": "20220126"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "周伟芳",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20190416",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "郁皓然",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20191029",
+    "end_date": "20230221"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "邹非",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20210426",
+    "end_date": "20230526"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "夏雪",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "提名委员会成员",
+    "begin_date": "20210426",
+    "end_date": "20260522"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "杨征帆",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20210426",
+    "end_date": "20220915"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "JAYJIECHEN(陈捷)",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20211229",
+    "end_date": "20240626"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "万华林",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20211229",
+    "end_date": "20260318"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "吴祯旎",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20220125",
+    "end_date": "20251015"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "范晓宁",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20220824",
+    "end_date": "20230427"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "杨柳",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20230427",
+    "end_date": "20230427"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "王晓波",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20230616",
+    "end_date": "20240425"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "杨怡忱",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20230823",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "徐江山",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20240425",
+    "end_date": "20251015"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "徐磊",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20240425",
+    "end_date": "20260408"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "王国平",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20240425",
+    "end_date": "20251015"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "朱世会",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20241203",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "余舒婷",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20241203",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "叶蒙蒙",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20241203",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "金维召",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20241227",
+    "end_date": "20251015"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "罗海龙",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20241227",
+    "end_date": "20260408"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "王侃",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20241227",
+    "end_date": "20251015"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "张国良",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20241227",
+    "end_date": "20251015"
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "朱刘",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20241227",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "于洵",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20250929",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "虞熙春",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20260213",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "苏小平",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20260408",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "蔡伟",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20260428",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "郑新和",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20260428",
+    "end_date": null
+   },
+   {
+    "ts_code": "600641.SH",
+    "name": "罗爽",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20260929",
+    "end_date": null
+   }
+  ]
+ },
+ "301158.SZ": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "301158.SZ",
+    "name": "王继平",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200821",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "王海斌",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200818",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "柳喜军",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20200818",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "李战军",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200821",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "朱乐",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20200818",
+    "end_date": "20251103"
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "孙伟杰",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20200818",
+    "end_date": "20230828"
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "吴艳",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20200818",
+    "end_date": "20251103"
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "刘安海",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20200818",
+    "end_date": "20220530"
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "侯斌",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20200818",
+    "end_date": "20230828"
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "程贵华",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20200818",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "任鸿源",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20200818",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "于广海",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总工程师",
+    "begin_date": "20200821",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "薛守坤",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200821",
+    "end_date": "20210628"
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "谢光义",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20200818",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "贾延军",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200821",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "邢兰朝",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20200818",
+    "end_date": "20230828"
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "范忠廷",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20200818",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "曲林",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20220224",
+    "end_date": "20230828"
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "于剑",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20220413",
+    "end_date": "20250718"
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "张峰",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20221028",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "陈振",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20230810",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "李涛",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20230810",
+    "end_date": "20251103"
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "李志勇",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20230810",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "路伟",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20230810",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "严金花",
+    "gender": "F",
+    "lev": "高管",
+    "title": "审计负责人\\总审计师\\CAE",
+    "begin_date": "20240909",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "孙宝生",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20260116",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "王泽涛",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20260116",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "刘华洁",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20260813",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "张玉红",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20260813",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "郑毅",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20260813",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "宋翔",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20260904",
+    "end_date": null
+   },
+   {
+    "ts_code": "301158.SZ",
+    "name": "杨鑫蕊",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20260904",
+    "end_date": null
+   }
+  ]
+ },
+ "002146.SZ": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "002146.SZ",
+    "name": "何德旭",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20070625",
+    "end_date": "20111231"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "肖春梅",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20070625",
+    "end_date": "20141231"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "高洁",
+    "gender": "M",
+    "lev": "核心技术人员",
+    "title": "核心技术人员",
+    "begin_date": "20070625",
+    "end_date": "20181231"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "鲍丽洁",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20070625",
+    "end_date": "20210723"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "黄绎澎",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总工程师",
+    "begin_date": "20070625",
+    "end_date": "20191231"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "金文辉",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20070625",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "邹家立",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20070625",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "耿建富",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20070625",
+    "end_date": "20120116"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "耿建明",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20070625",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "刘山",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20070625",
+    "end_date": "20241030"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "刘力",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20070625",
+    "end_date": "20081230"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "孙建茹",
+    "gender": "F",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20070625",
+    "end_date": "20191231"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "程玉民",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "其他委员会成员",
+    "begin_date": "20070625",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "冯全玉",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20070625",
+    "end_date": "20141231"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "王振乐",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20070625",
+    "end_date": "20191231"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "王潍东",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20070625",
+    "end_date": "20081230"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "李喜林",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20070625",
+    "end_date": "20120115"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "陈金海",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20070817",
+    "end_date": "20210723"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "李万乐",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20080229",
+    "end_date": "20170124"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "付磊",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20081230",
+    "end_date": "20141231"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "吴联生",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20081230",
+    "end_date": "20111231"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "高学军",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20101125",
+    "end_date": "20130509"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "李冰",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20090626",
+    "end_date": "20130703"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "王力",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20100914",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "李爱红",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20101119",
+    "end_date": "20230804"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "刘健",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20111231",
+    "end_date": "20121120"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "杨绍民",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20111231",
+    "end_date": "20210723"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "陈伟",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20120117",
+    "end_date": "20210430"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "谷永军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20121113",
+    "end_date": "20171120"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "张星星",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20140215",
+    "end_date": "20220228"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "林德祥",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20140722",
+    "end_date": "20190513"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "王强",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20141231",
+    "end_date": "20250812"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "齐凌峰",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20141231",
+    "end_date": "20210723"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "景中华",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20160510",
+    "end_date": "20251208"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "黄育华",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20161015",
+    "end_date": "20221031"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "戴琼",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20180706",
+    "end_date": "20210723"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "张志勇",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20180724",
+    "end_date": "20210104"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "王远志",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20180724",
+    "end_date": "20200731"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "秦德生",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20180724",
+    "end_date": "20230714"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "庄青峰",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20190514",
+    "end_date": "20220213"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "伍小峰",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20190813",
+    "end_date": "20260206"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "林洪波",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200302",
+    "end_date": "20231229"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "王守波",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20200812",
+    "end_date": "20221020"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "彭国红",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20210720",
+    "end_date": "20241030"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "吴秋云",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20210723",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "尚中卫",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20210723",
+    "end_date": "20260427"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "梁涵",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20211116",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "王冰",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20221020",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "刘鑫",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20230404",
+    "end_date": "20241030"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "刘晓文",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20230804",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "陈亮",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20241014",
+    "end_date": "20260427"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "颜玉珍",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20241014",
+    "end_date": "20250812"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "任勇",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20241025",
+    "end_date": "20250812"
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "穆旸",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20241030",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "王晓辉",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20251208",
+    "end_date": null
+   },
+   {
+    "ts_code": "002146.SZ",
+    "name": "隆小康",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20260121",
+    "end_date": null
+   }
+  ]
+ },
+ "000426.SZ": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "000426.SZ",
+    "name": "高桂珍",
+    "gender": "F",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "韩国清",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "赵明权",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "赵向龙",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总工程师",
+    "begin_date": "19971231",
+    "end_date": "20030731"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "肖凤敏",
+    "gender": "F",
+    "lev": "高管",
+    "title": "财务副总监\\副总会计师",
+    "begin_date": "19991231",
+    "end_date": "20030801"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "聂丽华",
+    "gender": "F",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "白占军",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "刘富军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20030701",
+    "end_date": "20111129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "段春玉",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20000501",
+    "end_date": "20070512"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李俊清",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张宏武",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20010330",
+    "end_date": "20070512"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "孙焕武",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20010330",
+    "end_date": "20070512"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "姜立民",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总工程师",
+    "begin_date": "20000415",
+    "end_date": "20030801"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "吉耀武",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "刘芳",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "王淑兰",
+    "gender": "F",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "于鸿君",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "王欣新",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20030701",
+    "end_date": "20070419"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "龚兴隆",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20030701",
+    "end_date": "20111129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李云峰",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20030701",
+    "end_date": "20070419"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "宿颖波",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20030701",
+    "end_date": "20111129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "呼和",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20030701",
+    "end_date": "20111129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "冯立亮",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20030701",
+    "end_date": "20111129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张晓东",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "王中和",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000501",
+    "end_date": "20030501"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李春晓",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20030801",
+    "end_date": "20171215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张春水",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20030701",
+    "end_date": "20171215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "景树森",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20030701",
+    "end_date": "20111217"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张国兴",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20030701",
+    "end_date": "20141129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "寇显强",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "副董事长",
+    "begin_date": "20030701",
+    "end_date": "20111129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "史淑琴",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20000501",
+    "end_date": "20111216"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张旭东",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20030801",
+    "end_date": "20260713"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李晓春",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20070419",
+    "end_date": "20111129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "徐瑞",
+    "gender": null,
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20070419",
+    "end_date": "20111129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "王晓辉",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20110121",
+    "end_date": "20120731"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李建英",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20111129",
+    "end_date": "20200428"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "朱广彬",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20111129",
+    "end_date": "20140121"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "曾华春",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20111129",
+    "end_date": "20141129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张武",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20111129",
+    "end_date": "20141129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "吉兴军",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20111129",
+    "end_date": "20201113"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "丁春泽",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20111129",
+    "end_date": "20171215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "孙凯",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20111129",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "吉兴业",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20111129",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "董永",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20111129",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "连瑞芹",
+    "gender": "F",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20111129",
+    "end_date": "20231215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张侃思",
+    "gender": "F",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20111217",
+    "end_date": "20140329"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李学天",
+    "gender": "M",
+    "lev": "高管",
+    "title": "审计负责人\\总审计师\\CAE",
+    "begin_date": "20111217",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "赵飞",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20111217",
+    "end_date": "20160203"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "郭洪军",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20111217",
+    "end_date": "20171215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "单富",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20111220",
+    "end_date": "20141129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张斌",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20120731",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "王忠",
+    "gender": "M",
+    "lev": "其他",
+    "title": "其他",
+    "begin_date": "20120822",
+    "end_date": "20171215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "杨大平",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20140329",
+    "end_date": "20180605"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "解家凯",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20140329",
+    "end_date": "20141129"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "杨兵",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20140430",
+    "end_date": "20171215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "邵帅",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20141129",
+    "end_date": "20160206"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "隋景祥",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20141129",
+    "end_date": "20201215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李金良",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20141129",
+    "end_date": "20171215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "吉祥",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20150829",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李玉平",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20160428",
+    "end_date": "20171215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "罗斌",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20160428",
+    "end_date": "20201113"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "姜雅楠",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20170321",
+    "end_date": "20180914"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "姜青梅",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20171127",
+    "end_date": "20231215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李强新",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20171127",
+    "end_date": "20231215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "陈庭燕",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20171127",
+    "end_date": "20201215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张树成",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20171215",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "吴云峰",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20180502",
+    "end_date": "20231215"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "尚佳楠",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20180914",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张世潮",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20201127",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "龙晶",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20201127",
+    "end_date": "20250910"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "常战军",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20201215",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "姚敬金",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20210128",
+    "end_date": "20230609"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李金城",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20210128",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "李伍波",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20231129",
+    "end_date": "20260330"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "刘承革",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20231129",
+    "end_date": "20250910"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "周显军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20231129",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张国新",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20231215",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "张艳江",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20231215",
+    "end_date": "20250910"
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "程崇刚",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "薪酬与考核委员会成员",
+    "begin_date": "20251128",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "韩瑞霞",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20260313",
+    "end_date": null
+   },
+   {
+    "ts_code": "000426.SZ",
+    "name": "左河涛",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20260713",
+    "end_date": null
+   }
+  ]
+ },
+ "600382.SH": {
+  "rewards_err": "\"['hold_value'] not in index\"",
+  "managers": [
+   {
+    "ts_code": "600382.SH",
+    "name": "王治福",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "赵永前",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "高兴嘉",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": null,
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "张振昌",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000601",
+    "end_date": "20030318"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "罗启芬",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20010812",
+    "end_date": "20031231"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "李景山",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000601",
+    "end_date": "20030601"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "杨庆余",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000601",
+    "end_date": "20030601"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "高立",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20030318",
+    "end_date": "20060929"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "陈均耀",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20030318",
+    "end_date": "20151115"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "谢中华",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20030508",
+    "end_date": "20091221"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "肖汉山",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20000601",
+    "end_date": "20091021"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "罗复元",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20030508",
+    "end_date": "20060929"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "潘银",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20030318",
+    "end_date": "20060929"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "秦军",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20030508",
+    "end_date": "20061021"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "李新梓",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "副董事长",
+    "begin_date": "20000601",
+    "end_date": "20121025"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "朱玉栓",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20030318",
+    "end_date": "20060929"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "张坚力",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20030313",
+    "end_date": "20200702"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "张云华",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20000601",
+    "end_date": "20060929"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "李新玲",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20030318",
+    "end_date": "20091021"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "周来发",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20030318",
+    "end_date": "20151117"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "何育枢",
+    "gender": "M",
+    "lev": null,
+    "title": null,
+    "begin_date": "20000601",
+    "end_date": "20030318"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "范秋栢",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20091021",
+    "end_date": "20151117"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "欧阳璟",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20030508",
+    "end_date": "20250324"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "关书训",
+    "gender": "M",
+    "lev": "高管",
+    "title": "技术总监\\首席技术官(CTO)",
+    "begin_date": "20030508",
+    "end_date": "20060601"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "周小华",
+    "gender": "M",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20030508",
+    "end_date": "20220711"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "涂传岚",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20051231",
+    "end_date": "20110621"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "黄子丹",
+    "gender": "M",
+    "lev": "高管",
+    "title": "副总经理\\副总裁",
+    "begin_date": "20060422",
+    "end_date": "20091105"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "陈凌",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20060929",
+    "end_date": "20121025"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "李健",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20060929",
+    "end_date": "20151115"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "叶伯健",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20060929",
+    "end_date": "20121025"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "萧端",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20060929",
+    "end_date": "20121025"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "钟健如",
+    "gender": "M",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20060929",
+    "end_date": "20220117"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "张文东",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20110712",
+    "end_date": "20220117"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "刘婵",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20121025",
+    "end_date": "20181116"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "周灿鸿",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20121025",
+    "end_date": "20141030"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "幸柳斌",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20121025",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "汪洪生",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20121025",
+    "end_date": "20181116"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "张东霞",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20121117",
+    "end_date": "20250324"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "廖朝理",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20141114",
+    "end_date": "20181116"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "李杏",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20151031",
+    "end_date": "20220624"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "钟金龙",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20151031",
+    "end_date": "20220117"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "袁雯",
+    "gender": "F",
+    "lev": "监事",
+    "title": "监事会主席",
+    "begin_date": "20151031",
+    "end_date": "20251117"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "朱东奇",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20170628",
+    "end_date": "20200509"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "胡轶",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20181030",
+    "end_date": "20200120"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "吴美霖",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20181030",
+    "end_date": "20220415"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "王志伟",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20181030",
+    "end_date": "20220415"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "李华式",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "独立董事",
+    "begin_date": "20200103",
+    "end_date": "20220415"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "彭胜",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事长",
+    "begin_date": "20200707",
+    "end_date": "20220117"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "饶健华",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20211231",
+    "end_date": "20251201"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "朱海涛",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20211231",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "黄丙娣",
+    "gender": "F",
+    "lev": "高管",
+    "title": "总经理\\总裁",
+    "begin_date": "20211231",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "张媚",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20220117",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "黄桂莲",
+    "gender": "F",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20220330",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "刘庆伟",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "审计委员会成员",
+    "begin_date": "20220330",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "周荣",
+    "gender": "M",
+    "lev": "委员会成员",
+    "title": "战略委员会成员",
+    "begin_date": "20220330",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "陈达才",
+    "gender": "M",
+    "lev": "监事",
+    "title": "监事",
+    "begin_date": "20220624",
+    "end_date": "20251117"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "曾庆海",
+    "gender": "M",
+    "lev": "监事",
+    "title": "职工监事",
+    "begin_date": "20240305",
+    "end_date": "20251117"
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "薛山",
+    "gender": "F",
+    "lev": "高管",
+    "title": "证券事务代表",
+    "begin_date": "20241018",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "刘文清",
+    "gender": "F",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20250106",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "凌炜",
+    "gender": "M",
+    "lev": "高管",
+    "title": "财务总监\\总会计师\\首席财务官(CFO)",
+    "begin_date": "20250811",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "陈亦文",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20251202",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "王海",
+    "gender": "M",
+    "lev": "董事会成员",
+    "title": "董事",
+    "begin_date": "20260731",
+    "end_date": null
+   },
+   {
+    "ts_code": "600382.SH",
+    "name": "唐黎明",
+    "gender": "M",
+    "lev": "高管",
+    "title": "董事会秘书",
+    "begin_date": "20260930",
+    "end_date": null
+   }
+  ]
+ }
+}
